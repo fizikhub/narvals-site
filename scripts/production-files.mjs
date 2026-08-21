@@ -1,0 +1,27 @@
+// public/ contains design masters as well as deployable files. Keep one shared
+// allowlist so copying and validation cannot drift apart.
+export const productionFiles = [
+  '_headers',
+  '_redirects',
+  'b04a90decae26feec44042e2c2e4dd84.txt',
+  'blog/feed.xml',
+  'llms.txt',
+  'robots.txt',
+  'site.webmanifest',
+  'sitemap.xml',
+  'og/narvals-labs-og.jpg',
+  'assets/campaign/signal-knot-v1.avif',
+  'assets/hero-continuation/creative-hands-v1.webp',
+  'assets/hero-continuation/services-lockup-v1-700.avif',
+  'assets/hero-continuation/services-lockup-v1.png',
+  'assets/logo-v6/narvals-avatar-v6-1080.png',
+  'assets/logo-v6/narvals-favicon-v6-256.png',
+  'assets/logo-v6/narvals-mascot-v6-transparent-512.png',
+  'assets/logo-v6/narvals-mascot-v6-transparent-96.png',
+  'assets/services-v3/ads-tool-v2.webp',
+  'assets/services-v3/booking-tool-v1.webp',
+  'assets/services-v3/software-tool-v2.webp',
+  'assets/services-v3/web-tool-v2.webp',
+  'assets/web/hero-narwhal-mascot-v2.webp',
+  'assets/web/hero-narwhal-mascot-v2-720.webp'
+];

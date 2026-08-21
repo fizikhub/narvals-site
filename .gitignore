@@ -1,0 +1,57 @@
+node_modules/
+dist/
+.DS_Store
+.env
+npm-debug.log*
+
+# Local design history and creative production exports. They are not needed to
+# build or deploy the public website.
+.archive/
+archive/
+creative/
+tmp/
+public/assets/master/
+
+# The build copies this small allowlist from public/. Keep the local source
+# artwork out of the deployment repository.
+public/*
+!public/_headers
+!public/_redirects
+!public/_redirects.template
+!public/b04a90decae26feec44042e2c2e4dd84.txt
+!public/blog/
+public/blog/*
+!public/blog/feed.xml
+!public/llms.txt
+!public/robots.txt
+!public/site.webmanifest
+!public/sitemap.xml
+!public/og/
+public/og/*
+!public/og/narvals-labs-og.jpg
+!public/assets/
+public/assets/*
+!public/assets/campaign/
+public/assets/campaign/*
+!public/assets/campaign/signal-knot-v1.avif
+!public/assets/hero-continuation/
+public/assets/hero-continuation/*
+!public/assets/hero-continuation/creative-hands-v1.webp
+!public/assets/hero-continuation/services-lockup-v1-700.avif
+!public/assets/hero-continuation/services-lockup-v1.png
+!public/assets/logo-v6/
+public/assets/logo-v6/*
+!public/assets/logo-v6/narvals-avatar-v6-1080.png
+!public/assets/logo-v6/narvals-favicon-v6-256.png
+!public/assets/logo-v6/narvals-mascot-v6-transparent-512.png
+!public/assets/logo-v6/narvals-mascot-v6-transparent-96.png
+!public/assets/services-v3/
+public/assets/services-v3/*
+!public/assets/services-v3/ads-tool-v2.webp
+!public/assets/services-v3/booking-tool-v1.webp
+!public/assets/services-v3/software-tool-v2.webp
+!public/assets/services-v3/web-tool-v2.webp
+!public/assets/web/
+public/assets/web/*
+!public/assets/web/hero-narwhal-mascot-v2.webp
+!public/assets/web/hero-narwhal-mascot-v2-720.webp

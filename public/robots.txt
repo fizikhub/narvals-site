@@ -1,0 +1,5 @@
+# Narvals Labs — arama ve yanıt motorları için tarama politikası
+User-agent: *
+Allow: /
+
+Sitemap: https://narvals.com/sitemap.xml

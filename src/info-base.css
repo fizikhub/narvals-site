@@ -1,0 +1,89 @@
+:root {
+  --ocean-metal: oklch(0.55 0.091 210);
+  --abyss: oklch(0.23 0.075 250);
+  --deep: oklch(0.17 0.055 248);
+  --blue: oklch(0.43 0.15 252);
+  --aqua: oklch(0.82 0.105 188);
+  --yellow: oklch(0.89 0.18 96);
+  --coral: oklch(0.67 0.2 37);
+  --coral-contrast: oklch(0.65 0.2 37);
+  --offwhite: oklch(0.975 0.012 210);
+  --ice: oklch(0.944 0.027 205);
+  --ink: oklch(0.14 0.035 250);
+  --muted: oklch(0.51 0.04 240);
+  --nav: 92px;
+  --gutter: clamp(20px, 4vw, 72px);
+  color-scheme: light;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--deep);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: clip;
+  background: var(--offwhite);
+  color: var(--ink);
+  font-family: 'Onest Variable', 'Arial Nova', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+a {
+  color: inherit;
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--yellow);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 3px solid var(--coral);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .info-hero__panel,
+  .info-hero::before {
+    transform: none !important;
+  }
+
+  a,
+  button,
+  summary,
+  .info-faq summary::after {
+    transition: color 150ms ease, background-color 150ms ease, border-color 150ms ease, opacity 150ms ease;
+  }
+}
