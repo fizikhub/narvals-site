@@ -22,6 +22,7 @@ export const productionFiles = [
   'assets/services-v3/booking-tool-v1.webp',
   'assets/services-v3/software-tool-v2.webp',
   'assets/services-v3/web-tool-v2.webp',
+  'assets/web/hero-narwhal-3d.glb',
   'assets/web/hero-narwhal-mascot-v2.webp',
   'assets/web/hero-narwhal-mascot-v2-720.webp'
 ];

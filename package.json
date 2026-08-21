@@ -19,7 +19,8 @@
     "@fontsource-variable/anybody": "^5.2.8",
     "@fontsource-variable/onest": "^5.2.8",
     "@fontsource/azeret-mono": "^5.2.6",
-    "gsap": "^3.13.0"
+    "gsap": "^3.13.0",
+    "three": "^0.181.2"
   },
   "devDependencies": {
     "html-validate": "^11.6.2",

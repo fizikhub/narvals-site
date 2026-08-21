@@ -55,3 +55,4 @@ public/assets/services-v3/*
 public/assets/web/*
 !public/assets/web/hero-narwhal-mascot-v2.webp
 !public/assets/web/hero-narwhal-mascot-v2-720.webp
+!public/assets/web/hero-narwhal-3d.glb
