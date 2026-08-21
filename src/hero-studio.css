@@ -275,23 +275,6 @@
   filter: drop-shadow(8px 10px 0 oklch(0.14 0.035 250 / 0.24)) drop-shadow(0 16px 18px oklch(0.14 0.035 250 / 0.16));
 }
 
-/* The WebGL canvas is progressive enhancement: the existing image remains
-   visible until the optimized 3D asset has loaded successfully. */
-.studio-hero__visual .hero-mascot-3d {
-  position: absolute;
-  z-index: 1;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 420ms ease;
-}
-
-.studio-hero__visual.is-3d-ready .hero-mascot-3d { opacity: 1; }
-.studio-hero__visual.is-3d-ready .hero-mascot--fallback { opacity: 0; }
-
 .studio-hero__visual .mascot-wake { inset: 18% 4% 7% -8%; transform: rotate(-7deg); }
 .studio-hero__visual .mascot-wake i {
   height: 14%;
@@ -371,7 +354,6 @@
   .studio-hero__cta > i { width: 44px; height: 44px; font-size: 1.25rem; }
   .studio-hero__visual.mascot-scene { top: 39%; right: -15%; width: min(124%, 680px); height: 65%; }
   .studio-hero__visual .hero-mascot { top: 1%; right: -2%; width: 106%; }
-  .studio-hero__visual .hero-mascot-3d { inset: -5% -7% -4% -7%; width: 114%; height: 109%; }
   .studio-hero__visual .mascot-wake { inset: 24% 2% 2% -8%; }
   .studio-hero__signal { top: 12%; right: 1%; width: 66px; height: 66px; opacity: 0.52; }
   .studio-hero__signal::before { inset: 10px; }
@@ -407,7 +389,6 @@
 
 @media (prefers-reduced-motion: reduce) {
   .studio-hero__signal i { animation: none; }
-  .studio-hero__visual .hero-mascot-3d { transition-duration: 150ms; }
   .studio-hero__cta { transition: color 150ms ease, background 150ms ease; }
   .studio-hero__cta:hover,
   .studio-hero__cta:focus-visible,
