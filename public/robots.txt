@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://narvals.com/sitemap.xml
+Sitemap: https://narvalslabs.com/sitemap.xml

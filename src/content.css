@@ -327,8 +327,8 @@
 
 @media (max-width: 560px) {
   .narwhal-title__eyebrow {
-    max-width: 86vw;
-    font-size: 6.2px;
+    max-width: 90vw;
+    font-size: clamp(7.5px, 2.1vw, 8.5px);
   }
 
   .faq-section {
