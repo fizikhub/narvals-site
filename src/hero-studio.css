@@ -167,43 +167,6 @@
   z-index: 3;
 }
 
-.studio-hero__proof-chips {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 14px;
-}
-
-.studio-hero__proof-chips span {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px 10px 4px 8px;
-  border-radius: 999px;
-  border: 1px solid oklch(0.14 0.035 250 / 0.12);
-  background: oklch(1 0 0 / 0.7);
-  color: oklch(0.24 0.05 245);
-  font-family: 'Azeret Mono', monospace;
-  font-size: 8.5px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.proof-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.proof-dot--blue { background: var(--blue); box-shadow: 0 0 6px var(--blue); }
-.proof-dot--coral { background: var(--coral); box-shadow: 0 0 6px var(--coral); }
-.proof-dot--yellow { background: var(--yellow); box-shadow: 0 0 6px var(--yellow); }
-
 .studio-hero__intro {
   position: relative;
   z-index: 2;
