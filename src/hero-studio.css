@@ -95,17 +95,19 @@
   --period: oklch(0.76 0.17 86);
   margin-top: 0.1em !important;
   margin-left: clamp(16px, 2vw, 34px);
-  padding: 0.05em 0.12em 0.1em;
+  padding: 0.05em 0.14em 0.1em;
   overflow: hidden;
-  border: 1px solid oklch(1 0 0 / 0.72);
+  border: 1px solid oklch(1 0 0 / 0.85);
   border-radius: 15px;
-  background: oklch(0.89 0.18 96 / 0.82);
-  -webkit-backdrop-filter: blur(10px) saturate(145%);
-  backdrop-filter: blur(10px) saturate(145%);
+  background: linear-gradient(135deg, oklch(0.89 0.18 96 / 0.88) 0%, oklch(0.92 0.16 98 / 0.76) 100%);
+  -webkit-backdrop-filter: blur(20px) saturate(175%);
+  backdrop-filter: blur(20px) saturate(175%);
   box-shadow:
-    0 7px 8px oklch(0.14 0.035 250 / 0.12),
-    inset 0 1px 0 oklch(1 0 0 / 0.84),
-    inset 0 -1px 0 oklch(0.14 0.035 250 / 0.1);
+    0 8px 22px -2px oklch(0.89 0.18 96 / 0.35),
+    0 2px 6px 0 oklch(0.14 0.035 250 / 0.08),
+    inset 0 1.5px 0 0 oklch(1 0 0 / 0.95),
+    inset 0 0 0 1px oklch(1 0 0 / 0.4),
+    inset 0 -1px 0 0 oklch(0.14 0.035 250 / 0.1);
   font-stretch: 92%;
 }
 .studio-hero__title-line--meta { --period: var(--coral); margin-left: clamp(3px, 0.5vw, 9px); font-stretch: 78%; }
@@ -117,19 +119,19 @@
   margin-top: clamp(26px, 3.7vh, 40px);
   padding: clamp(18px, 1.8vw, 24px);
   overflow: hidden;
-  border-radius: 15px;
+  border-radius: 16px;
   background:
-    radial-gradient(circle at 91% 12%, oklch(0.89 0.18 96 / 0.14), transparent 27%),
-    radial-gradient(circle at 7% 96%, oklch(0.43 0.15 252 / 0.1), transparent 25%),
-    linear-gradient(145deg, oklch(1 0 0 / 0.42), oklch(0.975 0.012 210 / 0.17));
-  -webkit-backdrop-filter: blur(18px) saturate(155%);
-  backdrop-filter: blur(18px) saturate(155%);
+    radial-gradient(110% 120% at 85% 10%, oklch(0.89 0.18 96 / 0.18), transparent 36%),
+    radial-gradient(110% 120% at 10% 90%, oklch(0.43 0.15 252 / 0.14), transparent 34%),
+    linear-gradient(135deg, oklch(1 0 0 / 0.58) 0%, oklch(0.975 0.012 210 / 0.28) 100%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%) contrast(102%);
+  backdrop-filter: blur(28px) saturate(180%) contrast(102%);
   box-shadow:
-    0 8px 8px oklch(0.14 0.035 250 / 0.13),
-    inset 0 1px 0 oklch(1 0 0 / 0.88),
-    inset 0 -1px 0 oklch(0.14 0.035 250 / 0.1),
-    inset 1px 0 0 oklch(1 0 0 / 0.42),
-    inset -1px 0 0 oklch(0.43 0.15 252 / 0.08);
+    0 16px 36px -4px oklch(0.14 0.035 250 / 0.13),
+    0 4px 12px 0 oklch(0.14 0.035 250 / 0.06),
+    inset 0 1.5px 0 0 oklch(1 0 0 / 0.95),
+    inset 0 0 0 1px oklch(1 0 0 / 0.45),
+    inset 0 -1px 0 0 oklch(0.14 0.035 250 / 0.08);
 }
 
 .studio-hero__console::before {
@@ -141,11 +143,11 @@
   padding: 1px;
   background: linear-gradient(
     132deg,
-    oklch(1 0 0 / 0.97),
-    oklch(1 0 0 / 0.31) 25%,
+    oklch(1 0 0 / 0.98),
+    oklch(1 0 0 / 0.42) 25%,
     transparent 50%,
     transparent 72%,
-    oklch(0.43 0.15 252 / 0.2)
+    oklch(0.43 0.15 252 / 0.25)
   );
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
@@ -156,9 +158,9 @@
 .studio-hero__console > .liquid-glass__lens {
   top: -84px;
   right: -48px;
-  width: 186px;
-  height: 186px;
-  opacity: 0.48;
+  width: 196px;
+  height: 196px;
+  opacity: 0.58;
 }
 
 .studio-hero__console > .liquid-glass__glint {
