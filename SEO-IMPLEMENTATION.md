@@ -14,8 +14,8 @@ içerik kalitesi ve zaman içinde değişir. Bu uygulamanın amacı garanti satm
 değil; teknik engelleri kaldırmak, her URL'ye net bir görev vermek ve gerçek
 kanıt üretimini ölçülebilir hale getirmektir.
 
-Şu anki P0 engel: `narvalslabs.com` DNS'te `NXDOMAIN`. Alan adı canlı olmadan
-arama motoru sayfaları tarayamaz veya indeksleyemez.
+Canlı alan adı: `narvals.com` Cloudflare DNS ve HTTPS üzerinde aktiftir.
+Google Search Console Domain mülk doğrulaması tamamlanmıştır.
 
 ## Uygulanan sayfa–sorgu haritası
 

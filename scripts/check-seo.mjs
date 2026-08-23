@@ -10,7 +10,7 @@ const checkDist = process.argv.includes('--dist');
 const contentRoot = checkDist ? join(projectRoot, 'dist') : projectRoot;
 const discoveryRoot = checkDist ? contentRoot : join(projectRoot, 'public');
 const environment = loadSiteEnvironment({ projectRoot });
-const configuredSiteUrl = new URL(environment.SITE_URL || 'https://narvalslabs.com');
+const configuredSiteUrl = new URL(environment.SITE_URL || 'https://narvals.com');
 if (configuredSiteUrl.pathname !== '/' || configuredSiteUrl.search || configuredSiteUrl.hash) {
   throw new Error('SITE_URL must be an origin only, for example https://example.com');
 }

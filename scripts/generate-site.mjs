@@ -13,7 +13,7 @@ const explicitSiteUrl = environment.SITE_URL?.trim();
 if (environment.REQUIRE_SITE_URL === '1' && !explicitSiteUrl) {
   throw new Error('Production build requires an explicit SITE_URL. Add it to .env or the build environment.');
 }
-const configuredSiteUrl = new URL(explicitSiteUrl || 'https://narvalslabs.com');
+const configuredSiteUrl = new URL(explicitSiteUrl || 'https://narvals.com');
 if (configuredSiteUrl.pathname !== '/' || configuredSiteUrl.search || configuredSiteUrl.hash) {
   throw new Error('SITE_URL must be an origin only, for example https://example.com');
 }
@@ -123,5 +123,5 @@ try {
 
 console.log(`Generated search discovery files for ${siteOrigin}`);
 if (siteOrigin === 'https://narvalslabs.com') {
-  console.warn('WARNING: using the unverified placeholder canonical https://narvalslabs.com; set SITE_URL before publishing.');
+  console.warn('WARNING: using the unverified placeholder canonical https://narvalslabs.com; use https://narvals.com instead.');
 }

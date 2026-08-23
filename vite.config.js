@@ -5,7 +5,7 @@ import { loadSiteEnvironment } from './scripts/site-environment.mjs';
 
 export default defineConfig(({ command, mode }) => {
   const environment = loadSiteEnvironment({ projectRoot: import.meta.dirname, mode });
-  const configuredSiteUrl = new URL(environment.SITE_URL || 'https://narvalslabs.com');
+  const configuredSiteUrl = new URL(environment.SITE_URL || 'https://narvals.com');
   if (configuredSiteUrl.pathname !== '/' || configuredSiteUrl.search || configuredSiteUrl.hash) {
     throw new Error('SITE_URL must be an origin only, for example https://example.com');
   }

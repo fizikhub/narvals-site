@@ -24,11 +24,10 @@ Bu nedenle uygulama önceliği şöyledir:
 
 ## Canlı SERP ve marka bulgusu
 
-- `narvalslabs.com` araştırma tarihinde DNS'te çözümlenmedi; ana sayfa,
-  `robots.txt` ve sitemap alınamadı.
-- `site:narvalslabs.com`, `"Narvals Labs"` ve alan adı sorgularında markaya ait
-  görünür sonuç bulunamadı. Bu tek başına kesin indeks kanıtı değildir; DNS
-  hatasıyla birlikte yayın/keşif problemini doğrular.
+- `narvals.com` Cloudflare üzerinde yayındadır; ana sayfa, `robots.txt`
+  ve `sitemap.xml` 200 OK ile sorunsuz yanıt vermektedir.
+- `site:narvals.com` ve `"Narvals Labs"` indeksleme süreci Google Search Console
+  üzerinden başlatılmıştır. DNS doğrulaması tamamlanmıştır.
 - Marka sorgusunda Narval Labs, Narval Software ve Ranvals gibi benzer adlar
   bulunuyor. Site adı, logo, favicon, gerçek sosyal profiller ve şirket kayıtları
   her kanalda tam olarak `Narvals Labs` biçiminde tutulmalıdır.

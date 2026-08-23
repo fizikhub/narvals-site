@@ -54,9 +54,7 @@ source ve eski tasarım export’ları `public/` içinde korunur ancak `dist/`
 paketine kopyalanmaz. Ayrıntılı operasyon adımları `SEO-OPERATIONS.md`, resmî ve
 üçüncü taraf araştırma özeti `SEO-RESEARCH.md` dosyasındadır.
 
-`https://narvalslabs.com` yalnızca yerel geliştirmedeki geçici canonical
-varsayılanıdır ve 21 Ağustos 2026 denetiminde DNS kaydı bulunmamaktadır. Yayına
-alınmadan önce gerçek alan adı `SITE_URL` olarak açıkça tanımlanmalıdır.
+`https://narvals.com` doğrulanmış canlı canonical alan adıdır.
 Doğrulanmış WhatsApp/telefon,
 kurumsal e-posta, adres ve sosyal profiller henüz proje girdilerinde olmadığı
 için şemaya veya sayfalara uydurma bilgi eklenmemiştir. Bu bilgiler geldiğinde

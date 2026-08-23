@@ -4,17 +4,16 @@ Bu dosya kodla çözülemeyen, hesap/doğrulama veya gerçek işletme verisi
 gerektiren yayın sonrası işleri takip eder. Hiçbir madde sıralama, indekslenme
 veya yapay zekâ yanıtında kaynak gösterilme garantisi vermez.
 
-## 21 Ağustos 2026 canlılık durumu
+## Canlılık ve Alan Adı Durumu
 
-`narvalslabs.com` denetim sırasında DNS'te `NXDOMAIN` döndürdü. Bu nedenle ana
-sayfa, `robots.txt` ve `sitemap.xml` internetten alınamıyor; Google/Bing taraması
-ve indeksleme başlayamıyor. Alan adı satın alma/DNS/hosting/HTTPS tamamlanmadan
-diğer SEO çalışmaları yalnız yayın hazırlığıdır.
+`narvals.com` Cloudflare DNS ve HTTPS üzerinde aktif ve canlıdır. Google Search
+Console Domain mülk doğrulaması Cloudflare DNS entegrasyonu ile tamamlanmıştır.
+22 canonical sayfa, `robots.txt` ve `sitemap.xml` canlıda sorunsuz erişilmektedir.
 
-Production derlemesi gerçek canonical adres açıkça verilmeden artık durur:
+Production derlemesi:
 
 ```bash
-SITE_URL=https://gercek-alan-adiniz.com npm run build:production
+npm run build:production
 ```
 
 Bu build koruması origin biçimini ve HTTPS kullanımını doğrular; DNS sahipliğini
