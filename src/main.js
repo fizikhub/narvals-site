@@ -1,39 +1,28 @@
 import './fonts-base.css';
+import './fonts-home.css';
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './styles.css';
 import './nav.css';
 import './hero.css';
 import './hero-studio.css';
-import './content.css';
-import './mobile-home.css';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const qs = (selector, scope = document) => scope.querySelector(selector);
 const qsa = (selector, scope = document) => [...scope.querySelectorAll(selector)];
 const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
 let prefersReducedMotion = motionPreference.matches;
 
-// These sections begin below the initial viewport. Their layout styles are
-// applied after `load`; animation code and its display font wait for actual
-// interaction so they cannot compete with the hero LCP.
-let belowFoldStylesPromise;
-const loadBelowFoldStyles = () => {
-  if (compactHomeQuery.matches) return Promise.resolve();
-  if (!belowFoldStylesPromise) belowFoldStylesPromise = import('./home-below-fold.css');
-  return belowFoldStylesPromise;
-};
-
+// These sections begin far below the initial viewport. Their styles and module
+// load after the window load event so they cannot compete with the hero LCP.
 let belowFoldPromise;
 const loadBelowFoldModules = () => {
-  if (compactHomeQuery.matches) return Promise.resolve();
   if (!belowFoldPromise) {
     belowFoldPromise = Promise.all([
-      loadBelowFoldStyles(),
-      import('./fonts-home.css'),
-      import('./service-odyssey.js'),
-      import('gsap/ScrollTrigger')
-    ]).then(([, , { initServiceOdyssey }, { ScrollTrigger }]) => {
-      gsap.registerPlugin(ScrollTrigger);
-      initNarwhalHero();
+      import('./home-below-fold.css'),
+      import('./service-odyssey.js')
+    ]).then(([, { initServiceOdyssey }]) => {
       initServiceOdyssey({ gsap, ScrollTrigger });
       initCurrentLabMotion();
       ScrollTrigger.refresh();
@@ -41,50 +30,19 @@ const loadBelowFoldModules = () => {
   }
   return belowFoldPromise;
 };
-const compactHomeQuery = window.matchMedia('(max-width: 820px)');
-compactHomeQuery.addEventListener('change', ({ matches }) => {
-  if (!matches) void loadBelowFoldModules();
-});
-const scheduleBelowFoldStyles = () => {
-  const load = () => { void loadBelowFoldStyles(); };
-  if ('requestIdleCallback' in window) window.requestIdleCallback(load);
-  else window.setTimeout(load, 0);
-};
-const watchBelowFoldIntent = () => {
-  let observer;
-  const intentEvents = ['wheel', 'touchstart', 'pointerdown', 'keydown'];
-  const load = () => {
-    observer?.disconnect();
-    intentEvents.forEach((eventName) => window.removeEventListener(eventName, load));
-    void loadBelowFoldModules();
-  };
-
-  intentEvents.forEach((eventName) => window.addEventListener(eventName, load, {
-    once: true,
-    passive: eventName !== 'keydown'
-  }));
-
-  const firstDeferredSection = qs('#hero-services');
-  if ('IntersectionObserver' in window && firstDeferredSection) {
-    observer = new IntersectionObserver((entries) => {
-      if (entries.some((entry) => entry.isIntersecting)) load();
-    }, { rootMargin: '0px 0px -10% 0px' });
-    observer.observe(firstDeferredSection);
+const scheduleBelowFoldModules = () => {
+  if ('requestIdleCallback' in window) {
+    window.requestIdleCallback(loadBelowFoldModules, { timeout: 2500 });
+  } else {
+    window.setTimeout(loadBelowFoldModules, 250);
   }
 };
 if (window.location.hash) {
   // A deep-linked section needs its layout CSS before the browser calculates
   // the final scroll position. The import remains deferred for ordinary visits.
   void loadBelowFoldModules();
-} else if (document.readyState === 'complete') {
-  scheduleBelowFoldStyles();
-  watchBelowFoldIntent();
-} else {
-  window.addEventListener('load', () => {
-    scheduleBelowFoldStyles();
-    watchBelowFoldIntent();
-  }, { once: true });
-}
+} else if (document.readyState === 'complete') scheduleBelowFoldModules();
+else window.addEventListener('load', scheduleBelowFoldModules, { once: true });
 
 qsa('[data-current-year]').forEach((element) => {
   element.textContent = String(new Date().getFullYear());
@@ -137,15 +95,6 @@ const menuModeLabel = qs('[data-menu-mode]', mobileMenu);
 const menuDiveLinks = qsa('.menu-dive-link', mobileMenu);
 
 function initDiveCurrent(canvas) {
-  if (!canvas || canvas.hidden) {
-    return {
-      start() {},
-      stop() {},
-      point() {},
-      splash() {}
-    };
-  }
-
   const context = canvas.getContext('2d');
   let width = 0;
   let height = 0;
@@ -326,6 +275,8 @@ const syncMenuGeometry = () => {
   mobileMenu.style.setProperty('--menu-origin-y', `${y}px`);
 };
 
+syncMenuGeometry();
+
 const depthValue = { value: 0 };
 const menuTimeline = gsap.timeline({
   paused: true,
@@ -493,7 +444,7 @@ function initNarwhalHero() {
   const wake = qs('.mascot-wake', scene);
   if (!mascot || !wake) return;
 
-  gsap.matchMedia().add('(prefers-reduced-motion: no-preference) and (min-width: 821px)', () => {
+  gsap.matchMedia().add('(prefers-reduced-motion: no-preference)', () => {
     const tweens = [];
     let handlePointerMove;
     let handlePointerLeave;
@@ -528,6 +479,15 @@ function initNarwhalHero() {
       ease: 'none',
       scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: 0.9 }
     }));
+    tweens.push(gsap.to(mascot, {
+      yPercent: -1.25,
+      duration: 1.35,
+      delay: 0.9,
+      repeat: 1,
+      yoyo: true,
+      ease: 'sine.inOut'
+    }));
+
     return () => {
       tweens.forEach((tween) => tween.kill());
       if (handlePointerMove) hero.removeEventListener('pointermove', handlePointerMove);
@@ -537,11 +497,13 @@ function initNarwhalHero() {
   });
 }
 
+initNarwhalHero();
+
 let currentLabMotionInitialized = false;
 function initCurrentLabMotion() {
   if (currentLabMotionInitialized) return;
   currentLabMotionInitialized = true;
-  gsap.matchMedia().add('(prefers-reduced-motion: no-preference) and (min-width: 821px)', () => {
+  gsap.matchMedia().add('(prefers-reduced-motion: no-preference)', () => {
   const currentLab = qs('[data-current-lab]');
   if (currentLab) {
     const labHeadline = qs('.current-lab__headline', currentLab);
