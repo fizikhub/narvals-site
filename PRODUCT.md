@@ -30,4 +30,4 @@ Jenerik yapay zekâ ajansı estetiği; ortalanmış büyük başlık + iki CTA +
 
 ## Accessibility & Inclusion
 
-Klavye odağı, semantik HTML, yüksek metin kontrastı ve en az 44 piksel dokunma hedefleri korunur. Ana içerik animasyona bağımlı değildir. Hareket azaltma tercihi açık olduğunda giriş koreografisi ve sürekli ortam hareketleri devre dışı bırakılır.
+Klavye odağı, semantik HTML, yüksek metin kontrastı ve mobilde en az 48 piksel dokunma hedefleri korunur. Ana içerik animasyona bağımlı değildir. Hareket azaltma tercihi açık olduğunda giriş koreografisi ve sürekli ortam hareketleri devre dışı bırakılır; şeffaflık azaltma tercihi açık olduğunda cam yüzeyler opak ve yüksek kontrastlı yüzeylere dönüşür.

@@ -1,4 +1,4 @@
-# Narvals Labs — Ana Sayfa
+# Narvals Labs — narvals.com
 
 Okyanus tabanlı “dijital tamirhane” görsel dilinde hazırlanan tek sayfalık Vite sitesi.
 
@@ -14,7 +14,7 @@ Vite varsayılan olarak `http://localhost:5173` adresini açar.
 ## Üretim derlemesi
 
 ```bash
-npm run build:production
+SITE_URL=https://narvals.com npm run build:production
 npm run preview
 ```
 
@@ -25,12 +25,12 @@ geçer. Bu yalnız açık origin/HTTPS biçimi korumasıdır; DNS ve deploy ger�
 çalışıyor mu sorusunun yayın kapısı `npm run seo:check-live` komutudur. Yerel
 deneme için `npm run build` kullanılabilir.
 
-Deploy sonrasında DNS, 22 canlı URL, canonical, HTTP durumları, meta/header
+Deploy sonrasında DNS, 28 canlı URL, canonical, HTTP durumları, meta/header
 `noindex`, robots tam engeli, sitemap, RSS, IndexNow anahtarı, slash ve
 `index.html` yönlendirmeleri ile gerçek 404 davranışını denetleyin:
 
 ```bash
-SITE_URL=https://gercek-alan-adiniz.com npm run seo:check-live
+SITE_URL=https://narvals.com npm run seo:check-live
 ```
 
 ## SEO / GEO yapılandırması
@@ -38,13 +38,13 @@ SITE_URL=https://gercek-alan-adiniz.com npm run seo:check-live
 Üretim alan adını build sırasında tanımlayın:
 
 ```bash
-SITE_URL=https://ornek.com npm run build
+SITE_URL=https://narvals.com npm run build:production
 ```
 
 Alternatif olarak `.env.example` dosyasını `.env` adıyla kopyalayıp gerçek
 `SITE_URL` değerini yazabilirsiniz; `.env` Git’e eklenmez.
 
-Build; 22 canonical sayfayı, dokuz kaynaklı rehberi, blog RSS akışını ve keşif
+Build; 28 canonical sayfayı, 14 kaynaklı rehberi, blog RSS akışını ve keşif
 dosyalarını (`robots.txt`, URL bazlı `sitemap.xml`, deneysel `llms.txt`) üretir.
 Tüm indexlenebilir sayfalarda title, description, canonical, tek H1, JSON-LD,
 iç bağlantılar ve sosyal önizleme direktiflerini doğrular.
@@ -54,7 +54,8 @@ source ve eski tasarım export’ları `public/` içinde korunur ancak `dist/`
 paketine kopyalanmaz. Ayrıntılı operasyon adımları `SEO-OPERATIONS.md`, resmî ve
 üçüncü taraf araştırma özeti `SEO-RESEARCH.md` dosyasındadır.
 
-`https://narvals.com` doğrulanmış canlı canonical alan adıdır.
+`https://narvals.com` production canonical alan adıdır. Derleme ve canlı SEO
+kontrolü sırasında aynı adres `SITE_URL` olarak açıkça tanımlanmalıdır.
 Doğrulanmış WhatsApp/telefon,
 kurumsal e-posta, adres ve sosyal profiller henüz proje girdilerinde olmadığı
 için şemaya veya sayfalara uydurma bilgi eklenmemiştir. Bu bilgiler geldiğinde

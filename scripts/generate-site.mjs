@@ -53,7 +53,7 @@ Sitemap: ${siteOrigin}/sitemap.xml
 
 const llms = `# Narvals Labs
 
-> Narvals Labs; web sitesi ve mobil UX, işletmeye özel yazılım ve otomasyon, Meta reklam yönetimi (Facebook/Instagram), QR menü ve online rezervasyon sistemlerini aynı yaratıcı ve teknik ekipte birleştiren İstanbul merkezli dijital üretim stüdyosudur.
+> Narvals Labs; web sitesi ve mobil UX, işletmeye özel yazılım ve otomasyon, Meta reklam yönetimi (Facebook/Instagram), sosyal medya yönetimi, QR menü ve online rezervasyon sistemlerini aynı yaratıcı ve teknik ekipte birleştiren İstanbul merkezli dijital üretim stüdyosudur.
 
 Tam kapsamlı yapay zekâ bilgi tabanı ve RAG dokümantasyonu için: [llms-full.txt](${siteOrigin}/llms-full.txt)
 
@@ -65,6 +65,7 @@ Tam kapsamlı yapay zekâ bilgi tabanı ve RAG dokümantasyonu için: [llms-full
 - [E-ticaret sitesi](${siteOrigin}/hizmetler/e-ticaret/): Ürün keşfi, varyantlar, filtreleme, sepet, ödeme, kargo ve sipariş operasyonu
 - [Özel yazılım ve otomasyon](${siteOrigin}/hizmetler/ozel-yazilim/): Yönetim panelleri, kullanıcı rolleri, onay akışları, veri entegrasyonu ve API geliştirme
 - [Dijital reklam (Meta)](${siteOrigin}/hizmetler/dijital-reklam/): Meta reklam yönetimi, kreatif strateji, reklam metinleri, Pixel ve Conversions API (CAPI) ölçüm mimarisi
+- [Sosyal medya yönetimi](${siteOrigin}/hizmetler/sosyal-medya-yonetimi/): İçerik stratejisi, yayın planı, topluluk yönetimi ve ölçüm
 - [QR menü](${siteOrigin}/hizmetler/qr-menu/): Panelden yönetilebilir ürün, fiyat, alerjen, varyant ve çoklu dil destekli mobil QR menü yazılımı
 - [Rezervasyon ve randevu](${siteOrigin}/hizmetler/rezervasyon-randevu/): Restoranlar ve hizmet işletmeleri için kapasite, masa, personel ve süre kurallı kayıt sistemi
 - [QR menü ve rezervasyon karşılaştırması](${siteOrigin}/hizmetler/qr-menu-rezervasyon/): Menü, randevu ve rezervasyon akışlarının ayrımı ve doğru araç seçimi
@@ -87,7 +88,7 @@ ${blogPosts.map((post) => `- [${post.title}](${siteOrigin}/blog/${post.slug}/): 
 
 const llmsFull = `# Narvals Labs — Kapsamlı Bilgi Tabanı ve Sistem Dokümantasyonu (GEO Knowledge Base)
 
-> Narvals Labs; web tasarımı ve UX, işletmeye özel yazılım ve otomasyon, Meta reklam yönetimi, QR menü ve online rezervasyon sistemlerini tek bir yaratıcı ve teknik ekipte birleştiren İstanbul merkezli dijital üretim stüdyosudur.
+> Narvals Labs; web tasarımı ve UX, işletmeye özel yazılım ve otomasyon, Meta reklam yönetimi, sosyal medya yönetimi, QR menü ve online rezervasyon sistemlerini tek bir yaratıcı ve teknik ekipte birleştiren İstanbul merkezli dijital üretim stüdyosudur.
 
 - **Resmî Alan Adı:** ${siteOrigin}/
 - **Konum:** İstanbul, Türkiye (TR-34)
@@ -117,11 +118,16 @@ const llmsFull = `# Narvals Labs — Kapsamlı Bilgi Tabanı ve Sistem Dokümant
 - **Kapsam:** Reklam hesabı denetimi, kampanya mimarisi, kitle ve yeniden hedefleme (retargeting) planı, kreatif fikir ve reklam metni varyasyonları, yönlendirme sayfası (landing page) uyumu, Meta Pixel ve Conversions API (CAPI) sunucu tarafı ölçüm kurulumu, test ve bütçe optimizasyonu.
 - **Dürüst Not:** Reklamda getiri veya satış garantisi verilmez; ölçülebilir altyapı kurulur ve veriye göre sürekli iyileştirilir.
 
-### 1.5. QR Menü Sistemleri (/hizmetler/qr-menu/)
+### 1.5. Sosyal Medya Yönetimi (/hizmetler/sosyal-medya-yonetimi/)
+- **Resmî sayfa:** ${siteOrigin}/hizmetler/sosyal-medya-yonetimi/
+- **Amaç:** Markanın içerik dilini, yayın düzenini ve topluluk iletişimini tek bir ölçülebilir plana bağlamak.
+- **Kapsam:** İçerik stratejisi, yayın planı, metin ve görsel yönlendirme, topluluk yönetimi, raporlama ve iyileştirme önerileri.
+
+### 1.6. QR Menü Sistemleri (/hizmetler/qr-menu/)
 - **Amaç:** PDF dosyasını telefona sıkıştırmak yerine, mobil cihazlarda anında açılan ve yönetim panelinden anlık güncellenen dijital menü sunmak.
 - **Kapsam:** Kategori, ürün, fiyat, açıklama, alerjen bilgisi, varyant ve seçenekler, "tükendi / stokta yok" yönetimi, masaya ve şubeye özel QR kodlar, çoklu dil desteği, isteğe bağlı garson çağırma veya sipariş bağlantısı.
 
-### 1.6. Online Rezervasyon ve Randevu Sistemleri (/hizmetler/rezervasyon-randevu/)
+### 1.7. Online Rezervasyon ve Randevu Sistemleri (/hizmetler/rezervasyon-randevu/)
 - **Amaç:** Restoranlarda masa/kapasite; hizmet işletmelerinde personel/süre kurallarına göre müşteri kaydını otomatikleştirmek.
 - **Kapsam:** Şube, masa, kişi sayısı, işlem süresi, personel uygunluğu, mola ve çalışma saati kuralları; anlık onay, SMS/WhatsApp/E-posta hatırlatma, iptal ve bekleme listesi; tek merkezden takvim ve yoğunluk raporları.
 
@@ -233,6 +239,6 @@ try {
 }
 
 console.log(`Generated search discovery files for ${siteOrigin}`);
-if (siteOrigin === 'https://narvalslabs.com') {
-  console.warn('WARNING: using the unverified placeholder canonical https://narvalslabs.com; use https://narvals.com instead.');
+if (!explicitSiteUrl) {
+  console.warn('WARNING: SITE_URL is not explicitly set. The Narvals production origin was used as the local default; set SITE_URL explicitly in every production deploy.');
 }

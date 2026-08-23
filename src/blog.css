@@ -411,77 +411,21 @@
 }
 
 @media (max-width: 620px) {
-  .blog-hub {
-    padding-block: 48px 64px;
-  }
-
-  .blog-hub__header {
-    gap: 16px;
-    margin-bottom: 32px;
-  }
-
   .blog-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
   }
 
   .blog-card {
-    min-height: auto;
-    padding: 24px;
-  }
-
-  .blog-card h3 {
-    margin: 22px 0 14px;
-    font-size: clamp(1.6rem, 7vw, 2.2rem);
-    overflow-wrap: break-word;
-  }
-
-  .blog-card p {
-    margin-bottom: 20px;
-    font-size: 13.5px;
-  }
-
-  .article-hero {
-    padding-block: clamp(42px, 8vh, 64px) clamp(52px, 9vh, 72px);
+    min-height: 330px;
   }
 
   .article-hero h1 {
-    font-size: clamp(2.4rem, 11vw, 3.8rem);
-    overflow-wrap: break-word;
+    font-size: clamp(2.65rem, 13vw, 4.4rem);
   }
 
   .article-list li,
   .article-steps li,
   .article-checklist li {
-    padding: 14px 16px 14px 44px;
-    font-size: 14px;
-  }
-
-  .article-list li::before,
-  .article-checklist li::before {
-    left: 14px;
-    top: 14px;
-  }
-
-  .article-steps li::before {
-    left: 12px;
-    top: 14px;
-  }
-
-  .article-callout,
-  .article-method {
-    padding: 20px 18px;
-    margin-top: 24px;
-  }
-
-  .article-cta-actions {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .article-cta-actions .info-button {
-    width: 100%;
-    justify-content: center;
-    min-height: 48px;
+    padding-right: 16px;
   }
 }

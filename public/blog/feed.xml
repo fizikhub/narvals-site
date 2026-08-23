@@ -5,7 +5,7 @@
     <link>https://narvals.com/blog/</link>
     <description>Web, yazılım, reklam ve işletme sistemleri için kaynaklı karar rehberleri.</description>
     <language>tr-TR</language>
-    <lastBuildDate>Fri, 21 Aug 2026 07:20:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2026 18:44:00 GMT</lastBuildDate>
     <atom:link href="https://narvals.com/blog/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kurumsal web sitesi briefi nasıl hazırlanır?</title>
@@ -24,7 +24,7 @@
       <description>Tarama, index, canonical, yönlendirme, sitemap, yapılandırılmış veri, performans ve ölçümü kapsayan uygulamalı teknik SEO kontrol listesi.</description>
     </item>
     <item>
-      <title>GEO nedir? Google AI aramalarında görünürlük için gerçek rehber</title>
+      <title>GEO nedir? Google AI sonuçlarında görünürlük rehberi</title>
       <link>https://narvals.com/blog/google-ai-aramalari-icin-geo-rehberi/</link>
       <guid isPermaLink="true">https://narvals.com/blog/google-ai-aramalari-icin-geo-rehberi/</guid>
       <pubDate>Fri, 21 Aug 2026 06:20:00 GMT</pubDate>
@@ -48,15 +48,15 @@
       <description>Süreç uyumu, entegrasyon, veri sahipliği, toplam maliyet ve değişim hızına göre hazır ürün ile özel yazılım arasında seçim rehberi.</description>
     </item>
     <item>
-      <title>Meta Pixel ve Conversions API farkı: birlikte nasıl planlanır?</title>
+      <title>Meta Pixel ve Conversions API: farkları ve birlikte kullanım</title>
       <link>https://narvals.com/blog/meta-pixel-ve-conversions-api-farki/</link>
       <guid isPermaLink="true">https://narvals.com/blog/meta-pixel-ve-conversions-api-farki/</guid>
       <pubDate>Fri, 21 Aug 2026 06:50:00 GMT</pubDate>
-      <category>Dijital reklam</category>
+      <category>Meta reklam</category>
       <description>Meta Pixel ile Conversions API’nin veri kaynağı, kullanım amacı, event eşleştirme, test ve gizlilik açısından farklarını açıklayan uygulama rehberi.</description>
     </item>
     <item>
-      <title>QR menü mü PDF menü mü? İşletme için karar rehberi</title>
+      <title>QR menü mü, PDF menü mü? Karşılaştırma rehberi</title>
       <link>https://narvals.com/blog/qr-menu-mu-pdf-menu-mu/</link>
       <guid isPermaLink="true">https://narvals.com/blog/qr-menu-mu-pdf-menu-mu/</guid>
       <pubDate>Fri, 21 Aug 2026 07:00:00 GMT</pubDate>
@@ -78,6 +78,46 @@
       <pubDate>Fri, 21 Aug 2026 07:20:00 GMT</pubDate>
       <category>Web &amp; UX</category>
       <description>Web sitesi fiyatını etkileyen içerik, tasarım, geliştirme, entegrasyon, taşıma, test ve bakım kalemlerini görünür bir kapsamla karşılaştırın.</description>
+    </item>
+    <item>
+      <title>Web sitesi yaptırmadan önce: kapsam, teklif ve karar rehberi</title>
+      <link>https://narvals.com/blog/web-sitesi-yaptirmadan-once-kapsam-teklif-karar-rehberi/</link>
+      <guid isPermaLink="true">https://narvals.com/blog/web-sitesi-yaptirmadan-once-kapsam-teklif-karar-rehberi/</guid>
+      <pubDate>Sun, 23 Aug 2026 07:00:00 GMT</pubDate>
+      <category>Web &amp; UX</category>
+      <description>Web sitesi yaptırırken hedefi, ilk sürüm kapsamını, teklifleri, içerik sorumluluklarını ve kabul ölçütlerini netleştirmek için pratik karar rehberi.</description>
+    </item>
+    <item>
+      <title>Meta reklam bütçesi nasıl belirlenir? Planlama rehberi</title>
+      <link>https://narvals.com/blog/meta-reklam-butcesi-nasil-belirlenir/</link>
+      <guid isPermaLink="true">https://narvals.com/blog/meta-reklam-butcesi-nasil-belirlenir/</guid>
+      <pubDate>Sun, 23 Aug 2026 11:00:00 GMT</pubDate>
+      <category>Meta reklam</category>
+      <description>Meta reklam bütçesini hedef, birim ekonomi, ölçüm hazırlığı, test kapsamı ve risk sınırlarıyla belirlemek için uygulanabilir planlama rehberi.</description>
+    </item>
+    <item>
+      <title>Meta reklam ajansı seçerken hangi sorular sorulmalı?</title>
+      <link>https://narvals.com/blog/meta-reklam-ajansi-secerken-sorulacak-sorular/</link>
+      <guid isPermaLink="true">https://narvals.com/blog/meta-reklam-ajansi-secerken-sorulacak-sorular/</guid>
+      <pubDate>Sun, 23 Aug 2026 11:10:00 GMT</pubDate>
+      <category>Meta reklam</category>
+      <description>Meta reklam ajansı tekliflerini hesap sahipliği, ölçüm, bütçe, kreatif süreç, raporlama, güvenlik ve çıkış planıyla karşılaştırma rehberi.</description>
+    </item>
+    <item>
+      <title>Sosyal medya yönetimi neleri kapsar? Hizmet ve teklif rehberi</title>
+      <link>https://narvals.com/blog/sosyal-medya-yonetimi-neleri-kapsar/</link>
+      <guid isPermaLink="true">https://narvals.com/blog/sosyal-medya-yonetimi-neleri-kapsar/</guid>
+      <pubDate>Sun, 23 Aug 2026 11:20:00 GMT</pubDate>
+      <category>Sosyal medya</category>
+      <description>Sosyal medya yönetiminin strateji, içerik, yayın, topluluk, raporlama, erişim ve kullanım hakları kapsamını netleştiren teklif rehberi.</description>
+    </item>
+    <item>
+      <title>E-ticaret sitesi maliyeti nasıl hesaplanır? Toplam maliyet rehberi</title>
+      <link>https://narvals.com/blog/e-ticaret-sitesi-maliyeti-nasil-hesaplanir/</link>
+      <guid isPermaLink="true">https://narvals.com/blog/e-ticaret-sitesi-maliyeti-nasil-hesaplanir/</guid>
+      <pubDate>Sun, 23 Aug 2026 11:30:00 GMT</pubDate>
+      <category>E-ticaret</category>
+      <description>E-ticaret sitesi maliyetini kurulum, lisans, entegrasyon, içerik, güvenlik, operasyon ve bakım kalemleriyle hesaplama ve teklif karşılaştırma rehberi.</description>
     </item>
   </channel>
 </rss>

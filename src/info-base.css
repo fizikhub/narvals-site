@@ -24,7 +24,6 @@
 html {
   scroll-behavior: smooth;
   background: var(--deep);
-  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -35,14 +34,12 @@ body {
   color: var(--ink);
   font-family: 'Onest Variable', 'Arial Nova', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  -webkit-tap-highlight-color: transparent;
 }
 
 button,
 a {
   color: inherit;
   font: inherit;
-  touch-action: manipulation;
 }
 
 a {

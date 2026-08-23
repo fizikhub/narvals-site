@@ -4,9 +4,13 @@ import { loadSiteEnvironment } from './site-environment.mjs';
 
 const projectRoot = join(dirname(fileURLToPath(import.meta.url)), '..');
 const environment = loadSiteEnvironment({ projectRoot, mode: 'production' });
-const siteUrl = environment.SITE_URL || 'https://narvals.com';
+const siteUrl = environment.SITE_URL;
 const key = 'b04a90decae26feec44042e2c2e4dd84';
 const changedLocations = process.argv.slice(2);
+
+if (!siteUrl) {
+  throw new Error('Set the verified production SITE_URL before submitting to IndexNow.');
+}
 if (!changedLocations.length) {
   throw new Error('Pass one or more changed canonical paths or URLs, for example: npm run indexnow:submit -- / /hizmetler/web-tasarim/');
 }

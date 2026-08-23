@@ -1,10 +1,10 @@
 # Narvals Labs — SEO/GEO uygulama ve büyüme planı
 
-Son güncelleme: 21 Ağustos 2026
+Son güncelleme: 23 Ağustos 2026
 
 ## Yönetici özeti
 
-Site artık 22 canonical URL, 9 kaynaklı karar rehberi, blog hub'ı, editoryal
+Site artık 28 canonical URL, 14 kaynaklı karar rehberi, blog hub'ı, editoryal
 politika, RSS, URL bazlı sitemap tarihi, sade robots politikası, JSON-LD, sosyal
 metadata, karşılıklı iç bağlantılar ve otomatik SEO/HTML kontrolleri içeriyor.
 
@@ -14,8 +14,9 @@ içerik kalitesi ve zaman içinde değişir. Bu uygulamanın amacı garanti satm
 değil; teknik engelleri kaldırmak, her URL'ye net bir görev vermek ve gerçek
 kanıt üretimini ölçülebilir hale getirmektir.
 
-Canlı alan adı: `narvals.com` Cloudflare DNS ve HTTPS üzerinde aktiftir.
-Google Search Console Domain mülk doğrulaması tamamlanmıştır.
+`https://narvals.com` yayında ve teknik canlılık kontrolleri geçti. Bu kaynakta
+hazırlanan altı yeni URL henüz production deploy bekliyor. Kalan P0 girdiler;
+gerçek iletişim/NAP verileri, ölçüm kimlikleri ve KVKK/çerez tercihidir.
 
 ## Uygulanan sayfa–sorgu haritası
 
@@ -27,6 +28,7 @@ Google Search Console Domain mülk doğrulaması tamamlanmıştır.
 | `/hizmetler/e-ticaret/` | e-ticaret sitesi tasarımı ve geliştirme | Katalogdan sipariş operasyonuna ticari kapsamı anlatmak |
 | `/hizmetler/ozel-yazilim/` | özel yazılım geliştirme ve otomasyon | Rol, iş akışı, panel, veri ve entegrasyon kapsamını anlatmak |
 | `/hizmetler/dijital-reklam/` | Meta reklam yönetimi ajansı | Gerçek hizmet kapsamı olan Meta reklam niyetini sahiplenmek |
+| `/hizmetler/sosyal-medya-yonetimi/` | sosyal medya yönetimi ajansı | Organik içerik, yayın ve topluluk yönetimini Meta reklam kapsamından ayırmak |
 | `/hizmetler/qr-menu/` | özel QR menü yazılımı | Hazır SaaS ürünü vaadi vermeden özel panel ihtiyacını anlatmak |
 | `/hizmetler/rezervasyon-randevu/` | özel rezervasyon ve randevu sistemi | Kapasite ile personel/süre kurallarını ayrı ayrı açıklamak |
 | `/hizmetler/qr-menu-rezervasyon/` | QR menü, rezervasyon, randevu farkları | Çakışan Service sayfası yerine karşılaştırma hub'ı olmak |
@@ -48,9 +50,14 @@ ele alınır. Şehir adı değiştirilmiş doorway sayfaları oluşturulmaz.
 | E-ticaret altyapısı nasıl seçilir? | Hazır, headless ve özel mimari kararı |
 | Hazır yazılım mı, özel yazılım mı? | Yazılım satın alma karar matrisi |
 | Meta Pixel ve Conversions API farkı | Meta ölçüm mimarisi ve sınırlar |
+| Meta reklam bütçesi nasıl belirlenir? | Bütçe, ekonomik sınır, test ve durdurma planı |
+| Meta reklam ajansı seçerken sorulacak sorular | Hesap sahipliği, ölçüm, kreatif ve çıkış ölçütleri |
+| Sosyal medya yönetimi neleri kapsar? | Teslim, onay, yayın, topluluk ve raporlama sınırları |
+| E-ticaret sitesi maliyeti nasıl hesaplanır? | Kurulum, lisans, entegrasyon ve toplam sahip olma yükü |
 | QR menü mü PDF menü mü? | Menü formatı ve operasyon kararı |
 | Rezervasyon ve randevu sistemi nasıl seçilir? | Kapasite/personel kuralı ve ürün seçimi |
 | Web sitesi maliyeti nasıl hesaplanır? | Teklif kalemleri ve toplam sahip olma yükü |
+| Web sitesi yaptırmadan önce: kapsam, teklif ve karar rehberi | Satın alma niyeti, kapsam ve teklif karşılaştırması |
 
 Her rehberde doğrudan cevap, kapsam, karar tablosu veya kontrol listesi, sınırlar,
 birincil kaynaklar, yayın tarihi, `BlogPosting` ve ilgili hizmet/içerik bağları
@@ -62,7 +69,7 @@ yayıncı şimdilik Narvals Labs organizasyonudur.
 - Statik ana içerik; JavaScript beklemeden okunabilir HTML.
 - Her sayfada benzersiz title/description, self-canonical, `tr` + `x-default`,
   OG/Twitter kartı, bölgesel geo meta etiketleri (`geo.region`, `geo.placename`, `geo.position`, `ICBM`) ve RSS keşif bağlantısı.
-- 22 canonical URL'yi tek manifestten yöneten build, sitemap ve SEO kontrolü;
+- 28 canonical URL'yi tek manifestten yöneten build, sitemap ve SEO kontrolü;
   key/path/file/tarih ve ilgili içerik hedefleri için başlangıç doğrulamaları.
 - URL başına gerçek içerik değişikliğine bağlı `lastmod`; build tarihi kullanılmaz.
 - Wildcard `robots.txt` ile açık tarama ve tek sitemap bildirimi.
@@ -82,23 +89,26 @@ yayıncı şimdilik Narvals Labs organizasyonudur.
 - Reduced-motion tercihi için smooth scroll ve dekoratif hareketleri azaltan,
   tercih sayfa açıkken değiştiğinde de hareketi durduran katman; normal
   deneyimde anlamlı geri bildirim korunur.
-- Ana sayfada kullanılmayan pressure-hero JS/CSS kaldırıldı, aşağı-katman modülü
-  LCP sonrasına bölündü, 96 px logo ve 720 px mobil hero görseli eklendi.
+- Ana sayfada kullanılmayan pressure-hero JS/CSS kaldırıldı; aşağı-katman
+  animasyonları kullanıcı niyetine ertelendi; 96 px footer logosu, 520/720 px
+  hero ve 480/720 px hizmet görsel varyantları eklendi. Son yerel mobil
+  Lighthouse koşusunda ana sayfa 90/100/100/100, örnek yeni rehber
+  99/100/100/100 aldı; laboratuvar sonucu saha verisi veya sıralama garantisi
+  değildir.
 
 ## Gerçek otorite için eksik girdiler
 
 Aşağıdakiler kodla uydurulamaz ve yayın sahibinden gelmelidir:
 
-1. Satın alınmış ve DNS'i çalışan production alan adı; tercih edilen host.
-2. Yasal/ticari işletme adı ve gerçekten kullanılan marka adı.
-3. Kurumsal e-posta, ülke kodlu telefon/WhatsApp.
-4. Fiziksel ofis varsa doğrulanabilir adres; yoksa gerçek hizmet modeli/alanı.
-5. Kurucu ve ekip üyelerinin izinli ad, rol, biyografi ve doğrulanabilir profilleri.
-6. Gerçek sosyal profil URL'leri.
-7. İzinli müşteri/proje ekranları, problem, kapsam, yöntem, dönem, ölçüm ve sınır.
-8. Kaynak kodu, veri, hesap, hosting, bakım, yedekleme ve destek sahipliği.
-9. Analitik/Search Console/Bing doğrulama kimlikleri ve gerçek dönüşüm tanımı.
-10. KVKK, çerez, form ve iletişim izni için hukukça doğrulanmış metinler.
+1. Yasal/ticari işletme adı ve gerçekten kullanılan marka adı.
+2. Kurumsal e-posta, ülke kodlu telefon/WhatsApp.
+3. Fiziksel ofis varsa doğrulanabilir adres; yoksa gerçek hizmet modeli/alanı.
+4. Kurucu ve ekip üyelerinin izinli ad, rol, biyografi ve doğrulanabilir profilleri.
+5. Gerçek sosyal profil URL'leri.
+6. İzinli müşteri/proje ekranları, problem, kapsam, yöntem, dönem, ölçüm ve sınır.
+7. Kaynak kodu, veri, hesap, hosting, bakım, yedekleme ve destek sahipliği.
+8. Analitik/Search Console/Bing erişimi, ölçüm kimlikleri ve gerçek dönüşüm tanımı.
+9. KVKK, çerez, form ve iletişim izni için hukukça doğrulanmış metinler.
 
 Bu veri gelmeden `LocalBusiness`, adres, puan, review, telefon, kişi profili,
 müşteri logosu, fiyat veya performans yüzdesi eklenmemelidir. İşletme tamamen
@@ -108,8 +118,8 @@ online ise sırf yerel görünürlük için Google Business Profile açılmamal�
 
 ### P0 — indeks öncesi
 
-- Alan adı kaydı, DNS, hosting ve geçerli HTTPS.
-- `SITE_URL` ile `npm run build:production`.
+- Alan adı, DNS, hosting ve geçerli HTTPS tamamlandı; canlı denetim geçti.
+- Güncel kaynak için `SITE_URL=https://narvals.com npm run build:production` ve deploy.
 - HTTP → HTTPS, alternatif host → canonical host ve her dizindeki `index.html`
   → canonical slash URL için tek adımlı 301/308.
 - Bilinmeyen URL için gerçek 404; soft-404 yok.

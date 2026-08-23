@@ -19,7 +19,7 @@ export default defineConfig(({ command, mode }) => {
     plugins: [{
       name: 'narvals-site-origin',
       transformIndexHtml(html) {
-        return html.replaceAll('https://narvalslabs.com', siteOrigin);
+        return html.replaceAll('https://narvals.com', siteOrigin);
       }
     }],
     // The source library in public/ is intentionally kept for design work. Production

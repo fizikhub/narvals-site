@@ -131,10 +131,10 @@ const renderNav = (current = '') => `<header class="info-nav">
     </header>`;
 
 const renderFooter = () => `<footer class="site-footer">
-      <div class="site-footer__brand"><a href="/"><img src="/assets/logo-v6/narvals-mascot-v6-transparent-512.png" alt="" width="512" height="512" loading="lazy" /><strong>narvals<span>//</span>labs</strong></a><p>Web sitesi, özel yazılım ve reklamı aynı iş hedefinde buluşturan dijital üretim stüdyosu.</p></div>
-      <nav aria-label="Hizmet bağlantıları"><strong>Hizmetler</strong><a href="/hizmetler/web-tasarim/">Web tasarım &amp; UX</a><a href="/hizmetler/e-ticaret/">E-ticaret</a><a href="/hizmetler/ozel-yazilim/">Özel yazılım</a><a href="/hizmetler/dijital-reklam/">Meta reklam</a><a href="/hizmetler/qr-menu-rezervasyon/">İşletme sistemleri</a></nav>
+      <div class="site-footer__brand"><a href="/"><img src="/assets/logo-v6/narvals-mascot-v6-transparent-96.png" alt="" width="96" height="96" loading="lazy" /><strong>narvals<span>//</span>labs</strong></a><p>Web sitesi, özel yazılım ve reklamı aynı iş hedefinde buluşturan dijital üretim stüdyosu.</p></div>
+      <nav aria-label="Hizmet bağlantıları"><strong>Hizmetler</strong><a href="/hizmetler/web-tasarim/">Web tasarım &amp; UX</a><a href="/hizmetler/e-ticaret/">E-ticaret</a><a href="/hizmetler/ozel-yazilim/">Özel yazılım</a><a href="/hizmetler/dijital-reklam/">Meta reklam</a><a href="/hizmetler/sosyal-medya-yonetimi/">Sosyal medya</a><a href="/hizmetler/qr-menu-rezervasyon/">İşletme sistemleri</a></nav>
       <nav aria-label="Bilgi merkezi bağlantıları"><strong>Bilgi merkezi</strong><a href="/blog/">Tüm rehberler</a><a href="/blog/web-sitesi-teknik-seo-kontrol-listesi/">Teknik SEO listesi</a><a href="/blog/google-ai-aramalari-icin-geo-rehberi/">GEO rehberi</a><a href="/editoryal-ilkeler/">Editoryal ilkeler</a></nav>
-      <div class="site-footer__contact"><strong>Bir proje mi var?</strong><p>Hedefi ve en kritik darboğazı anlatarak ilk görüşmeyi başlatın.</p><a href="/iletisim/">İletişim seçenekleri ↗</a></div>
+      <div class="site-footer__contact"><strong>Bir proje mi var?</strong><p>Hedefi ve en kritik darboğazı anlatarak ilk görüşmeyi başlatın.</p><a href="/iletisim/">İletişim ↗</a></div>
       <p class="site-footer__legal">© <span data-current-year>2026</span> Narvals Labs. Tüm hakları saklıdır.</p>
     </footer>`;
 
@@ -205,8 +205,9 @@ const renderArticle = (post, siteOrigin) => {
   ];
 
   return `<!doctype html>
-<html lang="tr">
+<html class="no-js" lang="tr">
   <head>
+    <script>document.documentElement.classList.replace('no-js', 'js');</script>
 ${renderHead({ siteOrigin, path, title: post.metaTitle, description: post.description, keywords: post.keywords, schema, type: 'article', published: post.published, modified: post.modified })}
   </head>
   <body class="info-page article-page">
@@ -238,7 +239,7 @@ ${renderHead({ siteOrigin, path, title: post.metaTitle, description: post.descri
               <aside class="article-method" aria-label="Bu rehberin hazırlanma yöntemi"><strong>Hazırlama yöntemi</strong><p>Bu rehber Narvals Labs yayıncılığında; ilgili birincil kaynaklar, görünür hizmet kapsamı ve proje karar çerçeveleri incelenerek hazırlandı. Doğrulanamayan müşteri, fiyat, başarı oranı veya sonuç iddiası eklenmedi. Yöntem, düzeltme ve yapay zekâ desteği açıklaması için <a href="/editoryal-ilkeler/">editoryal ilkeleri</a> okuyabilirsiniz.</p></aside>
             </section>
             <section class="info-section article-section">
-              <p class="info-section__label">İlgili rehberler</p><h2>Bir sonraki kararı derinleştirin.</h2>
+              <p class="info-section__label">İlgili rehberler</p><h2>İlgili rehberlerle devam edin.</h2>
               <div class="article-related">${renderRelated(post)}</div>
             </section>
           </div>
@@ -290,8 +291,9 @@ const renderBlogIndex = (siteOrigin) => {
   ];
 
   return `<!doctype html>
-<html lang="tr">
+<html class="no-js" lang="tr">
   <head>
+    <script>document.documentElement.classList.replace('no-js', 'js');</script>
 ${renderHead({ siteOrigin, path, title, description, keywords: ['dijital rehberler', 'web tasarım rehberi', 'özel yazılım', 'Meta reklam', 'teknik SEO'], schema })}
   </head>
   <body class="info-page blog-page">
@@ -305,10 +307,10 @@ ${renderHead({ siteOrigin, path, title, description, keywords: ['dijital rehberl
       </section>
       <section class="blog-hub" aria-labelledby="rehberler-basligi">
         <header class="blog-hub__header"><p class="info-section__label">Tüm rehberler</p><h2 id="rehberler-basligi">Hizmete göre değil, kararınıza göre başlayın.</h2><p>Her rehber tek bir arama ve iş niyetine sahiptir. Benzer sorgular için kopya sayfa üretmek yerine, bir konuyu karar vermeye yetecek derinlikte ele alır.</p></header>
-        <div class="blog-grid">${blogPosts.map((post) => `<article class="blog-card"><div class="blog-card__meta"><span>${escapeHtml(post.category)}</span><span>${post.readingTime} dk</span></div><h3><a href="/blog/${post.slug}/">${escapeHtml(post.title)}</a></h3><p>${escapeHtml(post.description)}</p><a class="blog-card__link" href="/blog/${post.slug}/" aria-label="${escapeHtml(post.title)} rehberini okuyun">Rehberi okuyun <span aria-hidden="true">→</span></a></article>`).join('')}</div>
+        <div class="blog-grid">${blogPosts.map((post) => `<article class="blog-card"><div class="blog-card__meta"><span>${escapeHtml(post.category)}</span><span>${post.readingTime} dk</span></div><h3><a href="/blog/${post.slug}/">${escapeHtml(post.title)}</a></h3><p>${escapeHtml(post.description)}</p><a class="blog-card__link" href="/blog/${post.slug}/" aria-label="${escapeHtml(post.title)} içeriğini okuyun">Rehberi okuyun <span aria-hidden="true">→</span></a></article>`).join('')}</div>
       </section>
-      <section class="editorial-strip"><div><p class="info-section__label">Yayın standardı</p><h2>Kaynak, sınır ve düzeltme yolu görünür.</h2></div><p>Doğrulanmayan fiyat, müşteri, performans veya başarı iddiası yayınlamıyoruz. İçeriklerin nasıl hazırlandığını ve güncellendiğini <a href="/editoryal-ilkeler/">editoryal ilkelerde</a> açıklıyoruz.</p></section>
-      <section class="info-cta"><h2>Okumadan uygulamaya geçin.</h2><p>İhtiyacınızın hangi hizmete dönüştüğünden emin değilseniz mevcut akışı birlikte haritalayalım.</p><a class="info-button" href="/iletisim/">Projeyi konuşalım <span aria-hidden="true">↗</span></a></section>
+      <section class="editorial-strip"><div><p class="info-section__label">Yayın standardı</p><h2>Her rehberde kaynakları, kapsamı ve düzeltme yolunu açıkça gösteriyoruz.</h2></div><p>Doğrulanmayan fiyat, müşteri, performans veya başarı iddiası yayınlamıyoruz. İçeriklerin nasıl hazırlandığını ve güncellendiğini <a href="/editoryal-ilkeler/">editoryal ilkelerde</a> açıklıyoruz.</p></section>
+      <section class="info-cta"><h2>Rehberden uygulamaya geçin.</h2><p>Hangi hizmetle başlamanız gerektiğinden emin değilseniz mevcut durumu birlikte netleştirelim.</p><a class="info-button" href="/iletisim/">Projeyi konuşalım <span aria-hidden="true">↗</span></a></section>
     </main>
     ${renderFooter()}
     <script type="module" src="/src/info-main.js"></script>
@@ -333,8 +335,9 @@ const renderEditorialPolicy = (siteOrigin) => {
   ];
 
   return `<!doctype html>
-<html lang="tr">
+<html class="no-js" lang="tr">
   <head>
+    <script>document.documentElement.classList.replace('no-js', 'js');</script>
 ${renderHead({ siteOrigin, path, title, description, keywords: ['editoryal ilkeler', 'kaynak politikası', 'içerik güncelleme', 'yapay zekâ şeffaflığı'], schema })}
   </head>
   <body class="info-page editorial-page">
@@ -349,7 +352,7 @@ ${renderHead({ siteOrigin, path, title, description, keywords: ['editoryal ilkel
         <section class="info-section article-section" id="yapay-zeka"><p class="info-section__label">Üretim şeffaflığı</p><h2>Yapay zekâ araştırma ve taslak desteği sağlayabilir; yayın sorumluluğunu devralmaz.</h2><p>Kaynak tarama, konu haritası, taslak üretimi, dil kontrolü ve teknik sayfa oluşturma aşamalarında yapay zekâ araçları kullanılabilir. Bu kullanım; gerçek deneyim, müşteri kanıtı veya uzman kimliği uydurmak için gerekçe değildir. Yayımlanan içerikte doğrulanamayan başarı oranı, fiyat, vaka veya biyografi oluşturmayız.</p><p>Yapay zekâ çıktısı kaynak sayılmaz. Değişebilir iddialar erişilebilir birincil kaynakla kontrol edilir; karar tabloları ve kontrol listeleri Narvals Labs’ın sunduğu hizmet kapsamıyla sınırlı tutulur. Her içerik yayına alınmadan önce marka sorumlusu tarafından doğrulanmalıdır.</p></section>
         <section class="info-section article-section" id="yazar"><p class="info-section__label">Kim yayınlıyor?</p><h2>Gerçek kişi bilgisi yoksa hayalî uzman profili açmayız.</h2><p>Mevcut rehberlerin yayıncısı Narvals Labs’tır. Gerçek yazar, teknik inceleyen veya hukuk incelemesi bilgisi doğrulanıp yayın izni alındığında ad, rol ve profil bağlantısı içeriğe eklenir. O zamana kadar kişi şeması, sahte biyografi veya belirsiz “uzman ekibimiz” iddiası kullanmayız.</p><p>Müşteri vakaları ancak yayın izni, başlangıç durumu, yöntem, ölçüm tanımı, dönem ve sınırlamalar doğrulandığında oluşturulur.</p></section>
         <section class="info-section article-section" id="guncelleme"><p class="info-section__label">Tarih politikası</p><h2>Tarihi yalnız içerik gerçekten değiştiğinde güncelleriz.</h2><p>Her rehber yayın tarihini taşır. Kaynak, karar çerçevesi veya kullanıcı sonucunu anlamlı biçimde değiştiren düzenlemede güncelleme tarihi yenilenir. Yazım düzeltmesi veya sırf taze görünme amacıyla tarih değiştirilmez. Hızla değişen platform ve mevzuat sayfaları periyodik olarak kaynak düzeyinde kontrol edilir.</p></section>
-        <section class="info-section article-section" id="duzeltme"><p class="info-section__label">Hata ve geri bildirim</p><h2>Düzeltme talebinin görünür bir yolu vardır.</h2><p>Bir içerikte olgusal hata, bozuk kaynak, belirsiz çıkar çatışması veya güncelliğini yitirmiş bilgi görürseniz <a href="/iletisim/">iletişim sayfasından</a> ilgili URL ile bildirebilirsiniz. Bildirim doğrulandığında içerik düzeltilir; karar sonucunu anlamlı biçimde etkileyen değişiklikte güncelleme tarihi yenilenir.</p><p>Hiçbir rehber Google sırası, AI citation’ı, reklam sonucu, yazılım verimliliği veya ticari performans garantisi vermez.</p></section>
+        <section class="info-section article-section" id="duzeltme"><p class="info-section__label">Hata ve geri bildirim</p><h2>Düzeltme talepleri gerçek bir iletişim kanalıyla alınmalıdır.</h2><p>Doğrulanmış iletişim kanalı eklendiğinde olgusal hata, bozuk kaynak, belirsiz çıkar çatışması veya güncelliğini yitirmiş bilgi ilgili URL ile bildirilebilir. Bildirim doğrulandığında içerik düzeltilir; karar sonucunu anlamlı biçimde etkileyen değişiklikte güncelleme tarihi yenilenir.</p><p>Hiçbir rehber Google sırası, yapay zekâ kaynak gösterimi, reklam sonucu, yazılım verimliliği veya ticari performans garantisi vermez.</p></section>
       </div></div>
       <section class="info-cta"><h2>Rehberleri inceleyin.</h2><p>Karar tabloları, kontrol listeleri ve birincil kaynaklarla mevcut projenizi netleştirin.</p><a class="info-button" href="/blog/">Tüm rehberler <span aria-hidden="true">→</span></a></section>
     </main>

@@ -4,13 +4,13 @@ dist/
 .env
 npm-debug.log*
 
-# Local design history and creative production exports. They are not needed to
-# build or deploy the public website.
-.archive/
+# Local design archives and generated delivery bundles.
 archive/
+.archive/
 creative/
+design-sources/
 tmp/
-public/assets/master/
+*.zip
 
 # The build copies this small allowlist from public/. Keep the local source
 # artwork out of the deployment repository.
@@ -36,23 +36,37 @@ public/assets/*
 public/assets/campaign/*
 !public/assets/campaign/signal-knot-v1.avif
 !public/assets/hero-continuation/
-public/assets/hero-continuation/*
+public/assets/hero-continuation/**
+!public/assets/hero-continuation/creative-hands-v1-480.webp
+!public/assets/hero-continuation/creative-hands-v1-720.webp
 !public/assets/hero-continuation/creative-hands-v1.webp
+!public/assets/hero-continuation/services-lockup-v1-480.avif
 !public/assets/hero-continuation/services-lockup-v1-700.avif
 !public/assets/hero-continuation/services-lockup-v1.png
 !public/assets/logo-v6/
-public/assets/logo-v6/*
+public/assets/logo-v6/**
 !public/assets/logo-v6/narvals-avatar-v6-1080.png
 !public/assets/logo-v6/narvals-favicon-v6-256.png
-!public/assets/logo-v6/narvals-mascot-v6-transparent-512.png
 !public/assets/logo-v6/narvals-mascot-v6-transparent-96.png
 !public/assets/services-v3/
-public/assets/services-v3/*
+public/assets/services-v3/**
+!public/assets/services-v3/ads-tool-v2-480.webp
+!public/assets/services-v3/ads-tool-v2-720.webp
 !public/assets/services-v3/ads-tool-v2.webp
+!public/assets/services-v3/booking-tool-v1-480.webp
+!public/assets/services-v3/booking-tool-v1-720.webp
 !public/assets/services-v3/booking-tool-v1.webp
+!public/assets/services-v3/software-tool-v2-480.webp
+!public/assets/services-v3/software-tool-v2-720.webp
 !public/assets/services-v3/software-tool-v2.webp
+!public/assets/services-v3/web-tool-v2-480.webp
+!public/assets/services-v3/web-tool-v2-720.webp
 !public/assets/services-v3/web-tool-v2.webp
 !public/assets/web/
-public/assets/web/*
-!public/assets/web/hero-narwhal-mascot-v2.webp
+public/assets/web/**
+!public/assets/web/hero-narwhal-mascot-v2-520.webp
 !public/assets/web/hero-narwhal-mascot-v2-720.webp
+!public/assets/web/hero-narwhal-mascot-v2.webp
+
+public/og/*
+!public/og/narvals-labs-og.jpg

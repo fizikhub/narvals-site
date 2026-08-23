@@ -24,10 +24,17 @@
     <link rel="alternate" hreflang="tr" href="https://narvals.com/" />
     <link rel="alternate" hreflang="x-default" href="https://narvals.com/" />
     <link rel="alternate" type="application/rss+xml" title="Narvals Labs Rehberleri" href="https://narvals.com/blog/feed.xml" />
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/web/hero-narwhal-mascot-v2.webp"
+      imagesrcset="/assets/web/hero-narwhal-mascot-v2-520.webp 520w, /assets/web/hero-narwhal-mascot-v2-720.webp 720w, /assets/web/hero-narwhal-mascot-v2.webp 1367w"
+      imagesizes="(max-width: 720px) 92vw, 52vw"
+      fetchpriority="high"
+    />
     <link rel="icon" href="/assets/logo-v6/narvals-favicon-v6-256.png" type="image/png" />
     <link rel="apple-touch-icon" href="/assets/logo-v6/narvals-avatar-v6-1080.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="preload" as="image" href="/assets/web/hero-narwhal-mascot-v2.webp" imagesrcset="/assets/web/hero-narwhal-mascot-v2-720.webp 720w, /assets/web/hero-narwhal-mascot-v2.webp 1367w" imagesizes="(max-width: 720px) 92vw, 52vw" type="image/webp" fetchpriority="high" />
     <meta property="og:locale" content="tr_TR" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Narvals Labs" />
@@ -117,7 +124,7 @@
             "@type": "ItemList",
             "@id": "https://narvals.com/#services",
             "name": "Narvals Labs hizmetleri",
-            "numberOfItems": 5,
+            "numberOfItems": 6,
             "itemListElement": [
               {
                 "@type": "ListItem",
@@ -142,6 +149,11 @@
               {
                 "@type": "ListItem",
                 "position": 5,
+                "item": { "@type": "Service", "name": "Sosyal medya yönetimi", "url": "https://narvals.com/hizmetler/sosyal-medya-yonetimi/", "provider": { "@id": "https://narvals.com/#organization" } }
+              },
+              {
+                "@type": "ListItem",
+                "position": 6,
                 "item": { "@type": "Service", "name": "QR menü ve rezervasyon sistemleri", "url": "https://narvals.com/hizmetler/qr-menu-rezervasyon/", "provider": { "@id": "https://narvals.com/#organization" } }
               }
             ]
@@ -234,6 +246,7 @@
         <a
           class="nav-whatsapp magnetic"
           href="/iletisim/"
+          aria-label="İletişim"
         >
           <span class="status-dot" aria-hidden="true"></span>
           <span class="nav-whatsapp__label">
@@ -294,7 +307,7 @@
         <a
           class="mobile-whatsapp"
           href="/iletisim/"
-        ><span>Projeyi konuş<small>İlk mesaj için gerekenleri gör</small></span><b aria-hidden="true">↗</b></a>
+        ><span>Projeyi konuşalım<small>İlk mesaj için gerekenleri gör</small></span><b aria-hidden="true">↗</b></a>
       </div>
     </nav>
 
@@ -306,22 +319,22 @@
             <div class="studio-hero">
               <div class="studio-hero__copy">
                 <h1 id="hero-title" class="studio-hero__title">
-                  <span class="studio-hero__title-line studio-hero__title-line--web">Web siteleri<span class="studio-hero__period">.</span></span>
+                  <span class="studio-hero__title-line studio-hero__title-line--web">Web sitesi<span class="studio-hero__period">.</span></span>
                   <span class="studio-hero__title-line studio-hero__title-line--software">Özel yazılım<span class="studio-hero__period">.</span></span>
-                  <span class="studio-hero__title-line studio-hero__title-line--meta">Meta reklamları<span class="studio-hero__period">.</span></span>
+                  <span class="studio-hero__title-line studio-hero__title-line--meta">Meta reklam<span class="studio-hero__period">.</span></span>
                 </h1>
 
                 <div class="studio-hero__console">
                   <span class="liquid-glass__lens" aria-hidden="true"></span>
                   <span class="liquid-glass__glint" aria-hidden="true"></span>
                   <div class="studio-hero__intro">
-                    <strong>Üç uzmanlık. Tek yaratıcı ekip.</strong>
-                    <p>İşini internette kurar, sana özel yazılımla hızlandırır ve Meta reklamlarıyla doğru müşterilere ulaştırırız.</p>
+                    <strong>Üç uzmanlık. Tek ekip.</strong>
+                    <p>İşletmeniz için web sitesi kuruyor, özel yazılım geliştiriyor ve Meta reklamlarını yönetiyoruz.</p>
                   </div>
 
                   <a class="studio-hero__cta" href="/iletisim/">
                     <span class="studio-hero__cta-register" aria-hidden="true"><i></i><i></i><i></i></span>
-                    <span class="studio-hero__cta-copy">Projeni konuşalım<small>İlk adımı birlikte netleştirelim</small></span>
+                    <span class="studio-hero__cta-copy">Projeyi konuşalım<small>İlk adımı birlikte netleştirelim</small></span>
                     <i aria-hidden="true">↗</i>
                   </a>
                 </div>
@@ -332,13 +345,13 @@
                 <img
                   class="hero-mascot"
                   src="/assets/web/hero-narwhal-mascot-v2.webp"
-                  srcset="/assets/web/hero-narwhal-mascot-v2-720.webp 720w, /assets/web/hero-narwhal-mascot-v2.webp 1367w"
+                  srcset="/assets/web/hero-narwhal-mascot-v2-520.webp 520w, /assets/web/hero-narwhal-mascot-v2-720.webp 720w, /assets/web/hero-narwhal-mascot-v2.webp 1367w"
                   sizes="(max-width: 720px) 92vw, 52vw"
                   alt="Narvals Labs’in kırmızı fularlı mavi narval maskotu"
                   width="1367"
                   height="1151"
                   fetchpriority="high"
-                  decoding="async"
+                  decoding="sync"
                 />
                 <span class="studio-hero__signal" aria-hidden="true"><i></i><i></i><i></i></span>
                 <figcaption class="visually-hidden">Web tasarım, özel yazılım ve Meta reklamlarını aynı yaratıcı akışta birleştiren Narvals Labs maskotu.</figcaption>
@@ -359,7 +372,8 @@
                 <span class="visually-hidden">Sunduğumuz hizmetler</span>
                 <picture>
                   <source
-                    srcset="/assets/hero-continuation/services-lockup-v1-700.avif"
+                    srcset="/assets/hero-continuation/services-lockup-v1-480.avif 480w, /assets/hero-continuation/services-lockup-v1-700.avif 700w"
+                    sizes="(max-width: 720px) 88vw, 42vw"
                     type="image/avif"
                   />
                   <img
@@ -378,6 +392,8 @@
             <figure class="current-lab__hands">
               <img
                 src="/assets/hero-continuation/creative-hands-v1.webp"
+                srcset="/assets/hero-continuation/creative-hands-v1-480.webp 480w, /assets/hero-continuation/creative-hands-v1-720.webp 720w, /assets/hero-continuation/creative-hands-v1.webp 1122w"
+                sizes="(max-width: 720px) 88vw, 38vw"
                 alt="Web, yazılım ve reklam üretimini aynı fikirde buluşturan üç yaratıcı el"
                 width="1122"
                 height="1402"
@@ -389,36 +405,95 @@
 
             <nav class="current-lab__disciplines" aria-label="Hizmetler">
               <a class="current-discipline current-discipline--web" href="#web-service">
-                <span>Markanı ekrana çıkarır.</span>
+                <span>Markanızı ekrana çıkarır.</span>
                 <strong>Web sitesi &amp; UX</strong>
                 <i aria-hidden="true">//</i>
               </a>
               <a class="current-discipline current-discipline--software" href="#software-service">
-                <span>İşini hızlandırır.</span>
+                <span>İşinizi hızlandırır.</span>
                 <strong>Özel yazılım</strong>
                 <i aria-hidden="true">//</i>
               </a>
               <a class="current-discipline current-discipline--ads" href="#ads-service">
-                <span>Fikrini insanına ulaştırır.</span>
-                <strong>Meta reklamları</strong>
+                <span>Fikrinizi doğru müşteriye ulaştırır.</span>
+                <strong>Meta reklam yönetimi</strong>
                 <i aria-hidden="true">//</i>
               </a>
             </nav>
 
             <a class="current-lab__cta" href="/iletisim/">
-              <span>Sen fikri getir.<strong>Gerisini birlikte büyütelim.</strong></span>
+              <span>Fikrinizi getirin.<strong>Birlikte büyütelim.</strong></span>
               <i aria-hidden="true">↗</i>
             </a>
           </section>
         </div>
       </section>
 
+      <section class="mobile-home" aria-label="Narvals Labs hizmetleri ve çalışma süreci">
+        <section class="mobile-services" id="mobil-hizmetler" aria-labelledby="mobile-services-title">
+          <header class="mobile-section-heading">
+            <p>Hangi konuda destek gerekiyor?</p>
+            <h2 id="mobile-services-title">İşinizi büyüten üç temel hizmet.</h2>
+            <span>İhtiyacınızın adını bilmiyorsanız sorun değil. Önce hedefi ve en önemli sorunu birlikte netleştiririz.</span>
+          </header>
+
+          <div class="mobile-service-list">
+            <a class="mobile-service mobile-service--web" href="/hizmetler/web-tasarim/" aria-label="Web sitesi ve UX hizmetini incele">
+              <span class="mobile-service__label">Web sitesi ve UX</span>
+              <strong>Müşteriniz ne sunduğunuzu hemen anlasın.</strong>
+              <p>Hızlı, mobil uyumlu ve ziyaretçiyi doğru adıma yönlendiren kurumsal siteler ve e-ticaret deneyimleri kuruyoruz.</p>
+              <span class="mobile-service__link">Hizmeti incele <b aria-hidden="true">↗</b></span>
+            </a>
+
+            <a class="mobile-service mobile-service--software" href="/hizmetler/ozel-yazilim/" aria-label="Özel yazılım ve otomasyon hizmetini incele">
+              <span class="mobile-service__label">Özel yazılım ve otomasyon</span>
+              <strong>Tekrarlanan işleri tek yerde yönetin.</strong>
+              <p>Mesaj, tablo ve farklı araçlara dağılan işleri işletmenize göre geliştirilen panel, otomasyon ve entegrasyonlarda topluyoruz.</p>
+              <span class="mobile-service__link">Hizmeti incele <b aria-hidden="true">↗</b></span>
+            </a>
+
+            <a class="mobile-service mobile-service--ads" href="/hizmetler/dijital-reklam/" aria-label="Meta reklam yönetimi hizmetini incele">
+              <span class="mobile-service__label">Meta reklam yönetimi</span>
+              <strong>Doğru müşteriye ölçülebilir biçimde ulaşın.</strong>
+              <p>Hedefi, reklam içeriklerini, bütçeyi ve ölçümü aynı plan içinde yönetiyor; iyileştirmeyi gerçek iş sonucuna bağlıyoruz.</p>
+              <span class="mobile-service__link">Hizmeti incele <b aria-hidden="true">↗</b></span>
+            </a>
+          </div>
+
+          <a class="mobile-services__all" href="/hizmetler/">E-ticaret, sosyal medya, QR menü ve diğer hizmetler <span aria-hidden="true">→</span></a>
+        </section>
+
+        <section class="mobile-process" aria-labelledby="mobile-process-title">
+          <header class="mobile-section-heading mobile-section-heading--light">
+            <p>Nasıl çalışıyoruz?</p>
+            <h2 id="mobile-process-title">Başlangıçtan yayına, açık bir süreç.</h2>
+            <span>Gerekmeyen hizmeti kapsama eklemeden, kararları ve sorumlulukları görünür tutarız.</span>
+          </header>
+
+          <ol class="mobile-process__steps">
+            <li><b>01</b><div><strong>Hedefi netleştiririz.</strong><p>Mevcut durumu, müşterinin atmasını istediğiniz adımı ve en önemli sorunu konuşuruz.</p></div></li>
+            <li><b>02</b><div><strong>Kapsamı çıkarırız.</strong><p>Gerekli ekranları, içerikleri, iş kurallarını ve teknik bağlantıları açık bir plana dönüştürürüz.</p></div></li>
+            <li><b>03</b><div><strong>Tasarlayıp kurarız.</strong><p>Tasarım, geliştirme, reklam içeriği, entegrasyon ve testleri aynı hedef etrafında yürütürüz.</p></div></li>
+            <li><b>04</b><div><strong>Ölçüp iyileştiririz.</strong><p>Yayın sonrasında gerçek kullanım ve iş sonuçlarına göre çalışan parçaları güçlendiririz.</p></div></li>
+          </ol>
+        </section>
+
+        <section class="mobile-start" aria-labelledby="mobile-start-title">
+          <div>
+            <p>Nereden başlayacağınız net değil mi?</p>
+            <h2 id="mobile-start-title">Önce en önemli sorunu bulalım.</h2>
+            <span>İlk görüşmede hedefi ve mevcut durumu ayırır, doğru başlangıç noktasını birlikte belirleriz.</span>
+          </div>
+          <a href="/iletisim/">Projeyi konuşalım <b aria-hidden="true">↗</b></a>
+        </section>
+      </section>
+
       <section class="service-odyssey" aria-labelledby="odyssey-title" data-service-odyssey>
         <header class="odyssey-thesis">
           <div class="odyssey-thesis__copy">
             <h2 id="odyssey-title">
-              <span>Bir müşterinin yolu,</span>
-              <strong>tek bir sistem.</strong>
+              <span>Reklamdan satışa,</span>
+              <strong>tüm müşteri adımlarını birlikte kurarız.</strong>
             </h2>
             <p class="odyssey-thesis__lead">
               Birinin reklamınızı görmesi yalnızca başlangıçtır. Asıl iş; ne sunduğunuzu anlaması,
@@ -458,6 +533,8 @@
               <picture>
                 <img
                   src="/assets/services-v3/ads-tool-v2.webp"
+                  srcset="/assets/services-v3/ads-tool-v2-480.webp 480w, /assets/services-v3/ads-tool-v2-720.webp 720w, /assets/services-v3/ads-tool-v2.webp 1122w"
+                  sizes="(max-width: 720px) 92vw, 42vw"
                   alt="Üç renkli elin birlikte ayarladığı fiziksel bir megafon"
                   width="1122"
                   height="1402"
@@ -495,7 +572,7 @@
 
             <p class="brand-thread"><span>Reklam değişir.</span><strong>Marka sesi dağılmaz.</strong></p>
             <a class="station-detail-link" href="/hizmetler/dijital-reklam/">
-              Dijital reklam hizmetini ayrıntılı incele <span aria-hidden="true">→</span>
+              Meta reklam yönetimini ayrıntılı incele <span aria-hidden="true">→</span>
             </a>
           </article>
 
@@ -506,6 +583,8 @@
               <picture>
                 <img
                   src="/assets/services-v3/web-tool-v2.webp"
+                  srcset="/assets/services-v3/web-tool-v2-480.webp 480w, /assets/services-v3/web-tool-v2-720.webp 720w, /assets/services-v3/web-tool-v2.webp 1122w"
+                  sizes="(max-width: 720px) 92vw, 42vw"
                   alt="Üç renkli elin birlikte tuttuğu fiziksel bir web sitesi çerçevesi"
                   width="1122"
                   height="1402"
@@ -577,6 +656,8 @@
               <picture>
                 <img
                   src="/assets/services-v3/booking-tool-v1.webp"
+                  srcset="/assets/services-v3/booking-tool-v1-480.webp 480w, /assets/services-v3/booking-tool-v1-720.webp 720w, /assets/services-v3/booking-tool-v1.webp 1121w"
+                  sizes="(max-width: 720px) 92vw, 42vw"
                   alt="Üç renkli elin kullandığı QR menü ve rezervasyon konsolu"
                   width="1121"
                   height="1403"
@@ -637,6 +718,8 @@
               <picture>
                 <img
                   src="/assets/services-v3/software-tool-v2.webp"
+                  srcset="/assets/services-v3/software-tool-v2-480.webp 480w, /assets/services-v3/software-tool-v2-720.webp 720w, /assets/services-v3/software-tool-v2.webp 1122w"
+                  sizes="(max-width: 720px) 92vw, 42vw"
                   alt="Üç renkli elin birlikte çalıştırdığı fiziksel bir kontrol modülü"
                   width="1122"
                   height="1402"
@@ -760,7 +843,7 @@
             class="odyssey-cta__button magnetic"
             href="/iletisim/"
           >
-            <span>İşimi birlikte haritalayalım<small>İlk görüşmeye hazırlan</small></span>
+            <span>Projeyi konuşalım<small>İlk görüşmeye hazırlan</small></span>
             <b aria-hidden="true">↗</b>
           </a>
           <p class="odyssey-cta__closing">Reklamdan rezervasyona, ekrandan operasyona: dijital tarafı tek parça hâline getiriyoruz.</p>
@@ -841,7 +924,7 @@
     <footer class="site-footer" id="site-footer">
       <div class="site-footer__brand">
         <a href="/">
-          <img src="/assets/logo-v6/narvals-mascot-v6-transparent-512.png" alt="" width="512" height="512" loading="lazy" />
+          <img src="/assets/logo-v6/narvals-mascot-v6-transparent-96.png" alt="" width="96" height="96" loading="lazy" />
           <strong>narvals<span>//</span>labs</strong>
         </a>
         <p>Web sitesi, özel yazılım ve reklamı aynı iş hedefinde buluşturan dijital üretim stüdyosu.</p>
@@ -852,7 +935,8 @@
         <a href="/hizmetler/web-tasarim/">Web tasarım &amp; UX</a>
         <a href="/hizmetler/e-ticaret/">E-ticaret</a>
         <a href="/hizmetler/ozel-yazilim/">Özel yazılım</a>
-        <a href="/hizmetler/dijital-reklam/">Dijital reklam</a>
+        <a href="/hizmetler/dijital-reklam/">Meta reklam</a>
+        <a href="/hizmetler/sosyal-medya-yonetimi/">Sosyal medya yönetimi</a>
         <a href="/hizmetler/qr-menu-rezervasyon/">QR menü &amp; rezervasyon</a>
       </nav>
       <nav aria-label="Footer kurumsal bağlantıları">
@@ -866,7 +950,7 @@
       <div class="site-footer__contact">
         <strong>Bir proje mi var?</strong>
         <p>Hedefi ve en kritik darboğazı anlatarak ilk görüşmeyi başlatın.</p>
-        <a href="/iletisim/">İletişim seçenekleri <span aria-hidden="true">↗</span></a>
+        <a href="/iletisim/">İletişim <span aria-hidden="true">↗</span></a>
       </div>
       <p class="site-footer__legal">© <span data-current-year>2026</span> Narvals Labs. Tüm hakları saklıdır.</p>
     </footer>

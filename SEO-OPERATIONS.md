@@ -4,16 +4,19 @@ Bu dosya kodla çözülemeyen, hesap/doğrulama veya gerçek işletme verisi
 gerektiren yayın sonrası işleri takip eder. Hiçbir madde sıralama, indekslenme
 veya yapay zekâ yanıtında kaynak gösterilme garantisi vermez.
 
-## Canlılık ve Alan Adı Durumu
+## 23 Ağustos 2026 canlılık durumu
 
-`narvals.com` Cloudflare DNS ve HTTPS üzerinde aktif ve canlıdır. Google Search
-Console Domain mülk doğrulaması Cloudflare DNS entegrasyonu ile tamamlanmıştır.
-22 canonical sayfa, `robots.txt` ve `sitemap.xml` canlıda sorunsuz erişilmektedir.
+`https://narvals.com` yayındadır. Canlı denetimde HTTPS ve canonical
+yönlendirmeleri, gerçek `404`, `robots.txt`, sitemap, 22 mevcut canonical URL ve
+iç bağlantılar başarılı bulundu. Bu kaynak güncellemesi sosyal medya yönetimi
+hizmet sayfası, web sitesi yaptırma rehberi ve dört yeni ticari karar rehberiyle
+üretim sitemap'ini 28 canonical URL'ye çıkarır; bu altı URL deploy sonrasında
+canlı denetime dahil edilmelidir.
 
-Production derlemesi:
+Production derlemesi gerçek canonical adres açıkça verilmeden artık durur:
 
 ```bash
-npm run build:production
+SITE_URL=https://narvals.com npm run build:production
 ```
 
 Bu build koruması origin biçimini ve HTTPS kullanımını doğrular; DNS sahipliğini
@@ -23,7 +26,7 @@ verilmelidir.
 Deploy tamamlandıktan sonra canlı DNS/HTTP/canonical denetimi:
 
 ```bash
-SITE_URL=https://gercek-alan-adiniz.com npm run seo:check-live
+SITE_URL=https://narvals.com npm run seo:check-live
 ```
 
 ## Yayından önce zorunlu gerçek veriler
@@ -49,6 +52,11 @@ Bu bilgiler geldikten sonra ana sayfa, `/iletisim/`, footer ve tüm sayfalardaki
 - Bilinmeyen URL’ler ana sayfa HTML’iyle `200` değil gerçek `404` dönmelidir.
 - HTML kısa cache/yeniden doğrulama; hashli CSS/JS ve değişmeyen görseller uzun
   cache ile sunulmalıdır.
+- Cloudflare HTML yanıtları varsayılan olarak `DYNAMIC` kaldığı için statik
+  `GET/HEAD` ve `200` HTML yanıtlarında kısa bir Edge TTL Cache Rule
+  oluşturulabilir. Admin/preview, kişiselleştirme çerezi, form ve gerektiğinde
+  query-param istekleri bypass edilmeli; her deploy sonrası ilgili cache purge
+  edilmelidir. Tarayıcıdaki `max-age=0, must-revalidate` korunabilir.
 - CDN/WAF; Googlebot, Bingbot, Yandex, Applebot, OAI-SearchBot ve PerplexityBot’a
   CAPTCHA, JavaScript challenge veya `403` üretmemelidir. User-agent tek başına
   güvenlik doğrulaması değildir; resmî IP listeleri ve reverse DNS kullanılır.
@@ -82,13 +90,13 @@ Bu bilgiler geldikten sonra ana sayfa, `/iletisim/`, footer ve tüm sayfalardaki
 Örnek IndexNow isteği, production alan adı kesinleşince:
 
 ```text
-https://api.indexnow.org/indexnow?url=https%3A%2F%2FALAN-ADI%2F&key=b04a90decae26feec44042e2c2e4dd84
+https://api.indexnow.org/indexnow?url=https%3A%2F%2Fnarvals.com%2F&key=b04a90decae26feec44042e2c2e4dd84
 ```
 
 Projede doğrulanmış alan adıyla toplu bildirim betiği de hazırdır:
 
 ```bash
-SITE_URL=https://alan-adi.example npm run indexnow:submit -- / /hizmetler/web-tasarim/
+SITE_URL=https://narvals.com npm run indexnow:submit -- / /hizmetler/web-tasarim/
 ```
 
 ## Yandex
@@ -131,7 +139,7 @@ render kaynaklarına erişebilmelidir. `nosnippet` kullanılmamalıdır.
 
 ## İçerik ve otorite takvimi
 
-- `/blog/` altında dokuz karar rehberi ve `/editoryal-ilkeler/` yayın sistemi
+- `/blog/` altında 14 karar rehberi ve `/editoryal-ilkeler/` yayın sistemi
   hazırdır. Her metin production öncesi marka sorumlusu tarafından okunmalı;
   platform/mevzuat iddialarının bağlantıları yeniden açılmalıdır.
 - Uydurma veya yüzeysel “SEO blogları” yerine, yayın izni olan gerçek proje vaka

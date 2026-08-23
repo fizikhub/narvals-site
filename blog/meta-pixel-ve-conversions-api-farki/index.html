@@ -1,6 +1,7 @@
 <!doctype html>
-<html lang="tr">
+<html class="no-js" lang="tr">
   <head>
+    <script>document.documentElement.classList.replace('no-js', 'js');</script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#03233a" />
@@ -30,7 +31,7 @@
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Narvals Labs — Web, Yazılım ve Reklam" />
     <meta property="article:published_time" content="2026-08-21T09:50:00+03:00" />
-    <meta property="article:modified_time" content="2026-08-21T09:50:00+03:00" />
+    <meta property="article:modified_time" content="2026-08-23T21:42:00+03:00" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Meta Pixel ve Conversions API Farkı | Narvals Labs" />
     <meta name="twitter:description" content="Meta Pixel ile Conversions API’nin veri kaynağı, kullanım amacı, event eşleştirme, test ve gizlilik açısından farklarını açıklayan uygulama rehberi." />
@@ -120,17 +121,17 @@
       "mainEntityOfPage": {
         "@id": "https://narvals.com/blog/meta-pixel-ve-conversions-api-farki/#webpage"
       },
-      "headline": "Meta Pixel ve Conversions API farkı: birlikte nasıl planlanır?",
+      "headline": "Meta Pixel ve Conversions API: farkları ve birlikte kullanım",
       "description": "Meta Pixel ile Conversions API’nin veri kaynağı, kullanım amacı, event eşleştirme, test ve gizlilik açısından farklarını açıklayan uygulama rehberi.",
       "image": [
         "https://narvals.com/og/narvals-labs-og.jpg"
       ],
       "datePublished": "2026-08-21T09:50:00+03:00",
-      "dateModified": "2026-08-21T09:50:00+03:00",
+      "dateModified": "2026-08-23T21:42:00+03:00",
       "inLanguage": "tr-TR",
       "isAccessibleForFree": true,
-      "wordCount": 678,
-      "articleSection": "Dijital reklam",
+      "wordCount": 682,
+      "articleSection": "Meta reklam",
       "keywords": "Meta Pixel, Conversions API, CAPI, Meta reklam ölçümü",
       "author": {
         "@id": "https://narvals.com/#organization"
@@ -178,7 +179,7 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Meta Pixel ve Conversions API farkı: birlikte nasıl planlanır?",
+          "name": "Meta Pixel ve Conversions API: farkları ve birlikte kullanım",
           "item": "https://narvals.com/blog/meta-pixel-ve-conversions-api-farki/"
         }
       ]
@@ -197,11 +198,11 @@
       <article>
         <header class="info-hero article-hero">
           <div class="info-hero__copy">
-            <nav class="breadcrumbs" aria-label="İçerik yolu"><a href="/">Ana sayfa</a><span>/</span><a href="/blog/">Rehberler</a><span>/</span><span>Dijital reklam</span></nav>
-            <p class="info-hero__kicker">Dijital reklam · Karar rehberi</p>
-            <h1>Meta Pixel ve Conversions API farkı: birlikte nasıl planlanır?</h1>
+            <nav class="breadcrumbs" aria-label="İçerik yolu"><a href="/">Ana sayfa</a><span>/</span><a href="/blog/">Rehberler</a><span>/</span><span>Meta reklam</span></nav>
+            <p class="info-hero__kicker">Meta reklam · Karar rehberi</p>
+            <h1>Meta Pixel ve Conversions API: farkları ve birlikte kullanım</h1>
             <p class="info-hero__answer">Meta Pixel, tarayıcıda gerçekleşen web etkileşimlerini gönderir; Conversions API (CAPI) ise sunucu, CRM, platform veya başka bir iş sistemi üzerinden Meta’ya event iletmek için doğrudan bağlantı sağlar. Web eventleri için çoğu senaryoda birbirinin alternatifi değil, aynı event planının iki kaynağı olarak birlikte değerlendirilir.</p>
-            <div class="article-meta"><span>Yayınlayan <a href="/hakkimizda/">Narvals Labs</a></span><span>Yayımlandı <time datetime="2026-08-21T09:50:00+03:00">21 Ağustos 2026</time></span><span>10 dk okuma</span></div>
+            <div class="article-meta"><span>Yayınlayan <a href="/hakkimizda/">Narvals Labs</a></span><span>Yayımlandı <time datetime="2026-08-21T09:50:00+03:00">21 Ağustos 2026</time></span><span>Güncellendi <time datetime="2026-08-23T21:42:00+03:00">23 Ağustos 2026</time></span><span>10 dk okuma</span></div>
           </div>
           <aside class="info-hero__panel article-summary" aria-labelledby="ozet-basligi"><strong id="ozet-basligi">Bu rehberin özeti</strong><ul><li>Önce event planı, sonra Pixel ve CAPI kurulumu gelir.</li><li>Aynı event iki kaynaktan gidiyorsa tekilleştirme tasarlanmalıdır.</li><li>CAPI gizlilik veya izin kurallarını aşma yöntemi değildir.</li><li>Test başarı metriği yalnız “event geliyor” değildir.</li></ul></aside>
         </header>
@@ -259,13 +260,13 @@
       </section>
             <section class="info-section article-section" id="test">
         <p class="info-section__label">Kalite güvencesi</p>
-        <h2>Kurulum kabul testini beş kanıtla tamamlayın.</h2>
+        <h2>Kurulum kabul testini beş kontrolle tamamlayın.</h2>
 
 
-        <ol class="article-steps"><li><strong>Semantik kanıt:</strong> Event adı ve tetik koşulu yazılı iş tanımıyla eşleşiyor.</li><li><strong>Teknik kanıt:</strong> Gerekli parametreler doğru tür, değer ve para birimiyle ulaşıyor.</li><li><strong>Tekilleştirme kanıtı:</strong> Pixel + CAPI aynı gerçek olayı raporda bir kez gösteriyor.</li><li><strong>Hata kanıtı:</strong> Sunucu hatası, retry ve başarısız ödeme yeni dönüşüm üretmiyor.</li><li><strong>İş kanıtı:</strong> Event sayısı belirli bir dönemde sipariş/CRM kaydıyla açıklanabilir fark içinde uzlaştırılıyor.</li></ol>
+        <ol class="article-steps"><li><strong>Anlam kontrolü:</strong> Olay adı ve tetik koşulu yazılı iş tanımıyla eşleşiyor.</li><li><strong>Teknik kontrol:</strong> Gerekli parametreler doğru tür, değer ve para birimiyle ulaşıyor.</li><li><strong>Tekilleştirme kontrolü:</strong> Pixel + CAPI aynı gerçek olayı raporda bir kez gösteriyor.</li><li><strong>Hata kontrolü:</strong> Sunucu hatası, yeniden deneme ve başarısız ödeme yeni dönüşüm üretmiyor.</li><li><strong>İş sonucu kontrolü:</strong> Olay sayısı belirli bir dönemde sipariş veya CRM kaydıyla açıklanabilir fark içinde uzlaştırılıyor.</li></ol>
 
 
-        <aside class="article-callout" aria-label="Kurulum kabul testini beş kanıtla tamamlayın.: karar notu"><strong>Karar notu</strong><p>Events Manager’daki yeşil durum başlangıçtır; muhasebe, sipariş veya CRM kaydıyla uzlaştırma yapılmadan ölçüm tamamlanmış sayılmaz.</p></aside>
+        <aside class="article-callout" aria-label="Kurulum kabul testini beş kontrolle tamamlayın.: karar notu"><strong>Karar notu</strong><p>Events Manager’daki yeşil durum başlangıçtır; muhasebe, sipariş veya CRM kaydıyla uzlaştırma yapılmadan ölçüm tamamlanmış sayılmaz.</p></aside>
       </section>
             <section class="info-section article-section" id="kaynaklar">
               <p class="info-section__label">Birincil kaynaklar</p>
@@ -275,8 +276,8 @@
               <aside class="article-method" aria-label="Bu rehberin hazırlanma yöntemi"><strong>Hazırlama yöntemi</strong><p>Bu rehber Narvals Labs yayıncılığında; ilgili birincil kaynaklar, görünür hizmet kapsamı ve proje karar çerçeveleri incelenerek hazırlandı. Doğrulanamayan müşteri, fiyat, başarı oranı veya sonuç iddiası eklenmedi. Yöntem, düzeltme ve yapay zekâ desteği açıklaması için <a href="/editoryal-ilkeler/">editoryal ilkeleri</a> okuyabilirsiniz.</p></aside>
             </section>
             <section class="info-section article-section">
-              <p class="info-section__label">İlgili rehberler</p><h2>Bir sonraki kararı derinleştirin.</h2>
-              <div class="article-related"><a href="/blog/google-ai-aramalari-icin-geo-rehberi/"><small>SEO &amp; GEO</small><strong>GEO nedir? Google AI aramalarında görünürlük için gerçek rehber</strong><span aria-hidden="true">→</span></a><a href="/blog/kurumsal-web-sitesi-briefi-nasil-hazirlanir/"><small>Web &amp; UX</small><strong>Kurumsal web sitesi briefi nasıl hazırlanır?</strong><span aria-hidden="true">→</span></a><a href="/blog/web-sitesi-teknik-seo-kontrol-listesi/"><small>SEO &amp; GEO</small><strong>Web sitesi teknik SEO kontrol listesi: yayından önce ve sonra</strong><span aria-hidden="true">→</span></a></div>
+              <p class="info-section__label">İlgili rehberler</p><h2>İlgili rehberlerle devam edin.</h2>
+              <div class="article-related"><a href="/blog/google-ai-aramalari-icin-geo-rehberi/"><small>SEO &amp; GEO</small><strong>GEO nedir? Google AI sonuçlarında görünürlük rehberi</strong><span aria-hidden="true">→</span></a><a href="/blog/kurumsal-web-sitesi-briefi-nasil-hazirlanir/"><small>Web &amp; UX</small><strong>Kurumsal web sitesi briefi nasıl hazırlanır?</strong><span aria-hidden="true">→</span></a><a href="/blog/web-sitesi-teknik-seo-kontrol-listesi/"><small>SEO &amp; GEO</small><strong>Web sitesi teknik SEO kontrol listesi: yayından önce ve sonra</strong><span aria-hidden="true">→</span></a></div>
             </section>
           </div>
         </div>
@@ -284,10 +285,10 @@
       <section class="info-cta"><h2>Bu kararı projenize uyarlayalım.</h2><p>Mevcut durumu, hedefi ve en kritik sınırı paylaşın; gerekli kapsamı birlikte netleştirelim.</p><div class="article-cta-actions"><a class="info-button" href="/hizmetler/dijital-reklam/">Meta reklam ve ölçüm hizmetini inceleyin <span aria-hidden="true">→</span></a><a class="info-button info-button--light" href="/iletisim/">Projeyi konuşalım <span aria-hidden="true">↗</span></a></div></section>
     </main>
     <footer class="site-footer">
-      <div class="site-footer__brand"><a href="/"><img src="/assets/logo-v6/narvals-mascot-v6-transparent-512.png" alt="" width="512" height="512" loading="lazy" /><strong>narvals<span>//</span>labs</strong></a><p>Web sitesi, özel yazılım ve reklamı aynı iş hedefinde buluşturan dijital üretim stüdyosu.</p></div>
-      <nav aria-label="Hizmet bağlantıları"><strong>Hizmetler</strong><a href="/hizmetler/web-tasarim/">Web tasarım &amp; UX</a><a href="/hizmetler/e-ticaret/">E-ticaret</a><a href="/hizmetler/ozel-yazilim/">Özel yazılım</a><a href="/hizmetler/dijital-reklam/">Meta reklam</a><a href="/hizmetler/qr-menu-rezervasyon/">İşletme sistemleri</a></nav>
+      <div class="site-footer__brand"><a href="/"><img src="/assets/logo-v6/narvals-mascot-v6-transparent-96.png" alt="" width="96" height="96" loading="lazy" /><strong>narvals<span>//</span>labs</strong></a><p>Web sitesi, özel yazılım ve reklamı aynı iş hedefinde buluşturan dijital üretim stüdyosu.</p></div>
+      <nav aria-label="Hizmet bağlantıları"><strong>Hizmetler</strong><a href="/hizmetler/web-tasarim/">Web tasarım &amp; UX</a><a href="/hizmetler/e-ticaret/">E-ticaret</a><a href="/hizmetler/ozel-yazilim/">Özel yazılım</a><a href="/hizmetler/dijital-reklam/">Meta reklam</a><a href="/hizmetler/sosyal-medya-yonetimi/">Sosyal medya</a><a href="/hizmetler/qr-menu-rezervasyon/">İşletme sistemleri</a></nav>
       <nav aria-label="Bilgi merkezi bağlantıları"><strong>Bilgi merkezi</strong><a href="/blog/">Tüm rehberler</a><a href="/blog/web-sitesi-teknik-seo-kontrol-listesi/">Teknik SEO listesi</a><a href="/blog/google-ai-aramalari-icin-geo-rehberi/">GEO rehberi</a><a href="/editoryal-ilkeler/">Editoryal ilkeler</a></nav>
-      <div class="site-footer__contact"><strong>Bir proje mi var?</strong><p>Hedefi ve en kritik darboğazı anlatarak ilk görüşmeyi başlatın.</p><a href="/iletisim/">İletişim seçenekleri ↗</a></div>
+      <div class="site-footer__contact"><strong>Bir proje mi var?</strong><p>Hedefi ve en kritik darboğazı anlatarak ilk görüşmeyi başlatın.</p><a href="/iletisim/">İletişim ↗</a></div>
       <p class="site-footer__legal">© <span data-current-year>2026</span> Narvals Labs. Tüm hakları saklıdır.</p>
     </footer>
     <script type="module" src="/src/info-main.js"></script>

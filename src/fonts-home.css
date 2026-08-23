@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Anek Latin Variable';
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
   font-weight: 100 800;
   font-stretch: 75% 125%;
   src: url('../node_modules/@fontsource-variable/anek-latin/files/anek-latin-latin-ext-standard-normal.woff2') format('woff2-variations');
@@ -11,7 +11,7 @@
 @font-face {
   font-family: 'Anek Latin Variable';
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
   font-weight: 100 800;
   font-stretch: 75% 125%;
   src: url('../node_modules/@fontsource-variable/anek-latin/files/anek-latin-latin-standard-normal.woff2') format('woff2-variations');

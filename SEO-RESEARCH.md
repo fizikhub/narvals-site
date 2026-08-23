@@ -1,8 +1,9 @@
 # Narvals Labs — SEO / GEO araştırma notları
 
-Araştırma tarihi: 21 Ağustos 2026. Bu belge Google, Bing, Yandex, Apple ve
-yanıt motorları için yapılan resmî kaynak taramasını; akademik ve üçüncü taraf
-bulguların sınırlarıyla birlikte uygulama kararına dönüştürür.
+Araştırma tarihi: 21 Ağustos 2026; canlı site kontrolü: 23 Ağustos 2026. Bu
+belge Google, Bing, Yandex, Apple ve yanıt motorları için yapılan resmî kaynak
+taramasını; akademik ve üçüncü taraf bulguların sınırlarıyla birlikte uygulama
+kararına dönüştürür.
 
 ## Sonuç
 
@@ -24,10 +25,11 @@ Bu nedenle uygulama önceliği şöyledir:
 
 ## Canlı SERP ve marka bulgusu
 
-- `narvals.com` Cloudflare üzerinde yayındadır; ana sayfa, `robots.txt`
-  ve `sitemap.xml` 200 OK ile sorunsuz yanıt vermektedir.
-- `site:narvals.com` ve `"Narvals Labs"` indeksleme süreci Google Search Console
-  üzerinden başlatılmıştır. DNS doğrulaması tamamlanmıştır.
+- `https://narvals.com` canlıdır. HTTPS/canonical yönlendirmeleri, gerçek `404`,
+  `robots.txt`, sitemap ve denetim anındaki 22 canonical URL başarılı bulundu.
+- Genel sonuç sayfası kontrolleri kesin sıra ölçümü olarak kullanılmadı. Mevcut
+  gösterim, ortalama konum, sorgu ve sayfa dağılımı Search Console dışa aktarımı
+  üzerinden baz alınmalıdır.
 - Marka sorgusunda Narval Labs, Narval Software ve Ranvals gibi benzer adlar
   bulunuyor. Site adı, logo, favicon, gerçek sosyal profiller ve şirket kayıtları
   her kanalda tam olarak `Narvals Labs` biçiminde tutulmalıdır.
@@ -38,6 +40,31 @@ Bu nedenle uygulama önceliği şöyledir:
 - Arama hacmi veya zorluk değeri uydurulmadı. Production Search Console ve
   Keyword Planner verisi oluşunca öncelik ticari uyum + gerçek gösterim verisiyle
   yeniden sıralanmalıdır.
+
+### 23 Ağustos 2026 Türkiye sorgu gözlemi
+
+- `reklam ajansı istanbul` sonucu reklamlar, Local Pack, ajans dizinleri,
+  sosyal profiller ve organik ajans sayfalarını birlikte gösterdi. Bu niyette
+  yalnız sayfa metni yetmez; gerçek NAP, uygunluk koşullarını karşılayan Google
+  Business Profile, doğal yorumlar ve tutarlı yerel atıflar gerekir.
+- `web sitesi yaptırma` ticari teklif niyetine, `web sitesi yapma` ise daha çok
+  kendin-yap/bilgi niyetine gider. Web hizmet sayfası ilkini, rehber içerikleri
+  ikincil bilgi sorularını sahiplenmelidir.
+- Google otomatik tamamlama dört ana kümede de `fiyat`, `maliyet`, `ne kadar`,
+  `paket` ve `teklif` sorularını tekrar etti. Uydurma 2026 fiyat listeleri
+  yerine kapsam, toplam sahip olma yükü, teslim ve sorumluluk tabloları üretildi.
+- `reklam ajansı` tek başına cast/iş ilanı/genel tanım gibi karışık niyet taşır.
+  Sunulan gerçek hizmet için `Meta reklam yönetimi`, `web sitesi yaptırma`,
+  `e-ticaret sitesi yaptırma` ve `sosyal medya yönetimi` sayfaları birincil
+  hedef olarak tutuldu.
+- İstanbul veya ilçe sayfaları gerçek ofis, hizmet alanı, ekip ya da vaka
+  kanıtı olmadan açılmadı. Şehir adı değiştirilmiş seri sayfalar Google spam
+  politikalarındaki doorway/scaled-content riskine girer.
+
+Yerel görünürlük kararları için [Google yerel sıralama açıklaması](https://support.google.com/business/answer/7091?hl=tr),
+[Business Profile uygunluk kuralları](https://support.google.com/business/answer/3038177)
+ve [Google spam politikaları](https://developers.google.com/search/docs/essentials/spam-policies)
+esas alındı.
 
 Uygulanan ayrıntılı sorgu haritası ve yayın planı `SEO-IMPLEMENTATION.md`
 dosyasındadır.

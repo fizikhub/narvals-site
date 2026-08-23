@@ -1,3 +1,5 @@
+import { newBlogPosts } from './seo-growth-posts.mjs';
+
 export const blogPosts = [
   {
     slug: 'kurumsal-web-sitesi-briefi-nasil-hazirlanir',
@@ -235,19 +237,19 @@ export const blogPosts = [
   {
     slug: 'google-ai-aramalari-icin-geo-rehberi',
     metaTitle: 'GEO Rehberi: Google AI Aramalarında Görünürlük | Narvals',
-    title: 'GEO nedir? Google AI aramalarında görünürlük için gerçek rehber',
+    title: 'GEO nedir? Google AI sonuçlarında görünürlük rehberi',
     description: 'GEO, AEO ve AI arama görünürlüğünü teknik SEO, özgün kanıt, marka tutarlılığı, bot erişimi ve ölçüm üzerinden açıklayan güncel rehber.',
     keywords: ['GEO nedir', 'AI arama optimizasyonu', 'Google AI Overviews', 'AEO'],
     category: 'SEO & GEO',
     published: '2026-08-21T09:20:00+03:00',
-    modified: '2026-08-21T09:20:00+03:00',
+    modified: '2026-08-23T21:35:00+03:00',
     readingTime: 13,
     answer: 'GEO (generative engine optimization), bir markanın üretken yapay zekâ destekli arama ve yanıt deneyimlerinde bulunabilir, anlaşılabilir ve kaynak gösterilebilir olmasını geliştiren çalışmalara verilen addır. Google açısından bunun temeli ayrı bir hile değil; indexlenebilirlik, alakalı ve özgün içerik, açık marka bilgisi ve iyi sayfa deneyimi gibi SEO esaslarıdır.',
     takeaways: [
       'Google için GEO’nun temeli hâlâ Search indexi ve kalite sistemleridir.',
       'Özel bir AI schema’sı veya zorunlu llms.txt yoktur.',
       'Kolayca kopyalanan özet değil, birinci el kanıt ve özgün karar bilgisi gerekir.',
-      'Sıra, citation, marka mention’ı ve AI referral ayrı ölçülür.'
+      'Sıra, kaynak gösterimi, marka anılması ve yapay zekâdan gelen ziyaret ayrı ölçülür.'
     ],
     about: ['Generative Engine Optimization', 'Google AI Overviews', 'AI arama görünürlüğü'],
     related: ['web-sitesi-teknik-seo-kontrol-listesi', 'kurumsal-web-sitesi-briefi-nasil-hazirlanir', 'meta-pixel-ve-conversions-api-farki'],
@@ -285,13 +287,13 @@ export const blogPosts = [
           'Sayfanın yayıncısı, yayın/güncelleme tarihi ve kaynakları görünür.',
           'Schema, sayfada görünür gerçek içeriği tekrar ediyor; olmayan kişi, yorum veya sonuç üretmiyor.',
           'Dahili linkler konuyu ana hizmet, karşılaştırma ve ilgili rehberlerle bağlıyor.',
-          'Mobil ziyaretçi citation bağlantısından geldiğinde ana cevabı ve sonraki adımı hızla bulabiliyor.'
+          'Mobil ziyaretçi yapay zekâ sonucundaki bağlantıdan geldiğinde ana cevabı ve sonraki adımı hızla bulabiliyor.'
         ]
       },
       {
         id: 'emtia-olmayan-icerik',
         label: 'İçerik farkı',
-        heading: 'Kolayca üretilebilen özet yerine “emtia olmayan” bilgi oluşturun.',
+        heading: 'Kolayca üretilebilen özet yerine özgün ve doğrulanabilir bilgi sunun.',
         paragraphs: [
           'Bir modelin internetteki ilk birkaç sonucu özetleyerek üretebileceği metin markaya özel değer taşımaz. Ayrışan içerik; gerçek karar ölçütü, uygulanmış yöntem, izinli vaka, özgün veri, açık sınır ve hatalı seçimlerin sonucunu gösterebilir.',
           'Gerçek müşteri verisi veya vaka yoksa uydurmak yerine şeffaf bir karar aracı üretin. Örneğin “özel yazılım iyidir” demek yerine süreç değişkenliği, entegrasyon sayısı, veri sahipliği ve toplam işletme yükünü karşılaştıran matris yayınlayın. Kaynağın değeri kesin sayıdan değil, okuyucunun doğru karar verebilmesinden doğar.'
@@ -333,13 +335,14 @@ export const blogPosts = [
         label: 'Başarı sistemi',
         heading: 'AI görünürlüğünü tek bir “kaç kez çıktık?” sayısına indirmeyin.',
         paragraphs: [
-          'Üretken yanıtlar kişiye, konuma, zamana ve sorgu biçimine göre değişebilir. Sabit bir prompt seti trend görmek için yararlıdır; fakat bütün görünürlüğün ölçümü değildir. Search Console verisini, AI kaynaklı yönlendirmeleri, marka aramalarını ve nitelikli dönüşümleri birlikte okuyun.'
+          'Üretken yanıtlar kişiye, konuma, zamana ve sorgu biçimine göre değişebilir. Sabit bir prompt seti trend görmek için yararlıdır; fakat bütün görünürlüğün ölçümü değildir. Search Console verisini, AI kaynaklı yönlendirmeleri, marka aramalarını ve nitelikli dönüşümleri birlikte okuyun.',
+          'Search Console Generative AI Performance raporu mülkünüzde kullanıma açıldıysa AI Overviews ve AI Mode görünürlüğünü kaynak URL, ülke ve cihaz düzeyinde ayrı inceleyin. Bu raporu normal Web performansının yerine değil, yanına koyun; her mülkte aynı anda görünmeyebileceğini hesaba katın.'
         ],
         table: {
           headers: ['Metrik', 'Ne anlatır?', 'Neyi anlatmaz?'],
           rows: [
-            ['Organik gösterim / tıklama', 'Search içindeki sorgu ve sayfa talebi', 'Tüm AI citation’larını'],
-            ['AI citation', 'Bir cevapta görünür kaynak seçimini', 'Kaynağın bütün etkisini veya nedeni'],
+            ['Organik gösterim / tıklama', 'Aramadaki sorgu ve sayfa talebi', 'Tüm yapay zekâ kaynak gösterimlerini'],
+            ['Yapay zekâ kaynak gösterimi', 'Bir cevapta görünür kaynak seçimini', 'Kaynağın bütün etkisini veya nedeni'],
             ['Marka mention’ı', 'Adın cevapta geçmesini', 'Kullanıcının siteye geldiğini'],
             ['AI referral', 'Kaynak bağlantısından gerçekleşen ziyareti', 'Görünür olup tıklanmayan cevapları'],
             ['Nitelikli dönüşüm', 'Görünürlüğün iş sonucuna yaklaşmasını', 'Tek başına hangi kanalın nedensel etkisini']
@@ -350,6 +353,7 @@ export const blogPosts = [
     ],
     sources: [
       { label: 'Google — Üretken AI özellikleri için optimizasyon rehberi', url: 'https://developers.google.com/search/docs/fundamentals/ai-optimization-guide' },
+      { label: 'Google Search Console — Generative AI Performance raporu', url: 'https://support.google.com/webmasters/answer/16984139' },
       { label: 'Google — İnsan odaklı, güvenilir içerik', url: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content' },
       { label: 'OpenAI — Search botları ve yayıncı erişimi', url: 'https://developers.openai.com/api/docs/bots' },
       { label: 'Bing Webmaster Guidelines', url: 'https://www.bing.com/webmasters/help/webmaster-guidelines-30fba23a' }
@@ -363,12 +367,12 @@ export const blogPosts = [
     keywords: ['e-ticaret altyapısı', 'e-ticaret sitesi', 'online mağaza', 'e-ticaret platformu'],
     category: 'E-ticaret',
     published: '2026-08-21T09:30:00+03:00',
-    modified: '2026-08-21T09:30:00+03:00',
+    modified: '2026-08-23T21:40:00+03:00',
     readingTime: 11,
     answer: 'Doğru e-ticaret altyapısı en çok özelliği olan değil; ürün modelini, sipariş operasyonunu, gerekli entegrasyonları ve büyüme planını kabul edilebilir toplam maliyet ve bağımlılıkla karşılayan sistemdir. Seçim tema demosundan önce gerçek ürün ve sipariş senaryolarıyla yapılmalıdır.',
     takeaways: [
       'Platformu ürün ve sipariş modelinden sonra seçin.',
-      'Lisans değil toplam sahip olma yükünü karşılaştırın.',
+      'Lisansla birlikte toplam kullanım maliyetini karşılaştırın.',
       'Entegrasyonun varlığını değil veri akışını test edin.',
       'Taşınabilirlik ve çıkış planını sözleşmeden önce sorun.'
     ],
@@ -406,13 +410,13 @@ export const blogPosts = [
       {
         id: 'hazir-ozel',
         label: 'Mimari seçimi',
-        heading: 'Hazır platform, başsız mimari ve özel geliştirmeyi aynı ölçütle karşılaştırın.',
+        heading: 'Hazır platform, ayrık ön yüz (headless) ve özel geliştirmeyi aynı ölçütle karşılaştırın.',
         table: {
           headers: ['Yaklaşım', 'Güçlü olduğu durum', 'Dikkat edilmesi gereken'],
           rows: [
             ['Hazır SaaS platformu', 'Standart ürün ve sipariş akışı, hızlı başlangıç, sınırlı teknik ekip', 'Eklenti bağımlılığı, işlem/lisans maliyeti, veri çıkışı ve özel kural sınırı'],
             ['Açık kaynak paket', 'Kod ve barındırma üzerinde daha fazla kontrol, hazır ekosistem', 'Güncelleme, güvenlik, eklenti uyumu ve operasyon sorumluluğu'],
-            ['Headless / başsız mimari', 'Çok kanallı içerik ve özgün ön yüz ihtiyacı', 'Entegrasyon, cache, preview ve ekip karmaşıklığı'],
+            ['Ayrık ön yüz (headless)', 'Çok kanallı içerik ve özgün ön yüz ihtiyacı', 'Entegrasyon, önbellek, önizleme ve ekip karmaşıklığı'],
             ['Özel geliştirme', 'İş modelinin rekabet avantajı olan benzersiz kural ve entegrasyonları', 'Ürün yönetimi, bakım, güvenlik ve sürekli geliştirme bütçesi']
           ]
         }
@@ -420,7 +424,7 @@ export const blogPosts = [
       {
         id: 'toplam-maliyet',
         label: 'Ekonomi',
-        heading: 'Aylık lisansı değil toplam sahip olma yükünü hesaplayın.',
+        heading: 'Aylık lisansla birlikte toplam kullanım maliyetini hesaplayın.',
         paragraphs: [
           'Karşılaştırmaya kurulum, tema veya tasarım, geliştirme, eklenti, işlem komisyonu, barındırma, destek, güvenlik, entegrasyon bakımı, içerik operasyonu ve geçiş maliyetini dahil edin. Ucuz başlayan sistem, iş akışını sürekli manuel müdahaleye zorluyorsa toplamda pahalı olabilir.',
           'Tersine, standart bir mağaza için gereksiz özel geliştirme de ilk yatırım ve bakım yükünü artırır. Ekibin gerçekten yönetebileceği en sade sistemi seçmek, “ileride her şeyi yapabilir” vaadinden çoğu zaman daha değerlidir.'
@@ -454,7 +458,7 @@ export const blogPosts = [
       {
         id: 'pilot',
         label: 'Satın alma öncesi test',
-        heading: 'Sözleşmeden önce küçük bir kanıt senaryosu çalıştırın.',
+        heading: 'Sözleşmeden önce gerçek bir sipariş akışını test edin.',
         paragraphs: [
           'Demo mağazadaki örnek ürün yerine kendi en zor beş ürününüzü sisteme girin. Bir kampanya oluşturun, mobilde sipariş verin, başarısız ödeme üretin, iade başlatın ve rapordaki sonuca bakın. Entegrasyon varsa yalnız “bağlanıyor” cevabını değil, alan eşleme ve hata tekrarını görün.',
           'Pilotun çıktısı platformu sevmek değil, bilinmeyenleri azaltmaktır. Kritik bir kural desteklenmiyorsa geçici manuel çözümün sahibi, süresi ve maliyeti açıkça yazılmalıdır.'
@@ -475,7 +479,7 @@ export const blogPosts = [
     keywords: ['hazır yazılım mı özel yazılım mı', 'özel yazılım', 'SaaS', 'yazılım seçimi'],
     category: 'Özel yazılım',
     published: '2026-08-21T09:40:00+03:00',
-    modified: '2026-08-21T09:40:00+03:00',
+    modified: '2026-08-23T21:41:00+03:00',
     readingTime: 10,
     answer: 'Hazır yazılım, süreç standart ve ürünün sunduğu kurallara uyabiliyorsa genellikle daha hızlı ve düşük riskli başlangıçtır. Özel yazılım; işletmeye özgü kurallar rekabet avantajı yaratıyor, manuel köprüler kalıcı yük oluşturuyor veya kritik sistemlerin birlikte çalışması hazır ürünlerle sürdürülemiyorsa anlam kazanır.',
     takeaways: [
@@ -552,14 +556,14 @@ export const blogPosts = [
       {
         id: 'pilot',
         label: 'Risk azaltma',
-        heading: 'Tam proje öncesinde iki haftalık karar kanıtı üretin.',
+        heading: 'Tam proje öncesinde iki haftalık pilot çalışma yapın.',
         ordered: [
           '<strong>Süreci gözleyin:</strong> Söylenen akış ile gerçek iş arasındaki farkları not edin.',
           '<strong>Veri sözlüğü çıkarın:</strong> Alan, kaynak, sahip, güncelleme ve saklama ihtiyacını yazın.',
           '<strong>Üç kritik senaryo seçin:</strong> Normal işlem, en sık istisna ve hata/kesinti durumu.',
           '<strong>İki hazır ürünü gerçek veriyle deneyin:</strong> Demo anlatımı yerine işlemi baştan sona tamamlayın.',
           '<strong>Boşluğu fiyatlandırın:</strong> Manuel çözüm, entegrasyon veya özel modülün sürekli yükünü ölçün.',
-          '<strong>Çıkış ölçütü belirleyin:</strong> Pilot hangi kanıt oluşursa hazır, hibrit veya özel kararla sonuçlanacak?'
+          '<strong>Çıkış ölçütü belirleyin:</strong> Pilot hangi sonuç oluşursa hazır, hibrit veya özel kararla sonuçlanacak?'
         ],
         callout: 'Karar belgesi yalnız seçilen çözümü değil, reddedilen seçenekleri ve gerekçelerini de saklamalıdır.'
       }
@@ -572,12 +576,12 @@ export const blogPosts = [
   {
     slug: 'meta-pixel-ve-conversions-api-farki',
     metaTitle: 'Meta Pixel ve Conversions API Farkı | Narvals Labs',
-    title: 'Meta Pixel ve Conversions API farkı: birlikte nasıl planlanır?',
+    title: 'Meta Pixel ve Conversions API: farkları ve birlikte kullanım',
     description: 'Meta Pixel ile Conversions API’nin veri kaynağı, kullanım amacı, event eşleştirme, test ve gizlilik açısından farklarını açıklayan uygulama rehberi.',
     keywords: ['Meta Pixel', 'Conversions API', 'CAPI', 'Meta reklam ölçümü'],
-    category: 'Dijital reklam',
+    category: 'Meta reklam',
     published: '2026-08-21T09:50:00+03:00',
-    modified: '2026-08-21T09:50:00+03:00',
+    modified: '2026-08-23T21:42:00+03:00',
     readingTime: 10,
     answer: 'Meta Pixel, tarayıcıda gerçekleşen web etkileşimlerini gönderir; Conversions API (CAPI) ise sunucu, CRM, platform veya başka bir iş sistemi üzerinden Meta’ya event iletmek için doğrudan bağlantı sağlar. Web eventleri için çoğu senaryoda birbirinin alternatifi değil, aynı event planının iki kaynağı olarak birlikte değerlendirilir.',
     takeaways: [
@@ -658,13 +662,13 @@ export const blogPosts = [
       {
         id: 'test',
         label: 'Kalite güvencesi',
-        heading: 'Kurulum kabul testini beş kanıtla tamamlayın.',
+        heading: 'Kurulum kabul testini beş kontrolle tamamlayın.',
         ordered: [
-          '<strong>Semantik kanıt:</strong> Event adı ve tetik koşulu yazılı iş tanımıyla eşleşiyor.',
-          '<strong>Teknik kanıt:</strong> Gerekli parametreler doğru tür, değer ve para birimiyle ulaşıyor.',
-          '<strong>Tekilleştirme kanıtı:</strong> Pixel + CAPI aynı gerçek olayı raporda bir kez gösteriyor.',
-          '<strong>Hata kanıtı:</strong> Sunucu hatası, retry ve başarısız ödeme yeni dönüşüm üretmiyor.',
-          '<strong>İş kanıtı:</strong> Event sayısı belirli bir dönemde sipariş/CRM kaydıyla açıklanabilir fark içinde uzlaştırılıyor.'
+          '<strong>Anlam kontrolü:</strong> Olay adı ve tetik koşulu yazılı iş tanımıyla eşleşiyor.',
+          '<strong>Teknik kontrol:</strong> Gerekli parametreler doğru tür, değer ve para birimiyle ulaşıyor.',
+          '<strong>Tekilleştirme kontrolü:</strong> Pixel + CAPI aynı gerçek olayı raporda bir kez gösteriyor.',
+          '<strong>Hata kontrolü:</strong> Sunucu hatası, yeniden deneme ve başarısız ödeme yeni dönüşüm üretmiyor.',
+          '<strong>İş sonucu kontrolü:</strong> Olay sayısı belirli bir dönemde sipariş veya CRM kaydıyla açıklanabilir fark içinde uzlaştırılıyor.'
         ],
         callout: 'Events Manager’daki yeşil durum başlangıçtır; muhasebe, sipariş veya CRM kaydıyla uzlaştırma yapılmadan ölçüm tamamlanmış sayılmaz.'
       }
@@ -680,12 +684,12 @@ export const blogPosts = [
   {
     slug: 'qr-menu-mu-pdf-menu-mu',
     metaTitle: 'QR Menü mü PDF Menü mü? Karşılaştırma | Narvals Labs',
-    title: 'QR menü mü PDF menü mü? İşletme için karar rehberi',
+    title: 'QR menü mü, PDF menü mü? Karşılaştırma rehberi',
     description: 'PDF menü ile mobil HTML QR menüyü hız, okunabilirlik, güncelleme, çoklu dil, erişilebilirlik, ölçüm ve operasyon açısından karşılaştırın.',
     keywords: ['QR menü', 'PDF menü', 'dijital menü', 'QR menü sistemi'],
     category: 'QR menü',
     published: '2026-08-21T10:00:00+03:00',
-    modified: '2026-08-21T10:00:00+03:00',
+    modified: '2026-08-23T21:43:00+03:00',
     readingTime: 8,
     answer: 'PDF menü, basılı tasarımı ekrana taşıyan hızlı ve sınırlı bir çözüm olabilir. Mobil HTML tabanlı QR menü ise ürünleri ekran boyutuna göre düzenler; fiyat, stok, alerjen, dil ve şube bilgisini panelden yönetmeye daha uygundur. Sık değişen ve müşterinin telefonda seçim yaptığı menülerde HTML çözüm genellikle daha işlevseldir.',
     takeaways: [
@@ -787,7 +791,7 @@ export const blogPosts = [
     keywords: ['rezervasyon sistemi', 'randevu sistemi', 'online rezervasyon', 'randevu yazılımı'],
     category: 'Rezervasyon',
     published: '2026-08-21T10:10:00+03:00',
-    modified: '2026-08-21T10:10:00+03:00',
+    modified: '2026-08-23T21:44:00+03:00',
     readingTime: 10,
     answer: 'Rezervasyon sistemi kapasiteyi; randevu sistemi çoğunlukla personel, hizmet süresi ve uygunluğu yönetir. Doğru ürün, işletmenin gerçek zaman ve kapasite kurallarını müşteriye anlaşılır seçenekler olarak gösterirken ekibin çakışma, istisna, iptal ve iletişim süreçlerini tek yerde yönetmesini sağlar.',
     takeaways: [
@@ -807,7 +811,7 @@ export const blogPosts = [
         heading: 'Rezervasyon kapasiteyi, randevu ise çoğunlukla zaman ve kaynağı böler.',
         paragraphs: [
           'Restoranda 19.00 için dört kişilik kayıt; masa birleştirme, oturum süresi, salon kapasitesi ve bekleme politikasına bağlıdır. Danışmanlık veya bakım hizmetinde ise uzman, hizmet türü, süre, hazırlık ve mola aralığı belirleyicidir. İki model aynı takvim arayüzünü kullanabilir ama uygunluk motoru aynı değildir.',
-          'İşletmeniz iki modeli birden kullanıyorsa tek bir “slot” tablosuna zorlamak yerine kaynak türlerini ayırın. Örneğin spa için oda, personel ve hizmet süresi aynı anda uygun olmalı; restoran için kişi sayısı masaya ve salona yerleşebilmelidir.'
+          'İşletmeniz iki modeli birden kullanıyorsa hepsini tek bir “uygun saat” tablosuna zorlamak yerine kaynak türlerini ayırın. Örneğin spa için oda, personel ve hizmet süresi aynı anda uygun olmalı; restoran için kişi sayısı masaya ve salona yerleşebilmelidir.'
         ],
         table: {
           headers: ['Boyut', 'Rezervasyon örneği', 'Randevu örneği'],
@@ -858,13 +862,13 @@ export const blogPosts = [
       {
         id: 'operasyon',
         label: 'Ekip tarafı',
-        heading: 'İyi sistem müşteriye slot gösterirken ekibe karar bağlamı verir.',
+        heading: 'İyi sistem müşteriye uygun saatleri, ekibe gerekli bilgiyi gösterir.',
         table: {
           headers: ['Operasyon ihtiyacı', 'Sistemde aranacak davranış'],
           rows: [
             ['Çakışma önleme', 'Aynı kaynak ve zamanı atomik biçimde kilitleme'],
             ['Manuel kayıt', 'Telefon/kapı kaydını online kapasiteye anında yansıtma'],
-            ['Değişiklik', 'Eski slotu serbest bırakıp yeni kuralı doğrulama'],
+            ['Değişiklik', 'Eski zamanı serbest bırakıp yeni kuralı doğrulama'],
             ['İletişim', 'Gönderim durumu, şablon sürümü ve tercih yönetimi'],
             ['Yetki', 'Şube, rol ve işlem türüne göre sınırlı erişim'],
             ['İz', 'Kim, ne zaman, hangi alanı değiştirdi kaydı'],
@@ -887,11 +891,11 @@ export const blogPosts = [
         label: 'Ürün seçimi',
         heading: 'Demo sırasında güzel takvime değil sekiz zor senaryoya bakın.',
         ordered: [
-          'Aynı son slotu iki cihazdan eşzamanlı almaya çalışın.',
+          'Aynı son uygun saati iki cihazdan eşzamanlı almaya çalışın.',
           'Personel hastalık izni ekleyip mevcut kayıtların durumunu görün.',
-          'Süreyi uzatan ek hizmet seçin ve sonraki slotları kontrol edin.',
+          'Süreyi uzatan ek hizmet seçin ve sonraki uygun saatleri kontrol edin.',
           'Müşteri kişi sayısını veya hizmeti değiştirdiğinde kapasiteyi doğrulayın.',
-          'Ödeme başarısız olduğunda slotun ne kadar tutulduğunu test edin.',
+          'Ödeme başarısız olduğunda seçilen saatin ne kadar tutulduğunu test edin.',
           'İptal penceresi geçtikten sonra müşteri ve ekip seçeneklerini inceleyin.',
           'Mesaj teslim edilmediğinde uyarı ve tekrar sürecini görün.',
           'Veriyi dışa aktarın; alan, zaman dilimi ve durum bilgisinin korunmasını kontrol edin.'
@@ -957,7 +961,7 @@ export const blogPosts = [
       {
         id: 'ucuz-pahali',
         label: 'Toplam sahiplik',
-        heading: 'İlk proje bedeli ile toplam sahip olma maliyetini ayırın.',
+        heading: 'İlk proje bedeli ile toplam kullanım maliyetini ayırın.',
         paragraphs: [
           'Alan adı, barındırma, üçüncü taraf lisansları, içerik güncelleme, güvenlik güncellemeleri, teknik destek, analitik bakımı ve yeni geliştirmeler proje sonrasında devam edebilir. Bunların hangisinin zorunlu, hangisinin isteğe bağlı olduğunu teklif aşamasında sorun.',
           'Bir içeriği değiştirmek için her seferinde geliştirici gerekiyorsa düşük kurulum bedeli operasyon maliyetine dönüşür. Tersine, yılda hiç değişmeyen bir siteye karmaşık yönetim paneli eklemek gereksiz lisans ve bakım yükü yaratabilir. Yönetim modeli gerçek değişim sıklığına göre seçilmelidir.'
@@ -1007,7 +1011,121 @@ export const blogPosts = [
       { label: 'W3C — WCAG 2.2', url: 'https://www.w3.org/TR/WCAG22/' },
       { label: 'W3C WAI — Web projelerinde erişilebilirliği planlama ve yönetme', url: 'https://www.w3.org/WAI/planning-and-managing/' }
     ]
-  }
+  },
+  {
+    slug: 'web-sitesi-yaptirmadan-once-kapsam-teklif-karar-rehberi',
+    metaTitle: 'Web Sitesi Yaptırmadan Önce: Kapsam ve Teklif Rehberi | Narvals',
+    title: 'Web sitesi yaptırmadan önce: kapsam, teklif ve karar rehberi',
+    description: 'Web sitesi yaptırırken hedefi, ilk sürüm kapsamını, teklifleri, içerik sorumluluklarını ve kabul ölçütlerini netleştirmek için pratik karar rehberi.',
+    keywords: ['web sitesi yaptırma', 'web sitesi yapma', 'web tasarım teklifi', 'web sitesi kapsamı'],
+    category: 'Web & UX',
+    published: '2026-08-23T10:00:00+03:00',
+    modified: '2026-08-23T10:00:00+03:00',
+    readingTime: 11,
+    answer: 'Web sitesi yaptırma kararında önce “nasıl görünecek?” değil, “hangi kullanıcı hangi işi güvenle tamamlayacak?” sorusu yanıtlanmalıdır. Hedef, ilk sürüm kapsamı, içerik ve entegrasyon sorumlulukları, teklif kalemleri ve kabul ölçütleri aynı çerçevede netleştiğinde doğru çözümü seçmek ve teklifleri karşılaştırmak kolaylaşır.',
+    takeaways: [
+      'Web sitesi yapma ihtiyacı; kurumsal anlatım, talep toplama, online satış veya operasyon akışı gibi farklı projelere dönüşebilir.',
+      'Sayfa sayısı yerine kullanıcı görevi, şablon, içerik ve entegrasyon üzerinden kapsam isteyin.',
+      'Teklifler aynı brief ve aynı kabul ölçütleriyle karşılaştırıldığında toplam bedelin neyi kapsadığı anlaşılır.',
+      'İlk sürümü küçük tutmak, gerekli ölçüm ve teknik temeli ertelemek anlamına gelmez.'
+    ],
+    about: ['Web sitesi yaptırma', 'Web tasarım teklifi', 'Proje kapsamı'],
+    related: ['kurumsal-web-sitesi-briefi-nasil-hazirlanir', 'web-sitesi-maliyeti-nasil-hesaplanir', 'e-ticaret-altyapisi-nasil-secilir'],
+    servicePath: '/hizmetler/web-tasarim/',
+    serviceLabel: 'Web sitesi ve UX hizmetini inceleyin',
+    sections: [
+      {
+        id: 'karar-nerede-baslar',
+        label: 'İlk karar',
+        heading: 'Web sitesi yaptırma kararı, tasarım örneği seçmekle başlamaz.',
+        paragraphs: [
+          '“Bir web sitesi yapalım” aynı anda birden çok ihtiyacı gizleyebilir: yeni bir markayı anlatmak, doğru müşteriden talep toplamak, ürün kataloğunu anlaşılır kılmak, randevu almak veya doğrudan satış yapmak. Bunların her biri içerik, kullanıcı akışı, ölçüm ve teknik altyapı açısından farklı bir başlangıç noktasıdır. Bu yüzden ilk toplantıdaki en değerli çıktı renk paleti değil; ziyaretçinin tamamlamasını istediğiniz ana görevdir.',
+          'Örneğin ana hedef nitelikli görüşme başlatmaksa, <a href="/hizmetler/web-tasarim/">web tasarım ve UX hizmeti</a> sayfa hiyerarşisini, güven unsurlarını ve form akışını bu karara göre ele almalıdır. Ama kullanıcı ürün seçip ödeme yapacaksa konu yalnız bir kurumsal site değildir; stok, ödeme, kargo, iade ve operasyon senaryolarını kapsayan bir <a href="/hizmetler/e-ticaret/">e-ticaret sitesi</a> planı gerekir. Aynı tasarım dili kullanılabilir, fakat çözülmesi gereken iş farklıdır.'
+        ],
+        callout: 'Tek cümlelik karar testi: “Bu site yayına girdikten sonra ziyaretçinin en önemli yapmasını istediğimiz şey nedir?” sorusuna ekip aynı yanıtı verebiliyor mu?'
+      },
+      {
+        id: 'ilk-surumu-secin',
+        label: 'Kapsam seçimi',
+        heading: 'Önce ilk sürümün tamamlaması gereken görevi seçin.',
+        paragraphs: [
+          'İyi bir ilk sürüm, az sayıda özellik içeren site demek değildir; kullanıcının kritik yolunun baştan sona çalışması demektir. Gereksiz sayfaları, sonraki faz fikirlerini ve belirsiz istekleri başlangıçta ayırmak bütçe konuşmasını da daha sağlıklı hale getirir. Aşağıdaki tablo, ihtiyacı teslim edilecek işten ayırmaya yardımcı olur.'
+        ],
+        table: {
+          headers: ['İş ihtiyacı', 'İlk sürümde netleştirilecekler', 'Teklifte sorulacak soru'],
+          rows: [
+            ['Markayı ve hizmetleri anlatmak', 'Ana mesaj, hizmet sayfaları, güven kanıtları, iletişim yolu', 'Her sayfanın kullanıcı sorusu ve içerik sorumlusu kim?'],
+            ['Nitelikli talep toplamak', 'Hedef kitleye göre giriş sayfası, CTA, form alanları, bildirim akışı', 'Form verisi nereye gidecek, hata olduğunda kim bilgilenecek?'],
+            ['Ürünleri online satmak', 'Ürün verisi, sepet, ödeme, kargo, iade ve sipariş yönetimi', 'Ödeme, stok ve kargo akışları hangi gerçek senaryolarla test edilecek?'],
+            ['Randevu veya başvuru almak', 'Uygunluk kuralları, form/takvim, onay ve hatırlatma mesajları', 'Çakışma, iptal ve kişisel veri senaryoları nasıl ele alınacak?'],
+            ['Mevcut siteyi yenilemek', 'URL envanteri, içerik taşıma, yönlendirme, ölçümün korunması', 'Eski URL ve önemli sayfalar için taşıma planı teslim edilecek mi?']
+          ]
+        }
+      },
+      {
+        id: 'briefi-bir-sayfada-toplayin',
+        label: 'Brief',
+        heading: 'Ajansa veya ekibe göndermeden önce bir sayfalık karar özeti hazırlayın.',
+        paragraphs: [
+          'Uzun bir sunum şart değildir. Fakat ihtiyacın sözlü kalması, farklı tekliflerin farklı varsayımlarla hazırlanmasına yol açar. Kısa bir brief, hem sizin ne satın aldığınızı hem de karşı tarafın neyi çözmekle sorumlu olduğunu görünür hale getirir. Daha ayrıntılı soru seti için <a href="/blog/kurumsal-web-sitesi-briefi-nasil-hazirlanir/">kurumsal web sitesi briefi rehberinden</a> yararlanabilirsiniz.'
+        ],
+        checklist: [
+          '<strong>İş hedefi:</strong> Bu projenin işletme açısından önceliği nedir; talep, satış, randevu, destek yükünü azaltma veya başka bir sonuç mu?',
+          '<strong>Öncelikli kullanıcı:</strong> Kararı veren kişi kim, siteye hangi soruyla geliyor ve hangi tereddüdü taşıyor?',
+          '<strong>Ana eylem:</strong> Kullanıcı teklif isteyecek, ürün satın alacak, randevu alacak veya başka bir görevi mi tamamlayacak?',
+          '<strong>İçerik ve kanıt:</strong> Metin, görsel, ürün verisi, ekip bilgisi, referans kullanma izni ve yasal metinler hazır mı; sahibi kim?',
+          '<strong>Entegrasyonlar:</strong> CRM, ödeme, e-posta, kargo, takvim, analitik veya mevcut veri aktarımı gerekiyor mu?',
+          '<strong>Sınırlar:</strong> İlk sürümde kesinlikle gerekenler, sonraki faza kalabilecekler ve kapsam dışı olanlar neler?',
+          '<strong>Karar ve onay:</strong> Geri bildirim kimden toplanacak, son onayı kim verecek, geciken içerikte nasıl ilerlenir?',
+          '<strong>Başarı ölçümü:</strong> Yalnız ziyaret sayısı değil, hangi nitelikli eylem veya iş sonucu takip edilecek?'
+        ],
+        callout: 'Briefte belirsiz kalan her konu teklif veren tarafından varsayılır. Varsayımlar yazılı değilse, aynı kelimelerle konuşuyor gibi görünen iki taraf farklı teslimatlar bekleyebilir.'
+      },
+      {
+        id: 'teklifi-satir-satir-okuyun',
+        label: 'Teklif karşılaştırma',
+        heading: 'Teklifleri toplam bedelle değil, teslim ve risk tablosuyla karşılaştırın.',
+        paragraphs: [
+          'Bir teklif “10 sayfa web sitesi” yazıp diğer teklif “3 şablon, içerik girişi, CRM form bağlantısı ve yönlendirme planı” diyorsa, bu iki belge aynı işi tarif etmeyebilir. Karar vermeden önce her teklifi aşağıdaki başlıklara göre yan yana getirin. Maliyet kalemlerinin neden değiştiğini ayrıca <a href="/blog/web-sitesi-maliyeti-nasil-hesaplanir/">web sitesi maliyeti rehberinde</a> inceleyebilirsiniz.'
+        ],
+        table: {
+          headers: ['Başlık', 'Teklifte görünmesi gereken', 'Belirsiz kalırsa oluşan risk'],
+          rows: [
+            ['Teslim edilen yapı', 'Benzersiz şablonlar, sayfalar, bileşenler ve kullanıcı akışları', '“Sayfa” sözcüğü farklı işlevleri gizleyebilir'],
+            ['İçerik üretimi', 'Metin, görsel, çeviri ve veri girişinden sorumlu taraf', 'Tasarım tamamlanır, yayın içerik bekler'],
+            ['Tasarım ve revizyon', 'Onay adımları, revizyon sınırı ve karar verici', 'Geri bildirim döngüsü takvimi belirsiz uzatır'],
+            ['Teknik işler', 'CMS, entegrasyon, yönlendirme, analitik, erişilebilirlik ve test kapsamı', 'Kritik ihtiyaçlar “sonradan ek iş”e dönüşebilir'],
+            ['Hesaplar ve sahiplik', 'Alan adı, barındırma, lisans, kaynak kod ve üçüncü taraf hesaplarının sahibi', 'Yayın sonrası erişim ve devamlılık riski'],
+            ['Yayın sonrası', 'Hata düzeltme, bakım, destek, eğitim ve değişiklik talebi yaklaşımı', 'Teslimden sonra kimin ne yapacağı belirsiz kalır']
+          ]
+        }
+      },
+      {
+        id: 'kabul-olcutleri-ve-sonraki-adim',
+        label: 'Yayına hazır olma',
+        heading: '“Bitti” demek için görünüşten daha fazlasını kontrol edin.',
+        paragraphs: [
+          'Web sitesi yalnız tasarım dosyası onaylandığında tamamlanmış sayılmaz. Gerçek cihazda kullanıcı görevini tamamlayabilmeli; form, ödeme veya randevu gibi kritik akışlar ilgili ekibe doğru veri iletmeli; gerekli içerikler, yasal metinler ve teknik yönlendirmeler yerinde olmalıdır. E-ticaret söz konusuysa altyapı kararı için <a href="/blog/e-ticaret-altyapisi-nasil-secilir/">e-ticaret altyapısı seçme rehberini</a> projenin başında değerlendirmek, sonradan zorunlu değişiklikleri azaltır.'
+        ],
+        checklist: [
+          'Ana kullanıcı akışı mobil ve masaüstünde gerçek içerikle tamamlanıyor.',
+          'Form, ödeme, randevu veya diğer kritik işlem için başarı ve hata senaryoları test edildi.',
+          'İçerik, görsel kullanım hakları, iletişim bilgileri ve yasal metinler yetkili kişilerce onaylandı.',
+          'Alan adı, barındırma, analiz, reklam ve üçüncü taraf hesaplarına doğru kişilerin erişimi var.',
+          'Eski siteden geçiş varsa URL yönlendirmeleri ve önemli arama sayfaları kontrol edildi.',
+          'Temel performans, erişilebilirlik ve taranabilirlik kontrolleri yayın ortamında yapıldı.',
+          'Yayın sonrası ilk inceleme tarihi, sorumlusu ve bakılacak veriler belirlendi.'
+        ],
+        callout: 'En iyi teklif, en uzun özellik listesi değildir. İş hedefini karşılayan, sorumlulukları açıkça dağıtan ve yayına kadar doğrulanabilir kabul ölçütleri sunan tekliftir.'
+      }
+    ],
+    sources: [
+      { label: 'Google — İnsan odaklı ve güvenilir içerik rehberi', url: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content' },
+      { label: 'Google — SEO Starter Guide', url: 'https://developers.google.com/search/docs/fundamentals/seo-starter-guide' },
+      { label: 'W3C WAI — Web projelerinde erişilebilirliği planlama ve yönetme', url: 'https://www.w3.org/WAI/planning-and-managing/' }
+    ]
+  },
+  ...newBlogPosts
 ];
 
 const slugs = new Set(blogPosts.map((post) => post.slug));
