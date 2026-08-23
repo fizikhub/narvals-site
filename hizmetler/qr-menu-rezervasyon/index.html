@@ -24,7 +24,61 @@
         { "@type": "Organization", "@id": "https://narvals.com/#organization", "name": "Narvals Labs", "url": "https://narvals.com/", "logo": "https://narvals.com/assets/logo-v6/narvals-avatar-v6-1080.png" },
         { "@type": "WebSite", "@id": "https://narvals.com/#website", "url": "https://narvals.com/", "name": "Narvals Labs", "inLanguage": "tr-TR", "publisher": { "@id": "https://narvals.com/#organization" } },
         { "@type": "WebPage", "@id": "https://narvals.com/hizmetler/qr-menu-rezervasyon/#webpage", "url": "https://narvals.com/hizmetler/qr-menu-rezervasyon/", "name": "QR menü, rezervasyon ve randevu farkları", "description": "QR menü, restoran rezervasyonu ve hizmet randevusunu müşteri eylemi, işletme kuralı ve sistem ihtiyacına göre karşılaştıran karar sayfası.", "about": [{ "@type": "Thing", "name": "QR menü" }, { "@type": "Thing", "name": "Rezervasyon sistemi" }, { "@type": "Thing", "name": "Randevu sistemi" }], "inLanguage": "tr-TR", "isPartOf": { "@id": "https://narvals.com/#website" } },
-        { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Ana sayfa", "item": "https://narvals.com/" }, { "@type": "ListItem", "position": 2, "name": "QR menü ve rezervasyon", "item": "https://narvals.com/hizmetler/qr-menu-rezervasyon/" }] }
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://narvals.com/hizmetler/qr-menu-rezervasyon/#breadcrumb",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Ana sayfa", "item": "https://narvals.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Hizmetler", "item": "https://narvals.com/hizmetler/" },
+            { "@type": "ListItem", "position": 3, "name": "QR menü ve rezervasyon", "item": "https://narvals.com/hizmetler/qr-menu-rezervasyon/" }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://narvals.com/hizmetler/qr-menu-rezervasyon/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "QR menü için uygulama indirmek gerekir mi?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Normal web tabanlı akışta müşteri QR kodu telefon kamerasıyla tarar ve menüyü tarayıcıda açar; ayrıca uygulama indirmesi gerekmez."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Fiyat ve “tükendi” bilgisi nasıl güncellenir?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yetkili kullanıcı, kurulan yönetim alanından ürün bilgisi, fiyat, seçenek veya stok durumunu günceller."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Birden fazla dil, şube veya masa desteklenebilir mi?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "İşletmenin gerçek ihtiyacına göre dil, şube ve masaya özel yapı kapsamlandırılabilir."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Rezervasyonda ön ödeme veya takvim bağlantısı mümkün mü?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Kullanılan ödeme ya da takvim servisinin teknik uygunluğu, iş kuralları ve izinleri incelendikten sonra entegrasyon değerlendirilebilir."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Onay, hatırlatma ve iptal eklenebilir mi?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Bildirim kanalı, mesaj içeriği, zamanlama, kullanıcı izni ve kullanılan servisler kapsam aşamasında belirlenerek eklenebilir."
+              }
+            }
+          ]
+        }
       ] }
     </script>
   </head>
