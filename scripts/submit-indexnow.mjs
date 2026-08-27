@@ -1,19 +1,14 @@
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { sitePages } from '../content/site-pages.mjs';
 import { loadSiteEnvironment } from './site-environment.mjs';
 
 const projectRoot = join(dirname(fileURLToPath(import.meta.url)), '..');
 const environment = loadSiteEnvironment({ projectRoot, mode: 'production' });
-const siteUrl = environment.SITE_URL;
+const siteUrl = environment.SITE_URL || 'https://narvals.com';
 const key = 'b04a90decae26feec44042e2c2e4dd84';
-const changedLocations = process.argv.slice(2);
-
-if (!siteUrl) {
-  throw new Error('Set the verified production SITE_URL before submitting to IndexNow.');
-}
-if (!changedLocations.length) {
-  throw new Error('Pass one or more changed canonical paths or URLs, for example: npm run indexnow:submit -- / /hizmetler/web-tasarim/');
-}
+const args = process.argv.slice(2).filter((arg) => arg !== '--all');
+const changedLocations = args.length > 0 ? args : sitePages.map((p) => p.path);
 
 const configuredSiteUrl = new URL(siteUrl);
 if (configuredSiteUrl.pathname !== '/' || configuredSiteUrl.search || configuredSiteUrl.hash) {
