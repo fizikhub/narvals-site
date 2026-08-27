@@ -3,9 +3,11 @@
 export const productionFiles = [
   '_headers',
   '_redirects',
+  '.well-known/security.txt',
   'b04a90decae26feec44042e2c2e4dd84.txt',
   'blog/feed.xml',
   'browserconfig.xml',
+  'humans.txt',
   'llms.txt',
   'llms-full.txt',
   'robots.txt',

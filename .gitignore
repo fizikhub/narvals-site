@@ -18,8 +18,11 @@ public/*
 !public/_headers
 !public/_redirects
 !public/_redirects.template
+!public/.well-known/
+!public/.well-known/security.txt
 !public/b04a90decae26feec44042e2c2e4dd84.txt
 !public/browserconfig.xml
+!public/humans.txt
 !public/blog/
 public/blog/*
 !public/blog/feed.xml

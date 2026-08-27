@@ -1,0 +1,7 @@
+Contact: mailto:info@narvals.com
+Contact: tel:+905019441921
+Expires: 2027-12-31T23:59:59.000Z
+Preferred-Languages: tr, en
+Canonical: https://narvals.com/.well-known/security.txt
+Policy: https://narvals.com/editoryal-ilkeler/
+Hiring: https://narvals.com/hakkimizda/

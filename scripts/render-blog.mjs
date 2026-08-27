@@ -114,7 +114,7 @@ const websiteNode = (siteOrigin) => ({
   }
 });
 
-const renderHead = ({ siteOrigin, path, title, description, keywords, schema, type = 'website', published, modified }) => {
+const renderHead = ({ siteOrigin, path, title, description, keywords, schema, type = 'website', published, modified, category, readingTime }) => {
   const canonical = `${siteOrigin}${path}`;
   return `    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
@@ -148,12 +148,12 @@ const renderHead = ({ siteOrigin, path, title, description, keywords, schema, ty
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Narvals Labs — Web, Yazılım ve Reklam" />
-${published ? `    <meta property="article:published_time" content="${published}" />\n` : ''}${modified ? `    <meta property="article:modified_time" content="${modified}" />\n` : ''}    <meta name="twitter:card" content="summary_large_image" />
+${published ? `    <meta property="article:published_time" content="${published}" />\n` : ''}${modified ? `    <meta property="article:modified_time" content="${modified}" />\n` : ''}${category ? `    <meta property="article:section" content="${escapeHtml(category)}" />\n` : ''}${type === 'article' ? `    <meta property="article:author" content="${siteOrigin}/hakkimizda/" />\n` : ''}    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${escapeHtml(title)}" />
     <meta name="twitter:description" content="${escapeHtml(description)}" />
     <meta name="twitter:image" content="${siteOrigin}/og/narvals-labs-og.jpg" />
     <meta name="twitter:image:alt" content="Narvals Labs — Web, Yazılım ve Reklam" />
-    <title>${escapeHtml(title)}</title>
+${readingTime ? `    <meta name="twitter:label1" content="Okuma Süresi" />\n    <meta name="twitter:data1" content="${readingTime} dk" />\n` : ''}${category ? `    <meta name="twitter:label2" content="Kategori" />\n    <meta name="twitter:data2" content="${escapeHtml(category)}" />\n` : ''}    <title>${escapeHtml(title)}</title>
     <script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': schema }, null, 2)}</script>`;
 };
 
@@ -205,6 +205,8 @@ const renderArticle = (post, siteOrigin) => {
       inLanguage: 'tr-TR',
       isPartOf: { '@id': `${siteOrigin}/#website` },
       about: post.about.map((name) => ({ '@type': 'Thing', name })),
+      datePublished: post.published,
+      dateModified: post.modified,
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['h1', '.info-hero__answer', '.article-summary ul', '.article-section h2']
@@ -251,7 +253,7 @@ const renderArticle = (post, siteOrigin) => {
 <html class="no-js" lang="tr">
   <head>
     <script>document.documentElement.classList.replace('no-js', 'js');</script>
-${renderHead({ siteOrigin, path, title: post.metaTitle, description: post.description, keywords: post.keywords, schema, type: 'article', published: post.published, modified: post.modified })}
+${renderHead({ siteOrigin, path, title: post.metaTitle, description: post.description, keywords: post.keywords, schema, type: 'article', published: post.published, modified: post.modified, category: post.category, readingTime: post.readingTime })}
   </head>
   <body class="info-page article-page">
     <!-- Bu dosya content/blog-posts.mjs kaynağından otomatik üretilir. -->
