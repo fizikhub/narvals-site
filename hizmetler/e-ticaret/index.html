@@ -9,6 +9,10 @@
     <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="description" content="E-ticaret sitesi yaptırma sürecinde ürün keşfinden sepet ve ödemeye uzanan mobil deneyim; katalog, yönetim, ödeme, kargo, ölçüm ve teknik SEO temelleri." />
     <meta name="keywords" content="e-ticaret sitesi, e-ticaret tasarımı, online mağaza, ödeme entegrasyonu" />
+    <meta name="geo.region" content="TR-34" />
+    <meta name="geo.placename" content="İstanbul" />
+    <meta name="geo.position" content="41.0082;28.9784" />
+    <meta name="ICBM" content="41.0082, 28.9784" />
     <link rel="canonical" href="https://narvals.com/hizmetler/e-ticaret/" />
     <link rel="alternate" hreflang="tr" href="https://narvals.com/hizmetler/e-ticaret/" />
     <link rel="alternate" hreflang="x-default" href="https://narvals.com/hizmetler/e-ticaret/" />
@@ -67,7 +71,17 @@
             "serviceType": "E-ticaret sitesi, kullanıcı deneyimi ve web geliştirme",
             "url": "https://narvals.com/hizmetler/e-ticaret/",
             "description": "Mobil öncelikli katalog, ürün detay, sepet, ödeme, sipariş yönetimi ve gerekli entegrasyonların tasarım ve geliştirme hizmeti.",
-            "provider": { "@id": "https://narvals.com/#organization" }
+            "provider": { "@id": "https://narvals.com/#organization" },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "E-Ticaret Çözümleri",
+              "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mobil Öncelikli E-Ticaret Arayüzü & UX" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ürün Kataloğu, Varyant & Filtreleme Mimarisi" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ödeme & Kargo Entegrasyonları" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sipariş Yönetimi & E-Ticaret Analitiği" } }
+              ]
+            }
           },
           {
             "@type": "BreadcrumbList",
@@ -76,6 +90,60 @@
               { "@type": "ListItem", "position": 1, "name": "Ana sayfa", "item": "https://narvals.com/" },
               { "@type": "ListItem", "position": 2, "name": "Hizmetler", "item": "https://narvals.com/hizmetler/" },
               { "@type": "ListItem", "position": 3, "name": "E-ticaret sitesi", "item": "https://narvals.com/hizmetler/e-ticaret/" }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://narvals.com/hizmetler/e-ticaret/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Hazır e-ticaret altyapısı mı, özel geliştirme mi seçilmeli?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Standart satış akışı ve gerekli entegrasyonlar hazır bir platformla karşılanabiliyorsa önce bu seçenek değerlendirilir. Özel geliştirme ancak kuruma özgü iş kuralları, veri akışları veya deneyim gereksinimi somut değer üretiyorsa anlamlıdır."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Ürün ve kategori yapısı nasıl planlanır?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Müşterinin arama dili, ürün özellikleri, karşılaştırma ihtiyacı ve işletmenin veri yapısı birlikte incelenir. Kategori, özellik, filtre ve URL ilişkisi aynı model üzerinde kurulur."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Ödeme ve kargo entegrasyonları yapılabilir mi?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Kullanılacak sağlayıcının teknik dokümantasyonu, hesap erişimi, desteklediği işlemler ve işletmenin koşulları incelendikten sonra uygun bağlantılar kapsamlandırılabilir."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Mevcut e-ticaret sitesinden veri taşınabilir mi?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ürün, müşteri ve sipariş verisinin kaynağı, dışa aktarma olanağı, veri kalitesi ve hukuki gereksinimler incelendikten sonra aktarım planı hazırlanabilir. Tüm verilerin taşınabileceği önceden varsayılmaz."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "E-ticaret projesinin süresini ve maliyetini ne belirler?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ürün ve varyant yapısı, özgün ekranlar, içerik ve veri hazırlığı, entegrasyonlar, aktarım, kullanıcı rolleri, test senaryoları ve onay düzeni belirleyicidir."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Teknik SEO çalışması satış garantisi verir mi?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Hayır. Teknik SEO tarama ve anlama koşullarını iyileştirir; sıralama ve satış ise rekabet, ürün, fiyat, içerik, itibar, performans ve pazarlama gibi birçok değişkene bağlıdır."
+                }
+              }
             ]
           }
         ]

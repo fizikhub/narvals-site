@@ -9,6 +9,10 @@
     <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="description" content="Ürün, fiyat, seçenek, alerjen ve stok bilgisini panelden güncelleyebileceğiniz; çoklu dil, şube ve masa yapısına uyarlanabilen mobil QR menü." />
     <meta name="keywords" content="QR menü, dijital menü, QR menü sistemi, menü yönetim paneli" />
+    <meta name="geo.region" content="TR-34" />
+    <meta name="geo.placename" content="İstanbul" />
+    <meta name="geo.position" content="41.0082;28.9784" />
+    <meta name="ICBM" content="41.0082, 28.9784" />
     <link rel="canonical" href="https://narvals.com/hizmetler/qr-menu/" />
     <link rel="alternate" hreflang="tr" href="https://narvals.com/hizmetler/qr-menu/" />
     <link rel="alternate" hreflang="x-default" href="https://narvals.com/hizmetler/qr-menu/" />
@@ -67,7 +71,17 @@
             "serviceType": "Mobil QR menü tasarımı ve geliştirme",
             "url": "https://narvals.com/hizmetler/qr-menu/",
             "description": "Kategori, ürün, fiyat, görsel, seçenek, alerjen, stok, dil ve şube gereksinimlerine göre yönetilebilir QR menü hizmeti.",
-            "provider": { "@id": "https://narvals.com/#organization" }
+            "provider": { "@id": "https://narvals.com/#organization" },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "QR Menü Çözümleri",
+              "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mobil QR Menü Arayüzü & Kategoriler" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Anlık Fiyat, Alerjen & Stok Yönetim Paneli" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Şube & Masaya Özel QR Kod Mimarisi" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Çoklu Dil & Sipariş Entegrasyonları" } }
+              ]
+            }
           },
           {
             "@type": "BreadcrumbList",
@@ -76,6 +90,60 @@
               { "@type": "ListItem", "position": 1, "name": "Ana sayfa", "item": "https://narvals.com/" },
               { "@type": "ListItem", "position": 2, "name": "Hizmetler", "item": "https://narvals.com/hizmetler/" },
               { "@type": "ListItem", "position": 3, "name": "QR menü", "item": "https://narvals.com/hizmetler/qr-menu/" }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://narvals.com/hizmetler/qr-menu/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "QR menü için uygulama indirmek gerekir mi?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Hayır. Standart akışta müşteri telefon kamerasıyla kodu tarar ve menüyü doğrudan tarayıcıda açar; ayrıca uygulama indirmesi gerekmez."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Fiyat, içerik ve “tükendi” bilgisi nasıl güncellenir?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "İşletmeye sağlanan yönetim panelinden ürün bilgisi, fiyat, görsel, açıklama, alerjen veya stok durumu anında değiştirilebilir."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Birden fazla dil, şube veya masaya özel QR desteklenebilir mi?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Evet. İşletmenin ihtiyacına göre dil seçenekleri, şube menüleri veya masaya özel QR kodlar kapsamlandırılabilir."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Garson çağırma, sipariş veya ödeme eklenebilir mi?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "İşletmenin operasyonuna göre WhatsApp ile sipariş, garson çağırma butonu veya online ödeme bağlantıları entegre edilebilir."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "QR menü projesinin süresini ve maliyetini ne belirler?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ürün ve kategori sayısı, görsel hazırlığı, çoklu dil, şube veya masa sayısı ve ek entegrasyonlar belirleyicidir."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Mevcut basılı menü veya PDF doğrudan aktarılabilir mi?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Basılı menüdeki ürün ve fiyat verisi çıkarılarak mobil öncelikli dijital formata dönüştürülür. PDF dosyası doğrudan yüklenmek yerine taranabilir ürün verisi oluşturulur."
+                }
+              }
             ]
           }
         ]

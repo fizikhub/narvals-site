@@ -15,6 +15,10 @@
     "html:check": "html-validate 'index.html' 'hizmetler/index.html' 'hizmetler/*/index.html' 'hakkimizda/index.html' 'iletisim/index.html' 'blog/index.html' 'blog/*/index.html' 'editoryal-ilkeler/index.html' '404.html'"
   },
   "dependencies": {
+    "@fontsource-variable/anek-latin": "^5.3.0",
+    "@fontsource-variable/anybody": "^5.2.8",
+    "@fontsource-variable/onest": "^5.2.8",
+    "@fontsource/azeret-mono": "^5.2.6",
     "gsap": "^3.13.0"
   },
   "devDependencies": {

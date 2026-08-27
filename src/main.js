@@ -1,92 +1,48 @@
 import './fonts-base.css';
+import './fonts-home.css';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './styles.css';
 import './nav.css';
 import './hero.css';
 import './hero-studio.css';
-import './mobile-home.css';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const qs = (selector, scope = document) => scope.querySelector(selector);
 const qsa = (selector, scope = document) => [...scope.querySelectorAll(selector)];
 const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
 let prefersReducedMotion = motionPreference.matches;
 
-// These sections begin below the initial viewport. Their layout styles are
-// applied after `load`; animation code and its display font wait for actual
-// interaction so they cannot compete with the hero LCP.
-let belowFoldStylesPromise;
-const loadBelowFoldStyles = () => {
-  if (compactHomeQuery.matches) return Promise.resolve();
-  if (!belowFoldStylesPromise) belowFoldStylesPromise = import('./home-below-fold.css');
-  return belowFoldStylesPromise;
-};
-
+// These sections begin far below the initial viewport. Their styles and module
+// load after the window load event so they cannot compete with the hero LCP.
 let belowFoldPromise;
-let gsap;
 const loadBelowFoldModules = () => {
-  if (compactHomeQuery.matches) return Promise.resolve();
   if (!belowFoldPromise) {
     belowFoldPromise = Promise.all([
-      loadBelowFoldStyles(),
-      import('./fonts-home.css'),
-      import('./service-odyssey.js'),
-      import('gsap'),
-      import('gsap/ScrollTrigger')
-    ]).then(([, , { initServiceOdyssey }, gsapModule, { ScrollTrigger }]) => {
-      gsap = gsapModule.gsap;
-      gsap.registerPlugin(ScrollTrigger);
-      initNarwhalHero();
+      import('./home-below-fold.css'),
+      import('./service-odyssey.js')
+    ]).then(([, { initServiceOdyssey }]) => {
       initServiceOdyssey({ gsap, ScrollTrigger });
       initCurrentLabMotion();
-      initMagneticControls();
       ScrollTrigger.refresh();
     });
   }
   return belowFoldPromise;
 };
-const compactHomeQuery = window.matchMedia('(max-width: 820px)');
-compactHomeQuery.addEventListener('change', ({ matches }) => {
-  if (!matches) void loadBelowFoldModules();
-});
-const scheduleBelowFoldStyles = () => {
-  const load = () => { void loadBelowFoldStyles(); };
-  if ('requestIdleCallback' in window) window.requestIdleCallback(load);
-  else window.setTimeout(load, 0);
-};
-const watchBelowFoldIntent = () => {
-  let observer;
-  const intentEvents = ['wheel', 'touchstart', 'pointerdown', 'keydown'];
-  const load = () => {
-    observer?.disconnect();
-    intentEvents.forEach((eventName) => window.removeEventListener(eventName, load));
-    void loadBelowFoldModules();
-  };
-
-  intentEvents.forEach((eventName) => window.addEventListener(eventName, load, {
-    once: true,
-    passive: eventName !== 'keydown'
-  }));
-
-  const firstDeferredSection = qs('#hero-services');
-  if ('IntersectionObserver' in window && firstDeferredSection) {
-    observer = new IntersectionObserver((entries) => {
-      if (entries.some((entry) => entry.isIntersecting)) load();
-    }, { rootMargin: '0px 0px -10% 0px' });
-    observer.observe(firstDeferredSection);
+const scheduleBelowFoldModules = () => {
+  if ('requestIdleCallback' in window) {
+    window.requestIdleCallback(loadBelowFoldModules, { timeout: 2500 });
+  } else {
+    window.setTimeout(loadBelowFoldModules, 250);
   }
 };
 if (window.location.hash) {
   // A deep-linked section needs its layout CSS before the browser calculates
   // the final scroll position. The import remains deferred for ordinary visits.
   void loadBelowFoldModules();
-} else if (document.readyState === 'complete') {
-  scheduleBelowFoldStyles();
-  watchBelowFoldIntent();
-} else {
-  window.addEventListener('load', () => {
-    scheduleBelowFoldStyles();
-    watchBelowFoldIntent();
-  }, { once: true });
-}
+} else if (document.readyState === 'complete') scheduleBelowFoldModules();
+else window.addEventListener('load', scheduleBelowFoldModules, { once: true });
 
 qsa('[data-current-year]').forEach((element) => {
   element.textContent = String(new Date().getFullYear());
@@ -139,15 +95,6 @@ const menuModeLabel = qs('[data-menu-mode]', mobileMenu);
 const menuDiveLinks = qsa('.menu-dive-link', mobileMenu);
 
 function initDiveCurrent(canvas) {
-  if (!canvas || canvas.hidden) {
-    return {
-      start() {},
-      stop() {},
-      point() {},
-      splash() {}
-    };
-  }
-
   const context = canvas.getContext('2d');
   let width = 0;
   let height = 0;
@@ -328,6 +275,41 @@ const syncMenuGeometry = () => {
   mobileMenu.style.setProperty('--menu-origin-y', `${y}px`);
 };
 
+syncMenuGeometry();
+
+const depthValue = { value: 0 };
+const menuTimeline = gsap.timeline({
+  paused: true,
+  defaults: { ease: 'expo.out' },
+  onUpdate: () => {
+    depthValue.value = menuTimeline.progress() * 420;
+    menuDepthLabel.textContent = `${String(Math.round(depthValue.value)).padStart(3, '0')}M`;
+  },
+  onReverseComplete: () => {
+    mobileMenu.classList.remove('is-rendered');
+    document.body.classList.remove('menu-open');
+    diveCurrent.stop();
+  }
+});
+
+menuTimeline
+  .fromTo(
+    mobileMenu,
+    { clipPath: () => `circle(0px at ${menuGeometry.x}px ${menuGeometry.y}px)` },
+    { clipPath: () => `circle(${menuGeometry.radius}px at ${menuGeometry.x}px ${menuGeometry.y}px)`, duration: 0.58, ease: 'power4.inOut' },
+    0
+  )
+  .fromTo('.menu-dive-link',
+    { y: 34, opacity: 0, clipPath: 'inset(100% 0 0 0)' },
+    { y: 0, opacity: 1, clipPath: 'inset(0% 0 0 0)', duration: 0.5, stagger: 0.06, ease: 'power4.out' },
+    0.16
+  )
+  .fromTo('.mobile-menu__footer',
+    { y: 18, opacity: 0 },
+    { y: 0, opacity: 1, duration: 0.42 },
+    0.34
+  );
+
 motionPreference.addEventListener('change', (event) => {
   prefersReducedMotion = event.matches;
   if (!event.matches) return;
@@ -335,6 +317,7 @@ motionPreference.addEventListener('change', (event) => {
   // Stop motion already in progress when the operating-system preference is
   // changed while this page is open. GSAP matchMedia handles page timelines;
   // these imperative menu/canvas effects need an explicit stop.
+  menuTimeline.pause();
   diveCurrent.stop();
   if (menuButton.getAttribute('aria-expanded') === 'true') setMenu(true);
   window.scrollTo({ top: window.scrollY, behavior: 'auto' });
@@ -373,9 +356,23 @@ function setMenu(open, { restoreFocus = true } = {}) {
     document.body.classList.add('menu-open');
     mobileMenu.classList.add('is-rendered');
     menuModeLabel.textContent = 'ANA AKINTI';
-    menuDepthLabel.textContent = '420M';
     diveCurrent.start();
     diveCurrent.splash(menuGeometry.x, menuGeometry.y, 1.1);
+
+    if (prefersReducedMotion) {
+      menuDepthLabel.textContent = '420M';
+      gsap.set(mobileMenu, { clipPath: `circle(${menuGeometry.radius}px at ${menuGeometry.x}px ${menuGeometry.y}px)` });
+      gsap.set(['.mobile-menu__telemetry', '.menu-dive-link', '.mobile-menu__footer', '.mobile-menu__light'], { clearProps: 'all' });
+    } else {
+      menuTimeline.timeScale(1).invalidate().restart();
+    }
+  } else if (prefersReducedMotion) {
+    gsap.set(mobileMenu, { clipPath: `circle(0px at ${menuGeometry.x}px ${menuGeometry.y}px)` });
+    mobileMenu.classList.remove('is-rendered');
+    document.body.classList.remove('menu-open');
+    diveCurrent.stop();
+  } else if (menuTimeline.progress() > 0) {
+    menuTimeline.timeScale(1.28).reverse();
   } else {
     mobileMenu.classList.remove('is-rendered');
     document.body.classList.remove('menu-open');
@@ -447,7 +444,7 @@ function initNarwhalHero() {
   const wake = qs('.mascot-wake', scene);
   if (!mascot || !wake) return;
 
-  gsap.matchMedia().add('(prefers-reduced-motion: no-preference) and (min-width: 821px)', () => {
+  gsap.matchMedia().add('(prefers-reduced-motion: no-preference)', () => {
     const tweens = [];
     let handlePointerMove;
     let handlePointerLeave;
@@ -482,6 +479,15 @@ function initNarwhalHero() {
       ease: 'none',
       scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: 0.9 }
     }));
+    tweens.push(gsap.to(mascot, {
+      yPercent: -1.25,
+      duration: 1.35,
+      delay: 0.9,
+      repeat: 1,
+      yoyo: true,
+      ease: 'sine.inOut'
+    }));
+
     return () => {
       tweens.forEach((tween) => tween.kill());
       if (handlePointerMove) hero.removeEventListener('pointermove', handlePointerMove);
@@ -491,11 +497,13 @@ function initNarwhalHero() {
   });
 }
 
+initNarwhalHero();
+
 let currentLabMotionInitialized = false;
 function initCurrentLabMotion() {
   if (currentLabMotionInitialized) return;
   currentLabMotionInitialized = true;
-  gsap.matchMedia().add('(prefers-reduced-motion: no-preference) and (min-width: 821px)', () => {
+  gsap.matchMedia().add('(prefers-reduced-motion: no-preference)', () => {
   const currentLab = qs('[data-current-lab]');
   if (currentLab) {
     const labHeadline = qs('.current-lab__headline', currentLab);
@@ -537,9 +545,7 @@ function initCurrentLabMotion() {
   });
 }
 
-function initMagneticControls() {
-  if (!gsap) return;
-  gsap.matchMedia().add('(prefers-reduced-motion: no-preference) and (pointer: fine)', () => {
+gsap.matchMedia().add('(prefers-reduced-motion: no-preference) and (pointer: fine)', () => {
   const cleanups = qsa('.magnetic').map((element) => {
     const handlePointerMove = (event) => {
       const bounds = element.getBoundingClientRect();
@@ -560,8 +566,7 @@ function initMagneticControls() {
     };
   });
   return () => cleanups.forEach((cleanup) => cleanup());
-  });
-}
+});
 
 qsa('a[href^="#"]').forEach((link) => {
   link.addEventListener('click', async (event) => {

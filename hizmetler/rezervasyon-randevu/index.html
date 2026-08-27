@@ -9,6 +9,10 @@
     <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="description" content="Restoranlar ve hizmet işletmeleri için kapasite, personel, işlem süresi ve çalışma saatlerine göre kurgulanan online rezervasyon ve randevu sistemi." />
     <meta name="keywords" content="rezervasyon sistemi, randevu sistemi, online rezervasyon, randevu yazılımı" />
+    <meta name="geo.region" content="TR-34" />
+    <meta name="geo.placename" content="İstanbul" />
+    <meta name="geo.position" content="41.0082;28.9784" />
+    <meta name="ICBM" content="41.0082, 28.9784" />
     <link rel="canonical" href="https://narvals.com/hizmetler/rezervasyon-randevu/" />
     <link rel="alternate" hreflang="tr" href="https://narvals.com/hizmetler/rezervasyon-randevu/" />
     <link rel="alternate" hreflang="x-default" href="https://narvals.com/hizmetler/rezervasyon-randevu/" />
@@ -67,7 +71,17 @@
             "serviceType": "Online rezervasyon, randevu ve kapasite yönetimi sistemi geliştirme",
             "url": "https://narvals.com/hizmetler/rezervasyon-randevu/",
             "description": "Restoranlar ve hizmet işletmeleri için müşteri seçimi, uygunluk, kapasite, onay, hatırlatma ve ekip takvimi akışları.",
-            "provider": { "@id": "https://narvals.com/#organization" }
+            "provider": { "@id": "https://narvals.com/#organization" },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Rezervasyon & Randevu Çözümleri",
+              "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Restoran Masa & Kapasite Rezervasyon Sistemi" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hizmet İşletmeleri Personel & Randevu Yazılımı" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Otomatik Onay, Hatırlatma & Bildirim Mimarisi" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Merkezi Ekip Takvimi & Doluluk Raporlama" } }
+              ]
+            }
           },
           {
             "@type": "BreadcrumbList",
@@ -76,6 +90,60 @@
               { "@type": "ListItem", "position": 1, "name": "Ana sayfa", "item": "https://narvals.com/" },
               { "@type": "ListItem", "position": 2, "name": "Hizmetler", "item": "https://narvals.com/hizmetler/" },
               { "@type": "ListItem", "position": 3, "name": "Rezervasyon ve randevu", "item": "https://narvals.com/hizmetler/rezervasyon-randevu/" }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://narvals.com/hizmetler/rezervasyon-randevu/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Rezervasyon ve randevu sistemi arasındaki temel fark nedir?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Restoranda kapasite; şube, masa ve kişi sayısıyla belirlenir. Hizmet işletmesinde ise randevu; personel uygunluğu, işlem süresi ve çalışma takvimine göre planlanır."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Müşteri rezervasyon yaptığında ekibe ve müşteriye bildirim gider mi?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Evet. İhtiyaca göre e-posta, SMS veya WhatsApp üzerinden anlık onay, hatırlatma ve iptal bildirimleri kurgulanabilir."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Ön ödeme, depozito veya takvim entegrasyonu eklenebilir mi?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Evet. Güvenli ödeme sağlayıcıları ve takvim sistemleri (Google Calendar vb.) işletmenin teknik ve ticari gereksinimlerine göre entegre edilebilir."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Çoklu şube veya birden fazla personel yönetilebilir mi?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "İşletmenin yapısına göre her şube ve personelin çalışma saatleri, izin günleri ve hizmet yetkileri ayrı ayrı tanımlanabilir."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Sistemin kurulum süresini ve maliyetini ne belirler?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Şube/masa sayısı, personel ve hizmet çeşitliliği, entegrasyonlar, özel iş kuralları ve bildirim altyapısı belirleyicidir."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Mevcut sistemden randevu ve müşteri verisi aktarılabilir mi?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Eski yazılımın veri dışa aktarma formatı ve veri kalitesi incelendikten sonra güvenli bir taşıma planı oluşturulur."
+                }
+              }
             ]
           }
         ]

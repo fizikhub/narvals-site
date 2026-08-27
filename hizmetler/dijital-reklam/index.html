@@ -20,8 +20,82 @@
       { "@context": "https://schema.org", "@graph": [
         { "@type": "Organization", "@id": "https://narvals.com/#organization", "name": "Narvals Labs", "url": "https://narvals.com/", "logo": "https://narvals.com/assets/logo-v6/narvals-avatar-v6-1080.png" },
         { "@type": "WebSite", "@id": "https://narvals.com/#website", "url": "https://narvals.com/", "name": "Narvals Labs", "inLanguage": "tr-TR", "publisher": { "@id": "https://narvals.com/#organization" } },
-        { "@type": ["WebPage", "Service"], "@id": "https://narvals.com/hizmetler/dijital-reklam/#service", "url": "https://narvals.com/hizmetler/dijital-reklam/", "name": "Meta reklam yönetimi ve marka", "serviceType": "Meta reklam yönetimi, kreatif, marka dili ve dönüşüm ölçümü", "description": "Meta reklamlarında hedef, kampanya yapısı, kitle, kreatif, reklam metni, ölçüm ve optimizasyon hizmeti.", "provider": { "@id": "https://narvals.com/#organization" }, "inLanguage": "tr-TR", "isPartOf": { "@id": "https://narvals.com/#website" } },
-        { "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Ana sayfa", "item": "https://narvals.com/" }, { "@type": "ListItem", "position": 2, "name": "Dijital reklam", "item": "https://narvals.com/hizmetler/dijital-reklam/" }] }
+        {
+          "@type": ["WebPage", "Service"],
+          "@id": "https://narvals.com/hizmetler/dijital-reklam/#service",
+          "url": "https://narvals.com/hizmetler/dijital-reklam/",
+          "name": "Meta reklam yönetimi ve ölçüm",
+          "serviceType": "Meta reklam yönetimi, kreatif strateji ve dönüşüm ölçümü",
+          "description": "Facebook ve Instagram reklamlarında hedef, teklif, kampanya yapısı, kitle, kreatif, yönlendirme sayfası ve Conversions API ölçümünü aynı plan içinde kurma hizmeti.",
+          "provider": { "@id": "https://narvals.com/#organization" },
+          "inLanguage": "tr-TR",
+          "isPartOf": { "@id": "https://narvals.com/#website" },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Meta Reklam Çözümleri",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Meta (Facebook & Instagram) Kampanya Mimarisi" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kreatif Fikir & Reklam Metni Stratejisi" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conversions API (CAPI) & Pixel Ölçüm Kurulumu" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kitle Hedefleme & Yeniden Pazarlama (Retargeting)" } }
+            ]
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://narvals.com/hizmetler/dijital-reklam/#breadcrumb",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Ana sayfa", "item": "https://narvals.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Hizmetler", "item": "https://narvals.com/hizmetler/" },
+            { "@type": "ListItem", "position": 3, "name": "Meta reklam", "item": "https://narvals.com/hizmetler/dijital-reklam/" }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://narvals.com/hizmetler/dijital-reklam/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Meta reklam yönetimi neleri kapsar?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Hedef ve kampanya yapısı, kitle, kreatif fikir, reklam metni, ölçüm uygunluğu, test, bütçe optimizasyonu ve raporlama ihtiyaca göre kapsamlandırılır."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Reklam bütçesi nasıl belirlenir?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "İş hedefi, hedef kitlenin büyüklüğü, teklif, sektör rekabeti, öğrenme için gereken veri ve işletmenin talep karşılama kapasitesi birlikte değerlendirilir."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Pixel ve Conversions API her projede kurulabilir mi?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Hayır. Web altyapısı, erişim yetkileri, veri akışı, izin yönetimi ve platform gereksinimleri uygunsa kurulum planlanabilir."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Kreatifler ve reklam metinleri nasıl hazırlanır?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Teklif, kullanıcı soruları, karar engelleri ve marka dili üzerinden format ve mesaj hipotezleri çıkarılır; varyasyonlar kontrollü test edilir."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Sonuç garantisi veriliyor mu?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Hayır. Ölçülebilir altyapı, açık test planı ve düzenli optimizasyon sağlanır; satış veya getiri sonucu garanti edilmez."
+              }
+            }
+          ]
+        }
       ] }
     </script>
   </head>

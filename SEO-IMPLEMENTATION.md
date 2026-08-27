@@ -1,6 +1,6 @@
 # Narvals Labs — SEO/GEO uygulama ve büyüme planı
 
-Son güncelleme: 27 Ağustos 2026
+Son güncelleme: 23 Ağustos 2026
 
 ## Yönetici özeti
 
@@ -68,22 +68,21 @@ yayıncı şimdilik Narvals Labs organizasyonudur.
 
 - Statik ana içerik; JavaScript beklemeden okunabilir HTML.
 - Her sayfada benzersiz title/description, self-canonical, `tr` + `x-default`,
-  OG/Twitter kartı ve RSS keşif bağlantısı.
+  OG/Twitter kartı, bölgesel geo meta etiketleri (`geo.region`, `geo.placename`, `geo.position`, `ICBM`) ve RSS keşif bağlantısı.
 - 28 canonical URL'yi tek manifestten yöneten build, sitemap ve SEO kontrolü;
   key/path/file/tarih ve ilgili içerik hedefleri için başlangıç doğrulamaları.
 - URL başına gerçek içerik değişikliğine bağlı `lastmod`; build tarihi kullanılmaz.
 - Wildcard `robots.txt` ile açık tarama ve tek sitemap bildirimi.
-- `Organization`, `WebSite`, `WebPage`/`CollectionPage`, hizmet sayfalarında
-  `Service`, içeriklerde `BlogPosting`, görünür yollar için `BreadcrumbList`.
+- `Organization` (İstanbul/Türkiye entity, `knowsAbout`, `areaServed`), `WebSite`, `WebPage`/`CollectionPage`/`AboutPage`/`ContactPage`, hizmet sayfalarında `Service` ve `hasOfferCatalog`, içeriklerde `BlogPosting`, SSS içeren tüm sayfalarda `FAQPage`, görünür yollar için standart 3 basamaklı `BreadcrumbList`.
 - Karşılaştırma sayfasından çakışan `Service` şeması kaldırıldı.
 - Ana sayfa hizmet listesi `ListItem(position, item)` modeline düzeltildi.
-- RSS feed ve deneysel `llms.txt`; HTML her zaman yetkili kaynak.
+- Standart `llms.txt` ve kapsamlı RAG bilgi tabanı olan `llms-full.txt`; HTML her zaman yetkili kaynak.
 - IndexNow anahtar dosyası ve yalnız değişen URL'leri gönderen komut.
 - Vite ve tüm SEO komutlarında aynı `.env`/mode zincirini kullanan ortak
   `SITE_URL` çözümleyicisi; eksik açık origin ile production build koruması.
 - Tüm slashsiz ve fiziksel `index.html` varyasyonlarını canonical slash URL'ye
   bağlayan 301 kuralları.
-- HTML doğrulama, canonical/link/schema/RSS/sitemap/robots, ortak production
+- HTML doğrulama, canonical/link/schema/RSS/sitemap/robots/llms-full, ortak production
   asset manifesti ve dist içindeki gerçek asset referanslarını tarayan denetim.
 - Canlı sayfalarda meta/header `noindex`, robots tam engeli, 404 ve tüm canonical
   yönlendirme varyasyonlarını kontrol eden yayın sonrası audit.
@@ -93,7 +92,7 @@ yayıncı şimdilik Narvals Labs organizasyonudur.
 - Ana sayfada kullanılmayan pressure-hero JS/CSS kaldırıldı; aşağı-katman
   animasyonları kullanıcı niyetine ertelendi; 96 px footer logosu, 520/720 px
   hero ve 480/720 px hizmet görsel varyantları eklendi. Son yerel mobil
-  Lighthouse koşusunda ana sayfa 97/100/100/100, örnek yeni rehber
+  Lighthouse koşusunda ana sayfa 90/100/100/100, örnek yeni rehber
   99/100/100/100 aldı; laboratuvar sonucu saha verisi veya sıralama garantisi
   değildir.
 
