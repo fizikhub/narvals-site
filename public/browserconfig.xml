@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+    <msapplication>
+        <tile>
+            <square150x150logo src="/assets/logo-v6/narvals-favicon-v6-256.png"/>
+            <TileColor>#03233a</TileColor>
+        </tile>
+    </msapplication>
+</browserconfig>

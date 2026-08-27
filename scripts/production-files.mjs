@@ -5,6 +5,7 @@ export const productionFiles = [
   '_redirects',
   'b04a90decae26feec44042e2c2e4dd84.txt',
   'blog/feed.xml',
+  'browserconfig.xml',
   'llms.txt',
   'llms-full.txt',
   'robots.txt',

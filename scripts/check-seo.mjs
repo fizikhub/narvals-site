@@ -88,6 +88,9 @@ for (const [path, html] of htmlByPath) {
   if (link(html, 'alternate', 'hreflang', 'tr') !== expectedCanonical) {
     errors.push(`${path}: Turkish hreflang does not match canonical`);
   }
+  if (link(html, 'alternate', 'hreflang', 'tr-TR') !== expectedCanonical) {
+    errors.push(`${path}: Turkish (tr-TR) hreflang does not match canonical`);
+  }
   if (link(html, 'alternate', 'hreflang', 'x-default') !== expectedCanonical) {
     errors.push(`${path}: x-default hreflang does not match canonical`);
   }
@@ -105,6 +108,11 @@ for (const [path, html] of htmlByPath) {
   if (meta(html, 'name', 'twitter:image') !== `${siteOrigin}/og/narvals-labs-og.jpg`) errors.push(`${path}: twitter:image missing or wrong`);
   if (!meta(html, 'name', 'twitter:image:alt')) errors.push(`${path}: twitter:image:alt missing`);
   if (!robots.includes('index') || !robots.includes('max-image-preview:large')) errors.push(`${path}: index/full preview robots directives missing`);
+  const bingbot = meta(html, 'name', 'bingbot') || '';
+  if (!bingbot.includes('index') || !bingbot.includes('max-image-preview:large')) errors.push(`${path}: bingbot meta missing or incomplete`);
+  if (meta(html, 'name', 'referrer') !== 'strict-origin-when-cross-origin') errors.push(`${path}: referrer meta missing or wrong`);
+  if (meta(html, 'name', 'msapplication-TileColor') !== '#03233a') errors.push(`${path}: msapplication-TileColor meta missing or wrong`);
+  if (meta(html, 'name', 'msapplication-config') !== '/browserconfig.xml') errors.push(`${path}: msapplication-config meta missing or wrong`);
   if (/\bnoindex\b|\bnosnippet\b|\bnoarchive\b|\bnocache\b/i.test(robots)) errors.push(`${path}: blocking robots directive found`);
   if (h1s !== 1) errors.push(`${path}: expected exactly one h1, found ${h1s}`);
   if (!/<main\b/i.test(html)) errors.push(`${path}: semantic main element missing`);
@@ -150,6 +158,10 @@ for (const [path, html] of htmlByPath) {
   if (orgNode) {
     if (orgNode.name !== 'Narvals Labs') errors.push(`${path}: Organization name mismatch`);
     if (orgNode.areaServed?.name !== 'Türkiye') errors.push(`${path}: Organization areaServed Country Türkiye missing`);
+    if (orgNode.address?.addressCountry !== 'TR') errors.push(`${path}: Organization address country TR missing`);
+    if (orgNode.currenciesAccepted !== 'TRY, EUR, USD') errors.push(`${path}: Organization currenciesAccepted missing`);
+    if (orgNode.paymentAccepted !== 'Bank Transfer, Credit Card') errors.push(`${path}: Organization paymentAccepted missing`);
+    if (orgNode.founder?.name !== 'Narvals Labs Team') errors.push(`${path}: Organization founder missing`);
     if (orgNode.email !== 'info@narvals.com') errors.push(`${path}: Organization email missing or wrong`);
     if (orgNode.telephone !== '+905019441921') errors.push(`${path}: Organization telephone missing or wrong`);
     if (!Array.isArray(orgNode.knowsAbout) || orgNode.knowsAbout.length < 5) errors.push(`${path}: Organization knowsAbout missing or insufficient`);
@@ -159,6 +171,9 @@ for (const [path, html] of htmlByPath) {
     if (websiteNode.name !== 'Narvals Labs') errors.push(`${path}: WebSite name mismatch`);
     if (!Array.isArray(websiteNode.alternateName) || !websiteNode.alternateName.includes('Narvals')) {
       errors.push(`${path}: WebSite alternateName missing`);
+    }
+    if (websiteNode.potentialAction?.['@type'] !== 'SearchAction') {
+      errors.push(`${path}: WebSite potentialAction SearchAction missing`);
     }
   }
   if (structuredNodes.some((node) => node.address?.addressLocality === 'İstanbul')) {
@@ -228,8 +243,9 @@ for (const file of productionFiles) {
 const sitemap = await readFile(join(discoveryRoot, 'sitemap.xml'), 'utf8').catch(() => '');
 for (const [path, , , lastModified] of pages) {
   if (!sitemap.includes(`<loc>${siteOrigin}${path}</loc>`)) errors.push(`sitemap.xml missing canonical URL: ${siteOrigin}${path}`);
-  const entryPattern = new RegExp(`<url>\\s*<loc>${`${siteOrigin}${path}`.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}</loc>\\s*<lastmod>${lastModified}</lastmod>\\s*</url>`);
-  if (!entryPattern.test(sitemap)) errors.push(`sitemap.xml has missing or stale lastmod for ${siteOrigin}${path}`);
+  const escapedUrl = `${siteOrigin}${path}`.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const entryPattern = new RegExp(`<url>[\\s\\S]*?<loc>${escapedUrl}</loc>[\\s\\S]*?<lastmod>${lastModified}</lastmod>[\\s\\S]*?<changefreq>[a-z]+</changefreq>[\\s\\S]*?<priority>[0-9.]+</priority>[\\s\\S]*?</url>`);
+  if (!entryPattern.test(sitemap)) errors.push(`sitemap.xml has missing or stale lastmod/changefreq/priority for ${siteOrigin}${path}`);
 }
 if (countMatches(sitemap, /<loc>/g) !== pages.length) errors.push('sitemap.xml contains an unexpected URL count');
 

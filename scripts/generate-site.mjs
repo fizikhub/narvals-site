@@ -35,17 +35,96 @@ const encodeXml = (value) => value
   .replaceAll('"', '&quot;')
   .replaceAll("'", '&apos;');
 
+const getChangefreq = (path) => {
+  if (path === '/') return 'daily';
+  if (path.startsWith('/hizmetler/')) return 'weekly';
+  if (path === '/blog/') return 'daily';
+  if (path.startsWith('/blog/')) return 'weekly';
+  return 'monthly';
+};
+
+const getPriority = (path) => {
+  if (path === '/') return '1.0';
+  if (path === '/hizmetler/' || path.startsWith('/hizmetler/')) return '0.9';
+  if (path === '/blog/') return '0.9';
+  if (path.startsWith('/blog/')) return '0.8';
+  if (path === '/hakkimizda/' || path === '/iletisim/') return '0.7';
+  return '0.5';
+};
+
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${sitePages.map(({ path, lastModified }) => `  <url>
     <loc>${encodeXml(`${siteOrigin}${path}`)}</loc>
     <lastmod>${lastModified}</lastmod>
+    <changefreq>${getChangefreq(path)}</changefreq>
+    <priority>${getPriority(path)}</priority>
+    <image:image>
+      <image:loc>${siteOrigin}/og/narvals-labs-og.jpg</image:loc>
+      <image:title>Narvals Labs — Web Sitesi, Özel Yazılım ve Reklam</image:title>
+    </image:image>
   </url>`).join('\n')}
 </urlset>
 `;
 
-const robots = `# Narvals Labs — arama ve yanıt motorları için tarama politikası
+const robots = `# Narvals Labs — Arama ve Yanıt Motorları (SEO & GEO) Tarama Politikası
 User-agent: *
+Allow: /
+
+# Arama Motorları (Search Engine Crawlers)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Yapay Zeka ve GEO / LLM Ajanları (AI & LLM Crawlers)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
 Allow: /
 
 Sitemap: ${siteOrigin}/sitemap.xml
@@ -200,6 +279,7 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 - Özel Yazılım: ${siteOrigin}/hizmetler/ozel-yazilim/
 - Google Ads: ${siteOrigin}/hizmetler/google-ads/
 - Dijital Reklam: ${siteOrigin}/hizmetler/dijital-reklam/
+- Sosyal Medya Yönetimi: ${siteOrigin}/hizmetler/sosyal-medya-yonetimi/
 - QR Menü: ${siteOrigin}/hizmetler/qr-menu/
 - Rezervasyon ve Randevu: ${siteOrigin}/hizmetler/rezervasyon-randevu/
 - Sistem Karşılaştırması: ${siteOrigin}/hizmetler/qr-menu-rezervasyon/

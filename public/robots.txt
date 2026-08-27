@@ -1,5 +1,61 @@
-# Narvals Labs — arama ve yanıt motorları için tarama politikası
+# Narvals Labs — Arama ve Yanıt Motorları (SEO & GEO) Tarama Politikası
 User-agent: *
+Allow: /
+
+# Arama Motorları (Search Engine Crawlers)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Yapay Zeka ve GEO / LLM Ajanları (AI & LLM Crawlers)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
 Allow: /
 
 Sitemap: https://narvals.com/sitemap.xml

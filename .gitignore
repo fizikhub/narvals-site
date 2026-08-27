@@ -19,6 +19,7 @@ public/*
 !public/_redirects
 !public/_redirects.template
 !public/b04a90decae26feec44042e2c2e4dd84.txt
+!public/browserconfig.xml
 !public/blog/
 public/blog/*
 !public/blog/feed.xml

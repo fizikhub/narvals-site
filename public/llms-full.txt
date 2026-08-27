@@ -108,6 +108,7 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 - Özel Yazılım: https://narvals.com/hizmetler/ozel-yazilim/
 - Google Ads: https://narvals.com/hizmetler/google-ads/
 - Dijital Reklam: https://narvals.com/hizmetler/dijital-reklam/
+- Sosyal Medya Yönetimi: https://narvals.com/hizmetler/sosyal-medya-yonetimi/
 - QR Menü: https://narvals.com/hizmetler/qr-menu/
 - Rezervasyon ve Randevu: https://narvals.com/hizmetler/rezervasyon-randevu/
 - Sistem Karşılaştırması: https://narvals.com/hizmetler/qr-menu-rezervasyon/

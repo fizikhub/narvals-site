@@ -59,6 +59,12 @@ const organizationNode = (siteOrigin) => ({
   description: 'Web sitesi ve UX, işletmeye özel yazılım, dijital reklam, marka, QR menü ve rezervasyon sistemleri üreten dijital stüdyo.',
   email: 'info@narvals.com',
   telephone: '+905019441921',
+  address: {
+    '@type': 'PostalAddress',
+    addressCountry: 'TR'
+  },
+  currenciesAccepted: 'TRY, EUR, USD',
+  paymentAccepted: 'Bank Transfer, Credit Card',
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'sales',
@@ -70,6 +76,10 @@ const organizationNode = (siteOrigin) => ({
   areaServed: {
     '@type': 'Country',
     name: 'Türkiye'
+  },
+  founder: {
+    '@type': 'Organization',
+    name: 'Narvals Labs Team'
   },
   knowsAbout: [
     'Web Tasarım ve UX',
@@ -93,7 +103,15 @@ const websiteNode = (siteOrigin) => ({
   name: 'Narvals Labs',
   alternateName: ['Narvals', 'Narvals Digital', 'Narvals Studio'],
   inLanguage: 'tr-TR',
-  publisher: { '@id': `${siteOrigin}/#organization` }
+  publisher: { '@id': `${siteOrigin}/#organization` },
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: `${siteOrigin}/blog/?q={search_term_string}`
+    },
+    'query-input': 'required name=search_term_string'
+  }
 });
 
 const renderHead = ({ siteOrigin, path, title, description, keywords, schema, type = 'website', published, modified }) => {
@@ -103,13 +121,18 @@ const renderHead = ({ siteOrigin, path, title, description, keywords, schema, ty
     <meta name="theme-color" content="#03233a" />
     <meta name="color-scheme" content="light" />
     <meta name="format-detection" content="telephone=no" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="msapplication-TileColor" content="#03233a" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="description" content="${escapeHtml(description)}" />
     <meta name="keywords" content="${escapeHtml(keywords.join(', '))}" />
     <meta name="author" content="Narvals Labs" />
     <link rel="canonical" href="${canonical}" />
     <link rel="alternate" hreflang="tr" href="${canonical}" />
+    <link rel="alternate" hreflang="tr-TR" href="${canonical}" />
     <link rel="alternate" hreflang="x-default" href="${canonical}" />
     <link rel="alternate" type="application/rss+xml" title="Narvals Labs Rehberleri" href="${siteOrigin}/blog/feed.xml" />
     <link rel="icon" href="/assets/logo-v6/narvals-favicon-v6-256.png" type="image/png" />
@@ -182,6 +205,10 @@ const renderArticle = (post, siteOrigin) => {
       inLanguage: 'tr-TR',
       isPartOf: { '@id': `${siteOrigin}/#website` },
       about: post.about.map((name) => ({ '@type': 'Thing', name })),
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['h1', '.info-hero__answer', '.article-summary ul', '.article-section h2']
+      },
       primaryImageOfPage: { '@type': 'ImageObject', url: `${siteOrigin}/og/narvals-labs-og.jpg`, width: 1200, height: 630 }
     },
     {
@@ -193,6 +220,7 @@ const renderArticle = (post, siteOrigin) => {
       image: [`${siteOrigin}/og/narvals-labs-og.jpg`],
       datePublished: post.published,
       dateModified: post.modified,
+      timeRequired: `PT${post.readingTime}M`,
       inLanguage: 'tr-TR',
       isAccessibleForFree: true,
       wordCount: wordCount(post),
@@ -200,6 +228,12 @@ const renderArticle = (post, siteOrigin) => {
       keywords: post.keywords.join(', '),
       author: { '@id': `${siteOrigin}/#organization` },
       publisher: { '@id': `${siteOrigin}/#organization` },
+      copyrightHolder: { '@id': `${siteOrigin}/#organization` },
+      license: `${siteOrigin}/editoryal-ilkeler/`,
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['h1', '.info-hero__answer', '.article-summary ul', '.article-section h2']
+      },
       about: post.about.map((name) => ({ '@type': 'Thing', name })),
       citation: post.sources.map((source) => source.url)
     },
