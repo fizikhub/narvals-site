@@ -37,16 +37,16 @@
 - **Kapsam:** Hesap denetimi, arama niyeti, anahtar ve negatif kelime planı, kampanya yapısı, reklam metni, açılış sayfası uyumu, dönüşüm takibi, optimizasyon ve raporlama.
 - **Dürüst Not:** Satış veya getiri garantisi verilmez; medya bütçesi ile yönetim kapsamı ayrı kalemlerdir.
 
-### 1.5. Sosyal Medya Yönetimi (/hizmetler/sosyal-medya-yonetimi/)
+### 1.6. Sosyal Medya Yönetimi (/hizmetler/sosyal-medya-yonetimi/)
 - **Resmî sayfa:** https://narvals.com/hizmetler/sosyal-medya-yonetimi/
 - **Amaç:** Markanın içerik dilini, yayın düzenini ve topluluk iletişimini tek bir ölçülebilir plana bağlamak.
 - **Kapsam:** İçerik stratejisi, yayın planı, metin ve görsel yönlendirme, topluluk yönetimi, raporlama ve iyileştirme önerileri.
 
-### 1.6. QR Menü Sistemleri (/hizmetler/qr-menu/)
+### 1.7. QR Menü Sistemleri (/hizmetler/qr-menu/)
 - **Amaç:** PDF dosyasını telefona sıkıştırmak yerine, mobil cihazlarda anında açılan ve yönetim panelinden anlık güncellenen dijital menü sunmak.
 - **Kapsam:** Kategori, ürün, fiyat, açıklama, alerjen bilgisi, varyant ve seçenekler, "tükendi / stokta yok" yönetimi, masaya ve şubeye özel QR kodlar, çoklu dil desteği, isteğe bağlı garson çağırma veya sipariş bağlantısı.
 
-### 1.7. Online Rezervasyon ve Randevu Sistemleri (/hizmetler/rezervasyon-randevu/)
+### 1.8. Online Rezervasyon ve Randevu Sistemleri (/hizmetler/rezervasyon-randevu/)
 - **Amaç:** Restoranlarda masa/kapasite; hizmet işletmelerinde personel/süre kurallarına göre müşteri kaydını otomatikleştirmek.
 - **Kapsam:** Şube, masa, kişi sayısı, işlem süresi, personel uygunluğu, mola ve çalışma saati kuralları; anlık onay, SMS/WhatsApp/E-posta hatırlatma, iptal ve bekleme listesi; tek merkezden takvim ve yoğunluk raporları.
 

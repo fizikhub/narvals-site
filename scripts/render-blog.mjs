@@ -51,9 +51,11 @@ const organizationNode = (siteOrigin) => ({
   logo: {
     '@type': 'ImageObject',
     url: `${siteOrigin}/assets/logo-v6/narvals-avatar-v6-1080.png`,
+    contentUrl: `${siteOrigin}/assets/logo-v6/narvals-avatar-v6-1080.png`,
     width: 1080,
     height: 1080
   },
+  image: `${siteOrigin}/og/narvals-labs-og.jpg`,
   description: 'Web sitesi ve UX, işletmeye özel yazılım, dijital reklam, marka, QR menü ve rezervasyon sistemleri üreten dijital stüdyo.',
   email: 'info@narvals.com',
   telephone: '+905019441921',
@@ -75,6 +77,7 @@ const organizationNode = (siteOrigin) => ({
     'Meta Reklam Yönetimi',
     'Google Ads Yönetimi',
     'E-Ticaret Sitesi',
+    'Sosyal Medya Yönetimi',
     'QR Menü Sistemleri',
     'Online Rezervasyon Sistemleri',
     'Teknik SEO',
@@ -88,6 +91,7 @@ const websiteNode = (siteOrigin) => ({
   '@id': `${siteOrigin}/#website`,
   url: `${siteOrigin}/`,
   name: 'Narvals Labs',
+  alternateName: ['Narvals', 'Narvals Digital', 'Narvals Studio'],
   inLanguage: 'tr-TR',
   publisher: { '@id': `${siteOrigin}/#organization` }
 });
@@ -97,6 +101,8 @@ const renderHead = ({ siteOrigin, path, title, description, keywords, schema, ty
   return `    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#03233a" />
+    <meta name="color-scheme" content="light" />
+    <meta name="format-detection" content="telephone=no" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="description" content="${escapeHtml(description)}" />
@@ -108,6 +114,7 @@ const renderHead = ({ siteOrigin, path, title, description, keywords, schema, ty
     <link rel="alternate" type="application/rss+xml" title="Narvals Labs Rehberleri" href="${siteOrigin}/blog/feed.xml" />
     <link rel="icon" href="/assets/logo-v6/narvals-favicon-v6-256.png" type="image/png" />
     <link rel="apple-touch-icon" href="/assets/logo-v6/narvals-avatar-v6-1080.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <meta property="og:locale" content="tr_TR" />
     <meta property="og:type" content="${type}" />
     <meta property="og:site_name" content="Narvals Labs" />

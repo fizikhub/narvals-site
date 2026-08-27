@@ -68,8 +68,8 @@ yayıncı şimdilik Narvals Labs organizasyonudur.
 
 - Statik ana içerik; JavaScript beklemeden okunabilir HTML.
 - Her sayfada benzersiz title/description, self-canonical, `tr` + `x-default`,
-  OG/Twitter kartı, bölgesel geo meta etiketleri (`geo.region`, `geo.placename`, `geo.position`, `ICBM`) ve RSS keşif bağlantısı.
-- 28 canonical URL'yi tek manifestten yöneten build, sitemap ve SEO kontrolü;
+  OG/Twitter kartı, Schema.org varlık temelli GEO işaretlemesi (ülke, dil, hizmet alanı ve doğrulanmış iletişim), yazar, manifest ve RSS keşif bağlantısı.
+- 31 canonical URL'yi tek manifestten yöneten build, sitemap ve SEO kontrolü;
   key/path/file/tarih ve ilgili içerik hedefleri için başlangıç doğrulamaları.
 - URL başına gerçek içerik değişikliğine bağlı `lastmod`; build tarihi kullanılmaz.
 - Wildcard `robots.txt` ile açık tarama ve tek sitemap bildirimi.

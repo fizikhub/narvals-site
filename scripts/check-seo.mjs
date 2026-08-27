@@ -114,6 +114,12 @@ for (const [path, html] of htmlByPath) {
   if (/https:\/\/wa\.me\/\?/.test(html)) errors.push(`${path}: numberless WhatsApp URL found`);
   if (path === '/iletisim/' && !html.includes('mailto:info@narvals.com')) errors.push(`${path}: verified contact email missing`);
   if (path === '/iletisim/' && !html.includes('https://wa.me/905019441921')) errors.push(`${path}: verified WhatsApp link missing`);
+  if (meta(html, 'name', 'author') !== 'Narvals Labs') errors.push(`${path}: author meta missing or wrong`);
+  if (meta(html, 'name', 'theme-color') !== '#03233a') errors.push(`${path}: theme-color meta missing or wrong`);
+  if (meta(html, 'name', 'color-scheme') !== 'light') errors.push(`${path}: color-scheme meta missing or wrong`);
+  if (meta(html, 'name', 'format-detection') !== 'telephone=no') errors.push(`${path}: format-detection meta missing or wrong`);
+  if (link(html, 'apple-touch-icon') !== '/assets/logo-v6/narvals-avatar-v6-1080.png') errors.push(`${path}: apple-touch-icon link missing or wrong`);
+  if (link(html, 'manifest') !== '/site.webmanifest') errors.push(`${path}: webmanifest link missing or wrong`);
   if (/meta name="(?:geo\.(?:region|placename|position)|ICBM)"/i.test(html)) {
     errors.push(`${path}: legacy geolocation meta found; GEO is content/entity optimization, not coordinate stuffing`);
   }
@@ -139,6 +145,21 @@ for (const [path, html] of htmlByPath) {
   }
   for (const type of ['Organization', 'WebSite']) {
     if (!structuredTypes.has(type)) errors.push(`${path}: structured data type missing (${type})`);
+  }
+  const orgNode = structuredNodes.find((node) => node['@type'] === 'Organization');
+  if (orgNode) {
+    if (orgNode.name !== 'Narvals Labs') errors.push(`${path}: Organization name mismatch`);
+    if (orgNode.areaServed?.name !== 'Türkiye') errors.push(`${path}: Organization areaServed Country Türkiye missing`);
+    if (orgNode.email !== 'info@narvals.com') errors.push(`${path}: Organization email missing or wrong`);
+    if (orgNode.telephone !== '+905019441921') errors.push(`${path}: Organization telephone missing or wrong`);
+    if (!Array.isArray(orgNode.knowsAbout) || orgNode.knowsAbout.length < 5) errors.push(`${path}: Organization knowsAbout missing or insufficient`);
+  }
+  const websiteNode = structuredNodes.find((node) => node['@type'] === 'WebSite');
+  if (websiteNode) {
+    if (websiteNode.name !== 'Narvals Labs') errors.push(`${path}: WebSite name mismatch`);
+    if (!Array.isArray(websiteNode.alternateName) || !websiteNode.alternateName.includes('Narvals')) {
+      errors.push(`${path}: WebSite alternateName missing`);
+    }
   }
   if (structuredNodes.some((node) => node.address?.addressLocality === 'İstanbul')) {
     errors.push(`${path}: unverified İstanbul address found in structured data`);
