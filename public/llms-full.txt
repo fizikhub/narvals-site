@@ -132,3 +132,7 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 - Rehber: https://narvals.com/blog/e-ticaret-sitesi-maliyeti-nasil-hesaplanir/
 - Rehber: https://narvals.com/blog/google-ads-ajansi-secerken-sorulacak-sorular/
 - Rehber: https://narvals.com/blog/google-ads-mi-meta-reklamlari-mi/
+- Rehber: https://narvals.com/blog/b2b-web-sitesi-nasil-olmali/
+- Rehber: https://narvals.com/blog/web-sitesi-hizlandirma-core-web-vitals-rehberi/
+- Rehber: https://narvals.com/blog/e-ticaret-donusum-orani-artirma-cro-rehberi/
+- Rehber: https://narvals.com/blog/yonetim-paneli-ve-crm-yazilimi-nasil-secilir/

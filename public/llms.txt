@@ -43,6 +43,10 @@ Tam kapsamlı yapay zekâ bilgi tabanı ve RAG dokümantasyonu için: [llms-full
 - [E-ticaret sitesi maliyeti nasıl hesaplanır? Toplam maliyet rehberi](https://narvals.com/blog/e-ticaret-sitesi-maliyeti-nasil-hesaplanir/): E-ticaret sitesi maliyetini kurulum, lisans, entegrasyon, içerik, güvenlik, operasyon ve bakım kalemleriyle hesaplama ve teklif karşılaştırma rehberi.
 - [Google Ads ajansı seçerken hangi sorular sorulmalı?](https://narvals.com/blog/google-ads-ajansi-secerken-sorulacak-sorular/): Google Ads ajansı tekliflerini hesap erişimi, arama niyeti, dönüşüm ölçümü, bütçe, açılış sayfası, raporlama ve çıkış planıyla karşılaştırın.
 - [Google Ads mi Meta reklamları mı? Hangi kanal ne zaman seçilmeli?](https://narvals.com/blog/google-ads-mi-meta-reklamlari-mi/): Google Ads ve Meta reklamlarını kullanıcı niyeti, teklif, kreatif, ölçüm, bütçe ve müşteri yolculuğuna göre karşılaştıran karar rehberi.
+- [B2B web sitesi nasıl olmalı? Lead generation ve kurumsal güven rehberi](https://narvals.com/blog/b2b-web-sitesi-nasil-olmali/): B2B kurumsal web sitesinde güven inşası, karar verici odaklı içerik mimarisi, nitelikli talep (lead gen) toplama ve teknik SEO ilkeleri.
+- [Web sitesi hızlandırma ve Core Web Vitals (LCP, INP, CLS) rehberi](https://narvals.com/blog/web-sitesi-hizlandirma-core-web-vitals-rehberi/): Web sitesi açılış hızını artırmak ve Google Core Web Vitals (LCP, INP, CLS) metriklerini yeşile çekmek için uygulanabilir optimizasyon rehberi.
+- [E-ticaret dönüşüm oranı artırma (CRO) ve sepet terkini önleme rehberi](https://narvals.com/blog/e-ticaret-donusum-orani-artirma-cro-rehberi/): E-ticarette ürün sayfası UX, sepet terkini önleme, mobil ödeme akışı ve dönüşüm oranı optimizasyonu (CRO) için pratik karar rehberi.
+- [İşletmeye özel CRM ve yönetim paneli seçim rehberi](https://narvals.com/blog/yonetim-paneli-ve-crm-yazilimi-nasil-secilir/): Hazır SaaS CRM yerine işletmeye özel yönetim paneli ne zaman gerekir? Yetkilendirme, veri güvenliği, iş akışları ve entegrasyon rehberi.
 
 ## Temel İlkeler ve Yaklaşım
 

@@ -310,4 +310,44 @@
       <image:title>Google Ads mi Meta reklamları mı? Hangi kanal ne zaman seçilmeli?</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://narvals.com/blog/b2b-web-sitesi-nasil-olmali/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
+      <image:title>B2B web sitesi nasıl olmalı? Lead generation ve kurumsal güven rehberi</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://narvals.com/blog/web-sitesi-hizlandirma-core-web-vitals-rehberi/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
+      <image:title>Web sitesi hızlandırma ve Core Web Vitals (LCP, INP, CLS) rehberi</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://narvals.com/blog/e-ticaret-donusum-orani-artirma-cro-rehberi/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
+      <image:title>E-ticaret dönüşüm oranı artırma (CRO) ve sepet terkini önleme rehberi</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://narvals.com/blog/yonetim-paneli-ve-crm-yazilimi-nasil-secilir/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
+      <image:title>İşletmeye özel CRM ve yönetim paneli seçim rehberi</image:title>
+    </image:image>
+  </url>
 </urlset>

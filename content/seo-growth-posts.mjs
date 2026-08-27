@@ -744,6 +744,306 @@ export const newBlogPosts = [
       { label: 'Meta Business Help — Meta reklam açık artırmasına giriş', url: 'https://www.facebook.com/business/help/430291176997542' },
       { label: 'Meta Business Help — Meta Pixel hakkında', url: 'https://www.facebook.com/business/help/742478679120153' }
     ]
+  },
+  {
+    slug: 'b2b-web-sitesi-nasil-olmali',
+    metaTitle: 'B2B Web Sitesi Nasıl Olmalı? | Narvals Labs',
+    title: 'B2B web sitesi nasıl olmalı? Lead generation ve kurumsal güven rehberi',
+    description: 'B2B kurumsal web sitesinde güven inşası, karar verici odaklı içerik mimarisi, nitelikli talep (lead gen) toplama ve teknik SEO ilkeleri.',
+    keywords: ['B2B web sitesi', 'B2B web tasarım', 'lead generation', 'kurumsal teklif formu', 'B2B dönüşüm'],
+    category: 'Web & UX',
+    published: '2026-08-27T10:00:00+03:00',
+    modified: '2026-08-27T10:00:00+03:00',
+    readingTime: 9,
+    answer: 'Başarılı bir B2B web sitesi bir vitrin değil; satın alma komitesindeki karar vericilerin (yönetici, teknik sorumlu, satın alma) şüphelerini gideren, teknik yetkinliği kanıtlayan ve nitelikli teklif talebine (lead generation) yönlendiren stratejik bir satış aracıdır. Doğrudan ürün satışı yerine güven inşası, süreç şeffaflığı ve sürtünmesiz iletişim akışı üzerine kurulur.',
+    takeaways: [
+      'B2B karar süreçlerinde tek bir kişi değil, farklı uzmanlıklarda bir satın alma komitesi bulunur.',
+      'Slogandan çok gerçek vaka analizleri, teknik dokümanlar ve süreç şeffaflığı güven kazandırır.',
+      'Teklif ve iletişim formları gereksiz alanlardan arındırılmalı, sürtünme minimize edilmelidir.',
+      'Tüm form ve etkileşimler doğrudan CRM ve satış bildirim sistemlerine anlık bağlanmalıdır.'
+    ],
+    about: ['B2B web sitesi', 'Lead generation', 'Kurumsal UX', 'B2B pazarlama'],
+    related: ['kurumsal-web-sitesi-briefi-nasil-hazirlanir', 'web-sitesi-teknik-seo-kontrol-listesi', 'web-sitesi-yaptirmadan-once-kapsam-teklif-karar-rehberi'],
+    servicePath: '/hizmetler/web-tasarim/',
+    serviceLabel: 'Kurumsal web tasarım ve UX hizmetini inceleyin',
+    sections: [
+      {
+        id: 'b2b-farki',
+        label: 'Temel fark',
+        heading: 'B2B web sitesinin görevi anlık satış değil, nitelikli görüşme başlatmaktır.',
+        paragraphs: [
+          'B2C sitelerde duygusal tetikleyiciler ve anlık indirimler öne çıkarken; B2B projelerde uzun satın alma döngüleri, bütçe onayları ve risk yönetimi belirleyicidir. Karar verici, şirketi adına sorumluluk aldığı için hata payını sıfıra indirmek ister.',
+          'Bu nedenle B2B web sitesi ziyaretçiye “Neden en ucuzu değil de en güveniliri biziz?” sorusunun somut kanıtlarını sunmalıdır. Arayüz tasarımı, bilgi hiyerarşisi ve hız bu güven hissinin ilk temelini atar.'
+        ],
+        callout: 'Kritik ilke: Ziyaretçi sitenizde aradığı teknik veya kurumsal cevabı 10 saniye içinde bulamazsa rakibin sitesine geçer.'
+      },
+      {
+        id: 'icerik-mimarisi',
+        label: 'İçerik mimarisi',
+        heading: 'Satın alma komitesinin aradığı 5 temel güven unsuru.',
+        paragraphs: [
+          'B2B sitede yer alması gereken içerikler yüzeysel tanıtım metinleri değil; somut, ölçülebilir ve doğrulanabilir verilerden oluşmalıdır.'
+        ],
+        ordered: [
+          '<strong>Gerçek Vaka Analizleri (Case Studies):</strong> Hangi müşterinin hangi problemini, ne kadar sürede ve hangi yöntemle çözdüğünüzü gösteren vaka özetleri.',
+          '<strong>Süreç ve Metodoloji Şeffaflığı:</strong> Projeye başlandığında işin hangi aşamalardan geçeceğini gösteren adım adım çalışma modeli.',
+          '<strong>Teknik Uyumluluk ve Sertifikalar:</strong> Güvenlik, KVKK, ISO veya sektörel standartlara uyumluluk kanıtları.',
+          '<strong>Doğrulanabilir Ekip ve Uzmanlık:</strong> Projeyi fiilen yürütecek çekirdek ekibin tecrübesi ve uzmanlık alanları.',
+          '<strong>Net Kapsam ve Karar Rehberleri:</strong> Hangi hizmetlerin kapsama dahil olduğunu açıkça belirten şeffaf yapı.'
+        ]
+      },
+      {
+        id: 'lead-generation-ux',
+        label: 'Dönüşüm UX',
+        heading: 'Teklif ve iletişim adımlarında sürtünmeyi ortadan kaldırın.',
+        paragraphs: [
+          'Birçok B2B site, 15 alanlık uzun formlar yüzünden potansiyel müşterilerini kaybeder. Formlar yalnız ilk nitelikli teması başlatacak kritik soruları içermelidir: İsim, kurumsal e-posta, şirket adı ve temel ihtiyaç özeti.',
+          'Ayrıca doğrudan WhatsApp, takvim üzerinden randevu seçimi veya e-posta gibi alternatif iletişim kanalları sunularak karar vericinin tercihine saygı duyulmalıdır.'
+        ],
+        table: {
+          headers: ['Form unsuru', 'Kaçınılması gereken', 'Doğru yaklaşım'],
+          rows: [
+            ['Alan sayısı', '10+ zorunlu alan sormak', '3-4 temel alan ile ilk iletişimi başlatmak'],
+            ['E-posta tipi', 'Herhangi bir doğrulama yapmamak', 'Kurumsal e-posta alanlarını önceliklendirmek'],
+            ['Geri dönüş süresi', 'Belirsiz bekletme', '“24 saat içinde uzman ekibimiz dönüş yapacaktır” taahhüdü'],
+            ['Gizlilik &amp; KVKK', 'Açık onay metnini gizlemek', 'Şeffaf KVKK ve aydınlatma metni sunmak']
+          ]
+        }
+      },
+      {
+        id: 'b2b-teknik-seo',
+        label: 'Teknik altyapı',
+        heading: 'Kurumsal SEO, hız ve CRM entegrasyonu.',
+        paragraphs: [
+          'B2B müşteriler genellikle sektörlerine özgü teknik anahtar kelimeler ve problem odaklı aramalarla (örn. “ERP entegrasyonu ajansı”, “özel depo yönetim yazılımı”) sitenize ulaşır. Sayfa yapısı semantik başlıklar ve Schema.org yapısal verileriyle donatılmalıdır.',
+          'Form doldurulduğu anda gelen talebin satış ekibinin kullandığı CRM sistemine (HubSpot, Salesforce veya özel panel) anlık düşmesi ve ilgili kişiye SMS/e-posta bildirimi gitmesi dönüşüm başarısını katlar.'
+        ],
+        callout: 'Talebe ilk 15 dakika içinde geri dönen işletmelerin satış kapama oranı, ertesi gün dönenlere göre 7 kat daha yüksektir.'
+      }
+    ],
+    sources: [
+      { label: 'Google Search Central — B2B ve Kurumsal Web Sitesi Best Practices', url: 'https://developers.google.com/search/docs' },
+      { label: 'Schema.org — Organization and ProfessionalService Data', url: 'https://schema.org/ProfessionalService' }
+    ]
+  },
+  {
+    slug: 'web-sitesi-hizlandirma-core-web-vitals-rehberi',
+    metaTitle: 'Web Sitesi Hızlandırma & Core Web Vitals Rehberi | Narvals',
+    title: 'Web sitesi hızlandırma ve Core Web Vitals (LCP, INP, CLS) rehberi',
+    description: 'Web sitesi açılış hızını artırmak ve Google Core Web Vitals (LCP, INP, CLS) metriklerini yeşile çekmek için uygulanabilir optimizasyon rehberi.',
+    keywords: ['web sitesi hızlandırma', 'Core Web Vitals', 'LCP optimizasyonu', 'INP optimizasyonu', 'CLS optimizasyonu', 'site hızı'],
+    category: 'SEO & Performans',
+    published: '2026-08-27T10:00:00+03:00',
+    modified: '2026-08-27T10:00:00+03:00',
+    readingTime: 10,
+    answer: 'Web sitesi hızlandırma, yalnızca görselleri sıkıştırmaktan ibaret değildir. Google’ın sıralama sinyali olarak kullandığı Core Web Vitals standartlarında LCP (En Büyük İçerikli Boyama ≤ 2.5s), INP (Sonraki Etkileşime Yanıt Verme ≤ 200ms) ve CLS (Kümülatif Düzen Kayması ≤ 0.1) metriklerini yeşil bölgeye çekerek hem arama motorlarında üst sıralara çıkmayı hem de kullanıcı terk oranını düşürmeyi hedefler.',
+    takeaways: [
+      'Site açılış hızındaki her 1 saniyelik gecikme dönüşüm oranlarını ortalama %7 oranında düşürür.',
+      'LCP için en kritik adım: Hero görselinin AVIF/WebP olarak sunulması ve render-blocking CSS/JS’in kaldırılmasıdır.',
+      'INP metriği, ağır JavaScript kütüphanelerini temizleyerek ve ana iş parçacığını (main thread) rahatlatarak iyileştirilir.',
+      'CLS için tüm görsel ve reklam alanlarına sabit width/height değerleri tanımlanmalıdır.'
+    ],
+    about: ['Core Web Vitals', 'Site hızı', 'LCP optimizasyonu', 'Web performansı'],
+    related: ['web-sitesi-teknik-seo-kontrol-listesi', 'google-ai-aramalari-icin-geo-rehberi', 'web-sitesi-maliyeti-nasil-hesaplanir'],
+    servicePath: '/hizmetler/web-tasarim/',
+    serviceLabel: 'Hızlı ve performanslı web tasarım çözümlerini inceleyin',
+    sections: [
+      {
+        id: 'core-web-vitals-nedir',
+        label: 'Temel metrikler',
+        heading: 'Core Web Vitals metrikleri ve Google’ın kabul ettiği yeşil eşikler.',
+        paragraphs: [
+          'Google, kullanıcı deneyimini üç temel ayak üzerinden ölçümler: Yükleme hızı (LCP), etkileşim hızı (INP) ve görsel kararlılık (CLS). Bu metriklerin tamamı 75. yüzdelik dilimde (p75) gerçek kullanıcı verileriyle (CrUX) değerlendirilir.'
+        ],
+        table: {
+          headers: ['Metrik', 'Açıklama', 'İyi (Yeşil Eşik)', 'Geliştirilmeli', 'Kötü (Kırmızı Eşik)'],
+          rows: [
+            ['LCP (Largest Contentful Paint)', 'Ana içeriğin (görsel/başlık) ekranda belirmesi', '≤ 2.5 sn', '2.5 - 4.0 sn', '> 4.0 sn'],
+            ['INP (Interaction to Next Paint)', 'Tıklama/dokunmaya arayüzün yanıt verme süresi', '≤ 200 ms', '200 - 500 ms', '> 500 ms'],
+            ['CLS (Cumulative Layout Shift)', 'Sayfa yüklenirken öğelerin beklenmedik kayması', '≤ 0.1', '0.1 - 0.25', '> 0.25']
+          ]
+        }
+      },
+      {
+        id: 'lcp-optimizasyonu',
+        label: 'Yükleme hızı',
+        heading: 'LCP süresini 2.5 saniyenin altına çekmenin 4 yolu.',
+        paragraphs: [
+          'LCP genellikle ana sayfadaki büyük kahraman görseli (Hero image) veya H1 başlığıdır. Yavaş yüklenen LCP’nin ana nedeni büyük dosya boyutları ve sunucu yanıt süresidir.'
+        ],
+        ordered: [
+          '<strong>Modern Görsel Formatları:</strong> PNG ve JPG yerine %40-%60 daha hafif AVIF ve WebP formatlarına geçin.',
+          '<strong>Fetch Priority ve Preload:</strong> Hero görseline <code>fetchpriority="high"</code> ve <code>loading="eager"</code> vererek tarayıcının ilk bu kaynağı indirmesini sağlayın.',
+          '<strong>Kritik CSS Ayırma:</strong> Ekranın üst kısmında (above-the-fold) gerekmeyen tüm stil dosyalarını ve scriptleri erteleyin (defer/async).',
+          '<strong>CDN ve Edge Caching:</strong> Statik varlıkları Cloudflare veya hızlı bir CDN üzerinden kullanıcıya coğrafi olarak en yakın sunucudan dağıtın.'
+        ]
+      },
+      {
+        id: 'inp-ve-js',
+        label: 'Etkileşim hızı',
+        heading: 'INP metriğini iyileştirme: Ağır JavaScript yükünden kurtulun.',
+        paragraphs: [
+          'Sayfada çok fazla üçüncü taraf izleme kodu (etiketler, canlı destek araçları, ağır animasyon kütüphaneleri) bulunduğunda ana iş parçacığı kilitlenir. Kullanıcı bir butona bastığında arayüz milisaniyelerce tepki veremez.',
+          'Gereksiz JavaScript paketlerini silin; ağır işlemleri Web Workers veya requestIdleCallback ile ana iş akışının dışına taşıyın.'
+        ],
+        callout: 'Kullanılmayan her 50 KB harici JS kütüphanesi, mobil cihazlarda ortalama 200 ms işlemci gecikmesi yaratır.'
+      },
+      {
+        id: 'cls-duzen-kaymasi',
+        label: 'Görsel kararlılık',
+        heading: 'CLS’yi sıfırlama: Kaymaları ve zıplamaları önleyin.',
+        paragraphs: [
+          'Kullanıcı tam bir butona tıklayacakken üstte aniden bir banner veya resim belirmesi ve sayfanın aşağı kayması CLS cezasının başlıca sebebidir.',
+          'Tüm <code>&lt;img&gt;</code> ve <code>&lt;video&gt;</code> etiketlerinde <code>width</code> ve <code>height</code> özniteliklerini mutlaka belirtin; özel yazı tipleri yüklenirken metin kaymalarını önlemek için <code>font-display: swap</code> kuralını dikkatli yapılandırın.'
+        ]
+      }
+    ],
+    sources: [
+      { label: 'web.dev — Core Web Vitals Kılavuzu', url: 'https://web.dev/vitals/' },
+      { label: 'Google Search Central — Sayfa Deneyimi ve Sıralama', url: 'https://developers.google.com/search/docs/appearance/page-experience' }
+    ]
+  },
+  {
+    slug: 'e-ticaret-donusum-orani-artirma-cro-rehberi',
+    metaTitle: 'E-Ticaret Dönüşüm Oranı Artırma (CRO) Rehberi | Narvals',
+    title: 'E-ticaret dönüşüm oranı artırma (CRO) ve sepet terkini önleme rehberi',
+    description: 'E-ticarette ürün sayfası UX, sepet terkini önleme, mobil ödeme akışı ve dönüşüm oranı optimizasyonu (CRO) için pratik karar rehberi.',
+    keywords: ['dönüşüm oranı artırma', 'e-ticaret CRO', 'sepet terkini önleme', 'ödeme sayfası UX', 'sepet optimizasyonu'],
+    category: 'E-Ticaret',
+    published: '2026-08-27T10:00:00+03:00',
+    modified: '2026-08-27T10:00:00+03:00',
+    readingTime: 9,
+    answer: 'E-ticarette reklam bütçesini artırmadan geliri ve kârlılığı katlamanın en doğrudan yolu dönüşüm oranı optimizasyonudur (CRO). Ziyaretçinin ürün keşfinden sepete eklemesine ve ödeme adımını tamamlamasına kadar olan satın alma hunisindeki (funnel) tüm sürtünmeleri ortadan kaldırarak terk oranlarını minimize etmeyi amaçlar.',
+    takeaways: [
+      'Dönüşüm oranını %1’den %2’ye çıkarmak, reklam harcamasını ikiye katlamadan aynı satışı üretir.',
+      'Sepet terklerinin en yaygın nedeni: Son adımda çıkan beklenmedik kargo/ek ücretler ve zorunlu üyeliktir.',
+      'Mobil ürün sayfasında sepete ekle butonu ekranın altında yapışkan (sticky) kalmalıdır.',
+      'Güven rozetleri, taksit tablosu ve iade garantisi karar verme süresini kısaltır.'
+    ],
+    about: ['Dönüşüm oranı optimizasyonu', 'E-ticaret CRO', 'Sepet terki', 'Ödeme sayfası UX'],
+    related: ['e-ticaret-altyapisi-nasil-secilir', 'e-ticaret-sitesi-maliyeti-nasil-hesaplanir', 'meta-pixel-ve-conversions-api-farki'],
+    servicePath: '/hizmetler/e-ticaret/',
+    serviceLabel: 'E-ticaret sitesi tasarım ve optimizasyon hizmetini inceleyin',
+    sections: [
+      {
+        id: 'cro-nedir-ve-onemi',
+        label: 'Ekonomik etki',
+        heading: 'Trafik çekmek mi, mevcut trafiğin dönüşümünü artırmak mı?',
+        paragraphs: [
+          'Dijital reklam maliyetlerinin (TBM/BGBM) sürekli yükseldiği bir ortamda, yalnızca daha fazla trafik satın almak birim kârlılığı eritir. Sitenize gelen 10.000 ziyaretçiden 100 kişi alışveriş yapıyorsa dönüşüm oranınız %1’dir. Küçük UX iyileştirmeleriyle bunu 200 kişiye (%2) çıkardığınızda, tek bir kuruş ek reklam harcamadan cironuzu ikiye katlamış olursunuz.'
+        ],
+        callout: 'CRO bir tahmin sanatı değil; kullanıcı davranış verileri, analitik huniler ve kontrollü A/B testleri bütünüdür.'
+      },
+      {
+        id: 'urun-sayfasi-optimizasyonu',
+        label: 'Ürün sayfası UX',
+        heading: 'Ürün detay sayfasında kararı hızlandıran 5 kritik öğe.',
+        ordered: [
+          '<strong>Yüksek Kaliteli ve Yakınlaştırılabilir Görseller:</strong> Ürünü tüm açılardan, kullanım halinde ve gerçek boyut hissiyle gösterin.',
+          '<strong>Net Fiyat ve Taksit Seçenekleri:</strong> İndirimli fiyatı, tasarruf tutarını ve kredi kartı taksit tablosunu açıkça sergileyin.',
+          '<strong>Kargo ve Teslimat Bilgisi:</strong> “Saat 16:00’ya kadar sipariş verirseniz bugün kargoda” gibi net zaman vaadi sunun.',
+          '<strong>Stok Durumu ve Aciliyet Hissi:</strong> Sınırlı stok durumunda gerçek veriyi (“Son 3 ürün”) göstererek ertelemeyi önleyin.',
+          '<strong>Doğrulanmış Müşteri Yorumları:</strong> Yıldız puanı ve fotoğraflı gerçek kullanıcı deneyimlerini sayfanın merkezine alın.'
+        ]
+      },
+      {
+        id: 'sepet-terkini-onleme',
+        label: 'Ödeme akışı',
+        heading: 'Sepet terkini önleyen 4 ödeme sayfası kuralı.',
+        paragraphs: [
+          'Küresel e-ticaret verilerine göre sepete eklenen her 100 üründen yaklaşık 70’i satın alma tamamlanmadan terk edilir. Bu kaybı önlemek için ödeme adımı kusursuzlaştırılmalıdır.'
+        ],
+        table: {
+          headers: ['Terk Sebebi', 'Müşteri Tepkisi', 'Çözüm Yöntemi'],
+          rows: [
+            ['Zorunlu Üyelik', 'Şifre belirlemekle uğraşmak istemez', 'Misafir alışverişi (Guest checkout) imkanı sunun.'],
+            ['Gizli Ek Maliyetler', 'Ödeme ekranında kargo çıkınca aldatılmış hisseder', 'Ürün sayfasında kargo ücretini açıkça belirtin.'],
+            ['Karmaşık Formlar', 'Mobilde uzun adres yazmaktan yorulur', 'Adres otomatik tamamlama ve sade tek sayfa ödeme kullanın.'],
+            ['Güven Eksikliği', 'Kart bilgilerini girmekten çekinir', '3D Secure, SSL rozetleri ve popüler ödeme geçitlerini gösterin.']
+          ]
+        }
+      },
+      {
+        id: 'cro-test-sureci',
+        label: 'Test ve iyileştirme',
+        heading: 'Veri odaklı optimizasyon döngüsü nasıl kurulur?',
+        paragraphs: [
+          'Tasarımı rastgele değiştirmek yerine Google Analytics 4 hunilerini ve Clarity/Hotjar gibi ısı haritalarını inceleyin. Kullanıcıların sepete ekledikten sonra adres mi, ödeme mi yoksa kargo aşamasında mı takıldığını tespit edin. Hipotez kurun ve test edin.'
+        ],
+        callout: 'Asla aynı anda 5 farklı öğeyi değiştirmeyin; hangi değişikliğin dönüşümü artırdığını izole edebilmek için tek bir değişkeni test edin.'
+      }
+    ],
+    sources: [
+      { label: 'Baymard Institute — E-Commerce Checkout Usability Research', url: 'https://baymard.com/lists/cart-abandonment-rate' },
+      { label: 'Google Analytics Help — E-ticaret Huni Raporları', url: 'https://support.google.com/analytics/answer/9325985?hl=tr' }
+    ]
+  },
+  {
+    slug: 'yonetim-paneli-ve-crm-yazilimi-nasil-secilir',
+    metaTitle: 'İşletmeye Özel CRM ve Yönetim Paneli Seçimi | Narvals',
+    title: 'İşletmeye özel CRM ve yönetim paneli seçim rehberi',
+    description: 'Hazır SaaS CRM yerine işletmeye özel yönetim paneli ne zaman gerekir? Yetkilendirme, veri güvenliği, iş akışları ve entegrasyon rehberi.',
+    keywords: ['özel CRM yazılımı', 'yönetim paneli yazılımı', 'iş takip programı', 'özel panel geliştirme', 'işletme yazılımı'],
+    category: 'Özel yazılım',
+    published: '2026-08-27T10:00:00+03:00',
+    modified: '2026-08-27T10:00:00+03:00',
+    readingTime: 8,
+    answer: 'Her işletmenin işleyişi, onay mekanizmaları, fiyatlandırma formülleri ve müşteri takibi standart bir hazır SaaS yazılımına uymaz. Şirket içinde dağınık Excel tabloları, tekrarlayan veri girişleri ve departmanlar arası bilgi kopukluğu yaşanıyorsa, işletmenin tam iş akışına göre tasarlanan özel bir yönetim paneli ve CRM sistemi operasyonel maliyetleri ciddi oranda düşürür.',
+    takeaways: [
+      'Hazır SaaS araçlar başlangıçta ucuzdur; ancak kullanıcı başı lisans ücretleri büyüdükçe ağırlaşır.',
+      'Özel yönetim paneli işletmenin süreçlerine adapte olur; işletmeyi hazır bir kalıba zorlamaz.',
+      'Rol bazlı yetkilendirme (RBAC) ile çalışanların yalnızca yetkili oldukları verileri görmesi sağlanır.',
+      'Mevcut muhasebe, ERP veya kargo sistemleriyle tam iki yönlü API entegrasyonu kurulabilir.'
+    ],
+    about: ['Özel CRM', 'Yönetim paneli', 'İşletme yazılımı', 'Özel panel geliştirme'],
+    related: ['hazir-yazilim-mi-ozel-yazilim-mi', 'rezervasyon-randevu-sistemi-nasil-secilir', 'web-sitesi-teknik-seo-kontrol-listesi'],
+    servicePath: '/hizmetler/ozel-yazilim/',
+    serviceLabel: 'İşletmeye özel yazılım geliştirme hizmetini inceleyin',
+    sections: [
+      {
+        id: 'hazir-crm-vs-ozel-panel',
+        label: 'Karar noktası',
+        heading: 'Hazır SaaS CRM mi, işletmeye özel yönetim paneli mi?',
+        paragraphs: [
+          'Hazır CRM platformları (HubSpot, Zoho vb.) genel kullanım için tasarlanmıştır. Ancak üretim, lojistik, özel servis veya karmaşık teklif onay süreçleri olan işletmelerde hazır aracın esnemeyen sınırları ek manuel iş yükü doğurur.'
+        ],
+        table: {
+          headers: ['Karşılaştırma Kriteri', 'Hazır SaaS CRM', 'Özel Geliştirilen Panel'],
+          rows: [
+            ['İş Sürecine Uyum', 'Şirket yazılımın kurallarına uymak zorundadır', 'Yazılım şirketin tam akışına göre kodlanır'],
+            ['Maliyet Modeli', 'Kullanıcı başı aylık döviz lisans ücreti', 'Tek seferlik geliştirme + düşük barındırma maliyeti'],
+            ['Veri Sahipliği &amp; Güvenlik', 'Üçüncü taraf bulutta, dış bağımlı', 'Tamamen işletmeye ait sunucuda ve veritabanında'],
+            ['Entegrasyon Yeteneği', 'Yalnız hazır izin verilen servislerle kısıtlı', 'Mevcut yerel ERP/muhasebe ve API’lerle tam uyum'],
+            ['Gereksiz Karmaşıklık', 'Kullanılmayan yüzlerce gereksiz menü', 'Yalnız ekibin ihtiyaç duyduğu temiz ve hızlı arayüz']
+          ]
+        }
+      },
+      {
+        id: 'olmazsa-olmaz-moduller',
+        label: 'Temel mimari',
+        heading: 'Etkili bir yönetim panelinde bulunması gereken 5 çekirdek modül.',
+        ordered: [
+          '<strong>Rol ve İzin Matrisi (RBAC):</strong> Yönetici, satışçı, operasyon ve muhasebe gibi her rolün yalnızca görmesi gereken veriye erişebilmesi.',
+          '<strong>Müşteri ve Talep Yaşam Döngüsü:</strong> İlk temastan teklife, siparişten faturaya kadar tüm adımların tek ekranda izlenmesi.',
+          '<strong>Dinamik Filtreleme ve Hızlı Arama:</strong> Binlerce kayıt arasında milisaniyeler içinde sonuç veren akıllı arama motoru.',
+          '<strong>Detaylı İşlem Geçmişi (Audit Logs):</strong> Hangi kullanıcının ne zaman hangi kaydı güncellediğini gösteren güvenlik logları.',
+          '<strong>Bildirim ve Görev Hatırlatma:</strong> Geciken teklifler veya onay bekleyen işlemler için e-posta/SMS/panel içi uyarılar.'
+        ]
+      },
+      {
+        id: 'guvenlik-ve-kvkk',
+        label: 'Veri güvenliği',
+        heading: 'Veri güvenliği, KVKK uyumu ve yedekleme standartları.',
+        paragraphs: [
+          'İşletmenin müşteri listeleri, finansal rakamları ve ticari sırları en değerli varlığıdır. Özel yönetim panelinde veritabanı şifreleme (Encryption at Rest), HTTPS/TLS, iki adımlı doğrulama (2FA) ve otomatik günlük yedekleme protokolleri standart olmalıdır.'
+        ],
+        callout: 'Özel panel geliştirirken sıfırdan her şeyi tek seferde yapmak yerine, önce en çok zaman kaybettiren operasyonu çözen bir MVP (Minimum Uygulanabilir Ürün) ile başlayın.'
+      }
+    ],
+    sources: [
+      { label: 'OWASP — Top 10 Web Application Security Risks', url: 'https://owasp.org/www-project-top-ten/' },
+      { label: 'KVKK — Kişisel Verileri Koruma Kurumu Rehberleri', url: 'https://www.kvkk.gov.tr/' }
+    ]
   }
 ];
 
