@@ -55,6 +55,9 @@ const llms = `# Narvals Labs
 
 > Narvals Labs; web sitesi, e-ticaret, işletmeye özel yazılım, Google Ads ve Meta reklam yönetimi ile işletme sistemlerini aynı iş hedefinde birleştiren dijital üretim stüdyosudur.
 
+- E-posta: info@narvals.com
+- WhatsApp / Telefon: +90 501 944 19 21
+
 Tam kapsamlı yapay zekâ bilgi tabanı ve RAG dokümantasyonu için: [llms-full.txt](${siteOrigin}/llms-full.txt)
 
 ## Ana Sayfalar ve Hizmetler
@@ -95,6 +98,8 @@ const llmsFull = `# Narvals Labs — Kapsamlı Bilgi Tabanı ve Sistem Dokümant
 - **Hizmet Alanı:** Türkiye
 - **Ana Hizmet Dili:** Türkçe (tr-TR)
 - **Yayıncı & Varlık Adı:** Narvals Labs
+- **E-posta:** info@narvals.com
+- **WhatsApp / Telefon:** +90 501 944 19 21
 
 ---
 

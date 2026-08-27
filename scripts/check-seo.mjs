@@ -112,6 +112,8 @@ for (const [path, html] of htmlByPath) {
   if (!/<a\b[^>]*class="[^"]*skip-link/i.test(html)) errors.push(`${path}: skip link missing`);
   if (new Set(ids).size !== ids.length) errors.push(`${path}: duplicate HTML id found`);
   if (/https:\/\/wa\.me\/\?/.test(html)) errors.push(`${path}: numberless WhatsApp URL found`);
+  if (path === '/iletisim/' && !html.includes('mailto:info@narvals.com')) errors.push(`${path}: verified contact email missing`);
+  if (path === '/iletisim/' && !html.includes('https://wa.me/905019441921')) errors.push(`${path}: verified WhatsApp link missing`);
   if (/meta name="(?:geo\.(?:region|placename|position)|ICBM)"/i.test(html)) {
     errors.push(`${path}: legacy geolocation meta found; GEO is content/entity optimization, not coordinate stuffing`);
   }

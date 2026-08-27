@@ -13,7 +13,7 @@ export const staticPages = [
   { key: 'reservations', path: '/hizmetler/rezervasyon-randevu/', file: 'hizmetler/rezervasyon-randevu/index.html', lastModified: '2026-08-23', kind: 'service' },
   { key: 'system-comparison', path: '/hizmetler/qr-menu-rezervasyon/', file: 'hizmetler/qr-menu-rezervasyon/index.html', lastModified: '2026-08-23', kind: 'comparison' },
   { key: 'about', path: '/hakkimizda/', file: 'hakkimizda/index.html', lastModified: '2026-08-23', kind: 'about' },
-  { key: 'contact', path: '/iletisim/', file: 'iletisim/index.html', lastModified: '2026-08-21', kind: 'contact' },
+  { key: 'contact', path: '/iletisim/', file: 'iletisim/index.html', lastModified: '2026-08-27', kind: 'contact' },
   { key: 'blog', path: '/blog/', file: 'blog/index.html', lastModified: '2026-08-27', kind: 'collection' },
   { key: 'editorial-policy', path: '/editoryal-ilkeler/', file: 'editoryal-ilkeler/index.html', lastModified: '2026-08-23', kind: 'policy' }
 ];
