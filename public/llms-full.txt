@@ -1,9 +1,9 @@
 # Narvals Labs — Kapsamlı Bilgi Tabanı ve Sistem Dokümantasyonu (GEO Knowledge Base)
 
-> Narvals Labs; web tasarımı ve UX, işletmeye özel yazılım ve otomasyon, Meta reklam yönetimi, sosyal medya yönetimi, QR menü ve online rezervasyon sistemlerini tek bir yaratıcı ve teknik ekipte birleştiren İstanbul merkezli dijital üretim stüdyosudur.
+> Narvals Labs; web tasarımı, e-ticaret, işletmeye özel yazılım, Google Ads ve Meta reklam yönetimi ile işletme sistemlerini tek iş hedefinde birleştiren dijital üretim stüdyosudur.
 
 - **Resmî Alan Adı:** https://narvals.com/
-- **Konum:** İstanbul, Türkiye (TR-34)
+- **Hizmet Alanı:** Türkiye
 - **Ana Hizmet Dili:** Türkçe (tr-TR)
 - **Yayıncı & Varlık Adı:** Narvals Labs
 
@@ -29,6 +29,11 @@
 - **Amaç:** Facebook ve Instagram reklamlarında bütçeyi boş gösterimlere değil, ölçülebilir gerçek iş sonuçlarına bağlamak.
 - **Kapsam:** Reklam hesabı denetimi, kampanya mimarisi, kitle ve yeniden hedefleme (retargeting) planı, kreatif fikir ve reklam metni varyasyonları, yönlendirme sayfası (landing page) uyumu, Meta Pixel ve Conversions API (CAPI) sunucu tarafı ölçüm kurulumu, test ve bütçe optimizasyonu.
 - **Dürüst Not:** Reklamda getiri veya satış garantisi verilmez; ölçülebilir altyapı kurulur ve veriye göre sürekli iyileştirilir.
+
+### 1.5. Google Ads Yönetimi (/hizmetler/google-ads/)
+- **Amaç:** Hizmeti veya ürünü aktif olarak arayan kullanıcıyı doğru reklam ve açılış sayfasıyla buluşturmak.
+- **Kapsam:** Hesap denetimi, arama niyeti, anahtar ve negatif kelime planı, kampanya yapısı, reklam metni, açılış sayfası uyumu, dönüşüm takibi, optimizasyon ve raporlama.
+- **Dürüst Not:** Satış veya getiri garantisi verilmez; medya bütçesi ile yönetim kapsamı ayrı kalemlerdir.
 
 ### 1.5. Sosyal Medya Yönetimi (/hizmetler/sosyal-medya-yonetimi/)
 - **Resmî sayfa:** https://narvals.com/hizmetler/sosyal-medya-yonetimi/
@@ -99,6 +104,7 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 - Web Tasarım: https://narvals.com/hizmetler/web-tasarim/
 - E-Ticaret: https://narvals.com/hizmetler/e-ticaret/
 - Özel Yazılım: https://narvals.com/hizmetler/ozel-yazilim/
+- Google Ads: https://narvals.com/hizmetler/google-ads/
 - Dijital Reklam: https://narvals.com/hizmetler/dijital-reklam/
 - QR Menü: https://narvals.com/hizmetler/qr-menu/
 - Rezervasyon ve Randevu: https://narvals.com/hizmetler/rezervasyon-randevu/
@@ -121,3 +127,4 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 - Rehber: https://narvals.com/blog/meta-reklam-ajansi-secerken-sorulacak-sorular/
 - Rehber: https://narvals.com/blog/sosyal-medya-yonetimi-neleri-kapsar/
 - Rehber: https://narvals.com/blog/e-ticaret-sitesi-maliyeti-nasil-hesaplanir/
+- Rehber: https://narvals.com/blog/google-ads-ajansi-secerken-sorulacak-sorular/

@@ -1,6 +1,6 @@
 # Narvals Labs
 
-> Narvals Labs; web sitesi ve mobil UX, işletmeye özel yazılım ve otomasyon, Meta reklam yönetimi (Facebook/Instagram), sosyal medya yönetimi, QR menü ve online rezervasyon sistemlerini aynı yaratıcı ve teknik ekipte birleştiren İstanbul merkezli dijital üretim stüdyosudur.
+> Narvals Labs; web sitesi, e-ticaret, işletmeye özel yazılım, Google Ads ve Meta reklam yönetimi ile işletme sistemlerini aynı iş hedefinde birleştiren dijital üretim stüdyosudur.
 
 Tam kapsamlı yapay zekâ bilgi tabanı ve RAG dokümantasyonu için: [llms-full.txt](https://narvals.com/llms-full.txt)
 
@@ -11,6 +11,7 @@ Tam kapsamlı yapay zekâ bilgi tabanı ve RAG dokümantasyonu için: [llms-full
 - [Web tasarım ve UX](https://narvals.com/hizmetler/web-tasarim/): Kurumsal web sitesi, kampanya sayfaları, mobil öncelikli UX, teknik SEO ve hız optimizasyonu
 - [E-ticaret sitesi](https://narvals.com/hizmetler/e-ticaret/): Ürün keşfi, varyantlar, filtreleme, sepet, ödeme, kargo ve sipariş operasyonu
 - [Özel yazılım ve otomasyon](https://narvals.com/hizmetler/ozel-yazilim/): Yönetim panelleri, kullanıcı rolleri, onay akışları, veri entegrasyonu ve API geliştirme
+- [Google Ads yönetimi](https://narvals.com/hizmetler/google-ads/): Arama niyeti, anahtar kelime, reklam metni, açılış sayfası, dönüşüm ölçümü ve optimizasyon
 - [Dijital reklam (Meta)](https://narvals.com/hizmetler/dijital-reklam/): Meta reklam yönetimi, kreatif strateji, reklam metinleri, Pixel ve Conversions API (CAPI) ölçüm mimarisi
 - [Sosyal medya yönetimi](https://narvals.com/hizmetler/sosyal-medya-yonetimi/): İçerik stratejisi, yayın planı, topluluk yönetimi ve ölçüm
 - [QR menü](https://narvals.com/hizmetler/qr-menu/): Panelden yönetilebilir ürün, fiyat, alerjen, varyant ve çoklu dil destekli mobil QR menü yazılımı
@@ -37,6 +38,7 @@ Tam kapsamlı yapay zekâ bilgi tabanı ve RAG dokümantasyonu için: [llms-full
 - [Meta reklam ajansı seçerken hangi sorular sorulmalı?](https://narvals.com/blog/meta-reklam-ajansi-secerken-sorulacak-sorular/): Meta reklam ajansı tekliflerini hesap sahipliği, ölçüm, bütçe, kreatif süreç, raporlama, güvenlik ve çıkış planıyla karşılaştırma rehberi.
 - [Sosyal medya yönetimi neleri kapsar? Hizmet ve teklif rehberi](https://narvals.com/blog/sosyal-medya-yonetimi-neleri-kapsar/): Sosyal medya yönetiminin strateji, içerik, yayın, topluluk, raporlama, erişim ve kullanım hakları kapsamını netleştiren teklif rehberi.
 - [E-ticaret sitesi maliyeti nasıl hesaplanır? Toplam maliyet rehberi](https://narvals.com/blog/e-ticaret-sitesi-maliyeti-nasil-hesaplanir/): E-ticaret sitesi maliyetini kurulum, lisans, entegrasyon, içerik, güvenlik, operasyon ve bakım kalemleriyle hesaplama ve teklif karşılaştırma rehberi.
+- [Google Ads ajansı seçerken hangi sorular sorulmalı?](https://narvals.com/blog/google-ads-ajansi-secerken-sorulacak-sorular/): Google Ads ajansı tekliflerini hesap erişimi, arama niyeti, dönüşüm ölçümü, bütçe, açılış sayfası, raporlama ve çıkış planıyla karşılaştırın.
 
 ## Temel İlkeler ve Yaklaşım
 

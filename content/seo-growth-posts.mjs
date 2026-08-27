@@ -532,6 +532,112 @@ export const newBlogPosts = [
       { label: 'PCI Security Standards Council — E-ticaret uygulamalarını güvence altına alma', url: 'https://listings.pcisecuritystandards.org/pdfs/best_practices_securing_ecommerce.pdf' },
       { label: 'W3C — Web Content Accessibility Guidelines (WCAG) 2.2', url: 'https://www.w3.org/TR/WCAG22/' }
     ]
+  },
+  {
+    slug: 'google-ads-ajansi-secerken-sorulacak-sorular',
+    metaTitle: 'Google Ads Ajansı Seçerken Sorulacak Sorular | Narvals',
+    title: 'Google Ads ajansı seçerken hangi sorular sorulmalı?',
+    description: 'Google Ads ajansı tekliflerini hesap erişimi, arama niyeti, dönüşüm ölçümü, bütçe, açılış sayfası, raporlama ve çıkış planıyla karşılaştırın.',
+    keywords: ['Google Ads ajansı', 'Google reklam ajansı', 'Google Ads yönetimi', 'reklam ajansı seçimi'],
+    category: 'Google Ads',
+    published: '2026-08-27T16:00:00+03:00',
+    modified: '2026-08-27T16:00:00+03:00',
+    readingTime: 10,
+    answer: 'Google Ads ajansı seçerken yalnız yönetim ücretini veya vaat edilen tıklama sayısını karşılaştırmayın. Hesabın kimde kalacağını, arama terimlerinin nasıl denetleneceğini, hangi dönüşümün başarı sayılacağını, medya bütçesi ile hizmet bedelinin ayrımını, açılış sayfası sorumluluğunu, raporun hangi iş kararını üreteceğini ve sözleşme sonundaki devir planını yazılı olarak sorun.',
+    takeaways: [
+      'Google Ads hesabı ve işletme verileri müşterinin erişiminde kalmalıdır.',
+      'Anahtar kelime listesi kadar gerçek arama terimleri ve negatif kelimeler önemlidir.',
+      'Dönüşüm tanımı kampanya açılmadan önce doğrulanmalıdır.',
+      'Medya bütçesi, yönetim, içerik ve açılış sayfası ayrı kalemlerdir.',
+      'Rapor yalnız metrik değil, yapılan değişiklik ve sonraki kararı göstermelidir.'
+    ],
+    about: ['Google Ads ajansı', 'Arama reklamları', 'Dönüşüm ölçümü'],
+    related: ['meta-reklam-ajansi-secerken-sorulacak-sorular', 'web-sitesi-yaptirmadan-once-kapsam-teklif-karar-rehberi', 'web-sitesi-teknik-seo-kontrol-listesi'],
+    servicePath: '/hizmetler/google-ads/',
+    serviceLabel: 'Google Ads yönetimi hizmetini inceleyin',
+    sections: [
+      {
+        id: 'hesap-sahipligi',
+        label: 'Hesap ve erişim',
+        heading: 'Hesap sahipliği ve erişim rolleri en başta yazılı olmalı.',
+        paragraphs: [
+          'İşletmenin Google Ads hesabına doğrudan erişimi olmalı; ödeme profili, dönüşüm verileri ve geçmiş kampanyalar ajans değiştiğinde kaybolmamalıdır. Ajansın kendi yönetici hesabıyla bağlantı kurması normaldir, fakat bunun müşterinin veriye ve yönetime erişimini ortadan kaldırmaması gerekir.',
+          'Teklifte hesabı kimin oluşturacağı, yönetici ve standart erişimlerin kimde olacağı, iki adımlı doğrulama, faturalama sorumluluğu ve sözleşme sonunda erişim kaldırma adımları yer almalıdır.'
+        ],
+        checklist: [
+          'Müşteri hesabı ve ödeme profili işletmenin kontrolünde.',
+          'Ajans erişimi kişisel parola paylaşımı yerine rol veya yönetici bağlantısıyla veriliyor.',
+          'Değişiklik geçmişi, dönüşüm verisi ve kampanyalar müşteri hesabında kalıyor.',
+          'Sözleşme sonu erişim ve teslim adımları yazılı.'
+        ]
+      },
+      {
+        id: 'arama-niyeti',
+        label: 'Arama kalitesi',
+        heading: 'Anahtar kelimeden önce gerçek arama terimlerinin nasıl yönetileceğini sorun.',
+        paragraphs: [
+          'Anahtar kelime, reklamın hangi aramalarda tetiklenebileceğini tanımlar; arama terimi raporu ise kullanıcıların gerçekten ne yazdığını gösterir. Bu ikisini aynı kabul etmek ilgisiz tıklamaları görünmez kılar. Ajansın arama terimlerini hangi sıklıkla incelediğini, negatif kelime kararlarını nasıl kaydettiğini ve marka, rakip, bilgi arama ile ticari niyeti nasıl ayırdığını sorun.',
+          '“Daha çok trafik” tek başına hedef değildir. Web sitesi yaptırmak isteyen biriyle ücretsiz şablon arayan kullanıcı aynı reklam grubunda değerlendirilirse tıklama sayısı artarken talep kalitesi düşebilir.'
+        ],
+        table: {
+          headers: ['Sorulacak soru', 'İyi cevabın kanıtı', 'Risk işareti'],
+          rows: [
+            ['Arama terimleri nasıl denetleniyor?', 'Düzenli inceleme ve negatif kelime karar kaydı', 'Yalnız anahtar kelime listesi gösterilmesi'],
+            ['Kampanyalar hangi niyete göre ayrılıyor?', 'Hizmet, marka, bölge ve karar aşamasına göre yapı', 'Bütün hizmetlerin tek reklam grubunda olması'],
+            ['Arama ile sayfa nasıl eşleşiyor?', 'Reklam vaadiyle aynı başlık, kanıt ve eylem', 'Tüm reklamların ana sayfaya gitmesi']
+          ]
+        }
+      },
+      {
+        id: 'donusum-olcumu',
+        label: 'Ölçüm',
+        heading: 'Başarı sayılacak dönüşümü ve doğrulama yöntemini netleştirin.',
+        paragraphs: [
+          'Form sayfasının görüntülenmesi ile formun başarıyla gönderilmesi aynı şey değildir. Telefon bağlantısına tıklama, gerçek görüşme; sepete ekleme, tamamlanan satış anlamına gelmez. Birincil ve ikincil dönüşümleri ayırın ve her olayın nerede, nasıl tetiklendiğini test edin.',
+          'Mümkün olduğunda platform dönüşümünü CRM, sipariş veya işletme kaydıyla karşılaştırın. Ajansın yalnız Google Ads panelindeki sayıyı değil; nitelikli talep, iptal, iade veya satış sonucunu nasıl değerlendireceğini sorun.'
+        ],
+        checklist: [
+          'Birincil iş dönüşümü kampanya öncesinde tanımlandı.',
+          'Etiket ve olaylar gerçek test işlemiyle doğrulandı.',
+          'Çift sayım ve teşekkür sayfasını yeniden yükleme riski kontrol edildi.',
+          'Gizlilik ve izin gereksinimleri gerçek veri akışına göre değerlendirildi.',
+          'Platform verisini iş sonucuyla karşılaştıracak yöntem belirlendi.'
+        ]
+      },
+      {
+        id: 'butce-ve-rapor',
+        label: 'Bütçe ve rapor',
+        heading: 'Teklifte medya bütçesini hizmet kapsamından ayırın.',
+        paragraphs: [
+          'Google’a ödenen reklam harcaması; hesap yönetimi, reklam metni, görsel/video, ürün akışı, dönüşüm kurulumu ve açılış sayfası geliştirmesiyle aynı kalem değildir. Dahil olan işleri, revizyon sınırlarını, üçüncü taraf araçları ve vergi durumunu ayrı satırlarda görün.',
+          'Rapor gösterim, tıklama ve ortalama maliyeti sıralayan bir ekran görüntüsü olmamalıdır. Hangi sorguların bütçe harcadığını, hangi dönüşümlerin doğrulandığını, dönemde neyin değiştirildiğini ve sonraki testin hangi hipoteze dayandığını açıklamalıdır.'
+        ],
+        callout: 'Sonuç garantisi veya kesin getiri vaadi yerine ölçüm kalitesini, deney planını, hesap şeffaflığını ve karar disiplinini karşılaştırın.'
+      },
+      {
+        id: 'teklif-kontrolu',
+        label: 'Karar listesi',
+        heading: 'Google Ads ajansı teklifini kabul etmeden önce 10 kontrol.',
+        ordered: [
+          '<strong>Hedef:</strong> Kampanyanın üreteceği birincil iş sonucu yazıldı mı?',
+          '<strong>Hesap:</strong> Hesap, veri ve ödeme erişimi işletmede kalıyor mu?',
+          '<strong>Kapsam:</strong> Denetim, kurulum, yönetim, içerik ve sayfa işleri ayrıldı mı?',
+          '<strong>Arama:</strong> Arama terimi ve negatif kelime yönetim sıklığı açık mı?',
+          '<strong>Sayfa:</strong> Reklam sonrası açılış sayfasından kimin sorumlu olduğu belli mi?',
+          '<strong>Ölçüm:</strong> Dönüşüm olayı ve doğrulama yöntemi tanımlandı mı?',
+          '<strong>Bütçe:</strong> Medya bütçesi ile hizmet ve araç ücretleri ayrı mı?',
+          '<strong>Rapor:</strong> Metrik, değişiklik ve sonraki karar birlikte raporlanıyor mu?',
+          '<strong>İletişim:</strong> Onay, acil durum ve değişiklik yetkisi tanımlı mı?',
+          '<strong>Çıkış:</strong> Kampanya, veri ve erişimlerin devir planı yazılı mı?'
+        ]
+      }
+    ],
+    sources: [
+      { label: 'Google Ads Help — Arama terimleri raporu', url: 'https://support.google.com/google-ads/answer/2472708?hl=tr' },
+      { label: 'Google Ads Help — Arama terimlerinden negatif kelime bulma', url: 'https://support.google.com/google-ads/answer/7102466?hl=tr' },
+      { label: 'Google Ads Help — Web sitesi dönüşümlerinin ölçülmesi', url: 'https://support.google.com/google-ads/answer/7521212?hl=tr' },
+      { label: 'Google Ads Help — Yönetici hesaplarında müşteri hesabı sahipliği', url: 'https://support.google.com/google-ads/answer/7456532?hl=tr' }
+    ]
   }
 ];
 

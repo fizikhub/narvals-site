@@ -5,7 +5,7 @@
     <link>https://narvals.com/blog/</link>
     <description>Web, yazılım, reklam ve işletme sistemleri için kaynaklı karar rehberleri.</description>
     <language>tr-TR</language>
-    <lastBuildDate>Sun, 23 Aug 2026 18:44:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2026 13:00:00 GMT</lastBuildDate>
     <atom:link href="https://narvals.com/blog/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kurumsal web sitesi briefi nasıl hazırlanır?</title>
@@ -118,6 +118,14 @@
       <pubDate>Sun, 23 Aug 2026 11:30:00 GMT</pubDate>
       <category>E-ticaret</category>
       <description>E-ticaret sitesi maliyetini kurulum, lisans, entegrasyon, içerik, güvenlik, operasyon ve bakım kalemleriyle hesaplama ve teklif karşılaştırma rehberi.</description>
+    </item>
+    <item>
+      <title>Google Ads ajansı seçerken hangi sorular sorulmalı?</title>
+      <link>https://narvals.com/blog/google-ads-ajansi-secerken-sorulacak-sorular/</link>
+      <guid isPermaLink="true">https://narvals.com/blog/google-ads-ajansi-secerken-sorulacak-sorular/</guid>
+      <pubDate>Thu, 27 Aug 2026 13:00:00 GMT</pubDate>
+      <category>Google Ads</category>
+      <description>Google Ads ajansı tekliflerini hesap erişimi, arama niyeti, dönüşüm ölçümü, bütçe, açılış sayfası, raporlama ve çıkış planıyla karşılaştırın.</description>
     </item>
   </channel>
 </rss>

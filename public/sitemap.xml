@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://narvals.com/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://narvals.com/hizmetler/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://narvals.com/hizmetler/web-tasarim/</loc>
@@ -22,7 +22,11 @@
   </url>
   <url>
     <loc>https://narvals.com/hizmetler/dijital-reklam/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://narvals.com/hizmetler/google-ads/</loc>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://narvals.com/hizmetler/sosyal-medya-yonetimi/</loc>
@@ -50,7 +54,7 @@
   </url>
   <url>
     <loc>https://narvals.com/blog/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-27</lastmod>
   </url>
   <url>
     <loc>https://narvals.com/editoryal-ilkeler/</loc>
@@ -111,5 +115,9 @@
   <url>
     <loc>https://narvals.com/blog/e-ticaret-sitesi-maliyeti-nasil-hesaplanir/</loc>
     <lastmod>2026-08-23</lastmod>
+  </url>
+  <url>
+    <loc>https://narvals.com/blog/google-ads-ajansi-secerken-sorulacak-sorular/</loc>
+    <lastmod>2026-08-27</lastmod>
   </url>
 </urlset>

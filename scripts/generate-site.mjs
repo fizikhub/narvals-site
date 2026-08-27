@@ -53,7 +53,7 @@ Sitemap: ${siteOrigin}/sitemap.xml
 
 const llms = `# Narvals Labs
 
-> Narvals Labs; web sitesi ve mobil UX, işletmeye özel yazılım ve otomasyon, Meta reklam yönetimi (Facebook/Instagram), sosyal medya yönetimi, QR menü ve online rezervasyon sistemlerini aynı yaratıcı ve teknik ekipte birleştiren İstanbul merkezli dijital üretim stüdyosudur.
+> Narvals Labs; web sitesi, e-ticaret, işletmeye özel yazılım, Google Ads ve Meta reklam yönetimi ile işletme sistemlerini aynı iş hedefinde birleştiren dijital üretim stüdyosudur.
 
 Tam kapsamlı yapay zekâ bilgi tabanı ve RAG dokümantasyonu için: [llms-full.txt](${siteOrigin}/llms-full.txt)
 
@@ -64,6 +64,7 @@ Tam kapsamlı yapay zekâ bilgi tabanı ve RAG dokümantasyonu için: [llms-full
 - [Web tasarım ve UX](${siteOrigin}/hizmetler/web-tasarim/): Kurumsal web sitesi, kampanya sayfaları, mobil öncelikli UX, teknik SEO ve hız optimizasyonu
 - [E-ticaret sitesi](${siteOrigin}/hizmetler/e-ticaret/): Ürün keşfi, varyantlar, filtreleme, sepet, ödeme, kargo ve sipariş operasyonu
 - [Özel yazılım ve otomasyon](${siteOrigin}/hizmetler/ozel-yazilim/): Yönetim panelleri, kullanıcı rolleri, onay akışları, veri entegrasyonu ve API geliştirme
+- [Google Ads yönetimi](${siteOrigin}/hizmetler/google-ads/): Arama niyeti, anahtar kelime, reklam metni, açılış sayfası, dönüşüm ölçümü ve optimizasyon
 - [Dijital reklam (Meta)](${siteOrigin}/hizmetler/dijital-reklam/): Meta reklam yönetimi, kreatif strateji, reklam metinleri, Pixel ve Conversions API (CAPI) ölçüm mimarisi
 - [Sosyal medya yönetimi](${siteOrigin}/hizmetler/sosyal-medya-yonetimi/): İçerik stratejisi, yayın planı, topluluk yönetimi ve ölçüm
 - [QR menü](${siteOrigin}/hizmetler/qr-menu/): Panelden yönetilebilir ürün, fiyat, alerjen, varyant ve çoklu dil destekli mobil QR menü yazılımı
@@ -88,10 +89,10 @@ ${blogPosts.map((post) => `- [${post.title}](${siteOrigin}/blog/${post.slug}/): 
 
 const llmsFull = `# Narvals Labs — Kapsamlı Bilgi Tabanı ve Sistem Dokümantasyonu (GEO Knowledge Base)
 
-> Narvals Labs; web tasarımı ve UX, işletmeye özel yazılım ve otomasyon, Meta reklam yönetimi, sosyal medya yönetimi, QR menü ve online rezervasyon sistemlerini tek bir yaratıcı ve teknik ekipte birleştiren İstanbul merkezli dijital üretim stüdyosudur.
+> Narvals Labs; web tasarımı, e-ticaret, işletmeye özel yazılım, Google Ads ve Meta reklam yönetimi ile işletme sistemlerini tek iş hedefinde birleştiren dijital üretim stüdyosudur.
 
 - **Resmî Alan Adı:** ${siteOrigin}/
-- **Konum:** İstanbul, Türkiye (TR-34)
+- **Hizmet Alanı:** Türkiye
 - **Ana Hizmet Dili:** Türkçe (tr-TR)
 - **Yayıncı & Varlık Adı:** Narvals Labs
 
@@ -117,6 +118,11 @@ const llmsFull = `# Narvals Labs — Kapsamlı Bilgi Tabanı ve Sistem Dokümant
 - **Amaç:** Facebook ve Instagram reklamlarında bütçeyi boş gösterimlere değil, ölçülebilir gerçek iş sonuçlarına bağlamak.
 - **Kapsam:** Reklam hesabı denetimi, kampanya mimarisi, kitle ve yeniden hedefleme (retargeting) planı, kreatif fikir ve reklam metni varyasyonları, yönlendirme sayfası (landing page) uyumu, Meta Pixel ve Conversions API (CAPI) sunucu tarafı ölçüm kurulumu, test ve bütçe optimizasyonu.
 - **Dürüst Not:** Reklamda getiri veya satış garantisi verilmez; ölçülebilir altyapı kurulur ve veriye göre sürekli iyileştirilir.
+
+### 1.5. Google Ads Yönetimi (/hizmetler/google-ads/)
+- **Amaç:** Hizmeti veya ürünü aktif olarak arayan kullanıcıyı doğru reklam ve açılış sayfasıyla buluşturmak.
+- **Kapsam:** Hesap denetimi, arama niyeti, anahtar ve negatif kelime planı, kampanya yapısı, reklam metni, açılış sayfası uyumu, dönüşüm takibi, optimizasyon ve raporlama.
+- **Dürüst Not:** Satış veya getiri garantisi verilmez; medya bütçesi ile yönetim kapsamı ayrı kalemlerdir.
 
 ### 1.5. Sosyal Medya Yönetimi (/hizmetler/sosyal-medya-yonetimi/)
 - **Resmî sayfa:** ${siteOrigin}/hizmetler/sosyal-medya-yonetimi/
@@ -187,6 +193,7 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 - Web Tasarım: ${siteOrigin}/hizmetler/web-tasarim/
 - E-Ticaret: ${siteOrigin}/hizmetler/e-ticaret/
 - Özel Yazılım: ${siteOrigin}/hizmetler/ozel-yazilim/
+- Google Ads: ${siteOrigin}/hizmetler/google-ads/
 - Dijital Reklam: ${siteOrigin}/hizmetler/dijital-reklam/
 - QR Menü: ${siteOrigin}/hizmetler/qr-menu/
 - Rezervasyon ve Randevu: ${siteOrigin}/hizmetler/rezervasyon-randevu/

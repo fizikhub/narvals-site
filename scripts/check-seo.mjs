@@ -112,6 +112,9 @@ for (const [path, html] of htmlByPath) {
   if (!/<a\b[^>]*class="[^"]*skip-link/i.test(html)) errors.push(`${path}: skip link missing`);
   if (new Set(ids).size !== ids.length) errors.push(`${path}: duplicate HTML id found`);
   if (/https:\/\/wa\.me\/\?/.test(html)) errors.push(`${path}: numberless WhatsApp URL found`);
+  if (/meta name="(?:geo\.(?:region|placename|position)|ICBM)"/i.test(html)) {
+    errors.push(`${path}: legacy geolocation meta found; GEO is content/entity optimization, not coordinate stuffing`);
+  }
 
   const jsonLdBlocks = [...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)];
   if (!jsonLdBlocks.length) errors.push(`${path}: JSON-LD missing`);
@@ -134,6 +137,9 @@ for (const [path, html] of htmlByPath) {
   }
   for (const type of ['Organization', 'WebSite']) {
     if (!structuredTypes.has(type)) errors.push(`${path}: structured data type missing (${type})`);
+  }
+  if (structuredNodes.some((node) => node.address?.addressLocality === 'İstanbul')) {
+    errors.push(`${path}: unverified İstanbul address found in structured data`);
   }
   if (!structuredTypes.has('WebPage') && !structuredTypes.has('CollectionPage')) errors.push(`${path}: WebPage/CollectionPage structured data missing`);
   if (kind === 'service' && !structuredTypes.has('Service')) errors.push(`${path}: Service structured data missing`);
