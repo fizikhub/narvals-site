@@ -5,7 +5,7 @@
     <link>https://narvals.com/blog/</link>
     <description>Web, yazılım, reklam ve işletme sistemleri için kaynaklı karar rehberleri.</description>
     <language>tr-TR</language>
-    <lastBuildDate>Thu, 27 Aug 2026 13:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2026 17:30:00 GMT</lastBuildDate>
     <atom:link href="https://narvals.com/blog/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kurumsal web sitesi briefi nasıl hazırlanır?</title>
@@ -126,6 +126,14 @@
       <pubDate>Thu, 27 Aug 2026 13:00:00 GMT</pubDate>
       <category>Google Ads</category>
       <description>Google Ads ajansı tekliflerini hesap erişimi, arama niyeti, dönüşüm ölçümü, bütçe, açılış sayfası, raporlama ve çıkış planıyla karşılaştırın.</description>
+    </item>
+    <item>
+      <title>Google Ads mi Meta reklamları mı? Hangi kanal ne zaman seçilmeli?</title>
+      <link>https://narvals.com/blog/google-ads-mi-meta-reklamlari-mi/</link>
+      <guid isPermaLink="true">https://narvals.com/blog/google-ads-mi-meta-reklamlari-mi/</guid>
+      <pubDate>Thu, 27 Aug 2026 17:30:00 GMT</pubDate>
+      <category>Dijital reklam</category>
+      <description>Google Ads ve Meta reklamlarını kullanıcı niyeti, teklif, kreatif, ölçüm, bütçe ve müşteri yolculuğuna göre karşılaştıran karar rehberi.</description>
     </item>
   </channel>
 </rss>

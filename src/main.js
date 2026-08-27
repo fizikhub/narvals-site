@@ -479,14 +479,9 @@ function initNarwhalHero() {
       ease: 'none',
       scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: 0.9 }
     }));
-    tweens.push(gsap.to(mascot, {
-      yPercent: -1.25,
-      duration: 1.35,
-      delay: 0.9,
-      repeat: 1,
-      yoyo: true,
-      ease: 'sine.inOut'
-    }));
+    // Do not animate the LCP image during initial load. A transform that runs
+    // through the first few seconds keeps moving the largest painted element
+    // and delays the measured LCP. Pointer and scroll motion remain available.
 
     return () => {
       tweens.forEach((tween) => tween.kill());

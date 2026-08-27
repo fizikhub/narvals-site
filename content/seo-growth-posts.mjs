@@ -146,7 +146,7 @@ export const newBlogPosts = [
       'Sözleşme başlamadan devir, arşiv ve erişim kaldırma planı yazılmalıdır.'
     ],
     about: ['Meta reklam ajansı', 'Ajans teklif değerlendirme', 'Reklam hesabı sahipliği'],
-    related: ['meta-reklam-butcesi-nasil-belirlenir', 'meta-pixel-ve-conversions-api-farki', 'sosyal-medya-yonetimi-neleri-kapsar'],
+    related: ['google-ads-mi-meta-reklamlari-mi', 'meta-reklam-butcesi-nasil-belirlenir', 'meta-pixel-ve-conversions-api-farki'],
     servicePath: '/hizmetler/dijital-reklam/',
     serviceLabel: 'Meta reklam yönetimi yaklaşımımızı inceleyin',
     sections: [
@@ -552,7 +552,7 @@ export const newBlogPosts = [
       'Rapor yalnız metrik değil, yapılan değişiklik ve sonraki kararı göstermelidir.'
     ],
     about: ['Google Ads ajansı', 'Arama reklamları', 'Dönüşüm ölçümü'],
-    related: ['meta-reklam-ajansi-secerken-sorulacak-sorular', 'web-sitesi-yaptirmadan-once-kapsam-teklif-karar-rehberi', 'web-sitesi-teknik-seo-kontrol-listesi'],
+    related: ['google-ads-mi-meta-reklamlari-mi', 'meta-reklam-ajansi-secerken-sorulacak-sorular', 'web-sitesi-yaptirmadan-once-kapsam-teklif-karar-rehberi'],
     servicePath: '/hizmetler/google-ads/',
     serviceLabel: 'Google Ads yönetimi hizmetini inceleyin',
     sections: [
@@ -637,6 +637,112 @@ export const newBlogPosts = [
       { label: 'Google Ads Help — Arama terimlerinden negatif kelime bulma', url: 'https://support.google.com/google-ads/answer/7102466?hl=tr' },
       { label: 'Google Ads Help — Web sitesi dönüşümlerinin ölçülmesi', url: 'https://support.google.com/google-ads/answer/7521212?hl=tr' },
       { label: 'Google Ads Help — Yönetici hesaplarında müşteri hesabı sahipliği', url: 'https://support.google.com/google-ads/answer/7456532?hl=tr' }
+    ]
+  },
+  {
+    slug: 'google-ads-mi-meta-reklamlari-mi',
+    metaTitle: 'Google Ads mi Meta Reklamları mı? Karşılaştırma | Narvals',
+    title: 'Google Ads mi Meta reklamları mı? Hangi kanal ne zaman seçilmeli?',
+    description: 'Google Ads ve Meta reklamlarını kullanıcı niyeti, teklif, kreatif, ölçüm, bütçe ve müşteri yolculuğuna göre karşılaştıran karar rehberi.',
+    keywords: ['Google Ads mi Meta reklam mı', 'Google reklam Meta reklam farkı', 'dijital reklam seçimi', 'reklam kanalı karşılaştırma'],
+    category: 'Dijital reklam',
+    published: '2026-08-27T20:30:00+03:00',
+    modified: '2026-08-27T20:30:00+03:00',
+    readingTime: 9,
+    answer: 'Google Ads, kullanıcı ürün veya hizmeti aktif biçimde aradığında mevcut talebi yakalamak için; Meta reklamları ise görsel içerik ve kitle sinyalleriyle talep oluşturmak, ilgiyi büyütmek veya yeniden hedeflemek için daha uygun olabilir. Doğru kanal sektör adına göre değil, müşterinin karar anı, teklifin anlatım biçimi, dönüşüm ölçümü ve bütçenin öğrenme kapasitesine göre seçilir.',
+    takeaways: [
+      'Google Search mevcut arama talebine, Meta ise keşif ve görsel anlatıma daha yakındır.',
+      'Kanal seçimi tıklama maliyetiyle değil, nitelikli iş sonucuyla yapılmalıdır.',
+      'Arama hacmi olmayan teklif için yalnız Google Ads yeterli olmayabilir.',
+      'Zayıf açılış sayfası veya ölçüm iki kanalda da bütçeyi boşa harcatabilir.',
+      'Kanallar birlikte kullanılıyorsa her birine ayrı görev ve dönüşüm tanımı verilmelidir.'
+    ],
+    about: ['Google Ads', 'Meta reklamları', 'Dijital reklam kanalı seçimi'],
+    related: ['google-ads-ajansi-secerken-sorulacak-sorular', 'meta-reklam-butcesi-nasil-belirlenir', 'meta-pixel-ve-conversions-api-farki'],
+    servicePath: '/hizmetler/google-ads/',
+    serviceLabel: 'Google Ads yönetimi hizmetini inceleyin',
+    sections: [
+      {
+        id: 'temel-fark',
+        label: 'Kısa karşılaştırma',
+        heading: 'Temel fark, kullanıcının reklamla karşılaştığı andaki niyettir.',
+        paragraphs: [
+          'Google Arama Ağı reklamı, kullanıcının yazdığı sorguyla ilişkilidir. Bu nedenle “e-ticaret sitesi yaptırmak”, “Google Ads ajansı” veya belirli bir ürün modeli gibi açık talep bulunan konularda güçlü bir başlangıç olabilir. Ancak sorgunun ticari niyeti, reklamın vaadi ve açılış sayfası aynı ihtiyeti sürdürmelidir.',
+          'Meta reklamı çoğunlukla kullanıcı bir içerik akışındayken karşısına çıkar. Ürünün görsel olarak gösterilmesi, problemin henüz arama davranışına dönüşmeden anlatılması, farklı mesaj ve kreatiflerin test edilmesi veya site ziyaretçisinin yeniden hedeflenmesi için kullanılabilir.'
+        ],
+        table: {
+          headers: ['Karar alanı', 'Google Ads', 'Meta reklamları'],
+          rows: [
+            ['Başlangıç sinyali', 'Arama sorgusu ve anahtar kelime ilişkisi', 'Kitle, içerik etkileşimi ve platform sinyalleri'],
+            ['Kullanıcı durumu', 'İhtiyacı aktif biçimde araştırıyor olabilir', 'İhtiyeti yeni fark ediyor veya değerlendiriyor olabilir'],
+            ['Ana üretim yükü', 'Arama yapısı, metin ve açılış sayfası', 'Kreatif fikir, görsel/video ve mesaj varyasyonu'],
+            ['Temel kalite kontrolü', 'Arama terimi ve dönüşüm kalitesi', 'Kreatif, frekans, kitle ve dönüşüm kalitesi'],
+            ['Yaygın risk', 'İlgisiz sorgulara bütçe harcamak', 'Dikkat çekip nitelikli talep üretememek']
+          ]
+        }
+      },
+      {
+        id: 'google-ads-ne-zaman',
+        label: 'Google Ads',
+        heading: 'Aktif arama talebi varsa Google Ads önce test edilebilir.',
+        paragraphs: [
+          'Hedef kullanıcı problemi veya çözümü Google’da açık ifadelerle arıyorsa Search kampanyası ihtiyacın oluştuğu ana yaklaşabilir. Buradaki görev yalnız görünmek değildir; bilgi arayan, ücretsiz çözüm arayan ve satın alma niyeti taşıyan sorguları ayırmaktır.',
+          'Arama hacmi sınırlıysa kampanya ölçeği doğal olarak sınırlanır. Çok geniş eşleşme ve kontrolsüz otomasyonla yapay hacim üretmek yerine gerçek arama terimlerini, negatif kelimeleri ve nitelikli dönüşümleri izlemek gerekir.'
+        ],
+        checklist: [
+          'Müşteri hizmeti veya ürünü açık ifadelerle arıyor.',
+          'Arama niyetlerine karşılık veren ayrı açılış sayfaları var.',
+          'Form, arama, satış veya nitelikli talep doğrulanabiliyor.',
+          'İlgisiz sorguları ayıracak düzenli arama terimi kontrolü yapılabiliyor.'
+        ]
+      },
+      {
+        id: 'meta-ne-zaman',
+        label: 'Meta reklamları',
+        heading: 'Teklif gösterilerek anlaşılabiliyorsa Meta reklamları öne çıkabilir.',
+        paragraphs: [
+          'Yeni bir ürün kategorisi, görsel dönüşümü belirgin bir hizmet veya hedef kitlenin henüz adını koymadığı bir problem yalnız arama talebine yaslanamaz. Görsel, kısa video ve net mesaj varyasyonları teklifin neden önemli olduğunu gösterebilir.',
+          'Meta kampanyasında beğeni, izlenme veya ucuz tıklama doğrudan satış kanıtı değildir. Kreatif sinyalini site davranışı, form, mesaj ve mümkün olduğunda nitelikli talep ya da satışla bağlamak gerekir.'
+        ],
+        checklist: [
+          'Ürün veya problem görsel içerikle hızlı biçimde anlatılabiliyor.',
+          'Farklı mesaj ve kreatif varyasyonları düzenli üretilebiliyor.',
+          'Site veya form, reklam vaadini kesintisiz sürdürüyor.',
+          'Platform metriği gerçek iş sonucuyla karşılaştırılabiliyor.'
+        ]
+      },
+      {
+        id: 'birlikte-kullanim',
+        label: 'Birlikte kullanım',
+        heading: 'İki kanal birlikteyse aynı işi yapmamalı.',
+        paragraphs: [
+          'Meta reklamı yeni kitleye problemi ve teklifi gösterebilir; Google Ads daha sonra marka veya hizmeti arayan talebi yakalayabilir. Tersi biçimde Google’dan gelen ziyaretçi karar vermediyse, uygun izin ve teknik koşullarla Meta üzerinde yeniden hedefleme planlanabilir.',
+          'Bu yapı otomatik olarak daha iyi değildir. Kanallar aynı dönüşüme farklı atıf pencereleriyle kredi verebilir. Toplam sonucu CRM, sipariş veya nitelikli talep kaydıyla kontrol edin; platform raporlarını basitçe toplamayın.'
+        ],
+        callout: 'Her kanala tek cümlelik görev verin: “Google aktif talebi yakalar”; “Meta yeni talep oluşturur ve ilgiyi büyütür” gibi. Görev net değilse bütçe dağılımı da açıklanamaz.'
+      },
+      {
+        id: 'karar-matrisi',
+        label: 'Karar matrisi',
+        heading: 'Kanalı altı soruyla seçin.',
+        ordered: [
+          '<strong>Talep:</strong> İnsanlar çözümü bugün hangi kelimelerle arıyor?',
+          '<strong>Anlatım:</strong> Teklif metinle mi, görsel/video ile mi daha hızlı anlaşılır?',
+          '<strong>Sayfa:</strong> Her reklam vaadini karşılayan güvenilir bir açılış sayfası var mı?',
+          '<strong>Ölçüm:</strong> Hangi olay gerçek dönüşüm, hangisi yalnız ara sinyal?',
+          '<strong>Üretim:</strong> Düzenli reklam metni veya kreatif varyasyonu üretme kapasitesi var mı?',
+          '<strong>Bütçe:</strong> Öğrenme ve karşılaştırma için yeterli süre ve risk sınırı belirlendi mi?'
+        ],
+        callout: 'Cevaplar belirsizse bütçeyi iki kanala bölmeden önce küçük, ölçülebilir bir kanal testiyle varsayımı doğrulayın.'
+      }
+    ],
+    sources: [
+      { label: 'Google Ads Help — Doğru kampanya türünü seçme', url: 'https://support.google.com/google-ads/answer/2567043?hl=tr' },
+      { label: 'Google Ads Help — Google Arama Ağı hakkında', url: 'https://support.google.com/google-ads/answer/1722047?hl=tr' },
+      { label: 'Google Ads Help — Arama terimleri raporu', url: 'https://support.google.com/google-ads/answer/2472708?hl=tr' },
+      { label: 'Google Ads Help — Dönüşüm değerleri hakkında', url: 'https://support.google.com/google-ads/answer/13064207?hl=tr' },
+      { label: 'Meta Business Help — Meta reklam açık artırmasına giriş', url: 'https://www.facebook.com/business/help/430291176997542' },
+      { label: 'Meta Business Help — Meta Pixel hakkında', url: 'https://www.facebook.com/business/help/742478679120153' }
     ]
   }
 ];

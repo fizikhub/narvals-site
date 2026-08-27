@@ -128,3 +128,4 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 - Rehber: https://narvals.com/blog/sosyal-medya-yonetimi-neleri-kapsar/
 - Rehber: https://narvals.com/blog/e-ticaret-sitesi-maliyeti-nasil-hesaplanir/
 - Rehber: https://narvals.com/blog/google-ads-ajansi-secerken-sorulacak-sorular/
+- Rehber: https://narvals.com/blog/google-ads-mi-meta-reklamlari-mi/
