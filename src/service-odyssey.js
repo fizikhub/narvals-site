@@ -10,7 +10,7 @@ export function initServiceOdyssey({ gsap, ScrollTrigger }) {
     compact: '(max-width: 820px)'
   }, (context) => {
     const { motionOK, wide } = context.conditions;
-    if (!motionOK) return undefined;
+    if (!motionOK || !wide) return undefined;
 
     const scoped = gsap.context(() => {
       const thesis = root.querySelector('.odyssey-thesis');

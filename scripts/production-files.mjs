@@ -6,7 +6,6 @@ export const productionFiles = [
   'b04a90decae26feec44042e2c2e4dd84.txt',
   'blog/feed.xml',
   'llms.txt',
-  'llms-full.txt',
   'robots.txt',
   'site.webmanifest',
   'sitemap.xml',

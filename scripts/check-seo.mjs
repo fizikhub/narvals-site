@@ -214,11 +214,6 @@ for (const [path] of pages) {
   if (!llmsText.includes(`${siteOrigin}${path}`)) errors.push(`llms.txt missing canonical URL: ${siteOrigin}${path}`);
 }
 
-const llmsFullText = await readFile(join(discoveryRoot, 'llms-full.txt'), 'utf8').catch(() => '');
-for (const [path] of pages) {
-  if (!llmsFullText.includes(`${siteOrigin}${path}`)) errors.push(`llms-full.txt missing canonical URL: ${siteOrigin}${path}`);
-}
-
 const feedText = await readFile(join(discoveryRoot, 'blog/feed.xml'), 'utf8').catch(() => '');
 for (const [path, , kind] of pages) {
   if (kind === 'article' && !feedText.includes(`<link>${siteOrigin}${path}</link>`)) errors.push(`RSS feed missing article URL: ${siteOrigin}${path}`);

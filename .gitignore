@@ -12,28 +12,9 @@ design-sources/
 tmp/
 *.zip
 
-# The build copies this small allowlist from public/. Keep the local source
-# artwork out of the deployment repository.
-public/*
-!public/_headers
-!public/_redirects
-!public/_redirects.template
-!public/b04a90decae26feec44042e2c2e4dd84.txt
-!public/blog/
-public/blog/*
-!public/blog/feed.xml
-!public/llms.txt
-!public/llms-full.txt
-!public/robots.txt
-!public/site.webmanifest
-!public/sitemap.xml
-!public/og/
-public/og/*
-!public/og/narvals-labs-og.jpg
-!public/assets/
-public/assets/*
+# public/ also contains large design masters. Track only deployed assets.
+public/assets/**
 !public/assets/campaign/
-public/assets/campaign/*
 !public/assets/campaign/signal-knot-v1.avif
 !public/assets/hero-continuation/
 public/assets/hero-continuation/**

@@ -1,7 +1,7 @@
 import { blogPosts } from './blog-posts.mjs';
 
 export const staticPages = [
-  { key: 'home', path: '/', file: 'index.html', lastModified: '2026-08-23', kind: 'home' },
+  { key: 'home', path: '/', file: 'index.html', lastModified: '2026-08-27', kind: 'home' },
   { key: 'services', path: '/hizmetler/', file: 'hizmetler/index.html', lastModified: '2026-08-23', kind: 'collection' },
   { key: 'web-design', path: '/hizmetler/web-tasarim/', file: 'hizmetler/web-tasarim/index.html', lastModified: '2026-08-23', kind: 'service' },
   { key: 'ecommerce', path: '/hizmetler/e-ticaret/', file: 'hizmetler/e-ticaret/index.html', lastModified: '2026-08-23', kind: 'service' },
