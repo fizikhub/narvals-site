@@ -1,6 +1,7 @@
 // public/ contains design masters as well as deployable files. Keep one shared
 // allowlist so copying and validation cannot drift apart.
 export const productionFiles = [
+  'favicon.ico',
   '_headers',
   '_redirects',
   '.well-known/security.txt',
@@ -22,6 +23,10 @@ export const productionFiles = [
   'assets/hero-continuation/services-lockup-v1-700.avif',
   'assets/hero-continuation/services-lockup-v1.png',
   'assets/logo-v6/narvals-avatar-v6-1080.png',
+  'assets/logo-v6/narvals-favicon-48.png',
+  'assets/logo-v6/narvals-favicon-96.png',
+  'assets/logo-v6/narvals-favicon-192.png',
+  'assets/logo-v6/narvals-favicon-512.png',
   'assets/logo-v6/narvals-favicon-v6-256.png',
   'assets/logo-v6/narvals-mascot-v6-transparent-96.png',
   'assets/services-v3/ads-tool-v2-480.webp',

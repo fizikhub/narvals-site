@@ -21,10 +21,12 @@ const loadBelowFoldModules = () => {
   if (!belowFoldPromise) {
     belowFoldPromise = Promise.all([
       import('./home-below-fold.css'),
-      import('./service-odyssey.js')
-    ]).then(([, { initServiceOdyssey }]) => {
+      import('./service-odyssey.js'),
+      import('./calculator.js')
+    ]).then(([, { initServiceOdyssey }, { initCalculator }]) => {
       initServiceOdyssey({ gsap, ScrollTrigger });
       initCurrentLabMotion();
+      initCalculator();
       ScrollTrigger.refresh();
     });
   }

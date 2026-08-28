@@ -81,3 +81,26 @@ if (infoNav && infoNavLinks) {
   compactNav.addEventListener('change', syncMenuMode);
   syncMenuMode();
 }
+
+const blogGrid = document.querySelector('.blog-grid');
+if (blogGrid) {
+  const urlParams = new URLSearchParams(window.location.search);
+  const initialQuery = (urlParams.get('q') || '').trim().toLowerCase();
+  if (initialQuery) {
+    const cards = blogGrid.querySelectorAll('.blog-card');
+    let matchedCount = 0;
+    cards.forEach((card) => {
+      const text = card.textContent.toLowerCase();
+      const matches = text.includes(initialQuery);
+      card.style.display = matches ? '' : 'none';
+      if (matches) matchedCount++;
+    });
+    const header = document.querySelector('.blog-hub__header');
+    if (header && matchedCount === 0) {
+      const noResult = document.createElement('p');
+      noResult.className = 'blog-no-results';
+      noResult.textContent = `"${urlParams.get('q')}" aramasına uygun rehber bulunamadı.`;
+      header.appendChild(noResult);
+    }
+  }
+}

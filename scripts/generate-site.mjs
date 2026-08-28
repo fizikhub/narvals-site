@@ -115,6 +115,9 @@ User-agent: Slurp
 Allow: /
 
 # Yapay Zeka ve GEO / LLM Ajanları (AI & LLM Crawlers)
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: GPTBot
 Allow: /
 

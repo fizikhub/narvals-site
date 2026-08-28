@@ -135,7 +135,11 @@ const renderHead = ({ siteOrigin, path, title, description, keywords, schema, ty
     <link rel="alternate" hreflang="tr-TR" href="${canonical}" />
     <link rel="alternate" hreflang="x-default" href="${canonical}" />
     <link rel="alternate" type="application/rss+xml" title="Narvals Labs Rehberleri" href="${siteOrigin}/blog/feed.xml" />
-    <link rel="icon" href="/assets/logo-v6/narvals-favicon-v6-256.png" type="image/png" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/assets/logo-v6/narvals-favicon-48.png" type="image/png" sizes="48x48" />
+    <link rel="icon" href="/assets/logo-v6/narvals-favicon-96.png" type="image/png" sizes="96x96" />
+    <link rel="icon" href="/assets/logo-v6/narvals-favicon-192.png" type="image/png" sizes="192x192" />
+    <link rel="icon" href="/assets/logo-v6/narvals-favicon-v6-256.png" type="image/png" sizes="256x256" />
     <link rel="apple-touch-icon" href="/assets/logo-v6/narvals-avatar-v6-1080.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <meta property="og:locale" content="tr_TR" />

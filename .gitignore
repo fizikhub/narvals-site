@@ -15,6 +15,7 @@ tmp/
 # The build copies this small allowlist from public/. Keep the local source
 # artwork out of the deployment repository.
 public/*
+!public/favicon.ico
 !public/_headers
 !public/_redirects
 !public/_redirects.template
@@ -50,6 +51,10 @@ public/assets/hero-continuation/**
 !public/assets/logo-v6/
 public/assets/logo-v6/**
 !public/assets/logo-v6/narvals-avatar-v6-1080.png
+!public/assets/logo-v6/narvals-favicon-48.png
+!public/assets/logo-v6/narvals-favicon-96.png
+!public/assets/logo-v6/narvals-favicon-192.png
+!public/assets/logo-v6/narvals-favicon-512.png
 !public/assets/logo-v6/narvals-favicon-v6-256.png
 !public/assets/logo-v6/narvals-mascot-v6-transparent-96.png
 !public/assets/services-v3/

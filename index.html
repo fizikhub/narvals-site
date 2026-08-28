@@ -37,7 +37,11 @@
       imagesizes="(max-width: 720px) 92vw, 52vw"
       fetchpriority="high"
     />
-    <link rel="icon" href="/assets/logo-v6/narvals-favicon-v6-256.png" type="image/png" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/assets/logo-v6/narvals-favicon-48.png" type="image/png" sizes="48x48" />
+    <link rel="icon" href="/assets/logo-v6/narvals-favicon-96.png" type="image/png" sizes="96x96" />
+    <link rel="icon" href="/assets/logo-v6/narvals-favicon-192.png" type="image/png" sizes="192x192" />
+    <link rel="icon" href="/assets/logo-v6/narvals-favicon-v6-256.png" type="image/png" sizes="256x256" />
     <link rel="apple-touch-icon" href="/assets/logo-v6/narvals-avatar-v6-1080.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <meta property="og:locale" content="tr_TR" />
@@ -199,6 +203,48 @@
             ]
           },
           {
+            "@type": "SiteNavigationElement",
+            "@id": "https://narvals.com/#nav-web-tasarim",
+            "name": "Web Tasarım ve UX",
+            "description": "Kurumsal web sitesi, mobil öncelikli UX ve hız optimizasyonu.",
+            "url": "https://narvals.com/hizmetler/web-tasarim/"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "@id": "https://narvals.com/#nav-ozel-yazilim",
+            "name": "İşletmeye Özel Yazılım",
+            "description": "Özel yönetim panelleri, otomasyon ve API entegrasyonu.",
+            "url": "https://narvals.com/hizmetler/ozel-yazilim/"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "@id": "https://narvals.com/#nav-dijital-reklam",
+            "name": "Meta ve Google Reklam",
+            "description": "Meta ve Google Ads reklam yönetimi ve dönüşüm ölçümü.",
+            "url": "https://narvals.com/hizmetler/dijital-reklam/"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "@id": "https://narvals.com/#nav-e-ticaret",
+            "name": "E-Ticaret Sitesi",
+            "description": "E-ticaret tasarımı, filtreleme, sepet ve ödeme operasyonu.",
+            "url": "https://narvals.com/hizmetler/e-ticaret/"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "@id": "https://narvals.com/#nav-blog",
+            "name": "Karar Rehberleri",
+            "description": "Web, yazılım, reklam ve GEO için kaynaklı karar rehberleri.",
+            "url": "https://narvals.com/blog/"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "@id": "https://narvals.com/#nav-iletisim",
+            "name": "İletişim ve Proje Talebi",
+            "description": "Narvals Labs ile ilk görüşmeyi başlatın ve proje kapsamını netleştirin.",
+            "url": "https://narvals.com/iletisim/"
+          },
+          {
             "@type": "FAQPage",
             "@id": "https://narvals.com/#faq",
             "mainEntity": [
@@ -279,6 +325,7 @@
       </a>
       <nav class="desktop-nav" aria-label="Ana menü">
         <a href="/hizmetler/"><span>Hizmetler</span></a>
+        <a href="#proje-hesaplayici"><span>Hesaplayıcı</span></a>
         <a href="/blog/"><span>Rehberler</span></a>
         <a href="/hakkimizda/"><span>Hakkımızda</span></a>
       </nav>
@@ -316,6 +363,13 @@
           <span class="menu-dive-link__copy">
             <strong class="menu-dive-link__label" data-label="Hizmetler">Hizmetler</strong>
             <small>Web · yazılım · reklam</small>
+          </span>
+          <i aria-hidden="true">↗</i>
+        </a>
+        <a class="menu-dive-link" href="#proje-hesaplayici" data-current="HESAPLAYICI">
+          <span class="menu-dive-link__copy">
+            <strong class="menu-dive-link__label" data-label="Hesaplayıcı">Hesaplayıcı</strong>
+            <small>Kapsam · süre · WhatsApp brief</small>
           </span>
           <i aria-hidden="true">↗</i>
         </a>
@@ -830,6 +884,403 @@
           <p class="odyssey-cta__closing">Reklamdan rezervasyona, ekrandan operasyona: dijital tarafı tek parça hâline getiriyoruz.</p>
         </section>
 
+        <section class="calculator-section" id="proje-hesaplayici" aria-labelledby="calc-main-title">
+          <header class="calculator-section__header">
+            <p class="calculator-section__kicker">İnteraktif Proje Asistanı</p>
+            <h2 id="calc-main-title">İhtiyacınızı seçin, <strong>tahmini kapsamı ve süreyi anında görün.</strong></h2>
+            <p>
+              Projeniz için gerekli bileşenleri belirleyin; stüdyo yaklaşımımıza göre öngörülen takvimi ve
+              WhatsApp üzerinden tek tıkla iletebileceğiniz hazır proje briefinizi oluşturalım.
+            </p>
+          </header>
+
+          <nav class="calc-progress" aria-label="Hesaplayıcı adımları">
+            <div class="calc-progress__step is-active" data-progress-step="1">
+              <div class="calc-progress__bar"></div>
+              <span class="calc-progress__label">01. Hizmet</span>
+            </div>
+            <div class="calc-progress__step" data-progress-step="2">
+              <div class="calc-progress__bar"></div>
+              <span class="calc-progress__label">02. Modüller</span>
+            </div>
+            <div class="calc-progress__step" data-progress-step="3">
+              <div class="calc-progress__bar"></div>
+              <span class="calc-progress__label">03. Zamanlama</span>
+            </div>
+            <div class="calc-progress__step" data-progress-step="4">
+              <div class="calc-progress__bar"></div>
+              <span class="calc-progress__label">04. Özet &amp; Brief</span>
+            </div>
+          </nav>
+
+          <!-- Step 1: Ana Hizmet Alanı -->
+          <div class="calc-step is-active" data-step="1">
+            <h3 class="calc-step__title">Projenizin ana odağı nedir?</h3>
+            <p class="calc-step__desc">Başlamak istediğiniz temel dijital çözüm alanını seçin:</p>
+            <div class="calc-grid">
+              <div class="calc-card is-selected">
+                <input type="radio" id="calc-svc-web" name="calc-service" value="web" checked />
+                <label for="calc-svc-web" class="calc-card__body">
+                  <span class="calc-card__top">
+                    <span class="calc-card__icon" aria-hidden="true">🌐</span>
+                    <span class="calc-card__check" aria-hidden="true"></span>
+                  </span>
+                  <strong class="calc-card__name">Kurumsal Web Tasarım &amp; UX</strong>
+                  <span class="calc-card__text">Mobil öncelikli, dönüşüm odaklı ve özgün arayüze sahip kurumsal web sitesi.</span>
+                  <span class="calc-card__badge">Popüler</span>
+                </label>
+              </div>
+
+              <div class="calc-card">
+                <input type="radio" id="calc-svc-ecommerce" name="calc-service" value="ecommerce" />
+                <label for="calc-svc-ecommerce" class="calc-card__body">
+                  <span class="calc-card__top">
+                    <span class="calc-card__icon" aria-hidden="true">🛍️</span>
+                    <span class="calc-card__check" aria-hidden="true"></span>
+                  </span>
+                  <strong class="calc-card__name">E-Ticaret Sitesi</strong>
+                  <span class="calc-card__text">Katalog, sepet, ödeme kuruluşları, kargo ve sipariş operasyonu altyapısı.</span>
+                  <span class="calc-card__badge">Satış Odaklı</span>
+                </label>
+              </div>
+
+              <div class="calc-card">
+                <input type="radio" id="calc-svc-software" name="calc-service" value="software" />
+                <label for="calc-svc-software" class="calc-card__body">
+                  <span class="calc-card__top">
+                    <span class="calc-card__icon" aria-hidden="true">⚡</span>
+                    <span class="calc-card__check" aria-hidden="true"></span>
+                  </span>
+                  <strong class="calc-card__name">Özel Yazılım &amp; Panel</strong>
+                  <span class="calc-card__text">İşletmenize özel yönetim paneli, roller, onay akışları ve API entegrasyonu.</span>
+                  <span class="calc-card__badge">Operasyon</span>
+                </label>
+              </div>
+
+              <div class="calc-card">
+                <input type="radio" id="calc-svc-ads" name="calc-service" value="ads" />
+                <label for="calc-svc-ads" class="calc-card__body">
+                  <span class="calc-card__top">
+                    <span class="calc-card__icon" aria-hidden="true">📈</span>
+                    <span class="calc-card__check" aria-hidden="true"></span>
+                  </span>
+                  <strong class="calc-card__name">Meta &amp; Google Reklam</strong>
+                  <span class="calc-card__text">Kreatif strateji, CAPI sunucu ölçümü ve dönüşüm odaklı medya yönetimi.</span>
+                  <span class="calc-card__badge">Büyüme</span>
+                </label>
+              </div>
+
+              <div class="calc-card">
+                <input type="radio" id="calc-svc-qrmenu" name="calc-service" value="qrmenu" />
+                <label for="calc-svc-qrmenu" class="calc-card__body">
+                  <span class="calc-card__top">
+                    <span class="calc-card__icon" aria-hidden="true">📱</span>
+                    <span class="calc-card__check" aria-hidden="true"></span>
+                  </span>
+                  <strong class="calc-card__name">QR Menü &amp; Rezervasyon</strong>
+                  <span class="calc-card__text">Hızlı mobil dijital menü ve masa/randevu kurallı işletme kayıt sistemi.</span>
+                  <span class="calc-card__badge">İşletme</span>
+                </label>
+              </div>
+
+              <div class="calc-card">
+                <input type="radio" id="calc-svc-hybrid" name="calc-service" value="hybrid" />
+                <label for="calc-svc-hybrid" class="calc-card__body">
+                  <span class="calc-card__top">
+                    <span class="calc-card__icon" aria-hidden="true">🚀</span>
+                    <span class="calc-card__check" aria-hidden="true"></span>
+                  </span>
+                  <strong class="calc-card__name">Uçtan Uca Dijital Sistem</strong>
+                  <span class="calc-card__text">Web sitesi + Özel Yönetim Paneli + Reklam ve Ölçümün tek akışta birleşimi.</span>
+                  <span class="calc-card__badge">Tam Kapsam</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Modüller ve Ek Özellikler -->
+          <div class="calc-step" data-step="2">
+            <h3 class="calc-step__title">Hangi modüllere ve özelliklere ihtiyacınız var?</h3>
+            <p class="calc-step__desc">Projenize dahil etmek istediğiniz özellikleri işaretleyin (çoklu seçim yapabilirsiniz):</p>
+            <div class="calc-grid">
+              <!-- Web & E-Commerce & All features -->
+              <div data-calc-feature-group="web" class="calc-grid-wrapper">
+                <div class="calc-card">
+                  <input type="checkbox" id="calc-feat-multilingual" name="calc-feat-multilingual" value="multilingual" data-calc-feature />
+                  <label for="calc-feat-multilingual" class="calc-card__body">
+                    <span class="calc-card__top">
+                      <span class="calc-card__icon" aria-hidden="true">🌍</span>
+                      <span class="calc-card__check" aria-hidden="true"></span>
+                    </span>
+                    <strong class="calc-card__name">Çoklu Dil Desteği</strong>
+                    <span class="calc-card__text">İngilizce, Almanca vb. diller için hreflang ve ayrı dil URL altyapısı.</span>
+                  </label>
+                </div>
+              </div>
+
+              <div data-calc-feature-group="web" class="calc-grid-wrapper">
+                <div class="calc-card">
+                  <input type="checkbox" id="calc-feat-cms" name="calc-feat-cms" value="cms" data-calc-feature />
+                  <label for="calc-feat-cms" class="calc-card__body">
+                    <span class="calc-card__top">
+                      <span class="calc-card__icon" aria-hidden="true">✍️</span>
+                      <span class="calc-card__check" aria-hidden="true"></span>
+                    </span>
+                    <strong class="calc-card__name">Özel İçerik / Blog Paneli</strong>
+                    <span class="calc-card__text">Yazılarınızı, rehberlerinizi ve duyurularınızı kolayca güncelleyeceğiniz panel.</span>
+                  </label>
+                </div>
+              </div>
+
+              <div data-calc-feature-group="web" class="calc-grid-wrapper">
+                <div class="calc-card">
+                  <input type="checkbox" id="calc-feat-seo" name="calc-feat-seo" value="seo_geo" data-calc-feature />
+                  <label for="calc-feat-seo" class="calc-card__body">
+                    <span class="calc-card__top">
+                      <span class="calc-card__icon" aria-hidden="true">🎯</span>
+                      <span class="calc-card__check" aria-hidden="true"></span>
+                    </span>
+                    <strong class="calc-card__name">İleri Düzey Teknik SEO &amp; GEO</strong>
+                    <span class="calc-card__text">Google zengin sonuçları ve AI arama motorları için Schema.org mimarisi.</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- E-Commerce features -->
+              <div data-calc-feature-group="ecommerce" class="calc-grid-wrapper">
+                <div class="calc-card">
+                  <input type="checkbox" id="calc-feat-payment" name="calc-feat-payment" value="payment" data-calc-feature />
+                  <label for="calc-feat-payment" class="calc-card__body">
+                    <span class="calc-card__top">
+                      <span class="calc-card__icon" aria-hidden="true">💳</span>
+                      <span class="calc-card__check" aria-hidden="true"></span>
+                    </span>
+                    <strong class="calc-card__name">Sanal POS &amp; Ödeme Entegrasyonu</strong>
+                    <span class="calc-card__text">İyzico, PayTR, Stripe veya banka sanal POS tek tıkla ödeme akışı.</span>
+                  </label>
+                </div>
+              </div>
+
+              <div data-calc-feature-group="ecommerce" class="calc-grid-wrapper">
+                <div class="calc-card">
+                  <input type="checkbox" id="calc-feat-cargo" name="calc-feat-cargo" value="cargo_erp" data-calc-feature />
+                  <label for="calc-feat-cargo" class="calc-card__body">
+                    <span class="calc-card__top">
+                      <span class="calc-card__icon" aria-hidden="true">📦</span>
+                      <span class="calc-card__check" aria-hidden="true"></span>
+                    </span>
+                    <strong class="calc-card__name">Kargo &amp; ERP / Stok Entegrasyonu</strong>
+                    <span class="calc-card__text">Otomatik kargo barkodu, fatura ve muhasebe/stok yazılımı bağlantısı.</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Software features -->
+              <div data-calc-feature-group="software" class="calc-grid-wrapper">
+                <div class="calc-card">
+                  <input type="checkbox" id="calc-feat-auth" name="calc-feat-auth" value="auth_roles" data-calc-feature />
+                  <label for="calc-feat-auth" class="calc-card__body">
+                    <span class="calc-card__top">
+                      <span class="calc-card__icon" aria-hidden="true">🔐</span>
+                      <span class="calc-card__check" aria-hidden="true"></span>
+                    </span>
+                    <strong class="calc-card__name">Rol &amp; Yetki Yönetimi</strong>
+                    <span class="calc-card__text">Yönetici, operasyon, satış ve müşteri için kademeli onay hiyerarşisi.</span>
+                  </label>
+                </div>
+              </div>
+
+              <div data-calc-feature-group="software" class="calc-grid-wrapper">
+                <div class="calc-card">
+                  <input type="checkbox" id="calc-feat-api" name="calc-feat-api" value="api_integration" data-calc-feature />
+                  <label for="calc-feat-api" class="calc-card__body">
+                    <span class="calc-card__top">
+                      <span class="calc-card__icon" aria-hidden="true">🔌</span>
+                      <span class="calc-card__check" aria-hidden="true"></span>
+                    </span>
+                    <strong class="calc-card__name">Özel REST API &amp; Entegrasyon</strong>
+                    <span class="calc-card__text">Harici platformlar ve iç sistemler arası otomatik iki yönlü veri aktarımı.</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Ads features -->
+              <div data-calc-feature-group="ads" class="calc-grid-wrapper">
+                <div class="calc-card">
+                  <input type="checkbox" id="calc-feat-capi" name="calc-feat-capi" value="meta_capi" data-calc-feature />
+                  <label for="calc-feat-capi" class="calc-card__body">
+                    <span class="calc-card__top">
+                      <span class="calc-card__icon" aria-hidden="true">📊</span>
+                      <span class="calc-card__check" aria-hidden="true"></span>
+                    </span>
+                    <strong class="calc-card__name">Meta CAPI Sunucu Ölçümü</strong>
+                    <span class="calc-card__text">Çerez engellerine takılmayan sunucu taraflı Conversions API kurulumu.</span>
+                  </label>
+                </div>
+              </div>
+
+              <div data-calc-feature-group="ads" class="calc-grid-wrapper">
+                <div class="calc-card">
+                  <input type="checkbox" id="calc-feat-creative" name="calc-feat-creative" value="creative_pack" data-calc-feature />
+                  <label for="calc-feat-creative" class="calc-card__body">
+                    <span class="calc-card__top">
+                      <span class="calc-card__icon" aria-hidden="true">🎨</span>
+                      <span class="calc-card__check" aria-hidden="true"></span>
+                    </span>
+                    <strong class="calc-card__name">Kreatif &amp; Reklam Metni Üretimi</strong>
+                    <span class="calc-card__text">Hedef kitle segmentlerine özel test edilebilir görsel ve reklam metinleri.</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- QR Menu features -->
+              <div data-calc-feature-group="qrmenu" class="calc-grid-wrapper">
+                <div class="calc-card">
+                  <input type="checkbox" id="calc-feat-menu" name="calc-feat-menu" value="instant_menu" data-calc-feature />
+                  <label for="calc-feat-menu" class="calc-card__body">
+                    <span class="calc-card__top">
+                      <span class="calc-card__icon" aria-hidden="true">📋</span>
+                      <span class="calc-card__check" aria-hidden="true"></span>
+                    </span>
+                    <strong class="calc-card__name">Anlık Fiyat &amp; Stok Paneli</strong>
+                    <span class="calc-card__text">Tek tuşla ürün fiyatı, varyant, alerjen ve tükenen ürün güncellemesi.</span>
+                  </label>
+                </div>
+              </div>
+
+              <div data-calc-feature-group="qrmenu" class="calc-grid-wrapper">
+                <div class="calc-card">
+                  <input type="checkbox" id="calc-feat-reserve" name="calc-feat-reserve" value="reservation" data-calc-feature />
+                  <label for="calc-feat-reserve" class="calc-card__body">
+                    <span class="calc-card__top">
+                      <span class="calc-card__icon" aria-hidden="true">📅</span>
+                      <span class="calc-card__check" aria-hidden="true"></span>
+                    </span>
+                    <strong class="calc-card__name">Kapasite &amp; Randevu Kural Motoru</strong>
+                    <span class="calc-card__text">Masa, kişi sayısı, işlem süresi ve SMS/WhatsApp hatırlatma bildirimleri.</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Hybrid / All features -->
+              <div data-calc-feature-group="all" class="calc-grid-wrapper">
+                <div class="calc-card">
+                  <input type="checkbox" id="calc-feat-speed" name="calc-feat-speed" value="speed_vitals" data-calc-feature />
+                  <label for="calc-feat-speed" class="calc-card__body">
+                    <span class="calc-card__top">
+                      <span class="calc-card__icon" aria-hidden="true">⚡</span>
+                      <span class="calc-card__check" aria-hidden="true"></span>
+                    </span>
+                    <strong class="calc-card__name">Core Web Vitals Hız Garantisi</strong>
+                    <span class="calc-card__text">1 saniye altı açılış hızı, sıfır gereksiz JavaScript ve %95+ performans puanı.</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Zamanlama ve Destek -->
+          <div class="calc-step" data-step="3">
+            <h3 class="calc-step__title">Zamanlama ve yayın sonrası önceliğiniz nedir?</h3>
+            <p class="calc-step__desc">Projenin teslim takvimi ve destek modelini seçin:</p>
+            <div class="calc-grid">
+              <div class="calc-card is-selected">
+                <input type="radio" id="calc-time-std" name="calc-timeline" value="standard" checked />
+                <label for="calc-time-std" class="calc-card__body">
+                  <span class="calc-card__top">
+                    <span class="calc-card__icon" aria-hidden="true">🗓️</span>
+                    <span class="calc-card__check" aria-hidden="true"></span>
+                  </span>
+                  <strong class="calc-card__name">Standart Planlama</strong>
+                  <span class="calc-card__text">Kapsamlı araştırma, tel kafes, özgün tasarım, test ve optimizasyon süreci.</span>
+                  <span class="calc-card__badge">Önerilen</span>
+                </label>
+              </div>
+
+              <div class="calc-card">
+                <input type="radio" id="calc-time-fast" name="calc-timeline" value="fast" />
+                <label for="calc-time-fast" class="calc-card__body">
+                  <span class="calc-card__top">
+                    <span class="calc-card__icon" aria-hidden="true">⚡</span>
+                    <span class="calc-card__check" aria-hidden="true"></span>
+                  </span>
+                  <strong class="calc-card__name">Hızlı Lansman (MVP Önceliği)</strong>
+                  <span class="calc-card__text">Kritik çekirdek özelliklerle hızla yayına çıkıp sonraki fazları aşamalı kurma.</span>
+                  <span class="calc-card__badge">Hızlı Çıkış</span>
+                </label>
+              </div>
+
+              <div class="calc-card">
+                <input type="checkbox" id="calc-maint" name="calc-maintenance" value="yes" />
+                <label for="calc-maint" class="calc-card__body">
+                  <span class="calc-card__top">
+                    <span class="calc-card__icon" aria-hidden="true">🛡️</span>
+                    <span class="calc-card__check" aria-hidden="true"></span>
+                  </span>
+                  <strong class="calc-card__name">Yayın Sonrası Destek &amp; Bakım</strong>
+                  <span class="calc-card__text">Yayından sonra düzenli performans takibi, güncelleme ve iyileştirme desteği.</span>
+                  <span class="calc-card__badge">Opsiyonel</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4: Sonuç & 1-Tık WhatsApp Brief -->
+          <div class="calc-step" data-step="4">
+            <div class="calc-result">
+              <div class="calc-result__header">
+                <div class="calc-stat">
+                  <span class="calc-stat__label">Kapsam Modeli</span>
+                  <span class="calc-stat__val" data-result-scope>Büyüme Odaklı Web</span>
+                </div>
+                <div class="calc-stat">
+                  <span class="calc-stat__label">Öngörülen Takvim</span>
+                  <span class="calc-stat__val" data-result-duration>2–4 Hafta</span>
+                </div>
+                <div class="calc-stat">
+                  <span class="calc-stat__label">Önerilen Mimari</span>
+                  <span class="calc-stat__val" style="font-size: 1rem; color: rgba(248,251,250,0.9);" data-result-arch>Mobil Öncelikli Web + Teknik SEO</span>
+                </div>
+              </div>
+
+              <div class="calc-result__items">
+                <h4>Seçilen Kapsam ve Modüller</h4>
+                <ul class="calc-result__list" data-result-list>
+                  <!-- Dynamically populated -->
+                </ul>
+              </div>
+
+              <p class="calc-result__note">
+                💡 <strong>Şeffaflık İlkesi:</strong> Kesin takvim ve bütçe; ilk teknik görüşmede detaylı iş akışı ve ekran ihtiyaçları netleştirildikten sonra şeffaf bir çalışma planına dönüştürülür.
+              </p>
+            </div>
+
+            <div class="calc-actions" style="border-top: none; padding-top: 0;">
+              <button type="button" class="calc-btn calc-btn--outline" data-calc-reset>
+                🔄 Seçimleri Yeniden Düzenle
+              </button>
+              <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <a class="calc-btn calc-btn--outline" data-calc-contact href="/iletisim/">
+                  Teklif Formuna Aktar <span aria-hidden="true">↗</span>
+                </a>
+                <a class="calc-btn calc-btn--whatsapp" data-calc-whatsapp href="https://wa.me/905019441921" target="_blank" rel="noopener noreferrer">
+                  <span>💬 Bu Kapsamı WhatsApp'tan Gönder</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wizard Actions -->
+          <div class="calc-actions">
+            <button type="button" class="calc-btn calc-btn--outline" data-calc-prev style="display: none;">
+              ← Geri
+            </button>
+            <button type="button" class="calc-btn calc-btn--primary" data-calc-next>
+              Devam Et →
+            </button>
+          </div>
+        </section>
+
         <section class="faq-section" id="sik-sorulan-sorular" aria-labelledby="faq-title">
           <header class="faq-section__header">
             <p>Kısa ve açık cevaplar</p>
@@ -926,6 +1377,7 @@
         <a href="/editoryal-ilkeler/">Editoryal ilkeler</a>
         <a href="/hakkimizda/">Hakkımızda</a>
         <a href="/iletisim/">İletişim</a>
+        <a href="#proje-hesaplayici">Kapsam hesaplayıcı</a>
         <a href="#sik-sorulan-sorular">Sık sorulan sorular</a>
       </nav>
       <div class="site-footer__contact">
