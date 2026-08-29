@@ -2,6 +2,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { blogPosts } from '../content/blog-posts.mjs';
+import { topicHubs } from '../content/topic-hubs.mjs';
 import { sitePages } from '../content/site-pages.mjs';
 import { renderBlog } from './render-blog.mjs';
 import { loadSiteEnvironment } from './site-environment.mjs';
@@ -68,6 +69,8 @@ const getPageTitle = (path) => {
   if (path === '/iletisim/') return 'Narvals Labs İletişim ve Proje Talebi';
   if (path === '/blog/') return 'Narvals Labs Dijital Üretim ve Karar Rehberleri';
   if (path === '/editoryal-ilkeler/') return 'Narvals Labs Editoryal İlkeler ve Standartlar';
+  const topicHub = topicHubs.find((hub) => `/blog/konu/${hub.slug}/` === path);
+  if (topicHub) return topicHub.title;
   const blogPost = blogPosts.find((p) => `/blog/${p.slug}/` === path);
   if (blogPost) return blogPost.title;
   return 'Narvals Labs';
@@ -184,6 +187,10 @@ Tam kapsamlı yapay zekâ bilgi tabanı ve RAG dokümantasyonu için: [llms-full
 ## Karar Rehberleri
 
 ${blogPosts.map((post) => `- [${post.title}](${siteOrigin}/blog/${post.slug}/): ${post.description}`).join('\n')}
+
+## Konu merkezleri
+
+${topicHubs.map((hub) => `- [${hub.title}](${siteOrigin}/blog/konu/${hub.slug}/): ${hub.description}`).join('\n')}
 
 ## Temel İlkeler ve Yaklaşım
 
@@ -311,6 +318,7 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 - İletişim: ${siteOrigin}/iletisim/
 - Blog & Rehberler: ${siteOrigin}/blog/
 - Editoryal İlkeler: ${siteOrigin}/editoryal-ilkeler/
+${topicHubs.map((hub) => `- Konu Merkezi: ${siteOrigin}/blog/konu/${hub.slug}/`).join('\n')}
 ${blogPosts.map((post) => `- Rehber: ${siteOrigin}/blog/${post.slug}/`).join('\n')}
 `;
 

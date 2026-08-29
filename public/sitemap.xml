@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://narvals.com/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-08-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -151,6 +151,46 @@
     </image:image>
   </url>
   <url>
+    <loc>https://narvals.com/blog/konu/e-ticaret/</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
+      <image:title>E-ticaret rehberleri: fikirden çalışan mağazaya</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://narvals.com/blog/konu/web-sitesi/</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
+      <image:title>Web sitesi rehberleri: kapsamdan yayına</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://narvals.com/blog/konu/reklam/</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
+      <image:title>Dijital reklam rehberleri: bütçeden gerçek sonuca</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://narvals.com/blog/konu/qr-menu/</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
+      <image:title>QR menü rehberleri: masadaki koddan operasyona</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://narvals.com/blog/e-ticaret-sitesi-nasil-acilir/</loc>
     <lastmod>2026-08-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -188,6 +228,46 @@
     <image:image>
       <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
       <image:title>Google Ads reklamı nasıl verilir? İşletmeler için başlangıç rehberi</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://narvals.com/blog/qr-menu-fiyatlari-ve-maliyet-kalemleri/</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
+      <image:title>QR menü fiyatları: maliyeti hangi özellikler belirler?</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://narvals.com/blog/web-sitesi-ne-kadar-surer/</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
+      <image:title>Web sitesi ne kadar sürer? Gerçekçi proje takvimi rehberi</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://narvals.com/blog/google-ads-butcesi-nasil-belirlenir/</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
+      <image:title>Google Ads bütçesi nasıl belirlenir? Planlama rehberi</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://narvals.com/blog/restoran-web-sitesi-nasil-olmali/</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
+      <image:title>Restoran web sitesi nasıl olmalı? Menü, rezervasyon ve Google rehberi</image:title>
     </image:image>
   </url>
   <url>

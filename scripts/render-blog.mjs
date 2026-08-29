@@ -1,6 +1,7 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { blogPostBySlug, blogPosts } from '../content/blog-posts.mjs';
+import { topicHubs } from '../content/topic-hubs.mjs';
 
 const escapeHtml = (value) => String(value)
   .replaceAll('&', '&amp;')
@@ -170,7 +171,7 @@ const renderNav = (current = '') => `<header class="info-nav">
 const renderFooter = () => `<footer class="site-footer">
       <div class="site-footer__brand"><a href="/"><img src="/assets/logo-v6/narvals-mascot-v6-transparent-96.png" alt="" width="96" height="96" loading="lazy" /><strong>narvals<span>//</span>labs</strong></a><p>Web sitesi, özel yazılım ve reklamı aynı iş hedefinde buluşturan dijital üretim stüdyosu.</p></div>
       <nav aria-label="Hizmet bağlantıları"><strong>Hizmetler</strong><a href="/hizmetler/web-tasarim/">Web tasarım &amp; UX</a><a href="/hizmetler/e-ticaret/">E-ticaret</a><a href="/hizmetler/ozel-yazilim/">Özel yazılım</a><a href="/hizmetler/google-ads/">Google Ads</a><a href="/hizmetler/dijital-reklam/">Meta reklam</a><a href="/hizmetler/sosyal-medya-yonetimi/">Sosyal medya</a><a href="/hizmetler/qr-menu-rezervasyon/">İşletme sistemleri</a></nav>
-      <nav aria-label="Bilgi merkezi bağlantıları"><strong>Bilgi merkezi</strong><a href="/blog/">Tüm rehberler</a><a href="/blog/web-sitesi-teknik-seo-kontrol-listesi/">Teknik SEO listesi</a><a href="/blog/google-ai-aramalari-icin-geo-rehberi/">GEO rehberi</a><a href="/editoryal-ilkeler/">Editoryal ilkeler</a></nav>
+      <nav aria-label="Bilgi merkezi bağlantıları"><strong>Bilgi merkezi</strong><a href="/blog/">Tüm rehberler</a><a href="/blog/konu/e-ticaret/">E-ticaret rehberleri</a><a href="/blog/konu/web-sitesi/">Web sitesi rehberleri</a><a href="/blog/konu/reklam/">Reklam rehberleri</a><a href="/blog/konu/qr-menu/">QR menü rehberleri</a><a href="/editoryal-ilkeler/">Editoryal ilkeler</a></nav>
       <div class="site-footer__contact"><strong>Bir proje mi var?</strong><p>Hedefi ve en kritik darboğazı anlatarak ilk görüşmeyi başlatın.</p><a href="mailto:info@narvals.com">info@narvals.com</a><a href="https://wa.me/905019441921" rel="noopener noreferrer">WhatsApp: +90 501 944 19 21 ↗</a></div>
       <p class="site-footer__legal">© <span data-current-year>2026</span> Narvals Labs. Tüm hakları saklıdır.</p>
     </footer>`;
@@ -372,6 +373,10 @@ ${renderHead({ siteOrigin, path, title, description, keywords: ['dijital rehberl
         <div class="info-hero__copy"><nav class="breadcrumbs" aria-label="İçerik yolu"><a href="/">Ana sayfa</a><span>/</span><span>Rehberler</span></nav><p class="info-hero__kicker">Bilgi merkezi · Kaynaklı karar rehberleri</p><h1>Dijital projeler için karar rehberleri.</h1><p class="info-hero__answer">Yüzeysel trend yazıları yerine; web, yazılım, reklam ve işletme sistemleri için gerçek karar ölçütlerini, kontrol listelerini, sınırları ve birincil kaynakları bir araya getiriyoruz.</p></div>
         <aside class="info-hero__panel blog-search-panel"><strong>Ne yapmak istiyorsunuz?</strong><form class="blog-search" action="/blog/" method="get" role="search"><label for="blog-search-input">Rehberlerde ara</label><div><input id="blog-search-input" name="q" type="search" placeholder="Örn. e-ticaret sitesi" autocomplete="off" /><button type="submit">Ara <span aria-hidden="true">→</span></button></div></form><p>E-ticaret, web sitesi, QR menü, reklam veya SEO hakkında sorunuzu yazın.</p></aside>
       </section>
+      <section class="topic-directory" aria-labelledby="konu-merkezleri-basligi">
+        <header><p>Karar yolunu seçin</p><h2 id="konu-merkezleri-basligi">Tek yazı değil, doğru sıra.</h2><span>Bir projeyi baştan sona anlamak için rehberleri konu merkezlerinde karar sırasıyla takip edin.</span></header>
+        <div class="topic-directory__list">${topicHubs.map((hub, index) => `<a href="/blog/konu/${hub.slug}/"><small>0${index + 1} · ${hub.all.length} rehber</small><strong>${escapeHtml(hub.title)}</strong><span>${escapeHtml(hub.answer)}</span><i aria-hidden="true">→</i></a>`).join('')}</div>
+      </section>
       <section class="blog-hub" aria-labelledby="rehberler-basligi">
         <header class="blog-hub__header"><p class="info-section__label">Tüm rehberler</p><h2 id="rehberler-basligi">Hizmete göre değil, kararınıza göre başlayın.</h2><p>Her rehber tek bir arama ve iş niyetine sahiptir. Benzer sorgular için kopya sayfa üretmek yerine, bir konuyu karar vermeye yetecek derinlikte ele alır.</p></header>
         <div class="blog-grid">${blogPosts.map((post) => `<article class="blog-card"><div class="blog-card__meta"><span>${escapeHtml(post.category)}</span><span>${post.readingTime} dk</span></div><h3><a href="/blog/${post.slug}/">${escapeHtml(post.title)}</a></h3><p>${escapeHtml(post.description)}</p><a class="blog-card__link" href="/blog/${post.slug}/" aria-label="${escapeHtml(post.title)} içeriğini okuyun">Rehberi okuyun <span aria-hidden="true">→</span></a></article>`).join('')}</div>
@@ -384,6 +389,45 @@ ${renderHead({ siteOrigin, path, title, description, keywords: ['dijital rehberl
   </body>
 </html>
 `;
+};
+
+const renderTopicHub = (hub, siteOrigin) => {
+  const path = `/blog/konu/${hub.slug}/`;
+  const url = `${siteOrigin}${path}`;
+  const posts = hub.all.map((slug) => blogPostBySlug.get(slug));
+  const starters = hub.start.map((slug) => blogPostBySlug.get(slug));
+  if ([...posts, ...starters].some((post) => !post)) throw new Error(`${hub.slug} topic hub references a missing blog post.`);
+  const schema = [
+    organizationNode(siteOrigin),
+    websiteNode(siteOrigin),
+    { '@type': 'CollectionPage', '@id': `${url}#webpage`, url, name: hub.metaTitle, description: hub.description, inLanguage: 'tr-TR', isPartOf: { '@id': `${siteOrigin}/#website` }, about: hub.keywords.map((name) => ({ '@type': 'Thing', name })) },
+    { '@type': 'ItemList', itemListElement: posts.map((post, index) => ({ '@type': 'ListItem', position: index + 1, name: post.title, url: `${siteOrigin}/blog/${post.slug}/` })) },
+    { '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Ana sayfa', item: `${siteOrigin}/` },
+      { '@type': 'ListItem', position: 2, name: 'Rehberler', item: `${siteOrigin}/blog/` },
+      { '@type': 'ListItem', position: 3, name: hub.title, item: url }
+    ] }
+  ];
+
+  return `<!doctype html>
+<html class="no-js" lang="tr">
+  <head>
+    <script>document.documentElement.classList.replace('no-js', 'js');</script>
+${renderHead({ siteOrigin, path, title: hub.metaTitle, description: hub.description, keywords: hub.keywords, schema })}
+  </head>
+  <body class="info-page topic-page">
+    <a class="skip-link" href="#main-content">Ana içeriğe geç</a>
+    ${renderNav('blog')}
+    <main id="main-content">
+      <section class="info-hero topic-hero"><div class="info-hero__copy"><nav class="breadcrumbs" aria-label="İçerik yolu"><a href="/">Ana sayfa</a><span>/</span><a href="/blog/">Rehberler</a><span>/</span><span>Konu merkezi</span></nav><p class="info-hero__kicker">Konu merkezi · ${posts.length} kaynaklı rehber</p><h1>${escapeHtml(hub.title)}</h1><p class="info-hero__answer">${escapeHtml(hub.answer)}</p></div><aside class="info-hero__panel"><strong>Bu merkezde</strong><ul><li>Başlangıç için üç karar</li><li>Uygulama ve kontrol rehberleri</li><li>Birincil kaynaklar ve açık sınırlar</li><li>İlgili hizmete doğrudan geçiş</li></ul></aside></section>
+      <section class="topic-path" aria-labelledby="baslangic-yolu"><header><p>Önerilen başlangıç</p><h2 id="baslangic-yolu">Üç kararla ilerleyin.</h2></header><ol>${starters.map((post) => `<li><a href="/blog/${post.slug}/"><small>${escapeHtml(post.category)} · ${post.readingTime} dk</small><strong>${escapeHtml(post.title)}</strong><span>${escapeHtml(post.answer)}</span><i aria-hidden="true">→</i></a></li>`).join('')}</ol></section>
+      <section class="topic-library" aria-labelledby="tum-rehberler"><header><h2 id="tum-rehberler">Bu konudaki tüm rehberler.</h2><p>İhtiyacınız olan karardan başlayın; her içerik ilgili sonraki adıma bağlanır.</p></header><div>${posts.map((post) => `<article><small>${escapeHtml(post.category)} · ${post.readingTime} dk</small><h3><a href="/blog/${post.slug}/">${escapeHtml(post.title)}</a></h3><p>${escapeHtml(post.description)}</p><a href="/blog/${post.slug}/" aria-label="${escapeHtml(post.title)} rehberini okuyun">Rehberi okuyun <span aria-hidden="true">→</span></a></article>`).join('')}</div></section>
+      <section class="info-cta"><h2>Rehberden uygulamaya geçin.</h2><p>Mevcut durumunuzu ve en kritik sınırı paylaşın; gereksiz kapsamı ayıklayıp doğru başlangıcı birlikte belirleyelim.</p><div class="article-cta-actions"><a class="info-button" href="${hub.servicePath}">${escapeHtml(hub.serviceLabel)} <span aria-hidden="true">→</span></a><a class="info-button info-button--light" href="/iletisim/">Projeyi konuşalım <span aria-hidden="true">↗</span></a></div></section>
+    </main>
+    ${renderFooter()}
+    <script type="module" src="/src/info-main.js"></script>
+  </body>
+</html>`;
 };
 
 const renderEditorialPolicy = (siteOrigin) => {
@@ -462,6 +506,12 @@ export async function renderBlog({ projectRoot, publicRoot, siteOrigin }) {
     await writeFile(join(destination, 'index.html'), cleanGeneratedOutput(renderArticle(post, siteOrigin)));
   }));
 
+  await Promise.all(topicHubs.map(async (hub) => {
+    const destination = join(blogRoot, 'konu', hub.slug);
+    await mkdir(destination, { recursive: true });
+    await writeFile(join(destination, 'index.html'), cleanGeneratedOutput(renderTopicHub(hub, siteOrigin)));
+  }));
+
   const editorialRoot = join(projectRoot, 'editoryal-ilkeler');
   await mkdir(editorialRoot, { recursive: true });
   await writeFile(join(editorialRoot, 'index.html'), cleanGeneratedOutput(renderEditorialPolicy(siteOrigin)));
@@ -470,5 +520,5 @@ export async function renderBlog({ projectRoot, publicRoot, siteOrigin }) {
   await mkdir(publicBlogRoot, { recursive: true });
   await writeFile(join(publicBlogRoot, 'feed.xml'), cleanGeneratedOutput(renderFeed(siteOrigin)));
 
-  console.log(`Rendered blog hub, ${blogPosts.length} guides, editorial policy and RSS feed.`);
+  console.log(`Rendered blog hub, ${topicHubs.length} topic centers, ${blogPosts.length} guides, editorial policy and RSS feed.`);
 }

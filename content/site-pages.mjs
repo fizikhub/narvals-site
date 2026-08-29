@@ -1,7 +1,8 @@
 import { blogPosts } from './blog-posts.mjs';
+import { topicHubs } from './topic-hubs.mjs';
 
 export const staticPages = [
-  { key: 'home', path: '/', file: 'index.html', lastModified: '2026-08-27', kind: 'home' },
+  { key: 'home', path: '/', file: 'index.html', lastModified: '2026-08-29', kind: 'home' },
   { key: 'services', path: '/hizmetler/', file: 'hizmetler/index.html', lastModified: '2026-08-27', kind: 'collection' },
   { key: 'web-design', path: '/hizmetler/web-tasarim/', file: 'hizmetler/web-tasarim/index.html', lastModified: '2026-08-29', kind: 'service' },
   { key: 'ecommerce', path: '/hizmetler/e-ticaret/', file: 'hizmetler/e-ticaret/index.html', lastModified: '2026-08-29', kind: 'service' },
@@ -27,7 +28,16 @@ export const blogPages = blogPosts.map((post) => ({
   post
 }));
 
-export const sitePages = [...staticPages, ...blogPages];
+export const topicHubPages = topicHubs.map((hub) => ({
+  key: `blog-topic-${hub.slug}`,
+  path: `/blog/konu/${hub.slug}/`,
+  file: `blog/konu/${hub.slug}/index.html`,
+  lastModified: '2026-08-29',
+  kind: 'collection',
+  hub
+}));
+
+export const sitePages = [...staticPages, ...topicHubPages, ...blogPages];
 
 for (const field of ['key', 'path', 'file']) {
   const values = sitePages.map((page) => page[field]);
