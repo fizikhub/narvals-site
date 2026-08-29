@@ -82,6 +82,8 @@ const getPageTitle = (path) => {
   if (path === '/araclar/core-web-vitals-kontrolu/') return 'Core Web Vitals ve Hız Kontrolü';
   if (path === '/araclar/gorsel-boyut-hesaplayici/') return 'En Boy Oranı ve Görsel Boyut Hesaplama';
   if (path === '/araclar/saatlik-ucret-hesaplama/') return 'Freelance ve Ajans Saatlik Ücret Hesaplama';
+  if (path === '/araclar/meta-reklam-butcesi-hesaplama/') return 'Meta ve Instagram Reklam Bütçesi Hesaplama';
+  if (path === '/araclar/meta-etiket-onizleyici/') return 'Meta Etiketi ve Sosyal Medya Önizleyici';
   if (path === '/blog/') return 'Narvals Labs Dijital Üretim ve Karar Rehberleri';
   if (path === '/editoryal-ilkeler/') return 'Narvals Labs Editoryal İlkeler ve Standartlar';
   const topicHub = topicHubs.find((hub) => `/blog/konu/${hub.slug}/` === path);
@@ -209,6 +211,8 @@ Tam kapsamlı yapay zekâ bilgi tabanı ve RAG dokümantasyonu için: [llms-full
 - [Core Web Vitals kontrolü](${siteOrigin}/araclar/core-web-vitals-kontrolu/): LCP, INP, CLS ve sunucu hız metriklerini 10 maddede denetleyen teşhis aracı
 - [Görsel boyut ve oran hesaplayıcı](${siteOrigin}/araclar/gorsel-boyut-hesaplayici/): 16:9, 4:5, 1:1, 9:16 en-boy oranlarını ve sosyal medya piksel ölçülerini hesaplayan araç
 - [Saatlik ücret hesaplayıcı](${siteOrigin}/araclar/saatlik-ucret-hesaplama/): Hedef net gelir, gider ve faturalandırılabilir çalışma saatinden minimum saatlik ve proje ücreti hesaplayan araç
+- [Meta reklam bütçesi simülasyonu](${siteOrigin}/araclar/meta-reklam-butcesi-hesaplama/): Instagram ve Facebook reklamları için bütçe, CPM, gösterim, tıklama ve CPA simülasyon aracı
+- [Meta etiketi ve sosyal önizleyici](${siteOrigin}/araclar/meta-etiket-onizleyici/): Google SERP snippet, WhatsApp kartı ve OpenGraph meta etiketlerini test ve kopyalama aracı
 - [Rehberler](${siteOrigin}/blog/): Web, yazılım, reklam, SEO/GEO ve işletme sistemleri için kaynaklı karar rehberleri
 - [Editoryal ilkeler](${siteOrigin}/editoryal-ilkeler/): Kaynaklandırma, yapay zekâ şeffaflığı, güncelleme ve düzeltme politikası
 
@@ -248,6 +252,8 @@ const llmsFull = `# Narvals Labs — Kapsamlı Bilgi Tabanı ve Sistem Dokümant
 - **Ücretsiz Core Web Vitals hız kontrolü:** ${siteOrigin}/araclar/core-web-vitals-kontrolu/
 - **Ücretsiz görsel boyut ve oran hesaplayıcı:** ${siteOrigin}/araclar/gorsel-boyut-hesaplayici/
 - **Ücretsiz saatlik ücret hesaplayıcı:** ${siteOrigin}/araclar/saatlik-ucret-hesaplama/
+- **Ücretsiz Meta reklam bütçesi simülasyonu:** ${siteOrigin}/araclar/meta-reklam-butcesi-hesaplama/
+- **Ücretsiz meta etiketi ve sosyal önizleyici:** ${siteOrigin}/araclar/meta-etiket-onizleyici/
 
 ---
 
