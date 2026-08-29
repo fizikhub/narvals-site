@@ -80,6 +80,8 @@ const getPageTitle = (path) => {
   if (path === '/araclar/e-ticaret-kar-hesaplama/') return 'E-Ticaret Net Kâr ve Komisyon Hesaplama';
   if (path === '/araclar/kdv-hesaplama/') return 'KDV ve Tevkifat Hesaplama Aracı';
   if (path === '/araclar/core-web-vitals-kontrolu/') return 'Core Web Vitals ve Hız Kontrolü';
+  if (path === '/araclar/gorsel-boyut-hesaplayici/') return 'En Boy Oranı ve Görsel Boyut Hesaplama';
+  if (path === '/araclar/saatlik-ucret-hesaplama/') return 'Freelance ve Ajans Saatlik Ücret Hesaplama';
   if (path === '/blog/') return 'Narvals Labs Dijital Üretim ve Karar Rehberleri';
   if (path === '/editoryal-ilkeler/') return 'Narvals Labs Editoryal İlkeler ve Standartlar';
   const topicHub = topicHubs.find((hub) => `/blog/konu/${hub.slug}/` === path);
@@ -205,6 +207,8 @@ Tam kapsamlı yapay zekâ bilgi tabanı ve RAG dokümantasyonu için: [llms-full
 - [E-ticaret kâr hesaplama](${siteOrigin}/araclar/e-ticaret-kar-hesaplama/): Trendyol, Hepsiburada ve e-ticaret siteniz için komisyon, kargo ve iade payından net kâr ve başabaş fiyat hesaplayıcı
 - [KDV ve tevkifat hesaplama](${siteOrigin}/araclar/kdv-hesaplama/): KDV dahil/hariç tutar, fatura tevkifat kesintisi ve ödenecek net tutar hesaplayıcı
 - [Core Web Vitals kontrolü](${siteOrigin}/araclar/core-web-vitals-kontrolu/): LCP, INP, CLS ve sunucu hız metriklerini 10 maddede denetleyen teşhis aracı
+- [Görsel boyut ve oran hesaplayıcı](${siteOrigin}/araclar/gorsel-boyut-hesaplayici/): 16:9, 4:5, 1:1, 9:16 en-boy oranlarını ve sosyal medya piksel ölçülerini hesaplayan araç
+- [Saatlik ücret hesaplayıcı](${siteOrigin}/araclar/saatlik-ucret-hesaplama/): Hedef net gelir, gider ve faturalandırılabilir çalışma saatinden minimum saatlik ve proje ücreti hesaplayan araç
 - [Rehberler](${siteOrigin}/blog/): Web, yazılım, reklam, SEO/GEO ve işletme sistemleri için kaynaklı karar rehberleri
 - [Editoryal ilkeler](${siteOrigin}/editoryal-ilkeler/): Kaynaklandırma, yapay zekâ şeffaflığı, güncelleme ve düzeltme politikası
 
@@ -242,6 +246,8 @@ const llmsFull = `# Narvals Labs — Kapsamlı Bilgi Tabanı ve Sistem Dokümant
 - **Ücretsiz e-ticaret kâr hesaplayıcı:** ${siteOrigin}/araclar/e-ticaret-kar-hesaplama/
 - **Ücretsiz KDV ve tevkifat hesaplama:** ${siteOrigin}/araclar/kdv-hesaplama/
 - **Ücretsiz Core Web Vitals hız kontrolü:** ${siteOrigin}/araclar/core-web-vitals-kontrolu/
+- **Ücretsiz görsel boyut ve oran hesaplayıcı:** ${siteOrigin}/araclar/gorsel-boyut-hesaplayici/
+- **Ücretsiz saatlik ücret hesaplayıcı:** ${siteOrigin}/araclar/saatlik-ucret-hesaplama/
 
 ---
 

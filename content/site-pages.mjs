@@ -26,6 +26,8 @@ export const staticPages = [
   { key: 'ecommerce-profit', path: '/araclar/e-ticaret-kar-hesaplama/', file: 'araclar/e-ticaret-kar-hesaplama/index.html', lastModified: '2026-08-30', kind: 'tool' },
   { key: 'vat-calculator', path: '/araclar/kdv-hesaplama/', file: 'araclar/kdv-hesaplama/index.html', lastModified: '2026-08-30', kind: 'tool' },
   { key: 'cwv-check', path: '/araclar/core-web-vitals-kontrolu/', file: 'araclar/core-web-vitals-kontrolu/index.html', lastModified: '2026-08-30', kind: 'tool' },
+  { key: 'aspect-ratio', path: '/araclar/gorsel-boyut-hesaplayici/', file: 'araclar/gorsel-boyut-hesaplayici/index.html', lastModified: '2026-08-30', kind: 'tool' },
+  { key: 'hourly-rate', path: '/araclar/saatlik-ucret-hesaplama/', file: 'araclar/saatlik-ucret-hesaplama/index.html', lastModified: '2026-08-30', kind: 'tool' },
   { key: 'blog', path: '/blog/', file: 'blog/index.html', lastModified: '2026-08-29', kind: 'collection' },
   { key: 'editorial-policy', path: '/editoryal-ilkeler/', file: 'editoryal-ilkeler/index.html', lastModified: '2026-08-23', kind: 'policy' }
 ];
