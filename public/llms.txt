@@ -59,6 +59,7 @@ Tam kapsamlı yapay zekâ bilgi tabanı ve RAG dokümantasyonu için: [llms-full
 - [Kurumsal web sitesi briefi nasıl hazırlanır?](https://narvals.com/blog/kurumsal-web-sitesi-briefi-nasil-hazirlanir/): Kurumsal web sitesi projesinde hedefi, kapsamı, içeriği, entegrasyonları ve başarı ölçütlerini netleştiren uygulanabilir brief rehberi.
 - [Web sitesi teknik SEO kontrol listesi: yayından önce ve sonra](https://narvals.com/blog/web-sitesi-teknik-seo-kontrol-listesi/): Tarama, index, canonical, yönlendirme, sitemap, yapılandırılmış veri, performans ve ölçümü kapsayan uygulamalı teknik SEO kontrol listesi.
 - [GEO nedir? Google AI sonuçlarında görünürlük rehberi](https://narvals.com/blog/google-ai-aramalari-icin-geo-rehberi/): GEO, AEO ve AI arama görünürlüğünü KDD 2024 akademik bulguları, teknik SEO, özgün kanıt, bot erişimi ve ölçüm üzerinden açıklayan güncel rehber.
+- [Google ve AI botları sitenizi nasıl tarar? İndeksleme rehberi](https://narvals.com/blog/google-ve-ai-botlari-icin-site-indeksleme-rehberi/): Googlebot, OAI-SearchBot, ClaudeBot ve Applebot tarama mimarisi; robots.txt, llms.txt, şema grafı ve KDD 2024 GEO indeksleme rehberi.
 - [E-ticaret altyapısı nasıl seçilir? Dokuz karar sorusu](https://narvals.com/blog/e-ticaret-altyapisi-nasil-secilir/): Hazır platform ile özel geliştirme arasında; katalog, ödeme, kargo, entegrasyon, SEO, veri ve operasyon ihtiyaçlarına göre seçim rehberi.
 - [Hazır yazılım mı, özel yazılım mı? Karar matrisi](https://narvals.com/blog/hazir-yazilim-mi-ozel-yazilim-mi/): Süreç uyumu, entegrasyon, veri sahipliği, toplam maliyet ve değişim hızına göre hazır ürün ile özel yazılım arasında seçim rehberi.
 - [Meta Pixel ve Conversions API: farkları ve birlikte kullanım](https://narvals.com/blog/meta-pixel-ve-conversions-api-farki/): Meta Pixel ile Conversions API’nin veri kaynağı, kullanım amacı, event eşleştirme, test ve gizlilik açısından farklarını açıklayan uygulama rehberi.
@@ -83,6 +84,7 @@ Tam kapsamlı yapay zekâ bilgi tabanı ve RAG dokümantasyonu için: [llms-full
 - [Web sitesi rehberleri: kapsamdan yayına](https://narvals.com/blog/konu/web-sitesi/): İnternet sitesi kurma, brief hazırlama, proje süresi, maliyet, B2B yapı, hız ve teknik SEO kararlarını bir araya getiren rehber merkezi.
 - [Dijital reklam rehberleri: bütçeden gerçek sonuca](https://narvals.com/blog/konu/reklam/): Google Ads ve Meta reklam bütçesi, kanal seçimi, ajans değerlendirme, ölçüm ve açılış sayfası kararlarını doğru sıraya koyan rehber merkezi.
 - [QR menü rehberleri: masadaki koddan operasyona](https://narvals.com/blog/konu/qr-menu/): QR menü yapma, fiyat ve kapsam karşılaştırma, PDF farkı, restoran web sitesi ve rezervasyon sistemi kararları için rehber merkezi.
+- [SEO ve GEO rehberleri: Google, yapay zekâ ve arama görünürlüğü](https://narvals.com/blog/konu/seo-geo/): Google AI Overviews, teknik SEO kontrolü, Core Web Vitals, site hızı ve yapay zekâ indeksleme stratejilerini ele alan rehber merkezi.
 
 ## Temel İlkeler ve Yaklaşım
 

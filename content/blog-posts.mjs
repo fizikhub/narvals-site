@@ -417,6 +417,142 @@ export const blogPosts = [
     ]
   },
   {
+    slug: 'google-ve-ai-botlari-icin-site-indeksleme-rehberi',
+    metaTitle: 'Google ve AI Botları İndeksleme Rehberi | Narvals',
+    title: 'Google ve AI botları sitenizi nasıl tarar? İndeksleme rehberi',
+    description: 'Googlebot, OAI-SearchBot, ClaudeBot ve Applebot tarama mimarisi; robots.txt, llms.txt, şema grafı ve KDD 2024 GEO indeksleme rehberi.',
+    keywords: ['Googlebot indeksleme', 'AI bot taraması', 'GEO indeksleme', 'robots.txt AI', 'llms.txt'],
+    category: 'SEO & GEO',
+    published: '2026-08-30T00:00:00+03:00',
+    modified: '2026-08-30T00:00:00+03:00',
+    readingTime: 14,
+    answer: 'Googlebot ve modern yapay zekâ tarayıcıları (OAI-SearchBot, Claude-SearchBot, PerplexityBot, Applebot) siteleri sadece anahtar kelime eşleşmesiyle indekslemez. İki aşamalı tarama (HTML çekme ve WRS render), RAG yoğun geçit erişimi (Dense Passage Retrieval), 256-512 tokenlık anlamsal parçalama (propositional chunking), Google Bilgi Kazanımı (Information Gain) patentleri ve Schema.org varlık (entity) grafı üzerinden tarama, puanlama ve alıntılama yaparlar.',
+    takeaways: [
+      'Arama botları (SearchBot) ile eğitim botları (Training Scraper) ayrıştırılmalıdır.',
+      'RAG motorları sayfayı 256-512 tokenlık anlamsal parçalara (chunks) bölerek indeksler.',
+      'KDD 2024 araştırması: Doğrudan uzman alıntısı ve istatistikler alıntılanmayı %40 artırır.',
+      'Google Information Gain patenti özgün veri ve formül sunan siteleri ödüllendirir.',
+      'Bağlantılı JSON-LD şema grafı ve llms.txt LLM halüsinasyon riskini en aza indirir.'
+    ],
+    about: ['Googlebot', 'Generative Engine Optimization', 'Dense Passage Retrieval', 'Information Gain', 'Knowledge Graph'],
+    related: ['google-ai-aramalari-icin-geo-rehberi', 'web-sitesi-teknik-seo-kontrol-listesi', 'web-sitesi-hizlandirma-core-web-vitals-rehberi'],
+    servicePath: '/hizmetler/web-tasarim/',
+    serviceLabel: 'Teknik SEO ve web altyapısını inceleyin',
+    faq: [
+      { question: 'Googlebot ve AI botları arasındaki temel fark nedir?', answer: 'Googlebot klasik SERP dizinini ve AI Overviews havuzunu besleyen genel arama tarayıcısıdır; OAI-SearchBot, Claude-SearchBot ve PerplexityBot ise yanıt motorlarında gerçek zamanlı kaynak gösterimi (citation) için doğrudan RAG indekslemesi yapar.' },
+      { question: 'AI botlarının sayfayı doğru indekslemesi için HTML nasıl olmalıdır?', answer: 'İstemci tarafı JavaScript bağımlılığı olmayan, anlamsal HTML5 etiketleriyle (article, section, h2, table, dl) yapılandırılmış ve başlık altında 1-2 cümlelik doğrudan tanım içeren ters piramit mimarisinde olmalıdır.' },
+      { question: 'robots.txt dosyasında hangi AI botlarına izin verilmelidir?', answer: 'Arama ve kaynak gösterimi sağlayan OAI-SearchBot, Claude-SearchBot, PerplexityBot, Perplexity-Search, Applebot ve ChatGPT-User açık tutulmalıdır; model eğitimi istemeyenler GPTBot ve ClaudeBot gibi eğitim botlarını ayrı yönetebilir.' },
+      { question: 'Google Bilgi Kazanımı (Information Gain) skoru nedir?', answer: 'Google’ın patentli algoritması olup, kullanıcının daha önce karşılaştığı sayfalara kıyasla yeni veri, özgün hesaplama araçları veya ilk elden uzman kanıtı sunan sayfaları tespit edip öne çıkaran puanlama sistemidir.' }
+    ],
+    sections: [
+      {
+        id: 'bot-mimarisi-ve-roller',
+        label: 'Bot türleri',
+        heading: 'Arama botları ile yapay zekâ eğitim tarayıcılarını birbirinden ayırın.',
+        paragraphs: [
+          '2025/2026 web tarama ekosisteminde botlar iki ana sınıfa ayrılmıştır: Arama ve canlı alıntılama botları (Search &amp; Retrieval Agents) ile temel model eğitim botları (Model Training Scrapers). Bu iki grubu aynı kefeye koyup toptan engellemek, markanın ChatGPT Search, Claude Search, Perplexity ve Google AI Overviews gibi yeni nesil kanallardan tamamen silinmesine yol açar.',
+          'Örneğin OpenAI’ın OAI-SearchBot tarayıcısı yalnızca ChatGPT arama sonuçlarında kaynak göstermek için çalışırken, GPTBot genel model eğitimi yapar. Benzer şekilde Claude-SearchBot arama referanslarını getirirken, ClaudeBot eğitim verisi toplar. Doğru bot yönetimi, arama ajanlarını açık tutarken eğitim tercihlerini ayrı değerlendirmektir.'
+        ],
+        table: {
+          headers: ['Kuruluş', 'Arama / Alıntı Botu (Açık Kalmalı)', 'Eğitim Botu (Tercihe Bağlı)'],
+          rows: [
+            ['OpenAI', 'OAI-SearchBot, ChatGPT-User', 'GPTBot'],
+            ['Anthropic', 'Claude-SearchBot, Claude-User', 'ClaudeBot'],
+            ['Google', 'Googlebot, Google-CloudVertexBot', 'Google-Extended'],
+            ['Perplexity', 'PerplexityBot, Perplexity-Search', '—'],
+            ['Apple', 'Applebot', 'Applebot-Extended'],
+            ['Meta', 'FacebookBot, Meta-ExternalFetcher', 'Meta-ExternalAgent']
+          ]
+        }
+      },
+      {
+        id: 'rag-chunking-ve-dpr',
+        label: 'Parçalama mekaniği',
+        heading: 'RAG ve Dense Passage Retrieval (DPR) için anlamsal parçalama kuralları.',
+        paragraphs: [
+          'Yapay zekâ yanıt motorları web sayfalarını insan gibi baştan sona tek parça olarak okumaz. Sayfayı semantik HTML sınırlarına göre 256 ila 512 tokenlık (yaklaşık 150-350 kelime) anlamsal parçalara (chunks) böler ve her parçayı çok boyutlu yoğun vektör uzayına (Dense Vector Space) aktarır.',
+          'EMNLP 2024 öncü araştırmalarına (Chen et al., Dense X Retrieval) göre dağınık paragraflar yerine bağımsız, kendi içinde anlamı tam (ön adılları çözülmüş) önerme parçaları (propositions) arama hassasiyetini %35 oranında artırmaktadır.'
+        ],
+        ordered: [
+          '<strong>Ters Piramit Başlangıcı (Definitional Lede):</strong> Her H2 veya H3 başlığının ilk cümlesinde konunun net ve bağımsız tanımını verin. Belirsiz zamirler (“bu yöntem, onlar, bunlar”) yerine açık varlık adını kullanın.',
+          '<strong>Sayısal ve İstatistiksel Destek:</strong> İddiaları genel ifadelerle değil, kesin yüzdeler, süre aralıkları ve matematiksel bağıntılarla kanıtlayın.',
+          '<strong>Doğrudan Uzman Alıntıları:</strong> KDD 2024 araştırmasının gösterdiği üzere, tırnak içinde doğrulanabilir uzman görüşleri LLM özetleyicisinin alıntı güvenini %40 artırır.',
+          '<strong>Yapılandırılmış Tablolar:</strong> Karşılaştırmaları düz metin yerine HTML table etiketleriyle sunun; LLM ayrıştırıcıları tablo verisini sıfır halüsinasyonla çeker.'
+        ],
+        callout: 'Kritik kural: Bir paragraf kendi başlığıyla birlikte kopyalanıp tek başına okunduğunda hiçbir dış referansa ihtiyaç duymadan anlaşılabilmelidir.'
+      },
+      {
+        id: 'bilgi-kazanimi-patenti',
+        label: 'Information Gain',
+        heading: 'Google’ın Bilgi Kazanımı (Information Gain) patenti nasıl çalışır?',
+        paragraphs: [
+          'Google’ın US 10,846,346 B2 numaralı patentinde tarif edilen Bilgi Kazanımı (Information Gain) mekanizması, kullanıcının daha önce okuduğu sayfalardan edindiği birikimi modeller. Bir sonraki tıklanan sayfada yeni bir bilgi, özgün veri veya farklı bir hesaplama modeli yoksa o sayfaya sıfır veya negatif Bilgi Kazanımı puanı verilir.',
+          'İnternetteki mevcut 10 makalenin özetini derleyen yüzeysel sayfalar bu nedenle son çekirdek güncellemelerde hızla sıra kaybetmektedir. Sitenin dizinde kalıcı ve güvenilir olabilmesi için ilk elden veri, interaktif teşhis araçları ve uygulanmış iş kuralları sunması şarttır.'
+        ],
+        checklist: [
+          'Her konuda rakiplerde bulunmayan en az 2 özgün veri noktası, metrik veya karar tablosu ekleyin.',
+          'Kullanıcının kendi verisini girdiği interaktif JavaScript karar ve hesaplama araçları sunun.',
+          'Teorik tavsiye yerine gerçek sınırlamaları, maliyetleri ve kimler için uygun olmadığını açıkça yazın.',
+          'Editoryal kontrolsüz, jenerik AI metin üretiminden kaçının; insan uzman doğrulaması uygulayın.'
+        ]
+      },
+      {
+        id: 'discovery-altyapisi',
+        label: 'Keşif dosyaları',
+        heading: 'robots.txt, llms.txt ve IndexNow ile gerçek zamanlı keşif mimarisi.',
+        paragraphs: [
+          'Arama motorlarının ve AI ajanlarının sayfalarınızı anında keşfetmesi için yalnızca sitemap.xml yeterli değildir. Üç katmanlı keşif altyapısı kurulmalıdır:',
+          '1. robots.txt: Tüm meşru arama ve AI ajanlarına açık izin veren, WAF engeline takılmayan sade kural kümesi. 2. llms.txt ve llms-full.txt: LLM context window limitlerine uygun, gereksiz HTML ve stil kodlarından arındırılmış temiz markdown bilgi tabanı. 3. IndexNow API: Sayfa güncellendiğinde Bing, Yandex ve AI toplayıcılarına saniyeler içinde anlık bildirim gönderen push protokolü.'
+        ],
+        table: {
+          headers: ['Protokol / Dosya', 'Muhatap Sistem', 'Birincil Görevi'],
+          rows: [
+            ['robots.txt', 'Tüm botlar ve web crawler’ları', 'Erişim izinlerini ve sitemap adresini bildirmek'],
+            ['sitemap.xml', 'Googlebot, Bingbot, YandexBot', 'Kanonik URL listesi, görsel meta ve lastmod tarihi'],
+            ['llms.txt', 'Perplexity, Cursor, LLM ajanları', 'Sitenin yapılandırılmış markdown özet haritası'],
+            ['llms-full.txt', 'RAG sistemleri ve derin LLM analizi', 'Tüm rehber ve araçların tek dosyada tam metin tabanı'],
+            ['IndexNow API', 'Bing Copilot, Yandex, Seznam', 'Yeni ve değişen sayfaları gerçek zamanlı dizine iletmek']
+          ]
+        }
+      },
+      {
+        id: 'jsonld-ve-varlik-graflari',
+        label: 'Şema mimarisi',
+        heading: 'Google Knowledge Graph ve AI için birbirine bağlı JSON-LD grafı.',
+        paragraphs: [
+          'Ayrık ve birbirinden kopuk script etiketleri yerine tek bir @graph dizisi içinde birbirine @id ile bağlanan birleşik şema mimarisi kurulmalıdır. WebPage, Organization, WebSite, Person (yazar), Service, WebApplication ve BreadcrumbList nesneleri tek bir anlamsal ağaç oluşturmalıdır.',
+          'Ayrıca Schema.org sameAs, about ve mentions özelliklerinde Wikidata ve Wikipedia URL’lerine yer verilerek varlıklar (entities) Google Knowledge Graph ve LLM bilgi tabanlarıyla hatasız şekilde eşleştirilmelidir.'
+        ],
+        callout: 'Doğrulama: Google Rich Results Test ve Schema.org Validator üzerinde 0 hata ve 0 uyarı hedeflenmelidir.'
+      },
+      {
+        id: 'olcum-ve-raporlama',
+        label: 'Performans takibi',
+        heading: 'AI indeksleme ve arama görünürlüğünü nasıl ölçeceksiniz?',
+        paragraphs: [
+          'Yapay zekâ yanıtlarında yer almayı klasik sıra takibiyle ölçmek imkansızdır; çünkü AI yanıtları kişiselleştirilmiş ve anlık üretilir. Başarı şu 4 eksende takip edilmelidir:',
+          'Search Console Generative AI Performance raporundaki AI Overviews gösterimleri, web sunucu loglarındaki OAI-SearchBot ve Claude-SearchBot 200 HTTP yanıtları, yönlendirme (referral) analitiğindeki AI kaynaklı oturumlar ve marka sorgularındaki doğrudan talep artışı.'
+        ],
+        checklist: [
+          'Haftalık olarak bot loglarında 4xx veya 5xx tarama hatalarını denetleyin.',
+          'Search Console URL Denetimi ile önemli sayfaların taranma ve indeks durumunu doğrulayın.',
+          'Analytics üzerinde chatgpt.com, perplexity.ai ve claude.ai yönlendirme trafiğini ayrı segmentte izleyin.',
+          'Hedeflenen 20 anahtar karar sorgusunu aylık periyotlarla sabit prompt setiyle test edin.'
+        ]
+      }
+    ],
+    sources: [
+      { label: 'KDD 2024 — GEO: Generative Engine Optimization (Aggarwal et al., arXiv:2311.09735)', url: 'https://arxiv.org/abs/2311.09735' },
+      { label: 'EMNLP 2024 — Dense X Retrieval: What Retrieval Granularity Should We Use? (Chen et al.)', url: 'https://arxiv.org/abs/2312.06648' },
+      { label: 'Google US Patent 10,846,346 B2 — Contextual Estimation of Information Gain Score', url: 'https://patents.google.com/patent/US10846346B2/en' },
+      { label: 'Google Search Central — Arama İndeksleme ve Tarama Esasları', url: 'https://developers.google.com/search/docs/crawling-indexing' },
+      { label: 'OpenAI — Crawler ve Arama Botu Dokümantasyonu (OAI-SearchBot)', url: 'https://developers.openai.com/api/docs/bots' },
+      { label: 'Anthropic — Claude Search ve Web Tarama Politikası', url: 'https://support.anthropic.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler' },
+      { label: 'llmstxt.org — The /llms.txt Standard for Generative AI', url: 'https://llmstxt.org' },
+      { label: 'IndexNow.org — Arama Motorları İçin Anlık İndeksleme Protokolü', url: 'https://www.indexnow.org' }
+    ]
+  },
+  {
     slug: 'e-ticaret-altyapisi-nasil-secilir',
     metaTitle: 'E-Ticaret Altyapısı Nasıl Seçilir? | Narvals Labs',
     title: 'E-ticaret altyapısı nasıl seçilir? Dokuz karar sorusu',

@@ -42,5 +42,16 @@ export const topicHubs = [
     start: ['qr-menu-nasil-yapilir', 'qr-menu-fiyatlari-ve-maliyet-kalemleri', 'qr-menu-mu-pdf-menu-mu'],
     all: ['qr-menu-nasil-yapilir', 'qr-menu-fiyatlari-ve-maliyet-kalemleri', 'qr-menu-mu-pdf-menu-mu', 'restoran-web-sitesi-nasil-olmali', 'rezervasyon-randevu-sistemi-nasil-secilir', 'web-sitesi-hizlandirma-core-web-vitals-rehberi'],
     servicePath: '/hizmetler/qr-menu/', serviceLabel: 'QR menü hizmetini inceleyin'
+  },
+  {
+    slug: 'seo-geo',
+    title: 'SEO ve GEO rehberleri: Google, yapay zekâ ve arama görünürlüğü',
+    metaTitle: 'Teknik SEO ve GEO Rehberleri: AI ve Google Aramaları | Narvals',
+    description: 'Google AI Overviews, teknik SEO kontrolü, Core Web Vitals, site hızı ve yapay zekâ indeksleme stratejilerini ele alan rehber merkezi.',
+    keywords: ['SEO rehberi', 'GEO rehberi', 'teknik SEO', 'Google AI aramaları'],
+    answer: 'Arama görünürlüğü; anahtar kelime tekrarıyla değil, taranabilir temiz kod, hızlı açılış (CWV), doğrulanabilir bilgi kazanımı ve şeffaf varlık (entity) otoritesiyle kurulur.',
+    start: ['google-ai-aramalari-icin-geo-rehberi', 'web-sitesi-teknik-seo-kontrol-listesi', 'web-sitesi-hizlandirma-core-web-vitals-rehberi'],
+    all: ['google-ai-aramalari-icin-geo-rehberi', 'web-sitesi-teknik-seo-kontrol-listesi', 'web-sitesi-hizlandirma-core-web-vitals-rehberi', 'web-sitesi-googleda-neden-cikmiyor', 'web-sitesi-donusum-orani-nasil-hesaplanir'],
+    servicePath: '/hizmetler/web-tasarim/', serviceLabel: 'Web altyapısı ve SEO hizmetini inceleyin'
   }
 ];

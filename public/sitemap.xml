@@ -341,6 +341,16 @@
     </image:image>
   </url>
   <url>
+    <loc>https://narvals.com/blog/konu/seo-geo/</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
+      <image:title>SEO ve GEO rehberleri: Google, yapay zekâ ve arama görünürlüğü</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://narvals.com/blog/e-ticaret-sitesi-nasil-acilir/</loc>
     <lastmod>2026-08-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -508,6 +518,16 @@
     <image:image>
       <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
       <image:title>GEO nedir? Google AI sonuçlarında görünürlük rehberi</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://narvals.com/blog/google-ve-ai-botlari-icin-site-indeksleme-rehberi/</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
+      <image:title>Google ve AI botları sitenizi nasıl tarar? İndeksleme rehberi</image:title>
     </image:image>
   </url>
   <url>

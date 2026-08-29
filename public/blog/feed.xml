@@ -161,6 +161,15 @@
       <content:encoded><![CDATA[<p>GEO (generative engine optimization), bir markanın üretken yapay zekâ destekli arama ve yanıt motorlarında (Google AI Overviews, ChatGPT Search, Perplexity) taranabilir, anlaşılabilir ve birincil kaynak olarak alıntılanabilir olmasını sağlayan optimizasyon disiplinidir. Princeton ve KDD 2024 araştırmalarına göre doğrudan uzman alıntıları, istatistiksel veri entegrasyonu ve net ters piramit yanıt yapısı, AI yanıtlarındaki kaynak görünürlüğünü %30-40 oranında artırmaktadır.</p><ul><li>Google ve AI motorları için GEO’nun temeli taranabilir statik HTML ve Search kalite sistemleridir.</li><li>KDD 2024 akademik araştırması: Doğrudan alıntı ve istatistik ekleme görünürlüğü %30-40 artırır.</li><li>RAG modelleri anlamsal etiketlere (article, section, h2, table, dl) göre 100-250 tokenlık parçalama yapar.</li><li>Sıra konumu, AI kaynak gösterimi (citation), marka anılması ve yapay zekâ yönlendirmesi (referral) ayrı ölçülür.</li></ul>]]></content:encoded>
     </item>
     <item>
+      <title>Google ve AI botları sitenizi nasıl tarar? İndeksleme rehberi</title>
+      <link>https://narvals.com/blog/google-ve-ai-botlari-icin-site-indeksleme-rehberi/</link>
+      <guid isPermaLink="true">https://narvals.com/blog/google-ve-ai-botlari-icin-site-indeksleme-rehberi/</guid>
+      <pubDate>Sat, 29 Aug 2026 21:00:00 GMT</pubDate>
+      <category>SEO &amp; GEO</category>
+      <description>Googlebot, OAI-SearchBot, ClaudeBot ve Applebot tarama mimarisi; robots.txt, llms.txt, şema grafı ve KDD 2024 GEO indeksleme rehberi.</description>
+      <content:encoded><![CDATA[<p>Googlebot ve modern yapay zekâ tarayıcıları (OAI-SearchBot, Claude-SearchBot, PerplexityBot, Applebot) siteleri sadece anahtar kelime eşleşmesiyle indekslemez. İki aşamalı tarama (HTML çekme ve WRS render), RAG yoğun geçit erişimi (Dense Passage Retrieval), 256-512 tokenlık anlamsal parçalama (propositional chunking), Google Bilgi Kazanımı (Information Gain) patentleri ve Schema.org varlık (entity) grafı üzerinden tarama, puanlama ve alıntılama yaparlar.</p><ul><li>Arama botları (SearchBot) ile eğitim botları (Training Scraper) ayrıştırılmalıdır.</li><li>RAG motorları sayfayı 256-512 tokenlık anlamsal parçalara (chunks) bölerek indeksler.</li><li>KDD 2024 araştırması: Doğrudan uzman alıntısı ve istatistikler alıntılanmayı %40 artırır.</li><li>Google Information Gain patenti özgün veri ve formül sunan siteleri ödüllendirir.</li><li>Bağlantılı JSON-LD şema grafı ve llms.txt LLM halüsinasyon riskini en aza indirir.</li></ul>]]></content:encoded>
+    </item>
+    <item>
       <title>E-ticaret altyapısı nasıl seçilir? Dokuz karar sorusu</title>
       <link>https://narvals.com/blog/e-ticaret-altyapisi-nasil-secilir/</link>
       <guid isPermaLink="true">https://narvals.com/blog/e-ticaret-altyapisi-nasil-secilir/</guid>

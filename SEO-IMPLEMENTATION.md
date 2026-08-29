@@ -4,10 +4,11 @@ Son güncelleme: 30 Ağustos 2026
 
 ## Yönetici özeti
 
-Site artık 68 canonical URL, 14 ücretsiz interaktif karar aracı, 34 kaynaklı
-karar rehberi, 4 konu merkezi hub'ı, blog hub'ı, editoryal politika, RSS, URL bazlı
-sitemap tarihi, çoklu AI arama botlarını (OAI-SearchBot, Claude-SearchBot, PerplexityBot,
-Applebot-Extended, Meta-ExternalAgent vb.) destekleyen robots politikası, zenginleştirilmiş
+Site artık 70 canonical URL, 14 ücretsiz interaktif karar aracı, 35 kaynaklı
+karar rehberi, 5 konu merkezi hub'ı (E-ticaret, Web Sitesi, Reklam, QR Menü, SEO & GEO),
+blog hub'ı, editoryal politika, RSS, URL bazlı sitemap tarihi, tüm arama ve AI
+tarayıcılarını (Googlebot, OAI-SearchBot, Claude-SearchBot, PerplexityBot, Applebot,
+Meta-ExternalAgent vb.) destekleyen robots politikası, zenginleştirilmiş
 JSON-LD şema grafı (`Organization`, `WebSite`, `WebPage`, `BlogPosting`, `Service`,
 `WebApplication`, `FAQPage`, `BreadcrumbList`), tam sosyal metadata, iki yönlü
 iç bağlantılar ve otomatik SEO/HTML kontrolleri içeriyor.
@@ -48,6 +49,7 @@ ele alınır. Şehir adı değiştirilmiş doorway sayfaları oluşturulmaz.
 | Kurumsal web sitesi briefi nasıl hazırlanır? | Web tasarım kapsamı ve teklif hazırlığı |
 | Web sitesi teknik SEO kontrol listesi | Yayın, taşıma, tarama ve indeks güvenliği |
 | GEO nedir? Google AI aramalarında görünürlük | SEO/GEO beklentisi ve ölçümü |
+| Google ve AI botları sitenizi nasıl tarar? | Bot ayrımı, RAG parçalama, Information Gain ve indeksleme |
 | E-ticaret altyapısı nasıl seçilir? | Hazır, headless ve özel mimari kararı |
 | Hazır yazılım mı, özel yazılım mı? | Yazılım satın alma karar matrisi |
 | Meta Pixel ve Conversions API farkı | Meta ölçüm mimarisi ve sınırlar |

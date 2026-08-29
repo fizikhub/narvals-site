@@ -1,0 +1,590 @@
+<!doctype html>
+<html class="no-js" lang="tr">
+  <head>
+    <script>document.documentElement.classList.replace('no-js', 'js');</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#03233a" />
+    <meta name="color-scheme" content="light" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="msapplication-TileColor" content="#03233a" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="description" content="Googlebot, OAI-SearchBot, ClaudeBot ve Applebot tarama mimarisi; robots.txt, llms.txt, şema grafı ve KDD 2024 GEO indeksleme rehberi." />
+    <meta name="keywords" content="Googlebot indeksleme, AI bot taraması, GEO indeksleme, robots.txt AI, llms.txt" />
+    <meta name="author" content="Narvals Labs" />
+    <link rel="canonical" href="https://narvals.com/blog/google-ve-ai-botlari-icin-site-indeksleme-rehberi/" />
+    <link rel="alternate" hreflang="tr" href="https://narvals.com/blog/google-ve-ai-botlari-icin-site-indeksleme-rehberi/" />
+    <link rel="alternate" hreflang="tr-TR" href="https://narvals.com/blog/google-ve-ai-botlari-icin-site-indeksleme-rehberi/" />
+    <link rel="alternate" hreflang="x-default" href="https://narvals.com/blog/google-ve-ai-botlari-icin-site-indeksleme-rehberi/" />
+    <link rel="alternate" type="application/rss+xml" title="Narvals Labs Rehberleri" href="https://narvals.com/blog/feed.xml" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/assets/logo-v6/narvals-favicon-48.png" type="image/png" sizes="48x48" />
+    <link rel="icon" href="/assets/logo-v6/narvals-favicon-96.png" type="image/png" sizes="96x96" />
+    <link rel="icon" href="/assets/logo-v6/narvals-favicon-192.png" type="image/png" sizes="192x192" />
+    <link rel="icon" href="/assets/logo-v6/narvals-favicon-v6-256.png" type="image/png" sizes="256x256" />
+    <link rel="apple-touch-icon" href="/assets/logo-v6/narvals-avatar-v6-1080.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Narvals Labs" />
+    <meta property="og:title" content="Google ve AI Botları İndeksleme Rehberi | Narvals" />
+    <meta property="og:description" content="Googlebot, OAI-SearchBot, ClaudeBot ve Applebot tarama mimarisi; robots.txt, llms.txt, şema grafı ve KDD 2024 GEO indeksleme rehberi." />
+    <meta property="og:url" content="https://narvals.com/blog/google-ve-ai-botlari-icin-site-indeksleme-rehberi/" />
+    <meta property="og:image" content="https://narvals.com/og/narvals-labs-og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Narvals Labs — Web, Yazılım ve Reklam" />
+    <meta property="article:published_time" content="2026-08-30T00:00:00+03:00" />
+    <meta property="article:modified_time" content="2026-08-30T00:00:00+03:00" />
+    <meta property="article:section" content="SEO &amp; GEO" />
+    <meta property="article:author" content="https://narvals.com/hakkimizda/" />
+    <meta property="article:publisher" content="https://narvals.com/" />
+    <meta property="article:tag" content="Googlebot indeksleme" />
+    <meta property="article:tag" content="AI bot taraması" />
+    <meta property="article:tag" content="GEO indeksleme" />
+    <meta property="article:tag" content="robots.txt AI" />
+    <meta property="article:tag" content="llms.txt" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Google ve AI Botları İndeksleme Rehberi | Narvals" />
+    <meta name="twitter:description" content="Googlebot, OAI-SearchBot, ClaudeBot ve Applebot tarama mimarisi; robots.txt, llms.txt, şema grafı ve KDD 2024 GEO indeksleme rehberi." />
+    <meta name="twitter:image" content="https://narvals.com/og/narvals-labs-og.jpg" />
+    <meta name="twitter:image:alt" content="Narvals Labs — Web, Yazılım ve Reklam" />
+    <meta name="twitter:label1" content="Okuma Süresi" />
+    <meta name="twitter:data1" content="14 dk" />
+    <meta name="twitter:label2" content="Kategori" />
+    <meta name="twitter:data2" content="SEO &amp; GEO" />
+    <title>Google ve AI Botları İndeksleme Rehberi | Narvals</title>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://narvals.com/#organization",
+      "name": "Narvals Labs",
+      "legalName": "Narvals Labs",
+      "url": "https://narvals.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://narvals.com/assets/logo-v6/narvals-avatar-v6-1080.png",
+        "contentUrl": "https://narvals.com/assets/logo-v6/narvals-avatar-v6-1080.png",
+        "width": 1080,
+        "height": 1080
+      },
+      "image": "https://narvals.com/og/narvals-labs-og.jpg",
+      "description": "Web sitesi ve UX, işletmeye özel yazılım, dijital reklam, marka, QR menü ve rezervasyon sistemleri üreten dijital stüdyo.",
+      "email": "info@narvals.com",
+      "telephone": "+905019441921",
+      "sameAs": [
+        "https://github.com/fizikhub/narvals-site"
+      ],
+      "publishingPrinciples": "https://narvals.com/editoryal-ilkeler/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "TR"
+      },
+      "currenciesAccepted": "TRY, EUR, USD",
+      "paymentAccepted": "Bank Transfer, Credit Card",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "info@narvals.com",
+        "telephone": "+905019441921",
+        "areaServed": "TR",
+        "availableLanguage": [
+          "Turkish",
+          "English"
+        ],
+        "hoursAvailable": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Türkiye"
+      },
+      "founder": {
+        "@type": "Organization",
+        "name": "Narvals Labs Team",
+        "url": "https://narvals.com/hakkimizda/"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Narvals Labs Dijital Hizmetler",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Kurumsal Web Tasarım ve UX",
+              "url": "https://narvals.com/hizmetler/web-tasarim/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "E-Ticaret Sitesi Tasarımı ve Geliştirme",
+              "url": "https://narvals.com/hizmetler/e-ticaret/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "İşletmeye Özel Yazılım ve Otomasyon",
+              "url": "https://narvals.com/hizmetler/ozel-yazilim/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Google Ads Reklam ve Dönüşüm Yönetimi",
+              "url": "https://narvals.com/hizmetler/google-ads/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Meta (Instagram & Facebook) Reklam Yönetimi",
+              "url": "https://narvals.com/hizmetler/dijital-reklam/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sosyal Medya Yönetimi ve İçerik Stratejisi",
+              "url": "https://narvals.com/hizmetler/sosyal-medya-yonetimi/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Özel QR Menü Yazılımı ve Yönetim Paneli",
+              "url": "https://narvals.com/hizmetler/qr-menu/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Online Rezervasyon ve Randevu Sistemi",
+              "url": "https://narvals.com/hizmetler/rezervasyon-randevu/"
+            }
+          }
+        ]
+      },
+      "knowsAbout": [
+        "Web Tasarım ve UX",
+        "Özel Yazılım Geliştirme",
+        "Meta Reklam Yönetimi",
+        "Google Ads Yönetimi",
+        "E-Ticaret Sitesi",
+        "Sosyal Medya Yönetimi",
+        "QR Menü Sistemleri",
+        "Online Rezervasyon Sistemleri",
+        "Teknik SEO",
+        "Generative Engine Optimization (GEO)",
+        "Yapay Zeka Aramaları ve LLM İndeksleme",
+        "E-E-A-T ve Varlık Tabanlı SEO",
+        "Bilgi Kazanımı (Information Gain)",
+        "Yapılandırılmış Veri ve Schema Mimarisi",
+        "Core Web Vitals Optimizasyonu",
+        "Dönüşüm Oranı Optimizasyonu (CRO)",
+        "Conversions API (CAPI)",
+        "Google Analytics 4 (GA4)",
+        "Headless CMS ve API Mimarisi"
+      ],
+      "knowsLanguage": [
+        "tr",
+        "en"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://narvals.com/#website",
+      "url": "https://narvals.com/",
+      "name": "Narvals Labs",
+      "alternateName": [
+        "Narvals",
+        "Narvals Digital",
+        "Narvals Studio",
+        "Narvals Labs Dijital"
+      ],
+      "inLanguage": "tr-TR",
+      "publisher": {
+        "@id": "https://narvals.com/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://narvals.com/blog/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://narvals.com/blog/google-ve-ai-botlari-icin-site-indeksleme-rehberi/#webpage",
+      "url": "https://narvals.com/blog/google-ve-ai-botlari-icin-site-indeksleme-rehberi/",
+      "name": "Google ve AI Botları İndeksleme Rehberi | Narvals",
+      "description": "Googlebot, OAI-SearchBot, ClaudeBot ve Applebot tarama mimarisi; robots.txt, llms.txt, şema grafı ve KDD 2024 GEO indeksleme rehberi.",
+      "inLanguage": "tr-TR",
+      "isPartOf": {
+        "@id": "https://narvals.com/#website"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Googlebot",
+          "sameAs": "https://en.wikipedia.org/wiki/Googlebot"
+        },
+        {
+          "@type": "Thing",
+          "name": "Generative Engine Optimization",
+          "sameAs": "https://en.wikipedia.org/wiki/Generative_artificial_intelligence"
+        },
+        {
+          "@type": "Thing",
+          "name": "Dense Passage Retrieval",
+          "sameAs": "https://en.wikipedia.org/wiki/Dense_passage_retrieval"
+        },
+        {
+          "@type": "Thing",
+          "name": "Information Gain",
+          "sameAs": "https://en.wikipedia.org/wiki/Information_gain_in_decision_trees"
+        },
+        {
+          "@type": "Thing",
+          "name": "Knowledge Graph",
+          "sameAs": "https://en.wikipedia.org/wiki/Google_Knowledge_Graph"
+        }
+      ],
+      "datePublished": "2026-08-30T00:00:00+03:00",
+      "dateModified": "2026-08-30T00:00:00+03:00",
+      "breadcrumb": {
+        "@id": "https://narvals.com/blog/google-ve-ai-botlari-icin-site-indeksleme-rehberi/#breadcrumb"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "h1",
+          ".info-hero__answer",
+          ".article-summary ul",
+          ".article-section h2"
+        ]
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://narvals.com/og/narvals-labs-og.jpg",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://narvals.com/blog/google-ve-ai-botlari-icin-site-indeksleme-rehberi/#article",
+      "mainEntityOfPage": {
+        "@id": "https://narvals.com/blog/google-ve-ai-botlari-icin-site-indeksleme-rehberi/#webpage"
+      },
+      "headline": "Google ve AI botları sitenizi nasıl tarar? İndeksleme rehberi",
+      "description": "Googlebot, OAI-SearchBot, ClaudeBot ve Applebot tarama mimarisi; robots.txt, llms.txt, şema grafı ve KDD 2024 GEO indeksleme rehberi.",
+      "image": [
+        "https://narvals.com/og/narvals-labs-og.jpg"
+      ],
+      "datePublished": "2026-08-30T00:00:00+03:00",
+      "dateModified": "2026-08-30T00:00:00+03:00",
+      "timeRequired": "PT14M",
+      "inLanguage": "tr-TR",
+      "isAccessibleForFree": true,
+      "wordCount": 1047,
+      "articleSection": "SEO & GEO",
+      "keywords": "Googlebot indeksleme, AI bot taraması, GEO indeksleme, robots.txt AI, llms.txt",
+      "author": {
+        "@id": "https://narvals.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://narvals.com/#organization"
+      },
+      "copyrightHolder": {
+        "@id": "https://narvals.com/#organization"
+      },
+      "license": "https://narvals.com/editoryal-ilkeler/",
+      "publishingPrinciples": "https://narvals.com/editoryal-ilkeler/",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "h1",
+          ".info-hero__answer",
+          ".article-summary ul",
+          ".article-section h2"
+        ]
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Googlebot",
+          "sameAs": "https://en.wikipedia.org/wiki/Googlebot"
+        },
+        {
+          "@type": "Thing",
+          "name": "Generative Engine Optimization",
+          "sameAs": "https://en.wikipedia.org/wiki/Generative_artificial_intelligence"
+        },
+        {
+          "@type": "Thing",
+          "name": "Dense Passage Retrieval",
+          "sameAs": "https://en.wikipedia.org/wiki/Dense_passage_retrieval"
+        },
+        {
+          "@type": "Thing",
+          "name": "Information Gain",
+          "sameAs": "https://en.wikipedia.org/wiki/Information_gain_in_decision_trees"
+        },
+        {
+          "@type": "Thing",
+          "name": "Knowledge Graph",
+          "sameAs": "https://en.wikipedia.org/wiki/Google_Knowledge_Graph"
+        }
+      ],
+      "citation": [
+        "https://arxiv.org/abs/2311.09735",
+        "https://arxiv.org/abs/2312.06648",
+        "https://patents.google.com/patent/US10846346B2/en",
+        "https://developers.google.com/search/docs/crawling-indexing",
+        "https://developers.openai.com/api/docs/bots",
+        "https://support.anthropic.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+        "https://llmstxt.org",
+        "https://www.indexnow.org"
+      ],
+      "isBasedOn": [
+        "https://arxiv.org/abs/2311.09735",
+        "https://arxiv.org/abs/2312.06648",
+        "https://patents.google.com/patent/US10846346B2/en",
+        "https://developers.google.com/search/docs/crawling-indexing",
+        "https://developers.openai.com/api/docs/bots",
+        "https://support.anthropic.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+        "https://llmstxt.org",
+        "https://www.indexnow.org"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://narvals.com/blog/google-ve-ai-botlari-icin-site-indeksleme-rehberi/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ana sayfa",
+          "item": "https://narvals.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Rehberler",
+          "item": "https://narvals.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "SEO ve GEO rehberleri",
+          "item": "https://narvals.com/blog/konu/seo-geo/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Google ve AI botları sitenizi nasıl tarar? İndeksleme rehberi",
+          "item": "https://narvals.com/blog/google-ve-ai-botlari-icin-site-indeksleme-rehberi/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://narvals.com/blog/google-ve-ai-botlari-icin-site-indeksleme-rehberi/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Googlebot ve AI botları arasındaki temel fark nedir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Googlebot klasik SERP dizinini ve AI Overviews havuzunu besleyen genel arama tarayıcısıdır; OAI-SearchBot, Claude-SearchBot ve PerplexityBot ise yanıt motorlarında gerçek zamanlı kaynak gösterimi (citation) için doğrudan RAG indekslemesi yapar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "AI botlarının sayfayı doğru indekslemesi için HTML nasıl olmalıdır?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "İstemci tarafı JavaScript bağımlılığı olmayan, anlamsal HTML5 etiketleriyle (article, section, h2, table, dl) yapılandırılmış ve başlık altında 1-2 cümlelik doğrudan tanım içeren ters piramit mimarisinde olmalıdır."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "robots.txt dosyasında hangi AI botlarına izin verilmelidir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Arama ve kaynak gösterimi sağlayan OAI-SearchBot, Claude-SearchBot, PerplexityBot, Perplexity-Search, Applebot ve ChatGPT-User açık tutulmalıdır; model eğitimi istemeyenler GPTBot ve ClaudeBot gibi eğitim botlarını ayrı yönetebilir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Google Bilgi Kazanımı (Information Gain) skoru nedir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google’ın patentli algoritması olup, kullanıcının daha önce karşılaştığı sayfalara kıyasla yeni veri, özgün hesaplama araçları veya ilk elden uzman kanıtı sunan sayfaları tespit edip öne çıkaran puanlama sistemidir."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
+  </head>
+  <body class="info-page article-page">
+    <!-- Bu dosya content/blog-posts.mjs kaynağından otomatik üretilir. -->
+    <a class="skip-link" href="#main-content">Ana içeriğe geç</a>
+    <header class="info-nav">
+      <a class="info-nav__brand" href="/"><img src="/assets/logo-v6/narvals-mascot-v6-transparent-96.png" alt="" width="96" height="96" /><span>narvals<i>//</i>labs</span></a>
+      <nav class="info-nav__links" aria-label="Ana menü"><a href="/hizmetler/">Hizmetler</a><a href="/blog/" aria-current="page">Rehberler</a><a href="/hakkimizda/">Hakkımızda</a><a href="/iletisim/">Projeyi konuşalım</a></nav>
+    </header>
+    <main id="main-content">
+      <article>
+        <header class="info-hero article-hero">
+          <div class="info-hero__copy">
+            <nav class="breadcrumbs" aria-label="İçerik yolu"><a href="/">Ana sayfa</a><span>/</span><a href="/blog/">Rehberler</a><span>/</span><a href="/blog/konu/seo-geo/">SEO &amp; GEO</a></nav>
+            <p class="info-hero__kicker">SEO &amp; GEO · Karar rehberi</p>
+            <h1>Google ve AI botları sitenizi nasıl tarar? İndeksleme rehberi</h1>
+            <p class="info-hero__answer">Googlebot ve modern yapay zekâ tarayıcıları (OAI-SearchBot, Claude-SearchBot, PerplexityBot, Applebot) siteleri sadece anahtar kelime eşleşmesiyle indekslemez. İki aşamalı tarama (HTML çekme ve WRS render), RAG yoğun geçit erişimi (Dense Passage Retrieval), 256-512 tokenlık anlamsal parçalama (propositional chunking), Google Bilgi Kazanımı (Information Gain) patentleri ve Schema.org varlık (entity) grafı üzerinden tarama, puanlama ve alıntılama yaparlar.</p>
+            <div class="article-meta"><span>Yayınlayan <a href="/hakkimizda/">Narvals Labs</a></span><span>Yayımlandı <time datetime="2026-08-30T00:00:00+03:00">30 Ağustos 2026</time></span><span>14 dk okuma</span></div>
+          </div>
+          <aside class="info-hero__panel article-summary" aria-labelledby="ozet-basligi"><strong id="ozet-basligi">Bu rehberin özeti</strong><ul><li>Arama botları (SearchBot) ile eğitim botları (Training Scraper) ayrıştırılmalıdır.</li><li>RAG motorları sayfayı 256-512 tokenlık anlamsal parçalara (chunks) bölerek indeksler.</li><li>KDD 2024 araştırması: Doğrudan uzman alıntısı ve istatistikler alıntılanmayı %40 artırır.</li><li>Google Information Gain patenti özgün veri ve formül sunan siteleri ödüllendirir.</li><li>Bağlantılı JSON-LD şema grafı ve llms.txt LLM halüsinasyon riskini en aza indirir.</li></ul></aside>
+        </header>
+
+        <div class="info-layout article-layout">
+          <nav class="info-toc" aria-label="Makale içeriği"><strong>Bu rehberde</strong><a href="#bot-mimarisi-ve-roller">Bot türleri</a><a href="#rag-chunking-ve-dpr">Parçalama mekaniği</a><a href="#bilgi-kazanimi-patenti">Information Gain</a><a href="#discovery-altyapisi">Keşif dosyaları</a><a href="#jsonld-ve-varlik-graflari">Şema mimarisi</a><a href="#olcum-ve-raporlama">Performans takibi</a><a href="#kisa-cevaplar">Kısa cevaplar</a><a href="#kaynaklar">Kaynaklar</a></nav>
+          <div class="info-content article-content">
+            <section class="info-section article-section" id="bot-mimarisi-ve-roller">
+        <p class="info-section__label">Bot türleri</p>
+        <h2>Arama botları ile yapay zekâ eğitim tarayıcılarını birbirinden ayırın.</h2>
+        <p>2025/2026 web tarama ekosisteminde botlar iki ana sınıfa ayrılmıştır: Arama ve canlı alıntılama botları (Search &amp; Retrieval Agents) ile temel model eğitim botları (Model Training Scrapers). Bu iki grubu aynı kefeye koyup toptan engellemek, markanın ChatGPT Search, Claude Search, Perplexity ve Google AI Overviews gibi yeni nesil kanallardan tamamen silinmesine yol açar.</p>
+        <p>Örneğin OpenAI’ın OAI-SearchBot tarayıcısı yalnızca ChatGPT arama sonuçlarında kaynak göstermek için çalışırken, GPTBot genel model eğitimi yapar. Benzer şekilde Claude-SearchBot arama referanslarını getirirken, ClaudeBot eğitim verisi toplar. Doğru bot yönetimi, arama ajanlarını açık tutarken eğitim tercihlerini ayrı değerlendirmektir.</p>
+
+
+
+        <section class="article-table-wrap" tabindex="0" aria-label="Kuruluş, Arama / Alıntı Botu (Açık Kalmalı), Eğitim Botu (Tercihe Bağlı) tablosu">
+          <table class="decision-table"><thead><tr><th scope="col">Kuruluş</th><th scope="col">Arama / Alıntı Botu (Açık Kalmalı)</th><th scope="col">Eğitim Botu (Tercihe Bağlı)</th></tr></thead><tbody><tr><th scope="row">OpenAI</th><td>OAI-SearchBot, ChatGPT-User</td><td>GPTBot</td></tr><tr><th scope="row">Anthropic</th><td>Claude-SearchBot, Claude-User</td><td>ClaudeBot</td></tr><tr><th scope="row">Google</th><td>Googlebot, Google-CloudVertexBot</td><td>Google-Extended</td></tr><tr><th scope="row">Perplexity</th><td>PerplexityBot, Perplexity-Search</td><td>—</td></tr><tr><th scope="row">Apple</th><td>Applebot</td><td>Applebot-Extended</td></tr><tr><th scope="row">Meta</th><td>FacebookBot, Meta-ExternalFetcher</td><td>Meta-ExternalAgent</td></tr></tbody></table>
+        </section>
+
+      </section>
+            <section class="info-section article-section" id="rag-chunking-ve-dpr">
+        <p class="info-section__label">Parçalama mekaniği</p>
+        <h2>RAG ve Dense Passage Retrieval (DPR) için anlamsal parçalama kuralları.</h2>
+        <p>Yapay zekâ yanıt motorları web sayfalarını insan gibi baştan sona tek parça olarak okumaz. Sayfayı semantik HTML sınırlarına göre 256 ila 512 tokenlık (yaklaşık 150-350 kelime) anlamsal parçalara (chunks) böler ve her parçayı çok boyutlu yoğun vektör uzayına (Dense Vector Space) aktarır.</p>
+        <p>EMNLP 2024 öncü araştırmalarına (Chen et al., Dense X Retrieval) göre dağınık paragraflar yerine bağımsız, kendi içinde anlamı tam (ön adılları çözülmüş) önerme parçaları (propositions) arama hassasiyetini %35 oranında artırmaktadır.</p>
+
+        <ol class="article-steps"><li><strong>Ters Piramit Başlangıcı (Definitional Lede):</strong> Her H2 veya H3 başlığının ilk cümlesinde konunun net ve bağımsız tanımını verin. Belirsiz zamirler (“bu yöntem, onlar, bunlar”) yerine açık varlık adını kullanın.</li><li><strong>Sayısal ve İstatistiksel Destek:</strong> İddiaları genel ifadelerle değil, kesin yüzdeler, süre aralıkları ve matematiksel bağıntılarla kanıtlayın.</li><li><strong>Doğrudan Uzman Alıntıları:</strong> KDD 2024 araştırmasının gösterdiği üzere, tırnak içinde doğrulanabilir uzman görüşleri LLM özetleyicisinin alıntı güvenini %40 artırır.</li><li><strong>Yapılandırılmış Tablolar:</strong> Karşılaştırmaları düz metin yerine HTML table etiketleriyle sunun; LLM ayrıştırıcıları tablo verisini sıfır halüsinasyonla çeker.</li></ol>
+
+
+        <aside class="article-callout" aria-label="RAG ve Dense Passage Retrieval (DPR) için anlamsal parçalama kuralları.: karar notu"><strong>Karar notu</strong><p>Kritik kural: Bir paragraf kendi başlığıyla birlikte kopyalanıp tek başına okunduğunda hiçbir dış referansa ihtiyaç duymadan anlaşılabilmelidir.</p></aside>
+      </section>
+            <section class="info-section article-section" id="bilgi-kazanimi-patenti">
+        <p class="info-section__label">Information Gain</p>
+        <h2>Google’ın Bilgi Kazanımı (Information Gain) patenti nasıl çalışır?</h2>
+        <p>Google’ın US 10,846,346 B2 numaralı patentinde tarif edilen Bilgi Kazanımı (Information Gain) mekanizması, kullanıcının daha önce okuduğu sayfalardan edindiği birikimi modeller. Bir sonraki tıklanan sayfada yeni bir bilgi, özgün veri veya farklı bir hesaplama modeli yoksa o sayfaya sıfır veya negatif Bilgi Kazanımı puanı verilir.</p>
+        <p>İnternetteki mevcut 10 makalenin özetini derleyen yüzeysel sayfalar bu nedenle son çekirdek güncellemelerde hızla sıra kaybetmektedir. Sitenin dizinde kalıcı ve güvenilir olabilmesi için ilk elden veri, interaktif teşhis araçları ve uygulanmış iş kuralları sunması şarttır.</p>
+
+
+        <ul class="article-checklist"><li>Her konuda rakiplerde bulunmayan en az 2 özgün veri noktası, metrik veya karar tablosu ekleyin.</li><li>Kullanıcının kendi verisini girdiği interaktif JavaScript karar ve hesaplama araçları sunun.</li><li>Teorik tavsiye yerine gerçek sınırlamaları, maliyetleri ve kimler için uygun olmadığını açıkça yazın.</li><li>Editoryal kontrolsüz, jenerik AI metin üretiminden kaçının; insan uzman doğrulaması uygulayın.</li></ul>
+
+
+      </section>
+            <section class="info-section article-section" id="discovery-altyapisi">
+        <p class="info-section__label">Keşif dosyaları</p>
+        <h2>robots.txt, llms.txt ve IndexNow ile gerçek zamanlı keşif mimarisi.</h2>
+        <p>Arama motorlarının ve AI ajanlarının sayfalarınızı anında keşfetmesi için yalnızca sitemap.xml yeterli değildir. Üç katmanlı keşif altyapısı kurulmalıdır:</p>
+        <p>1. robots.txt: Tüm meşru arama ve AI ajanlarına açık izin veren, WAF engeline takılmayan sade kural kümesi. 2. llms.txt ve llms-full.txt: LLM context window limitlerine uygun, gereksiz HTML ve stil kodlarından arındırılmış temiz markdown bilgi tabanı. 3. IndexNow API: Sayfa güncellendiğinde Bing, Yandex ve AI toplayıcılarına saniyeler içinde anlık bildirim gönderen push protokolü.</p>
+
+
+
+        <section class="article-table-wrap" tabindex="0" aria-label="Protokol / Dosya, Muhatap Sistem, Birincil Görevi tablosu">
+          <table class="decision-table"><thead><tr><th scope="col">Protokol / Dosya</th><th scope="col">Muhatap Sistem</th><th scope="col">Birincil Görevi</th></tr></thead><tbody><tr><th scope="row">robots.txt</th><td>Tüm botlar ve web crawler’ları</td><td>Erişim izinlerini ve sitemap adresini bildirmek</td></tr><tr><th scope="row">sitemap.xml</th><td>Googlebot, Bingbot, YandexBot</td><td>Kanonik URL listesi, görsel meta ve lastmod tarihi</td></tr><tr><th scope="row">llms.txt</th><td>Perplexity, Cursor, LLM ajanları</td><td>Sitenin yapılandırılmış markdown özet haritası</td></tr><tr><th scope="row">llms-full.txt</th><td>RAG sistemleri ve derin LLM analizi</td><td>Tüm rehber ve araçların tek dosyada tam metin tabanı</td></tr><tr><th scope="row">IndexNow API</th><td>Bing Copilot, Yandex, Seznam</td><td>Yeni ve değişen sayfaları gerçek zamanlı dizine iletmek</td></tr></tbody></table>
+        </section>
+
+      </section>
+            <section class="info-section article-section" id="jsonld-ve-varlik-graflari">
+        <p class="info-section__label">Şema mimarisi</p>
+        <h2>Google Knowledge Graph ve AI için birbirine bağlı JSON-LD grafı.</h2>
+        <p>Ayrık ve birbirinden kopuk script etiketleri yerine tek bir @graph dizisi içinde birbirine @id ile bağlanan birleşik şema mimarisi kurulmalıdır. WebPage, Organization, WebSite, Person (yazar), Service, WebApplication ve BreadcrumbList nesneleri tek bir anlamsal ağaç oluşturmalıdır.</p>
+        <p>Ayrıca Schema.org sameAs, about ve mentions özelliklerinde Wikidata ve Wikipedia URL’lerine yer verilerek varlıklar (entities) Google Knowledge Graph ve LLM bilgi tabanlarıyla hatasız şekilde eşleştirilmelidir.</p>
+
+
+
+
+        <aside class="article-callout" aria-label="Google Knowledge Graph ve AI için birbirine bağlı JSON-LD grafı.: karar notu"><strong>Karar notu</strong><p>Doğrulama: Google Rich Results Test ve Schema.org Validator üzerinde 0 hata ve 0 uyarı hedeflenmelidir.</p></aside>
+      </section>
+            <section class="info-section article-section" id="olcum-ve-raporlama">
+        <p class="info-section__label">Performans takibi</p>
+        <h2>AI indeksleme ve arama görünürlüğünü nasıl ölçeceksiniz?</h2>
+        <p>Yapay zekâ yanıtlarında yer almayı klasik sıra takibiyle ölçmek imkansızdır; çünkü AI yanıtları kişiselleştirilmiş ve anlık üretilir. Başarı şu 4 eksende takip edilmelidir:</p>
+        <p>Search Console Generative AI Performance raporundaki AI Overviews gösterimleri, web sunucu loglarındaki OAI-SearchBot ve Claude-SearchBot 200 HTTP yanıtları, yönlendirme (referral) analitiğindeki AI kaynaklı oturumlar ve marka sorgularındaki doğrudan talep artışı.</p>
+
+
+        <ul class="article-checklist"><li>Haftalık olarak bot loglarında 4xx veya 5xx tarama hatalarını denetleyin.</li><li>Search Console URL Denetimi ile önemli sayfaların taranma ve indeks durumunu doğrulayın.</li><li>Analytics üzerinde chatgpt.com, perplexity.ai ve claude.ai yönlendirme trafiğini ayrı segmentte izleyin.</li><li>Hedeflenen 20 anahtar karar sorgusunu aylık periyotlarla sabit prompt setiyle test edin.</li></ul>
+
+
+      </section>
+            <aside class="article-tool-strip" aria-label="İlgili ücretsiz araç">
+              <div class="article-tool-strip__copy">
+                <small>İlgili ücretsiz araç · Kayıt gerekmez</small>
+                <strong>Core Web Vitals ve Bot Hızı Teşhis Aracı</strong>
+                <p>Tarayıcınızda çalışan açık formüllü araçla kendi verilerinizi anında test edin.</p>
+              </div>
+              <a class="article-tool-strip__btn" href="/araclar/core-web-vitals-kontrolu/">Aracı başlat <span aria-hidden="true">→</span></a>
+            </aside>
+            <section class="info-section article-section" id="kisa-cevaplar">
+              <p class="info-section__label">Sık sorulan sorular</p>
+              <h2>Kısa ve doğrudan cevaplar.</h2>
+              <div class="article-faq"><details><summary>Googlebot ve AI botları arasındaki temel fark nedir?</summary><p>Googlebot klasik SERP dizinini ve AI Overviews havuzunu besleyen genel arama tarayıcısıdır; OAI-SearchBot, Claude-SearchBot ve PerplexityBot ise yanıt motorlarında gerçek zamanlı kaynak gösterimi (citation) için doğrudan RAG indekslemesi yapar.</p></details><details><summary>AI botlarının sayfayı doğru indekslemesi için HTML nasıl olmalıdır?</summary><p>İstemci tarafı JavaScript bağımlılığı olmayan, anlamsal HTML5 etiketleriyle (article, section, h2, table, dl) yapılandırılmış ve başlık altında 1-2 cümlelik doğrudan tanım içeren ters piramit mimarisinde olmalıdır.</p></details><details><summary>robots.txt dosyasında hangi AI botlarına izin verilmelidir?</summary><p>Arama ve kaynak gösterimi sağlayan OAI-SearchBot, Claude-SearchBot, PerplexityBot, Perplexity-Search, Applebot ve ChatGPT-User açık tutulmalıdır; model eğitimi istemeyenler GPTBot ve ClaudeBot gibi eğitim botlarını ayrı yönetebilir.</p></details><details><summary>Google Bilgi Kazanımı (Information Gain) skoru nedir?</summary><p>Google’ın patentli algoritması olup, kullanıcının daha önce karşılaştığı sayfalara kıyasla yeni veri, özgün hesaplama araçları veya ilk elden uzman kanıtı sunan sayfaları tespit edip öne çıkaran puanlama sistemidir.</p></details></div>
+            </section>
+            <section class="info-section article-section" id="kaynaklar">
+              <p class="info-section__label">Birincil kaynaklar</p>
+              <h2>Kaynaklar ve kapsam.</h2>
+              <p>Bağlantılar içerikteki değişebilir veya dış doğrulama gerektiren bilgilerin kaynağıdır. Ticari ilişki veya sponsorlu bağlantı değildir.</p>
+              <ol class="article-sources"><li><a href="https://arxiv.org/abs/2311.09735" rel="noopener noreferrer">KDD 2024 — GEO: Generative Engine Optimization (Aggarwal et al., arXiv:2311.09735)</a></li><li><a href="https://arxiv.org/abs/2312.06648" rel="noopener noreferrer">EMNLP 2024 — Dense X Retrieval: What Retrieval Granularity Should We Use? (Chen et al.)</a></li><li><a href="https://patents.google.com/patent/US10846346B2/en" rel="noopener noreferrer">Google US Patent 10,846,346 B2 — Contextual Estimation of Information Gain Score</a></li><li><a href="https://developers.google.com/search/docs/crawling-indexing" rel="noopener noreferrer">Google Search Central — Arama İndeksleme ve Tarama Esasları</a></li><li><a href="https://developers.openai.com/api/docs/bots" rel="noopener noreferrer">OpenAI — Crawler ve Arama Botu Dokümantasyonu (OAI-SearchBot)</a></li><li><a href="https://support.anthropic.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler" rel="noopener noreferrer">Anthropic — Claude Search ve Web Tarama Politikası</a></li><li><a href="https://llmstxt.org" rel="noopener noreferrer">llmstxt.org — The /llms.txt Standard for Generative AI</a></li><li><a href="https://www.indexnow.org" rel="noopener noreferrer">IndexNow.org — Arama Motorları İçin Anlık İndeksleme Protokolü</a></li></ol>
+              <aside class="article-method" aria-label="Bu rehberin hazırlanma yöntemi"><strong>Hazırlama yöntemi</strong><p>Bu rehber Narvals Labs yayıncılığında; ilgili birincil kaynaklar, görünür hizmet kapsamı ve proje karar çerçeveleri incelenerek hazırlandı. Doğrulanamayan müşteri, fiyat, başarı oranı veya sonuç iddiası eklenmedi. Yöntem, düzeltme ve yapay zekâ desteği açıklaması için <a href="/editoryal-ilkeler/">editoryal ilkeleri</a> okuyabilirsiniz.</p></aside>
+            </section>
+            <section class="info-section article-section">
+              <p class="info-section__label">İlgili rehberler</p><h2>İlgili rehberlerle devam edin.</h2>
+              <div class="article-related"><a href="/blog/google-ai-aramalari-icin-geo-rehberi/"><small>SEO &amp; GEO</small><strong>GEO nedir? Google AI sonuçlarında görünürlük rehberi</strong><span aria-hidden="true">→</span></a><a href="/blog/web-sitesi-teknik-seo-kontrol-listesi/"><small>SEO &amp; GEO</small><strong>Web sitesi teknik SEO kontrol listesi: yayından önce ve sonra</strong><span aria-hidden="true">→</span></a><a href="/blog/web-sitesi-hizlandirma-core-web-vitals-rehberi/"><small>SEO &amp; Performans</small><strong>Web sitesi hızlandırma ve Core Web Vitals (LCP, INP, CLS) rehberi</strong><span aria-hidden="true">→</span></a></div>
+            </section>
+          </div>
+        </div>
+      </article>
+      <section class="info-cta"><h2>Bu kararı projenize uyarlayalım.</h2><p>Mevcut durumu, hedefi ve en kritik sınırı paylaşın; gerekli kapsamı birlikte netleştirelim.</p><div class="article-cta-actions"><a class="info-button" href="/hizmetler/web-tasarim/">Teknik SEO ve web altyapısını inceleyin <span aria-hidden="true">→</span></a><a class="info-button info-button--tool" href="/araclar/core-web-vitals-kontrolu/">Core Web Vitals ve Bot Hızı Teşhis Aracı <span aria-hidden="true">⚡</span></a><a class="info-button info-button--light" href="/iletisim/">Projeyi konuşalım <span aria-hidden="true">↗</span></a></div></section>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__brand"><a href="/"><img src="/assets/logo-v6/narvals-mascot-v6-transparent-96.png" alt="" width="96" height="96" loading="lazy" /><strong>narvals<span>//</span>labs</strong></a><p>Web sitesi, özel yazılım ve reklamı aynı iş hedefinde buluşturan dijital üretim stüdyosu.</p></div>
+      <nav aria-label="Hizmet bağlantıları"><strong>Hizmetler</strong><a href="/hizmetler/web-tasarim/">Web tasarım &amp; UX</a><a href="/hizmetler/e-ticaret/">E-ticaret</a><a href="/hizmetler/ozel-yazilim/">Özel yazılım</a><a href="/hizmetler/google-ads/">Google Ads</a><a href="/hizmetler/dijital-reklam/">Meta reklam</a><a href="/hizmetler/sosyal-medya-yonetimi/">Sosyal medya</a><a href="/hizmetler/qr-menu-rezervasyon/">İşletme sistemleri</a></nav>
+      <nav aria-label="Bilgi merkezi bağlantıları"><strong>Bilgi merkezi</strong><a href="/blog/">Tüm rehberler</a><a href="/araclar/">Ücretsiz araçlar</a><a href="/araclar/web-sitesi-kontrolu/">Site kontrolü</a><a href="/blog/konu/seo-geo/">SEO &amp; GEO rehberleri</a><a href="/blog/konu/e-ticaret/">E-ticaret rehberleri</a><a href="/blog/konu/web-sitesi/">Web sitesi rehberleri</a><a href="/blog/konu/reklam/">Reklam rehberleri</a><a href="/blog/konu/qr-menu/">QR menü rehberleri</a><a href="/editoryal-ilkeler/">Editoryal ilkeler</a></nav>
+      <div class="site-footer__contact"><strong>Bir proje mi var?</strong><p>Hedefi ve en kritik darboğazı anlatarak ilk görüşmeyi başlatın.</p><a href="mailto:info@narvals.com">info@narvals.com</a><a href="https://wa.me/905019441921" rel="noopener noreferrer">WhatsApp: +90 501 944 19 21 ↗</a></div>
+      <p class="site-footer__legal">© <span data-current-year>2026</span> Narvals Labs. Tüm hakları saklıdır.</p>
+    </footer>
+    <script type="module" src="/src/info-main.js"></script>
+  </body>
+</html>

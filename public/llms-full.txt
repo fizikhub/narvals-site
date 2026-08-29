@@ -113,7 +113,7 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 
 ---
 
-## 5. Tüm Karar Rehberleri Özeti (34 Rehber)
+## 5. Tüm Karar Rehberleri Özeti (35 Rehber)
 
 ### E-ticaret sitesi nasıl açılır? 10 adımlı sade rehber
 - **URL:** https://narvals.com/blog/e-ticaret-sitesi-nasil-acilir/
@@ -288,6 +288,17 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
   * KDD 2024 akademik araştırması: Doğrudan alıntı ve istatistik ekleme görünürlüğü %30-40 artırır.
   * RAG modelleri anlamsal etiketlere (article, section, h2, table, dl) göre 100-250 tokenlık parçalama yapar.
   * Sıra konumu, AI kaynak gösterimi (citation), marka anılması ve yapay zekâ yönlendirmesi (referral) ayrı ölçülür.
+
+### Google ve AI botları sitenizi nasıl tarar? İndeksleme rehberi
+- **URL:** https://narvals.com/blog/google-ve-ai-botlari-icin-site-indeksleme-rehberi/
+- **Kategori:** SEO & GEO
+- **Kısa Cevap:** Googlebot ve modern yapay zekâ tarayıcıları (OAI-SearchBot, Claude-SearchBot, PerplexityBot, Applebot) siteleri sadece anahtar kelime eşleşmesiyle indekslemez. İki aşamalı tarama (HTML çekme ve WRS render), RAG yoğun geçit erişimi (Dense Passage Retrieval), 256-512 tokenlık anlamsal parçalama (propositional chunking), Google Bilgi Kazanımı (Information Gain) patentleri ve Schema.org varlık (entity) grafı üzerinden tarama, puanlama ve alıntılama yaparlar.
+- **Önemli Çıkarımlar:**
+  * Arama botları (SearchBot) ile eğitim botları (Training Scraper) ayrıştırılmalıdır.
+  * RAG motorları sayfayı 256-512 tokenlık anlamsal parçalara (chunks) bölerek indeksler.
+  * KDD 2024 araştırması: Doğrudan uzman alıntısı ve istatistikler alıntılanmayı %40 artırır.
+  * Google Information Gain patenti özgün veri ve formül sunan siteleri ödüllendirir.
+  * Bağlantılı JSON-LD şema grafı ve llms.txt LLM halüsinasyon riskini en aza indirir.
 
 ### E-ticaret altyapısı nasıl seçilir? Dokuz karar sorusu
 - **URL:** https://narvals.com/blog/e-ticaret-altyapisi-nasil-secilir/
@@ -504,6 +515,7 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 - Konu Merkezi: https://narvals.com/blog/konu/web-sitesi/
 - Konu Merkezi: https://narvals.com/blog/konu/reklam/
 - Konu Merkezi: https://narvals.com/blog/konu/qr-menu/
+- Konu Merkezi: https://narvals.com/blog/konu/seo-geo/
 - Rehber: https://narvals.com/blog/e-ticaret-sitesi-nasil-acilir/
 - Rehber: https://narvals.com/blog/qr-menu-nasil-yapilir/
 - Rehber: https://narvals.com/blog/internet-sitesi-nasil-kurulur/
@@ -521,6 +533,7 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 - Rehber: https://narvals.com/blog/kurumsal-web-sitesi-briefi-nasil-hazirlanir/
 - Rehber: https://narvals.com/blog/web-sitesi-teknik-seo-kontrol-listesi/
 - Rehber: https://narvals.com/blog/google-ai-aramalari-icin-geo-rehberi/
+- Rehber: https://narvals.com/blog/google-ve-ai-botlari-icin-site-indeksleme-rehberi/
 - Rehber: https://narvals.com/blog/e-ticaret-altyapisi-nasil-secilir/
 - Rehber: https://narvals.com/blog/hazir-yazilim-mi-ozel-yazilim-mi/
 - Rehber: https://narvals.com/blog/meta-pixel-ve-conversions-api-farki/

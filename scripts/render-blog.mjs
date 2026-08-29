@@ -206,7 +206,7 @@ const renderNav = (current = '') => `<header class="info-nav">
 const renderFooter = () => `<footer class="site-footer">
       <div class="site-footer__brand"><a href="/"><img src="/assets/logo-v6/narvals-mascot-v6-transparent-96.png" alt="" width="96" height="96" loading="lazy" /><strong>narvals<span>//</span>labs</strong></a><p>Web sitesi, özel yazılım ve reklamı aynı iş hedefinde buluşturan dijital üretim stüdyosu.</p></div>
       <nav aria-label="Hizmet bağlantıları"><strong>Hizmetler</strong><a href="/hizmetler/web-tasarim/">Web tasarım &amp; UX</a><a href="/hizmetler/e-ticaret/">E-ticaret</a><a href="/hizmetler/ozel-yazilim/">Özel yazılım</a><a href="/hizmetler/google-ads/">Google Ads</a><a href="/hizmetler/dijital-reklam/">Meta reklam</a><a href="/hizmetler/sosyal-medya-yonetimi/">Sosyal medya</a><a href="/hizmetler/qr-menu-rezervasyon/">İşletme sistemleri</a></nav>
-      <nav aria-label="Bilgi merkezi bağlantıları"><strong>Bilgi merkezi</strong><a href="/blog/">Tüm rehberler</a><a href="/araclar/">Ücretsiz araçlar</a><a href="/araclar/web-sitesi-kontrolu/">Site kontrolü</a><a href="/blog/konu/e-ticaret/">E-ticaret rehberleri</a><a href="/blog/konu/web-sitesi/">Web sitesi rehberleri</a><a href="/blog/konu/reklam/">Reklam rehberleri</a><a href="/blog/konu/qr-menu/">QR menü rehberleri</a><a href="/editoryal-ilkeler/">Editoryal ilkeler</a></nav>
+      <nav aria-label="Bilgi merkezi bağlantıları"><strong>Bilgi merkezi</strong><a href="/blog/">Tüm rehberler</a><a href="/araclar/">Ücretsiz araçlar</a><a href="/araclar/web-sitesi-kontrolu/">Site kontrolü</a><a href="/blog/konu/seo-geo/">SEO &amp; GEO rehberleri</a><a href="/blog/konu/e-ticaret/">E-ticaret rehberleri</a><a href="/blog/konu/web-sitesi/">Web sitesi rehberleri</a><a href="/blog/konu/reklam/">Reklam rehberleri</a><a href="/blog/konu/qr-menu/">QR menü rehberleri</a><a href="/editoryal-ilkeler/">Editoryal ilkeler</a></nav>
       <div class="site-footer__contact"><strong>Bir proje mi var?</strong><p>Hedefi ve en kritik darboğazı anlatarak ilk görüşmeyi başlatın.</p><a href="mailto:info@narvals.com">info@narvals.com</a><a href="https://wa.me/905019441921" rel="noopener noreferrer">WhatsApp: +90 501 944 19 21 ↗</a></div>
       <p class="site-footer__legal">© <span data-current-year>2026</span> Narvals Labs. Tüm hakları saklıdır.</p>
     </footer>`;
@@ -301,7 +301,20 @@ const ENTITY_WIKIDATA_MAP = {
   'API entegrasyonu': 'https://tr.wikipedia.org/wiki/Uygulama_programlama_aray%C3%BCz%C3%BC',
   'Headless CMS': 'https://en.wikipedia.org/wiki/Headless_content_management_system',
   'Statik Web Sitesi': 'https://en.wikipedia.org/wiki/Static_web_page',
-  'Web Güvenliği': 'https://tr.wikipedia.org/wiki/Web_g%C3%BCvenli%C4%9Fi'
+  'Web Güvenliği': 'https://tr.wikipedia.org/wiki/Web_g%C3%BCvenli%C4%9Fi',
+  'Googlebot': 'https://en.wikipedia.org/wiki/Googlebot',
+  'Dense Passage Retrieval': 'https://en.wikipedia.org/wiki/Dense_passage_retrieval',
+  'DPR': 'https://en.wikipedia.org/wiki/Dense_passage_retrieval',
+  'GraphRAG': 'https://en.wikipedia.org/wiki/Knowledge_graph',
+  'RAG': 'https://en.wikipedia.org/wiki/Retrieval-augmented_generation',
+  'Retrieval-Augmented Generation': 'https://en.wikipedia.org/wiki/Retrieval-augmented_generation',
+  'IndexNow': 'https://en.wikipedia.org/wiki/IndexNow',
+  'SearchGPT': 'https://en.wikipedia.org/wiki/ChatGPT',
+  'Perplexity AI': 'https://en.wikipedia.org/wiki/Perplexity_AI',
+  'ChatGPT Search': 'https://en.wikipedia.org/wiki/ChatGPT',
+  'Claude': 'https://en.wikipedia.org/wiki/Claude_(language_model)',
+  'Gemini': 'https://en.wikipedia.org/wiki/Gemini_(chatbot)',
+  'Apple Intelligence': 'https://en.wikipedia.org/wiki/Apple_Intelligence'
 };
 
 const resolveEntity = (name) => {
@@ -316,8 +329,9 @@ const CATEGORY_HUB_MAP = {
   'E-Ticaret': { name: 'E-ticaret rehberleri', path: '/blog/konu/e-ticaret/' },
   'Web sitesi': { name: 'Web sitesi rehberleri', path: '/blog/konu/web-sitesi/' },
   'Web & UX': { name: 'Web sitesi rehberleri', path: '/blog/konu/web-sitesi/' },
-  'Teknik SEO': { name: 'Web sitesi rehberleri', path: '/blog/konu/web-sitesi/' },
-  'SEO & Performans': { name: 'Web sitesi rehberleri', path: '/blog/konu/web-sitesi/' },
+  'Teknik SEO': { name: 'SEO ve GEO rehberleri', path: '/blog/konu/seo-geo/' },
+  'SEO & Performans': { name: 'SEO ve GEO rehberleri', path: '/blog/konu/seo-geo/' },
+  'SEO & GEO': { name: 'SEO ve GEO rehberleri', path: '/blog/konu/seo-geo/' },
   'Özel yazılım': { name: 'Web sitesi rehberleri', path: '/blog/konu/web-sitesi/' },
   'Google Ads': { name: 'Dijital reklam rehberleri', path: '/blog/konu/reklam/' },
   'Dijital reklam': { name: 'Dijital reklam rehberleri', path: '/blog/konu/reklam/' },
@@ -326,6 +340,10 @@ const CATEGORY_HUB_MAP = {
 };
 
 const POST_TOOL_MAP = {
+  'google-ve-ai-botlari-icin-site-indeksleme-rehberi': {
+    path: '/araclar/core-web-vitals-kontrolu/',
+    label: 'Core Web Vitals ve Bot Hızı Teşhis Aracı'
+  },
   'e-ticaret-sitesi-maliyeti-nasil-hesaplanir': {
     path: '/araclar/e-ticaret-kar-hesaplama/',
     label: 'E-Ticaret Net Kâr ve Başabaş Fiyat Hesaplayıcı'
