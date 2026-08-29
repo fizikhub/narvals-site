@@ -143,57 +143,59 @@ export function initServiceOdyssey({ gsap, ScrollTrigger }) {
       });
 
       const connection = root.querySelector('[data-system-connection]');
-      const connectionTimeline = gsap.timeline({
-        defaults: { ease: 'expo.out' },
-        scrollTrigger: {
-          trigger: connection,
-          start: 'top 70%'
-        }
-      });
-
-      connectionTimeline
-        .from(connection.querySelectorAll('.system-connection__copy > *'), {
-          x: -38,
-          opacity: 0.4,
-          stagger: 0.07,
-          duration: 0.72,
-          clearProps: 'opacity,transform'
-        }, 0)
-        .from(connection.querySelector('.system-connection__knot'), {
-          x: 58,
-          y: 35,
-          rotation: 8,
-          scale: 0.88,
-          opacity: 0.36,
-          duration: 1,
-          clearProps: 'opacity,transform'
-        }, 0.1)
-        .from(connection.querySelectorAll('.connection-failures p'), {
-          x: (itemIndex) => itemIndex % 2 ? 54 : -42,
-          opacity: 0.4,
-          stagger: 0.09,
-          duration: 0.7,
-          clearProps: 'opacity,transform'
-        }, 0.34)
-        .from(connection.querySelector('.connection-result'), {
-          y: 38,
-          opacity: 0.42,
-          duration: 0.72,
-          clearProps: 'opacity,transform'
-        }, 0.54);
-
-      if (wide) {
-        gsap.to(connection.querySelector('.system-connection__knot img'), {
-          yPercent: -4,
-          rotation: 1.4,
-          ease: 'none',
+      if (connection) {
+        const connectionTimeline = gsap.timeline({
+          defaults: { ease: 'expo.out' },
           scrollTrigger: {
             trigger: connection,
-            start: 'top bottom',
-            end: 'bottom top',
-            scrub: 0.9
+            start: 'top 70%'
           }
         });
+
+        connectionTimeline
+          .from(connection.querySelectorAll('.system-connection__copy > *'), {
+            x: -38,
+            opacity: 0.4,
+            stagger: 0.07,
+            duration: 0.72,
+            clearProps: 'opacity,transform'
+          }, 0)
+          .from(connection.querySelector('.system-connection__knot'), {
+            x: 58,
+            y: 35,
+            rotation: 8,
+            scale: 0.88,
+            opacity: 0.36,
+            duration: 1,
+            clearProps: 'opacity,transform'
+          }, 0.1)
+          .from(connection.querySelectorAll('.connection-failures p'), {
+            x: (itemIndex) => itemIndex % 2 ? 54 : -42,
+            opacity: 0.4,
+            stagger: 0.09,
+            duration: 0.7,
+            clearProps: 'opacity,transform'
+          }, 0.34)
+          .from(connection.querySelector('.connection-result'), {
+            y: 38,
+            opacity: 0.42,
+            duration: 0.72,
+            clearProps: 'opacity,transform'
+          }, 0.54);
+
+        if (wide && connection.querySelector('.system-connection__knot img')) {
+          gsap.to(connection.querySelector('.system-connection__knot img'), {
+            yPercent: -4,
+            rotation: 1.4,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: connection,
+              start: 'top bottom',
+              end: 'bottom top',
+              scrub: 0.9
+            }
+          });
+        }
       }
 
       const workRoute = root.querySelector('[data-work-route]');

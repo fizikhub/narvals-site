@@ -252,6 +252,8 @@ const llmsFull = `# Narvals Labs — Kapsamlı Bilgi Tabanı ve Sistem Dokümant
 - **Yayıncı & Varlık Adı:** Narvals Labs
 - **E-posta:** info@narvals.com
 - **WhatsApp / Telefon:** +90 501 944 19 21
+- **Ücretsiz web sitesi kontrolü:** ${siteOrigin}/araclar/web-sitesi-kontrolu/
+- **Ücretsiz web sitesi teklif karşılaştırma:** ${siteOrigin}/araclar/teklif-karsilastirma/
 - **Ücretsiz dönüşüm oranı hesaplama:** ${siteOrigin}/araclar/donusum-orani-hesaplama/
 - **Ücretsiz ROAS hesaplama:** ${siteOrigin}/araclar/roas-hesaplama/
 - **Ücretsiz Google Ads bütçe simülasyonu:** ${siteOrigin}/araclar/google-ads-butce-hesaplama/
@@ -355,7 +357,19 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 
 ---
 
-## 5. Tüm Sayfa İndeksi (Canonical URLs)
+## 5. Tüm Karar Rehberleri Özeti (${blogPosts.length} Rehber)
+
+${blogPosts.map((post) => `### ${post.title}
+- **URL:** ${siteOrigin}/blog/${post.slug}/
+- **Kategori:** ${post.category}
+- **Kısa Cevap:** ${post.answer}
+- **Önemli Çıkarımlar:**
+${post.takeaways.map((t) => `  * ${t}`).join('\n')}
+`).join('\n')}
+
+---
+
+## 6. Tüm Sayfa İndeksi (Canonical URLs)
 
 - Ana Sayfa: ${siteOrigin}/
 - Hizmetler Genel: ${siteOrigin}/hizmetler/
@@ -373,6 +387,18 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 - Ücretsiz Araçlar: ${siteOrigin}/araclar/
 - Ücretsiz Web Sitesi Kontrolü: ${siteOrigin}/araclar/web-sitesi-kontrolu/
 - Web Sitesi Teklif Karşılaştırma: ${siteOrigin}/araclar/teklif-karsilastirma/
+- Dönüşüm Oranı Hesaplama: ${siteOrigin}/araclar/donusum-orani-hesaplama/
+- ROAS Hesaplama: ${siteOrigin}/araclar/roas-hesaplama/
+- Google Ads Bütçe Simülasyonu: ${siteOrigin}/araclar/google-ads-butce-hesaplama/
+- GA4 UTM Link Oluşturucu: ${siteOrigin}/araclar/utm-link-olusturucu/
+- QR Kod Oluşturucu: ${siteOrigin}/araclar/qr-kod-olusturucu/
+- E-Ticaret Net Kâr Hesaplayıcı: ${siteOrigin}/araclar/e-ticaret-kar-hesaplama/
+- KDV ve Tevkifat Hesaplama: ${siteOrigin}/araclar/kdv-hesaplama/
+- Core Web Vitals Kontrolü: ${siteOrigin}/araclar/core-web-vitals-kontrolu/
+- Görsel Boyut ve Oran Hesaplayıcı: ${siteOrigin}/araclar/gorsel-boyut-hesaplayici/
+- Saatlik Ücret Hesaplayıcı: ${siteOrigin}/araclar/saatlik-ucret-hesaplama/
+- Meta Reklam Bütçesi Hesaplama: ${siteOrigin}/araclar/meta-reklam-butcesi-hesaplama/
+- Meta Etiketi ve Sosyal Önizleyici: ${siteOrigin}/araclar/meta-etiket-onizleyici/
 - Blog & Rehberler: ${siteOrigin}/blog/
 - Editoryal İlkeler: ${siteOrigin}/editoryal-ilkeler/
 ${topicHubs.map((hub) => `- Konu Merkezi: ${siteOrigin}/blog/konu/${hub.slug}/`).join('\n')}

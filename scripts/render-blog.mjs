@@ -219,6 +219,73 @@ const renderSection = (section) => `<section class="info-section article-section
         ${section.callout ? `<aside class="article-callout" aria-label="${escapeHtml(section.heading)}: karar notu"><strong>Karar notu</strong><p>${section.callout}</p></aside>` : ''}
       </section>`;
 
+const ENTITY_WIKIDATA_MAP = {
+  'E-ticaret': 'https://tr.wikipedia.org/wiki/Elektronik_ticaret',
+  'E-Ticaret': 'https://tr.wikipedia.org/wiki/Elektronik_ticaret',
+  'E-ticaret sitesi': 'https://tr.wikipedia.org/wiki/Elektronik_ticaret',
+  'E-ticaret sitesi maliyeti': 'https://tr.wikipedia.org/wiki/Elektronik_ticaret',
+  'E-ticaret altyapısı': 'https://tr.wikipedia.org/wiki/Elektronik_ticaret',
+  'E-ticaret kapsamı': 'https://tr.wikipedia.org/wiki/Elektronik_ticaret',
+  'Google Ads': 'https://tr.wikipedia.org/wiki/Google_Ads',
+  'Google Ads ajansı': 'https://tr.wikipedia.org/wiki/Google_Ads',
+  'Google Ads bütçesi': 'https://tr.wikipedia.org/wiki/Google_Ads',
+  'Arama reklamları': 'https://tr.wikipedia.org/wiki/Google_Ads',
+  'Meta reklamları': 'https://tr.wikipedia.org/wiki/Dijital_pazarlama',
+  'Meta reklam': 'https://tr.wikipedia.org/wiki/Dijital_pazarlama',
+  'Meta reklam ajansı': 'https://tr.wikipedia.org/wiki/Dijital_pazarlama',
+  'Meta reklam bütçesi': 'https://tr.wikipedia.org/wiki/Dijital_pazarlama',
+  'Dijital reklam': 'https://tr.wikipedia.org/wiki/Dijital_pazarlama',
+  'Dijital reklam kanalı seçimi': 'https://tr.wikipedia.org/wiki/Dijital_pazarlama',
+  'Teknik SEO': 'https://tr.wikipedia.org/wiki/Arama_motoru_optimizasyonu',
+  'SEO': 'https://tr.wikipedia.org/wiki/Arama_motoru_optimizasyonu',
+  'Arama motoru optimizasyonu': 'https://tr.wikipedia.org/wiki/Arama_motoru_optimizasyonu',
+  'Web tasarımı': 'https://tr.wikipedia.org/wiki/Web_tasar%C4%B1m%C4%B1',
+  'Web tasarım': 'https://tr.wikipedia.org/wiki/Web_tasar%C4%B1m%C4%B1',
+  'Kurumsal web sitesi': 'https://tr.wikipedia.org/wiki/Web_tasar%C4%B1m%C4%B1',
+  'Web sitesi maliyeti': 'https://tr.wikipedia.org/wiki/Web_tasar%C4%B1m%C4%B1',
+  'Web sitesi süresi': 'https://tr.wikipedia.org/wiki/Web_tasar%C4%B1m%C4%B1',
+  'Web performansı': 'https://en.wikipedia.org/wiki/Core_Web_Vitals',
+  'Core Web Vitals': 'https://en.wikipedia.org/wiki/Core_Web_Vitals',
+  'Site hızı': 'https://en.wikipedia.org/wiki/Core_Web_Vitals',
+  'LCP optimizasyonu': 'https://en.wikipedia.org/wiki/Core_Web_Vitals',
+  'Özel yazılım': 'https://tr.wikipedia.org/wiki/Yaz%C4%B1l%C4%B1m',
+  'Özel CRM': 'https://tr.wikipedia.org/wiki/M%C3%BC%C5%9Fteri_ili%C5%9Fkileri_y%C3%B6netimi',
+  'QR menü': 'https://tr.wikipedia.org/wiki/QR_kodu',
+  'QR Menü': 'https://tr.wikipedia.org/wiki/QR_kodu',
+  'Kullanıcı deneyimi': 'https://tr.wikipedia.org/wiki/Kullan%C4%B1c%C4%B1_deneyimi',
+  'Kurumsal UX': 'https://tr.wikipedia.org/wiki/Kullan%C4%B1c%C4%B1_deneyimi',
+  'Dönüşüm oranı optimizasyonu': 'https://en.wikipedia.org/wiki/Conversion_rate_optimization',
+  'Dönüşüm ölçümü': 'https://en.wikipedia.org/wiki/Conversion_rate_optimization',
+  'E-ticaret CRO': 'https://en.wikipedia.org/wiki/Conversion_rate_optimization',
+  'Lead generation': 'https://en.wikipedia.org/wiki/Lead_generation',
+  'Sosyal medya yönetimi': 'https://tr.wikipedia.org/wiki/Sosyal_medya',
+  'Topluluk yönetimi': 'https://tr.wikipedia.org/wiki/Sosyal_medya',
+  'B2B web sitesi': 'https://tr.wikipedia.org/wiki/B2B',
+  'B2B': 'https://tr.wikipedia.org/wiki/B2B',
+  'Generative Engine Optimization (GEO)': 'https://en.wikipedia.org/wiki/Generative_artificial_intelligence'
+};
+
+const resolveEntity = (name) => {
+  const sameAs = ENTITY_WIKIDATA_MAP[name];
+  return sameAs
+    ? { '@type': 'Thing', name, sameAs }
+    : { '@type': 'Thing', name };
+};
+
+const CATEGORY_HUB_MAP = {
+  'E-ticaret': { name: 'E-ticaret rehberleri', path: '/blog/konu/e-ticaret/' },
+  'E-Ticaret': { name: 'E-ticaret rehberleri', path: '/blog/konu/e-ticaret/' },
+  'Web sitesi': { name: 'Web sitesi rehberleri', path: '/blog/konu/web-sitesi/' },
+  'Web & UX': { name: 'Web sitesi rehberleri', path: '/blog/konu/web-sitesi/' },
+  'Teknik SEO': { name: 'Web sitesi rehberleri', path: '/blog/konu/web-sitesi/' },
+  'SEO & Performans': { name: 'Web sitesi rehberleri', path: '/blog/konu/web-sitesi/' },
+  'Özel yazılım': { name: 'Web sitesi rehberleri', path: '/blog/konu/web-sitesi/' },
+  'Google Ads': { name: 'Dijital reklam rehberleri', path: '/blog/konu/reklam/' },
+  'Dijital reklam': { name: 'Dijital reklam rehberleri', path: '/blog/konu/reklam/' },
+  'Sosyal medya': { name: 'Dijital reklam rehberleri', path: '/blog/konu/reklam/' },
+  'QR menü': { name: 'QR menü rehberleri', path: '/blog/konu/qr-menu/' }
+};
+
 const renderRelated = (post) => post.related
   .map((slug) => blogPostBySlug.get(slug))
   .map((related) => `<a href="/blog/${related.slug}/"><small>${escapeHtml(related.category)}</small><strong>${escapeHtml(related.title)}</strong><span aria-hidden="true">→</span></a>`)
@@ -227,6 +294,18 @@ const renderRelated = (post) => post.related
 const renderArticle = (post, siteOrigin) => {
   const path = `/blog/${post.slug}/`;
   const url = `${siteOrigin}${path}`;
+  const hubInfo = CATEGORY_HUB_MAP[post.category];
+  const breadcrumbElements = hubInfo ? [
+    { '@type': 'ListItem', position: 1, name: 'Ana sayfa', item: `${siteOrigin}/` },
+    { '@type': 'ListItem', position: 2, name: 'Rehberler', item: `${siteOrigin}/blog/` },
+    { '@type': 'ListItem', position: 3, name: hubInfo.name, item: `${siteOrigin}${hubInfo.path}` },
+    { '@type': 'ListItem', position: 4, name: post.title, item: url }
+  ] : [
+    { '@type': 'ListItem', position: 1, name: 'Ana sayfa', item: `${siteOrigin}/` },
+    { '@type': 'ListItem', position: 2, name: 'Rehberler', item: `${siteOrigin}/blog/` },
+    { '@type': 'ListItem', position: 3, name: post.title, item: url }
+  ];
+
   const schema = [
     organizationNode(siteOrigin),
     websiteNode(siteOrigin),
@@ -238,7 +317,7 @@ const renderArticle = (post, siteOrigin) => {
       description: post.description,
       inLanguage: 'tr-TR',
       isPartOf: { '@id': `${siteOrigin}/#website` },
-      about: post.about.map((name) => ({ '@type': 'Thing', name })),
+      about: post.about.map(resolveEntity),
       datePublished: post.published,
       dateModified: post.modified,
       speakable: {
@@ -271,16 +350,12 @@ const renderArticle = (post, siteOrigin) => {
         '@type': 'SpeakableSpecification',
         cssSelector: ['h1', '.info-hero__answer', '.article-summary ul', '.article-section h2']
       },
-      about: post.about.map((name) => ({ '@type': 'Thing', name })),
+      about: post.about.map(resolveEntity),
       citation: post.sources.map((source) => source.url)
     },
     {
       '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Ana sayfa', item: `${siteOrigin}/` },
-        { '@type': 'ListItem', position: 2, name: 'Rehberler', item: `${siteOrigin}/blog/` },
-        { '@type': 'ListItem', position: 3, name: post.title, item: url }
-      ]
+      itemListElement: breadcrumbElements
     }
   ];
 
@@ -310,7 +385,7 @@ ${renderHead({ siteOrigin, path, title: post.metaTitle, description: post.descri
       <article>
         <header class="info-hero article-hero">
           <div class="info-hero__copy">
-            <nav class="breadcrumbs" aria-label="İçerik yolu"><a href="/">Ana sayfa</a><span>/</span><a href="/blog/">Rehberler</a><span>/</span><span>${escapeHtml(post.category)}</span></nav>
+            <nav class="breadcrumbs" aria-label="İçerik yolu"><a href="/">Ana sayfa</a><span>/</span><a href="/blog/">Rehberler</a><span>/</span>${hubInfo ? `<a href="${hubInfo.path}">${escapeHtml(post.category)}</a>` : `<span>${escapeHtml(post.category)}</span>`}</nav>
             <p class="info-hero__kicker">${escapeHtml(post.category)} · Karar rehberi</p>
             <h1>${escapeHtml(post.title)}</h1>
             <p class="info-hero__answer">${escapeHtml(post.answer)}</p>

@@ -8,6 +8,8 @@
 - **Yayıncı & Varlık Adı:** Narvals Labs
 - **E-posta:** info@narvals.com
 - **WhatsApp / Telefon:** +90 501 944 19 21
+- **Ücretsiz web sitesi kontrolü:** https://narvals.com/araclar/web-sitesi-kontrolu/
+- **Ücretsiz web sitesi teklif karşılaştırma:** https://narvals.com/araclar/teklif-karsilastirma/
 - **Ücretsiz dönüşüm oranı hesaplama:** https://narvals.com/araclar/donusum-orani-hesaplama/
 - **Ücretsiz ROAS hesaplama:** https://narvals.com/araclar/roas-hesaplama/
 - **Ücretsiz Google Ads bütçe simülasyonu:** https://narvals.com/araclar/google-ads-butce-hesaplama/
@@ -111,7 +113,362 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 
 ---
 
-## 5. Tüm Sayfa İndeksi (Canonical URLs)
+## 5. Tüm Karar Rehberleri Özeti (34 Rehber)
+
+### E-ticaret sitesi nasıl açılır? 10 adımlı sade rehber
+- **URL:** https://narvals.com/blog/e-ticaret-sitesi-nasil-acilir/
+- **Kategori:** E-ticaret
+- **Kısa Cevap:** E-ticaret sitesi açmak için önce neyi, kime ve hangi kâr yapısıyla satacağınızı netleştirin. Sonra şirket ve satış yükümlülüklerini uzmanlarla doğrulayın; alan adı, altyapı, ödeme ve kargoyu seçin; ürün sayfalarını hazırlayın; gerçek siparişle test edip siteyi yayına alın. En pahalı sistemle değil, satış akışını eksiksiz kuran doğru kapsamla başlayın.
+- **Önemli Çıkarımlar:**
+  * Önce ürün ve operasyon, sonra e-ticaret altyapısı seçilir.
+  * Ödeme, kargo, iade ve müşteri desteği tek akış olarak planlanır.
+  * Her ürün sayfası gerçek bilgi, net fiyat ve görünür teslimat beklentisi sunar.
+  * Yayın öncesi mobil cihazdan gerçek sipariş testi yapılır.
+  * SEO, ürünler yayına girdikten sonra eklenen bir eklenti değildir.
+
+### QR menü nasıl yapılır? Restoranlar için sade kurulum rehberi
+- **URL:** https://narvals.com/blog/qr-menu-nasil-yapilir/
+- **Kategori:** QR menü
+- **Kısa Cevap:** QR menü yapmak için önce ürünleri ve kategorileri sade bir düzene koyun, mobil uyumlu bir web menüsü hazırlayın, değişmeyen bir bağlantıya QR kod üretin ve kodu farklı telefonlarla masada test edin. PDF dosyasını doğrudan açtırmak yerine hızlı, okunabilir ve panelden güncellenebilir bir menü sayfası daha kullanışlıdır.
+- **Önemli Çıkarımlar:**
+  * QR kod değişmeyen bir web adresine yönlenmelidir.
+  * Menü telefonda yakınlaştırma gerektirmeden okunmalıdır.
+  * Fiyat ve stok bilgisi işletme tarafından panelden güncellenebilmelidir.
+  * Baskıdan önce farklı kamera, ışık ve mesafelerde test yapılmalıdır.
+  * Google İşletme Profili menü bağlantısı da aynı güncel adrese yönlenebilir.
+
+### İnternet sitesi nasıl kurulur? Baştan sona sade rehber
+- **URL:** https://narvals.com/blog/internet-sitesi-nasil-kurulur/
+- **Kategori:** Web & UX
+- **Kısa Cevap:** İnternet sitesi kurmak için amacınızı ve ziyaretçinin yapacağı ana eylemi belirleyin; alan adı ve hosting hesabını kendi adınıza açın; gerekli sayfaları ve içerikleri hazırlayın; mobil uyumlu tasarımı geliştirin; form, hız, erişilebilirlik ve SEO kontrollerinden sonra yayına alın. Başlangıçta çok sayfa değil, açık bilgi ve çalışan bir iletişim yolu gerekir.
+- **Önemli Çıkarımlar:**
+  * Site “var olmak” için değil, belirli bir işi tamamlatmak için kurulur.
+  * Alan adı ve barındırma hesaplarının sahibi işletme olmalıdır.
+  * İçerik tasarımdan önce hazırlanır ve her sayfa tek soruya cevap verir.
+  * Mobil kullanım, form ve hız yayın öncesi gerçek cihazda test edilir.
+  * Search Console ve analitik ilk günden kurulur.
+
+### Google Ads reklamı nasıl verilir? İşletmeler için başlangıç rehberi
+- **URL:** https://narvals.com/blog/google-ads-reklam-nasil-verilir/
+- **Kategori:** Google Ads
+- **Kısa Cevap:** Google Ads reklamı vermek için önce satış, nitelikli form veya telefon gibi gerçek dönüşümü tanımlayın; ölçümü kurun; arama niyetine uygun anahtar kelimeleri gruplayın; ilgili reklam metni ve açılış sayfası hazırlayın; konum, bütçe ve teklif ayarlarını kontrol edip küçük bir testle başlayın. Yalnız tıklama değil, iş sonucu ölçün.
+- **Önemli Çıkarımlar:**
+  * Kampanyadan önce dönüşüm ölçümü kurulur.
+  * Anahtar kelime, reklam ve açılış sayfası aynı niyeti karşılar.
+  * Bütçe ile ajans ve üretim maliyeti ayrı gösterilir.
+  * Arama terimleri ve negatif kelimeler düzenli kontrol edilir.
+  * Kalite Puanı hedef değil, tanı aracıdır.
+
+### QR menü fiyatları: maliyeti hangi özellikler belirler?
+- **URL:** https://narvals.com/blog/qr-menu-fiyatlari-ve-maliyet-kalemleri/
+- **Kategori:** QR menü
+- **Kısa Cevap:** QR menü fiyatı yalnız QR kod üretme ücretinden oluşmaz. Ürün ve dil sayısı, şube yapısı, özel tasarım, yönetim paneli, içerik aktarımı, sipariş ve ödeme akışı, entegrasyon, barındırma ve destek kapsamı toplam maliyeti belirler. Teklifleri aynı özellik listesi ve aynı dönem üzerinden karşılaştırın.
+- **Önemli Çıkarımlar:**
+  * Ücretsiz QR kod ile yönetilebilir QR menü aynı ürün değildir.
+  * Aylık/yıllık yazılım bedeli ile kurulum ve içerik işi ayrı olabilir.
+  * Masadan sipariş ve ödeme, basit dijital menüden farklı kapsamdır.
+  * Teklifte veri sahipliği, dışa aktarma ve kapanış planı görünmelidir.
+
+### Web sitesi ne kadar sürer? Gerçekçi proje takvimi rehberi
+- **URL:** https://narvals.com/blog/web-sitesi-ne-kadar-surer/
+- **Kategori:** Web & UX
+- **Kısa Cevap:** Web sitesi yapım süresi yalnız sayfa sayısına bağlı değildir. İçerik ve görsellerin hazır olması, benzersiz şablon sayısı, entegrasyonlar, veri taşıma, karar verici sayısı, revizyon ve test kapsamı takvimi belirler. Gerçekçi plan; keşif, içerik, tasarım, geliştirme, test ve yayın aşamalarını ayrı kabul ölçütleriyle gösterir.
+- **Önemli Çıkarımlar:**
+  * “10 sayfa” tek başına süre tahmini değildir.
+  * İçerik gecikmesi çoğu projede ana takvim riskidir.
+  * Onay sahibi ve geri bildirim süresi başlangıçta belirlenir.
+  * Yayın tarihi ile tüm sonraki geliştirmelerin bitişi ayrılmalıdır.
+
+### Google Ads bütçesi nasıl belirlenir? Planlama rehberi
+- **URL:** https://narvals.com/blog/google-ads-butcesi-nasil-belirlenir/
+- **Kategori:** Google Ads
+- **Kısa Cevap:** Google Ads bütçesi; işletmenin kaybedebileceği rastgele bir rakamla değil, hedef dönüşüm, kabul edilebilir müşteri edinme maliyeti, arama talebi, kampanya süresi ve ölçüm güvenilirliğiyle belirlenir. Aylık medya sınırını kampanyalara bölmeden önce hangi iş sonucunun ne kadar değer taşıdığını hesaplayın.
+- **Önemli Çıkarımlar:**
+  * Herkese uyan tek başlangıç bütçesi yoktur.
+  * Medya bütçesi yönetim ve üretim ücretinden ayrılır.
+  * Google ortalama günlük bütçeyi ay içindeki talebe göre farklı günlerde kullanabilir.
+  * Bütçe artırımı yalnız nitelikli sonuç ve operasyon kapasitesi uygunsa yapılır.
+
+### Restoran web sitesi nasıl olmalı? Menü, rezervasyon ve Google rehberi
+- **URL:** https://narvals.com/blog/restoran-web-sitesi-nasil-olmali/
+- **Kategori:** Web & UX
+- **Kısa Cevap:** Restoran web sitesi telefonda hızla açılmalı; güncel menü, fiyatlar, konum, çalışma saatleri, iletişim ve rezervasyon yolunu ilk bakışta göstermelidir. QR menü, Google İşletme Profili ve rezervasyon sistemi aynı doğrulanmış bilgi kaynağına bağlanmalı; ziyaretçi uygulama indirmeden temel görevini tamamlayabilmelidir.
+- **Önemli Çıkarımlar:**
+  * Menü PDF içinde kaybolmamalı ve telefonda okunmalıdır.
+  * Konum, saat ve telefon tüm kanallarda tutarlı olmalıdır.
+  * Rezervasyon akışı kapasite ve onay kuralına göre kurulmalıdır.
+  * Yüksek çözünürlüklü görsel, yavaş site anlamına gelmemelidir.
+
+### Web tasarım ajansı seçerken sorulacak 15 soru
+- **URL:** https://narvals.com/blog/web-tasarim-ajansi-secerken-sorulacak-sorular/
+- **Kategori:** Web & UX
+- **Kısa Cevap:** Web tasarım ajansını yalnız portfolyo görünüşü ve toplam fiyatla seçmeyin. Canlı işlerin çalışmasını, teklif kapsamını, alan adı ve hesap sahipliğini, içerik sorumluluğunu, teknik SEO teslimlerini, ölçümü, bakım modelini, çıkış planını ve kabul ölçütlerini aynı soru setiyle karşılaştırın.
+- **Önemli Çıkarımlar:**
+  * Canlı URL, statik tasarım görselinden daha güçlü kanıttır.
+  * Alan adı ve kritik hesaplar işletmenin kontrolünde kalmalıdır.
+  * SEO, bakım ve içerik gibi geniş ifadeler teslim listesine çevrilmelidir.
+  * Teklifleri aynı senaryo ve aynı dönem maliyetiyle karşılaştırın.
+
+### Web sitesi bakım ücreti ve yıllık maliyet neleri kapsar?
+- **URL:** https://narvals.com/blog/web-sitesi-bakim-ucreti-ve-yillik-maliyet/
+- **Kategori:** Web & UX
+- **Kısa Cevap:** Web sitesi bakım ücreti tek bir zorunlu kalem değildir. Alan adı, barındırma, lisans, güvenlik güncellemesi, yedek doğrulama, izleme, içerik değişikliği, teknik destek ve yeni geliştirme ayrı işlerdir. Teklifte her kalemin sıklığı, yanıt süresi, sorumlusu ve hariçleri görünmelidir.
+- **Önemli Çıkarımlar:**
+  * Hosting ile bakım aynı hizmet değildir.
+  * Yedek alınması kadar geri yüklemenin test edilmesi de önemlidir.
+  * İçerik güncellemesi ve yeni özellik geliştirme ayrı sınırlanmalıdır.
+  * Yıllık maliyet; yenileme, lisans ve üçüncü tarafları birlikte göstermelidir.
+
+### Hazır web sitesi mi, özel tasarım mı? Karar rehberi
+- **URL:** https://narvals.com/blog/hazir-web-sitesi-mi-ozel-tasarim-mi/
+- **Kategori:** Web & UX
+- **Kısa Cevap:** Hızlı doğrulama, standart sayfalar ve sınırlı bütçe için hazır tema veya site kurucu yeterli olabilir. Marka anlatısı, farklı kullanıcı akışları, özel entegrasyon, yüksek performans hedefi veya uzun vadeli içerik mimarisi gerekiyorsa özel tasarım ve geliştirme daha uygun olabilir. Kararı prestijle değil iş gereksinimiyle verin.
+- **Önemli Çıkarımlar:**
+  * Hazır çözüm kötü, özel çözüm otomatik olarak iyi değildir.
+  * İlk yayın hızı ile uzun vadeli değiştirme maliyetini birlikte değerlendirin.
+  * Tema demosu gerçek içerikle aynı sonucu garanti etmez.
+  * Çıkış, veri aktarımı ve hesap sahipliği kararın parçasıdır.
+
+### Web sitesi neden müşteri getirmiyor? 8 olası neden
+- **URL:** https://narvals.com/blog/web-sitesi-neden-musteri-getirmiyor/
+- **Kategori:** Web & UX
+- **Kısa Cevap:** Bir web sitesi; doğru insanlar gelmiyorsa, teklif ilk bakışta anlaşılmıyorsa, güven kanıtı eksikse, sonraki adım zor veya bozuksa ya da gerçek müşteri sonucu ölçülmüyorsa müşteri getirmeyebilir. Önce sorunun trafik mi, sayfa mı, teklif mi yoksa satış takibi mi olduğunu ayırın.
+- **Önemli Çıkarımlar:**
+  * Trafik yokluğu ile dönüşüm sorunu aynı değildir.
+  * Güzel tasarım, açık teklif ve güven kanıtının yerini tutmaz.
+  * Form gönderimi gerçek müşteri sonucu değildir.
+  * Tek seferde her şeyi yenilemek yerine en zayıf halkayı test edin.
+
+### Web sitesi Google’da neden çıkmıyor? Teşhis rehberi
+- **URL:** https://narvals.com/blog/web-sitesi-googleda-neden-cikmiyor/
+- **Kategori:** SEO & GEO
+- **Kısa Cevap:** Web sitesi Google’da görünmüyorsa önce URL’nin keşfedilip indekslenebildiğini, doğru canonical kullandığını ve arama sorgusuna uygun yararlı içerik sunduğunu kontrol edin. Yeni veya zayıf bağlantılı sayfalar henüz keşfedilmemiş olabilir; noindex, robots, yönlendirme, soft 404 ve kopya URL sorunları da görünürlüğü engelleyebilir.
+- **Önemli Çıkarımlar:**
+  * “Google’da çıkmıyor” marka araması, URL indeksi ve hedef sorgu için ayrı teşhistir.
+  * Sitemap göndermek indeks garantisi değildir.
+  * URL Denetimi, sayfa bazında ilk kontrol noktasıdır.
+  * İndekslenen sayfa ilgili sorguda sıralanmak zorunda değildir.
+
+### Web sitesi dönüşüm oranı nasıl hesaplanır?
+- **URL:** https://narvals.com/blog/web-sitesi-donusum-orani-nasil-hesaplanir/
+- **Kategori:** Web & UX
+- **Kısa Cevap:** Web sitesi talep dönüşüm oranı, seçilen dönemde nitelikli talep üreten oturumların toplam oturumlara bölünüp 100 ile çarpılmasıyla hesaplanır. Müşteriye dönüşüm ise kazanılan müşteri sayısının nitelikli talep sayısına bölünmesidir. İki oranı ayrı izlemek, sayfa sorunu ile satış takibi sorununu karıştırmayı önler.
+- **Önemli Çıkarımlar:**
+  * Dönüşüm tanımını hesaplamadan önce yazın.
+  * Form tıklaması ile nitelikli talep aynı şey değildir.
+  * Talep oranı ve satış kapatma oranı ayrı izlenmelidir.
+  * Evrensel oran yerine kendi güvenilir başlangıç verinizi kıyaslayın.
+
+### Kurumsal web sitesi briefi nasıl hazırlanır?
+- **URL:** https://narvals.com/blog/kurumsal-web-sitesi-briefi-nasil-hazirlanir/
+- **Kategori:** Web & UX
+- **Kısa Cevap:** İyi bir web sitesi briefi renk veya sayfa sayısıyla başlamaz. İş hedefini, hedef kullanıcıyı, kullanıcının tamamlaması gereken ana eylemi, gerekli içerik ve kanıtları, teknik bağlantıları, kapsam dışını ve başarı ölçümünü aynı belgede netleştirir. Aşağıdaki soru seti Narvals Labs’ın editoryal proje çerçevesidir.
+- **Önemli Çıkarımlar:**
+  * Brief çözümü tarif etmekten önce problemi sınırlar.
+  * İçerik sahibi ve onay akışı takvim kadar önemlidir.
+  * “Şimdi, sonra, kapsam dışı” ayrımı bütçe sürprizlerini azaltır.
+  * Başarı ölçütü yayından önce tanımlanır.
+
+### Web sitesi teknik SEO kontrol listesi: yayından önce ve sonra
+- **URL:** https://narvals.com/blog/web-sitesi-teknik-seo-kontrol-listesi/
+- **Kategori:** SEO & GEO
+- **Kısa Cevap:** Teknik SEO kontrolü, birkaç meta etiketi eklemekten ibaret değildir. Arama motorunun doğru URL’yi 200 yanıtıyla bulabilmesi, içeriği render edebilmesi, kopyaları tek canonical altında birleştirebilmesi, sayfalar arasında ilerleyebilmesi ve değişiklikleri güvenilir biçimde izleyebilmesi gerekir.
+- **Önemli Çıkarımlar:**
+  * Önce HTTP yanıtı ve indexlenebilirlik, sonra görünüm ayrıntıları gelir.
+  * Canonical bir yönlendirme değildir; sinyaldir.
+  * Sitemap yalnız canonical ve indexlenebilir URL’leri içermelidir.
+  * Kontrol yayın gününde bitmez; log ve Search Console ile sürer.
+
+### GEO nedir? Google AI sonuçlarında görünürlük rehberi
+- **URL:** https://narvals.com/blog/google-ai-aramalari-icin-geo-rehberi/
+- **Kategori:** SEO & GEO
+- **Kısa Cevap:** GEO (generative engine optimization), bir markanın üretken yapay zekâ destekli arama ve yanıt deneyimlerinde bulunabilir, anlaşılabilir ve kaynak gösterilebilir olmasını geliştiren çalışmalara verilen addır. Google açısından bunun temeli ayrı bir hile değil; indexlenebilirlik, alakalı ve özgün içerik, açık marka bilgisi ve iyi sayfa deneyimi gibi SEO esaslarıdır.
+- **Önemli Çıkarımlar:**
+  * Google için GEO’nun temeli hâlâ Search indexi ve kalite sistemleridir.
+  * Özel bir AI schema’sı veya zorunlu llms.txt yoktur.
+  * Kolayca kopyalanan özet değil, birinci el kanıt ve özgün karar bilgisi gerekir.
+  * Sıra, kaynak gösterimi, marka anılması ve yapay zekâdan gelen ziyaret ayrı ölçülür.
+
+### E-ticaret altyapısı nasıl seçilir? Dokuz karar sorusu
+- **URL:** https://narvals.com/blog/e-ticaret-altyapisi-nasil-secilir/
+- **Kategori:** E-ticaret
+- **Kısa Cevap:** Doğru e-ticaret altyapısı en çok özelliği olan değil; ürün modelini, sipariş operasyonunu, gerekli entegrasyonları ve büyüme planını kabul edilebilir toplam maliyet ve bağımlılıkla karşılayan sistemdir. Seçim tema demosundan önce gerçek ürün ve sipariş senaryolarıyla yapılmalıdır.
+- **Önemli Çıkarımlar:**
+  * Platformu ürün ve sipariş modelinden sonra seçin.
+  * Lisansla birlikte toplam kullanım maliyetini karşılaştırın.
+  * Entegrasyonun varlığını değil veri akışını test edin.
+  * Taşınabilirlik ve çıkış planını sözleşmeden önce sorun.
+
+### Hazır yazılım mı, özel yazılım mı? Karar matrisi
+- **URL:** https://narvals.com/blog/hazir-yazilim-mi-ozel-yazilim-mi/
+- **Kategori:** Özel yazılım
+- **Kısa Cevap:** Hazır yazılım, süreç standart ve ürünün sunduğu kurallara uyabiliyorsa genellikle daha hızlı ve düşük riskli başlangıçtır. Özel yazılım; işletmeye özgü kurallar rekabet avantajı yaratıyor, manuel köprüler kalıcı yük oluşturuyor veya kritik sistemlerin birlikte çalışması hazır ürünlerle sürdürülemiyorsa anlam kazanır.
+- **Önemli Çıkarımlar:**
+  * Hazır ürün varsayılan başlangıç adayı olmalıdır.
+  * Özel yazılım, yalnız farklı görünmek için değil farklı çalışan süreç için gerekir.
+  * Karşılaştırma lisans ile geliştirme bedeli arasında yapılmaz.
+  * Hibrit çözüm çoğu işletmede en dengeli yol olabilir.
+
+### Meta Pixel ve Conversions API: farkları ve birlikte kullanım
+- **URL:** https://narvals.com/blog/meta-pixel-ve-conversions-api-farki/
+- **Kategori:** Meta reklam
+- **Kısa Cevap:** Meta Pixel, tarayıcıda gerçekleşen web etkileşimlerini gönderir; Conversions API (CAPI) ise sunucu, CRM, platform veya başka bir iş sistemi üzerinden Meta’ya event iletmek için doğrudan bağlantı sağlar. Web eventleri için çoğu senaryoda birbirinin alternatifi değil, aynı event planının iki kaynağı olarak birlikte değerlendirilir.
+- **Önemli Çıkarımlar:**
+  * Önce event planı, sonra Pixel ve CAPI kurulumu gelir.
+  * Aynı event iki kaynaktan gidiyorsa tekilleştirme tasarlanmalıdır.
+  * CAPI gizlilik veya izin kurallarını aşma yöntemi değildir.
+  * Test başarı metriği yalnız “event geliyor” değildir.
+
+### QR menü mü, PDF menü mü? Karşılaştırma rehberi
+- **URL:** https://narvals.com/blog/qr-menu-mu-pdf-menu-mu/
+- **Kategori:** QR menü
+- **Kısa Cevap:** PDF menü, basılı tasarımı ekrana taşıyan hızlı ve sınırlı bir çözüm olabilir. Mobil HTML tabanlı QR menü ise ürünleri ekran boyutuna göre düzenler; fiyat, stok, alerjen, dil ve şube bilgisini panelden yönetmeye daha uygundur. Sık değişen ve müşterinin telefonda seçim yaptığı menülerde HTML çözüm genellikle daha işlevseldir.
+- **Önemli Çıkarımlar:**
+  * QR kod yalnız giriş kapısıdır; deneyimin kalitesini hedef sayfa belirler.
+  * PDF, güncellemesi seyrek ve kısa içerikte geçici çözüm olabilir.
+  * Mobil HTML menü arama, kategori, dil ve güncellemede daha esnektir.
+  * Seçimden önce içerik sahibi ve güncelleme süreci tanımlanmalıdır.
+
+### Rezervasyon ve randevu sistemi nasıl seçilir?
+- **URL:** https://narvals.com/blog/rezervasyon-randevu-sistemi-nasil-secilir/
+- **Kategori:** Rezervasyon
+- **Kısa Cevap:** Rezervasyon sistemi kapasiteyi; randevu sistemi çoğunlukla personel, hizmet süresi ve uygunluğu yönetir. Doğru ürün, işletmenin gerçek zaman ve kapasite kurallarını müşteriye anlaşılır seçenekler olarak gösterirken ekibin çakışma, istisna, iptal ve iletişim süreçlerini tek yerde yönetmesini sağlar.
+- **Önemli Çıkarımlar:**
+  * Önce masa/kapasite mi, personel/süre mi yönettiğinizi ayırın.
+  * Takvim görünümü iş kurallarının yerini tutmaz.
+  * İptal, gecikme ve no-show normal akış kadar önemlidir.
+  * Yalnız gerekli kişisel veriyi toplayın ve yaşam döngüsünü planlayın.
+
+### Web sitesi maliyeti nasıl hesaplanır? Teklif karşılaştırma rehberi
+- **URL:** https://narvals.com/blog/web-sitesi-maliyeti-nasil-hesaplanir/
+- **Kategori:** Web & UX
+- **Kısa Cevap:** Web sitesi maliyeti sayfa sayısından çok; içerik hazırlığı, şablon çeşitliliği, özgün tasarım, yönetim ihtiyacı, entegrasyon, veri taşıma, erişilebilirlik, test, yayın ve bakım sorumluluklarıyla belirlenir. Sağlıklı karşılaştırma için teklifler aynı kapsam ve kabul ölçütleri üzerinde okunmalıdır. Aşağıdaki maliyet modeli Narvals Labs’ın editoryal kapsam çerçevesidir.
+- **Önemli Çıkarımlar:**
+  * “Beş sayfa” tek başına kapsam tanımı değildir.
+  * İçerik, entegrasyon ve veri taşıma bütçeyi görünür biçimde değiştirir.
+  * Düşük ilk fiyat yüksek işletme yükünü saklayabilir.
+  * Teklifte teslim, sorumluluk ve kabul ölçütü birlikte bulunmalıdır.
+
+### Web sitesi yaptırmadan önce: kapsam, teklif ve karar rehberi
+- **URL:** https://narvals.com/blog/web-sitesi-yaptirmadan-once-kapsam-teklif-karar-rehberi/
+- **Kategori:** Web & UX
+- **Kısa Cevap:** Web sitesi yaptırma kararında önce “nasıl görünecek?” değil, “hangi kullanıcı hangi işi güvenle tamamlayacak?” sorusu yanıtlanmalıdır. Hedef, ilk sürüm kapsamı, içerik ve entegrasyon sorumlulukları, teklif kalemleri ve kabul ölçütleri aynı çerçevede netleştiğinde doğru çözümü seçmek ve teklifleri karşılaştırmak kolaylaşır.
+- **Önemli Çıkarımlar:**
+  * Web sitesi yapma ihtiyacı; kurumsal anlatım, talep toplama, online satış veya operasyon akışı gibi farklı projelere dönüşebilir.
+  * Sayfa sayısı yerine kullanıcı görevi, şablon, içerik ve entegrasyon üzerinden kapsam isteyin.
+  * Teklifler aynı brief ve aynı kabul ölçütleriyle karşılaştırıldığında toplam bedelin neyi kapsadığı anlaşılır.
+  * İlk sürümü küçük tutmak, gerekli ölçüm ve teknik temeli ertelemek anlamına gelmez.
+
+### Meta reklam bütçesi nasıl belirlenir? Planlama rehberi
+- **URL:** https://narvals.com/blog/meta-reklam-butcesi-nasil-belirlenir/
+- **Kategori:** Meta reklam
+- **Kısa Cevap:** Meta reklam bütçesi, rakibin harcamasına veya tek bir hazır rakama göre değil; iş hedefi, kabul edilebilir sonuç maliyeti, kampanya süresi, test edilecek değişken sayısı ve ölçüm güvenilirliği birlikte değerlendirilerek belirlenir. Önce işletmenin ekonomik sınırı ve ölçülebilir dönüşümü tanımlanır; ardından öğrenmeye yetecek fakat kaybı sınırlandıran bir test planı kurulur.
+- **Önemli Çıkarımlar:**
+  * Her işletme ve kampanya için geçerli tek bir doğru Meta reklam bütçesi yoktur.
+  * Bütçeden önce dönüşüm, ekonomik üst sınır ve veri kaynağı tanımlanmalıdır.
+  * Çok sayıda hedef kitle ve kreatif, aynı bütçeyi daha fazla test hücresine böler.
+  * Günlük bütçe bir planlama ortalamasıdır; harcama günlere eşit dağılmayabilir.
+  * Artırma, azaltma ve durdurma kuralları kampanya başlamadan yazılmalıdır.
+
+### Meta reklam ajansı seçerken hangi sorular sorulmalı?
+- **URL:** https://narvals.com/blog/meta-reklam-ajansi-secerken-sorulacak-sorular/
+- **Kategori:** Meta reklam
+- **Kısa Cevap:** Meta reklam ajansı seçerken yalnız yönetim ücretini veya sunulan sonuç tahminini karşılaştırmayın. Hesap ve veri sahipliğini, erişim yöntemini, ölçüm planını, kreatif sorumluluğunu, bütçe sınırlarını, raporlama tanımlarını, politika yönetimini ve sözleşme bittiğinde yapılacak devri yazılı olarak sorun. İyi teklif, kimin neyi ne zaman ve hangi kanıtla teslim edeceğini açıklar.
+- **Önemli Çıkarımlar:**
+  * İşletme varlıklarının sahipliği ile ajansın çalışma erişimi ayrı konulardır.
+  * Şifre paylaşmak yerine rol tabanlı ve gerekli en düşük erişim kullanılmalıdır.
+  * Medya bütçesi, ajans ücreti, üretim ve araç maliyeti ayrı gösterilmelidir.
+  * Rapor, platform metriğini gerçek satış veya nitelikli talep verisiyle bağlamalıdır.
+  * Sözleşme başlamadan devir, arşiv ve erişim kaldırma planı yazılmalıdır.
+
+### Sosyal medya yönetimi neleri kapsar? Hizmet ve teklif rehberi
+- **URL:** https://narvals.com/blog/sosyal-medya-yonetimi-neleri-kapsar/
+- **Kategori:** Sosyal medya
+- **Kısa Cevap:** Sosyal medya yönetimi genellikle strateji, içerik planı, metin ve görsel üretimi, onay, yayınlama, yorum ve mesaj yönlendirme, performans ölçümü ve düzenli raporlamayı kapsar. Reklam yönetimi, çekim, influencer çalışması, 7/24 moderasyon, kriz iletişimi ve müşteri hizmetleri ise her pakette otomatik olarak yer almaz; teklif içinde ayrı ayrı tanımlanmalıdır.
+- **Önemli Çıkarımlar:**
+  * Gönderi adedi tek başına sosyal medya yönetiminin kapsamını anlatmaz.
+  * Organik içerik, reklam, topluluk ve müşteri hizmetleri ayrı sorumluluklardır.
+  * Onay takvimi ve yanıt yetkisi, içerik takvimi kadar önemlidir.
+  * Etkileşim metriği iş hedefiyle ve veri kaynağıyla birlikte okunmalıdır.
+  * Hesap erişimi, kaynak dosya ve kullanım hakları teklif aşamasında netleşmelidir.
+
+### E-ticaret sitesi maliyeti nasıl hesaplanır? Toplam maliyet rehberi
+- **URL:** https://narvals.com/blog/e-ticaret-sitesi-maliyeti-nasil-hesaplanir/
+- **Kategori:** E-ticaret
+- **Kısa Cevap:** E-ticaret sitesi maliyeti tek bir tasarım veya yazılım bedeli değildir. Toplam maliyet; keşif ve kurulum gibi tek seferlik işler, altyapı ve bakım gibi dönemsel giderler, ödeme/kargo gibi kullanıma bağlı giderler, içerik ve operasyon için ayrılan iç ekip zamanı ile geçiş ve güvenlik risklerinin birlikte hesaplanmasıyla bulunur. Sağlıklı teklif karşılaştırması aynı kapsamı ve aynı değerlendirme dönemini kullanır.
+- **Önemli Çıkarımlar:**
+  * Ürün sayısından çok ürün verisinin yapısı ve entegrasyon ihtiyacı maliyeti değiştirir.
+  * Kurulum bedeli ile toplam sahip olma maliyeti aynı değildir.
+  * Lisans, işlem, entegrasyon, bakım ve iç ekip zamanı ayrı satırlarda hesaplanmalıdır.
+  * Hazır ve özel altyapı kararı, çıkış ve veri taşıma maliyetini de içermelidir.
+  * Kabul testi, güvenlik, mevzuat ve SEO geçişi sonradan eklenen kalemler olmamalıdır.
+
+### Google Ads ajansı seçerken hangi sorular sorulmalı?
+- **URL:** https://narvals.com/blog/google-ads-ajansi-secerken-sorulacak-sorular/
+- **Kategori:** Google Ads
+- **Kısa Cevap:** Google Ads ajansı seçerken yalnız yönetim ücretini veya vaat edilen tıklama sayısını karşılaştırmayın. Hesabın kimde kalacağını, arama terimlerinin nasıl denetleneceğini, hangi dönüşümün başarı sayılacağını, medya bütçesi ile hizmet bedelinin ayrımını, açılış sayfası sorumluluğunu, raporun hangi iş kararını üreteceğini ve sözleşme sonundaki devir planını yazılı olarak sorun.
+- **Önemli Çıkarımlar:**
+  * Google Ads hesabı ve işletme verileri müşterinin erişiminde kalmalıdır.
+  * Anahtar kelime listesi kadar gerçek arama terimleri ve negatif kelimeler önemlidir.
+  * Dönüşüm tanımı kampanya açılmadan önce doğrulanmalıdır.
+  * Medya bütçesi, yönetim, içerik ve açılış sayfası ayrı kalemlerdir.
+  * Rapor yalnız metrik değil, yapılan değişiklik ve sonraki kararı göstermelidir.
+
+### Google Ads mi Meta reklamları mı? Hangi kanal ne zaman seçilmeli?
+- **URL:** https://narvals.com/blog/google-ads-mi-meta-reklamlari-mi/
+- **Kategori:** Dijital reklam
+- **Kısa Cevap:** Google Ads, kullanıcı ürün veya hizmeti aktif biçimde aradığında mevcut talebi yakalamak için; Meta reklamları ise görsel içerik ve kitle sinyalleriyle talep oluşturmak, ilgiyi büyütmek veya yeniden hedeflemek için daha uygun olabilir. Doğru kanal sektör adına göre değil, müşterinin karar anı, teklifin anlatım biçimi, dönüşüm ölçümü ve bütçenin öğrenme kapasitesine göre seçilir.
+- **Önemli Çıkarımlar:**
+  * Google Search mevcut arama talebine, Meta ise keşif ve görsel anlatıma daha yakındır.
+  * Kanal seçimi tıklama maliyetiyle değil, nitelikli iş sonucuyla yapılmalıdır.
+  * Arama hacmi olmayan teklif için yalnız Google Ads yeterli olmayabilir.
+  * Zayıf açılış sayfası veya ölçüm iki kanalda da bütçeyi boşa harcatabilir.
+  * Kanallar birlikte kullanılıyorsa her birine ayrı görev ve dönüşüm tanımı verilmelidir.
+
+### B2B web sitesi nasıl olmalı? Lead generation ve kurumsal güven rehberi
+- **URL:** https://narvals.com/blog/b2b-web-sitesi-nasil-olmali/
+- **Kategori:** Web & UX
+- **Kısa Cevap:** Başarılı bir B2B web sitesi bir vitrin değil; satın alma komitesindeki karar vericilerin (yönetici, teknik sorumlu, satın alma) şüphelerini gideren, teknik yetkinliği kanıtlayan ve nitelikli teklif talebine (lead generation) yönlendiren stratejik bir satış aracıdır. Doğrudan ürün satışı yerine güven inşası, süreç şeffaflığı ve sürtünmesiz iletişim akışı üzerine kurulur.
+- **Önemli Çıkarımlar:**
+  * B2B karar süreçlerinde tek bir kişi değil, farklı uzmanlıklarda bir satın alma komitesi bulunur.
+  * Slogandan çok gerçek vaka analizleri, teknik dokümanlar ve süreç şeffaflığı güven kazandırır.
+  * Teklif ve iletişim formları gereksiz alanlardan arındırılmalı, sürtünme minimize edilmelidir.
+  * Tüm form ve etkileşimler doğrudan CRM ve satış bildirim sistemlerine anlık bağlanmalıdır.
+
+### Web sitesi hızlandırma ve Core Web Vitals (LCP, INP, CLS) rehberi
+- **URL:** https://narvals.com/blog/web-sitesi-hizlandirma-core-web-vitals-rehberi/
+- **Kategori:** SEO & Performans
+- **Kısa Cevap:** Web sitesi hızlandırma, yalnızca görselleri sıkıştırmaktan ibaret değildir. Google’ın sıralama sinyali olarak kullandığı Core Web Vitals standartlarında LCP (En Büyük İçerikli Boyama ≤ 2.5s), INP (Sonraki Etkileşime Yanıt Verme ≤ 200ms) ve CLS (Kümülatif Düzen Kayması ≤ 0.1) metriklerini yeşil bölgeye çekerek hem arama motorlarında üst sıralara çıkmayı hem de kullanıcı terk oranını düşürmeyi hedefler.
+- **Önemli Çıkarımlar:**
+  * Site açılış hızındaki her 1 saniyelik gecikme dönüşüm oranlarını ortalama %7 oranında düşürür.
+  * LCP için en kritik adım: Hero görselinin AVIF/WebP olarak sunulması ve render-blocking CSS/JS’in kaldırılmasıdır.
+  * INP metriği, ağır JavaScript kütüphanelerini temizleyerek ve ana iş parçacığını (main thread) rahatlatarak iyileştirilir.
+  * CLS için tüm görsel ve reklam alanlarına sabit width/height değerleri tanımlanmalıdır.
+
+### E-ticaret dönüşüm oranı artırma (CRO) ve sepet terkini önleme rehberi
+- **URL:** https://narvals.com/blog/e-ticaret-donusum-orani-artirma-cro-rehberi/
+- **Kategori:** E-Ticaret
+- **Kısa Cevap:** E-ticarette reklam bütçesini artırmadan geliri ve kârlılığı katlamanın en doğrudan yolu dönüşüm oranı optimizasyonudur (CRO). Ziyaretçinin ürün keşfinden sepete eklemesine ve ödeme adımını tamamlamasına kadar olan satın alma hunisindeki (funnel) tüm sürtünmeleri ortadan kaldırarak terk oranlarını minimize etmeyi amaçlar.
+- **Önemli Çıkarımlar:**
+  * Dönüşüm oranını %1’den %2’ye çıkarmak, reklam harcamasını ikiye katlamadan aynı satışı üretir.
+  * Sepet terklerinin en yaygın nedeni: Son adımda çıkan beklenmedik kargo/ek ücretler ve zorunlu üyeliktir.
+  * Mobil ürün sayfasında sepete ekle butonu ekranın altında yapışkan (sticky) kalmalıdır.
+  * Güven rozetleri, taksit tablosu ve iade garantisi karar verme süresini kısaltır.
+
+### İşletmeye özel CRM ve yönetim paneli seçim rehberi
+- **URL:** https://narvals.com/blog/yonetim-paneli-ve-crm-yazilimi-nasil-secilir/
+- **Kategori:** Özel yazılım
+- **Kısa Cevap:** Her işletmenin işleyişi, onay mekanizmaları, fiyatlandırma formülleri ve müşteri takibi standart bir hazır SaaS yazılımına uymaz. Şirket içinde dağınık Excel tabloları, tekrarlayan veri girişleri ve departmanlar arası bilgi kopukluğu yaşanıyorsa, işletmenin tam iş akışına göre tasarlanan özel bir yönetim paneli ve CRM sistemi operasyonel maliyetleri ciddi oranda düşürür.
+- **Önemli Çıkarımlar:**
+  * Hazır SaaS araçlar başlangıçta ucuzdur; ancak kullanıcı başı lisans ücretleri büyüdükçe ağırlaşır.
+  * Özel yönetim paneli işletmenin süreçlerine adapte olur; işletmeyi hazır bir kalıba zorlamaz.
+  * Rol bazlı yetkilendirme (RBAC) ile çalışanların yalnızca yetkili oldukları verileri görmesi sağlanır.
+  * Mevcut muhasebe, ERP veya kargo sistemleriyle tam iki yönlü API entegrasyonu kurulabilir.
+
+
+---
+
+## 6. Tüm Sayfa İndeksi (Canonical URLs)
 
 - Ana Sayfa: https://narvals.com/
 - Hizmetler Genel: https://narvals.com/hizmetler/
@@ -129,6 +486,18 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 - Ücretsiz Araçlar: https://narvals.com/araclar/
 - Ücretsiz Web Sitesi Kontrolü: https://narvals.com/araclar/web-sitesi-kontrolu/
 - Web Sitesi Teklif Karşılaştırma: https://narvals.com/araclar/teklif-karsilastirma/
+- Dönüşüm Oranı Hesaplama: https://narvals.com/araclar/donusum-orani-hesaplama/
+- ROAS Hesaplama: https://narvals.com/araclar/roas-hesaplama/
+- Google Ads Bütçe Simülasyonu: https://narvals.com/araclar/google-ads-butce-hesaplama/
+- GA4 UTM Link Oluşturucu: https://narvals.com/araclar/utm-link-olusturucu/
+- QR Kod Oluşturucu: https://narvals.com/araclar/qr-kod-olusturucu/
+- E-Ticaret Net Kâr Hesaplayıcı: https://narvals.com/araclar/e-ticaret-kar-hesaplama/
+- KDV ve Tevkifat Hesaplama: https://narvals.com/araclar/kdv-hesaplama/
+- Core Web Vitals Kontrolü: https://narvals.com/araclar/core-web-vitals-kontrolu/
+- Görsel Boyut ve Oran Hesaplayıcı: https://narvals.com/araclar/gorsel-boyut-hesaplayici/
+- Saatlik Ücret Hesaplayıcı: https://narvals.com/araclar/saatlik-ucret-hesaplama/
+- Meta Reklam Bütçesi Hesaplama: https://narvals.com/araclar/meta-reklam-butcesi-hesaplama/
+- Meta Etiketi ve Sosyal Önizleyici: https://narvals.com/araclar/meta-etiket-onizleyici/
 - Blog & Rehberler: https://narvals.com/blog/
 - Editoryal İlkeler: https://narvals.com/editoryal-ilkeler/
 - Konu Merkezi: https://narvals.com/blog/konu/e-ticaret/
