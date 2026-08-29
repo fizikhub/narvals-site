@@ -489,7 +489,10 @@ const sharedOrgNode = (origin) => ({
     'Teknik SEO',
     'Generative Engine Optimization (GEO)',
     'Core Web Vitals Optimizasyonu',
-    'Dönüşüm Oranı Optimizasyonu (CRO)'
+    'Dönüşüm Oranı Optimizasyonu (CRO)',
+    'Conversions API (CAPI)',
+    'Google Analytics 4 (GA4)',
+    'Headless CMS ve API Mimarisi'
   ],
   knowsLanguage: ['tr', 'en']
 });

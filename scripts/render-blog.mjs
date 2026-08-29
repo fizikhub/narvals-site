@@ -121,7 +121,10 @@ const organizationNode = (siteOrigin) => ({
     'Teknik SEO',
     'Generative Engine Optimization (GEO)',
     'Core Web Vitals Optimizasyonu',
-    'Dönüşüm Oranı Optimizasyonu (CRO)'
+    'Dönüşüm Oranı Optimizasyonu (CRO)',
+    'Conversions API (CAPI)',
+    'Google Analytics 4 (GA4)',
+    'Headless CMS ve API Mimarisi'
   ],
   knowsLanguage: ['tr', 'en']
 });
@@ -250,8 +253,10 @@ const ENTITY_WIKIDATA_MAP = {
   'LCP optimizasyonu': 'https://en.wikipedia.org/wiki/Core_Web_Vitals',
   'Özel yazılım': 'https://tr.wikipedia.org/wiki/Yaz%C4%B1l%C4%B1m',
   'Özel CRM': 'https://tr.wikipedia.org/wiki/M%C3%BC%C5%9Fteri_ili%C5%9Fkileri_y%C3%B6netimi',
+  'CRM': 'https://tr.wikipedia.org/wiki/M%C3%BC%C5%9Fteri_ili%C5%9Fkileri_y%C3%B6netimi',
   'QR menü': 'https://tr.wikipedia.org/wiki/QR_kodu',
   'QR Menü': 'https://tr.wikipedia.org/wiki/QR_kodu',
+  'QR kod': 'https://tr.wikipedia.org/wiki/QR_kodu',
   'Kullanıcı deneyimi': 'https://tr.wikipedia.org/wiki/Kullan%C4%B1c%C4%B1_deneyimi',
   'Kurumsal UX': 'https://tr.wikipedia.org/wiki/Kullan%C4%B1c%C4%B1_deneyimi',
   'Dönüşüm oranı optimizasyonu': 'https://en.wikipedia.org/wiki/Conversion_rate_optimization',
@@ -262,7 +267,19 @@ const ENTITY_WIKIDATA_MAP = {
   'Topluluk yönetimi': 'https://tr.wikipedia.org/wiki/Sosyal_medya',
   'B2B web sitesi': 'https://tr.wikipedia.org/wiki/B2B',
   'B2B': 'https://tr.wikipedia.org/wiki/B2B',
-  'Generative Engine Optimization (GEO)': 'https://en.wikipedia.org/wiki/Generative_artificial_intelligence'
+  'Generative Engine Optimization (GEO)': 'https://en.wikipedia.org/wiki/Generative_artificial_intelligence',
+  'Meta Pixel': 'https://en.wikipedia.org/wiki/Facebook_Platform',
+  'Conversions API': 'https://en.wikipedia.org/wiki/Facebook_Platform',
+  'UTM parametreleri': 'https://en.wikipedia.org/wiki/UTM_parameters',
+  'ROAS': 'https://en.wikipedia.org/wiki/Return_on_ad_spend',
+  'Google Analytics': 'https://tr.wikipedia.org/wiki/Google_Analytics',
+  'GA4': 'https://tr.wikipedia.org/wiki/Google_Analytics',
+  'Online rezervasyon': 'https://en.wikipedia.org/wiki/Computer_reservations_system',
+  'Açılış sayfası': 'https://en.wikipedia.org/wiki/Landing_page',
+  'Web erişilebilirliği': 'https://tr.wikipedia.org/wiki/Web_eri%C5%9Filebilirli%C4%9Fi',
+  'Responsive tasarım': 'https://tr.wikipedia.org/wiki/Duyarl%C4%B1_web_tasar%C4%B1m%C4%B1',
+  'SaaS': 'https://tr.wikipedia.org/wiki/Hizmet_olarak_yaz%C4%B1l%C4%B1m',
+  'API entegrasyonu': 'https://tr.wikipedia.org/wiki/Uygulama_programlama_aray%C3%BCz%C3%BC'
 };
 
 const resolveEntity = (name) => {
