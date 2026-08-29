@@ -282,12 +282,12 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 ### GEO nedir? Google AI sonuçlarında görünürlük rehberi
 - **URL:** https://narvals.com/blog/google-ai-aramalari-icin-geo-rehberi/
 - **Kategori:** SEO & GEO
-- **Kısa Cevap:** GEO (generative engine optimization), bir markanın üretken yapay zekâ destekli arama ve yanıt deneyimlerinde bulunabilir, anlaşılabilir ve kaynak gösterilebilir olmasını geliştiren çalışmalara verilen addır. Google açısından bunun temeli ayrı bir hile değil; indexlenebilirlik, alakalı ve özgün içerik, açık marka bilgisi ve iyi sayfa deneyimi gibi SEO esaslarıdır.
+- **Kısa Cevap:** GEO (generative engine optimization), bir markanın üretken yapay zekâ destekli arama ve yanıt motorlarında (Google AI Overviews, ChatGPT Search, Perplexity) taranabilir, anlaşılabilir ve birincil kaynak olarak alıntılanabilir olmasını sağlayan optimizasyon disiplinidir. Princeton ve KDD 2024 araştırmalarına göre doğrudan uzman alıntıları, istatistiksel veri entegrasyonu ve net ters piramit yanıt yapısı, AI yanıtlarındaki kaynak görünürlüğünü %30-40 oranında artırmaktadır.
 - **Önemli Çıkarımlar:**
-  * Google için GEO’nun temeli hâlâ Search indexi ve kalite sistemleridir.
-  * Özel bir AI schema’sı veya zorunlu llms.txt yoktur.
-  * Kolayca kopyalanan özet değil, birinci el kanıt ve özgün karar bilgisi gerekir.
-  * Sıra, kaynak gösterimi, marka anılması ve yapay zekâdan gelen ziyaret ayrı ölçülür.
+  * Google ve AI motorları için GEO’nun temeli taranabilir statik HTML ve Search kalite sistemleridir.
+  * KDD 2024 akademik araştırması: Doğrudan alıntı ve istatistik ekleme görünürlüğü %30-40 artırır.
+  * RAG modelleri anlamsal etiketlere (article, section, h2, table, dl) göre 100-250 tokenlık parçalama yapar.
+  * Sıra konumu, AI kaynak gösterimi (citation), marka anılması ve yapay zekâ yönlendirmesi (referral) ayrı ölçülür.
 
 ### E-ticaret altyapısı nasıl seçilir? Dokuz karar sorusu
 - **URL:** https://narvals.com/blog/e-ticaret-altyapisi-nasil-secilir/

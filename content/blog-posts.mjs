@@ -258,47 +258,78 @@ export const blogPosts = [
     slug: 'google-ai-aramalari-icin-geo-rehberi',
     metaTitle: 'GEO Rehberi: Google AI Aramalarında Görünürlük | Narvals',
     title: 'GEO nedir? Google AI sonuçlarında görünürlük rehberi',
-    description: 'GEO, AEO ve AI arama görünürlüğünü teknik SEO, özgün kanıt, marka tutarlılığı, bot erişimi ve ölçüm üzerinden açıklayan güncel rehber.',
-    keywords: ['GEO nedir', 'AI arama optimizasyonu', 'Google AI Overviews', 'AEO'],
+    description: 'GEO, AEO ve AI arama görünürlüğünü KDD 2024 akademik bulguları, teknik SEO, özgün kanıt, bot erişimi ve ölçüm üzerinden açıklayan güncel rehber.',
+    keywords: ['GEO nedir', 'AI arama optimizasyonu', 'Google AI Overviews', 'AEO', 'KDD GEO'],
     category: 'SEO & GEO',
     published: '2026-08-21T09:20:00+03:00',
-    modified: '2026-08-23T21:35:00+03:00',
-    readingTime: 13,
-    answer: 'GEO (generative engine optimization), bir markanın üretken yapay zekâ destekli arama ve yanıt deneyimlerinde bulunabilir, anlaşılabilir ve kaynak gösterilebilir olmasını geliştiren çalışmalara verilen addır. Google açısından bunun temeli ayrı bir hile değil; indexlenebilirlik, alakalı ve özgün içerik, açık marka bilgisi ve iyi sayfa deneyimi gibi SEO esaslarıdır.',
+    modified: '2026-08-30T00:00:00+03:00',
+    readingTime: 14,
+    answer: 'GEO (generative engine optimization), bir markanın üretken yapay zekâ destekli arama ve yanıt motorlarında (Google AI Overviews, ChatGPT Search, Perplexity) taranabilir, anlaşılabilir ve birincil kaynak olarak alıntılanabilir olmasını sağlayan optimizasyon disiplinidir. Princeton ve KDD 2024 araştırmalarına göre doğrudan uzman alıntıları, istatistiksel veri entegrasyonu ve net ters piramit yanıt yapısı, AI yanıtlarındaki kaynak görünürlüğünü %30-40 oranında artırmaktadır.',
     takeaways: [
-      'Google için GEO’nun temeli hâlâ Search indexi ve kalite sistemleridir.',
-      'Özel bir AI schema’sı veya zorunlu llms.txt yoktur.',
-      'Kolayca kopyalanan özet değil, birinci el kanıt ve özgün karar bilgisi gerekir.',
-      'Sıra, kaynak gösterimi, marka anılması ve yapay zekâdan gelen ziyaret ayrı ölçülür.'
+      'Google ve AI motorları için GEO’nun temeli taranabilir statik HTML ve Search kalite sistemleridir.',
+      'KDD 2024 akademik araştırması: Doğrudan alıntı ve istatistik ekleme görünürlüğü %30-40 artırır.',
+      'RAG modelleri anlamsal etiketlere (article, section, h2, table, dl) göre 100-250 tokenlık parçalama yapar.',
+      'Sıra konumu, AI kaynak gösterimi (citation), marka anılması ve yapay zekâ yönlendirmesi (referral) ayrı ölçülür.'
     ],
-    about: ['Generative Engine Optimization', 'Google AI Overviews', 'AI arama görünürlüğü'],
+    about: ['Generative Engine Optimization', 'Google AI Overviews', 'AI arama görünürlüğü', 'Information Gain'],
     related: ['web-sitesi-teknik-seo-kontrol-listesi', 'kurumsal-web-sitesi-briefi-nasil-hazirlanir', 'meta-pixel-ve-conversions-api-farki'],
     servicePath: '/hizmetler/web-tasarim/',
     serviceLabel: 'Arama temelli web altyapısını inceleyin',
     faq: [
       { question: 'GEO (Generative Engine Optimization) nedir?', answer: 'Web sitesi içeriğinin ve varlık sinyallerinin ChatGPT, Google AI Overviews ve Perplexity gibi üretken yapay zekâ yanıt motorları tarafından taranabilir, anlaşılabilir ve kaynak gösterilebilir hale getirilmesidir.' },
-      { question: 'Yapay zekâ motorları hangi içerikleri kaynak gösterir?', answer: 'Net tanımlar, doğrulanabilir tablolar, birincil kaynak referansları ve yapılandırılmış veri (JSON-LD) içeren otoriter içerikleri öncelikli kaynak olarak seçer.' },
-      { question: 'llms.txt dosyası ne işe yarar?', answer: 'Yapay zekâ tarayıcılarına ve LLM ajanlarına sitenin en önemli sayfalarını, hizmetlerini ve özet dokümantasyonunu temiz metin formatında sunar.' }
+      { question: 'Yapay zekâ motorları hangi içerikleri kaynak gösterir?', answer: 'Doğrudan tanımlar, istatistiksel veriler, doğrulanabilir tablolar, birincil kaynak referansları ve yapılandırılmış veri (JSON-LD) içeren yüksek bilgi kazanımlı (Information Gain) içerikleri öncelikli kaynak olarak seçer.' },
+      { question: 'llms.txt dosyası ne işe yarar?', answer: 'Yapay zekâ tarayıcılarına ve LLM ajanlarına sitenin en önemli sayfalarını, hizmetlerini ve özet dokümantasyonunu temiz metin formatında sunar.' },
+      { question: 'Akademik GEO araştırmaları hangi taktikleri öneriyor?', answer: 'KDD 2024 çalışması; doğrudan uzman alıntıları, sayısal istatistikler ve açık kaynak gösteriminin AI citation olasılığını belirgin şekilde artırdığını, anahtar kelime doldurmanın ise zarar verdiğini ortaya koymuştur.' }
     ],
     sections: [
       {
         id: 'geo-seo-iliskisi',
         label: 'Temel tanım',
-        heading: 'GEO, SEO’dan kopuk bir “AI için yazma” tekniği değildir.',
+        heading: 'GEO, SEO’dan kopuk bir “AI için yazma” hilesi değildir.',
         paragraphs: [
           'Google’ın güncel rehberine göre AI Overviews ve AI Mode, çekirdek Search sıralama ve kalite sistemlerine dayanır. Sistem, bir soruyu alt sorgulara ayırabilir ve Search indexindeki alakalı sayfalardan bilgi getirebilir. Bu nedenle sayfa önce taranabilir, indexlenebilir ve snippet göstermeye uygun olmalıdır.',
-          'ChatGPT Search, Bing Copilot veya başka yanıt motorlarının tarayıcıları ve kaynak seçimi farklı olabilir. Ortak zemin ise açıktır: Yetkili HTML içerik, sağlam teknik erişim, belirgin konu sahipliği, güncel kaynak ve tutarlı marka varlığı.'
+          'ChatGPT Search (OAI-SearchBot), Claude (Claude-SearchBot), Perplexity (PerplexityBot) ve Bing Copilot tarayıcıları ve kaynak seçimi farklı ağırlıklara sahip olsa da ortak zemin nettir: Yetkili HTML içerik, sağlam teknik erişim, belirgin konu sahipliği, güncel birincil kaynak ve tutarlı marka varlığı.'
         ],
         table: {
-          headers: ['Katman', 'SEO görevi', 'AI görünürlüğüne katkısı'],
+          headers: ['Katman', 'SEO görevi', 'AI / GEO görünürlüğüne katkısı'],
           rows: [
-            ['Keşif', 'Tarama, index, dahili link, sitemap', 'Kaynak adayının bulunabilmesi'],
-            ['Alaka', 'Sorgu niyetini derin karşılayan sayfa', 'Alt sorgularla anlamlı eşleşme'],
-            ['Güven', 'Kaynak, yazar/yayıncı, gerçek işletme ve kanıt', 'İddianın doğrulanabilir olması'],
-            ['Deneyim', 'Hızlı, erişilebilir ve anlaşılır sayfa', 'Kullanıcının kaynağa geçince görevini tamamlaması'],
-            ['Ölçüm', 'Search Console ve dönüşüm analizi', 'Görünürlüğün iş etkisini ayırabilme']
+            ['Keşif', 'Tarama, index, robots.txt, sitemap', 'Kaynak adayının AI botları tarafından bulunabilmesi'],
+            ['Alaka', 'Sorgu niyetini derin karşılayan sayfa', 'Alt sorgular ve RAG vektör eşleşmesi'],
+            ['Güven (E-E-A-T)', 'Kaynak, yazar/yayıncı, gerçek işletme ve kanıt', 'Bilginin doğrulanabilirliği ve birincil atıf'],
+            ['Deneyim', 'Hızlı (CWV), erişilebilir ve anlaşılır sayfa', 'Kullanıcının kaynaktan gelince görevini tamamlaması'],
+            ['Ölçüm', 'Search Console ve AI referral analizi', 'Görünürlüğün gerçek iş etkisini ayırabilme']
           ]
         }
+      },
+      {
+        id: 'akademik-geo-bulgulari',
+        label: 'Akademik bulgular',
+        heading: 'KDD 2024 ve üniversite araştırmalarına göre en etkili GEO stratejileri.',
+        paragraphs: [
+          'Princeton, Georgia Tech ve Allen AI araştırmacılarının KDD 2024 konferansında sunduğu öncü GEO araştırması (*Aggarwal et al., arXiv:2311.09735*), üretken arama motorlarının kaynak seçme mekanizmalarını 10.000 sorguluk kontrollü benchmark (GEO-bench) üzerinde inceledi.',
+          'Araştırma bulgularına göre geleneksel SEO manipülasyonları (örneğin anahtar kelime tekrarı) AI yanıtlarında negatif sonuç verirken, şu 3 yöntem görünürlüğü %30 ila %40 arasında artırdı:'
+        ],
+        list: [
+          '<strong>Doğrudan Uzman Alıntıları (Quotations):</strong> Sektör uzmanlarının ve doğrulanmış otoritelerin kesin ifadelerine yer vermek LLM özetleyicilerinin alıntı yapma ihtimalini belirgin şekilde yükseltir.',
+          '<strong>İstatistiksel ve Sayısal Veri (Statistics):</strong> Yüzdeler, süre aralıkları, katsayılar ve hesaplama modelleri RAG yoğun geçit erişiminde (Dense Passage Retrieval) alaka puanını artırır.',
+          '<strong>Açık Kaynak Gösterimi (Citations):</strong> Birincil standartlara ve resmî belgelere doğrudan bağlantı vermek, modelin halüsinasyon riskini azaltmak için sayfayı referans almasını sağlar.'
+        ],
+        callout: 'KDD bulgusu: LLM arama motorları soyut metinler yerine doğrulanabilir somut rakam ve alıntı içeren paragrafları kaynak olarak seçmeye eğilimlidir.'
+      },
+      {
+        id: 'rag-chunking-mimarisi',
+        label: 'RAG mimarisi',
+        heading: 'AI botları ve RAG sistemleri sayfayı nasıl parçalar?',
+        paragraphs: [
+          'Modern yapay zekâ arama sistemleri tüm sayfayı tek bir metin bloğu olarak okumaz. Sayfayı semantik HTML etiketlerine göre 100-250 tokenlık anlamsal parçalara (chunks) böler ve her parçayı çok boyutlu vektör uzayına yerleştirir.',
+          'Karmakarışık div yapıları, JavaScript yükleme gecikmeleri ve ana cevabı sayfanın sonuna saklayan uzun girişler parça bütünlüğünü bozar. En yüksek vektör benzerlik puanı için:'
+        ],
+        checklist: [
+          'Ters piramit yapısı: Başlığın hemen altına 1-2 cümlelik doğrudan tanım veya özet yerleştirin.',
+          'Semantik HTML5: article, section, h2, h3, p, table, dl ve ol etiketlerini doğru hiyerarşide kullanın.',
+          'Sıfır render gecikmesi: Ana içeriği istemci tarafı JS ile geciktirmeden doğrudan sunucu/statik HTML olarak verin.',
+          'Yapılandırılmış tablolar ve adımlı listeler: LLM ayrıştırıcılarının veriyi hatasız çıkarmasını sağlayın.'
+        ]
       },
       {
         id: 'teknik-onkosullar',
@@ -306,27 +337,27 @@ export const blogPosts = [
         heading: 'Kaynak gösterilmeden önce kaynak olabilecek bir sayfa kurun.',
         checklist: [
           'Sayfa herkese açık, canonical URL’de 200 yanıtıyla ve ana içerik HTML içinde sunuluyor.',
-          'Googlebot ile arama odaklı botlar robots veya WAF tarafından yanlışlıkla engellenmiyor.',
-          'Nosnippet gibi önizleme kısıtları görünürlük hedefiyle çelişmiyor.',
+          'Googlebot, OAI-SearchBot, Claude-SearchBot, PerplexityBot ve Applebot robots.txt veya WAF tarafından engellenmiyor.',
+          'Nosnippet gibi önizleme kısıtları görünürlük hedefiyle çelişmiyor; max-image-preview:large ve max-snippet:-1 aktif.',
           'Başlık, H1, giriş cevabı ve ana metin aynı birincil soruyu karşılıyor.',
-          'Sayfanın yayıncısı, yayın/güncelleme tarihi ve kaynakları görünür.',
-          'Schema, sayfada görünür gerçek içeriği tekrar ediyor; olmayan kişi, yorum veya sonuç üretmiyor.',
-          'Dahili linkler konuyu ana hizmet, karşılaştırma ve ilgili rehberlerle bağlıyor.',
+          'Sayfanın yayıncısı, yayın/güncelleme tarihi ve birincil kaynakları görünür.',
+          'Schema (JSON-LD), sayfada görünür gerçek içeriği tekrar ediyor; olmayan kişi, yorum veya sonuç üretmiyor.',
+          'Dahili linkler konuyu ana hizmet, karar araçları ve ilgili rehberlerle bağlıyor.',
           'Mobil ziyaretçi yapay zekâ sonucundaki bağlantıdan geldiğinde ana cevabı ve sonraki adımı hızla bulabiliyor.'
         ]
       },
       {
         id: 'emtia-olmayan-icerik',
-        label: 'İçerik farkı',
-        heading: 'Kolayca üretilebilen özet yerine özgün ve doğrulanabilir bilgi sunun.',
+        label: 'Bilgi kazanımı',
+        heading: 'Kolayca üretilebilen özet yerine Bilgi Kazanımı (Information Gain) sunun.',
         paragraphs: [
-          'Bir modelin internetteki ilk birkaç sonucu özetleyerek üretebileceği metin markaya özel değer taşımaz. Ayrışan içerik; gerçek karar ölçütü, uygulanmış yöntem, izinli vaka, özgün veri, açık sınır ve hatalı seçimlerin sonucunu gösterebilir.',
-          'Gerçek müşteri verisi veya vaka yoksa uydurmak yerine şeffaf bir karar aracı üretin. Örneğin “özel yazılım iyidir” demek yerine süreç değişkenliği, entegrasyon sayısı, veri sahipliği ve toplam işletme yükünü karşılaştıran matris yayınlayın. Kaynağın değeri kesin sayıdan değil, okuyucunun doğru karar verebilmesinden doğar.'
+          'Google’ın patentli Bilgi Kazanımı (Information Gain) algoritmaları, kullanıcının daha önce gördüğü sayfalara ek olarak yeni bir bakış açısı, özgün formül veya ilk elden deneyim sunan içerikleri ödüllendirir.',
+          'Bir modelin internetteki ilk birkaç sonucu özetleyerek üretebileceği metin markaya özel değer taşımaz. Ayrışan içerik; gerçek karar ölçütü, uygulanmış yöntem, interaktif hesaplama aracı, özgün karşılaştırma tablosu ve açık kısıtlamaları içermelidir.'
         ],
         list: [
-          '<strong>Birinci el:</strong> İzinli ekran, test yöntemi, süreç çıktısı, ölçüm tanımı ve sınırlamalar.',
-          '<strong>Özgün sentez:</strong> Birincil kaynakları gerçek bir iş kararına dönüştüren çerçeve.',
-          '<strong>Açık sınır:</strong> Kimin için uygun olmadığı, hangi verinin eksik olduğu ve sonucun neden garanti edilemeyeceği.',
+          '<strong>Birinci el araç ve modeller:</strong> Tarayıcıda anında çalışan açık formüllü hesaplayıcılar ve karar matrisleri.',
+          '<strong>Özgün sentez:</strong> Birincil kaynakları ve resmî standartları gerçek bir iş kararına dönüştüren çerçeve.',
+          '<strong>Açık sınır ve dürüstlük:</strong> Çözümün kimin için uygun olmadığı ve sonucun neden garanti edilemeyeceği.',
           '<strong>Güncel bakım:</strong> Değişen ürün veya kural için yalnız gerçek güncellemede dateModified kullanımı.'
         ]
       },
@@ -367,7 +398,7 @@ export const blogPosts = [
           headers: ['Metrik', 'Ne anlatır?', 'Neyi anlatmaz?'],
           rows: [
             ['Organik gösterim / tıklama', 'Aramadaki sorgu ve sayfa talebi', 'Tüm yapay zekâ kaynak gösterimlerini'],
-            ['Yapay zekâ kaynak gösterimi', 'Bir cevapta görünür kaynak seçimini', 'Kaynağın bütün etkisini veya nedeni'],
+            ['Yapay zekâ kaynak gösterimi (Citation)', 'Bir cevapta görünür kaynak seçimini', 'Kaynağın bütün etkisini veya nedeni'],
             ['Marka mention’ı', 'Adın cevapta geçmesini', 'Kullanıcının siteye geldiğini'],
             ['AI referral', 'Kaynak bağlantısından gerçekleşen ziyareti', 'Görünür olup tıklanmayan cevapları'],
             ['Nitelikli dönüşüm', 'Görünürlüğün iş sonucuna yaklaşmasını', 'Tek başına hangi kanalın nedensel etkisini']
@@ -377,9 +408,10 @@ export const blogPosts = [
       }
     ],
     sources: [
+      { label: 'KDD 2024 — GEO: Generative Engine Optimization (Aggarwal et al., arXiv:2311.09735)', url: 'https://arxiv.org/abs/2311.09735' },
       { label: 'Google — Üretken AI özellikleri için optimizasyon rehberi', url: 'https://developers.google.com/search/docs/fundamentals/ai-optimization-guide' },
       { label: 'Google Search Console — Generative AI Performance raporu', url: 'https://support.google.com/webmasters/answer/16984139' },
-      { label: 'Google — İnsan odaklı, güvenilir içerik', url: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content' },
+      { label: 'Google — İnsan odaklı, güvenilir içerik ve Bilgi Kazanımı', url: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content' },
       { label: 'OpenAI — Search botları ve yayıncı erişimi', url: 'https://developers.openai.com/api/docs/bots' },
       { label: 'Bing Webmaster Guidelines', url: 'https://www.bing.com/webmasters/help/webmaster-guidelines-30fba23a' }
     ]

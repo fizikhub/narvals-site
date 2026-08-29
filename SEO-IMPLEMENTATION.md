@@ -1,22 +1,23 @@
 # Narvals Labs — SEO/GEO uygulama ve büyüme planı
 
-Son güncelleme: 23 Ağustos 2026
+Son güncelleme: 30 Ağustos 2026
 
 ## Yönetici özeti
 
-Site artık 28 canonical URL, 14 kaynaklı karar rehberi, blog hub'ı, editoryal
-politika, RSS, URL bazlı sitemap tarihi, sade robots politikası, JSON-LD, sosyal
-metadata, karşılıklı iç bağlantılar ve otomatik SEO/HTML kontrolleri içeriyor.
+Site artık 68 canonical URL, 14 ücretsiz interaktif karar aracı, 34 kaynaklı
+karar rehberi, 4 konu merkezi hub'ı, blog hub'ı, editoryal politika, RSS, URL bazlı
+sitemap tarihi, çoklu AI arama botlarını (OAI-SearchBot, Claude-SearchBot, PerplexityBot,
+Applebot-Extended, Meta-ExternalAgent vb.) destekleyen robots politikası, zenginleştirilmiş
+JSON-LD şema grafı (`Organization`, `WebSite`, `WebPage`, `BlogPosting`, `Service`,
+`WebApplication`, `FAQPage`, `BreadcrumbList`), tam sosyal metadata, iki yönlü
+iç bağlantılar ve otomatik SEO/HTML kontrolleri içeriyor.
 
-Google'da birinci sıra garanti edilemez. Organik sıra; rakipler, kullanıcı
-niyeti, sitenin canlı erişilebilirliği, gerçek marka kanıtları, bağlantılar,
-içerik kalitesi ve zaman içinde değişir. Bu uygulamanın amacı garanti satmak
-değil; teknik engelleri kaldırmak, her URL'ye net bir görev vermek ve gerçek
-kanıt üretimini ölçülebilir hale getirmektir.
-
-`https://narvals.com` yayında ve teknik canlılık kontrolleri geçti. Bu kaynakta
-hazırlanan altı yeni URL henüz production deploy bekliyor. Kalan P0 girdiler;
-gerçek iletişim/NAP verileri, ölçüm kimlikleri ve KVKK/çerez tercihidir.
+Google ve üretken yapay zekâ motorlarında birinci sıra veya alıntı garantisi
+verilemez. Organik sıra ve AI alıntıları; arama niyeti, taranabilirlik, gerçek
+marka kanıtları (E-E-A-T), bilgi kazanımı (Information Gain) ve kullanıcı
+deneyimiyle şekillenir. Bu mimarinin amacı; teknik engelleri sıfıra indirmek,
+her URL'ye kesin bir arama niyeti vermek ve makine tarafından hatasız anlaşılabilir
+bir varlık (entity) grafı sunmaktır.
 
 ## Uygulanan sayfa–sorgu haritası
 

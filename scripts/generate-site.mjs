@@ -119,6 +119,12 @@ Allow: /
 User-agent: Googlebot-Image
 Allow: /
 
+User-agent: GoogleOther
+Allow: /
+
+User-agent: Google-CloudVertexBot
+Allow: /
+
 User-agent: Bingbot
 Allow: /
 
@@ -147,13 +153,31 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
 User-agent: Claude-Web
 Allow: /
 
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: Perplexity-Search
+Allow: /
+
 User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: FacebookBot
 Allow: /
 
 User-agent: CCBot
@@ -178,6 +202,9 @@ User-agent: YouBot
 Allow: /
 
 User-agent: Diffbot
+Allow: /
+
+User-agent: PoeBot
 Allow: /
 
 Sitemap: ${siteOrigin}/sitemap.xml
@@ -488,6 +515,10 @@ const sharedOrgNode = (origin) => ({
     'Online Rezervasyon Sistemleri',
     'Teknik SEO',
     'Generative Engine Optimization (GEO)',
+    'Yapay Zeka Aramaları ve LLM İndeksleme',
+    'E-E-A-T ve Varlık Tabanlı SEO',
+    'Bilgi Kazanımı (Information Gain)',
+    'Yapılandırılmış Veri ve Schema Mimarisi',
     'Core Web Vitals Optimizasyonu',
     'Dönüşüm Oranı Optimizasyonu (CRO)',
     'Conversions API (CAPI)',

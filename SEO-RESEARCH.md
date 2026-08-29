@@ -1,9 +1,10 @@
 # Narvals Labs — SEO / GEO araştırma notları
 
-Araştırma tarihi: 21 Ağustos 2026; canlı site kontrolü: 23 Ağustos 2026. Bu
-belge Google, Bing, Yandex, Apple ve yanıt motorları için yapılan resmî kaynak
-taramasını; akademik ve üçüncü taraf bulguların sınırlarıyla birlikte uygulama
-kararına dönüştürür.
+Araştırma tarihi: 21 Ağustos 2026; güncelleme: 30 Ağustos 2026. Bu
+belge Google, Bing, Yandex, Apple ve yapay zekâ yanıt motorları (ChatGPT Search,
+Perplexity, Claude, Gemini, Apple Intelligence) için yapılan akademik araştırmaları
+(KDD 2024, ACL, SIGIR, Information Gain patentleri), Reddit TechSEO/BigSEO
+topluluk deneyimlerini ve resmî crawler dokümantasyonlarını uygulama kararına dönüştürür.
 
 ## Sonuç
 
