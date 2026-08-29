@@ -598,7 +598,7 @@ ${renderHead({ siteOrigin, path, title, description, keywords: ['editoryal ilkel
 };
 
 const renderFeed = (siteOrigin) => `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Narvals Labs Rehberleri</title>
     <link>${encodeXml(`${siteOrigin}/blog/`)}</link>
@@ -613,6 +613,7 @@ ${blogPosts.map((post) => `    <item>
       <pubDate>${new Date(post.published).toUTCString()}</pubDate>
       <category>${encodeXml(post.category)}</category>
       <description>${encodeXml(post.description)}</description>
+      <content:encoded><![CDATA[<p>${escapeHtml(post.answer)}</p><ul>${post.takeaways.map((t) => `<li>${escapeHtml(t)}</li>`).join('')}</ul>]]></content:encoded>
     </item>`).join('\n')}
   </channel>
 </rss>

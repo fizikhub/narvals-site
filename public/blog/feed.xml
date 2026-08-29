@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Narvals Labs Rehberleri</title>
     <link>https://narvals.com/blog/</link>
@@ -14,6 +14,7 @@
       <pubDate>Sat, 29 Aug 2026 18:00:00 GMT</pubDate>
       <category>E-ticaret</category>
       <description>E-ticaret sitesi açmak için ürün, şirket, altyapı, ödeme, kargo, yasal metinler, SEO ve yayına alma adımlarını sade biçimde öğrenin.</description>
+      <content:encoded><![CDATA[<p>E-ticaret sitesi açmak için önce neyi, kime ve hangi kâr yapısıyla satacağınızı netleştirin. Sonra şirket ve satış yükümlülüklerini uzmanlarla doğrulayın; alan adı, altyapı, ödeme ve kargoyu seçin; ürün sayfalarını hazırlayın; gerçek siparişle test edip siteyi yayına alın. En pahalı sistemle değil, satış akışını eksiksiz kuran doğru kapsamla başlayın.</p><ul><li>Önce ürün ve operasyon, sonra e-ticaret altyapısı seçilir.</li><li>Ödeme, kargo, iade ve müşteri desteği tek akış olarak planlanır.</li><li>Her ürün sayfası gerçek bilgi, net fiyat ve görünür teslimat beklentisi sunar.</li><li>Yayın öncesi mobil cihazdan gerçek sipariş testi yapılır.</li><li>SEO, ürünler yayına girdikten sonra eklenen bir eklenti değildir.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>QR menü nasıl yapılır? Restoranlar için sade kurulum rehberi</title>
@@ -22,6 +23,7 @@
       <pubDate>Sat, 29 Aug 2026 18:10:00 GMT</pubDate>
       <category>QR menü</category>
       <description>QR menü hazırlamak için menü yapısı, mobil tasarım, fiyat güncelleme, QR kod basımı, Google işletme bağlantısı ve test adımlarını öğrenin.</description>
+      <content:encoded><![CDATA[<p>QR menü yapmak için önce ürünleri ve kategorileri sade bir düzene koyun, mobil uyumlu bir web menüsü hazırlayın, değişmeyen bir bağlantıya QR kod üretin ve kodu farklı telefonlarla masada test edin. PDF dosyasını doğrudan açtırmak yerine hızlı, okunabilir ve panelden güncellenebilir bir menü sayfası daha kullanışlıdır.</p><ul><li>QR kod değişmeyen bir web adresine yönlenmelidir.</li><li>Menü telefonda yakınlaştırma gerektirmeden okunmalıdır.</li><li>Fiyat ve stok bilgisi işletme tarafından panelden güncellenebilmelidir.</li><li>Baskıdan önce farklı kamera, ışık ve mesafelerde test yapılmalıdır.</li><li>Google İşletme Profili menü bağlantısı da aynı güncel adrese yönlenebilir.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>İnternet sitesi nasıl kurulur? Baştan sona sade rehber</title>
@@ -30,6 +32,7 @@
       <pubDate>Sat, 29 Aug 2026 18:20:00 GMT</pubDate>
       <category>Web &amp; UX</category>
       <description>Amaç, alan adı, hosting, içerik, tasarım, mobil uyum, SEO, ölçüm ve yayın adımlarıyla işletmeniz için internet sitesi kurmayı öğrenin.</description>
+      <content:encoded><![CDATA[<p>İnternet sitesi kurmak için amacınızı ve ziyaretçinin yapacağı ana eylemi belirleyin; alan adı ve hosting hesabını kendi adınıza açın; gerekli sayfaları ve içerikleri hazırlayın; mobil uyumlu tasarımı geliştirin; form, hız, erişilebilirlik ve SEO kontrollerinden sonra yayına alın. Başlangıçta çok sayfa değil, açık bilgi ve çalışan bir iletişim yolu gerekir.</p><ul><li>Site “var olmak” için değil, belirli bir işi tamamlatmak için kurulur.</li><li>Alan adı ve barındırma hesaplarının sahibi işletme olmalıdır.</li><li>İçerik tasarımdan önce hazırlanır ve her sayfa tek soruya cevap verir.</li><li>Mobil kullanım, form ve hız yayın öncesi gerçek cihazda test edilir.</li><li>Search Console ve analitik ilk günden kurulur.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>Google Ads reklamı nasıl verilir? İşletmeler için başlangıç rehberi</title>
@@ -38,6 +41,7 @@
       <pubDate>Sat, 29 Aug 2026 18:30:00 GMT</pubDate>
       <category>Google Ads</category>
       <description>Google Ads reklamı vermek için hedef, dönüşüm ölçümü, anahtar kelime, kampanya, reklam metni, açılış sayfası ve bütçe adımlarını öğrenin.</description>
+      <content:encoded><![CDATA[<p>Google Ads reklamı vermek için önce satış, nitelikli form veya telefon gibi gerçek dönüşümü tanımlayın; ölçümü kurun; arama niyetine uygun anahtar kelimeleri gruplayın; ilgili reklam metni ve açılış sayfası hazırlayın; konum, bütçe ve teklif ayarlarını kontrol edip küçük bir testle başlayın. Yalnız tıklama değil, iş sonucu ölçün.</p><ul><li>Kampanyadan önce dönüşüm ölçümü kurulur.</li><li>Anahtar kelime, reklam ve açılış sayfası aynı niyeti karşılar.</li><li>Bütçe ile ajans ve üretim maliyeti ayrı gösterilir.</li><li>Arama terimleri ve negatif kelimeler düzenli kontrol edilir.</li><li>Kalite Puanı hedef değil, tanı aracıdır.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>QR menü fiyatları: maliyeti hangi özellikler belirler?</title>
@@ -46,6 +50,7 @@
       <pubDate>Sat, 29 Aug 2026 19:00:00 GMT</pubDate>
       <category>QR menü</category>
       <description>QR menü fiyatlarını ürün, dil, şube, tasarım, panel, sipariş, ödeme, entegrasyon ve destek kapsamına göre karşılaştırmak için sade rehber.</description>
+      <content:encoded><![CDATA[<p>QR menü fiyatı yalnız QR kod üretme ücretinden oluşmaz. Ürün ve dil sayısı, şube yapısı, özel tasarım, yönetim paneli, içerik aktarımı, sipariş ve ödeme akışı, entegrasyon, barındırma ve destek kapsamı toplam maliyeti belirler. Teklifleri aynı özellik listesi ve aynı dönem üzerinden karşılaştırın.</p><ul><li>Ücretsiz QR kod ile yönetilebilir QR menü aynı ürün değildir.</li><li>Aylık/yıllık yazılım bedeli ile kurulum ve içerik işi ayrı olabilir.</li><li>Masadan sipariş ve ödeme, basit dijital menüden farklı kapsamdır.</li><li>Teklifte veri sahipliği, dışa aktarma ve kapanış planı görünmelidir.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>Web sitesi ne kadar sürer? Gerçekçi proje takvimi rehberi</title>
@@ -54,6 +59,7 @@
       <pubDate>Sat, 29 Aug 2026 19:10:00 GMT</pubDate>
       <category>Web &amp; UX</category>
       <description>Web sitesi yapım süresini içerik, sayfa şablonu, tasarım, entegrasyon, veri taşıma, test ve onay akışına göre planlamayı öğrenin.</description>
+      <content:encoded><![CDATA[<p>Web sitesi yapım süresi yalnız sayfa sayısına bağlı değildir. İçerik ve görsellerin hazır olması, benzersiz şablon sayısı, entegrasyonlar, veri taşıma, karar verici sayısı, revizyon ve test kapsamı takvimi belirler. Gerçekçi plan; keşif, içerik, tasarım, geliştirme, test ve yayın aşamalarını ayrı kabul ölçütleriyle gösterir.</p><ul><li>“10 sayfa” tek başına süre tahmini değildir.</li><li>İçerik gecikmesi çoğu projede ana takvim riskidir.</li><li>Onay sahibi ve geri bildirim süresi başlangıçta belirlenir.</li><li>Yayın tarihi ile tüm sonraki geliştirmelerin bitişi ayrılmalıdır.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>Google Ads bütçesi nasıl belirlenir? Planlama rehberi</title>
@@ -62,6 +68,7 @@
       <pubDate>Sat, 29 Aug 2026 19:20:00 GMT</pubDate>
       <category>Google Ads</category>
       <description>Google Ads bütçesini hedef, dönüşüm değeri, kabul edilebilir maliyet, arama talebi, test süresi ve harcama sınırlarıyla planlayın.</description>
+      <content:encoded><![CDATA[<p>Google Ads bütçesi; işletmenin kaybedebileceği rastgele bir rakamla değil, hedef dönüşüm, kabul edilebilir müşteri edinme maliyeti, arama talebi, kampanya süresi ve ölçüm güvenilirliğiyle belirlenir. Aylık medya sınırını kampanyalara bölmeden önce hangi iş sonucunun ne kadar değer taşıdığını hesaplayın.</p><ul><li>Herkese uyan tek başlangıç bütçesi yoktur.</li><li>Medya bütçesi yönetim ve üretim ücretinden ayrılır.</li><li>Google ortalama günlük bütçeyi ay içindeki talebe göre farklı günlerde kullanabilir.</li><li>Bütçe artırımı yalnız nitelikli sonuç ve operasyon kapasitesi uygunsa yapılır.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>Restoran web sitesi nasıl olmalı? Menü, rezervasyon ve Google rehberi</title>
@@ -70,6 +77,7 @@
       <pubDate>Sat, 29 Aug 2026 19:30:00 GMT</pubDate>
       <category>Web &amp; UX</category>
       <description>Restoran web sitesinde menü, konum, çalışma saatleri, rezervasyon, hızlı mobil deneyim, Google İşletme Profili ve yerel SEO nasıl kurulmalı?</description>
+      <content:encoded><![CDATA[<p>Restoran web sitesi telefonda hızla açılmalı; güncel menü, fiyatlar, konum, çalışma saatleri, iletişim ve rezervasyon yolunu ilk bakışta göstermelidir. QR menü, Google İşletme Profili ve rezervasyon sistemi aynı doğrulanmış bilgi kaynağına bağlanmalı; ziyaretçi uygulama indirmeden temel görevini tamamlayabilmelidir.</p><ul><li>Menü PDF içinde kaybolmamalı ve telefonda okunmalıdır.</li><li>Konum, saat ve telefon tüm kanallarda tutarlı olmalıdır.</li><li>Rezervasyon akışı kapasite ve onay kuralına göre kurulmalıdır.</li><li>Yüksek çözünürlüklü görsel, yavaş site anlamına gelmemelidir.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>Web tasarım ajansı seçerken sorulacak 15 soru</title>
@@ -78,6 +86,7 @@
       <pubDate>Sat, 29 Aug 2026 20:10:00 GMT</pubDate>
       <category>Web &amp; UX</category>
       <description>Web tasarım ajansını canlı işler, kapsam, hesap sahipliği, SEO, bakım, ölçüm, sözleşme ve teslim kriterleriyle karşılaştırmak için sade kontrol listesi.</description>
+      <content:encoded><![CDATA[<p>Web tasarım ajansını yalnız portfolyo görünüşü ve toplam fiyatla seçmeyin. Canlı işlerin çalışmasını, teklif kapsamını, alan adı ve hesap sahipliğini, içerik sorumluluğunu, teknik SEO teslimlerini, ölçümü, bakım modelini, çıkış planını ve kabul ölçütlerini aynı soru setiyle karşılaştırın.</p><ul><li>Canlı URL, statik tasarım görselinden daha güçlü kanıttır.</li><li>Alan adı ve kritik hesaplar işletmenin kontrolünde kalmalıdır.</li><li>SEO, bakım ve içerik gibi geniş ifadeler teslim listesine çevrilmelidir.</li><li>Teklifleri aynı senaryo ve aynı dönem maliyetiyle karşılaştırın.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>Web sitesi bakım ücreti ve yıllık maliyet neleri kapsar?</title>
@@ -86,6 +95,7 @@
       <pubDate>Sat, 29 Aug 2026 20:20:00 GMT</pubDate>
       <category>Web &amp; UX</category>
       <description>Web sitesi bakımında hosting, alan adı, güncelleme, yedek, güvenlik, içerik, destek ve geliştirme kalemlerini ayırarak teklifleri karşılaştırın.</description>
+      <content:encoded><![CDATA[<p>Web sitesi bakım ücreti tek bir zorunlu kalem değildir. Alan adı, barındırma, lisans, güvenlik güncellemesi, yedek doğrulama, izleme, içerik değişikliği, teknik destek ve yeni geliştirme ayrı işlerdir. Teklifte her kalemin sıklığı, yanıt süresi, sorumlusu ve hariçleri görünmelidir.</p><ul><li>Hosting ile bakım aynı hizmet değildir.</li><li>Yedek alınması kadar geri yüklemenin test edilmesi de önemlidir.</li><li>İçerik güncellemesi ve yeni özellik geliştirme ayrı sınırlanmalıdır.</li><li>Yıllık maliyet; yenileme, lisans ve üçüncü tarafları birlikte göstermelidir.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>Hazır web sitesi mi, özel tasarım mı? Karar rehberi</title>
@@ -94,6 +104,7 @@
       <pubDate>Sat, 29 Aug 2026 20:30:00 GMT</pubDate>
       <category>Web &amp; UX</category>
       <description>Hazır tema, site kurucu ve özel tasarım seçeneklerini hız, bütçe, marka, içerik, entegrasyon, sahiplik ve bakım açısından karşılaştırın.</description>
+      <content:encoded><![CDATA[<p>Hızlı doğrulama, standart sayfalar ve sınırlı bütçe için hazır tema veya site kurucu yeterli olabilir. Marka anlatısı, farklı kullanıcı akışları, özel entegrasyon, yüksek performans hedefi veya uzun vadeli içerik mimarisi gerekiyorsa özel tasarım ve geliştirme daha uygun olabilir. Kararı prestijle değil iş gereksinimiyle verin.</p><ul><li>Hazır çözüm kötü, özel çözüm otomatik olarak iyi değildir.</li><li>İlk yayın hızı ile uzun vadeli değiştirme maliyetini birlikte değerlendirin.</li><li>Tema demosu gerçek içerikle aynı sonucu garanti etmez.</li><li>Çıkış, veri aktarımı ve hesap sahipliği kararın parçasıdır.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>Web sitesi neden müşteri getirmiyor? 8 olası neden</title>
@@ -102,6 +113,7 @@
       <pubDate>Sat, 29 Aug 2026 20:40:00 GMT</pubDate>
       <category>Web &amp; UX</category>
       <description>Trafik, teklif, güven, kullanıcı yolu, form, hız ve ölçüm sorunlarını ayırarak web sitesinin neden müşteri getirmediğini teşhis edin.</description>
+      <content:encoded><![CDATA[<p>Bir web sitesi; doğru insanlar gelmiyorsa, teklif ilk bakışta anlaşılmıyorsa, güven kanıtı eksikse, sonraki adım zor veya bozuksa ya da gerçek müşteri sonucu ölçülmüyorsa müşteri getirmeyebilir. Önce sorunun trafik mi, sayfa mı, teklif mi yoksa satış takibi mi olduğunu ayırın.</p><ul><li>Trafik yokluğu ile dönüşüm sorunu aynı değildir.</li><li>Güzel tasarım, açık teklif ve güven kanıtının yerini tutmaz.</li><li>Form gönderimi gerçek müşteri sonucu değildir.</li><li>Tek seferde her şeyi yenilemek yerine en zayıf halkayı test edin.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>Web sitesi Google’da neden çıkmıyor? Teşhis rehberi</title>
@@ -110,6 +122,7 @@
       <pubDate>Sat, 29 Aug 2026 20:50:00 GMT</pubDate>
       <category>SEO &amp; GEO</category>
       <description>Sitenizin Google’da görünmemesini indeks, tarama, canonical, içerik, sorgu uyumu, yeni site ve teknik hata başlıklarıyla teşhis edin.</description>
+      <content:encoded><![CDATA[<p>Web sitesi Google’da görünmüyorsa önce URL’nin keşfedilip indekslenebildiğini, doğru canonical kullandığını ve arama sorgusuna uygun yararlı içerik sunduğunu kontrol edin. Yeni veya zayıf bağlantılı sayfalar henüz keşfedilmemiş olabilir; noindex, robots, yönlendirme, soft 404 ve kopya URL sorunları da görünürlüğü engelleyebilir.</p><ul><li>“Google’da çıkmıyor” marka araması, URL indeksi ve hedef sorgu için ayrı teşhistir.</li><li>Sitemap göndermek indeks garantisi değildir.</li><li>URL Denetimi, sayfa bazında ilk kontrol noktasıdır.</li><li>İndekslenen sayfa ilgili sorguda sıralanmak zorunda değildir.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>Web sitesi dönüşüm oranı nasıl hesaplanır?</title>
@@ -118,6 +131,7 @@
       <pubDate>Sat, 29 Aug 2026 21:20:00 GMT</pubDate>
       <category>Web &amp; UX</category>
       <description>Ziyaret, nitelikli talep ve müşteri sayılarını birbirinden ayırarak web sitesi dönüşüm oranını doğru hesaplayın ve iyileştirme senaryosu oluşturun.</description>
+      <content:encoded><![CDATA[<p>Web sitesi talep dönüşüm oranı, seçilen dönemde nitelikli talep üreten oturumların toplam oturumlara bölünüp 100 ile çarpılmasıyla hesaplanır. Müşteriye dönüşüm ise kazanılan müşteri sayısının nitelikli talep sayısına bölünmesidir. İki oranı ayrı izlemek, sayfa sorunu ile satış takibi sorununu karıştırmayı önler.</p><ul><li>Dönüşüm tanımını hesaplamadan önce yazın.</li><li>Form tıklaması ile nitelikli talep aynı şey değildir.</li><li>Talep oranı ve satış kapatma oranı ayrı izlenmelidir.</li><li>Evrensel oran yerine kendi güvenilir başlangıç verinizi kıyaslayın.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>Kurumsal web sitesi briefi nasıl hazırlanır?</title>
@@ -126,6 +140,7 @@
       <pubDate>Fri, 21 Aug 2026 06:00:00 GMT</pubDate>
       <category>Web &amp; UX</category>
       <description>Kurumsal web sitesi projesinde hedefi, kapsamı, içeriği, entegrasyonları ve başarı ölçütlerini netleştiren uygulanabilir brief rehberi.</description>
+      <content:encoded><![CDATA[<p>İyi bir web sitesi briefi renk veya sayfa sayısıyla başlamaz. İş hedefini, hedef kullanıcıyı, kullanıcının tamamlaması gereken ana eylemi, gerekli içerik ve kanıtları, teknik bağlantıları, kapsam dışını ve başarı ölçümünü aynı belgede netleştirir. Aşağıdaki soru seti Narvals Labs’ın editoryal proje çerçevesidir.</p><ul><li>Brief çözümü tarif etmekten önce problemi sınırlar.</li><li>İçerik sahibi ve onay akışı takvim kadar önemlidir.</li><li>“Şimdi, sonra, kapsam dışı” ayrımı bütçe sürprizlerini azaltır.</li><li>Başarı ölçütü yayından önce tanımlanır.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>Web sitesi teknik SEO kontrol listesi: yayından önce ve sonra</title>
@@ -134,6 +149,7 @@
       <pubDate>Fri, 21 Aug 2026 06:10:00 GMT</pubDate>
       <category>SEO &amp; GEO</category>
       <description>Tarama, index, canonical, yönlendirme, sitemap, yapılandırılmış veri, performans ve ölçümü kapsayan uygulamalı teknik SEO kontrol listesi.</description>
+      <content:encoded><![CDATA[<p>Teknik SEO kontrolü, birkaç meta etiketi eklemekten ibaret değildir. Arama motorunun doğru URL’yi 200 yanıtıyla bulabilmesi, içeriği render edebilmesi, kopyaları tek canonical altında birleştirebilmesi, sayfalar arasında ilerleyebilmesi ve değişiklikleri güvenilir biçimde izleyebilmesi gerekir.</p><ul><li>Önce HTTP yanıtı ve indexlenebilirlik, sonra görünüm ayrıntıları gelir.</li><li>Canonical bir yönlendirme değildir; sinyaldir.</li><li>Sitemap yalnız canonical ve indexlenebilir URL’leri içermelidir.</li><li>Kontrol yayın gününde bitmez; log ve Search Console ile sürer.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>GEO nedir? Google AI sonuçlarında görünürlük rehberi</title>
@@ -142,6 +158,7 @@
       <pubDate>Fri, 21 Aug 2026 06:20:00 GMT</pubDate>
       <category>SEO &amp; GEO</category>
       <description>GEO, AEO ve AI arama görünürlüğünü teknik SEO, özgün kanıt, marka tutarlılığı, bot erişimi ve ölçüm üzerinden açıklayan güncel rehber.</description>
+      <content:encoded><![CDATA[<p>GEO (generative engine optimization), bir markanın üretken yapay zekâ destekli arama ve yanıt deneyimlerinde bulunabilir, anlaşılabilir ve kaynak gösterilebilir olmasını geliştiren çalışmalara verilen addır. Google açısından bunun temeli ayrı bir hile değil; indexlenebilirlik, alakalı ve özgün içerik, açık marka bilgisi ve iyi sayfa deneyimi gibi SEO esaslarıdır.</p><ul><li>Google için GEO’nun temeli hâlâ Search indexi ve kalite sistemleridir.</li><li>Özel bir AI schema’sı veya zorunlu llms.txt yoktur.</li><li>Kolayca kopyalanan özet değil, birinci el kanıt ve özgün karar bilgisi gerekir.</li><li>Sıra, kaynak gösterimi, marka anılması ve yapay zekâdan gelen ziyaret ayrı ölçülür.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>E-ticaret altyapısı nasıl seçilir? Dokuz karar sorusu</title>
@@ -150,6 +167,7 @@
       <pubDate>Fri, 21 Aug 2026 06:30:00 GMT</pubDate>
       <category>E-ticaret</category>
       <description>Hazır platform ile özel geliştirme arasında; katalog, ödeme, kargo, entegrasyon, SEO, veri ve operasyon ihtiyaçlarına göre seçim rehberi.</description>
+      <content:encoded><![CDATA[<p>Doğru e-ticaret altyapısı en çok özelliği olan değil; ürün modelini, sipariş operasyonunu, gerekli entegrasyonları ve büyüme planını kabul edilebilir toplam maliyet ve bağımlılıkla karşılayan sistemdir. Seçim tema demosundan önce gerçek ürün ve sipariş senaryolarıyla yapılmalıdır.</p><ul><li>Platformu ürün ve sipariş modelinden sonra seçin.</li><li>Lisansla birlikte toplam kullanım maliyetini karşılaştırın.</li><li>Entegrasyonun varlığını değil veri akışını test edin.</li><li>Taşınabilirlik ve çıkış planını sözleşmeden önce sorun.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>Hazır yazılım mı, özel yazılım mı? Karar matrisi</title>
@@ -158,6 +176,7 @@
       <pubDate>Fri, 21 Aug 2026 06:40:00 GMT</pubDate>
       <category>Özel yazılım</category>
       <description>Süreç uyumu, entegrasyon, veri sahipliği, toplam maliyet ve değişim hızına göre hazır ürün ile özel yazılım arasında seçim rehberi.</description>
+      <content:encoded><![CDATA[<p>Hazır yazılım, süreç standart ve ürünün sunduğu kurallara uyabiliyorsa genellikle daha hızlı ve düşük riskli başlangıçtır. Özel yazılım; işletmeye özgü kurallar rekabet avantajı yaratıyor, manuel köprüler kalıcı yük oluşturuyor veya kritik sistemlerin birlikte çalışması hazır ürünlerle sürdürülemiyorsa anlam kazanır.</p><ul><li>Hazır ürün varsayılan başlangıç adayı olmalıdır.</li><li>Özel yazılım, yalnız farklı görünmek için değil farklı çalışan süreç için gerekir.</li><li>Karşılaştırma lisans ile geliştirme bedeli arasında yapılmaz.</li><li>Hibrit çözüm çoğu işletmede en dengeli yol olabilir.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>Meta Pixel ve Conversions API: farkları ve birlikte kullanım</title>
@@ -166,6 +185,7 @@
       <pubDate>Fri, 21 Aug 2026 06:50:00 GMT</pubDate>
       <category>Meta reklam</category>
       <description>Meta Pixel ile Conversions API’nin veri kaynağı, kullanım amacı, event eşleştirme, test ve gizlilik açısından farklarını açıklayan uygulama rehberi.</description>
+      <content:encoded><![CDATA[<p>Meta Pixel, tarayıcıda gerçekleşen web etkileşimlerini gönderir; Conversions API (CAPI) ise sunucu, CRM, platform veya başka bir iş sistemi üzerinden Meta’ya event iletmek için doğrudan bağlantı sağlar. Web eventleri için çoğu senaryoda birbirinin alternatifi değil, aynı event planının iki kaynağı olarak birlikte değerlendirilir.</p><ul><li>Önce event planı, sonra Pixel ve CAPI kurulumu gelir.</li><li>Aynı event iki kaynaktan gidiyorsa tekilleştirme tasarlanmalıdır.</li><li>CAPI gizlilik veya izin kurallarını aşma yöntemi değildir.</li><li>Test başarı metriği yalnız “event geliyor” değildir.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>QR menü mü, PDF menü mü? Karşılaştırma rehberi</title>
@@ -174,6 +194,7 @@
       <pubDate>Fri, 21 Aug 2026 07:00:00 GMT</pubDate>
       <category>QR menü</category>
       <description>PDF menü ile mobil HTML QR menüyü hız, okunabilirlik, güncelleme, çoklu dil, erişilebilirlik, ölçüm ve operasyon açısından karşılaştırın.</description>
+      <content:encoded><![CDATA[<p>PDF menü, basılı tasarımı ekrana taşıyan hızlı ve sınırlı bir çözüm olabilir. Mobil HTML tabanlı QR menü ise ürünleri ekran boyutuna göre düzenler; fiyat, stok, alerjen, dil ve şube bilgisini panelden yönetmeye daha uygundur. Sık değişen ve müşterinin telefonda seçim yaptığı menülerde HTML çözüm genellikle daha işlevseldir.</p><ul><li>QR kod yalnız giriş kapısıdır; deneyimin kalitesini hedef sayfa belirler.</li><li>PDF, güncellemesi seyrek ve kısa içerikte geçici çözüm olabilir.</li><li>Mobil HTML menü arama, kategori, dil ve güncellemede daha esnektir.</li><li>Seçimden önce içerik sahibi ve güncelleme süreci tanımlanmalıdır.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>Rezervasyon ve randevu sistemi nasıl seçilir?</title>
@@ -182,6 +203,7 @@
       <pubDate>Fri, 21 Aug 2026 07:10:00 GMT</pubDate>
       <category>Rezervasyon</category>
       <description>Kapasite, personel, süre, uygunluk, onay, hatırlatma, no-show, entegrasyon ve kişisel veri ihtiyaçlarına göre sistem seçme rehberi.</description>
+      <content:encoded><![CDATA[<p>Rezervasyon sistemi kapasiteyi; randevu sistemi çoğunlukla personel, hizmet süresi ve uygunluğu yönetir. Doğru ürün, işletmenin gerçek zaman ve kapasite kurallarını müşteriye anlaşılır seçenekler olarak gösterirken ekibin çakışma, istisna, iptal ve iletişim süreçlerini tek yerde yönetmesini sağlar.</p><ul><li>Önce masa/kapasite mi, personel/süre mi yönettiğinizi ayırın.</li><li>Takvim görünümü iş kurallarının yerini tutmaz.</li><li>İptal, gecikme ve no-show normal akış kadar önemlidir.</li><li>Yalnız gerekli kişisel veriyi toplayın ve yaşam döngüsünü planlayın.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>Web sitesi maliyeti nasıl hesaplanır? Teklif karşılaştırma rehberi</title>
@@ -190,6 +212,7 @@
       <pubDate>Fri, 21 Aug 2026 07:20:00 GMT</pubDate>
       <category>Web &amp; UX</category>
       <description>Web sitesi fiyatını etkileyen içerik, tasarım, geliştirme, entegrasyon, taşıma, test ve bakım kalemlerini görünür bir kapsamla karşılaştırın.</description>
+      <content:encoded><![CDATA[<p>Web sitesi maliyeti sayfa sayısından çok; içerik hazırlığı, şablon çeşitliliği, özgün tasarım, yönetim ihtiyacı, entegrasyon, veri taşıma, erişilebilirlik, test, yayın ve bakım sorumluluklarıyla belirlenir. Sağlıklı karşılaştırma için teklifler aynı kapsam ve kabul ölçütleri üzerinde okunmalıdır. Aşağıdaki maliyet modeli Narvals Labs’ın editoryal kapsam çerçevesidir.</p><ul><li>“Beş sayfa” tek başına kapsam tanımı değildir.</li><li>İçerik, entegrasyon ve veri taşıma bütçeyi görünür biçimde değiştirir.</li><li>Düşük ilk fiyat yüksek işletme yükünü saklayabilir.</li><li>Teklifte teslim, sorumluluk ve kabul ölçütü birlikte bulunmalıdır.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>Web sitesi yaptırmadan önce: kapsam, teklif ve karar rehberi</title>
@@ -198,6 +221,7 @@
       <pubDate>Sun, 23 Aug 2026 07:00:00 GMT</pubDate>
       <category>Web &amp; UX</category>
       <description>Web sitesi yaptırırken hedefi, ilk sürüm kapsamını, teklifleri, içerik sorumluluklarını ve kabul ölçütlerini netleştirmek için pratik karar rehberi.</description>
+      <content:encoded><![CDATA[<p>Web sitesi yaptırma kararında önce “nasıl görünecek?” değil, “hangi kullanıcı hangi işi güvenle tamamlayacak?” sorusu yanıtlanmalıdır. Hedef, ilk sürüm kapsamı, içerik ve entegrasyon sorumlulukları, teklif kalemleri ve kabul ölçütleri aynı çerçevede netleştiğinde doğru çözümü seçmek ve teklifleri karşılaştırmak kolaylaşır.</p><ul><li>Web sitesi yapma ihtiyacı; kurumsal anlatım, talep toplama, online satış veya operasyon akışı gibi farklı projelere dönüşebilir.</li><li>Sayfa sayısı yerine kullanıcı görevi, şablon, içerik ve entegrasyon üzerinden kapsam isteyin.</li><li>Teklifler aynı brief ve aynı kabul ölçütleriyle karşılaştırıldığında toplam bedelin neyi kapsadığı anlaşılır.</li><li>İlk sürümü küçük tutmak, gerekli ölçüm ve teknik temeli ertelemek anlamına gelmez.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>Meta reklam bütçesi nasıl belirlenir? Planlama rehberi</title>
@@ -206,6 +230,7 @@
       <pubDate>Sun, 23 Aug 2026 11:00:00 GMT</pubDate>
       <category>Meta reklam</category>
       <description>Meta reklam bütçesini hedef, birim ekonomi, ölçüm hazırlığı, test kapsamı ve risk sınırlarıyla belirlemek için uygulanabilir planlama rehberi.</description>
+      <content:encoded><![CDATA[<p>Meta reklam bütçesi, rakibin harcamasına veya tek bir hazır rakama göre değil; iş hedefi, kabul edilebilir sonuç maliyeti, kampanya süresi, test edilecek değişken sayısı ve ölçüm güvenilirliği birlikte değerlendirilerek belirlenir. Önce işletmenin ekonomik sınırı ve ölçülebilir dönüşümü tanımlanır; ardından öğrenmeye yetecek fakat kaybı sınırlandıran bir test planı kurulur.</p><ul><li>Her işletme ve kampanya için geçerli tek bir doğru Meta reklam bütçesi yoktur.</li><li>Bütçeden önce dönüşüm, ekonomik üst sınır ve veri kaynağı tanımlanmalıdır.</li><li>Çok sayıda hedef kitle ve kreatif, aynı bütçeyi daha fazla test hücresine böler.</li><li>Günlük bütçe bir planlama ortalamasıdır; harcama günlere eşit dağılmayabilir.</li><li>Artırma, azaltma ve durdurma kuralları kampanya başlamadan yazılmalıdır.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>Meta reklam ajansı seçerken hangi sorular sorulmalı?</title>
@@ -214,6 +239,7 @@
       <pubDate>Sun, 23 Aug 2026 11:10:00 GMT</pubDate>
       <category>Meta reklam</category>
       <description>Meta reklam ajansı tekliflerini hesap sahipliği, ölçüm, bütçe, kreatif süreç, raporlama, güvenlik ve çıkış planıyla karşılaştırma rehberi.</description>
+      <content:encoded><![CDATA[<p>Meta reklam ajansı seçerken yalnız yönetim ücretini veya sunulan sonuç tahminini karşılaştırmayın. Hesap ve veri sahipliğini, erişim yöntemini, ölçüm planını, kreatif sorumluluğunu, bütçe sınırlarını, raporlama tanımlarını, politika yönetimini ve sözleşme bittiğinde yapılacak devri yazılı olarak sorun. İyi teklif, kimin neyi ne zaman ve hangi kanıtla teslim edeceğini açıklar.</p><ul><li>İşletme varlıklarının sahipliği ile ajansın çalışma erişimi ayrı konulardır.</li><li>Şifre paylaşmak yerine rol tabanlı ve gerekli en düşük erişim kullanılmalıdır.</li><li>Medya bütçesi, ajans ücreti, üretim ve araç maliyeti ayrı gösterilmelidir.</li><li>Rapor, platform metriğini gerçek satış veya nitelikli talep verisiyle bağlamalıdır.</li><li>Sözleşme başlamadan devir, arşiv ve erişim kaldırma planı yazılmalıdır.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>Sosyal medya yönetimi neleri kapsar? Hizmet ve teklif rehberi</title>
@@ -222,6 +248,7 @@
       <pubDate>Sun, 23 Aug 2026 11:20:00 GMT</pubDate>
       <category>Sosyal medya</category>
       <description>Sosyal medya yönetiminin strateji, içerik, yayın, topluluk, raporlama, erişim ve kullanım hakları kapsamını netleştiren teklif rehberi.</description>
+      <content:encoded><![CDATA[<p>Sosyal medya yönetimi genellikle strateji, içerik planı, metin ve görsel üretimi, onay, yayınlama, yorum ve mesaj yönlendirme, performans ölçümü ve düzenli raporlamayı kapsar. Reklam yönetimi, çekim, influencer çalışması, 7/24 moderasyon, kriz iletişimi ve müşteri hizmetleri ise her pakette otomatik olarak yer almaz; teklif içinde ayrı ayrı tanımlanmalıdır.</p><ul><li>Gönderi adedi tek başına sosyal medya yönetiminin kapsamını anlatmaz.</li><li>Organik içerik, reklam, topluluk ve müşteri hizmetleri ayrı sorumluluklardır.</li><li>Onay takvimi ve yanıt yetkisi, içerik takvimi kadar önemlidir.</li><li>Etkileşim metriği iş hedefiyle ve veri kaynağıyla birlikte okunmalıdır.</li><li>Hesap erişimi, kaynak dosya ve kullanım hakları teklif aşamasında netleşmelidir.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>E-ticaret sitesi maliyeti nasıl hesaplanır? Toplam maliyet rehberi</title>
@@ -230,6 +257,7 @@
       <pubDate>Sun, 23 Aug 2026 11:30:00 GMT</pubDate>
       <category>E-ticaret</category>
       <description>E-ticaret sitesi maliyetini kurulum, lisans, entegrasyon, içerik, güvenlik, operasyon ve bakım kalemleriyle hesaplama ve teklif karşılaştırma rehberi.</description>
+      <content:encoded><![CDATA[<p>E-ticaret sitesi maliyeti tek bir tasarım veya yazılım bedeli değildir. Toplam maliyet; keşif ve kurulum gibi tek seferlik işler, altyapı ve bakım gibi dönemsel giderler, ödeme/kargo gibi kullanıma bağlı giderler, içerik ve operasyon için ayrılan iç ekip zamanı ile geçiş ve güvenlik risklerinin birlikte hesaplanmasıyla bulunur. Sağlıklı teklif karşılaştırması aynı kapsamı ve aynı değerlendirme dönemini kullanır.</p><ul><li>Ürün sayısından çok ürün verisinin yapısı ve entegrasyon ihtiyacı maliyeti değiştirir.</li><li>Kurulum bedeli ile toplam sahip olma maliyeti aynı değildir.</li><li>Lisans, işlem, entegrasyon, bakım ve iç ekip zamanı ayrı satırlarda hesaplanmalıdır.</li><li>Hazır ve özel altyapı kararı, çıkış ve veri taşıma maliyetini de içermelidir.</li><li>Kabul testi, güvenlik, mevzuat ve SEO geçişi sonradan eklenen kalemler olmamalıdır.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>Google Ads ajansı seçerken hangi sorular sorulmalı?</title>
@@ -238,6 +266,7 @@
       <pubDate>Thu, 27 Aug 2026 13:00:00 GMT</pubDate>
       <category>Google Ads</category>
       <description>Google Ads ajansı tekliflerini hesap erişimi, arama niyeti, dönüşüm ölçümü, bütçe, açılış sayfası, raporlama ve çıkış planıyla karşılaştırın.</description>
+      <content:encoded><![CDATA[<p>Google Ads ajansı seçerken yalnız yönetim ücretini veya vaat edilen tıklama sayısını karşılaştırmayın. Hesabın kimde kalacağını, arama terimlerinin nasıl denetleneceğini, hangi dönüşümün başarı sayılacağını, medya bütçesi ile hizmet bedelinin ayrımını, açılış sayfası sorumluluğunu, raporun hangi iş kararını üreteceğini ve sözleşme sonundaki devir planını yazılı olarak sorun.</p><ul><li>Google Ads hesabı ve işletme verileri müşterinin erişiminde kalmalıdır.</li><li>Anahtar kelime listesi kadar gerçek arama terimleri ve negatif kelimeler önemlidir.</li><li>Dönüşüm tanımı kampanya açılmadan önce doğrulanmalıdır.</li><li>Medya bütçesi, yönetim, içerik ve açılış sayfası ayrı kalemlerdir.</li><li>Rapor yalnız metrik değil, yapılan değişiklik ve sonraki kararı göstermelidir.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>Google Ads mi Meta reklamları mı? Hangi kanal ne zaman seçilmeli?</title>
@@ -246,6 +275,7 @@
       <pubDate>Thu, 27 Aug 2026 17:30:00 GMT</pubDate>
       <category>Dijital reklam</category>
       <description>Google Ads ve Meta reklamlarını kullanıcı niyeti, teklif, kreatif, ölçüm, bütçe ve müşteri yolculuğuna göre karşılaştıran karar rehberi.</description>
+      <content:encoded><![CDATA[<p>Google Ads, kullanıcı ürün veya hizmeti aktif biçimde aradığında mevcut talebi yakalamak için; Meta reklamları ise görsel içerik ve kitle sinyalleriyle talep oluşturmak, ilgiyi büyütmek veya yeniden hedeflemek için daha uygun olabilir. Doğru kanal sektör adına göre değil, müşterinin karar anı, teklifin anlatım biçimi, dönüşüm ölçümü ve bütçenin öğrenme kapasitesine göre seçilir.</p><ul><li>Google Search mevcut arama talebine, Meta ise keşif ve görsel anlatıma daha yakındır.</li><li>Kanal seçimi tıklama maliyetiyle değil, nitelikli iş sonucuyla yapılmalıdır.</li><li>Arama hacmi olmayan teklif için yalnız Google Ads yeterli olmayabilir.</li><li>Zayıf açılış sayfası veya ölçüm iki kanalda da bütçeyi boşa harcatabilir.</li><li>Kanallar birlikte kullanılıyorsa her birine ayrı görev ve dönüşüm tanımı verilmelidir.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>B2B web sitesi nasıl olmalı? Lead generation ve kurumsal güven rehberi</title>
@@ -254,6 +284,7 @@
       <pubDate>Thu, 27 Aug 2026 07:00:00 GMT</pubDate>
       <category>Web &amp; UX</category>
       <description>B2B kurumsal web sitesinde güven inşası, karar verici odaklı içerik mimarisi, nitelikli talep (lead gen) toplama ve teknik SEO ilkeleri.</description>
+      <content:encoded><![CDATA[<p>Başarılı bir B2B web sitesi bir vitrin değil; satın alma komitesindeki karar vericilerin (yönetici, teknik sorumlu, satın alma) şüphelerini gideren, teknik yetkinliği kanıtlayan ve nitelikli teklif talebine (lead generation) yönlendiren stratejik bir satış aracıdır. Doğrudan ürün satışı yerine güven inşası, süreç şeffaflığı ve sürtünmesiz iletişim akışı üzerine kurulur.</p><ul><li>B2B karar süreçlerinde tek bir kişi değil, farklı uzmanlıklarda bir satın alma komitesi bulunur.</li><li>Slogandan çok gerçek vaka analizleri, teknik dokümanlar ve süreç şeffaflığı güven kazandırır.</li><li>Teklif ve iletişim formları gereksiz alanlardan arındırılmalı, sürtünme minimize edilmelidir.</li><li>Tüm form ve etkileşimler doğrudan CRM ve satış bildirim sistemlerine anlık bağlanmalıdır.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>Web sitesi hızlandırma ve Core Web Vitals (LCP, INP, CLS) rehberi</title>
@@ -262,6 +293,7 @@
       <pubDate>Thu, 27 Aug 2026 07:00:00 GMT</pubDate>
       <category>SEO &amp; Performans</category>
       <description>Web sitesi açılış hızını artırmak ve Google Core Web Vitals (LCP, INP, CLS) metriklerini yeşile çekmek için uygulanabilir optimizasyon rehberi.</description>
+      <content:encoded><![CDATA[<p>Web sitesi hızlandırma, yalnızca görselleri sıkıştırmaktan ibaret değildir. Google’ın sıralama sinyali olarak kullandığı Core Web Vitals standartlarında LCP (En Büyük İçerikli Boyama ≤ 2.5s), INP (Sonraki Etkileşime Yanıt Verme ≤ 200ms) ve CLS (Kümülatif Düzen Kayması ≤ 0.1) metriklerini yeşil bölgeye çekerek hem arama motorlarında üst sıralara çıkmayı hem de kullanıcı terk oranını düşürmeyi hedefler.</p><ul><li>Site açılış hızındaki her 1 saniyelik gecikme dönüşüm oranlarını ortalama %7 oranında düşürür.</li><li>LCP için en kritik adım: Hero görselinin AVIF/WebP olarak sunulması ve render-blocking CSS/JS’in kaldırılmasıdır.</li><li>INP metriği, ağır JavaScript kütüphanelerini temizleyerek ve ana iş parçacığını (main thread) rahatlatarak iyileştirilir.</li><li>CLS için tüm görsel ve reklam alanlarına sabit width/height değerleri tanımlanmalıdır.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>E-ticaret dönüşüm oranı artırma (CRO) ve sepet terkini önleme rehberi</title>
@@ -270,6 +302,7 @@
       <pubDate>Thu, 27 Aug 2026 07:00:00 GMT</pubDate>
       <category>E-Ticaret</category>
       <description>E-ticarette ürün sayfası UX, sepet terkini önleme, mobil ödeme akışı ve dönüşüm oranı optimizasyonu (CRO) için pratik karar rehberi.</description>
+      <content:encoded><![CDATA[<p>E-ticarette reklam bütçesini artırmadan geliri ve kârlılığı katlamanın en doğrudan yolu dönüşüm oranı optimizasyonudur (CRO). Ziyaretçinin ürün keşfinden sepete eklemesine ve ödeme adımını tamamlamasına kadar olan satın alma hunisindeki (funnel) tüm sürtünmeleri ortadan kaldırarak terk oranlarını minimize etmeyi amaçlar.</p><ul><li>Dönüşüm oranını %1’den %2’ye çıkarmak, reklam harcamasını ikiye katlamadan aynı satışı üretir.</li><li>Sepet terklerinin en yaygın nedeni: Son adımda çıkan beklenmedik kargo/ek ücretler ve zorunlu üyeliktir.</li><li>Mobil ürün sayfasında sepete ekle butonu ekranın altında yapışkan (sticky) kalmalıdır.</li><li>Güven rozetleri, taksit tablosu ve iade garantisi karar verme süresini kısaltır.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>İşletmeye özel CRM ve yönetim paneli seçim rehberi</title>
@@ -278,6 +311,7 @@
       <pubDate>Thu, 27 Aug 2026 07:00:00 GMT</pubDate>
       <category>Özel yazılım</category>
       <description>Hazır SaaS CRM yerine işletmeye özel yönetim paneli ne zaman gerekir? Yetkilendirme, veri güvenliği, iş akışları ve entegrasyon rehberi.</description>
+      <content:encoded><![CDATA[<p>Her işletmenin işleyişi, onay mekanizmaları, fiyatlandırma formülleri ve müşteri takibi standart bir hazır SaaS yazılımına uymaz. Şirket içinde dağınık Excel tabloları, tekrarlayan veri girişleri ve departmanlar arası bilgi kopukluğu yaşanıyorsa, işletmenin tam iş akışına göre tasarlanan özel bir yönetim paneli ve CRM sistemi operasyonel maliyetleri ciddi oranda düşürür.</p><ul><li>Hazır SaaS araçlar başlangıçta ucuzdur; ancak kullanıcı başı lisans ücretleri büyüdükçe ağırlaşır.</li><li>Özel yönetim paneli işletmenin süreçlerine adapte olur; işletmeyi hazır bir kalıba zorlamaz.</li><li>Rol bazlı yetkilendirme (RBAC) ile çalışanların yalnızca yetkili oldukları verileri görmesi sağlanır.</li><li>Mevcut muhasebe, ERP veya kargo sistemleriyle tam iki yönlü API entegrasyonu kurulabilir.</li></ul>]]></content:encoded>
     </item>
   </channel>
 </rss>

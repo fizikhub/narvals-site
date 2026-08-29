@@ -240,6 +240,12 @@ ${topicHubs.map((hub) => `- [${hub.title}](${siteOrigin}/blog/konu/${hub.slug}/)
 - **Tek Müşteri Yolculuğu:** Reklam, web sitesi, işlem ve operasyon birbirinden kopuk değil, tek bir sistem olarak kurulur.
 - **Dürüst Kapsam ve Ölçülebilirlik:** Sıralama veya reklam getirisi için yapay sonuç garantisi verilmez; ölçülebilir altyapı kurulur ve gerçek verilere göre iyileştirilir.
 - **Performans & Erişilebilirlik:** Semantik HTML, mobil öncelikli arayüz, sıfır gereksiz JS yükü ve WCAG standartları temel kapsamdır.
+
+## İsteğe Bağlı / Optional
+
+- [Tam Dokümantasyon (llms-full.txt)](${siteOrigin}/llms-full.txt): LLM ve RAG sistemleri için 34 karar rehberi, 14 araç ve mimari kuralları içeren tam metin bilgi tabanı
+- [XML Site Haritası](${siteOrigin}/sitemap.xml): Arama motorları ve botlar için tam kanonik sayfa ve görsel indeksi
+- [RSS Akışı](${siteOrigin}/blog/feed.xml): En son yayınlanan rehberlerin makine tarafından okunabilir XML akışı
 `;
 
 const llmsFull = `# Narvals Labs — Kapsamlı Bilgi Tabanı ve Sistem Dokümantasyonu (GEO Knowledge Base)

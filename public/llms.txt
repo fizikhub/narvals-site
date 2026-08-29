@@ -90,3 +90,9 @@ Tam kapsamlı yapay zekâ bilgi tabanı ve RAG dokümantasyonu için: [llms-full
 - **Tek Müşteri Yolculuğu:** Reklam, web sitesi, işlem ve operasyon birbirinden kopuk değil, tek bir sistem olarak kurulur.
 - **Dürüst Kapsam ve Ölçülebilirlik:** Sıralama veya reklam getirisi için yapay sonuç garantisi verilmez; ölçülebilir altyapı kurulur ve gerçek verilere göre iyileştirilir.
 - **Performans & Erişilebilirlik:** Semantik HTML, mobil öncelikli arayüz, sıfır gereksiz JS yükü ve WCAG standartları temel kapsamdır.
+
+## İsteğe Bağlı / Optional
+
+- [Tam Dokümantasyon (llms-full.txt)](https://narvals.com/llms-full.txt): LLM ve RAG sistemleri için 34 karar rehberi, 14 araç ve mimari kuralları içeren tam metin bilgi tabanı
+- [XML Site Haritası](https://narvals.com/sitemap.xml): Arama motorları ve botlar için tam kanonik sayfa ve görsel indeksi
+- [RSS Akışı](https://narvals.com/blog/feed.xml): En son yayınlanan rehberlerin makine tarafından okunabilir XML akışı
