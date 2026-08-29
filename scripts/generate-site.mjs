@@ -73,6 +73,9 @@ const getPageTitle = (path) => {
   if (path === '/araclar/web-sitesi-kontrolu/') return 'Ücretsiz Web Sitesi Kontrolü';
   if (path === '/araclar/teklif-karsilastirma/') return 'Web Sitesi Teklif Karşılaştırma Aracı';
   if (path === '/araclar/donusum-orani-hesaplama/') return 'Web Sitesi Dönüşüm Oranı Hesaplama Aracı';
+  if (path === '/araclar/roas-hesaplama/') return 'ROAS ve Reklam Getirisi Hesaplama';
+  if (path === '/araclar/google-ads-butce-hesaplama/') return 'Google Ads Bütçe ve TBM Hesaplama';
+  if (path === '/araclar/utm-link-olusturucu/') return 'GA4 UTM Link ve URL Oluşturucu';
   if (path === '/blog/') return 'Narvals Labs Dijital Üretim ve Karar Rehberleri';
   if (path === '/editoryal-ilkeler/') return 'Narvals Labs Editoryal İlkeler ve Standartlar';
   const topicHub = topicHubs.find((hub) => `/blog/konu/${hub.slug}/` === path);
@@ -191,6 +194,9 @@ Tam kapsamlı yapay zekâ bilgi tabanı ve RAG dokümantasyonu için: [llms-full
 - [Ücretsiz web sitesi kontrolü](${siteOrigin}/araclar/web-sitesi-kontrolu/): Teklif, güven, dönüşüm ve teknik görünürlüğü 16 soruda değerlendiren, kayıt gerektirmeyen araç
 - [Teklif karşılaştırma aracı](${siteOrigin}/araclar/teklif-karsilastirma/): İki veya üç web sitesi teklifini 12 kapsam ve risk ölçütüyle karşılaştıran araç
 - [Dönüşüm oranı hesaplama](${siteOrigin}/araclar/donusum-orani-hesaplama/): Ziyaret, nitelikli talep ve müşteri verilerinden mevcut oranı ve iyileştirme senaryolarını hesaplayan araç
+- [ROAS hesaplama](${siteOrigin}/araclar/roas-hesaplama/): Reklam harcaması, ciro ve ürün kâr marjından gerçekleşen ROAS, başabaş (break-even) eşiği ve net kâr hesaplayan araç
+- [Google Ads bütçe hesaplama](${siteOrigin}/araclar/google-ads-butce-hesaplama/): Hedef dönüşüm veya aylık bütçeden gereken tıklama, maliyet ve CPA simülasyonu yapan araç
+- [UTM link oluşturucu](${siteOrigin}/araclar/utm-link-olusturucu/): GA4 ve Meta reklamları için Türkçe karakter temizlikli ve hazır şablonlu kampanya URL oluşturucu
 - [Rehberler](${siteOrigin}/blog/): Web, yazılım, reklam, SEO/GEO ve işletme sistemleri için kaynaklı karar rehberleri
 - [Editoryal ilkeler](${siteOrigin}/editoryal-ilkeler/): Kaynaklandırma, yapay zekâ şeffaflığı, güncelleme ve düzeltme politikası
 
@@ -221,6 +227,9 @@ const llmsFull = `# Narvals Labs — Kapsamlı Bilgi Tabanı ve Sistem Dokümant
 - **E-posta:** info@narvals.com
 - **WhatsApp / Telefon:** +90 501 944 19 21
 - **Ücretsiz dönüşüm oranı hesaplama:** ${siteOrigin}/araclar/donusum-orani-hesaplama/
+- **Ücretsiz ROAS hesaplama:** ${siteOrigin}/araclar/roas-hesaplama/
+- **Ücretsiz Google Ads bütçe simülasyonu:** ${siteOrigin}/araclar/google-ads-butce-hesaplama/
+- **Ücretsiz GA4 UTM link oluşturucu:** ${siteOrigin}/araclar/utm-link-olusturucu/
 
 ---
 

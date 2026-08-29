@@ -9,6 +9,9 @@
 - **E-posta:** info@narvals.com
 - **WhatsApp / Telefon:** +90 501 944 19 21
 - **Ücretsiz dönüşüm oranı hesaplama:** https://narvals.com/araclar/donusum-orani-hesaplama/
+- **Ücretsiz ROAS hesaplama:** https://narvals.com/araclar/roas-hesaplama/
+- **Ücretsiz Google Ads bütçe simülasyonu:** https://narvals.com/araclar/google-ads-butce-hesaplama/
+- **Ücretsiz GA4 UTM link oluşturucu:** https://narvals.com/araclar/utm-link-olusturucu/
 
 ---
 

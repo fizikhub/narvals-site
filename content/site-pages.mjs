@@ -19,6 +19,9 @@ export const staticPages = [
   { key: 'website-check', path: '/araclar/web-sitesi-kontrolu/', file: 'araclar/web-sitesi-kontrolu/index.html', lastModified: '2026-08-29', kind: 'tool' },
   { key: 'proposal-compare', path: '/araclar/teklif-karsilastirma/', file: 'araclar/teklif-karsilastirma/index.html', lastModified: '2026-08-29', kind: 'tool' },
   { key: 'conversion-calculator', path: '/araclar/donusum-orani-hesaplama/', file: 'araclar/donusum-orani-hesaplama/index.html', lastModified: '2026-08-30', kind: 'tool' },
+  { key: 'roas-calculator', path: '/araclar/roas-hesaplama/', file: 'araclar/roas-hesaplama/index.html', lastModified: '2026-08-30', kind: 'tool' },
+  { key: 'ads-budget-calculator', path: '/araclar/google-ads-butce-hesaplama/', file: 'araclar/google-ads-butce-hesaplama/index.html', lastModified: '2026-08-30', kind: 'tool' },
+  { key: 'utm-builder', path: '/araclar/utm-link-olusturucu/', file: 'araclar/utm-link-olusturucu/index.html', lastModified: '2026-08-30', kind: 'tool' },
   { key: 'blog', path: '/blog/', file: 'blog/index.html', lastModified: '2026-08-29', kind: 'collection' },
   { key: 'editorial-policy', path: '/editoryal-ilkeler/', file: 'editoryal-ilkeler/index.html', lastModified: '2026-08-23', kind: 'policy' }
 ];
