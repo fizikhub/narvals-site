@@ -12,6 +12,8 @@
 - **Ücretsiz ROAS hesaplama:** https://narvals.com/araclar/roas-hesaplama/
 - **Ücretsiz Google Ads bütçe simülasyonu:** https://narvals.com/araclar/google-ads-butce-hesaplama/
 - **Ücretsiz GA4 UTM link oluşturucu:** https://narvals.com/araclar/utm-link-olusturucu/
+- **Ücretsiz QR kod oluşturucu:** https://narvals.com/araclar/qr-kod-olusturucu/
+- **Ücretsiz e-ticaret kâr hesaplayıcı:** https://narvals.com/araclar/e-ticaret-kar-hesaplama/
 
 ---
 

@@ -29,6 +29,8 @@ Tam kapsamlı yapay zekâ bilgi tabanı ve RAG dokümantasyonu için: [llms-full
 - [ROAS hesaplama](https://narvals.com/araclar/roas-hesaplama/): Reklam harcaması, ciro ve ürün kâr marjından gerçekleşen ROAS, başabaş (break-even) eşiği ve net kâr hesaplayan araç
 - [Google Ads bütçe hesaplama](https://narvals.com/araclar/google-ads-butce-hesaplama/): Hedef dönüşüm veya aylık bütçeden gereken tıklama, maliyet ve CPA simülasyonu yapan araç
 - [UTM link oluşturucu](https://narvals.com/araclar/utm-link-olusturucu/): GA4 ve Meta reklamları için Türkçe karakter temizlikli ve hazır şablonlu kampanya URL oluşturucu
+- [QR kod oluşturucu](https://narvals.com/araclar/qr-kod-olusturucu/): URL, dijital menü, WhatsApp, Wi-Fi ve vCard için süresiz, vektörel SVG ve HD PNG QR kod oluşturucu
+- [E-ticaret kâr hesaplama](https://narvals.com/araclar/e-ticaret-kar-hesaplama/): Trendyol, Hepsiburada ve e-ticaret siteniz için komisyon, kargo ve iade payından net kâr ve başabaş fiyat hesaplayıcı
 - [Rehberler](https://narvals.com/blog/): Web, yazılım, reklam, SEO/GEO ve işletme sistemleri için kaynaklı karar rehberleri
 - [Editoryal ilkeler](https://narvals.com/editoryal-ilkeler/): Kaynaklandırma, yapay zekâ şeffaflığı, güncelleme ve düzeltme politikası
 

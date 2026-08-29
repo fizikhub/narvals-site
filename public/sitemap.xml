@@ -201,6 +201,26 @@
     </image:image>
   </url>
   <url>
+    <loc>https://narvals.com/araclar/qr-kod-olusturucu/</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
+      <image:title>Ücretsiz QR Kod Oluşturucu</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://narvals.com/araclar/e-ticaret-kar-hesaplama/</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
+      <image:title>E-Ticaret Net Kâr ve Komisyon Hesaplama</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://narvals.com/blog/</loc>
     <lastmod>2026-08-29</lastmod>
     <changefreq>daily</changefreq>
