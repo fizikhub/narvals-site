@@ -69,7 +69,9 @@ const getPageTitle = (path) => {
   if (path === '/hizmetler/qr-menu-rezervasyon/') return 'QR Menü, Rezervasyon ve Randevu Karşılaştırması';
   if (path === '/hakkimizda/') return 'Narvals Labs Yaklaşımı ve Çalışma İlkeleri';
   if (path === '/iletisim/') return 'Narvals Labs İletişim ve Proje Talebi';
+  if (path === '/araclar/') return 'Ücretsiz Web Sitesi ve Proje Araçları';
   if (path === '/araclar/web-sitesi-kontrolu/') return 'Ücretsiz Web Sitesi Kontrolü';
+  if (path === '/araclar/teklif-karsilastirma/') return 'Web Sitesi Teklif Karşılaştırma Aracı';
   if (path === '/blog/') return 'Narvals Labs Dijital Üretim ve Karar Rehberleri';
   if (path === '/editoryal-ilkeler/') return 'Narvals Labs Editoryal İlkeler ve Standartlar';
   const topicHub = topicHubs.find((hub) => `/blog/konu/${hub.slug}/` === path);
@@ -184,7 +186,9 @@ Tam kapsamlı yapay zekâ bilgi tabanı ve RAG dokümantasyonu için: [llms-full
 - [QR menü ve rezervasyon karşılaştırması](${siteOrigin}/hizmetler/qr-menu-rezervasyon/): Menü, randevu ve rezervasyon akışlarının ayrımı ve doğru araç seçimi
 - [Hakkımızda](${siteOrigin}/hakkimizda/): Narvals Labs çalışma ilkeleri, hizmet sınırları ve stüdyo yaklaşımı
 - [İletişim](${siteOrigin}/iletisim/): Proje talebi, ilk görüşme hazırlığı ve iletişim rehberi
+- [Ücretsiz araçlar](${siteOrigin}/araclar/): Web sitesi, ajans teklifi ve proje kapsamı karar araçları
 - [Ücretsiz web sitesi kontrolü](${siteOrigin}/araclar/web-sitesi-kontrolu/): Teklif, güven, dönüşüm ve teknik görünürlüğü 16 soruda değerlendiren, kayıt gerektirmeyen araç
+- [Teklif karşılaştırma aracı](${siteOrigin}/araclar/teklif-karsilastirma/): İki veya üç web sitesi teklifini 12 kapsam ve risk ölçütüyle karşılaştıran araç
 - [Rehberler](${siteOrigin}/blog/): Web, yazılım, reklam, SEO/GEO ve işletme sistemleri için kaynaklı karar rehberleri
 - [Editoryal ilkeler](${siteOrigin}/editoryal-ilkeler/): Kaynaklandırma, yapay zekâ şeffaflığı, güncelleme ve düzeltme politikası
 
@@ -320,7 +324,9 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 - Sistem Karşılaştırması: ${siteOrigin}/hizmetler/qr-menu-rezervasyon/
 - Hakkımızda: ${siteOrigin}/hakkimizda/
 - İletişim: ${siteOrigin}/iletisim/
+- Ücretsiz Araçlar: ${siteOrigin}/araclar/
 - Ücretsiz Web Sitesi Kontrolü: ${siteOrigin}/araclar/web-sitesi-kontrolu/
+- Web Sitesi Teklif Karşılaştırma: ${siteOrigin}/araclar/teklif-karsilastirma/
 - Blog & Rehberler: ${siteOrigin}/blog/
 - Editoryal İlkeler: ${siteOrigin}/editoryal-ilkeler/
 ${topicHubs.map((hub) => `- Konu Merkezi: ${siteOrigin}/blog/konu/${hub.slug}/`).join('\n')}

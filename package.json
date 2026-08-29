@@ -12,7 +12,7 @@
     "seo:check": "SITE_MODE=development node scripts/check-seo.mjs",
     "seo:check-live": "SITE_MODE=production node scripts/check-live-seo.mjs",
     "indexnow:submit": "SITE_MODE=production node scripts/submit-indexnow.mjs",
-    "html:check": "html-validate 'index.html' 'hizmetler/index.html' 'hizmetler/*/index.html' 'hakkimizda/index.html' 'iletisim/index.html' 'araclar/*/index.html' 'blog/index.html' 'blog/*/index.html' 'blog/konu/*/index.html' 'editoryal-ilkeler/index.html' '404.html'"
+    "html:check": "html-validate 'index.html' 'hizmetler/index.html' 'hizmetler/*/index.html' 'hakkimizda/index.html' 'iletisim/index.html' 'araclar/index.html' 'araclar/*/index.html' 'blog/index.html' 'blog/*/index.html' 'blog/konu/*/index.html' 'editoryal-ilkeler/index.html' '404.html'"
   },
   "dependencies": {
     "@fontsource-variable/anek-latin": "^5.3.0",

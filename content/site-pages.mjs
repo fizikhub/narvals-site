@@ -15,7 +15,9 @@ export const staticPages = [
   { key: 'system-comparison', path: '/hizmetler/qr-menu-rezervasyon/', file: 'hizmetler/qr-menu-rezervasyon/index.html', lastModified: '2026-08-23', kind: 'comparison' },
   { key: 'about', path: '/hakkimizda/', file: 'hakkimizda/index.html', lastModified: '2026-08-23', kind: 'about' },
   { key: 'contact', path: '/iletisim/', file: 'iletisim/index.html', lastModified: '2026-08-27', kind: 'contact' },
+  { key: 'tools', path: '/araclar/', file: 'araclar/index.html', lastModified: '2026-08-29', kind: 'collection' },
   { key: 'website-check', path: '/araclar/web-sitesi-kontrolu/', file: 'araclar/web-sitesi-kontrolu/index.html', lastModified: '2026-08-29', kind: 'tool' },
+  { key: 'proposal-compare', path: '/araclar/teklif-karsilastirma/', file: 'araclar/teklif-karsilastirma/index.html', lastModified: '2026-08-29', kind: 'tool' },
   { key: 'blog', path: '/blog/', file: 'blog/index.html', lastModified: '2026-08-29', kind: 'collection' },
   { key: 'editorial-policy', path: '/editoryal-ilkeler/', file: 'editoryal-ilkeler/index.html', lastModified: '2026-08-23', kind: 'policy' }
 ];

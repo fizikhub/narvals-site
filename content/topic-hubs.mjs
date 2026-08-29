@@ -18,7 +18,7 @@ export const topicHubs = [
     keywords: ['web sitesi rehberi', 'internet sitesi kurma', 'web sitesi maliyeti', 'web tasarım süreci'],
     answer: 'İyi web sitesi; önce hedefi, kullanıcıyı ve içeriği netleştirir. Tasarım, geliştirme, süre, maliyet ve SEO kararları aynı kapsam belgesinden ilerler.',
     start: ['internet-sitesi-nasil-kurulur', 'kurumsal-web-sitesi-briefi-nasil-hazirlanir', 'web-sitesi-ne-kadar-surer'],
-    all: ['internet-sitesi-nasil-kurulur', 'kurumsal-web-sitesi-briefi-nasil-hazirlanir', 'web-sitesi-ne-kadar-surer', 'web-sitesi-maliyeti-nasil-hesaplanir', 'web-tasarim-ajansi-secerken-sorulacak-sorular', 'web-sitesi-bakim-ucreti-ve-yillik-maliyet', 'hazir-web-sitesi-mi-ozel-tasarim-mi', 'web-sitesi-yaptirmadan-once-kapsam-teklif-karar-rehberi', 'web-sitesi-teknik-seo-kontrol-listesi', 'web-sitesi-hizlandirma-core-web-vitals-rehberi', 'b2b-web-sitesi-nasil-olmali', 'restoran-web-sitesi-nasil-olmali'],
+    all: ['internet-sitesi-nasil-kurulur', 'kurumsal-web-sitesi-briefi-nasil-hazirlanir', 'web-sitesi-ne-kadar-surer', 'web-sitesi-maliyeti-nasil-hesaplanir', 'web-tasarim-ajansi-secerken-sorulacak-sorular', 'web-sitesi-bakim-ucreti-ve-yillik-maliyet', 'hazir-web-sitesi-mi-ozel-tasarim-mi', 'web-sitesi-neden-musteri-getirmiyor', 'web-sitesi-googleda-neden-cikmiyor', 'web-sitesi-yaptirmadan-once-kapsam-teklif-karar-rehberi', 'web-sitesi-teknik-seo-kontrol-listesi', 'web-sitesi-hizlandirma-core-web-vitals-rehberi', 'b2b-web-sitesi-nasil-olmali', 'restoran-web-sitesi-nasil-olmali'],
     servicePath: '/hizmetler/web-tasarim/', serviceLabel: 'Web tasarım hizmetini inceleyin'
   },
   {

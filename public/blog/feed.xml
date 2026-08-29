@@ -5,7 +5,7 @@
     <link>https://narvals.com/blog/</link>
     <description>Web, yazılım, reklam ve işletme sistemleri için kaynaklı karar rehberleri.</description>
     <language>tr-TR</language>
-    <lastBuildDate>Sat, 29 Aug 2026 20:30:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 29 Aug 2026 20:50:00 GMT</lastBuildDate>
     <atom:link href="https://narvals.com/blog/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>E-ticaret sitesi nasıl açılır? 10 adımlı sade rehber</title>
@@ -94,6 +94,22 @@
       <pubDate>Sat, 29 Aug 2026 20:30:00 GMT</pubDate>
       <category>Web &amp; UX</category>
       <description>Hazır tema, site kurucu ve özel tasarım seçeneklerini hız, bütçe, marka, içerik, entegrasyon, sahiplik ve bakım açısından karşılaştırın.</description>
+    </item>
+    <item>
+      <title>Web sitesi neden müşteri getirmiyor? 8 olası neden</title>
+      <link>https://narvals.com/blog/web-sitesi-neden-musteri-getirmiyor/</link>
+      <guid isPermaLink="true">https://narvals.com/blog/web-sitesi-neden-musteri-getirmiyor/</guid>
+      <pubDate>Sat, 29 Aug 2026 20:40:00 GMT</pubDate>
+      <category>Web &amp; UX</category>
+      <description>Trafik, teklif, güven, kullanıcı yolu, form, hız ve ölçüm sorunlarını ayırarak web sitesinin neden müşteri getirmediğini teşhis edin.</description>
+    </item>
+    <item>
+      <title>Web sitesi Google’da neden çıkmıyor? Teşhis rehberi</title>
+      <link>https://narvals.com/blog/web-sitesi-googleda-neden-cikmiyor/</link>
+      <guid isPermaLink="true">https://narvals.com/blog/web-sitesi-googleda-neden-cikmiyor/</guid>
+      <pubDate>Sat, 29 Aug 2026 20:50:00 GMT</pubDate>
+      <category>SEO &amp; GEO</category>
+      <description>Sitenizin Google’da görünmemesini indeks, tarama, canonical, içerik, sorgu uyumu, yeni site ve teknik hata başlıklarıyla teşhis edin.</description>
     </item>
     <item>
       <title>Kurumsal web sitesi briefi nasıl hazırlanır?</title>

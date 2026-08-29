@@ -1,0 +1,18 @@
+.tools-hero h1 { max-width: 12ch; }
+.tool-directory { padding: clamp(82px, 10vw, 150px) var(--gutter); background: var(--offwhite); color: var(--ink); }
+.tool-directory > header { display: grid; grid-template-columns: minmax(0, .65fr) minmax(280px, .35fr); gap: clamp(35px, 7vw, 100px); align-items: end; margin-bottom: clamp(52px, 7vw, 90px); }
+.tool-directory h2, .tool-principles h2 { margin: 0; font: 850 clamp(3rem, 6vw, 6rem)/.9 'Anybody Variable', sans-serif; letter-spacing: -.04em; text-wrap: balance; }
+.tool-directory > header p { max-width: 58ch; margin: 0; color: oklch(.32 .04 244); font-size: 17px; line-height: 1.65; }
+.tool-directory__list { border-top: 3px solid var(--ink); }
+.tool-directory__list article { display: grid; grid-template-columns: minmax(130px, .2fr) minmax(260px, .35fr) minmax(260px, .3fr) minmax(170px, .15fr); gap: 20px 34px; align-items: center; min-height: 210px; padding: 30px 0; border-bottom: 2px solid var(--ink); }
+.tool-directory__list article > span, .tool-directory__list small { font: 700 9px/1.45 'Azeret Mono', monospace; text-transform: uppercase; }
+.tool-directory__list h3 { margin: 0; font: 780 clamp(2rem, 3vw, 3.5rem)/.98 'Anybody Variable', sans-serif; letter-spacing: -.035em; }
+.tool-directory__list p { max-width: 50ch; margin: 0; line-height: 1.6; }
+.tool-directory__list small { grid-column: 1; color: var(--blue); }
+.tool-directory__list article > a:last-child { grid-column: 4; grid-row: 1 / 3; justify-self: end; display: inline-flex; gap: 14px; align-items: center; padding: 14px; border: 2px solid var(--ink); background: var(--yellow); font: 800 9px/1.3 'Azeret Mono', monospace; text-transform: uppercase; }
+.tool-directory__list i { color: var(--coral-contrast); font-size: 18px; font-style: normal; }
+.tool-principles { display: grid; grid-template-columns: minmax(0, .55fr) minmax(300px, .45fr); gap: clamp(45px, 8vw, 130px); padding: clamp(82px, 10vw, 140px) var(--gutter); background: var(--yellow); color: var(--ink); }
+.tool-principles div { border-top: 2px solid var(--ink); }
+.tool-principles p { margin: 0; padding: 24px 0; border-bottom: 1px solid var(--ink); font-size: clamp(16px, 1.3vw, 19px); line-height: 1.65; }
+@media (max-width: 980px) { .tool-directory__list article { grid-template-columns: minmax(110px, .25fr) minmax(0, .75fr); } .tool-directory__list p { grid-column: 2; } .tool-directory__list small { grid-column: 1; } .tool-directory__list article > a:last-child { grid-column: 2; grid-row: auto; justify-self: start; } }
+@media (max-width: 760px) { .tool-directory > header, .tool-principles { grid-template-columns: 1fr; } .tool-directory__list article { grid-template-columns: 1fr; } .tool-directory__list article > *, .tool-directory__list p, .tool-directory__list small, .tool-directory__list article > a:last-child { grid-column: 1; } }

@@ -2,11 +2,13 @@ import { newBlogPosts } from './seo-growth-posts.mjs';
 import { searchIntentPosts } from './search-intent-posts.mjs';
 import { commercialIntentPosts } from './commercial-intent-posts.mjs';
 import { buyerIntentPosts } from './buyer-intent-posts.mjs';
+import { problemIntentPosts } from './problem-intent-posts.mjs';
 
 export const blogPosts = [
   ...searchIntentPosts,
   ...commercialIntentPosts,
   ...buyerIntentPosts,
+  ...problemIntentPosts,
   {
     slug: 'kurumsal-web-sitesi-briefi-nasil-hazirlanir',
     metaTitle: 'Kurumsal Web Sitesi Briefi Nasıl Hazırlanır? | Narvals',
