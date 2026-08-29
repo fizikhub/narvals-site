@@ -171,7 +171,17 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
+User-agent: DeepL-Bot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
 Sitemap: ${siteOrigin}/sitemap.xml
+Host: ${configuredSiteUrl.host}
 `;
 
 const llms = `# Narvals Labs
@@ -371,6 +381,105 @@ ${blogPosts.map((post) => `- Rehber: ${siteOrigin}/blog/${post.slug}/`).join('\n
 
 await mkdir(publicRoot, { recursive: true });
 
+const sharedOrgNode = (origin) => ({
+  '@type': 'Organization',
+  '@id': `${origin}/#organization`,
+  name: 'Narvals Labs',
+  legalName: 'Narvals Labs',
+  url: `${origin}/`,
+  logo: {
+    '@type': 'ImageObject',
+    url: `${origin}/assets/logo-v6/narvals-avatar-v6-1080.png`,
+    contentUrl: `${origin}/assets/logo-v6/narvals-avatar-v6-1080.png`,
+    width: 1080,
+    height: 1080
+  },
+  image: `${origin}/og/narvals-labs-og.jpg`,
+  description: 'Web sitesi ve UX, işletmeye özel yazılım, dijital reklam, marka, QR menü ve rezervasyon sistemleri üreten dijital stüdyo.',
+  email: 'info@narvals.com',
+  telephone: '+905019441921',
+  sameAs: [
+    'https://github.com/fizikhub/narvals-site'
+  ],
+  publishingPrinciples: `${origin}/editoryal-ilkeler/`,
+  address: {
+    '@type': 'PostalAddress',
+    addressCountry: 'TR'
+  },
+  currenciesAccepted: 'TRY, EUR, USD',
+  paymentAccepted: 'Bank Transfer, Credit Card',
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'customer support',
+    email: 'info@narvals.com',
+    telephone: '+905019441921',
+    areaServed: 'TR',
+    availableLanguage: ['Turkish', 'English'],
+    hoursAvailable: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '09:00',
+      closes: '18:00'
+    }
+  },
+  areaServed: {
+    '@type': 'Country',
+    name: 'Türkiye'
+  },
+  founder: {
+    '@type': 'Organization',
+    name: 'Narvals Labs Team',
+    url: `${origin}/hakkimizda/`
+  },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Narvals Labs Dijital Hizmetler',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Kurumsal Web Tasarım ve UX', url: `${origin}/hizmetler/web-tasarim/` } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'E-Ticaret Sitesi Tasarımı ve Geliştirme', url: `${origin}/hizmetler/e-ticaret/` } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'İşletmeye Özel Yazılım ve Otomasyon', url: `${origin}/hizmetler/ozel-yazilim/` } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Google Ads Reklam ve Dönüşüm Yönetimi', url: `${origin}/hizmetler/google-ads/` } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Meta (Instagram & Facebook) Reklam Yönetimi', url: `${origin}/hizmetler/dijital-reklam/` } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Sosyal Medya Yönetimi ve İçerik Stratejisi', url: `${origin}/hizmetler/sosyal-medya-yonetimi/` } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Özel QR Menü Yazılımı ve Yönetim Paneli', url: `${origin}/hizmetler/qr-menu/` } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Online Rezervasyon ve Randevu Sistemi', url: `${origin}/hizmetler/rezervasyon-randevu/` } }
+    ]
+  },
+  knowsAbout: [
+    'Web Tasarım ve UX',
+    'Özel Yazılım Geliştirme',
+    'Meta Reklam Yönetimi',
+    'Google Ads Yönetimi',
+    'E-Ticaret Sitesi',
+    'Sosyal Medya Yönetimi',
+    'QR Menü Sistemleri',
+    'Online Rezervasyon Sistemleri',
+    'Teknik SEO',
+    'Generative Engine Optimization (GEO)',
+    'Core Web Vitals Optimizasyonu',
+    'Dönüşüm Oranı Optimizasyonu (CRO)'
+  ],
+  knowsLanguage: ['tr', 'en']
+});
+
+const sharedWebsiteNode = (origin) => ({
+  '@type': 'WebSite',
+  '@id': `${origin}/#website`,
+  url: `${origin}/`,
+  name: 'Narvals Labs',
+  alternateName: ['Narvals', 'Narvals Digital', 'Narvals Studio', 'Narvals Labs Dijital'],
+  inLanguage: 'tr-TR',
+  publisher: { '@id': `${origin}/#organization` },
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: `${origin}/blog/?q={search_term_string}`
+    },
+    'query-input': 'required name=search_term_string'
+  }
+});
+
 // Authored HTML stays deployable when the production origin changes. Blog and
 // editorial files are rendered below, so only hand-authored pages are synced.
 const authoredPages = sitePages.filter(({ file }) => !file.startsWith('blog/') && file !== 'editoryal-ilkeler/index.html');
@@ -380,7 +489,27 @@ await Promise.all(authoredPages.map(async ({ file }) => {
   const canonicalHref = html.match(/<link\s+rel="canonical"\s+href="([^"]+)"/i)?.[1];
   if (!canonicalHref) throw new Error(`${file} is missing the canonical URL required for origin synchronization.`);
   const currentOrigin = new URL(canonicalHref).origin;
-  if (currentOrigin !== siteOrigin) await writeFile(htmlPath, html.replaceAll(currentOrigin, siteOrigin));
+  let updatedHtml = html;
+  if (currentOrigin !== siteOrigin) {
+    updatedHtml = updatedHtml.replaceAll(currentOrigin, siteOrigin);
+  }
+  updatedHtml = updatedHtml.replace(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/i, (match, jsonText) => {
+    try {
+      const data = JSON.parse(jsonText);
+      if (data && Array.isArray(data['@graph'])) {
+        data['@graph'] = data['@graph'].map((node) => {
+          if (node['@type'] === 'Organization') return sharedOrgNode(siteOrigin);
+          if (node['@type'] === 'WebSite') return sharedWebsiteNode(siteOrigin);
+          return node;
+        });
+        return `<script type="application/ld+json">\n      ${JSON.stringify(data, null, 2).replace(/\n/g, '\n      ')}\n    </script>`;
+      }
+    } catch {
+      // Keep existing if JSON parsing fails
+    }
+    return match;
+  });
+  if (updatedHtml !== html) await writeFile(htmlPath, updatedHtml);
 }));
 
 await renderBlog({ projectRoot, publicRoot, siteOrigin });

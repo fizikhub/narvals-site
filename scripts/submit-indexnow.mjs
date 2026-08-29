@@ -27,19 +27,40 @@ const urlList = [...new Set(changedLocations.map((location) => {
 }))];
 if (urlList.length > 10_000) throw new Error('IndexNow accepts at most 10,000 URLs per request.');
 
-const response = await fetch('https://api.indexnow.org/indexnow', {
-  method: 'POST',
-  headers: { 'content-type': 'application/json; charset=utf-8' },
-  body: JSON.stringify({
-    host: new URL(origin).host,
-    key,
-    keyLocation: `${origin}/${key}.txt`,
-    urlList
-  })
-});
+const payload = {
+  host: new URL(origin).host,
+  key,
+  keyLocation: `${origin}/${key}.txt`,
+  urlList
+};
 
-if (!response.ok) {
-  throw new Error(`IndexNow returned ${response.status}: ${await response.text()}`);
+const endpoints = [
+  'https://api.indexnow.org/indexnow',
+  'https://www.bing.com/indexnow'
+];
+
+let successfulSubmissions = 0;
+for (const endpoint of endpoints) {
+  try {
+    const response = await fetch(endpoint, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json; charset=utf-8' },
+      body: JSON.stringify(payload)
+    });
+    if (response.ok) {
+      successfulSubmissions += 1;
+      console.log(`Submitted ${urlList.length} URL(s) to ${endpoint} (${response.status})`);
+    } else {
+      console.warn(`Warning: ${endpoint} returned ${response.status}: ${await response.text()}`);
+    }
+  } catch (err) {
+    console.warn(`Warning: failed to submit to ${endpoint}: ${err.message}`);
+  }
 }
 
-console.log(`Submitted ${urlList.length} changed URL(s) to IndexNow.`);
+if (successfulSubmissions === 0) {
+  throw new Error('Failed to submit URLs to any IndexNow endpoint.');
+}
+
+console.log(`IndexNow submission completed successfully for ${urlList.length} URL(s).`);
+

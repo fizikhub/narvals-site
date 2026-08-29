@@ -61,4 +61,14 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
+User-agent: DeepL-Bot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
 Sitemap: https://narvals.com/sitemap.xml
+Host: narvals.com

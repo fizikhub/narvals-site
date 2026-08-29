@@ -59,6 +59,7 @@
       "@type": "Organization",
       "@id": "https://narvals.com/#organization",
       "name": "Narvals Labs",
+      "legalName": "Narvals Labs",
       "url": "https://narvals.com/",
       "logo": {
         "@type": "ImageObject",
@@ -71,6 +72,10 @@
       "description": "Web sitesi ve UX, işletmeye özel yazılım, dijital reklam, marka, QR menü ve rezervasyon sistemleri üreten dijital stüdyo.",
       "email": "info@narvals.com",
       "telephone": "+905019441921",
+      "sameAs": [
+        "https://github.com/fizikhub/narvals-site"
+      ],
+      "publishingPrinciples": "https://narvals.com/editoryal-ilkeler/",
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "TR"
@@ -79,11 +84,26 @@
       "paymentAccepted": "Bank Transfer, Credit Card",
       "contactPoint": {
         "@type": "ContactPoint",
-        "contactType": "sales",
+        "contactType": "customer support",
         "email": "info@narvals.com",
         "telephone": "+905019441921",
         "areaServed": "TR",
-        "availableLanguage": "Turkish"
+        "availableLanguage": [
+          "Turkish",
+          "English"
+        ],
+        "hoursAvailable": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
       },
       "areaServed": {
         "@type": "Country",
@@ -91,7 +111,78 @@
       },
       "founder": {
         "@type": "Organization",
-        "name": "Narvals Labs Team"
+        "name": "Narvals Labs Team",
+        "url": "https://narvals.com/hakkimizda/"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Narvals Labs Dijital Hizmetler",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Kurumsal Web Tasarım ve UX",
+              "url": "https://narvals.com/hizmetler/web-tasarim/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "E-Ticaret Sitesi Tasarımı ve Geliştirme",
+              "url": "https://narvals.com/hizmetler/e-ticaret/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "İşletmeye Özel Yazılım ve Otomasyon",
+              "url": "https://narvals.com/hizmetler/ozel-yazilim/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Google Ads Reklam ve Dönüşüm Yönetimi",
+              "url": "https://narvals.com/hizmetler/google-ads/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Meta (Instagram & Facebook) Reklam Yönetimi",
+              "url": "https://narvals.com/hizmetler/dijital-reklam/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sosyal Medya Yönetimi ve İçerik Stratejisi",
+              "url": "https://narvals.com/hizmetler/sosyal-medya-yonetimi/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Özel QR Menü Yazılımı ve Yönetim Paneli",
+              "url": "https://narvals.com/hizmetler/qr-menu/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Online Rezervasyon ve Randevu Sistemi",
+              "url": "https://narvals.com/hizmetler/rezervasyon-randevu/"
+            }
+          }
+        ]
       },
       "knowsAbout": [
         "Web Tasarım ve UX",
@@ -103,9 +194,14 @@
         "QR Menü Sistemleri",
         "Online Rezervasyon Sistemleri",
         "Teknik SEO",
-        "Generative Engine Optimization (GEO)"
+        "Generative Engine Optimization (GEO)",
+        "Core Web Vitals Optimizasyonu",
+        "Dönüşüm Oranı Optimizasyonu (CRO)"
       ],
-      "knowsLanguage": "tr"
+      "knowsLanguage": [
+        "tr",
+        "en"
+      ]
     },
     {
       "@type": "WebSite",
@@ -115,7 +211,8 @@
       "alternateName": [
         "Narvals",
         "Narvals Digital",
-        "Narvals Studio"
+        "Narvals Studio",
+        "Narvals Labs Dijital"
       ],
       "inLanguage": "tr-TR",
       "publisher": {
@@ -205,6 +302,7 @@
         "@id": "https://narvals.com/#organization"
       },
       "license": "https://narvals.com/editoryal-ilkeler/",
+      "publishingPrinciples": "https://narvals.com/editoryal-ilkeler/",
       "speakable": {
         "@type": "SpeakableSpecification",
         "cssSelector": [

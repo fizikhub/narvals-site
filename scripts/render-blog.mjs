@@ -49,6 +49,7 @@ const organizationNode = (siteOrigin) => ({
   '@type': 'Organization',
   '@id': `${siteOrigin}/#organization`,
   name: 'Narvals Labs',
+  legalName: 'Narvals Labs',
   url: `${siteOrigin}/`,
   logo: {
     '@type': 'ImageObject',
@@ -61,6 +62,10 @@ const organizationNode = (siteOrigin) => ({
   description: 'Web sitesi ve UX, işletmeye özel yazılım, dijital reklam, marka, QR menü ve rezervasyon sistemleri üreten dijital stüdyo.',
   email: 'info@narvals.com',
   telephone: '+905019441921',
+  sameAs: [
+    'https://github.com/fizikhub/narvals-site'
+  ],
+  publishingPrinciples: `${siteOrigin}/editoryal-ilkeler/`,
   address: {
     '@type': 'PostalAddress',
     addressCountry: 'TR'
@@ -69,11 +74,17 @@ const organizationNode = (siteOrigin) => ({
   paymentAccepted: 'Bank Transfer, Credit Card',
   contactPoint: {
     '@type': 'ContactPoint',
-    contactType: 'sales',
+    contactType: 'customer support',
     email: 'info@narvals.com',
     telephone: '+905019441921',
     areaServed: 'TR',
-    availableLanguage: 'Turkish'
+    availableLanguage: ['Turkish', 'English'],
+    hoursAvailable: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '09:00',
+      closes: '18:00'
+    }
   },
   areaServed: {
     '@type': 'Country',
@@ -81,7 +92,22 @@ const organizationNode = (siteOrigin) => ({
   },
   founder: {
     '@type': 'Organization',
-    name: 'Narvals Labs Team'
+    name: 'Narvals Labs Team',
+    url: `${siteOrigin}/hakkimizda/`
+  },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Narvals Labs Dijital Hizmetler',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Kurumsal Web Tasarım ve UX', url: `${siteOrigin}/hizmetler/web-tasarim/` } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'E-Ticaret Sitesi Tasarımı ve Geliştirme', url: `${siteOrigin}/hizmetler/e-ticaret/` } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'İşletmeye Özel Yazılım ve Otomasyon', url: `${siteOrigin}/hizmetler/ozel-yazilim/` } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Google Ads Reklam ve Dönüşüm Yönetimi', url: `${siteOrigin}/hizmetler/google-ads/` } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Meta (Instagram & Facebook) Reklam Yönetimi', url: `${siteOrigin}/hizmetler/dijital-reklam/` } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Sosyal Medya Yönetimi ve İçerik Stratejisi', url: `${siteOrigin}/hizmetler/sosyal-medya-yonetimi/` } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Özel QR Menü Yazılımı ve Yönetim Paneli', url: `${siteOrigin}/hizmetler/qr-menu/` } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Online Rezervasyon ve Randevu Sistemi', url: `${siteOrigin}/hizmetler/rezervasyon-randevu/` } }
+    ]
   },
   knowsAbout: [
     'Web Tasarım ve UX',
@@ -93,9 +119,11 @@ const organizationNode = (siteOrigin) => ({
     'QR Menü Sistemleri',
     'Online Rezervasyon Sistemleri',
     'Teknik SEO',
-    'Generative Engine Optimization (GEO)'
+    'Generative Engine Optimization (GEO)',
+    'Core Web Vitals Optimizasyonu',
+    'Dönüşüm Oranı Optimizasyonu (CRO)'
   ],
-  knowsLanguage: 'tr'
+  knowsLanguage: ['tr', 'en']
 });
 
 const websiteNode = (siteOrigin) => ({
@@ -103,7 +131,7 @@ const websiteNode = (siteOrigin) => ({
   '@id': `${siteOrigin}/#website`,
   url: `${siteOrigin}/`,
   name: 'Narvals Labs',
-  alternateName: ['Narvals', 'Narvals Digital', 'Narvals Studio'],
+  alternateName: ['Narvals', 'Narvals Digital', 'Narvals Studio', 'Narvals Labs Dijital'],
   inLanguage: 'tr-TR',
   publisher: { '@id': `${siteOrigin}/#organization` },
   potentialAction: {
@@ -238,6 +266,7 @@ const renderArticle = (post, siteOrigin) => {
       publisher: { '@id': `${siteOrigin}/#organization` },
       copyrightHolder: { '@id': `${siteOrigin}/#organization` },
       license: `${siteOrigin}/editoryal-ilkeler/`,
+      publishingPrinciples: `${siteOrigin}/editoryal-ilkeler/`,
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['h1', '.info-hero__answer', '.article-summary ul', '.article-section h2']

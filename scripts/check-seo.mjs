@@ -157,6 +157,13 @@ for (const [path, html] of htmlByPath) {
   const orgNode = structuredNodes.find((node) => node['@type'] === 'Organization');
   if (orgNode) {
     if (orgNode.name !== 'Narvals Labs') errors.push(`${path}: Organization name mismatch`);
+    if (orgNode.legalName !== 'Narvals Labs') errors.push(`${path}: Organization legalName mismatch`);
+    if (!Array.isArray(orgNode.sameAs) || !orgNode.sameAs.includes('https://github.com/fizikhub/narvals-site')) {
+      errors.push(`${path}: Organization sameAs GitHub link missing`);
+    }
+    if (orgNode.publishingPrinciples !== `${siteOrigin}/editoryal-ilkeler/`) {
+      errors.push(`${path}: Organization publishingPrinciples missing or wrong`);
+    }
     if (orgNode.areaServed?.name !== 'Türkiye') errors.push(`${path}: Organization areaServed Country Türkiye missing`);
     if (orgNode.address?.addressCountry !== 'TR') errors.push(`${path}: Organization address country TR missing`);
     if (orgNode.currenciesAccepted !== 'TRY, EUR, USD') errors.push(`${path}: Organization currenciesAccepted missing`);
@@ -165,6 +172,7 @@ for (const [path, html] of htmlByPath) {
     if (orgNode.email !== 'info@narvals.com') errors.push(`${path}: Organization email missing or wrong`);
     if (orgNode.telephone !== '+905019441921') errors.push(`${path}: Organization telephone missing or wrong`);
     if (!Array.isArray(orgNode.knowsAbout) || orgNode.knowsAbout.length < 5) errors.push(`${path}: Organization knowsAbout missing or insufficient`);
+    if (orgNode.hasOfferCatalog?.['@type'] !== 'OfferCatalog') errors.push(`${path}: Organization hasOfferCatalog missing`);
   }
   const websiteNode = structuredNodes.find((node) => node['@type'] === 'WebSite');
   if (websiteNode) {
@@ -180,8 +188,10 @@ for (const [path, html] of htmlByPath) {
     errors.push(`${path}: unverified İstanbul address found in structured data`);
   }
   if (!structuredTypes.has('WebPage') && !structuredTypes.has('CollectionPage')) errors.push(`${path}: WebPage/CollectionPage structured data missing`);
-  if (kind === 'service' && !structuredTypes.has('Service')) errors.push(`${path}: Service structured data missing`);
-  if (kind === 'comparison' && structuredTypes.has('Service')) errors.push(`${path}: comparison page must not claim Service structured data`);
+  const pageNodes = structuredNodes.filter((node) => node.url === expectedCanonical || node['@id']?.startsWith(expectedCanonical));
+  const pageTypes = new Set(pageNodes.flatMap((node) => Array.isArray(node['@type']) ? node['@type'] : [node['@type']]).filter(Boolean));
+  if (kind === 'service' && !pageTypes.has('Service')) errors.push(`${path}: Service structured data missing`);
+  if (kind === 'comparison' && pageTypes.has('Service')) errors.push(`${path}: comparison page must not claim Service structured data`);
   if (kind === 'article') {
     const article = structuredNodes.find((node) => node['@type'] === 'BlogPosting');
     if (!article) errors.push(`${path}: BlogPosting structured data missing`);

@@ -3,8 +3,13 @@ Studio: Narvals Labs
 Site: https://narvals.com/
 Contact: info@narvals.com
 Location: Türkiye
+GitHub: https://github.com/fizikhub/narvals-site
 
-/* SITE */
-Standards: HTML5, CSS3, ES Modules, Schema.org, WCAG 2.1 AA
+/* SITE & TRUST */
+Standards: HTML5, CSS3, ES Modules, Schema.org (JSON-LD), WCAG 2.1 AA, RFC 9116
 Components: Static Semantic HTML, Optimized WebP/AVIF Assets, Zero Heavy Framework Runtime
-Target: Web Sitesi, E-Ticaret, Özel Yazılım, Google Ads, Meta Reklam
+Policy: https://narvals.com/editoryal-ilkeler/
+Security: https://narvals.com/.well-known/security.txt
+Feed: https://narvals.com/blog/feed.xml
+Target: Web Sitesi, E-Ticaret, Özel Yazılım, Google Ads, Meta Reklam, QR Menü, Rezervasyon
+
