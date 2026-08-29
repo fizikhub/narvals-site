@@ -36,8 +36,12 @@ let currentReport = '';
 
 modeTabs.forEach((tab) => {
   tab.addEventListener('click', () => {
-    modeTabs.forEach((t) => t.classList.remove('active'));
+    modeTabs.forEach((t) => {
+      t.classList.remove('active');
+      t.setAttribute('aria-pressed', 'false');
+    });
     tab.classList.add('active');
+    tab.setAttribute('aria-pressed', 'true');
     activeMode = tab.dataset.adsMode;
     if (activeMode === 'goal') {
       if (inputGoalGroup) inputGoalGroup.hidden = false;

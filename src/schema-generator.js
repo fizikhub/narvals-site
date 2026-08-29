@@ -387,9 +387,11 @@ tabButtons.forEach((btn) => {
     tabButtons.forEach((b) => {
       b.classList.remove('is-active');
       b.setAttribute('aria-selected', 'false');
+      b.setAttribute('tabindex', '-1');
     });
     btn.classList.add('is-active');
     btn.setAttribute('aria-selected', 'true');
+    btn.setAttribute('tabindex', '0');
 
     currentType = btn.getAttribute('data-schema-type') || 'Organization';
 
@@ -400,6 +402,21 @@ tabButtons.forEach((btn) => {
     });
 
     generateSchema();
+  });
+});
+
+tabButtons.forEach((btn, index) => {
+  btn.addEventListener('keydown', (event) => {
+    let nextIndex;
+    if (event.key === 'ArrowRight') nextIndex = (index + 1) % tabButtons.length;
+    else if (event.key === 'ArrowLeft') nextIndex = (index - 1 + tabButtons.length) % tabButtons.length;
+    else if (event.key === 'Home') nextIndex = 0;
+    else if (event.key === 'End') nextIndex = tabButtons.length - 1;
+    else return;
+
+    event.preventDefault();
+    tabButtons[nextIndex].focus();
+    tabButtons[nextIndex].click();
   });
 });
 

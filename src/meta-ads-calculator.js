@@ -32,8 +32,12 @@ const goals = {
 
 goalButtons.forEach((btn) => {
   btn.addEventListener('click', () => {
-    goalButtons.forEach((b) => b.classList.remove('active'));
+    goalButtons.forEach((b) => {
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed', 'false');
+    });
     btn.classList.add('active');
+    btn.setAttribute('aria-pressed', 'true');
     const goalKey = btn.dataset.metaGoal;
     const g = goals[goalKey];
     if (g) {

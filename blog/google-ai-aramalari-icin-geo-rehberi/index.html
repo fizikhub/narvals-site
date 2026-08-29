@@ -130,7 +130,7 @@
       "timeRequired": "PT14M",
       "inLanguage": "tr-TR",
       "isAccessibleForFree": true,
-      "wordCount": 1321,
+      "wordCount": 1492,
       "articleSection": "SEO & GEO",
       "keywords": "GEO nedir, AI arama optimizasyonu, Google AI Overviews, AEO, KDD GEO",
       "author": {
@@ -179,7 +179,9 @@
         "https://arxiv.org/abs/2311.09735",
         "https://arxiv.org/abs/2607.14035",
         "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+        "https://web.dev/articles/ai-agent-site-ux",
         "https://support.google.com/webmasters/answer/16984139",
+        "https://aclanthology.org/2024.acl-long.806/",
         "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
         "https://developers.openai.com/api/docs/bots",
         "https://www.bing.com/webmasters/help/webmaster-guidelines-30fba23a"
@@ -188,7 +190,9 @@
         "https://arxiv.org/abs/2311.09735",
         "https://arxiv.org/abs/2607.14035",
         "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+        "https://web.dev/articles/ai-agent-site-ux",
         "https://support.google.com/webmasters/answer/16984139",
+        "https://aclanthology.org/2024.acl-long.806/",
         "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
         "https://developers.openai.com/api/docs/bots",
         "https://www.bing.com/webmasters/help/webmaster-guidelines-30fba23a"
@@ -286,7 +290,7 @@
         </header>
 
         <div class="info-layout article-layout">
-          <nav class="info-toc" aria-label="Makale içeriği"><strong>Bu rehberde</strong><a href="#geo-seo-iliskisi">Temel tanım</a><a href="#akademik-geo-bulgulari">Akademik bulgular</a><a href="#rag-chunking-mimarisi">RAG mimarisi</a><a href="#teknik-onkosullar">Teknik temel</a><a href="#emtia-olmayan-icerik">Bilgi kazanımı</a><a href="#entity-marka">Marka tutarlılığı</a><a href="#geo-mitleri">Yanlış öncelikler</a><a href="#olcum">Başarı sistemi</a><a href="#kisa-cevaplar">Kısa cevaplar</a><a href="#kaynaklar">Kaynaklar</a></nav>
+          <nav class="info-toc" aria-label="Makale içeriği"><strong>Bu rehberde</strong><a href="#geo-seo-iliskisi">Temel tanım</a><a href="#akademik-geo-bulgulari">Akademik bulgular</a><a href="#rag-chunking-mimarisi">RAG mimarisi</a><a href="#teknik-onkosullar">Teknik temel</a><a href="#ajan-dostu-arayuz">AI ajanları</a><a href="#emtia-olmayan-icerik">Bilgi kazanımı</a><a href="#entity-marka">Marka tutarlılığı</a><a href="#geo-mitleri">Yanlış öncelikler</a><a href="#olcum">Başarı sistemi</a><a href="#kisa-cevaplar">Kısa cevaplar</a><a href="#kaynaklar">Kaynaklar</a></nav>
           <div class="info-content article-content">
             <section class="info-section article-section" id="geo-seo-iliskisi">
         <p class="info-section__label">Temel tanım</p>
@@ -332,6 +336,17 @@
         <ul class="article-checklist"><li>Sayfa herkese açık, canonical URL’de 200 yanıtıyla ve ana içerik HTML içinde sunuluyor.</li><li>Googlebot, OAI-SearchBot, Claude-SearchBot, PerplexityBot ve Applebot robots.txt veya WAF tarafından engellenmiyor.</li><li>Nosnippet gibi önizleme kısıtları görünürlük hedefiyle çelişmiyor; max-image-preview:large ve max-snippet:-1 aktif.</li><li>Başlık, H1, giriş cevabı ve ana metin aynı birincil soruyu karşılıyor.</li><li>Sayfanın yayıncısı, yayın/güncelleme tarihi ve birincil kaynakları görünür.</li><li>Schema (JSON-LD), sayfada görünür gerçek içeriği tekrar ediyor; olmayan kişi, yorum veya sonuç üretmiyor.</li><li>Dahili linkler konuyu ana hizmet, karar araçları ve ilgili rehberlerle bağlıyor.</li><li>Mobil ziyaretçi yapay zekâ sonucundaki bağlantıdan geldiğinde ana cevabı ve sonraki adımı hızla bulabiliyor.</li></ul>
 
 
+      </section>
+            <section class="info-section article-section" id="ajan-dostu-arayuz">
+        <p class="info-section__label">AI ajanları</p>
+        <h2>Tarayıcı ajanları yalnız metni okumaz; arayüzdeki görevleri de anlamaya çalışır.</h2>
+        <p>Google’ın 2026 üretken AI rehberi, tarayıcı ajanlarının ekran görüntüsü, DOM ve erişilebilirlik ağacını birlikte kullanabildiğini belirtiyor. Bu katman klasik indeksleme için yeni bir sıralama sinyali değildir; fakat teklif formu, hesaplayıcı veya rezervasyon akışını kullanıcı adına tamamlayan bir ajanın sayfayı doğru yorumlamasını kolaylaştırır.</p>
+        <p>web.dev rehberindeki uygulanabilir ortak payda erişilebilirliktir: özel div tıklamaları yerine gerçek button ve bağlantılar, alanla ilişkilendirilmiş label, görünür ve kararlı eylemler, seçim durumunu makineye açıklayan ARIA ve işlem sonucunun arayüzde açıkça gösterilmesi.</p>
+
+
+        <ul class="article-checklist"><li>Eylemler gerçek <strong>button</strong> veya <strong>a href</strong> öğeleriyle kurulur; tıklanabilir div kullanılmaz.</li><li>Her input, select ve textarea görünür bir label veya eşdeğer erişilebilir ada sahiptir.</li><li>Mod, sekme ve kalıcı seçim düğmeleri <strong>aria-selected</strong> veya <strong>aria-pressed</strong> durumunu sınıf adıyla birlikte günceller.</li><li>Gizlenen alanlar yalnız görsel olarak değil <strong>hidden</strong> ile erişilebilirlik ağacından da çıkarılır.</li><li>Hata ve sonuç metni işlem sonrasında görünür biçimde güncellenir; ajan yalnız renk değişimine bağımlı kalmaz.</li></ul>
+
+        <aside class="article-callout" aria-label="Tarayıcı ajanları yalnız metni okumaz; arayüzdeki görevleri de anlamaya çalışır.: karar notu"><strong>Karar notu</strong><p>Ajan uyumluluğu için deneysel protokol eklemekten önce semantik HTML ve erişilebilir form temelini düzeltin. Bu iyileştirmeler insan kullanıcıya da doğrudan yarar sağlar.</p></aside>
       </section>
             <section class="info-section article-section" id="emtia-olmayan-icerik">
         <p class="info-section__label">Bilgi kazanımı</p>
@@ -397,7 +412,7 @@
               <p class="info-section__label">Birincil kaynaklar</p>
               <h2>Kaynaklar ve kapsam.</h2>
               <p>Bağlantılar içerikteki değişebilir veya dış doğrulama gerektiren bilgilerin kaynağıdır. Ticari ilişki veya sponsorlu bağlantı değildir.</p>
-              <ol class="article-sources"><li><a href="https://arxiv.org/abs/2311.09735" rel="noopener noreferrer">KDD 2024 — GEO: Generative Engine Optimization (Aggarwal et al., arXiv:2311.09735)</a></li><li><a href="https://arxiv.org/abs/2607.14035" rel="noopener noreferrer">Martinez 2026 — GEO araştırmalarının eleştirel incelemesi (45 çalışma)</a></li><li><a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide" rel="noopener noreferrer">Google — Üretken AI özellikleri için optimizasyon rehberi</a></li><li><a href="https://support.google.com/webmasters/answer/16984139" rel="noopener noreferrer">Google Search Console — Generative AI Performance raporu</a></li><li><a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" rel="noopener noreferrer">Google — İnsan odaklı, güvenilir içerik ve Bilgi Kazanımı</a></li><li><a href="https://developers.openai.com/api/docs/bots" rel="noopener noreferrer">OpenAI — Search botları ve yayıncı erişimi</a></li><li><a href="https://www.bing.com/webmasters/help/webmaster-guidelines-30fba23a" rel="noopener noreferrer">Bing Webmaster Guidelines</a></li></ol>
+              <ol class="article-sources"><li><a href="https://arxiv.org/abs/2311.09735" rel="noopener noreferrer">KDD 2024 — GEO: Generative Engine Optimization (Aggarwal et al., arXiv:2311.09735)</a></li><li><a href="https://arxiv.org/abs/2607.14035" rel="noopener noreferrer">Martinez 2026 — GEO araştırmalarının eleştirel incelemesi (45 çalışma)</a></li><li><a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide" rel="noopener noreferrer">Google — Üretken AI özellikleri için optimizasyon rehberi</a></li><li><a href="https://web.dev/articles/ai-agent-site-ux" rel="noopener noreferrer">web.dev — Tarayıcı ajanları için erişilebilir ve semantik site rehberi</a></li><li><a href="https://support.google.com/webmasters/answer/16984139" rel="noopener noreferrer">Google Search Console — Generative AI Performance raporu</a></li><li><a href="https://aclanthology.org/2024.acl-long.806/" rel="noopener noreferrer">ACL 2024 — WebCiteS: Atıflı web yanıtlarında kaynak doğruluğu değerlendirmesi</a></li><li><a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" rel="noopener noreferrer">Google — İnsan odaklı, güvenilir içerik ve Bilgi Kazanımı</a></li><li><a href="https://developers.openai.com/api/docs/bots" rel="noopener noreferrer">OpenAI — Search botları ve yayıncı erişimi</a></li><li><a href="https://www.bing.com/webmasters/help/webmaster-guidelines-30fba23a" rel="noopener noreferrer">Bing Webmaster Guidelines</a></li></ol>
               <aside class="article-method" aria-label="Bu rehberin hazırlanma yöntemi"><strong>Hazırlama yöntemi</strong><p>Bu rehber Narvals Labs yayıncılığında; ilgili birincil kaynaklar, görünür hizmet kapsamı ve proje karar çerçeveleri incelenerek hazırlandı. Doğrulanamayan müşteri, fiyat, başarı oranı veya sonuç iddiası eklenmedi. Yöntem, düzeltme ve yapay zekâ desteği açıklaması için <a href="/editoryal-ilkeler/">editoryal ilkeleri</a> okuyabilirsiniz.</p></aside>
             </section>
             <section class="info-section article-section">

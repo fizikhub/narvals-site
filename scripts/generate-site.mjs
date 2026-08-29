@@ -36,78 +36,11 @@ const encodeXml = (value) => value
   .replaceAll('"', '&quot;')
   .replaceAll("'", '&apos;');
 
-const getChangefreq = (path) => {
-  if (path === '/') return 'daily';
-  if (path.startsWith('/araclar/')) return 'weekly';
-  if (path.startsWith('/hizmetler/')) return 'weekly';
-  if (path === '/blog/') return 'daily';
-  if (path.startsWith('/blog/')) return 'weekly';
-  return 'monthly';
-};
-
-const getPriority = (path) => {
-  if (path === '/') return '1.0';
-  if (path.startsWith('/araclar/')) return '0.9';
-  if (path === '/hizmetler/' || path.startsWith('/hizmetler/')) return '0.9';
-  if (path === '/blog/') return '0.9';
-  if (path.startsWith('/blog/')) return '0.8';
-  if (path === '/hakkimizda/' || path === '/iletisim/') return '0.7';
-  return '0.5';
-};
-
-const getPageTitle = (path) => {
-  if (path === '/') return 'Narvals Labs — Web Tasarım, Özel Yazılım ve Reklam';
-  if (path === '/hizmetler/') return 'Narvals Labs Dijital Hizmetler';
-  if (path === '/hizmetler/web-tasarim/') return 'Kurumsal Web Tasarım ve UX Çözümleri';
-  if (path === '/hizmetler/e-ticaret/') return 'E-Ticaret Sitesi Tasarımı ve Geliştirme';
-  if (path === '/hizmetler/ozel-yazilim/') return 'İşletmeye Özel Yazılım ve Otomasyon';
-  if (path === '/hizmetler/google-ads/') return 'Google Ads Reklam ve Dönüşüm Yönetimi';
-  if (path === '/hizmetler/dijital-reklam/') return 'Meta (Instagram & Facebook) Reklam Yönetimi';
-  if (path === '/hizmetler/sosyal-medya-yonetimi/') return 'Sosyal Medya Yönetimi ve İçerik Stratejisi';
-  if (path === '/hizmetler/qr-menu/') return 'Özel QR Menü Yazılımı ve Yönetim Paneli';
-  if (path === '/hizmetler/rezervasyon-randevu/') return 'Online Rezervasyon ve Randevu Sistemi';
-  if (path === '/hizmetler/qr-menu-rezervasyon/') return 'QR Menü, Rezervasyon ve Randevu Karşılaştırması';
-  if (path === '/hakkimizda/') return 'Narvals Labs Yaklaşımı ve Çalışma İlkeleri';
-  if (path === '/iletisim/') return 'Narvals Labs İletişim ve Proje Talebi';
-  if (path === '/araclar/') return 'Ücretsiz Web Sitesi ve Proje Araçları';
-  if (path === '/araclar/web-sitesi-kontrolu/') return 'Ücretsiz Web Sitesi Kontrolü';
-  if (path === '/araclar/teklif-karsilastirma/') return 'Web Sitesi Teklif Karşılaştırma Aracı';
-  if (path === '/araclar/donusum-orani-hesaplama/') return 'Web Sitesi Dönüşüm Oranı Hesaplama Aracı';
-  if (path === '/araclar/roas-hesaplama/') return 'ROAS ve Reklam Getirisi Hesaplama';
-  if (path === '/araclar/google-ads-butce-hesaplama/') return 'Google Ads Bütçe ve TBM Hesaplama';
-  if (path === '/araclar/utm-link-olusturucu/') return 'GA4 UTM Link ve URL Oluşturucu';
-  if (path === '/araclar/qr-kod-olusturucu/') return 'Ücretsiz QR Kod Oluşturucu';
-  if (path === '/araclar/e-ticaret-kar-hesaplama/') return 'E-Ticaret Net Kâr ve Komisyon Hesaplama';
-  if (path === '/araclar/kdv-hesaplama/') return 'KDV ve Tevkifat Hesaplama Aracı';
-  if (path === '/araclar/core-web-vitals-kontrolu/') return 'Core Web Vitals ve Hız Kontrolü';
-  if (path === '/araclar/gorsel-boyut-hesaplayici/') return 'En Boy Oranı ve Görsel Boyut Hesaplama';
-  if (path === '/araclar/saatlik-ucret-hesaplama/') return 'Freelance ve Ajans Saatlik Ücret Hesaplama';
-  if (path === '/araclar/meta-reklam-butcesi-hesaplama/') return 'Meta ve Instagram Reklam Bütçesi Hesaplama';
-  if (path === '/araclar/meta-etiket-onizleyici/') return 'Meta Etiketi ve Sosyal Medya Önizleyici';
-  if (path === '/araclar/schema-olusturucu/') return 'Schema Markup & JSON-LD Varlık Oluşturucu';
-  if (path === '/araclar/bilgi-kazanimi-kontrolu/') return 'E-E-A-T ve Bilgi Kazanımı Denetim Aracı';
-  if (path === '/araclar/cpc-hesaplama/') return 'CPC ve Maksimum Teklif Hesaplama Aracı';
-  if (path === '/araclar/tarama-butcesi-hesaplama/') return 'Tarama Bütçesi ve Bot Taranabilirlik Aracı';
-  if (path === '/blog/') return 'Narvals Labs Dijital Üretim ve Karar Rehberleri';
-  if (path === '/editoryal-ilkeler/') return 'Narvals Labs Editoryal İlkeler ve Standartlar';
-  const topicHub = topicHubs.find((hub) => `/blog/konu/${hub.slug}/` === path);
-  if (topicHub) return topicHub.title;
-  const blogPost = blogPosts.find((p) => `/blog/${p.slug}/` === path);
-  if (blogPost) return blogPost.title;
-  return 'Narvals Labs';
-};
-
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${sitePages.map(({ path, lastModified }) => `  <url>
     <loc>${encodeXml(`${siteOrigin}${path}`)}</loc>
     <lastmod>${lastModified}</lastmod>
-    <changefreq>${getChangefreq(path)}</changefreq>
-    <priority>${getPriority(path)}</priority>
-    <image:image>
-      <image:loc>${siteOrigin}/og/narvals-labs-og.jpg</image:loc>
-      <image:title>${encodeXml(getPageTitle(path))}</image:title>
-    </image:image>
   </url>`).join('\n')}
 </urlset>
 `;

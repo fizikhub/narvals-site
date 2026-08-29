@@ -127,12 +127,12 @@
 
       <div class="schema-tabs-container">
         <div class="schema-tabs" role="tablist" aria-label="Schema.org Türleri">
-          <button class="schema-tab-btn is-active" type="button" role="tab" aria-selected="true" data-schema-type="Organization">🏢 Organization</button>
-          <button class="schema-tab-btn" type="button" role="tab" aria-selected="false" data-schema-type="LocalBusiness">📍 LocalBusiness</button>
-          <button class="schema-tab-btn" type="button" role="tab" aria-selected="false" data-schema-type="Service">💼 Service</button>
-          <button class="schema-tab-btn" type="button" role="tab" aria-selected="false" data-schema-type="FAQPage">❓ FAQPage</button>
-          <button class="schema-tab-btn" type="button" role="tab" aria-selected="false" data-schema-type="Article">📰 Article</button>
-          <button class="schema-tab-btn" type="button" role="tab" aria-selected="false" data-schema-type="Product">🛍️ Product</button>
+          <button id="schema-tab-organization" class="schema-tab-btn is-active" type="button" role="tab" aria-selected="true" aria-controls="schema-panel-organization" tabindex="0" data-schema-type="Organization">🏢 Organization</button>
+          <button id="schema-tab-localbusiness" class="schema-tab-btn" type="button" role="tab" aria-selected="false" aria-controls="schema-panel-localbusiness" tabindex="-1" data-schema-type="LocalBusiness">📍 LocalBusiness</button>
+          <button id="schema-tab-service" class="schema-tab-btn" type="button" role="tab" aria-selected="false" aria-controls="schema-panel-service" tabindex="-1" data-schema-type="Service">💼 Service</button>
+          <button id="schema-tab-faqpage" class="schema-tab-btn" type="button" role="tab" aria-selected="false" aria-controls="schema-panel-faqpage" tabindex="-1" data-schema-type="FAQPage">❓ FAQPage</button>
+          <button id="schema-tab-article" class="schema-tab-btn" type="button" role="tab" aria-selected="false" aria-controls="schema-panel-article" tabindex="-1" data-schema-type="Article">📰 Article</button>
+          <button id="schema-tab-product" class="schema-tab-btn" type="button" role="tab" aria-selected="false" aria-controls="schema-panel-product" tabindex="-1" data-schema-type="Product">🛍️ Product</button>
         </div>
       </div>
 
@@ -140,7 +140,7 @@
         <!-- Sol Kolon: Dinamik Form Kartı -->
         <div class="schema-form-card">
           <!-- 1. Organization Form -->
-          <div class="schema-form-group" data-form-group="Organization">
+          <div id="schema-panel-organization" class="schema-form-group" role="tabpanel" aria-labelledby="schema-tab-organization" data-form-group="Organization">
             <header>
               <h2>Kurum &amp; Şirket Bilgileri (Organization)</h2>
               <p>Markanızın tüzel kişiliğini, web adresini, yetkinliklerini ve resmi profillerini tanımlayın.</p>
@@ -192,7 +192,7 @@
           </div>
 
           <!-- 2. LocalBusiness Form -->
-          <div class="schema-form-group" data-form-group="LocalBusiness" style="display:none;" hidden>
+          <div id="schema-panel-localbusiness" class="schema-form-group" role="tabpanel" aria-labelledby="schema-tab-localbusiness" data-form-group="LocalBusiness" style="display:none;" hidden>
             <header>
               <h2>Yerel İşletme Bilgileri (LocalBusiness)</h2>
               <p>Fiziksel mağaza, ofis veya restoranlar için harita koordinatları ve çalışma saatleri.</p>
@@ -281,7 +281,7 @@
           </div>
 
           <!-- 3. Service Form -->
-          <div class="schema-form-group" data-form-group="Service" style="display:none;" hidden>
+          <div id="schema-panel-service" class="schema-form-group" role="tabpanel" aria-labelledby="schema-tab-service" data-form-group="Service" style="display:none;" hidden>
             <header>
               <h2>Hizmet Şeması (Service)</h2>
               <p>Sunduğunuz profesyonel hizmeti, kapsamı, sağlayıcı firmayı ve hedef bölgeyi yapılandırın.</p>
@@ -335,7 +335,7 @@
           </div>
 
           <!-- 4. FAQPage Form -->
-          <div class="schema-form-group" data-form-group="FAQPage" style="display:none;" hidden>
+          <div id="schema-panel-faqpage" class="schema-form-group" role="tabpanel" aria-labelledby="schema-tab-faqpage" data-form-group="FAQPage" style="display:none;" hidden>
             <header>
               <h2>Sıkça Sorulan Sorular (FAQPage)</h2>
               <p>Google SERP zengin snippet sonuçlarında açılır akordeon şeklinde görünen soru-cevap çiftleri.</p>
@@ -345,7 +345,7 @@
           </div>
 
           <!-- 5. Article / Blog Form -->
-          <div class="schema-form-group" data-form-group="Article" style="display:none;" hidden>
+          <div id="schema-panel-article" class="schema-form-group" role="tabpanel" aria-labelledby="schema-tab-article" data-form-group="Article" style="display:none;" hidden>
             <header>
               <h2>Makale &amp; Blog Yazısı (Article)</h2>
               <p>Blog içerikleri, haberler ve rehberler için Google Keşfet (Discover) ve yazar E-E-A-T şeması.</p>
@@ -418,7 +418,7 @@
           </div>
 
           <!-- 6. Product Form -->
-          <div class="schema-form-group" data-form-group="Product" style="display:none;" hidden>
+          <div id="schema-panel-product" class="schema-form-group" role="tabpanel" aria-labelledby="schema-tab-product" data-form-group="Product" style="display:none;" hidden>
             <header>
               <h2>Ürün &amp; E-Ticaret (Product)</h2>
               <p>Google Alışveriş (Shopping) ve arama sonuçlarında fiyat, stok ve değerlendirme yıldızları.</p>

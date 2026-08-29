@@ -1,783 +1,315 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://narvals.com/</loc>
     <lastmod>2026-08-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Narvals Labs — Web Tasarım, Özel Yazılım ve Reklam</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/hizmetler/</loc>
     <lastmod>2026-08-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Narvals Labs Dijital Hizmetler</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/hizmetler/web-tasarim/</loc>
     <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Kurumsal Web Tasarım ve UX Çözümleri</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/hizmetler/e-ticaret/</loc>
     <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>E-Ticaret Sitesi Tasarımı ve Geliştirme</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/hizmetler/ozel-yazilim/</loc>
     <lastmod>2026-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>İşletmeye Özel Yazılım ve Otomasyon</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/hizmetler/dijital-reklam/</loc>
     <lastmod>2026-08-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Meta (Instagram &amp; Facebook) Reklam Yönetimi</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/hizmetler/google-ads/</loc>
     <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Google Ads Reklam ve Dönüşüm Yönetimi</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/hizmetler/sosyal-medya-yonetimi/</loc>
     <lastmod>2026-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Sosyal Medya Yönetimi ve İçerik Stratejisi</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/hizmetler/qr-menu/</loc>
     <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Özel QR Menü Yazılımı ve Yönetim Paneli</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/hizmetler/rezervasyon-randevu/</loc>
     <lastmod>2026-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Online Rezervasyon ve Randevu Sistemi</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/hizmetler/qr-menu-rezervasyon/</loc>
     <lastmod>2026-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>QR Menü, Rezervasyon ve Randevu Karşılaştırması</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/hakkimizda/</loc>
     <lastmod>2026-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Narvals Labs Yaklaşımı ve Çalışma İlkeleri</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/iletisim/</loc>
     <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Narvals Labs İletişim ve Proje Talebi</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/araclar/</loc>
     <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Ücretsiz Web Sitesi ve Proje Araçları</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/araclar/web-sitesi-kontrolu/</loc>
     <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Ücretsiz Web Sitesi Kontrolü</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/araclar/teklif-karsilastirma/</loc>
     <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Web Sitesi Teklif Karşılaştırma Aracı</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/araclar/donusum-orani-hesaplama/</loc>
     <lastmod>2026-08-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Web Sitesi Dönüşüm Oranı Hesaplama Aracı</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/araclar/roas-hesaplama/</loc>
     <lastmod>2026-08-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>ROAS ve Reklam Getirisi Hesaplama</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/araclar/google-ads-butce-hesaplama/</loc>
     <lastmod>2026-08-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Google Ads Bütçe ve TBM Hesaplama</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/araclar/utm-link-olusturucu/</loc>
     <lastmod>2026-08-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>GA4 UTM Link ve URL Oluşturucu</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/araclar/qr-kod-olusturucu/</loc>
     <lastmod>2026-08-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Ücretsiz QR Kod Oluşturucu</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/araclar/e-ticaret-kar-hesaplama/</loc>
     <lastmod>2026-08-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>E-Ticaret Net Kâr ve Komisyon Hesaplama</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/araclar/kdv-hesaplama/</loc>
     <lastmod>2026-08-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>KDV ve Tevkifat Hesaplama Aracı</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/araclar/core-web-vitals-kontrolu/</loc>
     <lastmod>2026-08-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Core Web Vitals ve Hız Kontrolü</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/araclar/gorsel-boyut-hesaplayici/</loc>
     <lastmod>2026-08-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>En Boy Oranı ve Görsel Boyut Hesaplama</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/araclar/saatlik-ucret-hesaplama/</loc>
     <lastmod>2026-08-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Freelance ve Ajans Saatlik Ücret Hesaplama</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/araclar/meta-reklam-butcesi-hesaplama/</loc>
     <lastmod>2026-08-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Meta ve Instagram Reklam Bütçesi Hesaplama</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/araclar/meta-etiket-onizleyici/</loc>
     <lastmod>2026-08-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Meta Etiketi ve Sosyal Medya Önizleyici</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/araclar/schema-olusturucu/</loc>
     <lastmod>2026-08-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Schema Markup &amp; JSON-LD Varlık Oluşturucu</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/araclar/bilgi-kazanimi-kontrolu/</loc>
     <lastmod>2026-08-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>E-E-A-T ve Bilgi Kazanımı Denetim Aracı</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/araclar/cpc-hesaplama/</loc>
     <lastmod>2026-08-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>CPC ve Maksimum Teklif Hesaplama Aracı</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/araclar/tarama-butcesi-hesaplama/</loc>
     <lastmod>2026-08-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Tarama Bütçesi ve Bot Taranabilirlik Aracı</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/</loc>
     <lastmod>2026-08-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Narvals Labs Dijital Üretim ve Karar Rehberleri</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/editoryal-ilkeler/</loc>
     <lastmod>2026-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Narvals Labs Editoryal İlkeler ve Standartlar</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/konu/e-ticaret/</loc>
     <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>E-ticaret rehberleri: fikirden çalışan mağazaya</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/konu/web-sitesi/</loc>
     <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Web sitesi rehberleri: kapsamdan yayına</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/konu/reklam/</loc>
     <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Dijital reklam rehberleri: bütçeden gerçek sonuca</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/konu/qr-menu/</loc>
     <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>QR menü rehberleri: masadaki koddan operasyona</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/konu/seo-geo/</loc>
     <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>SEO ve GEO rehberleri: Google, yapay zekâ ve arama görünürlüğü</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/e-ticaret-sitesi-nasil-acilir/</loc>
     <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>E-ticaret sitesi nasıl açılır? 10 adımlı sade rehber</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/qr-menu-nasil-yapilir/</loc>
     <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>QR menü nasıl yapılır? Restoranlar için sade kurulum rehberi</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/internet-sitesi-nasil-kurulur/</loc>
     <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>İnternet sitesi nasıl kurulur? Baştan sona sade rehber</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/google-ads-reklam-nasil-verilir/</loc>
     <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Google Ads reklamı nasıl verilir? İşletmeler için başlangıç rehberi</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/qr-menu-fiyatlari-ve-maliyet-kalemleri/</loc>
     <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>QR menü fiyatları: maliyeti hangi özellikler belirler?</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/web-sitesi-ne-kadar-surer/</loc>
     <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Web sitesi ne kadar sürer? Gerçekçi proje takvimi rehberi</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/google-ads-butcesi-nasil-belirlenir/</loc>
     <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Google Ads bütçesi nasıl belirlenir? Planlama rehberi</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/restoran-web-sitesi-nasil-olmali/</loc>
     <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Restoran web sitesi nasıl olmalı? Menü, rezervasyon ve Google rehberi</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/web-tasarim-ajansi-secerken-sorulacak-sorular/</loc>
     <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Web tasarım ajansı seçerken sorulacak 15 soru</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/web-sitesi-bakim-ucreti-ve-yillik-maliyet/</loc>
     <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Web sitesi bakım ücreti ve yıllık maliyet neleri kapsar?</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/hazir-web-sitesi-mi-ozel-tasarim-mi/</loc>
     <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Hazır web sitesi mi, özel tasarım mı? Karar rehberi</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/web-sitesi-neden-musteri-getirmiyor/</loc>
     <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Web sitesi neden müşteri getirmiyor? 8 olası neden</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/web-sitesi-googleda-neden-cikmiyor/</loc>
     <lastmod>2026-08-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Web sitesi Google’da neden çıkmıyor? Teşhis rehberi</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/web-sitesi-donusum-orani-nasil-hesaplanir/</loc>
     <lastmod>2026-08-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Web sitesi dönüşüm oranı nasıl hesaplanır?</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/crawl-budget-ve-googlebot-tarama-verimliligi/</loc>
     <lastmod>2026-08-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Crawl budget nedir? Googlebot tarama verimliliği rehberi</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/ga4-ve-server-side-gtm-kurulum-rehberi/</loc>
     <lastmod>2026-08-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>GA4 ve server-side GTM nasıl kurulur? Ölçüm rehberi</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/kurumsal-web-sitesi-briefi-nasil-hazirlanir/</loc>
     <lastmod>2026-08-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Kurumsal web sitesi briefi nasıl hazırlanır?</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/web-sitesi-teknik-seo-kontrol-listesi/</loc>
     <lastmod>2026-08-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Web sitesi teknik SEO kontrol listesi: yayından önce ve sonra</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/google-ai-aramalari-icin-geo-rehberi/</loc>
     <lastmod>2026-08-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>GEO nedir? Google AI sonuçlarında görünürlük rehberi</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/google-ve-ai-botlari-icin-site-indeksleme-rehberi/</loc>
     <lastmod>2026-08-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Google ve AI botları sitenizi nasıl tarar? İndeksleme rehberi</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/schema-org-ve-baglantili-jsonld-graflari/</loc>
     <lastmod>2026-08-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Schema.org ve bağlantılı JSON-LD graf mimarisi rehberi</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/e-e-a-t-yazar-otoritesi-ve-google-guven-rehberi/</loc>
     <lastmod>2026-08-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>E-E-A-T ve yazar otoritesi nasıl kurulur? Google güven rehberi</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/e-ticaret-altyapisi-nasil-secilir/</loc>
     <lastmod>2026-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>E-ticaret altyapısı nasıl seçilir? Dokuz karar sorusu</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/hazir-yazilim-mi-ozel-yazilim-mi/</loc>
     <lastmod>2026-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Hazır yazılım mı, özel yazılım mı? Karar matrisi</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/meta-pixel-ve-conversions-api-farki/</loc>
     <lastmod>2026-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Meta Pixel ve Conversions API: farkları ve birlikte kullanım</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/qr-menu-mu-pdf-menu-mu/</loc>
     <lastmod>2026-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>QR menü mü, PDF menü mü? Karşılaştırma rehberi</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/rezervasyon-randevu-sistemi-nasil-secilir/</loc>
     <lastmod>2026-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Rezervasyon ve randevu sistemi nasıl seçilir?</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/web-sitesi-maliyeti-nasil-hesaplanir/</loc>
     <lastmod>2026-08-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Web sitesi maliyeti nasıl hesaplanır? Teklif karşılaştırma rehberi</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/web-sitesi-yaptirmadan-once-kapsam-teklif-karar-rehberi/</loc>
     <lastmod>2026-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Web sitesi yaptırmadan önce: kapsam, teklif ve karar rehberi</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/meta-reklam-butcesi-nasil-belirlenir/</loc>
     <lastmod>2026-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Meta reklam bütçesi nasıl belirlenir? Planlama rehberi</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/meta-reklam-ajansi-secerken-sorulacak-sorular/</loc>
     <lastmod>2026-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Meta reklam ajansı seçerken hangi sorular sorulmalı?</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/sosyal-medya-yonetimi-neleri-kapsar/</loc>
     <lastmod>2026-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Sosyal medya yönetimi neleri kapsar? Hizmet ve teklif rehberi</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/e-ticaret-sitesi-maliyeti-nasil-hesaplanir/</loc>
     <lastmod>2026-08-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>E-ticaret sitesi maliyeti nasıl hesaplanır? Toplam maliyet rehberi</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/google-ads-ajansi-secerken-sorulacak-sorular/</loc>
     <lastmod>2026-08-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Google Ads ajansı seçerken hangi sorular sorulmalı?</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/google-ads-mi-meta-reklamlari-mi/</loc>
     <lastmod>2026-08-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Google Ads mi Meta reklamları mı? Hangi kanal ne zaman seçilmeli?</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/b2b-web-sitesi-nasil-olmali/</loc>
     <lastmod>2026-08-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>B2B web sitesi nasıl olmalı? Lead generation ve kurumsal güven rehberi</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/web-sitesi-hizlandirma-core-web-vitals-rehberi/</loc>
     <lastmod>2026-08-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>Web sitesi hızlandırma ve Core Web Vitals (LCP, INP, CLS) rehberi</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/e-ticaret-donusum-orani-artirma-cro-rehberi/</loc>
     <lastmod>2026-08-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>E-ticaret dönüşüm oranı artırma (CRO) ve sepet terkini önleme rehberi</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://narvals.com/blog/yonetim-paneli-ve-crm-yazilimi-nasil-secilir/</loc>
     <lastmod>2026-08-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
-      <image:title>İşletmeye özel CRM ve yönetim paneli seçim rehberi</image:title>
-    </image:image>
   </url>
 </urlset>

@@ -349,6 +349,23 @@ export const blogPosts = [
         ]
       },
       {
+        id: 'ajan-dostu-arayuz',
+        label: 'AI ajanları',
+        heading: 'Tarayıcı ajanları yalnız metni okumaz; arayüzdeki görevleri de anlamaya çalışır.',
+        paragraphs: [
+          'Google’ın 2026 üretken AI rehberi, tarayıcı ajanlarının ekran görüntüsü, DOM ve erişilebilirlik ağacını birlikte kullanabildiğini belirtiyor. Bu katman klasik indeksleme için yeni bir sıralama sinyali değildir; fakat teklif formu, hesaplayıcı veya rezervasyon akışını kullanıcı adına tamamlayan bir ajanın sayfayı doğru yorumlamasını kolaylaştırır.',
+          'web.dev rehberindeki uygulanabilir ortak payda erişilebilirliktir: özel div tıklamaları yerine gerçek button ve bağlantılar, alanla ilişkilendirilmiş label, görünür ve kararlı eylemler, seçim durumunu makineye açıklayan ARIA ve işlem sonucunun arayüzde açıkça gösterilmesi.'
+        ],
+        checklist: [
+          'Eylemler gerçek <strong>button</strong> veya <strong>a href</strong> öğeleriyle kurulur; tıklanabilir div kullanılmaz.',
+          'Her input, select ve textarea görünür bir label veya eşdeğer erişilebilir ada sahiptir.',
+          'Mod, sekme ve kalıcı seçim düğmeleri <strong>aria-selected</strong> veya <strong>aria-pressed</strong> durumunu sınıf adıyla birlikte günceller.',
+          'Gizlenen alanlar yalnız görsel olarak değil <strong>hidden</strong> ile erişilebilirlik ağacından da çıkarılır.',
+          'Hata ve sonuç metni işlem sonrasında görünür biçimde güncellenir; ajan yalnız renk değişimine bağımlı kalmaz.'
+        ],
+        callout: 'Ajan uyumluluğu için deneysel protokol eklemekten önce semantik HTML ve erişilebilir form temelini düzeltin. Bu iyileştirmeler insan kullanıcıya da doğrudan yarar sağlar.'
+      },
+      {
         id: 'emtia-olmayan-icerik',
         label: 'Bilgi kazanımı',
         heading: 'Kolayca üretilebilen özet yerine Bilgi Kazanımı (Information Gain) sunun.',
@@ -413,7 +430,9 @@ export const blogPosts = [
       { label: 'KDD 2024 — GEO: Generative Engine Optimization (Aggarwal et al., arXiv:2311.09735)', url: 'https://arxiv.org/abs/2311.09735' },
       { label: 'Martinez 2026 — GEO araştırmalarının eleştirel incelemesi (45 çalışma)', url: 'https://arxiv.org/abs/2607.14035' },
       { label: 'Google — Üretken AI özellikleri için optimizasyon rehberi', url: 'https://developers.google.com/search/docs/fundamentals/ai-optimization-guide' },
+      { label: 'web.dev — Tarayıcı ajanları için erişilebilir ve semantik site rehberi', url: 'https://web.dev/articles/ai-agent-site-ux' },
       { label: 'Google Search Console — Generative AI Performance raporu', url: 'https://support.google.com/webmasters/answer/16984139' },
+      { label: 'ACL 2024 — WebCiteS: Atıflı web yanıtlarında kaynak doğruluğu değerlendirmesi', url: 'https://aclanthology.org/2024.acl-long.806/' },
       { label: 'Google — İnsan odaklı, güvenilir içerik ve Bilgi Kazanımı', url: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content' },
       { label: 'OpenAI — Search botları ve yayıncı erişimi', url: 'https://developers.openai.com/api/docs/bots' },
       { label: 'Bing Webmaster Guidelines', url: 'https://www.bing.com/webmasters/help/webmaster-guidelines-30fba23a' }

@@ -67,8 +67,12 @@ const calculateRatio = () => {
 
 presetButtons.forEach((btn) => {
   btn.addEventListener('click', () => {
-    presetButtons.forEach((b) => b.classList.remove('active'));
+    presetButtons.forEach((b) => {
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed', 'false');
+    });
     btn.classList.add('active');
+    btn.setAttribute('aria-pressed', 'true');
     const [presetW, presetH] = (btn.dataset.aspectPreset || '1920x1080').split('x');
     if (w1Input && h1Input) {
       w1Input.value = presetW;

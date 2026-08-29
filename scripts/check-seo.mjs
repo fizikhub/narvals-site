@@ -139,6 +139,21 @@ for (const [path, html] of htmlByPath) {
   if (/meta name="(?:geo\.(?:region|placename|position)|ICBM)"/i.test(html)) {
     errors.push(`${path}: legacy geolocation meta found; GEO is content/entity optimization, not coordinate stuffing`);
   }
+  for (const buttonTag of tags(html, 'button')) {
+    const hasPersistentChoice = /\bdata-(?:qr-type|ads-mode|meta-goal|aspect-preset|preset|vat-mode|vat-rate)=/i.test(buttonTag);
+    if (hasPersistentChoice && !['true', 'false'].includes(attribute(buttonTag, 'aria-pressed'))) {
+      errors.push(`${path}: persistent choice button must expose aria-pressed state`);
+    }
+    if (attribute(buttonTag, 'role') === 'tab') {
+      const controlledId = attribute(buttonTag, 'aria-controls');
+      if (!['true', 'false'].includes(attribute(buttonTag, 'aria-selected'))) {
+        errors.push(`${path}: tab button must expose aria-selected state`);
+      }
+      if (!controlledId || !new RegExp(`\\bid="${controlledId.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}"`).test(html)) {
+        errors.push(`${path}: tab button must control an existing panel`);
+      }
+    }
+  }
   for (const claim of unsupportedSeoClaims) {
     if (claim.test(html)) errors.push(`${path}: unsupported or absolute SEO/GEO claim found (${claim.source})`);
   }
@@ -291,10 +306,12 @@ const sitemap = await readFile(join(discoveryRoot, 'sitemap.xml'), 'utf8').catch
 for (const [path, , , lastModified] of pages) {
   if (!sitemap.includes(`<loc>${siteOrigin}${path}</loc>`)) errors.push(`sitemap.xml missing canonical URL: ${siteOrigin}${path}`);
   const escapedUrl = `${siteOrigin}${path}`.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const entryPattern = new RegExp(`<url>[\\s\\S]*?<loc>${escapedUrl}</loc>[\\s\\S]*?<lastmod>${lastModified}</lastmod>[\\s\\S]*?<changefreq>[a-z]+</changefreq>[\\s\\S]*?<priority>[0-9.]+</priority>[\\s\\S]*?</url>`);
-  if (!entryPattern.test(sitemap)) errors.push(`sitemap.xml has missing or stale lastmod/changefreq/priority for ${siteOrigin}${path}`);
+  const entryPattern = new RegExp(`<url>\\s*<loc>${escapedUrl}</loc>\\s*<lastmod>${lastModified}</lastmod>\\s*</url>`);
+  if (!entryPattern.test(sitemap)) errors.push(`sitemap.xml has a missing or stale lastmod for ${siteOrigin}${path}`);
 }
 if (countMatches(sitemap, /<loc>/g) !== pages.length) errors.push('sitemap.xml contains an unexpected URL count');
+if (/<(?:changefreq|priority)>/i.test(sitemap)) errors.push('sitemap.xml contains changefreq/priority values that Google ignores');
+if (/<image:image>/i.test(sitemap)) errors.push('sitemap.xml contains a repeated generic image instead of page-specific image data');
 
 const robotsText = await readFile(join(discoveryRoot, 'robots.txt'), 'utf8').catch(() => '');
 if (!/^User-agent:\s*\*\s*$[\s\S]*?^Allow:\s*\/\s*$/mi.test(robotsText)) errors.push('robots.txt must allow all crawlers through the wildcard group');

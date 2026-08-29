@@ -114,8 +114,12 @@ const attachInputListeners = () => {
 
 typeButtons.forEach((btn) => {
   btn.addEventListener('click', () => {
-    typeButtons.forEach((b) => b.classList.remove('active'));
+    typeButtons.forEach((b) => {
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed', 'false');
+    });
     btn.classList.add('active');
+    btn.setAttribute('aria-pressed', 'true');
     currentType = btn.dataset.qrType;
     renderFields();
   });

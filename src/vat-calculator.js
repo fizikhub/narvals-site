@@ -37,8 +37,12 @@ let currentReport = '';
 
 modeButtons.forEach((btn) => {
   btn.addEventListener('click', () => {
-    modeButtons.forEach((b) => b.classList.remove('active'));
+    modeButtons.forEach((b) => {
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed', 'false');
+    });
     btn.classList.add('active');
+    btn.setAttribute('aria-pressed', 'true');
     currentMode = btn.dataset.vatMode;
     const label = document.querySelector('[data-amount-label]');
     if (label) {
@@ -50,8 +54,12 @@ modeButtons.forEach((btn) => {
 
 rateButtons.forEach((btn) => {
   btn.addEventListener('click', () => {
-    rateButtons.forEach((b) => b.classList.remove('active'));
+    rateButtons.forEach((b) => {
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed', 'false');
+    });
     btn.classList.add('active');
+    btn.setAttribute('aria-pressed', 'true');
     currentRate = parseFloat(btn.dataset.vatRate);
     if (rateInput) rateInput.value = currentRate;
     if (form) form.requestSubmit();

@@ -56,6 +56,28 @@ Bu turdaki kararlar [Google site adı yönergesi](https://developers.google.com/
 ve [insan odaklı içerik rehberi](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
 ile karşılaştırıldı.
 
+## 30 Ağustos 2026 üçüncü kaynak ve ajan denetimi
+
+Google'ın Temmuz 2026 sitemap ve yapılandırılmış veri belgeleri ile Nisan 2026
+tarayıcı ajanı rehberi yeniden karşılaştırıldı. Bu turda üç ek karar alındı:
+
+- XML sitemap yalnız canonical URL ve doğrulanabilir materyal `lastmod` değerine
+  indirildi. Google'ın açıkça yok saydığı `changefreq` ve `priority` alanları ile
+  her URL'de tekrarlanan, sayfaya özgü olmayan sosyal paylaşım görseli kaldırıldı.
+- HTML doğrulamasına etiketi veya erişilebilir adı olmayan `input`, `select` ve
+  `textarea` öğelerini build'i durduran kural eklendi. Bu kontrol hem yardımcı
+  teknolojilerin hem DOM/erişilebilirlik ağacı kullanan tarayıcı ajanlarının
+  alan amacını okuyabilmesini korur.
+- Kalıcı seçim yapan araç düğmelerinin görsel `active` sınıfına ek olarak
+  `aria-pressed` durumunu güncellemesi uygulama standardı yapıldı. Böylece seçim
+  durumu yalnız renge veya CSS sınıfına bağlı kalmaz.
+
+Bu kararlar [Google sitemap rehberi](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap),
+[Google üretken AI optimizasyon rehberi](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide)
+ve [web.dev ajan dostu site rehberi](https://web.dev/articles/ai-agent-site-ux)
+ile sınandı. Ajan uyumluluğu bir Google sıralama sinyali veya görünürlük garantisi
+olarak sunulmadı.
+
 ## Canlı SERP ve marka bulgusu
 
 - `https://narvals.com` canlıdır. HTTPS/canonical yönlendirmeleri, gerçek `404`,
@@ -117,6 +139,8 @@ dosyasındadır.
 | [2026 GEO eleştirel incelemesi](https://arxiv.org/abs/2607.14035) | Literatürde platform çapında, uzun dönem ve nedensel organik keşif kanıtı sınırlıdır. | GEO vaatleri garanti olarak sunulmadı; deneyler ölçülebilir hipotez olarak tasarlandı. | Yeni ve hızla değişen bir araştırma alanıdır. |
 | [SIGIR 2026 çalışması](https://arxiv.org/abs/2605.25517) | İncelenen üretken arama bağlamında konu alakası en güçlü unsurdu; fiyat/güncellik bazı durumlarda yardımcı, salt biçimlendirme sınırlı kaldı. | Önce niyet ve özgün bilgi; sonra okunabilir biçim kararı verildi. | Tek alan/deney düzeni bütün sektörlere doğrudan genellenemez. |
 | [ACL 2024 çalışması](https://aclanthology.org/2024.acl-long.403/) | Kaynak seçimi ve yanıt üretiminde içerik alakası, yüzeysel otorite sinyallerinden daha belirleyici olabilir. | Anahtar kelime yığmak yerine her URL’ye tek konu sahipliği verildi. | Model, corpus ve sorgu kümesine bağlı deneysel sonuçtur. |
+| [ACL 2024 WebCiteS](https://aclanthology.org/2024.acl-long.806/) | Atıflı web yanıtlarında kaynak doğruluğu ve iddia desteği ayrı sorunlardır; modeller doğru kaynak göstermekte hâlâ zorlanır. | İddialar birincil kaynağa yakın verildi; citation sayısı tek başarı ölçütü yapılmadı. | Çalışma Çince web araması ve araştırma modelleri üzerindedir; canlı ticari motor seçimini açıklamaz. |
+| [2026 Citation Selection/Absorption ön baskısı](https://arxiv.org/abs/2604.25707) | Citation seçimi ile sayfadaki kanıtın yanıta gerçekten taşınması farklı sonuçlardır; uzunluk, yapı ve çıkarılabilir kanıt gözlemsel olarak ilişkilidir. | Citation, mention, referral ve içerik etkisi ayrı ölçüm katmanları olarak tutuldu. | Hakemli nihai yayın değildir; gözlemsel ilişki nedensel optimizasyon kuralı sayılmaz. |
 | [Ahrefs AI görünürlüğü korelasyonları](https://ahrefs.com/blog/ai-brand-visibility-correlations/) | Marka mention’ları, video/YouTube varlığı ve bazı otorite sinyalleri AI görünürlüğüyle korelasyon gösterdi. | Gerçek üçüncü taraf mention, uzman içerik ve çok biçimli kanıt backlog’a alındı. | Korelasyon nedensellik değildir; araç kapsamı bütün AI cevaplarını temsil etmez. |
 | [Semrush ghost citations araştırması](https://www.semrush.com/blog/the-ghost-citations-study/) | Üretken cevaplar bazen yararlandığı sayfayı görünür citation olarak göstermeyebilir. | Citation, marka mention’ı ve referral ayrı metrikler olarak tanımlandı. | Tespit yöntemi platformların kapalı retrieval sistemini bütünüyle göremez. |
 | [Cambridge attribution araştırması](https://www.cambridge.org/core/journals/data-and-policy/article/attribution-crisis-in-llm-search-results-estimating-ecosystem-exploitation/170DD0B88E5F5AEA8F69F2E9AF1328E3) | LLM arama yanıtlarında kaynak kullanımı ile görünür atıf arasında boşluk oluşabilir. | Başarı yalnız citation sayısına indirgenmedi; marka talebi ve nitelikli referral da izlenecek. | Ekosistem ve modeller hızla değişmektedir. |

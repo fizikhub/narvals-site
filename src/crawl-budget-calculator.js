@@ -251,7 +251,9 @@ if (form) {
     if (status5xxInput) status5xxInput.value = data.status_5xx;
 
     presetButtons.forEach((btn) => {
-      btn.classList.toggle('active', btn.getAttribute('data-preset') === presetKey);
+      const isActive = btn.getAttribute('data-preset') === presetKey;
+      btn.classList.toggle('active', isActive);
+      btn.setAttribute('aria-pressed', String(isActive));
     });
 
     updateTTFBTag();
