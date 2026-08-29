@@ -289,7 +289,7 @@
       "timeRequired": "PT10M",
       "inLanguage": "tr-TR",
       "isAccessibleForFree": true,
-      "wordCount": 434,
+      "wordCount": 508,
       "articleSection": "SEO & Performans",
       "keywords": "web sitesi hızlandırma, Core Web Vitals, LCP optimizasyonu, INP optimizasyonu, CLS optimizasyonu, site hızı",
       "author": {
@@ -357,6 +357,36 @@
           "item": "https://narvals.com/blog/web-sitesi-hizlandirma-core-web-vitals-rehberi/"
         }
       ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://narvals.com/blog/web-sitesi-hizlandirma-core-web-vitals-rehberi/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Core Web Vitals nedir ve neden önemlidir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google’ın LCP (yükleme hızı), INP (etkileşim gecikmesi) ve CLS (görsel kayma) metrikleriyle web sitesi kullanıcı deneyimini ölçtüğü resmî standartlardır."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "LCP (Largest Contentful Paint) nasıl iyileştirilir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hero görselini optimize etmek (WebP/AVIF, fetchpriority=\"high\"), sunucu yanıt süresini (TTFB) düşürmek ve gereksiz JS yükünü kaldırmakla iyileşir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "INP (Interaction to Next Paint) neden zayıf çıkar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sayfadaki ağır JavaScript işlemleri, ana iş parçacığını (main thread) kilitleyerek kullanıcının tıklamalarına geç yanıt verilmesine neden olur."
+          }
+        }
+      ]
     }
   ]
 }</script>
@@ -382,7 +412,7 @@
         </header>
 
         <div class="info-layout article-layout">
-          <nav class="info-toc" aria-label="Makale içeriği"><strong>Bu rehberde</strong><a href="#core-web-vitals-nedir">Temel metrikler</a><a href="#lcp-optimizasyonu">Yükleme hızı</a><a href="#inp-ve-js">Etkileşim hızı</a><a href="#cls-duzen-kaymasi">Görsel kararlılık</a><a href="#kaynaklar">Kaynaklar</a></nav>
+          <nav class="info-toc" aria-label="Makale içeriği"><strong>Bu rehberde</strong><a href="#core-web-vitals-nedir">Temel metrikler</a><a href="#lcp-optimizasyonu">Yükleme hızı</a><a href="#inp-ve-js">Etkileşim hızı</a><a href="#cls-duzen-kaymasi">Görsel kararlılık</a><a href="#kisa-cevaplar">Kısa cevaplar</a><a href="#kaynaklar">Kaynaklar</a></nav>
           <div class="info-content article-content">
             <section class="info-section article-section" id="core-web-vitals-nedir">
         <p class="info-section__label">Temel metrikler</p>
@@ -428,6 +458,11 @@
 
 
       </section>
+            <section class="info-section article-section" id="kisa-cevaplar">
+              <p class="info-section__label">Sık sorulan sorular</p>
+              <h2>Kısa ve doğrudan cevaplar.</h2>
+              <div class="article-faq"><details><summary>Core Web Vitals nedir ve neden önemlidir?</summary><p>Google’ın LCP (yükleme hızı), INP (etkileşim gecikmesi) ve CLS (görsel kayma) metrikleriyle web sitesi kullanıcı deneyimini ölçtüğü resmî standartlardır.</p></details><details><summary>LCP (Largest Contentful Paint) nasıl iyileştirilir?</summary><p>Hero görselini optimize etmek (WebP/AVIF, fetchpriority=&quot;high&quot;), sunucu yanıt süresini (TTFB) düşürmek ve gereksiz JS yükünü kaldırmakla iyileşir.</p></details><details><summary>INP (Interaction to Next Paint) neden zayıf çıkar?</summary><p>Sayfadaki ağır JavaScript işlemleri, ana iş parçacığını (main thread) kilitleyerek kullanıcının tıklamalarına geç yanıt verilmesine neden olur.</p></details></div>
+            </section>
             <section class="info-section article-section" id="kaynaklar">
               <p class="info-section__label">Birincil kaynaklar</p>
               <h2>Kaynaklar ve kapsam.</h2>

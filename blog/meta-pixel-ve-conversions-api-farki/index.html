@@ -285,7 +285,7 @@
       "timeRequired": "PT10M",
       "inLanguage": "tr-TR",
       "isAccessibleForFree": true,
-      "wordCount": 682,
+      "wordCount": 749,
       "articleSection": "Meta reklam",
       "keywords": "Meta Pixel, Conversions API, CAPI, Meta reklam ölçümü",
       "author": {
@@ -352,6 +352,36 @@
           "item": "https://narvals.com/blog/meta-pixel-ve-conversions-api-farki/"
         }
       ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://narvals.com/blog/meta-pixel-ve-conversions-api-farki/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Yalnızca Meta Pixel kullanmak neden yetersiz kalabilir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Reklam engelleyiciler, tarayıcı gizlilik kısıtlamaları (iOS 14+) ve ağ kopmaları nedeniyle tarayıcı pikselleri veri kaybına uğrayabilir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Conversions API (CAPI) nasıl çalışır?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dönüşüm verisini tarayıcı üzerinden değil, doğrudan işletme sunucusundan Meta sunucularına güvenli ve şifreli olarak iletir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Event Deduplication (Tekilleştirme) nedir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hem Pixel hem CAPI kullanıldığında aynı siparişin iki kez sayılmasını önlemek için her olaya tekil bir Event ID atanması işlemidir."
+          }
+        }
+      ]
     }
   ]
 }</script>
@@ -377,7 +407,7 @@
         </header>
 
         <div class="info-layout article-layout">
-          <nav class="info-toc" aria-label="Makale içeriği"><strong>Bu rehberde</strong><a href="#temel-fark">Tanım</a><a href="#event-plani">Ölçüm tasarımı</a><a href="#tekillestirme">Çift sayımı önleme</a><a href="#gizlilik">Veri sorumluluğu</a><a href="#test">Kalite güvencesi</a><a href="#kaynaklar">Kaynaklar</a></nav>
+          <nav class="info-toc" aria-label="Makale içeriği"><strong>Bu rehberde</strong><a href="#temel-fark">Tanım</a><a href="#event-plani">Ölçüm tasarımı</a><a href="#tekillestirme">Çift sayımı önleme</a><a href="#gizlilik">Veri sorumluluğu</a><a href="#test">Kalite güvencesi</a><a href="#kisa-cevaplar">Kısa cevaplar</a><a href="#kaynaklar">Kaynaklar</a></nav>
           <div class="info-content article-content">
             <section class="info-section article-section" id="temel-fark">
         <p class="info-section__label">Tanım</p>
@@ -437,6 +467,11 @@
 
         <aside class="article-callout" aria-label="Kurulum kabul testini beş kontrolle tamamlayın.: karar notu"><strong>Karar notu</strong><p>Events Manager’daki yeşil durum başlangıçtır; muhasebe, sipariş veya CRM kaydıyla uzlaştırma yapılmadan ölçüm tamamlanmış sayılmaz.</p></aside>
       </section>
+            <section class="info-section article-section" id="kisa-cevaplar">
+              <p class="info-section__label">Sık sorulan sorular</p>
+              <h2>Kısa ve doğrudan cevaplar.</h2>
+              <div class="article-faq"><details><summary>Yalnızca Meta Pixel kullanmak neden yetersiz kalabilir?</summary><p>Reklam engelleyiciler, tarayıcı gizlilik kısıtlamaları (iOS 14+) ve ağ kopmaları nedeniyle tarayıcı pikselleri veri kaybına uğrayabilir.</p></details><details><summary>Conversions API (CAPI) nasıl çalışır?</summary><p>Dönüşüm verisini tarayıcı üzerinden değil, doğrudan işletme sunucusundan Meta sunucularına güvenli ve şifreli olarak iletir.</p></details><details><summary>Event Deduplication (Tekilleştirme) nedir?</summary><p>Hem Pixel hem CAPI kullanıldığında aynı siparişin iki kez sayılmasını önlemek için her olaya tekil bir Event ID atanması işlemidir.</p></details></div>
+            </section>
             <section class="info-section article-section" id="kaynaklar">
               <p class="info-section__label">Birincil kaynaklar</p>
               <h2>Kaynaklar ve kapsam.</h2>

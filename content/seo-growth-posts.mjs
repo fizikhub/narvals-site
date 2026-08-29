@@ -21,6 +21,11 @@ export const newBlogPosts = [
     related: ['meta-pixel-ve-conversions-api-farki', 'meta-reklam-ajansi-secerken-sorulacak-sorular', 'sosyal-medya-yonetimi-neleri-kapsar'],
     servicePath: '/hizmetler/dijital-reklam/',
     serviceLabel: 'Meta reklam ve performans pazarlama hizmetini inceleyin',
+    faq: [
+      { question: 'Meta reklamları için minimum bütçe ne kadar olmalıdır?', answer: 'Sabit tek bir tutar yoktur. Kampanyanın öğrenme aşamasını tamamlayabilmesi için hedeflenen sonuç maliyetine ve test edilecek kreatif sayısına göre belirlenmelidir.' },
+      { question: 'Günlük bütçe ile toplam bütçe arasındaki fark nedir?', answer: 'Günlük bütçe her gün için hedeflenen ortalama harcamayı belirlerken, toplam bütçe belirlenen tarih aralığındaki harcama üst sınırını kesin olarak sınırlar.' },
+      { question: 'Düşük bütçeyle çok fazla reklam seti açmak doğru mudur?', answer: 'Hayır; bütçe çok fazla sete bölündüğünde hiçbir set yeterli veri toplayamaz ve algoritmanın optimizasyon performansı düşer.' }
+    ],
     sections: [
       {
         id: 'tek-dogru-butce-yok',
@@ -149,6 +154,11 @@ export const newBlogPosts = [
     related: ['google-ads-mi-meta-reklamlari-mi', 'meta-reklam-butcesi-nasil-belirlenir', 'meta-pixel-ve-conversions-api-farki'],
     servicePath: '/hizmetler/dijital-reklam/',
     serviceLabel: 'Meta reklam yönetimi yaklaşımımızı inceleyin',
+    faq: [
+      { question: 'Meta reklam hesabı kimin adına açılmalıdır?', answer: 'Reklam hesabı, Business Manager, Piksel ve ödeme yöntemi her zaman işletmenin kendi adına açılmalı, ajansa yönetici erişimi verilmelidir.' },
+      { question: 'Ajansın başarı kriteri ne olmalıdır?', answer: 'Yalnızca gösterim veya tıklama değil; nitelikli talep sayısı, müşteri edinme maliyeti (CPA) ve net ciro/ROAS hedefleri olmalıdır.' },
+      { question: 'Kreatif ve metin üretimi ajansın kapsamında mıdır?', answer: 'Bu durum sözleşmeye göre değişir; teklifte görsel tasarımı, video kurgusu ve metin yazımının kim tarafından yapılacağı açıkça belirtilmelidir.' }
+    ],
     sections: [
       {
         id: 'vaat-degil-model',
@@ -287,6 +297,11 @@ export const newBlogPosts = [
     related: ['meta-reklam-ajansi-secerken-sorulacak-sorular', 'meta-reklam-butcesi-nasil-belirlenir', 'meta-pixel-ve-conversions-api-farki'],
     servicePath: '/hizmetler/sosyal-medya-yonetimi/',
     serviceLabel: 'Sosyal medya yönetimi hizmetini inceleyin',
+    faq: [
+      { question: 'Sosyal medya yönetimi sadece gönderi paylaşmak mıdır?', answer: 'Hayır; içerik stratejisi, görsel/video üretimi, topluluk yönetimi, mesaj yanıtları, kriz iletişimi ve performans raporlamasını kapsar.' },
+      { question: 'Sosyal medyada her gün paylaşım yapmak zorunlu mudur?', answer: 'Zorunlu değildir; düşük kaliteli günlük paylaşımlar yerine hedef kitleye değer katan, özgün ve düzenli haftalık içerik planı daha etkilidir.' },
+      { question: 'Sosyal medya yönetimi ile reklam yönetimi aynı şey midir?', answer: 'Farklı disiplinlerdir; organik sosyal medya marka algısı ve sadakati hedeflerken, reklam yönetimi bütçe optimizasyonu ve doğrudan satış/talep hedefler.' }
+    ],
     sections: [
       {
         id: 'kapsam-tek-paket-degil',
@@ -420,6 +435,11 @@ export const newBlogPosts = [
     related: ['e-ticaret-altyapisi-nasil-secilir', 'hazir-yazilim-mi-ozel-yazilim-mi', 'web-sitesi-maliyeti-nasil-hesaplanir'],
     servicePath: '/hizmetler/e-ticaret/',
     serviceLabel: 'E-ticaret sitesi hizmetini inceleyin',
+    faq: [
+      { question: 'E-ticaret sitesi maliyetini artıran ana unsurlar nelerdir?', answer: 'Ürün sayısı, özel tasarım, ERP/pazaryeri entegrasyonları, ödeme/kargo altyapısı, sunucu performansı ve bakım gereksinimleridir.' },
+      { question: 'Komisyonlu SaaS paketler mi yoksa açık kaynak mı daha karlıdır?', answer: 'Başlangıç ve orta ölçekte bakım maliyeti düşük SaaS paketler pratiktir; çok yüksek ciroda komisyondan tasarruf için bağımsız altyapı değerlendirilir.' },
+      { question: 'E-ticaret sitesi yayına girdikten sonra hangi maliyetler sürer?', answer: 'Hosting/sunucu, alan adı, SSL, ödeme komisyonları, eklenti lisansları, dijital reklam bütçesi ve teknik bakım devam eden maliyetlerdir.' }
+    ],
     sections: [
       {
         id: 'tek-fiyat-yok',
@@ -555,6 +575,11 @@ export const newBlogPosts = [
     related: ['google-ads-mi-meta-reklamlari-mi', 'meta-reklam-ajansi-secerken-sorulacak-sorular', 'web-sitesi-yaptirmadan-once-kapsam-teklif-karar-rehberi'],
     servicePath: '/hizmetler/google-ads/',
     serviceLabel: 'Google Ads yönetimi hizmetini inceleyin',
+    faq: [
+      { question: 'Google Ads hesabı ajansa mı yoksa işletmeye mi ait olmalıdır?', answer: 'Hesap mülkiyeti ve geçmiş veri her zaman işletmeye ait olmalı; ajans MCC (Yönetici Hesabı) üzerinden yetkilendirilmelidir.' },
+      { question: 'Google Ads ajansı negatif anahtar kelimeleri nasıl yönetir?', answer: 'Düzenli arama terimi denetimleri yaparak bütçeyi tüketen alakasız tıklamaları negatif listelere eklemeli ve bütçe verimliliğini korumalıdır.' },
+      { question: 'Dönüşüm takibi kim tarafından kurulmalıdır?', answer: 'Ajans ve teknik ekip birlikte; Google Tag Manager, GA4 ve Google Ads dönüşüm etiketlerini sayfadaki gerçek iş eylemlerine bağlamalıdır.' }
+    ],
     sections: [
       {
         id: 'hesap-sahipligi',
@@ -661,6 +686,11 @@ export const newBlogPosts = [
     related: ['google-ads-ajansi-secerken-sorulacak-sorular', 'meta-reklam-butcesi-nasil-belirlenir', 'meta-pixel-ve-conversions-api-farki'],
     servicePath: '/hizmetler/google-ads/',
     serviceLabel: 'Google Ads yönetimi hizmetini inceleyin',
+    faq: [
+      { question: 'Google Ads ile Meta reklamları arasındaki temel fark nedir?', answer: 'Google Ads arama anındaki mevcut talebi (Search Intent) yakalarken; Meta reklamları kullanıcının ilgi alanlarına göre yeni talep yaratır (Push Marketing).' },
+      { question: 'Hangi sektörler Google Ads’e öncelik vermelidir?', answer: 'Acil ihtiyaç (çilingir, hukuk, teknik servis vb.) ve net ürün/hizmet araması yapan yüksek niyetli B2B ve B2C sektörleri.' },
+      { question: 'İki kanal birlikte kullanılabilir mi?', answer: 'Evet; Meta ile marka bilinirliği ve ilgi yaratılıp, Google Search veya Retargeting ile dönüşüm tamamlanarak en yüksek verim elde edilir.' }
+    ],
     sections: [
       {
         id: 'temel-fark',
@@ -766,6 +796,11 @@ export const newBlogPosts = [
     related: ['kurumsal-web-sitesi-briefi-nasil-hazirlanir', 'web-sitesi-teknik-seo-kontrol-listesi', 'web-sitesi-yaptirmadan-once-kapsam-teklif-karar-rehberi'],
     servicePath: '/hizmetler/web-tasarim/',
     serviceLabel: 'Kurumsal web tasarım ve UX hizmetini inceleyin',
+    faq: [
+      { question: 'B2B web sitesinin B2C siteden farkı nedir?', answer: 'B2B sitelerde satın alma döngüsü daha uzundur; duygusal satın alma yerine kurumsal güven kanıtları, ürün spesifikasyonları ve nitelikli teklif formu odaklıdır.' },
+      { question: 'B2B sitelerde fiyat açıkça yazılmalı mıdır?', answer: 'Özelleştirilmiş ürün/hizmetlerde fiyat yerine başlangıç aralığı veya teklif isteme butonu kullanılabilir; standart ürünlerde ise şeffaf fiyat güveni artırır.' },
+      { question: 'Vaka çalışmaları (Case Study) neden kritiktir?', answer: 'B2B karar vericileri somut başarı verilerini, çözülen problemi ve teslimat yetkinliğini görmek isteyerek risklerini minimize eder.' }
+    ],
     sections: [
       {
         id: 'b2b-farki',
@@ -847,6 +882,11 @@ export const newBlogPosts = [
     related: ['web-sitesi-teknik-seo-kontrol-listesi', 'google-ai-aramalari-icin-geo-rehberi', 'web-sitesi-maliyeti-nasil-hesaplanir'],
     servicePath: '/hizmetler/web-tasarim/',
     serviceLabel: 'Hızlı ve performanslı web tasarım çözümlerini inceleyin',
+    faq: [
+      { question: 'Core Web Vitals nedir ve neden önemlidir?', answer: 'Google’ın LCP (yükleme hızı), INP (etkileşim gecikmesi) ve CLS (görsel kayma) metrikleriyle web sitesi kullanıcı deneyimini ölçtüğü resmî standartlardır.' },
+      { question: 'LCP (Largest Contentful Paint) nasıl iyileştirilir?', answer: 'Hero görselini optimize etmek (WebP/AVIF, fetchpriority="high"), sunucu yanıt süresini (TTFB) düşürmek ve gereksiz JS yükünü kaldırmakla iyileşir.' },
+      { question: 'INP (Interaction to Next Paint) neden zayıf çıkar?', answer: 'Sayfadaki ağır JavaScript işlemleri, ana iş parçacığını (main thread) kilitleyerek kullanıcının tıklamalarına geç yanıt verilmesine neden olur.' }
+    ],
     sections: [
       {
         id: 'core-web-vitals-nedir',
@@ -924,6 +964,11 @@ export const newBlogPosts = [
     related: ['e-ticaret-altyapisi-nasil-secilir', 'e-ticaret-sitesi-maliyeti-nasil-hesaplanir', 'meta-pixel-ve-conversions-api-farki'],
     servicePath: '/hizmetler/e-ticaret/',
     serviceLabel: 'E-ticaret sitesi tasarım ve optimizasyon hizmetini inceleyin',
+    faq: [
+      { question: 'Dönüşüm Oranı Optimizasyonu (CRO) nedir?', answer: 'Mevcut site trafiğinden daha fazla sipariş veya teklif elde etmek için kullanıcı yolculuğundaki sürtünmeleri ve tereddütleri giderme sürecidir.' },
+      { question: 'Sepeti terk etme oranları nasıl düşürülür?', answer: 'Zorunlu üyelik yerine misafir alışverişi sunmak, beklenmedik kargo/ek ücretleri baştan göstermek ve güvenli ödeme seçeneklerini çeşitlendirmekle düşürülür.' },
+      { question: 'A/B testi yapmadan önce nelere dikkat edilmelidir?', answer: 'Test edilecek hipotezin analitik veriye dayanması ve istatistiksel anlamlılığa ulaşacak yeterli trafik ve dönüşüm hacminin olması gerekir.' }
+    ],
     sections: [
       {
         id: 'cro-nedir-ve-onemi',
@@ -999,6 +1044,11 @@ export const newBlogPosts = [
     related: ['hazir-yazilim-mi-ozel-yazilim-mi', 'rezervasyon-randevu-sistemi-nasil-secilir', 'web-sitesi-teknik-seo-kontrol-listesi'],
     servicePath: '/hizmetler/ozel-yazilim/',
     serviceLabel: 'İşletmeye özel yazılım geliştirme hizmetini inceleyin',
+    faq: [
+      { question: 'CRM yazılımı işletmeye ne kazandırır?', answer: 'Müşteri adaylarının tüm temas geçmişini, teklif aşamalarını ve satış performansını tek merkezde toplayarak talep kaybını önler ve satışı hızlandırır.' },
+      { question: 'Özel yönetim paneli ne zaman tercih edilmelidir?', answer: 'Hazır CRM araçları işletmenin benzersiz operasyonel kurallarını, çoklu şube/stok akışını veya iç veri güvenliği ihtiyaçlarını karşılayamadığında.' },
+      { question: 'CRM seçiminde en sık yapılan hata nedir?', answer: 'Ekibin günlük alışkanlıklarına uymayan, kullanımı aşırı karmaşık sistemler seçerek personelin veri girişini bırakmasına yol açmaktır.' }
+    ],
     sections: [
       {
         id: 'hazir-crm-vs-ozel-panel',

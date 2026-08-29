@@ -32,6 +32,11 @@ export const blogPosts = [
     related: ['web-sitesi-teknik-seo-kontrol-listesi', 'e-ticaret-altyapisi-nasil-secilir', 'web-sitesi-maliyeti-nasil-hesaplanir'],
     servicePath: '/hizmetler/web-tasarim/',
     serviceLabel: 'Web tasarım ve UX hizmetini inceleyin',
+    faq: [
+      { question: 'Web sitesi briefi neden önemlidir?', answer: 'Brief; projenin iş hedefini, öncelikli kullanıcısını, zorunlu şablonlarını ve teslim sınırlarını baştan belirleyerek yanlış beklenti, gecikme ve ek maliyet risklerini önler.' },
+      { question: 'Brief hazırlarken en sık yapılan hata nedir?', answer: 'Yalnızca tasarım zevklerini ve sayfa sayısını belirtip, ziyaretçinin yapması gereken ana eylemi, içerik sorumlularını ve kabul ölçütlerini tanımlamamaktır.' },
+      { question: 'Kapsam dışı maddeler briefte yer almalı mıdır?', answer: 'Evet; fotoğraf çekimi, içerik üretimi veya CRM lisansı gibi dahil olmayan hizmetlerin yazılması iki taraf arasındaki beklentiyi netleştirir.' }
+    ],
     sections: [
       {
         id: 'briefin-gorevi',
@@ -136,6 +141,11 @@ export const blogPosts = [
     related: ['google-ai-aramalari-icin-geo-rehberi', 'kurumsal-web-sitesi-briefi-nasil-hazirlanir', 'web-sitesi-maliyeti-nasil-hesaplanir'],
     servicePath: '/hizmetler/web-tasarim/',
     serviceLabel: 'Teknik SEO temelli web hizmetini inceleyin',
+    faq: [
+      { question: 'Teknik SEO kontrolü ne zaman yapılmalıdır?', answer: 'Site yayına alınmadan önce test ortamında başlatılmalı; yayından hemen sonra ve düzenli aralıklarla log ve Search Console denetimleriyle sürdürülmelidir.' },
+      { question: 'Canonical etiketi bir yönlendirme midir?', answer: 'Hayır. Canonical bir arama motoru sinyalidir; kullanıcıyı başka sayfaya aktarmaz, arama motoruna tercih edilen orijinal URL’yi bildirir.' },
+      { question: 'Sitemap dosyasında hangi sayfalar yer almalıdır?', answer: 'Sitemap yalnızca 200 yanıtı veren, canonical etiketi kendine işaret eden ve dizine eklenmesi istenen güncel sayfaları içermelidir.' }
+    ],
     sections: [
       {
         id: 'oncelik-sirasi',
@@ -265,6 +275,11 @@ export const blogPosts = [
     related: ['web-sitesi-teknik-seo-kontrol-listesi', 'kurumsal-web-sitesi-briefi-nasil-hazirlanir', 'meta-pixel-ve-conversions-api-farki'],
     servicePath: '/hizmetler/web-tasarim/',
     serviceLabel: 'Arama temelli web altyapısını inceleyin',
+    faq: [
+      { question: 'GEO (Generative Engine Optimization) nedir?', answer: 'Web sitesi içeriğinin ve varlık sinyallerinin ChatGPT, Google AI Overviews ve Perplexity gibi üretken yapay zekâ yanıt motorları tarafından taranabilir, anlaşılabilir ve kaynak gösterilebilir hale getirilmesidir.' },
+      { question: 'Yapay zekâ motorları hangi içerikleri kaynak gösterir?', answer: 'Net tanımlar, doğrulanabilir tablolar, birincil kaynak referansları ve yapılandırılmış veri (JSON-LD) içeren otoriter içerikleri öncelikli kaynak olarak seçer.' },
+      { question: 'llms.txt dosyası ne işe yarar?', answer: 'Yapay zekâ tarayıcılarına ve LLM ajanlarına sitenin en önemli sayfalarını, hizmetlerini ve özet dokümantasyonunu temiz metin formatında sunar.' }
+    ],
     sections: [
       {
         id: 'geo-seo-iliskisi',
@@ -390,6 +405,11 @@ export const blogPosts = [
     related: ['hazir-yazilim-mi-ozel-yazilim-mi', 'kurumsal-web-sitesi-briefi-nasil-hazirlanir', 'web-sitesi-teknik-seo-kontrol-listesi'],
     servicePath: '/hizmetler/e-ticaret/',
     serviceLabel: 'E-ticaret sitesi hizmetini inceleyin',
+    faq: [
+      { question: 'Hazır e-ticaret paketi mi özel altyapı mı seçilmeli?', answer: 'Standart ürün satışı ve düşük özelleştirme ihtiyacında hazır SaaS paketler hızlı ve ekonomiktir; özel operasyonel kurallar, yüksek hacim ve derin entegrasyonlarda özel altyapı tercih edilir.' },
+      { question: 'E-ticaret altyapısı seçerken en kritik kriter nedir?', answer: 'Ödeme kuruluşları, kargo, fatura/ERP entegrasyonları, sayfa yükleme hızı ve komisyonsuz veri dışa aktarma (export) yetkinliğidir.' },
+      { question: 'Altyapı değişikliği SEO sıralamalarını etkiler mi?', answer: 'Doğru 301 yönlendirme haritası ve URL hiyerarşisi korunmazsa organik trafik kaybı yaşanabilir; taşıma planı yayından önce hazırlanmalıdır.' }
+    ],
     sections: [
       {
         id: 'senaryo-once',
@@ -502,6 +522,11 @@ export const blogPosts = [
     related: ['e-ticaret-altyapisi-nasil-secilir', 'rezervasyon-randevu-sistemi-nasil-secilir', 'kurumsal-web-sitesi-briefi-nasil-hazirlanir'],
     servicePath: '/hizmetler/ozel-yazilim/',
     serviceLabel: 'Özel yazılım ve otomasyon hizmetini inceleyin',
+    faq: [
+      { question: 'Özel yazılım ne zaman gereklidir?', answer: 'İşletmeye özgü iş kuralları rekabet avantajı sağlıyorsa, kopuk sistemlerin otomatik konuşması gerekiyorsa veya hazır SaaS araçların operasyonu karşılayamadığı durumlarda gereklidir.' },
+      { question: 'Özel yazılımın en büyük riski nedir?', answer: 'Kapsamın baştan netleştirilmemesi sonucu geliştirme süresinin ve maliyetin öngörülemeyen şekilde uzamasıdır.' },
+      { question: 'MVP (Minimum Uygulanabilir Ürün) yaklaşımı neden önemlidir?', answer: 'Tüm fikirleri aynı anda geliştirmek yerine en kritik iş problemini çözen ilk sürümü yayına alarak riski ve yatırım maliyetini azaltır.' }
+    ],
     sections: [
       {
         id: 'yanlis-soru',
@@ -604,6 +629,11 @@ export const blogPosts = [
     related: ['google-ai-aramalari-icin-geo-rehberi', 'kurumsal-web-sitesi-briefi-nasil-hazirlanir', 'web-sitesi-teknik-seo-kontrol-listesi'],
     servicePath: '/hizmetler/dijital-reklam/',
     serviceLabel: 'Meta reklam ve ölçüm hizmetini inceleyin',
+    faq: [
+      { question: 'Yalnızca Meta Pixel kullanmak neden yetersiz kalabilir?', answer: 'Reklam engelleyiciler, tarayıcı gizlilik kısıtlamaları (iOS 14+) ve ağ kopmaları nedeniyle tarayıcı pikselleri veri kaybına uğrayabilir.' },
+      { question: 'Conversions API (CAPI) nasıl çalışır?', answer: 'Dönüşüm verisini tarayıcı üzerinden değil, doğrudan işletme sunucusundan Meta sunucularına güvenli ve şifreli olarak iletir.' },
+      { question: 'Event Deduplication (Tekilleştirme) nedir?', answer: 'Hem Pixel hem CAPI kullanıldığında aynı siparişin iki kez sayılmasını önlemek için her olaya tekil bir Event ID atanması işlemidir.' }
+    ],
     sections: [
       {
         id: 'temel-fark',
@@ -712,6 +742,11 @@ export const blogPosts = [
     related: ['rezervasyon-randevu-sistemi-nasil-secilir', 'kurumsal-web-sitesi-briefi-nasil-hazirlanir', 'web-sitesi-teknik-seo-kontrol-listesi'],
     servicePath: '/hizmetler/qr-menu/',
     serviceLabel: 'QR menü sistemi hizmetini inceleyin',
+    faq: [
+      { question: 'PDF menü neden müşteri deneyimini olumsuz etkiler?', answer: 'Büyük dosya boyutu yavaş açılır, mobilde sürekli yakınlaştırma (zoom) gerektirir ve fiyat/stok anlık güncellenemez.' },
+      { question: 'Web tabanlı dinamik QR menünün avantajı nedir?', answer: '1 saniyenin altında açılır, mobil uyumludur, yönetim panelinden anlık ürün/fiyat güncellenir ve çoklu dil desteği sunar.' },
+      { question: 'QR menü basılı menünün yerini tamamen alır mı?', answer: 'Hibrit kullanım önerilir; masada estetik bir QR kod bulunurken isteyen misafirler için sınırlı sayıda basılı menü bulundurulabilir.' }
+    ],
     sections: [
       {
         id: 'qr-kod-menu-degil',
@@ -814,6 +849,11 @@ export const blogPosts = [
     related: ['qr-menu-mu-pdf-menu-mu', 'hazir-yazilim-mi-ozel-yazilim-mi', 'kurumsal-web-sitesi-briefi-nasil-hazirlanir'],
     servicePath: '/hizmetler/rezervasyon-randevu/',
     serviceLabel: 'Rezervasyon ve randevu hizmetini inceleyin',
+    faq: [
+      { question: 'Rezervasyon sistemi ile randevu sistemi arasındaki fark nedir?', answer: 'Rezervasyon masa, alan ve toplam kapasiteye göre planlanırken; randevu belirli bir uzman/personel ve hizmet süresine göre planlanır.' },
+      { question: 'Online rezervasyon sisteminde no-show (gelmeme) nasıl azaltılır?', answer: 'Otomatik SMS/WhatsApp hatırlatmaları ve gerektiğinde ön provizyon veya kapora akışıyla gelmeme oranı düşürülür.' },
+      { question: 'Sistem personelin çalışma saatlerini yönetebilir mi?', answer: 'Evet; mola saatleri, vardiya düzeni, izin günleri ve özel tatil kuralları panelden kolayca tanımlanabilir.' }
+    ],
     sections: [
       {
         id: 'rezervasyon-randevu',
@@ -939,6 +979,11 @@ export const blogPosts = [
     related: ['kurumsal-web-sitesi-briefi-nasil-hazirlanir', 'web-sitesi-teknik-seo-kontrol-listesi', 'hazir-yazilim-mi-ozel-yazilim-mi'],
     servicePath: '/hizmetler/web-tasarim/',
     serviceLabel: 'Web tasarım ve UX hizmetini inceleyin',
+    faq: [
+      { question: 'Web sitesi fiyatı neye göre belirlenir?', answer: 'Sayfa sayısından ziyade içerik hazırlığı, şablon çeşitliliği, özel işlevler, CMS ihtiyacı, entegrasyonlar ve bakım kapsamına göre belirlenir.' },
+      { question: 'İlk kurulum ücreti ile yıllık maliyet arasındaki fark nedir?', answer: 'Kurulum tasarım ve yazılımı kapsarken; yıllık maliyet hosting, alan adı, lisanslar, SSL, güvenlik ve teknik desteği içerir.' },
+      { question: 'Düşük fiyatlı hazır temalar neden sonradan pahalıya gelebilir?', answer: 'Gereksiz kod yükü hızı düşürebilir, güvenlik açıkları doğurabilir ve özelleştirme için sürekli dış desteğe ihtiyaç duydurabilir.' }
+    ],
     sections: [
       {
         id: 'neden-tek-fiyat-yok',
@@ -1043,6 +1088,11 @@ export const blogPosts = [
     related: ['kurumsal-web-sitesi-briefi-nasil-hazirlanir', 'web-sitesi-maliyeti-nasil-hesaplanir', 'e-ticaret-altyapisi-nasil-secilir'],
     servicePath: '/hizmetler/web-tasarim/',
     serviceLabel: 'Web sitesi ve UX hizmetini inceleyin',
+    faq: [
+      { question: 'Web sitesi yaptırmadan önce ilk yapılması gereken nedir?', answer: 'Sitenin birincil iş hedefini (talep toplama, doğrudan satış, randevu vb.) ve hedef kitlenin karar kriterlerini netleştirmektir.' },
+      { question: 'Teklifler nasıl karşılaştırılmalıdır?', answer: 'Sadece toplam rakama bakmak yerine; teslim edilecek şablonlar, içerik sorumluluğu, SEO temeli, kaynak kod sahipliği ve kabul ölçütleri üzerinden karşılaştırılmalıdır.' },
+      { question: 'Kaynak kod ve hesap sahipliği kime ait olmalıdır?', answer: 'Alan adı, hosting, analitik ve kod lisanslarının mülkiyeti her zaman işletmenin kendi adına kayıtlı olmalıdır.' }
+    ],
     sections: [
       {
         id: 'karar-nerede-baslar',

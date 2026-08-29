@@ -192,6 +192,15 @@ for (const [path, html] of htmlByPath) {
   const pageTypes = new Set(pageNodes.flatMap((node) => Array.isArray(node['@type']) ? node['@type'] : [node['@type']]).filter(Boolean));
   if (kind === 'service' && !pageTypes.has('Service')) errors.push(`${path}: Service structured data missing`);
   if (kind === 'comparison' && pageTypes.has('Service')) errors.push(`${path}: comparison page must not claim Service structured data`);
+  if (kind === 'tool') {
+    if (!structuredTypes.has('WebApplication')) errors.push(`${path}: WebApplication structured data missing in tool`);
+    if (!structuredTypes.has('FAQPage')) errors.push(`${path}: FAQPage structured data missing in tool`);
+    if (!structuredTypes.has('BreadcrumbList')) errors.push(`${path}: BreadcrumbList structured data missing in tool`);
+  }
+  if (kind === 'service') {
+    if (!structuredTypes.has('FAQPage')) errors.push(`${path}: FAQPage structured data missing in service`);
+    if (!structuredTypes.has('BreadcrumbList')) errors.push(`${path}: BreadcrumbList structured data missing in service`);
+  }
   if (kind === 'article') {
     const article = structuredNodes.find((node) => node['@type'] === 'BlogPosting');
     if (!article) errors.push(`${path}: BlogPosting structured data missing`);
@@ -203,6 +212,8 @@ for (const [path, html] of htmlByPath) {
         errors.push(`${path}: visible machine-readable modified date missing`);
       }
     }
+    if (!structuredTypes.has('FAQPage')) errors.push(`${path}: FAQPage structured data missing in article`);
+    if (!html.includes('id="kisa-cevaplar"')) errors.push(`${path}: visible FAQ section #kisa-cevaplar missing in article`);
     if (!/<article\b/i.test(html)) errors.push(`${path}: semantic article element missing`);
     if (!/<time\b[^>]*datetime="[^"]+"/i.test(html)) errors.push(`${path}: visible machine-readable publication date missing`);
   }
