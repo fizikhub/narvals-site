@@ -182,7 +182,7 @@ const renderHead = ({ siteOrigin, path, title, description, keywords, schema, ty
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Narvals Labs — Web, Yazılım ve Reklam" />
-${published ? `    <meta property="article:published_time" content="${published}" />\n` : ''}${modified ? `    <meta property="article:modified_time" content="${modified}" />\n` : ''}${category ? `    <meta property="article:section" content="${escapeHtml(category)}" />\n` : ''}${type === 'article' ? `    <meta property="article:author" content="${siteOrigin}/hakkimizda/" />\n` : ''}    <meta name="twitter:card" content="summary_large_image" />
+${published ? `    <meta property="article:published_time" content="${published}" />\n` : ''}${modified ? `    <meta property="article:modified_time" content="${modified}" />\n` : ''}${category ? `    <meta property="article:section" content="${escapeHtml(category)}" />\n` : ''}${type === 'article' ? `    <meta property="article:author" content="${siteOrigin}/hakkimizda/" />\n    <meta property="article:publisher" content="${siteOrigin}/" />\n` : ''}${type === 'article' && Array.isArray(keywords) ? keywords.map((kw) => `    <meta property="article:tag" content="${escapeHtml(kw)}" />`).join('\n') + '\n' : ''}    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${escapeHtml(title)}" />
     <meta name="twitter:description" content="${escapeHtml(description)}" />
     <meta name="twitter:image" content="${siteOrigin}/og/narvals-labs-og.jpg" />
@@ -320,6 +320,7 @@ const renderArticle = (post, siteOrigin) => {
       about: post.about.map(resolveEntity),
       datePublished: post.published,
       dateModified: post.modified,
+      breadcrumb: { '@id': `${url}#breadcrumb` },
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['h1', '.info-hero__answer', '.article-summary ul', '.article-section h2']
@@ -351,10 +352,12 @@ const renderArticle = (post, siteOrigin) => {
         cssSelector: ['h1', '.info-hero__answer', '.article-summary ul', '.article-section h2']
       },
       about: post.about.map(resolveEntity),
-      citation: post.sources.map((source) => source.url)
+      citation: post.sources.map((source) => source.url),
+      isBasedOn: post.sources.map((source) => source.url)
     },
     {
       '@type': 'BreadcrumbList',
+      '@id': `${url}#breadcrumb`,
       itemListElement: breadcrumbElements
     }
   ];
@@ -505,13 +508,27 @@ const renderTopicHub = (hub, siteOrigin) => {
   const schema = [
     organizationNode(siteOrigin),
     websiteNode(siteOrigin),
-    { '@type': 'CollectionPage', '@id': `${url}#webpage`, url, name: hub.metaTitle, description: hub.description, inLanguage: 'tr-TR', isPartOf: { '@id': `${siteOrigin}/#website` }, about: hub.keywords.map((name) => ({ '@type': 'Thing', name })) },
+    {
+      '@type': 'CollectionPage',
+      '@id': `${url}#webpage`,
+      url,
+      name: hub.metaTitle,
+      description: hub.description,
+      inLanguage: 'tr-TR',
+      isPartOf: { '@id': `${siteOrigin}/#website` },
+      about: hub.keywords.map(resolveEntity),
+      breadcrumb: { '@id': `${url}#breadcrumb` }
+    },
     { '@type': 'ItemList', itemListElement: posts.map((post, index) => ({ '@type': 'ListItem', position: index + 1, name: post.title, url: `${siteOrigin}/blog/${post.slug}/` })) },
-    { '@type': 'BreadcrumbList', itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Ana sayfa', item: `${siteOrigin}/` },
-      { '@type': 'ListItem', position: 2, name: 'Rehberler', item: `${siteOrigin}/blog/` },
-      { '@type': 'ListItem', position: 3, name: hub.title, item: url }
-    ] }
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${url}#breadcrumb`,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Ana sayfa', item: `${siteOrigin}/` },
+        { '@type': 'ListItem', position: 2, name: 'Rehberler', item: `${siteOrigin}/blog/` },
+        { '@type': 'ListItem', position: 3, name: hub.title, item: url }
+      ]
+    }
   ];
 
   return `<!doctype html>
