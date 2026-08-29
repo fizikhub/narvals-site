@@ -477,12 +477,18 @@
   line-height: 1.7;
 }
 
-.home-guides__header > a {
+.home-guides__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 32px;
+}
+
+.home-guides__actions a {
   display: inline-flex;
   align-items: center;
   gap: 20px;
   min-height: 52px;
-  margin-top: 32px;
   padding: 0 18px;
   border: 2px solid var(--ink);
   background: var(--offwhite);
@@ -490,6 +496,11 @@
   font-size: 10px;
   font-weight: 800;
   text-transform: uppercase;
+}
+
+.home-guides__actions a:last-child {
+  background: var(--deep);
+  color: var(--offwhite);
 }
 
 .home-guides__header i,

@@ -119,6 +119,67 @@
   font-weight: 700;
 }
 
+.blog-tool {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: clamp(36px, 7vw, 110px);
+  align-items: end;
+  padding: clamp(54px, 7vw, 92px) var(--gutter);
+  background: var(--yellow);
+  color: var(--ink);
+  border-bottom: 2px solid var(--ink);
+}
+
+.blog-tool > div > p {
+  width: fit-content;
+  margin: 0 0 15px;
+  padding: 6px 9px;
+  background: var(--deep);
+  color: var(--aqua);
+  font-family: 'Azeret Mono', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.blog-tool h2 {
+  max-width: 14ch;
+  margin: 0;
+  font-family: 'Anybody Variable', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 5.3rem);
+  font-weight: 850;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+.blog-tool > div > span {
+  display: block;
+  max-width: 68ch;
+  margin-top: 22px;
+  color: oklch(0.29 0.04 244);
+  font-size: clamp(15px, 1.2vw, 18px);
+  line-height: 1.6;
+}
+
+.blog-tool > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+  min-height: 56px;
+  padding: 0 18px;
+  border: 2px solid var(--ink);
+  background: var(--offwhite);
+  font-family: 'Azeret Mono', monospace;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.blog-tool > a i { color: var(--coral-contrast); font-size: 20px; font-style: normal; transition: transform 180ms ease-out; }
+.blog-tool > a:hover i, .blog-tool > a:focus-visible i { transform: translateX(5px); }
+.blog-tool--topic { background: var(--aqua); border-top: 2px solid var(--ink); }
+
 .topic-directory {
   display: grid;
   grid-template-columns: minmax(260px, 0.38fr) minmax(0, 0.62fr);
@@ -731,6 +792,8 @@
 }
 
 @media (max-width: 900px) {
+  .blog-tool { grid-template-columns: 1fr; align-items: start; }
+  .blog-tool > a { justify-self: start; }
   .blog-hub__header,
   .editorial-strip {
     grid-template-columns: 1fr;
@@ -814,6 +877,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .blog-tool > a i { transition: none; }
   .topic-directory__list i {
     transition: none;
   }

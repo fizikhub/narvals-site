@@ -114,6 +114,7 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 - Sistem Karşılaştırması: https://narvals.com/hizmetler/qr-menu-rezervasyon/
 - Hakkımızda: https://narvals.com/hakkimizda/
 - İletişim: https://narvals.com/iletisim/
+- Ücretsiz Web Sitesi Kontrolü: https://narvals.com/araclar/web-sitesi-kontrolu/
 - Blog & Rehberler: https://narvals.com/blog/
 - Editoryal İlkeler: https://narvals.com/editoryal-ilkeler/
 - Konu Merkezi: https://narvals.com/blog/konu/e-ticaret/
@@ -128,6 +129,9 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 - Rehber: https://narvals.com/blog/web-sitesi-ne-kadar-surer/
 - Rehber: https://narvals.com/blog/google-ads-butcesi-nasil-belirlenir/
 - Rehber: https://narvals.com/blog/restoran-web-sitesi-nasil-olmali/
+- Rehber: https://narvals.com/blog/web-tasarim-ajansi-secerken-sorulacak-sorular/
+- Rehber: https://narvals.com/blog/web-sitesi-bakim-ucreti-ve-yillik-maliyet/
+- Rehber: https://narvals.com/blog/hazir-web-sitesi-mi-ozel-tasarim-mi/
 - Rehber: https://narvals.com/blog/kurumsal-web-sitesi-briefi-nasil-hazirlanir/
 - Rehber: https://narvals.com/blog/web-sitesi-teknik-seo-kontrol-listesi/
 - Rehber: https://narvals.com/blog/google-ai-aramalari-icin-geo-rehberi/
