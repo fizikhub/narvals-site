@@ -63,7 +63,17 @@ button {
 
 img {
   display: block;
+  height: auto;
   max-width: 100%;
+}
+
+/* Keep deferred homepage sections stable and operable before their full visual
+   layer arrives on scroll intent. The later component CSS refines these rules. */
+.service-odyssey a,
+.service-odyssey summary {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
 }
 
 /* Used in the first viewport as well as below the fold. Keeping it in the

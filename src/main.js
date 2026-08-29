@@ -31,10 +31,20 @@ const loadBelowFoldModules = () => {
   return belowFoldPromise;
 };
 const scheduleBelowFoldModules = () => {
-  if ('requestIdleCallback' in window) {
-    window.requestIdleCallback(loadBelowFoldModules, { timeout: 2500 });
+  const target = document.querySelector('#hero-services');
+  const loadOnIntent = () => void loadBelowFoldModules();
+  const intentEvents = ['wheel', 'touchstart', 'pointerdown', 'keydown'];
+  intentEvents.forEach((eventName) => window.addEventListener(eventName, loadOnIntent, { once: true, passive: true }));
+
+  if ('IntersectionObserver' in window && target) {
+    const observer = new IntersectionObserver((entries) => {
+      if (!entries.some((entry) => entry.isIntersecting)) return;
+      observer.disconnect();
+      void loadBelowFoldModules();
+    });
+    observer.observe(target);
   } else {
-    window.setTimeout(loadBelowFoldModules, 250);
+    window.setTimeout(loadBelowFoldModules, 4000);
   }
 };
 if (window.location.hash) {
