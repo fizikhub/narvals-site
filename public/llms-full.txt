@@ -116,6 +116,10 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 - İletişim: https://narvals.com/iletisim/
 - Blog & Rehberler: https://narvals.com/blog/
 - Editoryal İlkeler: https://narvals.com/editoryal-ilkeler/
+- Rehber: https://narvals.com/blog/e-ticaret-sitesi-nasil-acilir/
+- Rehber: https://narvals.com/blog/qr-menu-nasil-yapilir/
+- Rehber: https://narvals.com/blog/internet-sitesi-nasil-kurulur/
+- Rehber: https://narvals.com/blog/google-ads-reklam-nasil-verilir/
 - Rehber: https://narvals.com/blog/kurumsal-web-sitesi-briefi-nasil-hazirlanir/
 - Rehber: https://narvals.com/blog/web-sitesi-teknik-seo-kontrol-listesi/
 - Rehber: https://narvals.com/blog/google-ai-aramalari-icin-geo-rehberi/

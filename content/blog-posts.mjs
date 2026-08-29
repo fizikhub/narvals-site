@@ -1,6 +1,8 @@
 import { newBlogPosts } from './seo-growth-posts.mjs';
+import { searchIntentPosts } from './search-intent-posts.mjs';
 
 export const blogPosts = [
+  ...searchIntentPosts,
   {
     slug: 'kurumsal-web-sitesi-briefi-nasil-hazirlanir',
     metaTitle: 'Kurumsal Web Sitesi Briefi Nasıl Hazırlanır? | Narvals',

@@ -27,6 +27,10 @@ Tam kapsamlı yapay zekâ bilgi tabanı ve RAG dokümantasyonu için: [llms-full
 
 ## Karar Rehberleri
 
+- [E-ticaret sitesi nasıl açılır? 10 adımlı sade rehber](https://narvals.com/blog/e-ticaret-sitesi-nasil-acilir/): E-ticaret sitesi açmak için ürün, şirket, altyapı, ödeme, kargo, yasal metinler, SEO ve yayına alma adımlarını sade biçimde öğrenin.
+- [QR menü nasıl yapılır? Restoranlar için sade kurulum rehberi](https://narvals.com/blog/qr-menu-nasil-yapilir/): QR menü hazırlamak için menü yapısı, mobil tasarım, fiyat güncelleme, QR kod basımı, Google işletme bağlantısı ve test adımlarını öğrenin.
+- [İnternet sitesi nasıl kurulur? Baştan sona sade rehber](https://narvals.com/blog/internet-sitesi-nasil-kurulur/): Amaç, alan adı, hosting, içerik, tasarım, mobil uyum, SEO, ölçüm ve yayın adımlarıyla işletmeniz için internet sitesi kurmayı öğrenin.
+- [Google Ads reklamı nasıl verilir? İşletmeler için başlangıç rehberi](https://narvals.com/blog/google-ads-reklam-nasil-verilir/): Google Ads reklamı vermek için hedef, dönüşüm ölçümü, anahtar kelime, kampanya, reklam metni, açılış sayfası ve bütçe adımlarını öğrenin.
 - [Kurumsal web sitesi briefi nasıl hazırlanır?](https://narvals.com/blog/kurumsal-web-sitesi-briefi-nasil-hazirlanir/): Kurumsal web sitesi projesinde hedefi, kapsamı, içeriği, entegrasyonları ve başarı ölçütlerini netleştiren uygulanabilir brief rehberi.
 - [Web sitesi teknik SEO kontrol listesi: yayından önce ve sonra](https://narvals.com/blog/web-sitesi-teknik-seo-kontrol-listesi/): Tarama, index, canonical, yönlendirme, sitemap, yapılandırılmış veri, performans ve ölçümü kapsayan uygulamalı teknik SEO kontrol listesi.
 - [GEO nedir? Google AI sonuçlarında görünürlük rehberi](https://narvals.com/blog/google-ai-aramalari-icin-geo-rehberi/): GEO, AEO ve AI arama görünürlüğünü teknik SEO, özgün kanıt, marka tutarlılığı, bot erişimi ve ölçüm üzerinden açıklayan güncel rehber.

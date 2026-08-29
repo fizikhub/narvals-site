@@ -119,11 +119,11 @@
   max-width: 15ch;
   margin: 0;
   font-family: 'Anybody Variable', sans-serif;
-  font-size: clamp(3.25rem, 7.6vw, 8rem);
+  font-size: clamp(3.25rem, 7.6vw, 6rem);
   font-stretch: 82%;
   font-weight: 870;
   line-height: 0.87;
-  letter-spacing: -0.055em;
+  letter-spacing: -0.04em;
 }
 
 .info-hero__answer {

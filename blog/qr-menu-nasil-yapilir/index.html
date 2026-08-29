@@ -1,0 +1,398 @@
+<!doctype html>
+<html class="no-js" lang="tr">
+  <head>
+    <script>document.documentElement.classList.replace('no-js', 'js');</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#03233a" />
+    <meta name="color-scheme" content="light" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="msapplication-TileColor" content="#03233a" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="description" content="QR menü hazırlamak için menü yapısı, mobil tasarım, fiyat güncelleme, QR kod basımı, Google işletme bağlantısı ve test adımlarını öğrenin." />
+    <meta name="keywords" content="QR menü nasıl yapılır, restoran QR menü, dijital menü hazırlama, kafe QR kod menü" />
+    <meta name="author" content="Narvals Labs" />
+    <link rel="canonical" href="https://narvals.com/blog/qr-menu-nasil-yapilir/" />
+    <link rel="alternate" hreflang="tr" href="https://narvals.com/blog/qr-menu-nasil-yapilir/" />
+    <link rel="alternate" hreflang="tr-TR" href="https://narvals.com/blog/qr-menu-nasil-yapilir/" />
+    <link rel="alternate" hreflang="x-default" href="https://narvals.com/blog/qr-menu-nasil-yapilir/" />
+    <link rel="alternate" type="application/rss+xml" title="Narvals Labs Rehberleri" href="https://narvals.com/blog/feed.xml" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/assets/logo-v6/narvals-favicon-48.png" type="image/png" sizes="48x48" />
+    <link rel="icon" href="/assets/logo-v6/narvals-favicon-96.png" type="image/png" sizes="96x96" />
+    <link rel="icon" href="/assets/logo-v6/narvals-favicon-192.png" type="image/png" sizes="192x192" />
+    <link rel="icon" href="/assets/logo-v6/narvals-favicon-v6-256.png" type="image/png" sizes="256x256" />
+    <link rel="apple-touch-icon" href="/assets/logo-v6/narvals-avatar-v6-1080.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Narvals Labs" />
+    <meta property="og:title" content="QR Menü Nasıl Yapılır? Restoranlar İçin Rehber | Narvals" />
+    <meta property="og:description" content="QR menü hazırlamak için menü yapısı, mobil tasarım, fiyat güncelleme, QR kod basımı, Google işletme bağlantısı ve test adımlarını öğrenin." />
+    <meta property="og:url" content="https://narvals.com/blog/qr-menu-nasil-yapilir/" />
+    <meta property="og:image" content="https://narvals.com/og/narvals-labs-og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Narvals Labs — Web, Yazılım ve Reklam" />
+    <meta property="article:published_time" content="2026-08-29T21:10:00+03:00" />
+    <meta property="article:modified_time" content="2026-08-29T21:10:00+03:00" />
+    <meta property="article:section" content="QR menü" />
+    <meta property="article:author" content="https://narvals.com/hakkimizda/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="QR Menü Nasıl Yapılır? Restoranlar İçin Rehber | Narvals" />
+    <meta name="twitter:description" content="QR menü hazırlamak için menü yapısı, mobil tasarım, fiyat güncelleme, QR kod basımı, Google işletme bağlantısı ve test adımlarını öğrenin." />
+    <meta name="twitter:image" content="https://narvals.com/og/narvals-labs-og.jpg" />
+    <meta name="twitter:image:alt" content="Narvals Labs — Web, Yazılım ve Reklam" />
+    <meta name="twitter:label1" content="Okuma Süresi" />
+    <meta name="twitter:data1" content="8 dk" />
+    <meta name="twitter:label2" content="Kategori" />
+    <meta name="twitter:data2" content="QR menü" />
+    <title>QR Menü Nasıl Yapılır? Restoranlar İçin Rehber | Narvals</title>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://narvals.com/#organization",
+      "name": "Narvals Labs",
+      "url": "https://narvals.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://narvals.com/assets/logo-v6/narvals-avatar-v6-1080.png",
+        "contentUrl": "https://narvals.com/assets/logo-v6/narvals-avatar-v6-1080.png",
+        "width": 1080,
+        "height": 1080
+      },
+      "image": "https://narvals.com/og/narvals-labs-og.jpg",
+      "description": "Web sitesi ve UX, işletmeye özel yazılım, dijital reklam, marka, QR menü ve rezervasyon sistemleri üreten dijital stüdyo.",
+      "email": "info@narvals.com",
+      "telephone": "+905019441921",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "TR"
+      },
+      "currenciesAccepted": "TRY, EUR, USD",
+      "paymentAccepted": "Bank Transfer, Credit Card",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "info@narvals.com",
+        "telephone": "+905019441921",
+        "areaServed": "TR",
+        "availableLanguage": "Turkish"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Türkiye"
+      },
+      "founder": {
+        "@type": "Organization",
+        "name": "Narvals Labs Team"
+      },
+      "knowsAbout": [
+        "Web Tasarım ve UX",
+        "Özel Yazılım Geliştirme",
+        "Meta Reklam Yönetimi",
+        "Google Ads Yönetimi",
+        "E-Ticaret Sitesi",
+        "Sosyal Medya Yönetimi",
+        "QR Menü Sistemleri",
+        "Online Rezervasyon Sistemleri",
+        "Teknik SEO",
+        "Generative Engine Optimization (GEO)"
+      ],
+      "knowsLanguage": "tr"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://narvals.com/#website",
+      "url": "https://narvals.com/",
+      "name": "Narvals Labs",
+      "alternateName": [
+        "Narvals",
+        "Narvals Digital",
+        "Narvals Studio"
+      ],
+      "inLanguage": "tr-TR",
+      "publisher": {
+        "@id": "https://narvals.com/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://narvals.com/blog/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://narvals.com/blog/qr-menu-nasil-yapilir/#webpage",
+      "url": "https://narvals.com/blog/qr-menu-nasil-yapilir/",
+      "name": "QR Menü Nasıl Yapılır? Restoranlar İçin Rehber | Narvals",
+      "description": "QR menü hazırlamak için menü yapısı, mobil tasarım, fiyat güncelleme, QR kod basımı, Google işletme bağlantısı ve test adımlarını öğrenin.",
+      "inLanguage": "tr-TR",
+      "isPartOf": {
+        "@id": "https://narvals.com/#website"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "QR menü"
+        },
+        {
+          "@type": "Thing",
+          "name": "Dijital restoran menüsü"
+        },
+        {
+          "@type": "Thing",
+          "name": "Mobil menü"
+        }
+      ],
+      "datePublished": "2026-08-29T21:10:00+03:00",
+      "dateModified": "2026-08-29T21:10:00+03:00",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "h1",
+          ".info-hero__answer",
+          ".article-summary ul",
+          ".article-section h2"
+        ]
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://narvals.com/og/narvals-labs-og.jpg",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://narvals.com/blog/qr-menu-nasil-yapilir/#article",
+      "mainEntityOfPage": {
+        "@id": "https://narvals.com/blog/qr-menu-nasil-yapilir/#webpage"
+      },
+      "headline": "QR menü nasıl yapılır? Restoranlar için sade kurulum rehberi",
+      "description": "QR menü hazırlamak için menü yapısı, mobil tasarım, fiyat güncelleme, QR kod basımı, Google işletme bağlantısı ve test adımlarını öğrenin.",
+      "image": [
+        "https://narvals.com/og/narvals-labs-og.jpg"
+      ],
+      "datePublished": "2026-08-29T21:10:00+03:00",
+      "dateModified": "2026-08-29T21:10:00+03:00",
+      "timeRequired": "PT8M",
+      "inLanguage": "tr-TR",
+      "isAccessibleForFree": true,
+      "wordCount": 617,
+      "articleSection": "QR menü",
+      "keywords": "QR menü nasıl yapılır, restoran QR menü, dijital menü hazırlama, kafe QR kod menü",
+      "author": {
+        "@id": "https://narvals.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://narvals.com/#organization"
+      },
+      "copyrightHolder": {
+        "@id": "https://narvals.com/#organization"
+      },
+      "license": "https://narvals.com/editoryal-ilkeler/",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "h1",
+          ".info-hero__answer",
+          ".article-summary ul",
+          ".article-section h2"
+        ]
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "QR menü"
+        },
+        {
+          "@type": "Thing",
+          "name": "Dijital restoran menüsü"
+        },
+        {
+          "@type": "Thing",
+          "name": "Mobil menü"
+        }
+      ],
+      "citation": [
+        "https://support.google.com/business/answer/9455840",
+        "https://support.google.com/business/answer/3038177",
+        "https://www.w3.org/TR/WCAG22/",
+        "https://web.dev/articles/vitals"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ana sayfa",
+          "item": "https://narvals.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Rehberler",
+          "item": "https://narvals.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "QR menü nasıl yapılır? Restoranlar için sade kurulum rehberi",
+          "item": "https://narvals.com/blog/qr-menu-nasil-yapilir/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://narvals.com/blog/qr-menu-nasil-yapilir/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Ücretsiz QR menü yapılabilir mi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Basit bir dosyaya ücretsiz QR kod üretilebilir. Ancak alan adı, mobil menü, yönetim paneli, güncelleme, destek ve güvenilir barındırma gibi ihtiyaçların ayrıca maliyeti olabilir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "QR menü için uygulama indirmek gerekir mi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hayır. Standart kamera uygulaması kodu okuyup mobil web menüsünü tarayıcıda açabilir. Müşteriyi uygulama indirmeye zorlamamak daha kolay bir akış sağlar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "QR kod değişmeden menü güncellenebilir mi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Evet. QR kod kalıcı bir web adresine gidiyorsa o adresteki içerik veya yönlendirme panelden değiştirilebilir; masadaki kod aynı kalır."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
+  </head>
+  <body class="info-page article-page">
+    <!-- Bu dosya content/blog-posts.mjs kaynağından otomatik üretilir. -->
+    <a class="skip-link" href="#main-content">Ana içeriğe geç</a>
+    <header class="info-nav">
+      <a class="info-nav__brand" href="/"><img src="/assets/logo-v6/narvals-mascot-v6-transparent-96.png" alt="" width="96" height="96" /><span>narvals<i>//</i>labs</span></a>
+      <nav class="info-nav__links" aria-label="Ana menü"><a href="/hizmetler/">Hizmetler</a><a href="/blog/" aria-current="page">Rehberler</a><a href="/hakkimizda/">Hakkımızda</a><a href="/iletisim/">Projeyi konuşalım</a></nav>
+    </header>
+    <main id="main-content">
+      <article>
+        <header class="info-hero article-hero">
+          <div class="info-hero__copy">
+            <nav class="breadcrumbs" aria-label="İçerik yolu"><a href="/">Ana sayfa</a><span>/</span><a href="/blog/">Rehberler</a><span>/</span><span>QR menü</span></nav>
+            <p class="info-hero__kicker">QR menü · Karar rehberi</p>
+            <h1>QR menü nasıl yapılır? Restoranlar için sade kurulum rehberi</h1>
+            <p class="info-hero__answer">QR menü yapmak için önce ürünleri ve kategorileri sade bir düzene koyun, mobil uyumlu bir web menüsü hazırlayın, değişmeyen bir bağlantıya QR kod üretin ve kodu farklı telefonlarla masada test edin. PDF dosyasını doğrudan açtırmak yerine hızlı, okunabilir ve panelden güncellenebilir bir menü sayfası daha kullanışlıdır.</p>
+            <div class="article-meta"><span>Yayınlayan <a href="/hakkimizda/">Narvals Labs</a></span><span>Yayımlandı <time datetime="2026-08-29T21:10:00+03:00">29 Ağustos 2026</time></span><span>8 dk okuma</span></div>
+          </div>
+          <aside class="info-hero__panel article-summary" aria-labelledby="ozet-basligi"><strong id="ozet-basligi">Bu rehberin özeti</strong><ul><li>QR kod değişmeyen bir web adresine yönlenmelidir.</li><li>Menü telefonda yakınlaştırma gerektirmeden okunmalıdır.</li><li>Fiyat ve stok bilgisi işletme tarafından panelden güncellenebilmelidir.</li><li>Baskıdan önce farklı kamera, ışık ve mesafelerde test yapılmalıdır.</li><li>Google İşletme Profili menü bağlantısı da aynı güncel adrese yönlenebilir.</li></ul></aside>
+        </header>
+
+        <div class="info-layout article-layout">
+          <nav class="info-toc" aria-label="Makale içeriği"><strong>Bu rehberde</strong><a href="#qr-menu-nedir">Kısa tanım</a><a href="#alti-adim">Kurulum</a><a href="#pdf-mi-web-mi">Format seçimi</a><a href="#tasarim-kontrolu">Müşteri deneyimi</a><a href="#yayin-ve-google">Yayın</a><a href="#kisa-cevaplar">Kısa cevaplar</a><a href="#kaynaklar">Kaynaklar</a></nav>
+          <div class="info-content article-content">
+            <section class="info-section article-section" id="qr-menu-nedir">
+        <p class="info-section__label">Kısa tanım</p>
+        <h2>QR kod menünün kendisi değil, menüye açılan kapıdır.</h2>
+        <p>Masadaki QR kod tarandığında müşteri bir internet adresine gider. Bu adres PDF, görsel veya mobil web sayfası açabilir. Asıl kaliteyi kodun görünüşü değil, açılan menünün hızı, okunabilirliği ve güncelliği belirler.</p>
+        <p>Menü adresini daha sonra değiştirmek zorunda kalırsanız basılı tüm QR kodları yenilemek gerekebilir. Bu yüzden markanıza ait, kalıcı ve yönlendirilebilir bir alan adı kullanmak güvenli bir başlangıçtır.</p>
+
+
+
+
+
+      </section>
+            <section class="info-section article-section" id="alti-adim">
+        <p class="info-section__label">Kurulum</p>
+        <h2>QR menüyü 6 adımda hazırlayın.</h2>
+
+
+        <ol class="article-steps"><li><strong>Menüyü düzenleyin.</strong> Kahvaltı, ana yemek, içecek gibi müşterinin beklediği kısa kategoriler oluşturun.</li><li><strong>Ürün bilgisini temizleyin.</strong> Ad, kısa açıklama, fiyat, porsiyon, alerjen ve mevcutluk bilgisini tek formatta toplayın.</li><li><strong>Mobil sayfayı tasarlayın.</strong> Büyük yazı, güçlü kontrast, rahat dokunma alanı ve hızlı kategori geçişi kullanın.</li><li><strong>Yönetim panelini kurun.</strong> Personelin fiyatı, ürünü ve mevcutluk durumunu geliştirici beklemeden değiştirebilmesini sağlayın.</li><li><strong>Kalıcı bağlantıya QR kod üretin.</strong> Kodun çevresindeki boşluğu koruyun ve yeterli boyutta basın.</li><li><strong>Masada test edin.</strong> iPhone ve Android cihazlarda, düşük ışıkta, farklı açılarda ve zayıf bağlantıda deneyin.</li></ol>
+
+
+
+      </section>
+            <section class="info-section article-section" id="pdf-mi-web-mi">
+        <p class="info-section__label">Format seçimi</p>
+        <h2>PDF menü ile web tabanlı QR menü aynı deneyim değildir.</h2>
+        <p>PDF hızlı hazırlanabilir; fakat küçük ekranda yakınlaştırma, uzun kaydırma ve sık dosya değiştirme ihtiyacı doğurabilir. Web tabanlı menü kategori geçişi, arama, dil, alerjen, mevcutluk ve ölçüm gibi özellikleri daha iyi taşıyabilir.</p>
+        <p>Az ürünlü ve nadiren değişen bir menüde sade PDF geçici çözüm olabilir. Gün içinde ürün kapatan, fiyat güncelleyen, çok dil kullanan veya şubeleri bulunan işletmelerde yönetim panelli web menüsü daha sürdürülebilirdir. Ayrıntılı karşılaştırma için <a href="/blog/qr-menu-mu-pdf-menu-mu/">QR menü mü PDF menü mü rehberini</a> okuyun.</p>
+
+
+
+        <section class="article-table-wrap" tabindex="0" aria-label="Konu, PDF menü, Web tabanlı menü tablosu">
+          <table class="decision-table"><thead><tr><th scope="col">Konu</th><th scope="col">PDF menü</th><th scope="col">Web tabanlı menü</th></tr></thead><tbody><tr><th scope="row">Telefonda okuma</th><td>Yakınlaştırma gerekebilir</td><td>Ekrana uyumlu düzen kurulabilir</td></tr><tr><th scope="row">Güncelleme</th><td>Dosya yeniden hazırlanır</td><td>Panelden anlık yapılabilir</td></tr><tr><th scope="row">Çoklu dil</th><td>Ayrı dosyalar gerekebilir</td><td>Dil seçimi tek yapıda sunulabilir</td></tr><tr><th scope="row">Ölçüm</th><td>Sınırlı</td><td>Ziyaret ve kategori kullanımı izlenebilir</td></tr></tbody></table>
+        </section>
+
+      </section>
+            <section class="info-section article-section" id="tasarim-kontrolu">
+        <p class="info-section__label">Müşteri deneyimi</p>
+        <h2>İyi QR menü üç saniyede ne satıldığını anlatır.</h2>
+
+
+
+        <ul class="article-checklist"><li>Metin en az 16 piksel ve güçlü kontrastla okunuyor.</li><li>Kategori adları kısa, ürünler beklenen sırada.</li><li>Fiyat ve para birimi açık; eski fiyat görünmüyor.</li><li>Alerjen ve içerik bilgisi ürünle birlikte gösteriliyor.</li><li>Görseller sıkıştırılmış; ilk ekran zayıf bağlantıda hızlı açılıyor.</li><li>Telefon numarası, konum ve gerektiğinde rezervasyon yolu görünür.</li><li>Menü klavye ve ekran okuyucu gibi yardımcı teknolojiler için anlamlı HTML kullanıyor.</li></ul>
+
+
+      </section>
+            <section class="info-section article-section" id="yayin-ve-google">
+        <p class="info-section__label">Yayın</p>
+        <h2>QR kodu basın, Google menü bağlantısını güncelleyin ve izleyin.</h2>
+        <p>QR kodu toplu basmadan önce tek masa etiketiyle gerçek ortam testi yapın. Parlak yüzey yansıması, küçük baskı, desenli arka plan veya kodun kenar boşluğunun kesilmesi taramayı zorlaştırabilir. Menü adresi değişmeden içerik güncellenebiliyorsa yeniden baskı maliyeti azalır.</p>
+        <p>Restoranlar Google İşletme Profili üzerinde menü öğeleri veya menü bağlantısı gösterebilir. Profildeki adresi de masadaki QR kodla aynı güncel menüye bağlayın. Menü ziyaretlerini ölçerken kişisel veri toplamadan önce gerekli aydınlatma ve izin yaklaşımını uzmanınızla doğrulayın.</p>
+
+
+
+
+        <aside class="article-callout" aria-label="QR kodu basın, Google menü bağlantısını güncelleyin ve izleyin.: karar notu"><strong>Karar notu</strong><p>Kafeniz veya restoranınız için sade, hızlı ve panelden güncellenen bir QR menü istiyorsanız bize ulaşın; kapsamı işletmenize göre en uygun biçimde çıkaralım.</p></aside>
+      </section>
+            <section class="info-section article-section" id="kisa-cevaplar">
+              <p class="info-section__label">Sık sorulan sorular</p>
+              <h2>Kısa ve doğrudan cevaplar.</h2>
+              <div class="article-faq"><details><summary>Ücretsiz QR menü yapılabilir mi?</summary><p>Basit bir dosyaya ücretsiz QR kod üretilebilir. Ancak alan adı, mobil menü, yönetim paneli, güncelleme, destek ve güvenilir barındırma gibi ihtiyaçların ayrıca maliyeti olabilir.</p></details><details><summary>QR menü için uygulama indirmek gerekir mi?</summary><p>Hayır. Standart kamera uygulaması kodu okuyup mobil web menüsünü tarayıcıda açabilir. Müşteriyi uygulama indirmeye zorlamamak daha kolay bir akış sağlar.</p></details><details><summary>QR kod değişmeden menü güncellenebilir mi?</summary><p>Evet. QR kod kalıcı bir web adresine gidiyorsa o adresteki içerik veya yönlendirme panelden değiştirilebilir; masadaki kod aynı kalır.</p></details></div>
+            </section>
+            <section class="info-section article-section" id="kaynaklar">
+              <p class="info-section__label">Birincil kaynaklar</p>
+              <h2>Kaynaklar ve kapsam.</h2>
+              <p>Bağlantılar içerikteki değişebilir veya dış doğrulama gerektiren bilgilerin kaynağıdır. Ticari ilişki veya sponsorlu bağlantı değildir.</p>
+              <ol class="article-sources"><li><a href="https://support.google.com/business/answer/9455840" rel="noopener noreferrer">Google Business Profile — Menü düzenleyici hakkında</a></li><li><a href="https://support.google.com/business/answer/3038177" rel="noopener noreferrer">Google Business Profile — İşletmenizi temsil etme kuralları</a></li><li><a href="https://www.w3.org/TR/WCAG22/" rel="noopener noreferrer">W3C — Web Content Accessibility Guidelines (WCAG) 2.2</a></li><li><a href="https://web.dev/articles/vitals" rel="noopener noreferrer">web.dev — Core Web Vitals</a></li></ol>
+              <aside class="article-method" aria-label="Bu rehberin hazırlanma yöntemi"><strong>Hazırlama yöntemi</strong><p>Bu rehber Narvals Labs yayıncılığında; ilgili birincil kaynaklar, görünür hizmet kapsamı ve proje karar çerçeveleri incelenerek hazırlandı. Doğrulanamayan müşteri, fiyat, başarı oranı veya sonuç iddiası eklenmedi. Yöntem, düzeltme ve yapay zekâ desteği açıklaması için <a href="/editoryal-ilkeler/">editoryal ilkeleri</a> okuyabilirsiniz.</p></aside>
+            </section>
+            <section class="info-section article-section">
+              <p class="info-section__label">İlgili rehberler</p><h2>İlgili rehberlerle devam edin.</h2>
+              <div class="article-related"><a href="/blog/qr-menu-mu-pdf-menu-mu/"><small>QR menü</small><strong>QR menü mü, PDF menü mü? Karşılaştırma rehberi</strong><span aria-hidden="true">→</span></a><a href="/blog/rezervasyon-randevu-sistemi-nasil-secilir/"><small>Rezervasyon</small><strong>Rezervasyon ve randevu sistemi nasıl seçilir?</strong><span aria-hidden="true">→</span></a><a href="/blog/web-sitesi-hizlandirma-core-web-vitals-rehberi/"><small>SEO &amp; Performans</small><strong>Web sitesi hızlandırma ve Core Web Vitals (LCP, INP, CLS) rehberi</strong><span aria-hidden="true">→</span></a></div>
+            </section>
+          </div>
+        </div>
+      </article>
+      <section class="info-cta"><h2>Bu kararı projenize uyarlayalım.</h2><p>Mevcut durumu, hedefi ve en kritik sınırı paylaşın; gerekli kapsamı birlikte netleştirelim.</p><div class="article-cta-actions"><a class="info-button" href="/hizmetler/qr-menu/">QR menü çözümünü inceleyin <span aria-hidden="true">→</span></a><a class="info-button info-button--light" href="/iletisim/">Projeyi konuşalım <span aria-hidden="true">↗</span></a></div></section>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__brand"><a href="/"><img src="/assets/logo-v6/narvals-mascot-v6-transparent-96.png" alt="" width="96" height="96" loading="lazy" /><strong>narvals<span>//</span>labs</strong></a><p>Web sitesi, özel yazılım ve reklamı aynı iş hedefinde buluşturan dijital üretim stüdyosu.</p></div>
+      <nav aria-label="Hizmet bağlantıları"><strong>Hizmetler</strong><a href="/hizmetler/web-tasarim/">Web tasarım &amp; UX</a><a href="/hizmetler/e-ticaret/">E-ticaret</a><a href="/hizmetler/ozel-yazilim/">Özel yazılım</a><a href="/hizmetler/google-ads/">Google Ads</a><a href="/hizmetler/dijital-reklam/">Meta reklam</a><a href="/hizmetler/sosyal-medya-yonetimi/">Sosyal medya</a><a href="/hizmetler/qr-menu-rezervasyon/">İşletme sistemleri</a></nav>
+      <nav aria-label="Bilgi merkezi bağlantıları"><strong>Bilgi merkezi</strong><a href="/blog/">Tüm rehberler</a><a href="/blog/web-sitesi-teknik-seo-kontrol-listesi/">Teknik SEO listesi</a><a href="/blog/google-ai-aramalari-icin-geo-rehberi/">GEO rehberi</a><a href="/editoryal-ilkeler/">Editoryal ilkeler</a></nav>
+      <div class="site-footer__contact"><strong>Bir proje mi var?</strong><p>Hedefi ve en kritik darboğazı anlatarak ilk görüşmeyi başlatın.</p><a href="mailto:info@narvals.com">info@narvals.com</a><a href="https://wa.me/905019441921" rel="noopener noreferrer">WhatsApp: +90 501 944 19 21 ↗</a></div>
+      <p class="site-footer__legal">© <span data-current-year>2026</span> Narvals Labs. Tüm hakları saklıdır.</p>
+    </footer>
+    <script type="module" src="/src/info-main.js"></script>
+  </body>
+</html>

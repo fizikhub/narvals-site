@@ -87,6 +87,8 @@ if (blogGrid) {
   const urlParams = new URLSearchParams(window.location.search);
   const initialQuery = (urlParams.get('q') || '').trim().toLowerCase();
   if (initialQuery) {
+    const searchInput = document.querySelector('#blog-search-input');
+    if (searchInput) searchInput.value = urlParams.get('q');
     const cards = blogGrid.querySelectorAll('.blog-card');
     let matchedCount = 0;
     cards.forEach((card) => {

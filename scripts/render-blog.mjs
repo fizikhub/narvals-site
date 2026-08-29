@@ -40,7 +40,8 @@ const wordCount = (post) => stripHtml([
   post.title,
   post.answer,
   ...post.takeaways,
-  ...post.sections.map(sectionText)
+  ...post.sections.map(sectionText),
+  ...(post.faq || []).flatMap((item) => [item.question, item.answer])
 ].join(' ')).split(' ').filter(Boolean).length;
 
 const organizationNode = (siteOrigin) => ({
@@ -253,6 +254,18 @@ const renderArticle = (post, siteOrigin) => {
     }
   ];
 
+  if (post.faq?.length) {
+    schema.push({
+      '@type': 'FAQPage',
+      '@id': `${url}#faq`,
+      mainEntity: post.faq.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: { '@type': 'Answer', text: item.answer }
+      }))
+    });
+  }
+
   return `<!doctype html>
 <html class="no-js" lang="tr">
   <head>
@@ -277,10 +290,15 @@ ${renderHead({ siteOrigin, path, title: post.metaTitle, description: post.descri
         </header>
 
         <div class="info-layout article-layout">
-          <nav class="info-toc" aria-label="Makale içeriği"><strong>Bu rehberde</strong>${post.sections.map((section) => `<a href="#${escapeHtml(section.id)}">${escapeHtml(section.label)}</a>`).join('')}<a href="#kaynaklar">Kaynaklar</a></nav>
+          <nav class="info-toc" aria-label="Makale içeriği"><strong>Bu rehberde</strong>${post.sections.map((section) => `<a href="#${escapeHtml(section.id)}">${escapeHtml(section.label)}</a>`).join('')}${post.faq?.length ? '<a href="#kisa-cevaplar">Kısa cevaplar</a>' : ''}<a href="#kaynaklar">Kaynaklar</a></nav>
           <div class="info-content article-content">
             ${post.sections.map(renderSection).join('\n            ')}
-            <section class="info-section article-section" id="kaynaklar">
+            ${post.faq?.length ? `<section class="info-section article-section" id="kisa-cevaplar">
+              <p class="info-section__label">Sık sorulan sorular</p>
+              <h2>Kısa ve doğrudan cevaplar.</h2>
+              <div class="article-faq">${post.faq.map((item) => `<details><summary>${escapeHtml(item.question)}</summary><p>${escapeHtml(item.answer)}</p></details>`).join('')}</div>
+            </section>
+            ` : ''}<section class="info-section article-section" id="kaynaklar">
               <p class="info-section__label">Birincil kaynaklar</p>
               <h2>Kaynaklar ve kapsam.</h2>
               <p>Bağlantılar içerikteki değişebilir veya dış doğrulama gerektiren bilgilerin kaynağıdır. Ticari ilişki veya sponsorlu bağlantı değildir.</p>
@@ -352,7 +370,7 @@ ${renderHead({ siteOrigin, path, title, description, keywords: ['dijital rehberl
     <main id="main-content">
       <section class="info-hero blog-hero">
         <div class="info-hero__copy"><nav class="breadcrumbs" aria-label="İçerik yolu"><a href="/">Ana sayfa</a><span>/</span><span>Rehberler</span></nav><p class="info-hero__kicker">Bilgi merkezi · Kaynaklı karar rehberleri</p><h1>Dijital projeler için karar rehberleri.</h1><p class="info-hero__answer">Yüzeysel trend yazıları yerine; web, yazılım, reklam ve işletme sistemleri için gerçek karar ölçütlerini, kontrol listelerini, sınırları ve birincil kaynakları bir araya getiriyoruz.</p></div>
-        <aside class="info-hero__panel"><strong>Nasıl kullanılır?</strong><ul><li>Önce vermeniz gereken kararı seçin.</li><li>Tablo ve kontrol listesini mevcut durumunuza uygulayın.</li><li>Kaynaklardan değişebilir ayrıntıları doğrulayın.</li><li>Gerekli kapsamı ilgili hizmetle bağlayın.</li></ul></aside>
+        <aside class="info-hero__panel blog-search-panel"><strong>Ne yapmak istiyorsunuz?</strong><form class="blog-search" action="/blog/" method="get" role="search"><label for="blog-search-input">Rehberlerde ara</label><div><input id="blog-search-input" name="q" type="search" placeholder="Örn. e-ticaret sitesi" autocomplete="off" /><button type="submit">Ara <span aria-hidden="true">→</span></button></div></form><p>E-ticaret, web sitesi, QR menü, reklam veya SEO hakkında sorunuzu yazın.</p></aside>
       </section>
       <section class="blog-hub" aria-labelledby="rehberler-basligi">
         <header class="blog-hub__header"><p class="info-section__label">Tüm rehberler</p><h2 id="rehberler-basligi">Hizmete göre değil, kararınıza göre başlayın.</h2><p>Her rehber tek bir arama ve iş niyetine sahiptir. Benzer sorgular için kopya sayfa üretmek yerine, bir konuyu karar vermeye yetecek derinlikte ele alır.</p></header>
