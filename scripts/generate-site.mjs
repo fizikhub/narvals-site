@@ -72,6 +72,7 @@ const getPageTitle = (path) => {
   if (path === '/araclar/') return 'Ücretsiz Web Sitesi ve Proje Araçları';
   if (path === '/araclar/web-sitesi-kontrolu/') return 'Ücretsiz Web Sitesi Kontrolü';
   if (path === '/araclar/teklif-karsilastirma/') return 'Web Sitesi Teklif Karşılaştırma Aracı';
+  if (path === '/araclar/donusum-orani-hesaplama/') return 'Web Sitesi Dönüşüm Oranı Hesaplama Aracı';
   if (path === '/blog/') return 'Narvals Labs Dijital Üretim ve Karar Rehberleri';
   if (path === '/editoryal-ilkeler/') return 'Narvals Labs Editoryal İlkeler ve Standartlar';
   const topicHub = topicHubs.find((hub) => `/blog/konu/${hub.slug}/` === path);
@@ -189,6 +190,7 @@ Tam kapsamlı yapay zekâ bilgi tabanı ve RAG dokümantasyonu için: [llms-full
 - [Ücretsiz araçlar](${siteOrigin}/araclar/): Web sitesi, ajans teklifi ve proje kapsamı karar araçları
 - [Ücretsiz web sitesi kontrolü](${siteOrigin}/araclar/web-sitesi-kontrolu/): Teklif, güven, dönüşüm ve teknik görünürlüğü 16 soruda değerlendiren, kayıt gerektirmeyen araç
 - [Teklif karşılaştırma aracı](${siteOrigin}/araclar/teklif-karsilastirma/): İki veya üç web sitesi teklifini 12 kapsam ve risk ölçütüyle karşılaştıran araç
+- [Dönüşüm oranı hesaplama](${siteOrigin}/araclar/donusum-orani-hesaplama/): Ziyaret, nitelikli talep ve müşteri verilerinden mevcut oranı ve iyileştirme senaryolarını hesaplayan araç
 - [Rehberler](${siteOrigin}/blog/): Web, yazılım, reklam, SEO/GEO ve işletme sistemleri için kaynaklı karar rehberleri
 - [Editoryal ilkeler](${siteOrigin}/editoryal-ilkeler/): Kaynaklandırma, yapay zekâ şeffaflığı, güncelleme ve düzeltme politikası
 
@@ -218,6 +220,7 @@ const llmsFull = `# Narvals Labs — Kapsamlı Bilgi Tabanı ve Sistem Dokümant
 - **Yayıncı & Varlık Adı:** Narvals Labs
 - **E-posta:** info@narvals.com
 - **WhatsApp / Telefon:** +90 501 944 19 21
+- **Ücretsiz dönüşüm oranı hesaplama:** ${siteOrigin}/araclar/donusum-orani-hesaplama/
 
 ---
 

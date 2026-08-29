@@ -6,6 +6,7 @@ import './styles.css';
 import './nav.css';
 import './hero.css';
 import './hero-studio.css';
+import { initLeadSource } from './lead-source.js';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -49,6 +50,8 @@ else window.addEventListener('load', scheduleBelowFoldModules, { once: true });
 qsa('[data-current-year]').forEach((element) => {
   element.textContent = String(new Date().getFullYear());
 });
+
+initLeadSource();
 
 function alignInitialHash() {
   if (!window.location.hash) return;

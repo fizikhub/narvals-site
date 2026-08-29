@@ -8,6 +8,7 @@
 - **Yayıncı & Varlık Adı:** Narvals Labs
 - **E-posta:** info@narvals.com
 - **WhatsApp / Telefon:** +90 501 944 19 21
+- **Ücretsiz dönüşüm oranı hesaplama:** https://narvals.com/araclar/donusum-orani-hesaplama/
 
 ---
 
@@ -136,6 +137,7 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 - Rehber: https://narvals.com/blog/hazir-web-sitesi-mi-ozel-tasarim-mi/
 - Rehber: https://narvals.com/blog/web-sitesi-neden-musteri-getirmiyor/
 - Rehber: https://narvals.com/blog/web-sitesi-googleda-neden-cikmiyor/
+- Rehber: https://narvals.com/blog/web-sitesi-donusum-orani-nasil-hesaplanir/
 - Rehber: https://narvals.com/blog/kurumsal-web-sitesi-briefi-nasil-hazirlanir/
 - Rehber: https://narvals.com/blog/web-sitesi-teknik-seo-kontrol-listesi/
 - Rehber: https://narvals.com/blog/google-ai-aramalari-icin-geo-rehberi/

@@ -4,12 +4,15 @@ import './content.css';
 import './pages.css';
 import './blog.css';
 import './refined-info.css';
+import { initLeadSource } from './lead-source.js';
 
 document.documentElement.classList.replace('no-js', 'js');
 
 document.querySelectorAll('[data-current-year]').forEach((element) => {
   element.textContent = String(new Date().getFullYear());
 });
+
+initLeadSource();
 
 const infoNav = document.querySelector('.info-nav');
 const infoNavLinks = infoNav?.querySelector('.info-nav__links');
