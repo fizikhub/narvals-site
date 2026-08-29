@@ -36,20 +36,25 @@
 /robots.txt
   Content-Type: text/plain; charset=utf-8
   Cache-Control: public, max-age=3600
+  Access-Control-Allow-Origin: *
 
 /llms.txt
   Content-Type: text/plain; charset=utf-8
   Cache-Control: public, max-age=3600
+  Access-Control-Allow-Origin: *
 
 /llms-full.txt
   Content-Type: text/plain; charset=utf-8
   Cache-Control: public, max-age=3600
+  Access-Control-Allow-Origin: *
 
 /sitemap.xml
   Content-Type: application/xml; charset=utf-8
   Cache-Control: public, max-age=3600
+  Access-Control-Allow-Origin: *
 
 /blog/feed.xml
   Content-Type: application/rss+xml; charset=utf-8
   Cache-Control: public, max-age=3600
+  Access-Control-Allow-Origin: *
 

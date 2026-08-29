@@ -1,0 +1,631 @@
+<!doctype html>
+<html class="no-js" lang="tr">
+  <head>
+    <script>document.documentElement.classList.replace('no-js', 'js');</script>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" /><meta name="theme-color" content="#03233a" /><meta name="color-scheme" content="light" /><meta name="format-detection" content="telephone=no" /><meta name="referrer" content="strict-origin-when-cross-origin" /><meta name="msapplication-TileColor" content="#03233a" /><meta name="msapplication-config" content="/browserconfig.xml" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" /><meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" /><meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="description" content="Googlebot tarama bütçenizi, sunucu TTFB süresi, CSR render bağımlılığı ve HTTP durum kodlarına göre simüle edin; tarama israfını ücretsiz tespit edin." /><meta name="keywords" content="tarama butcesi hesaplama, crawl budget optimizasyonu, googlebot tarama hizi, ttfb seo, taranabilirlik testi" /><meta name="author" content="Narvals Labs" />
+    <link rel="canonical" href="https://narvals.com/araclar/tarama-butcesi-hesaplama/" /><link rel="alternate" hreflang="tr" href="https://narvals.com/araclar/tarama-butcesi-hesaplama/" /><link rel="alternate" hreflang="tr-TR" href="https://narvals.com/araclar/tarama-butcesi-hesaplama/" /><link rel="alternate" hreflang="x-default" href="https://narvals.com/araclar/tarama-butcesi-hesaplama/" /><link rel="alternate" type="application/rss+xml" title="Narvals Labs Rehberleri" href="https://narvals.com/blog/feed.xml" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" /><link rel="icon" href="/assets/logo-v6/narvals-favicon-48.png" type="image/png" sizes="48x48" /><link rel="icon" href="/assets/logo-v6/narvals-favicon-96.png" type="image/png" sizes="96x96" /><link rel="icon" href="/assets/logo-v6/narvals-favicon-192.png" type="image/png" sizes="192x192" /><link rel="icon" href="/assets/logo-v6/narvals-favicon-v6-256.png" type="image/png" sizes="256x256" /><link rel="apple-touch-icon" href="/assets/logo-v6/narvals-avatar-v6-1080.png" /><link rel="manifest" href="/site.webmanifest" />
+    <meta property="og:locale" content="tr_TR" /><meta property="og:type" content="website" /><meta property="og:site_name" content="Narvals Labs" /><meta property="og:title" content="Tarama Bütçesi ve Bot Taranabilirlik Aracı | Narvals" /><meta property="og:description" content="Googlebot tarama bütçesi ve taranabilirlik verimliliğinizi anında simüle edin." /><meta property="og:url" content="https://narvals.com/araclar/tarama-butcesi-hesaplama/" /><meta property="og:image" content="https://narvals.com/og/narvals-labs-og.jpg" /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta property="og:image:alt" content="Narvals Labs Tarama Bütçesi ve Taranabilirlik Aracı" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="Tarama Bütçesi ve Bot Taranabilirlik Aracı | Narvals" /><meta name="twitter:description" content="Googlebot tarama kapasitenizi ve israf edilen bütçe oranını simüle edin." /><meta name="twitter:image" content="https://narvals.com/og/narvals-labs-og.jpg" /><meta name="twitter:image:alt" content="Narvals Labs Tarama Bütçesi ve Taranabilirlik Aracı" />
+    <title>Tarama Bütçesi ve Bot Taranabilirlik Aracı | Narvals</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://narvals.com/#organization",
+            "name": "Narvals Labs",
+            "url": "https://narvals.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://narvals.com/assets/logo-v6/narvals-avatar-v6-1080.png",
+              "contentUrl": "https://narvals.com/assets/logo-v6/narvals-avatar-v6-1080.png",
+              "width": 1080,
+              "height": 1080
+            },
+            "image": "https://narvals.com/og/narvals-labs-og.jpg",
+            "description": "Web sitesi ve UX, işletmeye özel yazılım, dijital reklam, marka, QR menü ve rezervasyon sistemleri üreten dijital stüdyo.",
+            "email": "info@narvals.com",
+            "telephone": "+905019441921",
+            "sameAs": [
+              "https://github.com/fizikhub/narvals-site"
+            ],
+            "publishingPrinciples": "https://narvals.com/editoryal-ilkeler/",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "TR"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "customer support",
+              "email": "info@narvals.com",
+              "telephone": "+905019441921",
+              "areaServed": "TR",
+              "availableLanguage": [
+                "Turkish",
+                "English"
+              ]
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "Türkiye"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Narvals Labs Dijital Hizmetler",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Kurumsal Web Tasarım ve UX",
+                    "url": "https://narvals.com/hizmetler/web-tasarim/"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "E-Ticaret Sitesi Tasarımı ve Geliştirme",
+                    "url": "https://narvals.com/hizmetler/e-ticaret/"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "İşletmeye Özel Yazılım ve Otomasyon",
+                    "url": "https://narvals.com/hizmetler/ozel-yazilim/"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Google Ads Reklam ve Dönüşüm Yönetimi",
+                    "url": "https://narvals.com/hizmetler/google-ads/"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Meta (Instagram & Facebook) Reklam Yönetimi",
+                    "url": "https://narvals.com/hizmetler/dijital-reklam/"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Sosyal Medya Yönetimi ve İçerik Stratejisi",
+                    "url": "https://narvals.com/hizmetler/sosyal-medya-yonetimi/"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Özel QR Menü Yazılımı ve Yönetim Paneli",
+                    "url": "https://narvals.com/hizmetler/qr-menu/"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Online Rezervasyon ve Randevu Sistemi",
+                    "url": "https://narvals.com/hizmetler/rezervasyon-randevu/"
+                  }
+                }
+              ]
+            },
+            "knowsAbout": [
+              "Web Tasarım ve UX",
+              "Özel Yazılım Geliştirme",
+              "Meta Reklam Yönetimi",
+              "Google Ads Yönetimi",
+              "E-Ticaret Sitesi",
+              "Sosyal Medya Yönetimi",
+              "QR Menü Sistemleri",
+              "Online Rezervasyon Sistemleri",
+              "Teknik SEO",
+              "Generative Engine Optimization (GEO)",
+              "Yapay Zeka Aramaları ve LLM İndeksleme",
+              "E-E-A-T ve Varlık Tabanlı SEO",
+              "Bilgi Kazanımı (Information Gain)",
+              "Yapılandırılmış Veri ve Schema Mimarisi",
+              "Core Web Vitals Optimizasyonu",
+              "Dönüşüm Oranı Optimizasyonu (CRO)",
+              "Conversions API (CAPI)",
+              "Google Analytics 4 (GA4)",
+              "Headless CMS ve API Mimarisi"
+            ],
+            "knowsLanguage": [
+              "tr",
+              "en"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://narvals.com/#website",
+            "url": "https://narvals.com/",
+            "name": "Narvals Labs",
+            "alternateName": [
+              "Narvals"
+            ],
+            "inLanguage": "tr-TR",
+            "publisher": {
+              "@id": "https://narvals.com/#organization"
+            },
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://narvals.com/blog/?q={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            }
+          },
+          {
+            "@type": [
+              "WebPage",
+              "WebApplication"
+            ],
+            "@id": "https://narvals.com/araclar/tarama-butcesi-hesaplama/#webpage",
+            "url": "https://narvals.com/araclar/tarama-butcesi-hesaplama/",
+            "name": "Tarama Bütçesi ve Bot Taranabilirlik Teşhisi",
+            "description": "Googlebot günlük tarama kapasitesini, TTFB, CSR render yükü ve HTTP durum kodlarına göre simüle eden ve tarama israfını hesaplayan ücretsiz araç.",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "All",
+            "browserRequirements": "JavaScript, HTML5, CSS3",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "TRY"
+            },
+            "inLanguage": "tr-TR",
+            "isPartOf": {
+              "@id": "https://narvals.com/#website"
+            },
+            "about": {
+              "@id": "https://narvals.com/#organization"
+            },
+            "provider": {
+              "@id": "https://narvals.com/#organization"
+            },
+            "softwareVersion": "2.0"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Ana sayfa",
+                "item": "https://narvals.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Ücretsiz araçlar",
+                "item": "https://narvals.com/araclar/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Tarama bütçesi ve taranabilirlik",
+                "item": "https://narvals.com/araclar/tarama-butcesi-hesaplama/"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Tarama Bütçesi (Crawl Budget) nedir ve hangi siteler için kritiktir?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tarama bütçesi, arama motoru botlarının (özellikle Googlebot) sunucunuza aşırı yük bindirmeden belirli bir zaman diliminde sitenizden indirebileceği ve dizine ekleyebileceği maksimum sayfa sayısıdır. 10.000'den fazla URL'e sahip e-ticaret siteleri, sık güncellenen haber portalları ve filtreli navigasyon kullanan platformlar için tarama bütçesi optimizasyonu doğrudan organik ciro ve indekslenme hızını belirler."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Googlebot Tarama Hızı Sınırı (Crawl Rate Limit) ile Tarama Talebi (Crawl Demand) arasındaki fark nedir?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tarama Hızı Sınırı (Crawl Rate Limit), sunucunuzun çökmesini önlemek amacıyla Googlebot'un eşzamanlı bağlantı ve istek sayısına koyduğu güvenlik tavanıdır (sunucu TTFB ve 5xx hatalarına bağlıdır). Tarama Talebi (Crawl Demand) ise sitenizin popülaritesi, sayfa güncellenme sıklığı ve arama talebidir. Gerçek tarama bütçesi bu iki metriğin kesişiminde oluşur."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Sunucu yanıt süresi (TTFB) tarama bütçesini nasıl etkiler?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Googlebot, bir sayfayı indirirken sunucunun yanıt vermesini bekler. TTFB 200ms olduğunda Googlebot ayrılan zaman penceresinde yüz binlerce sayfayı hızla tarayabilirken; TTFB 1200ms seviyesine çıktığında eşzamanlı bağlantı sınırına takılır ve günlük taranabilen sayfa sayısı %70'e varan oranda düşer."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "JavaScript Client-Side Rendering (CSR) tarama bütçesini neden israf eder?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Client-Side Rendering (CSR) kullanan sitelerde HTML boştur ve içerik istemcide JavaScript çalıştırılarak oluşturulur. Googlebot, saf HTML sayfaları doğrudan ilk geçişte indekslerken, JS sayfalarını ikinci aşamadaki Web Rendering Service (WRS) kuyruğuna atar. Bu durum arama motorunun CPU ve bellek maliyetini 15 kat artırarak tarama sıklığının azalmasına ve indekslenme gecikmelerine (index lag) yol açar."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "HTTP 304 (Not Modified) ve HTTP 404/5xx durum kodlarının tarama verimliliğine etkisi nedir?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Değişmeyen sayfalar için HTTP 304 başlığı dönüldüğünde bot tüm gövdeyi indirmek yerine yalnızca başlığı okur; böylece bant genişliği ve zaman harcamadan diğer sayfalara geçer. Buna karşılık %2'nin üzerindeki 5xx sunucu hataları Googlebot'un Host Load Backoff mekanizmasını tetikleyerek taramayı kilitler; 404 ve gereksiz 301 yönlendirme zincirleri ise botun ayrılan bütçesini ölü sayfalarda tüketir."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body class="info-page cbc-page">
+    <a class="skip-link" href="#main-content">Ana içeriğe geç</a>
+    <header class="info-nav"><a class="info-nav__brand" href="/"><img src="/assets/logo-v6/narvals-mascot-v6-transparent-96.png" alt="" width="96" height="96" /><span>narvals<i>//</i>labs</span></a><nav class="info-nav__links" aria-label="Ana menü"><a href="/hizmetler/">Hizmetler</a><a href="/blog/">Rehberler</a><a href="/araclar/" aria-current="page">Araçlar</a><a href="/iletisim/">Projeyi konuşalım</a></nav></header>
+    <main id="main-content">
+      <section class="info-hero cbc-hero">
+        <div class="info-hero__copy">
+          <nav class="breadcrumbs" aria-label="İçerik yolu"><a href="/">Ana sayfa</a><span>/</span><a href="/araclar/">Araçlar</a><span>/</span><span>Tarama Bütçesi &amp; Taranabilirlik</span></nav>
+          <p class="info-hero__kicker">Googlebot Crawl Rate Limit · Host Load · Taranabilirlik Teşhisi</p>
+          <h1>Tarama Bütçenizi ve Bot Verimliliğinizi Test Edin.</h1>
+          <p class="info-hero__answer">Web sitenizin Googlebot tarama kapasitesini, ortalama TTFB sunucu yanıt süresi, JavaScript render mimarisi ve HTTP durum kodları dağılımına göre simüle edin; israf edilen tarama bütçenizi ve darboğazları tespit edin.</p>
+        </div>
+        <aside class="info-hero__panel">
+          <strong>Teşhis Edilen 4 Ana Boyut</strong>
+          <ul>
+            <li>Sunucu Yanıt Hızı &amp; TTFB (Host Load Limiti)</li>
+            <li>Render Mimarisi (SSR vs WRS Kuyruğu)</li>
+            <li>HTTP Durum Kodları (200, 304, 301, 404, 5xx)</li>
+            <li>Site Kapsama Döngüsü &amp; İndeks Gecikmesi</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="cbc-intro">
+        <div>
+          <h2>Googlebot sitenize sınırsız kaynak ayırmaz.</h2>
+          <p>Googlebot, sunucunuz yavaşladığında (yüksek TTFB) veya hata verdiğinde (5xx) altyapınızı korumak amacıyla tarama hızını (Crawl Rate Limit) anında kısar. Ağır CSR sayfalar ve gereksiz yönlendirme zincirleri ise değerli tarama hakkınızı tüketerek yeni içeriklerinizin dizine girmesini geciktirir.</p>
+        </div>
+        <ul>
+          <li>Crawl Rate vs Crawl Demand dengesi</li>
+          <li>İki aşamalı Chromium WRS render maliyeti</li>
+          <li>Host Load Backoff koruma mekanizması</li>
+          <li>Kayıt gerektirmeyen şeffaf simülasyon</li>
+        </ul>
+      </section>
+
+      <!-- Preset Selector Bar -->
+      <section class="cbc-preset-bar" aria-label="Hazır site profilleri">
+        <div class="cbc-preset-wrapper">
+          <span class="cbc-preset-label">Hızlı Senaryo ve Sektör Şablonları</span>
+          <div class="cbc-preset-buttons">
+            <button class="cbc-preset-btn active" type="button" data-preset="corporate">Sağlıklı Kurumsal / İçerik Sitesi</button>
+            <button class="cbc-preset-btn" type="button" data-preset="ecommerce">Büyük E-Ticaret / Filtreli Katalog</button>
+            <button class="cbc-preset-btn" type="button" data-preset="spa">Client-Side React / SPA</button>
+            <button class="cbc-preset-btn" type="button" data-preset="edge">Yüksek Hızlı Edge / Headless</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Interactive Form -->
+      <form class="cbc-form" data-cbc-form novalidate>
+        <div class="cbc-form-container">
+
+          <!-- Group 1: Scale & Dynamics -->
+          <section class="cbc-group" aria-labelledby="g1-title">
+            <header>
+              <span class="cbc-group-badge">Adım 1</span>
+              <h2 id="g1-title">Site Ölçeği ve İçerik Dinamizmi</h2>
+              <p>Sitenizin toplam taranabilir URL hacmi ve günlük eklenen / güncellenen sayfa yoğunluğu.</p>
+            </header>
+            <div class="cbc-fields-grid">
+              <div class="cbc-field-card">
+                <div class="cbc-field-header">
+                  <label for="f-url-count">Toplam URL / Sayfa Sayısı</label>
+                  <span class="cbc-input-unit">URL</span>
+                </div>
+                <p class="cbc-field-desc">XML site haritanızdaki ve taranabilir dahili bağlantılardaki toplam sayfa adedi.</p>
+                <div class="cbc-input-row">
+                  <input class="cbc-input-number" id="f-url-count" name="url_count" type="number" min="100" max="1000000" step="500" value="1500" />
+                </div>
+                <input class="cbc-range-slider" data-range="url_count" type="range" min="100" max="250000" step="500" value="1500" aria-label="Toplam sayfa sayısı kaydırıcı" />
+              </div>
+
+              <div class="cbc-field-card">
+                <div class="cbc-field-header">
+                  <label for="f-updated-count">Günlük Güncellenen / Yeni URL</label>
+                  <span class="cbc-input-unit">URL/gün</span>
+                </div>
+                <p class="cbc-field-desc">Her gün fiyatı değişen ürünler, yeni blog yazıları veya revize edilen sayfalar.</p>
+                <div class="cbc-input-row">
+                  <input class="cbc-input-number" id="f-updated-count" name="updated_count" type="number" min="0" max="50000" step="10" value="20" />
+                </div>
+                <input class="cbc-range-slider" data-range="updated_count" type="range" min="0" max="5000" step="10" value="20" aria-label="Günlük güncellenen sayfa kaydırıcı" />
+              </div>
+            </div>
+          </section>
+
+          <!-- Group 2: Server Performance & Payload -->
+          <section class="cbc-group" aria-labelledby="g2-title">
+            <header>
+              <span class="cbc-group-badge">Adım 2</span>
+              <h2 id="g2-title">Sunucu Performansı ve Varlık Boyutu</h2>
+              <p>Googlebot'un sunucuya aşırı yüklenmeden açabileceği eşzamanlı bağlantı kapasitesini belirleyen metrikler.</p>
+            </header>
+            <div class="cbc-fields-grid">
+              <div class="cbc-field-card">
+                <div class="cbc-field-header">
+                  <label for="f-ttfb">Ortalama TTFB (Time to First Byte)</label>
+                  <span class="cbc-input-unit">ms</span>
+                </div>
+                <p class="cbc-field-desc">Sunucunun ilk HTML baytını gönderme süresi (Search Console &gt; Ayarlar &gt; Tarama İstatistikleri).</p>
+                <div class="cbc-input-row">
+                  <input class="cbc-input-number" id="f-ttfb" name="ttfb" type="number" min="30" max="3000" step="10" value="180" />
+                  <span class="cbc-status-tag cbc-status-tag--good" data-ttfb-tag>Mükemmel (&lt;200ms)</span>
+                </div>
+                <input class="cbc-range-slider" data-range="ttfb" type="range" min="50" max="2000" step="10" value="180" aria-label="TTFB kaydırıcı" />
+              </div>
+
+              <div class="cbc-field-card">
+                <div class="cbc-field-header">
+                  <label for="f-size">Ortalama HTML Yanıt Boyutu</label>
+                  <span class="cbc-input-unit">KB</span>
+                </div>
+                <p class="cbc-field-desc">Sıkıştırılmış (Gzip/Brotli) saf HTML boyutu (CSS, JS ve resimler hariçtir).</p>
+                <div class="cbc-input-row">
+                  <input class="cbc-input-number" id="f-size" name="html_size" type="number" min="5" max="800" step="5" value="45" />
+                  <span class="cbc-status-tag cbc-status-tag--good" data-size-tag>Hafif &amp; Optimize (&lt;50KB)</span>
+                </div>
+                <input class="cbc-range-slider" data-range="html_size" type="range" min="10" max="500" step="5" value="45" aria-label="HTML boyutu kaydırıcı" />
+              </div>
+            </div>
+          </section>
+
+          <!-- Group 3: Rendering & Architecture -->
+          <section class="cbc-group" aria-labelledby="g3-title">
+            <header>
+              <span class="cbc-group-badge">Adım 3</span>
+              <h2 id="g3-title">JavaScript Render Mimarisi</h2>
+              <p>Googlebot'un içeriğe doğrudan ilk geçişte mi yoksa ikinci aşamadaki render kuyruğunda mı ulaştığını belirler.</p>
+            </header>
+            <div class="cbc-render-grid">
+              <label class="cbc-render-card active">
+                <input name="render_type" type="radio" value="ssr" checked />
+                <span class="cbc-render-title">Statik HTML / SSR (Server-Side Rendering)</span>
+                <span class="cbc-render-desc">HTML içeriği sunucuda hazır üretilir. Googlebot JS çalıştırmadan anında indeksler. Bot CPU maliyeti minimumdur.</span>
+                <span class="cbc-render-multiplier">Render Çarpanı: 1.00x (Maksimum Hız)</span>
+              </label>
+
+              <label class="cbc-render-card">
+                <input name="render_type" type="radio" value="hybrid" />
+                <span class="cbc-render-title">Hibrit / Isomorphic Hydration</span>
+                <span class="cbc-render-desc">Temel içerik sunucu HTML'indedir; interaktif bileşenler istemcide canlandırılır. Bot içeriği görür, küçük render yükü oluşur.</span>
+                <span class="cbc-render-multiplier">Render Çarpanı: 0.85x (Yüksek Hız)</span>
+              </label>
+
+              <label class="cbc-render-card">
+                <input name="render_type" type="radio" value="csr" />
+                <span class="cbc-render-title">Client-Side Rendering (CSR / SPA)</span>
+                <span class="cbc-render-desc">HTML boştur; içerik tarayıcıda JS çalıştırılarak çizilir. Googlebot WRS kuyruğunda bekletir, tarama hızı %60 düşer.</span>
+                <span class="cbc-render-multiplier">Render Çarpanı: 0.38x (Ağır Kuyruk)</span>
+              </label>
+            </div>
+          </section>
+
+          <!-- Group 4: HTTP Status Code Distribution -->
+          <section class="cbc-group" aria-labelledby="g4-title">
+            <header>
+              <span class="cbc-group-badge">Adım 4</span>
+              <h2 id="g4-title">Sunucu HTTP Durum Kodları Dağılımı (%)</h2>
+              <p>Sunucu loglarınızdaki veya Google Search Console tarama istatistiklerindeki yanıt kodları oranı.</p>
+            </header>
+
+            <div class="cbc-status-matrix">
+              <div class="cbc-status-box cbc-status-box--200">
+                <label for="f-s200"><span>200 OK</span><small>%</small></label>
+                <input id="f-s200" name="status_200" type="number" min="0" max="100" step="1" value="92" />
+                <small>Başarıyla taranan faydalı sayfalar</small>
+              </div>
+
+              <div class="cbc-status-box cbc-status-box--304">
+                <label for="f-s304"><span>304 Not Modified</span><small>%</small></label>
+                <input id="f-s304" name="status_304" type="number" min="0" max="100" step="1" value="5" />
+                <small>Değişmemiş, gövdesi indirilmeden doğrulanan</small>
+              </div>
+
+              <div class="cbc-status-box cbc-status-box--3xx">
+                <label for="f-s3xx"><span>301 / 302 Yönlendirme</span><small>%</small></label>
+                <input id="f-s3xx" name="status_3xx" type="number" min="0" max="100" step="1" value="2" />
+                <small>Ekstra istek harcatan yönlendirme zincirleri</small>
+              </div>
+
+              <div class="cbc-status-box cbc-status-box--404">
+                <label for="f-s404"><span>404 / 410 Bulunamadı</span><small>%</small></label>
+                <input id="f-s404" name="status_404" type="number" min="0" max="100" step="1" value="1" />
+                <small>Boşa harcanan kırık link istekleri</small>
+              </div>
+
+              <div class="cbc-status-box cbc-status-box--5xx">
+                <label for="f-s5xx"><span>5xx Sunucu Hatası</span><small>%</small></label>
+                <input id="f-s5xx" name="status_5xx" type="number" min="0" max="100" step="1" value="0" />
+                <small>Host Load Backoff tetikleyen kritik hatalar</small>
+              </div>
+            </div>
+
+            <div class="cbc-dist-wrapper">
+              <div class="cbc-dist-bar" aria-hidden="true">
+                <div class="cbc-dist-segment cbc-dist-segment--200" data-seg="200" style="width:92%;"></div>
+                <div class="cbc-dist-segment cbc-dist-segment--304" data-seg="304" style="width:5%;"></div>
+                <div class="cbc-dist-segment cbc-dist-segment--3xx" data-seg="3xx" style="width:2%;"></div>
+                <div class="cbc-dist-segment cbc-dist-segment--404" data-seg="404" style="width:1%;"></div>
+                <div class="cbc-dist-segment cbc-dist-segment--5xx" data-seg="5xx" style="width:0%;"></div>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <span class="cbc-dist-warning" data-dist-warning hidden></span>
+                <small style="margin-left:auto;font-family:'Azeret Mono',monospace;font-size:12px;font-weight:700;">Toplam: <span data-dist-total>%100</span></small>
+              </div>
+            </div>
+            <div style="margin-top: 24px;">
+              <button class="info-button" type="submit">Hesaplamayı güncelle <span aria-hidden="true">→</span></button>
+            </div>
+          </section>
+
+        </div>
+      </form>
+
+      <!-- Diagnostic Results Section -->
+      <section class="cbc-result" data-cbc-result aria-labelledby="cbc-sonuc-baslik">
+        <div class="cbc-result-container">
+          <header>
+            <p>Tarama Karnesi &amp; Canlı Teşhis</p>
+            <h2 id="cbc-sonuc-baslik">Tarama Bütçesi Simülasyon Raporu</h2>
+          </header>
+
+          <!-- Score Hero -->
+          <div class="cbc-score-hero">
+            <div class="cbc-score-badge cbc-score-badge--excellent" data-cbc-score-badge>
+              <span class="cbc-score-number" data-cbc-score>96</span>
+              <span class="cbc-score-max">/ 100 PUAN</span>
+            </div>
+            <div class="cbc-score-details">
+              <h3 data-cbc-status-heading>Mükemmel Taranabilirlik &amp; Yüksek Kapasite</h3>
+              <p data-cbc-status-desc>Sunucu yanıt süreleriniz ve teknik mimariniz Googlebot için ideal seviyede. Bot istekleri minimum israfla doğrudan faydalı içeriğe ulaşıyor.</p>
+            </div>
+          </div>
+
+          <!-- Key Metrics Grid -->
+          <div class="cbc-metrics-grid">
+            <article class="cbc-metric-card">
+              <span class="cbc-metric-title">Günlük Tarama Kapasitesi</span>
+              <strong class="cbc-metric-value" data-metric-crawl-daily>2.645 istek</strong>
+              <span class="cbc-metric-sub" data-metric-crawl-monthly>Aylık ~79.350 bot isteği</span>
+            </article>
+
+            <article class="cbc-metric-card">
+              <span class="cbc-metric-title">İsraf Edilen Tarama Bütçesi</span>
+              <strong class="cbc-metric-value" style="color:var(--coral);" data-metric-waste-pct>%2.5</strong>
+              <span class="cbc-metric-sub" data-metric-waste-daily>Günlük ~66 boşa giden istek</span>
+            </article>
+
+            <article class="cbc-metric-card">
+              <span class="cbc-metric-title">Faydalı / Net Tarama</span>
+              <strong class="cbc-metric-value" style="color:var(--aqua);" data-metric-useful-daily>2.579 sayfa/gün</strong>
+              <span class="cbc-metric-sub">Gerçek içeriğe ulaşan istekler</span>
+            </article>
+
+            <article class="cbc-metric-card">
+              <span class="cbc-metric-title">Tam Site Tarama Döngüsü</span>
+              <strong class="cbc-metric-value" data-metric-cycle-time>0.6 gün</strong>
+              <span class="cbc-metric-sub" data-metric-update-cov>%100 (Günlük 20 güncelleme anında karşılanıyor)</span>
+            </article>
+          </div>
+
+          <!-- Wastage Breakdown -->
+          <div class="cbc-wastage-box">
+            <h3>Tarama Bütçesi İsraf Kaynakları &amp; Detaylar</h3>
+            <div class="cbc-wastage-items">
+              <div class="cbc-wastage-item">
+                <strong>404 Ölü Bağlantılar</strong>
+                <span data-waste-404>26 istek/gün (%1.0)</span>
+              </div>
+              <div class="cbc-wastage-item">
+                <strong>3xx Yönlendirme Kaybı</strong>
+                <span data-waste-3xx>40 istek/gün (%2.0)</span>
+              </div>
+              <div class="cbc-wastage-item">
+                <strong>5xx Sunucu Hata İsrafı</strong>
+                <span data-waste-5xx>0 istek/gün (%0.0)</span>
+              </div>
+              <div class="cbc-wastage-item">
+                <strong>CSR / Render Kuyruk Yükü</strong>
+                <span data-waste-csr>0 (Statik / SSR)</span>
+              </div>
+              <div class="cbc-wastage-item">
+                <strong>304 Önbellek Eksikliği</strong>
+                <span data-waste-cache>0 (304 Önbellek Aktif)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Prioritized Actionable Recommendations -->
+          <div>
+            <h3 style="font-family:'Anybody Variable',sans-serif;font-size:1.4rem;color:#ffffff;margin:0 0 16px;">Öncelikli Teknik İyileştirme Yol Haritası</h3>
+            <div class="cbc-recommendations" data-cbc-recommendations></div>
+          </div>
+
+          <!-- Actions -->
+          <div class="cbc-actions">
+            <button class="info-button info-button--light" type="button" data-cbc-copy>Rapor Özetini Kopyala</button>
+            <button class="info-button info-button--light" type="button" data-cbc-print>Yazdır / PDF Al</button>
+            <a class="info-button" data-cbc-whatsapp href="https://wa.me/905019441921" rel="noopener noreferrer">Teknik SEO Projesini Narvals ile Başlatın <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Scientific & Engineering Sources -->
+      <section class="cbc-sources">
+        <div>
+          <h2>Tarama verimliliğinin teknik standartları.</h2>
+          <p>Hesaplama modelimiz; Google Search Central resmi tarama bütçesi rehberleri, WRS (Web Rendering Service) mimarisi ve RFC 9110 HTTP önbellekleme protokolleri baz alınarak modellenmiştir.</p>
+        </div>
+        <ul>
+          <li><a href="https://developers.google.com/search/docs/crawling-indexing/large-site-managing-crawl-budget" rel="noopener noreferrer">Google Search Central: Büyük Siteler İçin Tarama Bütçesi Yönetimi ↗</a></li>
+          <li><a href="https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics" rel="noopener noreferrer">Google Search Central: JavaScript SEO ve WRS Kuyruk Mimarisi ↗</a></li>
+          <li><a href="https://www.rfc-editor.org/rfc/rfc9110.html#name-304-not-modified" rel="noopener noreferrer">IETF RFC 9110: HTTP 304 Not Modified &amp; Conditional Requests ↗</a></li>
+          <li><a href="https://developers.google.com/search/docs/crawling-indexing/http-network-errors" rel="noopener noreferrer">Google Search Central: HTTP Ağ Hataları ve Host Load Backoff ↗</a></li>
+        </ul>
+      </section>
+
+      <!-- Bridge CTA -->
+      <section class="cbc-bridge">
+        <div>
+          <h2>Milyonlarca sayfa için optimize edilmiş teknik mimari.</h2>
+          <p>Narvals Labs; e-ticaret siteleri, büyük kataloglar ve özel SaaS yazılımları için sıfır israflı taranabilirlik, edge caching ve yüksek hızlı SSR altyapıları inşa eder.</p>
+        </div>
+        <a href="/hizmetler/web-tasarim/">Teknik Web Tasarım Yaklaşımımız <span aria-hidden="true">→</span></a>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="info-section cbc-faq">
+        <p class="info-section__label">Sık Sorulan Sorular</p>
+        <h2>Tarama Bütçesi ve Bot Optimizasyonu hakkında.</h2>
+        <div class="info-faq">
+          <details>
+            <summary>Tarama Bütçesi (Crawl Budget) nedir ve hangi siteler için kritiktir?</summary>
+            <p>Tarama bütçesi, Googlebot'un sunucunuzu zorlamadan sitenizden indirebileceği ve dizine ekleyebileceği maksimum sayfa sayısıdır. 10.000'den fazla sayfaya sahip e-ticaret siteleri, sık güncellenen portallar ve filtreli kataloglar için tarama bütçesi optimizasyonu doğrudan yeni sayfaların indekslenme hızını ve arama trafiğini belirler.</p>
+          </details>
+          <details>
+            <summary>Googlebot Tarama Hızı Sınırı (Crawl Rate Limit) ile Tarama Talebi (Crawl Demand) arasındaki fark nedir?</summary>
+            <p>Tarama Hızı Sınırı, sunucunuzun çökmesini önlemek için Googlebot'un uyguladığı güvenlik tavanıdır (TTFB ve 5xx hatalarına bağlıdır). Tarama Talebi ise sitenizin popülaritesi, sayfa güncellenme sıklığı ve arama hacmidir. Gerçek tarama performansı bu iki metriğin dengesiyle oluşur.</p>
+          </details>
+          <details>
+            <summary>Sunucu yanıt süresi (TTFB) tarama bütçesini nasıl etkiler?</summary>
+            <p>Googlebot, sayfayı indirirken sunucunun yanıt vermesini bekler. TTFB 200ms olduğunda Googlebot aynı zaman aralığında yüz binlerce sayfayı hızla tarayabilirken; TTFB 1200ms seviyesine çıktığında eşzamanlı bağlantı sınırına takılır ve günlük taranabilen sayfa sayısı %70'e varan oranda düşer.</p>
+          </details>
+          <details>
+            <summary>JavaScript Client-Side Rendering (CSR) tarama bütçesini neden israf eder?</summary>
+            <p>CSR mimarisinde HTML boştur ve içerik tarayıcıda JS çalıştırılarak üretilir. Googlebot, saf HTML sayfaları doğrudan ilk geçişte indekslerken, JS sayfalarını ikinci aşamadaki Web Rendering Service (WRS) kuyruğuna atar. Bu durum arama motorunun CPU maliyetini 15 kat artırarak tarama sıklığının azalmasına ve indeks gecikmesine yol açar.</p>
+          </details>
+          <details>
+            <summary>HTTP 304 (Not Modified) ve HTTP 404/5xx durum kodlarının tarama verimliliğine etkisi nedir?</summary>
+            <p>Değişmeyen sayfalar için HTTP 304 başlığı dönüldüğünde bot tüm gövdeyi indirmek yerine yalnızca başlığı okur; böylece bant genişliği ve zaman harcamadan diğer sayfalara geçer. Buna karşılık %2'nin üzerindeki 5xx sunucu hataları Googlebot'un Host Load Backoff mekanizmasını tetikleyerek taramayı kısıtlar; 404 ve yönlendirme zincirleri ise botun hakkını ölü sayfalarda tüketir.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div class="site-footer__brand"><a href="/"><img src="/assets/logo-v6/narvals-mascot-v6-transparent-96.png" alt="" width="96" height="96" loading="lazy" /><strong>narvals<span>//</span>labs</strong></a><p>Web sitesi, özel yazılım ve reklamı aynı iş hedefinde buluşturan dijital üretim stüdyosu.</p></div><nav aria-label="Hizmet bağlantıları"><strong>Hizmetler</strong><a href="/hizmetler/web-tasarim/">Web tasarım &amp; UX</a><a href="/hizmetler/e-ticaret/">E-ticaret</a><a href="/hizmetler/ozel-yazilim/">Özel yazılım</a><a href="/hizmetler/google-ads/">Google Ads</a><a href="/hizmetler/dijital-reklam/">Meta reklam</a></nav><nav aria-label="Bilgi merkezi bağlantıları"><strong>Bilgi merkezi</strong><a href="/blog/">Tüm rehberler</a><a href="/araclar/">Ücretsiz araçlar</a><a href="/araclar/core-web-vitals-kontrolu/">Core Web Vitals</a><a href="/editoryal-ilkeler/">Editoryal ilkeler</a><a href="/hakkimizda/">Hakkımızda</a></nav><div class="site-footer__contact"><strong>Bir proje mi var?</strong><p>Hedefi ve en kritik darboğazı anlatarak ilk görüşmeyi başlatın.</p><a href="mailto:info@narvals.com">info@narvals.com</a><a href="https://wa.me/905019441921" rel="noopener noreferrer">WhatsApp: +90 501 944 19 21 ↗</a></div><p class="site-footer__legal">© <span data-current-year>2026</span> Narvals Labs. Tüm hakları saklıdır.</p></footer>
+    <script type="module" src="/src/info-main.js"></script><script type="module" src="/src/crawl-budget-calculator.js"></script>
+  </body>
+</html>

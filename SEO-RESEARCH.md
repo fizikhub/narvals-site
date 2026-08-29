@@ -89,6 +89,33 @@ dosyasındadır.
 | [Semrush ghost citations araştırması](https://www.semrush.com/blog/the-ghost-citations-study/) | Üretken cevaplar bazen yararlandığı sayfayı görünür citation olarak göstermeyebilir. | Citation, marka mention’ı ve referral ayrı metrikler olarak tanımlandı. | Tespit yöntemi platformların kapalı retrieval sistemini bütünüyle göremez. |
 | [Cambridge attribution araştırması](https://www.cambridge.org/core/journals/data-and-policy/article/attribution-crisis-in-llm-search-results-estimating-ecosystem-exploitation/170DD0B88E5F5AEA8F69F2E9AF1328E3) | LLM arama yanıtlarında kaynak kullanımı ile görünür atıf arasında boşluk oluşabilir. | Başarı yalnız citation sayısına indirgenmedi; marka talebi ve nitelikli referral da izlenecek. | Ekosistem ve modeller hızla değişmektedir. |
 
+## Reddit saha araştırması ve kanıt sınırı
+
+Reddit, Google veya akademik yayın kadar yetkili bir kaynak değildir. Buna rağmen
+`r/TechSEO`, `r/bigseo` ve `r/SEO` içindeki tekrar eden saha gözlemleri, hangi
+teşhislerin üretim loglarında sınanması gerektiğini belirlemek için incelendi.
+Tekil başarı hikâyeleri nedensellik kanıtı sayılmadı.
+
+- [55 sayfalık programatik site tartışması](https://www.reddit.com/r/bigseo/comments/1t4mm6z/29_pages_stuck_in_discovered_currently_not/):
+  sitemap’in tek başına yeterli olmadığı; trafik alan, alakalı sayfalardan gerçek
+  iç bağlantı ve şablon başına benzersiz değer ihtiyacı tekrarlandı.
+- [150 bin URL’lik site tartışması](https://www.reddit.com/r/TechSEO/comments/1vbam20/we_cut_a_quarter_of_our_150kpage_site_google/):
+  düşük değerli URL’leri azaltma sonrası iyileşme iddia edildi; yorumlarda zaman,
+  otorite ve başka değişkenler kontrol edilmediği için bunun `n=1` ve korelasyon
+  olduğu özellikle not edildi.
+- [Olgun sitede yeni URL gecikmesi tartışması](https://www.reddit.com/r/bigseo/comments/1vu5b98/old_wellestablished_site_with_perfect_internal/):
+  Crawl Stats’in ortalamaları gizleyebildiği, ham loglarda Googlebot istekleri,
+  benzersiz URL sayısı ve sürekli `5xx` oranının birlikte incelenmesi önerildi.
+- [Google AI özellikleri tartışması](https://www.reddit.com/r/SEO/comments/1m9k0kg/google_confirms_normal_seo_works_for_ai_overviews/):
+  topluluk `llms.txt` ve “GEO hilesi” iddialarında bölünmüş durumda. Uygulama
+  kararı topluluk görüşüne değil, Google’ın Temmuz 2026 resmî rehberine dayandırıldı.
+
+Bu saha araştırmasının koda dönüşen sonucu: canonical sayfalar için gerçek iç
+bağlantı kontrolü, üretim `404/3xx/5xx` denetimi, materyal değişiklik tarihleri,
+seri benzer içerik uyarıları ve bot/WAF erişiminin yayın sonrası ham loglarla
+izlenmesi. Reddit’ten backlink üretme, sahte mention veya URL slug değiştirme gibi
+kanıtsız kısa yollar uygulanmadı.
+
 ## İçerik üretim backlog’u
 
 Aşağıdakiler ancak doğrulanabilir işletme verisi sağlandığında yayınlanmalıdır:

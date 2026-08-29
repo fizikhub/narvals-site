@@ -65,7 +65,6 @@
       "@type": "Organization",
       "@id": "https://narvals.com/#organization",
       "name": "Narvals Labs",
-      "legalName": "Narvals Labs",
       "url": "https://narvals.com/",
       "logo": {
         "@type": "ImageObject",
@@ -86,8 +85,6 @@
         "@type": "PostalAddress",
         "addressCountry": "TR"
       },
-      "currenciesAccepted": "TRY, EUR, USD",
-      "paymentAccepted": "Bank Transfer, Credit Card",
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer support",
@@ -97,28 +94,11 @@
         "availableLanguage": [
           "Turkish",
           "English"
-        ],
-        "hoursAvailable": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"
-          ],
-          "opens": "09:00",
-          "closes": "18:00"
-        }
+        ]
       },
       "areaServed": {
         "@type": "Country",
         "name": "Türkiye"
-      },
-      "founder": {
-        "@type": "Organization",
-        "name": "Narvals Labs Team",
-        "url": "https://narvals.com/hakkimizda/"
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -222,10 +202,7 @@
       "url": "https://narvals.com/",
       "name": "Narvals Labs",
       "alternateName": [
-        "Narvals",
-        "Narvals Digital",
-        "Narvals Studio",
-        "Narvals Labs Dijital"
+        "Narvals"
       ],
       "inLanguage": "tr-TR",
       "publisher": {
@@ -312,7 +289,7 @@
       "timeRequired": "PT14M",
       "inLanguage": "tr-TR",
       "isAccessibleForFree": true,
-      "wordCount": 680,
+      "wordCount": 693,
       "articleSection": "SEO & GEO",
       "keywords": "Schema.org rehberi, JSON-LD grafı, Knowledge Graph SEO, sameAs Wikidata, yapılandırılmış veri",
       "author": {
@@ -422,7 +399,7 @@
           "name": "@graph kullanmanın avantajı nedir?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sayfadaki yazar, yayıncı, ana makale, web sitesi ve hizmet nesnelerini tekil `@id` referanslarıyla birbirine bağlayarak arama motoru Knowledge Graph ayrıştırıcısının ilişkileri eksiksiz anlamasını sağlar."
+            "text": "Yazar, yayıncı, sayfa ve hizmet gibi nesneleri kalıcı @id referanslarıyla ilişkilendirmeyi ve tekrar eden veriyi tek yerde yönetmeyi kolaylaştırır. Google için zorunlu değildir."
           }
         },
         {
@@ -430,7 +407,7 @@
           "name": "sameAs özelliği neden önemlidir?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Varlığın küresel Wikidata veya Wikipedia kimliğiyle eşleşmesini sağlayarak Google Knowledge Graph ve AI LLM modellerinin marka ve uzmanlık konusundaki halüsinasyonlarını engeller."
+            "text": "Bir varlığın gerçekten aynı varlığı temsil eden dış profillerini ilişkilendirebilir. Yanlış veya yalnız konu benzerliği taşıyan bağlantılar eklemek belirsizliği azaltmak yerine hatalı veri üretir."
           }
         },
         {
@@ -438,7 +415,7 @@
           "name": "Schema eklemek sıralamayı doğrudan yükseltir mi?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Schema doğrudan bir sıralama faktörü değildir; ancak zengin sonuç (Rich Snippet) kazanımı, tıklama oranı (CTR) artışı, AI yanıtlarında kaynak gösterimi ve anlamsal güvenilirlik sağlar."
+            "text": "Hayır. Doğru ve desteklenen yapılandırılmış veri bazı zengin sonuçlara uygunluk sağlayabilir; gösterim, tıklama artışı, Google sırası veya AI kaynak seçimi garanti edilmez."
           }
         }
       ]
@@ -460,10 +437,10 @@
             <nav class="breadcrumbs" aria-label="İçerik yolu"><a href="/">Ana sayfa</a><span>/</span><a href="/blog/">Rehberler</a><span>/</span><a href="/blog/konu/seo-geo/">SEO &amp; GEO</a></nav>
             <p class="info-hero__kicker">SEO &amp; GEO · Karar rehberi</p>
             <h1>Schema.org ve bağlantılı JSON-LD graf mimarisi rehberi</h1>
-            <p class="info-hero__answer">Schema.org işaretlemesi, web sayfalarını arama motorları ve LLM yanıt ajanları için anlamsal birer varlığa (entity) dönüştüren yapılandırılmış veri standardıdır. Kopuk JSON-LD blokları yerine tek bir @graph dizisi içinde birbirine @id referanslarıyla bağlanan Organization, WebSite, WebPage, Article, Service ve Person nesneleri; Google Knowledge Graph ve AI alıntı doğruluğunu en üst düzeye çıkarır.</p>
+            <p class="info-hero__answer">Schema.org işaretlemesi sayfadaki görünür kişi, kurum, içerik, ürün veya hizmet bilgisini makinece okunabilir biçimde açıklar. JSON-LD nesnelerini kalıcı @id değerleriyle bağlamak tutarlılığı ve bakımı kolaylaştırabilir; ancak tek bir @graph zorunlu değildir, Google AI görünürlüğü için özel schema yoktur ve yapılandırılmış veri sıralama ya da kaynak gösterimi garantisi vermez.</p>
             <div class="article-meta"><span>Yayınlayan <a href="/hakkimizda/">Narvals Labs</a></span><span>Yayımlandı <time datetime="2026-08-30T00:00:00+03:00">30 Ağustos 2026</time></span><span>14 dk okuma</span></div>
           </div>
-          <aside class="info-hero__panel article-summary" aria-labelledby="ozet-basligi"><strong id="ozet-basligi">Bu rehberin özeti</strong><ul><li>Ayrık JSON-LD blokları yerine tek bir @graph dizisi kullanılmalıdır.</li><li>Her ana varlık benzersiz ve kalıcı bir @id URI kimliğine sahip olmalıdır.</li><li>Wikidata ve Wikipedia URL’leri (sameAs) varlık belirsizliğini (disambiguation) çözer.</li><li>knowsAbout özelliği kurumun ve yazarın uzmanlık taksonomisini arama motoruna bildirir.</li><li>Doğrulama Google Rich Results Test ve Schema.org Validator üzerinde sıfır hatayla yapılmalıdır.</li></ul></aside>
+          <aside class="info-hero__panel article-summary" aria-labelledby="ozet-basligi"><strong id="ozet-basligi">Bu rehberin özeti</strong><ul><li>Tek bir @graph bakım tercihi olabilir; ayrı ve geçerli JSON-LD blokları da desteklenir.</li><li>Her ana varlık benzersiz ve kalıcı bir @id URI kimliğine sahip olmalıdır.</li><li>sameAs yalnız gerçekten aynı varlığın doğrulanabilir profillerini göstermelidir; rastgele kavram sayfaları kullanılmamalıdır.</li><li>knowsAbout destekleyici bir Schema.org özelliğidir; tek başına uzmanlık veya Google güveni kanıtlamaz.</li><li>Schema.org Validator söz dizimini, Rich Results Test ise Google’ın desteklediği zengin sonuç uygunluğunu farklı kapsamlarla denetler.</li></ul></aside>
         </header>
 
         <div class="info-layout article-layout">
@@ -472,26 +449,26 @@
             <section class="info-section article-section" id="kopuk-bloklar-vs-graph">
         <p class="info-section__label">Graf mimarisi</p>
         <h2>Kopuk JSON-LD blokları yerine birleşik @graph mimarisi kurun.</h2>
-        <p>Geleneksel SEO uygulamalarında sayfaya 3-4 farklı JSON-LD script etiketi yerleştirilerek kopuk Organization, Article ve BreadcrumbList şemaları eklenir. Bu durum Google ve yapay zekâ ayrıştırıcılarının makalenin yazarının hangi kuruma bağlı olduğunu veya sayfanın hangi web sitesinin parçası olduğunu tespit etmesini zorlaştırır.</p>
-        <p>Modern yaklaşım, tüm nesneleri tek bir `@graph` dizisinde toplamak ve `@id` referanslarıyla (örneğin `"author": { "@id": "https://example.com/#organization" }`) birbirine bağlamaktır.</p>
+        <p>Bir sayfada birden fazla geçerli JSON-LD script etiketi bulunabilir. Asıl risk blok sayısı değil; aynı varlığa farklı kimlik, ad, URL veya çelişkili özellikler verilmesidir.</p>
+        <p>Tüm nesneleri tek bir `@graph` dizisinde toplamak ve `@id` referanslarıyla bağlamak (örneğin `"author": { "@id": "https://example.com/#organization" }`) bu tutarlılığı yönetmek için yararlı bir uygulama tercihidir.</p>
 
 
 
         <section class="article-table-wrap" tabindex="0" aria-label="Özellik, Kopuk JSON-LD Blokları, Birleşik @graph Mimarisi tablosu">
-          <table class="decision-table"><thead><tr><th scope="col">Özellik</th><th scope="col">Kopuk JSON-LD Blokları</th><th scope="col">Birleşik @graph Mimarisi</th></tr></thead><tbody><tr><th scope="row">Varlık İlişkileri</th><td>Kopuk, bağımsız nesneler</td><td>`@id` ile birbirine bağlı anlamsal graf</td></tr><tr><th scope="row">Ayrıştırma Hızı</th><td>Çoklu DOM araması</td><td>Tek geçişte eksiksiz Knowledge Graph inşası</td></tr><tr><th scope="row">AI / LLM Uyumu</th><td>Yüksek halüsinasyon riski</td><td>Sıfır belirsizlik ve net varlık eşleştirmesi</td></tr><tr><th scope="row">Kod Boyutu</th><td>Tekrarlayan logo ve kurum verisi</td><td>Tekilleştirilmiş, hafif ve temiz veri yapısı</td></tr></tbody></table>
+          <table class="decision-table"><thead><tr><th scope="col">Özellik</th><th scope="col">Kopuk JSON-LD Blokları</th><th scope="col">Birleşik @graph Mimarisi</th></tr></thead><tbody><tr><th scope="row">Varlık İlişkileri</th><td>Kopuk, bağımsız nesneler</td><td>`@id` ile birbirine bağlı anlamsal graf</td></tr><tr><th scope="row">Geçerlilik</th><td>Geçerliyse desteklenir</td><td>Geçerliyse desteklenir; zorunlu değildir</td></tr><tr><th scope="row">AI / LLM Uyumu</th><td>Özel bir görünürlük etkisi kanıtlanmış değil</td><td>Özel bir görünürlük etkisi kanıtlanmış değil</td></tr><tr><th scope="row">Kod Boyutu</th><td>Tekrarlayan logo ve kurum verisi</td><td>Tekilleştirilmiş, hafif ve temiz veri yapısı</td></tr></tbody></table>
         </section>
 
       </section>
             <section class="info-section article-section" id="varlik-eslestirme-ve-wikidata">
         <p class="info-section__label">Varlık eşleştirme</p>
         <h2>sameAs ve knowsAbout ile Google Knowledge Graph eşleştirmesi.</h2>
-        <p>Arama motorları kelimeleri değil, varlıkları (entities) anlar. Bir sayfada “B2B”, “SEO” veya “E-ticaret” geçtiğinde, bu kavramların ne anlama geldiği `about` ve `mentions` nesneleri altında Wikidata QID bağlantılarıyla (`https://www.wikidata.org/wiki/Q180711`) mühürlenmelidir.</p>
-        <p>Kurum ve yazar şemalarında kullanılan `knowsAbout` dizisi ise işletmenin ve uzmanın yetkinlik alanlarını arama motorunun ontoloji sözlüğüne açıkça kaydeder.</p>
+        <p>Arama sistemleri metin ve varlık ilişkilerinden yararlanabilir; fakat her kavramı bir Wikidata QID’sine bağlamak gerekli değildir. `sameAs`, konu benzerliği değil kimlik eşitliği ifade eder.</p>
+        <p>`about`, `mentions` ve `knowsAbout` yalnız sayfada görünür, doğru ve sürdürülebilir bilgi için kullanılmalıdır. Bu özellikler işletmenin yetkinliğini tek başına doğrulamaz ve desteklenmeyen uzmanlık iddiası üretmemelidir.</p>
 
-        <ol class="article-steps"><li><strong>Kurum @id Belirleme:</strong> Alan adının sonuna `/#organization` ekleyerek tekil bir URI tanımlayın.</li><li><strong>sameAs ile Sosyal ve Bilgi Profilleri:</strong> Wikidata, LinkedIn, GitHub, Crunchbase ve Twitter profillerini eksiksiz listeleyin.</li><li><strong>knowsAbout Taksonomisi:</strong> İşletmenin gerçekte sunduğu ve tecrübe sahibi olduğu 5-10 temel uzmanlık alanını ekleyin.</li><li><strong>about &amp; mentions Ayrımı:</strong> Sayfanın ana konusunu `about`, değinilen yan kavramları `mentions` içinde Wikidata bağlantısıyla verin.</li></ol>
+        <ol class="article-steps"><li><strong>Kurum @id Belirleme:</strong> Alan adının sonuna `/#organization` ekleyerek tekil bir URI tanımlayın.</li><li><strong>sameAs ile Gerçek Profiller:</strong> Yalnız kuruma ait olduğu doğrulanmış ve aynı varlığı temsil eden profilleri listeleyin.</li><li><strong>knowsAbout Taksonomisi:</strong> İşletmenin gerçekte sunduğu ve tecrübe sahibi olduğu 5-10 temel uzmanlık alanını ekleyin.</li><li><strong>about &amp; mentions Ayrımı:</strong> Sayfanın ana konusunu `about`, gerçekten değinilen yan varlıkları `mentions` ile ifade edin; dış kimlik bağlantısı zorunlu değildir.</li></ol>
 
 
-        <aside class="article-callout" aria-label="sameAs ve knowsAbout ile Google Knowledge Graph eşleştirmesi.: karar notu"><strong>Karar notu</strong><p>Kritik uyarı: Sunulmayan hizmetleri veya alakasız varlıkları eklemek Google yapılandırılmış veri yönergelerine aykırıdır ve spam cezasına yol açabilir.</p></aside>
+        <aside class="article-callout" aria-label="sameAs ve knowsAbout ile Google Knowledge Graph eşleştirmesi.: karar notu"><strong>Karar notu</strong><p>Kritik uyarı: Yapılandırılmış veri sayfada görünür içeriği doğru temsil etmelidir. Sunulmayan hizmet, sahte kişi, puan, yorum veya alakasız kimlik eklemeyin.</p></aside>
       </section>
             <section class="info-section article-section" id="temel-sema-turleri">
         <p class="info-section__label">Şema türleri</p>
@@ -510,7 +487,7 @@
         <p class="info-section__label">Doğrulama protokolü</p>
         <h2>Yapılandırılmış verileri test etme ve canlıda izleme adımları.</h2>
         <p>Yazılan JSON-LD şemaları yayına alınmadan önce mutlaka iki aşamalı doğrulamadan geçirilmelidir: 1. Schema.org Validator (sentaks ve anlamsal standart kontrolü) ve 2. Google Rich Results Test (Google arama zengin sonuç uygunluğu).</p>
-        <p>Search Console üzerinde “Geliştirmeler (Enhancements)” sekmesinden Zengin Sonuç dizin durumu ve olası uyarılar haftalık olarak denetlenmelidir.</p>
+        <p>Search Console yalnız Google’ın desteklediği ve mülkte algılanan zengin sonuç türleri için geliştirme raporları gösterebilir; her Schema.org türü bu raporlarda yer almaz.</p>
 
 
         <ul class="article-checklist"><li>Sayfada görünen metin ile JSON-LD içindeki verilerin (fiyat, başlık, tarih) %100 örtüştüğünü doğrulayın.</li><li>Gizlenmiş metinler veya yanıltıcı SSS (FAQ) eklemelerinden kaçının.</li><li>ISO 8601 tarih formatını (`YYYY-MM-DDThh:mm:ssTZD`) eksiksiz kullanın.</li><li>Kendi şemanızı hızlıca üretmek için Narvals Schema Markup Oluşturucu aracını kullanın.</li></ul>
@@ -528,7 +505,7 @@
             <section class="info-section article-section" id="kisa-cevaplar">
               <p class="info-section__label">Sık sorulan sorular</p>
               <h2>Kısa ve doğrudan cevaplar.</h2>
-              <div class="article-faq"><details><summary>Microdata mı yoksa JSON-LD mi tercih edilmelidir?</summary><p>Google ve W3C resmi olarak JSON-LD formatını önermektedir; HTML DOM yapısını kirletmeden script etiketi içinde temiz ve ayrıştırılabilir bir veri katmanı sağlar.</p></details><details><summary>@graph kullanmanın avantajı nedir?</summary><p>Sayfadaki yazar, yayıncı, ana makale, web sitesi ve hizmet nesnelerini tekil `@id` referanslarıyla birbirine bağlayarak arama motoru Knowledge Graph ayrıştırıcısının ilişkileri eksiksiz anlamasını sağlar.</p></details><details><summary>sameAs özelliği neden önemlidir?</summary><p>Varlığın küresel Wikidata veya Wikipedia kimliğiyle eşleşmesini sağlayarak Google Knowledge Graph ve AI LLM modellerinin marka ve uzmanlık konusundaki halüsinasyonlarını engeller.</p></details><details><summary>Schema eklemek sıralamayı doğrudan yükseltir mi?</summary><p>Schema doğrudan bir sıralama faktörü değildir; ancak zengin sonuç (Rich Snippet) kazanımı, tıklama oranı (CTR) artışı, AI yanıtlarında kaynak gösterimi ve anlamsal güvenilirlik sağlar.</p></details></div>
+              <div class="article-faq"><details><summary>Microdata mı yoksa JSON-LD mi tercih edilmelidir?</summary><p>Google ve W3C resmi olarak JSON-LD formatını önermektedir; HTML DOM yapısını kirletmeden script etiketi içinde temiz ve ayrıştırılabilir bir veri katmanı sağlar.</p></details><details><summary>@graph kullanmanın avantajı nedir?</summary><p>Yazar, yayıncı, sayfa ve hizmet gibi nesneleri kalıcı @id referanslarıyla ilişkilendirmeyi ve tekrar eden veriyi tek yerde yönetmeyi kolaylaştırır. Google için zorunlu değildir.</p></details><details><summary>sameAs özelliği neden önemlidir?</summary><p>Bir varlığın gerçekten aynı varlığı temsil eden dış profillerini ilişkilendirebilir. Yanlış veya yalnız konu benzerliği taşıyan bağlantılar eklemek belirsizliği azaltmak yerine hatalı veri üretir.</p></details><details><summary>Schema eklemek sıralamayı doğrudan yükseltir mi?</summary><p>Hayır. Doğru ve desteklenen yapılandırılmış veri bazı zengin sonuçlara uygunluk sağlayabilir; gösterim, tıklama artışı, Google sırası veya AI kaynak seçimi garanti edilmez.</p></details></div>
             </section>
             <section class="info-section article-section" id="kaynaklar">
               <p class="info-section__label">Birincil kaynaklar</p>

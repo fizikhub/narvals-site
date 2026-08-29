@@ -1,0 +1,514 @@
+<!doctype html>
+<html class="no-js" lang="tr">
+  <head>
+    <script>document.documentElement.classList.replace('no-js', 'js');</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#03233a" />
+    <meta name="color-scheme" content="light" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="msapplication-TileColor" content="#03233a" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="description" content="GA4 ve server-side Google Tag Manager mimarisini amaç, veri akışı, izin, test, maliyet ve veri doğruluğu açısından planlayın; yanlış vaatlerden kaçının." />
+    <meta name="keywords" content="GA4 kurulumu, server-side GTM, Google Tag Manager, server-side tagging, dönüşüm ölçümü" />
+    <meta name="author" content="Narvals Labs" />
+    <link rel="canonical" href="https://narvals.com/blog/ga4-ve-server-side-gtm-kurulum-rehberi/" />
+    <link rel="alternate" hreflang="tr" href="https://narvals.com/blog/ga4-ve-server-side-gtm-kurulum-rehberi/" />
+    <link rel="alternate" hreflang="tr-TR" href="https://narvals.com/blog/ga4-ve-server-side-gtm-kurulum-rehberi/" />
+    <link rel="alternate" hreflang="x-default" href="https://narvals.com/blog/ga4-ve-server-side-gtm-kurulum-rehberi/" />
+    <link rel="alternate" type="application/rss+xml" title="Narvals Labs Rehberleri" href="https://narvals.com/blog/feed.xml" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/assets/logo-v6/narvals-favicon-48.png" type="image/png" sizes="48x48" />
+    <link rel="icon" href="/assets/logo-v6/narvals-favicon-96.png" type="image/png" sizes="96x96" />
+    <link rel="icon" href="/assets/logo-v6/narvals-favicon-192.png" type="image/png" sizes="192x192" />
+    <link rel="icon" href="/assets/logo-v6/narvals-favicon-v6-256.png" type="image/png" sizes="256x256" />
+    <link rel="apple-touch-icon" href="/assets/logo-v6/narvals-avatar-v6-1080.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Narvals Labs" />
+    <meta property="og:title" content="GA4 ve Server-Side GTM Kurulum Rehberi | Narvals" />
+    <meta property="og:description" content="GA4 ve server-side Google Tag Manager mimarisini amaç, veri akışı, izin, test, maliyet ve veri doğruluğu açısından planlayın; yanlış vaatlerden kaçının." />
+    <meta property="og:url" content="https://narvals.com/blog/ga4-ve-server-side-gtm-kurulum-rehberi/" />
+    <meta property="og:image" content="https://narvals.com/og/narvals-labs-og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Narvals Labs — Web, Yazılım ve Reklam" />
+    <meta property="article:published_time" content="2026-08-30T12:10:00+03:00" />
+    <meta property="article:modified_time" content="2026-08-30T12:10:00+03:00" />
+    <meta property="article:section" content="Ölçüm &amp; Analitik" />
+    <meta property="article:author" content="https://narvals.com/hakkimizda/" />
+    <meta property="article:publisher" content="https://narvals.com/" />
+    <meta property="article:tag" content="GA4 kurulumu" />
+    <meta property="article:tag" content="server-side GTM" />
+    <meta property="article:tag" content="Google Tag Manager" />
+    <meta property="article:tag" content="server-side tagging" />
+    <meta property="article:tag" content="dönüşüm ölçümü" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="GA4 ve Server-Side GTM Kurulum Rehberi | Narvals" />
+    <meta name="twitter:description" content="GA4 ve server-side Google Tag Manager mimarisini amaç, veri akışı, izin, test, maliyet ve veri doğruluğu açısından planlayın; yanlış vaatlerden kaçının." />
+    <meta name="twitter:image" content="https://narvals.com/og/narvals-labs-og.jpg" />
+    <meta name="twitter:image:alt" content="Narvals Labs — Web, Yazılım ve Reklam" />
+    <meta name="twitter:label1" content="Okuma Süresi" />
+    <meta name="twitter:data1" content="10 dk" />
+    <meta name="twitter:label2" content="Kategori" />
+    <meta name="twitter:data2" content="Ölçüm &amp; Analitik" />
+    <title>GA4 ve Server-Side GTM Kurulum Rehberi | Narvals</title>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://narvals.com/#organization",
+      "name": "Narvals Labs",
+      "url": "https://narvals.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://narvals.com/assets/logo-v6/narvals-avatar-v6-1080.png",
+        "contentUrl": "https://narvals.com/assets/logo-v6/narvals-avatar-v6-1080.png",
+        "width": 1080,
+        "height": 1080
+      },
+      "image": "https://narvals.com/og/narvals-labs-og.jpg",
+      "description": "Web sitesi ve UX, işletmeye özel yazılım, dijital reklam, marka, QR menü ve rezervasyon sistemleri üreten dijital stüdyo.",
+      "email": "info@narvals.com",
+      "telephone": "+905019441921",
+      "sameAs": [
+        "https://github.com/fizikhub/narvals-site"
+      ],
+      "publishingPrinciples": "https://narvals.com/editoryal-ilkeler/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "TR"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "info@narvals.com",
+        "telephone": "+905019441921",
+        "areaServed": "TR",
+        "availableLanguage": [
+          "Turkish",
+          "English"
+        ]
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Türkiye"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Narvals Labs Dijital Hizmetler",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Kurumsal Web Tasarım ve UX",
+              "url": "https://narvals.com/hizmetler/web-tasarim/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "E-Ticaret Sitesi Tasarımı ve Geliştirme",
+              "url": "https://narvals.com/hizmetler/e-ticaret/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "İşletmeye Özel Yazılım ve Otomasyon",
+              "url": "https://narvals.com/hizmetler/ozel-yazilim/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Google Ads Reklam ve Dönüşüm Yönetimi",
+              "url": "https://narvals.com/hizmetler/google-ads/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Meta (Instagram & Facebook) Reklam Yönetimi",
+              "url": "https://narvals.com/hizmetler/dijital-reklam/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sosyal Medya Yönetimi ve İçerik Stratejisi",
+              "url": "https://narvals.com/hizmetler/sosyal-medya-yonetimi/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Özel QR Menü Yazılımı ve Yönetim Paneli",
+              "url": "https://narvals.com/hizmetler/qr-menu/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Online Rezervasyon ve Randevu Sistemi",
+              "url": "https://narvals.com/hizmetler/rezervasyon-randevu/"
+            }
+          }
+        ]
+      },
+      "knowsAbout": [
+        "Web Tasarım ve UX",
+        "Özel Yazılım Geliştirme",
+        "Meta Reklam Yönetimi",
+        "Google Ads Yönetimi",
+        "E-Ticaret Sitesi",
+        "Sosyal Medya Yönetimi",
+        "QR Menü Sistemleri",
+        "Online Rezervasyon Sistemleri",
+        "Teknik SEO",
+        "Generative Engine Optimization (GEO)",
+        "Yapay Zeka Aramaları ve LLM İndeksleme",
+        "E-E-A-T ve Varlık Tabanlı SEO",
+        "Bilgi Kazanımı (Information Gain)",
+        "Yapılandırılmış Veri ve Schema Mimarisi",
+        "Core Web Vitals Optimizasyonu",
+        "Dönüşüm Oranı Optimizasyonu (CRO)",
+        "Conversions API (CAPI)",
+        "Google Analytics 4 (GA4)",
+        "Headless CMS ve API Mimarisi"
+      ],
+      "knowsLanguage": [
+        "tr",
+        "en"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://narvals.com/#website",
+      "url": "https://narvals.com/",
+      "name": "Narvals Labs",
+      "alternateName": [
+        "Narvals"
+      ],
+      "inLanguage": "tr-TR",
+      "publisher": {
+        "@id": "https://narvals.com/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://narvals.com/blog/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://narvals.com/blog/ga4-ve-server-side-gtm-kurulum-rehberi/#webpage",
+      "url": "https://narvals.com/blog/ga4-ve-server-side-gtm-kurulum-rehberi/",
+      "name": "GA4 ve Server-Side GTM Kurulum Rehberi | Narvals",
+      "description": "GA4 ve server-side Google Tag Manager mimarisini amaç, veri akışı, izin, test, maliyet ve veri doğruluğu açısından planlayın; yanlış vaatlerden kaçının.",
+      "inLanguage": "tr-TR",
+      "isPartOf": {
+        "@id": "https://narvals.com/#website"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Google Analytics 4"
+        },
+        {
+          "@type": "Thing",
+          "name": "Server-side Google Tag Manager"
+        },
+        {
+          "@type": "Thing",
+          "name": "Dönüşüm ölçümü",
+          "sameAs": "https://en.wikipedia.org/wiki/Conversion_rate_optimization"
+        },
+        {
+          "@type": "Thing",
+          "name": "Veri yönetişimi"
+        }
+      ],
+      "datePublished": "2026-08-30T12:10:00+03:00",
+      "dateModified": "2026-08-30T12:10:00+03:00",
+      "breadcrumb": {
+        "@id": "https://narvals.com/blog/ga4-ve-server-side-gtm-kurulum-rehberi/#breadcrumb"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "h1",
+          ".info-hero__answer",
+          ".article-summary ul",
+          ".article-section h2"
+        ]
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://narvals.com/og/narvals-labs-og.jpg",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://narvals.com/blog/ga4-ve-server-side-gtm-kurulum-rehberi/#article",
+      "mainEntityOfPage": {
+        "@id": "https://narvals.com/blog/ga4-ve-server-side-gtm-kurulum-rehberi/#webpage"
+      },
+      "headline": "GA4 ve server-side GTM nasıl kurulur? Ölçüm rehberi",
+      "description": "GA4 ve server-side Google Tag Manager mimarisini amaç, veri akışı, izin, test, maliyet ve veri doğruluğu açısından planlayın; yanlış vaatlerden kaçının.",
+      "image": [
+        "https://narvals.com/og/narvals-labs-og.jpg"
+      ],
+      "datePublished": "2026-08-30T12:10:00+03:00",
+      "dateModified": "2026-08-30T12:10:00+03:00",
+      "timeRequired": "PT10M",
+      "inLanguage": "tr-TR",
+      "isAccessibleForFree": true,
+      "wordCount": 572,
+      "articleSection": "Ölçüm & Analitik",
+      "keywords": "GA4 kurulumu, server-side GTM, Google Tag Manager, server-side tagging, dönüşüm ölçümü",
+      "author": {
+        "@id": "https://narvals.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://narvals.com/#organization"
+      },
+      "copyrightHolder": {
+        "@id": "https://narvals.com/#organization"
+      },
+      "license": "https://narvals.com/editoryal-ilkeler/",
+      "publishingPrinciples": "https://narvals.com/editoryal-ilkeler/",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "h1",
+          ".info-hero__answer",
+          ".article-summary ul",
+          ".article-section h2"
+        ]
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Google Analytics 4"
+        },
+        {
+          "@type": "Thing",
+          "name": "Server-side Google Tag Manager"
+        },
+        {
+          "@type": "Thing",
+          "name": "Dönüşüm ölçümü",
+          "sameAs": "https://en.wikipedia.org/wiki/Conversion_rate_optimization"
+        },
+        {
+          "@type": "Thing",
+          "name": "Veri yönetişimi"
+        }
+      ],
+      "citation": [
+        "https://support.google.com/analytics/answer/9304153",
+        "https://developers.google.com/tag-platform/tag-manager/server-side",
+        "https://developers.google.com/tag-platform/learn/sst-fundamentals",
+        "https://support.google.com/analytics/answer/7201382",
+        "https://support.google.com/analytics/answer/6366371"
+      ],
+      "isBasedOn": [
+        "https://support.google.com/analytics/answer/9304153",
+        "https://developers.google.com/tag-platform/tag-manager/server-side",
+        "https://developers.google.com/tag-platform/learn/sst-fundamentals",
+        "https://support.google.com/analytics/answer/7201382",
+        "https://support.google.com/analytics/answer/6366371"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://narvals.com/blog/ga4-ve-server-side-gtm-kurulum-rehberi/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ana sayfa",
+          "item": "https://narvals.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Rehberler",
+          "item": "https://narvals.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "GA4 ve server-side GTM nasıl kurulur? Ölçüm rehberi",
+          "item": "https://narvals.com/blog/ga4-ve-server-side-gtm-kurulum-rehberi/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://narvals.com/blog/ga4-ve-server-side-gtm-kurulum-rehberi/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Server-side GTM zorunlu mu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hayır. İhtiyaç; veri akışı, performans, yönetişim, ekip yetkinliği ve barındırma maliyetine göre değerlendirilir. Basit sitelerde doğru bir istemci tarafı kurulum yeterli olabilir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Server-side tagging çerez iznini kaldırır mı?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hayır. Verinin hangi amaçla toplandığı ve işlendiği değişmez; geçerli izin, aydınlatma ve veri minimizasyonu yükümlülükleri ayrıca değerlendirilmelidir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "GA4 ile Google Ads sayıları neden farklıdır?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Atıf modeli, raporlama zamanı, kimlik, izin, dönüşüm penceresi ve veri işleme kuralları farklı olabilir. Önce aynı olay tanımı ve saat dilimiyle karşılaştırın."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kurulumun doğru çalıştığını nasıl doğrularım?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tag Assistant ve GA4 DebugView ile teknik akışı, gerçek form/sipariş kaydıyla iş sonucunu, yinelenen olay kontrolüyle de sayım doğruluğunu test edin."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
+  </head>
+  <body class="info-page article-page">
+    <!-- Bu dosya content/blog-posts.mjs kaynağından otomatik üretilir. -->
+    <a class="skip-link" href="#main-content">Ana içeriğe geç</a>
+    <header class="info-nav">
+      <a class="info-nav__brand" href="/"><img src="/assets/logo-v6/narvals-mascot-v6-transparent-96.png" alt="" width="96" height="96" /><span>narvals<i>//</i>labs</span></a>
+      <nav class="info-nav__links" aria-label="Ana menü"><a href="/hizmetler/">Hizmetler</a><a href="/blog/" aria-current="page">Rehberler</a><a href="/hakkimizda/">Hakkımızda</a><a href="/iletisim/">Projeyi konuşalım</a></nav>
+    </header>
+    <main id="main-content">
+      <article>
+        <header class="info-hero article-hero">
+          <div class="info-hero__copy">
+            <nav class="breadcrumbs" aria-label="İçerik yolu"><a href="/">Ana sayfa</a><span>/</span><a href="/blog/">Rehberler</a><span>/</span><span>Ölçüm &amp; Analitik</span></nav>
+            <p class="info-hero__kicker">Ölçüm &amp; Analitik · Karar rehberi</p>
+            <h1>GA4 ve server-side GTM nasıl kurulur? Ölçüm rehberi</h1>
+            <p class="info-hero__answer">GA4 kurulumu, işletme kararlarını temsil eden olayları tanımlayıp web veri akışını doğru mülke göndermekle başlar. Server-side GTM ise etiket isteklerini işletmenin kontrol ettiği bir sunucu container’ı üzerinden işleyebilir. Bu mimari veri kontrolü ve performans için seçenek sunar; izni ortadan kaldırmaz, reklam engelleyicileri tamamen aşmaz ve eksiksiz veri garantisi vermez.</p>
+            <div class="article-meta"><span>Yayınlayan <a href="/hakkimizda/">Narvals Labs</a></span><span>Yayımlandı <time datetime="2026-08-30T12:10:00+03:00">30 Ağustos 2026</time></span><span>10 dk okuma</span></div>
+          </div>
+          <aside class="info-hero__panel article-summary" aria-labelledby="ozet-basligi"><strong id="ozet-basligi">Bu rehberin özeti</strong><ul><li>Önce ölçüm planı, sonra etiket kurulumu yapılır.</li><li>Server-side tagging zorunlu değildir; bakım ve barındırma maliyeti getirir.</li><li>Tarayıcı ve sunucu olayları ortak event_id ile tekilleştirilmelidir.</li><li>DebugView, Tag Assistant ve gerçek iş kaydı birlikte doğrulanmalıdır.</li><li>Kişisel veri ve izin yükümlülükleri teknik proxy ile ortadan kalkmaz.</li></ul></aside>
+        </header>
+
+        <div class="info-layout article-layout">
+          <nav class="info-toc" aria-label="Makale içeriği"><strong>Bu rehberde</strong><a href="#olcum-plani">Adım 01</a><a href="#mimari-secimi">Adım 02</a><a href="#kurulum-ve-test">Adım 03</a><a href="#olcum-yonetimi">Adım 04</a><a href="#kisa-cevaplar">Kısa cevaplar</a><a href="#kaynaklar">Kaynaklar</a></nav>
+          <div class="info-content article-content">
+            <section class="info-section article-section" id="olcum-plani">
+        <p class="info-section__label">Adım 01</p>
+        <h2>Araçtan önce ölçüm sözlüğünü yazın.</h2>
+        <p>Her tıklamayı dönüşüm yapmayın. Satın alma, gönderilmiş ve doğrulanmış talep ya da gerçekleşen randevu gibi iş sonucuna yakın olayları birincil; sayfa görüntüleme ve kaydırma gibi davranışları ikincil ayırın.</p>
+        <p>Her olay için ad, tetik koşulu, parametre, veri sahibi, saklama amacı ve hangi kararı desteklediğini yazın. E-posta, telefon ve serbest metin gibi kişisel verileri GA4’e göndermeyin.</p>
+
+
+
+        <section class="article-table-wrap" tabindex="0" aria-label="Alan, Örnek karar, Kontrol tablosu">
+          <table class="decision-table"><thead><tr><th scope="col">Alan</th><th scope="col">Örnek karar</th><th scope="col">Kontrol</th></tr></thead><tbody><tr><th scope="row">Olay</th><td>generate_lead</td><td>Başarılı sunucu yanıtından sonra tek kez</td></tr><tr><th scope="row">Parametre</th><td>form_type</td><td>İzinli, sınırlı değer sözlüğü</td></tr><tr><th scope="row">Birincil sonuç</th><td>Nitelikli talep</td><td>CRM’de ayrıca doğrulanır</td></tr><tr><th scope="row">Veri kalitesi</th><td>Tekilleştirme</td><td>Aynı event_id iki kez sayılmıyor</td></tr></tbody></table>
+        </section>
+
+      </section>
+            <section class="info-section article-section" id="mimari-secimi">
+        <p class="info-section__label">Adım 02</p>
+        <h2>İstemci ve sunucu mimarisini ihtiyaca göre seçin.</h2>
+        <p>İstemci tarafı GTM tarayıcıda çalışır ve kurulumu daha basittir. Server-side GTM, web container’ından veya sunucudan gelen istekleri bir server container üzerinden ilgili hedeflere yönlendirir. Birinci taraf alan adı, istek doğrulama ve veri minimizasyonu gibi kontroller sağlayabilir.</p>
+        <p>Buna karşılık bulut barındırma, özel alan adı, güncelleme, güvenlik, loglama ve hata izleme sorumluluğu getirir. Yalnız “daha çok veri toplar” vaadiyle kurulması doğru kapsam kararı değildir.</p>
+
+
+        <ul class="article-checklist"><li>Ölçüm hedefi server-side mimari gerektiriyor.</li><li>Barındırma ve trafik maliyeti kabul edildi.</li><li>Container erişimleri en az ayrıcalıkla sınırlandı.</li><li>İstemci tarafından gelen istekler doğrulanıyor.</li><li>Gereksiz parametreler hedeflere gönderilmeden temizleniyor.</li><li>Hata ve gecikme için izleme sahibi belirlendi.</li></ul>
+
+
+      </section>
+            <section class="info-section article-section" id="kurulum-ve-test">
+        <p class="info-section__label">Adım 03</p>
+        <h2>Kurulumu test ortamından gerçek iş kaydına kadar doğrulayın.</h2>
+
+
+        <ol class="article-steps"><li>GA4 mülkü, web veri akışı, saat dilimi ve veri saklama ayarlarını gerçek işletme bilgileriyle oluşturun.</li><li>Web container’da yalnız ölçüm planındaki etiketleri ve tetikleyicileri kurun.</li><li>Server container kullanılıyorsa resmî kurulum yöntemini, özel alt alan adını ve HTTPS’i yapılandırın.</li><li>Tag Assistant ile istemci isteğini, server preview ile client/tag eşleşmesini ve GA4 DebugView ile gelen olayı izleyin.</li><li>Form, ödeme veya CRM kaydıyla analitik olayını aynı test kimliği ve zaman damgası üzerinden karşılaştırın.</li><li>Tarayıcı ve sunucu aynı olayı gönderiyorsa ortak event_id ve platformun önerdiği tekilleştirme yöntemini uygulayın.</li></ol>
+
+
+
+      </section>
+            <section class="info-section article-section" id="olcum-yonetimi">
+        <p class="info-section__label">Adım 04</p>
+        <h2>Kurulumdan sonra veri kalitesi ve izin durumunu işletin.</h2>
+        <p>Ölçüm zamanla bozulabilir: form alanı değişir, teşekkür sayfası kaldırılır, ödeme sağlayıcısı yönlendirmeyi değiştirir veya etiket iki kez yüklenir. Her sürümde kritik olaylar için otomatik ya da tekrarlanabilir kabul testi çalıştırın.</p>
+        <p>GA4, reklam platformu ve CRM farklı kapsamlarla sayı üretir. Raporu tek bir paneli mutlak gerçek ilan etmek yerine kaynak, tanım, atıf penceresi ve bilinen veri kaybıyla birlikte okuyun.</p>
+
+
+
+
+        <aside class="article-callout" aria-label="Kurulumdan sonra veri kalitesi ve izin durumunu işletin.: karar notu"><strong>Karar notu</strong><p><a href="/araclar/utm-link-olusturucu/">UTM link oluşturucu</a> ile kampanya adlandırmasını tutarlı kurun; UTM parametrelerinin hatalı iç bağlantılarda kullanılmamasına dikkat edin.</p></aside>
+      </section>
+            <aside class="article-tool-strip" aria-label="İlgili ücretsiz araç">
+              <div class="article-tool-strip__copy">
+                <small>İlgili ücretsiz araç · Kayıt gerekmez</small>
+                <strong>GA4 &amp; Meta Kampanya Takip Linki Oluşturucu</strong>
+                <p>Tarayıcınızda çalışan açık formüllü araçla kendi verilerinizi anında test edin.</p>
+              </div>
+              <a class="article-tool-strip__btn" href="/araclar/utm-link-olusturucu/">Aracı başlat <span aria-hidden="true">→</span></a>
+            </aside>
+            <section class="info-section article-section" id="kisa-cevaplar">
+              <p class="info-section__label">Sık sorulan sorular</p>
+              <h2>Kısa ve doğrudan cevaplar.</h2>
+              <div class="article-faq"><details><summary>Server-side GTM zorunlu mu?</summary><p>Hayır. İhtiyaç; veri akışı, performans, yönetişim, ekip yetkinliği ve barındırma maliyetine göre değerlendirilir. Basit sitelerde doğru bir istemci tarafı kurulum yeterli olabilir.</p></details><details><summary>Server-side tagging çerez iznini kaldırır mı?</summary><p>Hayır. Verinin hangi amaçla toplandığı ve işlendiği değişmez; geçerli izin, aydınlatma ve veri minimizasyonu yükümlülükleri ayrıca değerlendirilmelidir.</p></details><details><summary>GA4 ile Google Ads sayıları neden farklıdır?</summary><p>Atıf modeli, raporlama zamanı, kimlik, izin, dönüşüm penceresi ve veri işleme kuralları farklı olabilir. Önce aynı olay tanımı ve saat dilimiyle karşılaştırın.</p></details><details><summary>Kurulumun doğru çalıştığını nasıl doğrularım?</summary><p>Tag Assistant ve GA4 DebugView ile teknik akışı, gerçek form/sipariş kaydıyla iş sonucunu, yinelenen olay kontrolüyle de sayım doğruluğunu test edin.</p></details></div>
+            </section>
+            <section class="info-section article-section" id="kaynaklar">
+              <p class="info-section__label">Birincil kaynaklar</p>
+              <h2>Kaynaklar ve kapsam.</h2>
+              <p>Bağlantılar içerikteki değişebilir veya dış doğrulama gerektiren bilgilerin kaynağıdır. Ticari ilişki veya sponsorlu bağlantı değildir.</p>
+              <ol class="article-sources"><li><a href="https://support.google.com/analytics/answer/9304153" rel="noopener noreferrer">Google Analytics — GA4 kurulum rehberi</a></li><li><a href="https://developers.google.com/tag-platform/tag-manager/server-side" rel="noopener noreferrer">Google Tag Manager — Server-side tagging kurulumu</a></li><li><a href="https://developers.google.com/tag-platform/learn/sst-fundamentals" rel="noopener noreferrer">Google Tag Platform — Server-side tagging temelleri</a></li><li><a href="https://support.google.com/analytics/answer/7201382" rel="noopener noreferrer">Google Analytics — DebugView</a></li><li><a href="https://support.google.com/analytics/answer/6366371" rel="noopener noreferrer">Google Analytics — Kişisel olarak tanımlanabilir bilgi politikası</a></li></ol>
+              <aside class="article-method" aria-label="Bu rehberin hazırlanma yöntemi"><strong>Hazırlama yöntemi</strong><p>Bu rehber Narvals Labs yayıncılığında; ilgili birincil kaynaklar, görünür hizmet kapsamı ve proje karar çerçeveleri incelenerek hazırlandı. Doğrulanamayan müşteri, fiyat, başarı oranı veya sonuç iddiası eklenmedi. Yöntem, düzeltme ve yapay zekâ desteği açıklaması için <a href="/editoryal-ilkeler/">editoryal ilkeleri</a> okuyabilirsiniz.</p></aside>
+            </section>
+            <section class="info-section article-section">
+              <p class="info-section__label">İlgili rehberler</p><h2>İlgili rehberlerle devam edin.</h2>
+              <div class="article-related"><a href="/blog/meta-pixel-ve-conversions-api-farki/"><small>Meta reklam</small><strong>Meta Pixel ve Conversions API: farkları ve birlikte kullanım</strong><span aria-hidden="true">→</span></a><a href="/blog/google-ads-butcesi-nasil-belirlenir/"><small>Google Ads</small><strong>Google Ads bütçesi nasıl belirlenir? Planlama rehberi</strong><span aria-hidden="true">→</span></a><a href="/blog/web-sitesi-donusum-orani-nasil-hesaplanir/"><small>Web &amp; UX</small><strong>Web sitesi dönüşüm oranı nasıl hesaplanır?</strong><span aria-hidden="true">→</span></a></div>
+            </section>
+          </div>
+        </div>
+      </article>
+      <section class="info-cta"><h2>Bu kararı projenize uyarlayalım.</h2><p>Mevcut durumu, hedefi ve en kritik sınırı paylaşın; gerekli kapsamı birlikte netleştirelim.</p><div class="article-cta-actions"><a class="info-button" href="/hizmetler/google-ads/">Google Ads ve dönüşüm ölçümünü inceleyin <span aria-hidden="true">→</span></a><a class="info-button info-button--tool" href="/araclar/utm-link-olusturucu/">GA4 &amp; Meta Kampanya Takip Linki Oluşturucu <span aria-hidden="true">⚡</span></a><a class="info-button info-button--light" href="/iletisim/">Projeyi konuşalım <span aria-hidden="true">↗</span></a></div></section>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__brand"><a href="/"><img src="/assets/logo-v6/narvals-mascot-v6-transparent-96.png" alt="" width="96" height="96" loading="lazy" /><strong>narvals<span>//</span>labs</strong></a><p>Web sitesi, özel yazılım ve reklamı aynı iş hedefinde buluşturan dijital üretim stüdyosu.</p></div>
+      <nav aria-label="Hizmet bağlantıları"><strong>Hizmetler</strong><a href="/hizmetler/web-tasarim/">Web tasarım &amp; UX</a><a href="/hizmetler/e-ticaret/">E-ticaret</a><a href="/hizmetler/ozel-yazilim/">Özel yazılım</a><a href="/hizmetler/google-ads/">Google Ads</a><a href="/hizmetler/dijital-reklam/">Meta reklam</a><a href="/hizmetler/sosyal-medya-yonetimi/">Sosyal medya</a><a href="/hizmetler/qr-menu-rezervasyon/">İşletme sistemleri</a></nav>
+      <nav aria-label="Bilgi merkezi bağlantıları"><strong>Bilgi merkezi</strong><a href="/blog/">Tüm rehberler</a><a href="/araclar/">Ücretsiz araçlar</a><a href="/araclar/web-sitesi-kontrolu/">Site kontrolü</a><a href="/blog/konu/seo-geo/">SEO &amp; GEO rehberleri</a><a href="/blog/konu/e-ticaret/">E-ticaret rehberleri</a><a href="/blog/konu/web-sitesi/">Web sitesi rehberleri</a><a href="/blog/konu/reklam/">Reklam rehberleri</a><a href="/blog/konu/qr-menu/">QR menü rehberleri</a><a href="/editoryal-ilkeler/">Editoryal ilkeler</a></nav>
+      <div class="site-footer__contact"><strong>Bir proje mi var?</strong><p>Hedefi ve en kritik darboğazı anlatarak ilk görüşmeyi başlatın.</p><a href="mailto:info@narvals.com">info@narvals.com</a><a href="https://wa.me/905019441921" rel="noopener noreferrer">WhatsApp: +90 501 944 19 21 ↗</a></div>
+      <p class="site-footer__legal">© <span data-current-year>2026</span> Narvals Labs. Tüm hakları saklıdır.</p>
+    </footer>
+    <script type="module" src="/src/info-main.js"></script>
+  </body>
+</html>

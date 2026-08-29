@@ -1020,7 +1020,7 @@ export const newBlogPosts = [
     ],
     sources: [
       { label: 'Baymard Institute — E-Commerce Checkout Usability Research', url: 'https://baymard.com/lists/cart-abandonment-rate' },
-      { label: 'Google Analytics Help — E-ticaret Huni Raporları', url: 'https://support.google.com/analytics/answer/9325985?hl=tr' }
+      { label: 'Google Analytics Help — GA4 Huni Keşfi', url: 'https://support.google.com/analytics/answer/9327974?hl=tr' }
     ]
   },
   {

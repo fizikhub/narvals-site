@@ -1,0 +1,525 @@
+<!doctype html>
+<html class="no-js" lang="tr">
+  <head>
+    <script>document.documentElement.classList.replace('no-js', 'js');</script>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" /><meta name="theme-color" content="#03233a" /><meta name="color-scheme" content="light" /><meta name="format-detection" content="telephone=no" /><meta name="referrer" content="strict-origin-when-cross-origin" /><meta name="msapplication-TileColor" content="#03233a" /><meta name="msapplication-config" content="/browserconfig.xml" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" /><meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" /><meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="description" content="Hedef CPA, dönüşüm oranı ve kâr marjınızla maksimum kârlı TBM (Max CPC), başabaş teklif eşiğinizi ve açık artırma başlangıç teklifinizi hesaplayın." /><meta name="keywords" content="cpc hesaplama, maksimum teklif hesaplama, tbm hesaplama, max cpc, başabaş tbm, hedef cpa" /><meta name="author" content="Narvals Labs" />
+    <link rel="canonical" href="https://narvals.com/araclar/cpc-hesaplama/" /><link rel="alternate" hreflang="tr" href="https://narvals.com/araclar/cpc-hesaplama/" /><link rel="alternate" hreflang="tr-TR" href="https://narvals.com/araclar/cpc-hesaplama/" /><link rel="alternate" hreflang="x-default" href="https://narvals.com/araclar/cpc-hesaplama/" /><link rel="alternate" type="application/rss+xml" title="Narvals Labs Rehberleri" href="https://narvals.com/blog/feed.xml" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" /><link rel="icon" href="/assets/logo-v6/narvals-favicon-48.png" type="image/png" sizes="48x48" /><link rel="icon" href="/assets/logo-v6/narvals-favicon-96.png" type="image/png" sizes="96x96" /><link rel="icon" href="/assets/logo-v6/narvals-favicon-192.png" type="image/png" sizes="192x192" /><link rel="icon" href="/assets/logo-v6/narvals-favicon-v6-256.png" type="image/png" sizes="256x256" /><link rel="apple-touch-icon" href="/assets/logo-v6/narvals-avatar-v6-1080.png" /><link rel="manifest" href="/site.webmanifest" />
+    <meta property="og:locale" content="tr_TR" /><meta property="og:type" content="website" /><meta property="og:site_name" content="Narvals Labs" /><meta property="og:title" content="CPC ve Maksimum Teklif Hesaplama Aracı | Narvals" /><meta property="og:description" content="Maksimum kârlı TBM ve başabaş teklif sınırınızı ücretsiz hesaplayın." /><meta property="og:url" content="https://narvals.com/araclar/cpc-hesaplama/" /><meta property="og:image" content="https://narvals.com/og/narvals-labs-og.jpg" /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta property="og:image:alt" content="Narvals Labs CPC ve maksimum teklif hesaplama aracı" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="CPC ve Maksimum Teklif Hesaplama Aracı | Narvals" /><meta name="twitter:description" content="Maksimum kârlı TBM (Max CPC) ve başabaş açık artırma teklifinizi hesaplayın." /><meta name="twitter:image" content="https://narvals.com/og/narvals-labs-og.jpg" /><meta name="twitter:image:alt" content="Narvals Labs CPC hesaplama aracı" />
+    <title>CPC ve Maksimum Teklif Hesaplama Aracı | Narvals</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://narvals.com/#organization",
+            "name": "Narvals Labs",
+            "url": "https://narvals.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://narvals.com/assets/logo-v6/narvals-avatar-v6-1080.png",
+              "contentUrl": "https://narvals.com/assets/logo-v6/narvals-avatar-v6-1080.png",
+              "width": 1080,
+              "height": 1080
+            },
+            "image": "https://narvals.com/og/narvals-labs-og.jpg",
+            "description": "Web sitesi ve UX, işletmeye özel yazılım, dijital reklam, marka, QR menü ve rezervasyon sistemleri üreten dijital stüdyo.",
+            "email": "info@narvals.com",
+            "telephone": "+905019441921",
+            "sameAs": [
+              "https://github.com/fizikhub/narvals-site"
+            ],
+            "publishingPrinciples": "https://narvals.com/editoryal-ilkeler/",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "TR"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "customer support",
+              "email": "info@narvals.com",
+              "telephone": "+905019441921",
+              "areaServed": "TR",
+              "availableLanguage": [
+                "Turkish",
+                "English"
+              ]
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "Türkiye"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Narvals Labs Dijital Hizmetler",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Kurumsal Web Tasarım ve UX",
+                    "url": "https://narvals.com/hizmetler/web-tasarim/"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "E-Ticaret Sitesi Tasarımı ve Geliştirme",
+                    "url": "https://narvals.com/hizmetler/e-ticaret/"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "İşletmeye Özel Yazılım ve Otomasyon",
+                    "url": "https://narvals.com/hizmetler/ozel-yazilim/"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Google Ads Reklam ve Dönüşüm Yönetimi",
+                    "url": "https://narvals.com/hizmetler/google-ads/"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Meta (Instagram & Facebook) Reklam Yönetimi",
+                    "url": "https://narvals.com/hizmetler/dijital-reklam/"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Sosyal Medya Yönetimi ve İçerik Stratejisi",
+                    "url": "https://narvals.com/hizmetler/sosyal-medya-yonetimi/"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Özel QR Menü Yazılımı ve Yönetim Paneli",
+                    "url": "https://narvals.com/hizmetler/qr-menu/"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Online Rezervasyon ve Randevu Sistemi",
+                    "url": "https://narvals.com/hizmetler/rezervasyon-randevu/"
+                  }
+                }
+              ]
+            },
+            "knowsAbout": [
+              "Web Tasarım ve UX",
+              "Özel Yazılım Geliştirme",
+              "Meta Reklam Yönetimi",
+              "Google Ads Yönetimi",
+              "E-Ticaret Sitesi",
+              "Sosyal Medya Yönetimi",
+              "QR Menü Sistemleri",
+              "Online Rezervasyon Sistemleri",
+              "Teknik SEO",
+              "Generative Engine Optimization (GEO)",
+              "Yapay Zeka Aramaları ve LLM İndeksleme",
+              "E-E-A-T ve Varlık Tabanlı SEO",
+              "Bilgi Kazanımı (Information Gain)",
+              "Yapılandırılmış Veri ve Schema Mimarisi",
+              "Core Web Vitals Optimizasyonu",
+              "Dönüşüm Oranı Optimizasyonu (CRO)",
+              "Conversions API (CAPI)",
+              "Google Analytics 4 (GA4)",
+              "Headless CMS ve API Mimarisi"
+            ],
+            "knowsLanguage": [
+              "tr",
+              "en"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://narvals.com/#website",
+            "url": "https://narvals.com/",
+            "name": "Narvals Labs",
+            "alternateName": [
+              "Narvals"
+            ],
+            "inLanguage": "tr-TR",
+            "publisher": {
+              "@id": "https://narvals.com/#organization"
+            },
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://narvals.com/blog/?q={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            }
+          },
+          {
+            "@type": [
+              "WebPage",
+              "WebApplication"
+            ],
+            "@id": "https://narvals.com/araclar/cpc-hesaplama/#webpage",
+            "url": "https://narvals.com/araclar/cpc-hesaplama/",
+            "name": "CPC ve Maksimum Teklif Hesaplayıcı",
+            "description": "Hedef CPA, dönüşüm oranı ve sepet kâr marjından maksimum kârlı TBM ve başabaş teklif sınırını hesaplayan ücretsiz simülatör.",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "All",
+            "browserRequirements": "JavaScript, HTML5, CSS3",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "TRY"
+            },
+            "inLanguage": "tr-TR",
+            "isPartOf": {
+              "@id": "https://narvals.com/#website"
+            },
+            "about": {
+              "@id": "https://narvals.com/#organization"
+            },
+            "provider": {
+              "@id": "https://narvals.com/#organization"
+            },
+            "softwareVersion": "2.0"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Ana sayfa",
+                "item": "https://narvals.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Ücretsiz araçlar",
+                "item": "https://narvals.com/araclar/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "CPC ve maksimum teklif hesaplama",
+                "item": "https://narvals.com/araclar/cpc-hesaplama/"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Maksimum TBM (Max CPC) nedir ve nasıl hesaplanır?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Maksimum TBM (Max CPC), bir tıklama için kârlılığınızı bozmadan ödeyebileceğiniz en yüksek açık artırma teklifidir. Hedef CPA (Edinme Başı Maliyet) ile Web Sitesi Dönüşüm Oranının (CR %) çarpılmasıyla hesaplanır."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Başabaş (Break-Even) TBM ile Maksimum TBM arasındaki fark nedir?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Başabaş TBM, kâr veya zarar etmediğiniz sıfır noktasındaki tavan tekliftir (Birim Brüt Kâr × CR). Maksimum TBM ise işletmenizin belirlediği hedef kâr marjını koruyarak verebileceğiniz güvenli tavan tekliftir."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Açık artırmada teklif verirken neden Max CPC'nin altında başlanmalıdır?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Google Ads ve Meta açık artırmalarında ilk teklifinizi Max CPC'nin %70-%80'i seviyesinde tutmak, kalite puanı ve öğrenme evresindeki dalgalanmalarda bütçenizin hızla erimesini engeller ve optimizasyon alanı tanır."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Dönüşüm oranı (CR) arttığında izin verilen Max CPC nasıl değişir?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Dönüşüm oranınız arttığında aynı hedef müşteri maliyeti için tıklama başına daha yüksek teklif verebilirsiniz. Örneğin CR %2'den %4'e çıktığında, Max CPC teklif tavanınız iki katına çıkar ve açık artırmada rakiplerinizin önüne geçersiniz."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body class="info-page cpc-page">
+    <a class="skip-link" href="#main-content">Ana içeriğe geç</a>
+    <header class="info-nav"><a class="info-nav__brand" href="/"><img src="/assets/logo-v6/narvals-mascot-v6-transparent-96.png" alt="" width="96" height="96" /><span>narvals<i>//</i>labs</span></a><nav class="info-nav__links" aria-label="Ana menü"><a href="/hizmetler/">Hizmetler</a><a href="/blog/">Rehberler</a><a href="/araclar/" aria-current="page">Araçlar</a><a href="/iletisim/">Projeyi konuşalım</a></nav></header>
+    <main id="main-content">
+      <section class="info-hero cpc-hero">
+        <div class="info-hero__copy">
+          <nav class="breadcrumbs" aria-label="İçerik yolu"><a href="/">Ana sayfa</a><span>/</span><a href="/araclar/">Araçlar</a><span>/</span><span>CPC ve maksimum teklif</span></nav>
+          <p class="info-hero__kicker">Maksimum teklif simülasyonu · Açık formül · Ücretsiz</p>
+          <h1>Reklam açık artırmasında tavan teklifinizi bilin.</h1>
+          <p class="info-hero__answer">Maksimum kârlı TBM (Max CPC), başabaş (break-even) teklif eşiği ve 1 müşteri kazanmak için gereken tıklama sayısını canlı simüle edin; bütçenizi açık artırmada koruyun.</p>
+        </div>
+        <aside class="info-hero__panel">
+          <strong>Hesaplanan çıktılar</strong>
+          <ul>
+            <li>Maksimum kârlı TBM (Max CPC)</li>
+            <li>Başabaş (Break-Even) TBM tavanı</li>
+            <li>1 dönüşüm için gereken tıklama sayısı</li>
+            <li>Önerilen başlangıç açık artırma teklifi</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="cpc-explain">
+        <h2>Rastgele teklif vermek bütçeyi tüketir.</h2>
+        <p>Google Ads ve Meta açık artırmalarında kârlı kalmanın temel şartı, bir tıklamaya en fazla ne kadar ödeyebileceğinizi (Maksimum CPC) matematiksel olarak bilmektir. Dönüşüm oranınız, sepet ortalamanız ve kâr marjınız açık artırma tavanınızı doğrudan belirler.</p>
+      </section>
+
+      <div class="cpc-form-container">
+        <form class="cpc-form" data-cpc-form novalidate>
+          <header>
+            <h2>Kampanya &amp; Kârlılık Verilerinizi Girin</h2>
+            <p>Değerleri sayı kutusuna yazabilir veya kaydırıcıları (slider) hareket ettirerek canlı sonucu anında görebilirsiniz.</p>
+          </header>
+
+          <div class="cpc-presets">
+            <span class="cpc-presets__label">Hızlı Sektör Şablonları</span>
+            <div class="cpc-presets__list">
+              <button class="cpc-preset-btn" type="button" data-cpc-preset="retail">🛒 E-Ticaret Perakende (%35 Marj)</button>
+              <button class="cpc-preset-btn" type="button" data-cpc-preset="high_margin">✨ Yüksek Marj / Moda (%60 Marj)</button>
+              <button class="cpc-preset-btn" type="button" data-cpc-preset="b2b">💼 B2B &amp; Kurumsal Hizmet</button>
+              <button class="cpc-preset-btn" type="button" data-cpc-preset="local">📍 Yerel Hizmet / Randevu</button>
+              <button class="cpc-preset-btn" type="button" data-cpc-preset="low_margin">📦 Düşük Marj / Elektronik</button>
+            </div>
+          </div>
+
+          <div class="cpc-grid">
+            <!-- 1. Hedef CPA -->
+            <div class="cpc-field">
+              <div class="cpc-field__header">
+                <label for="target_cpa">Hedef CPA (Edinme Maliyeti)</label>
+              </div>
+              <small>1 müşteri / form için ayırmak istediğiniz tavan bütçe</small>
+              <div class="cpc-input-wrapper">
+                <input id="target_cpa" name="target_cpa" type="number" min="1" step="1" inputmode="numeric" placeholder="300" value="300" required />
+                <span class="cpc-input-unit">TL</span>
+              </div>
+              <input class="cpc-slider" name="target_cpa_range" type="range" min="10" max="2500" step="5" value="300" aria-label="Hedef CPA Kaydırıcı" />
+            </div>
+
+            <!-- 2. Dönüşüm Oranı (CR) -->
+            <div class="cpc-field">
+              <div class="cpc-field__header">
+                <label for="cr_rate">Dönüşüm Oranı (CR %)</label>
+              </div>
+              <small>Ziyaretçilerin müşteriye veya forma dönüşme yüzdesi</small>
+              <div class="cpc-input-wrapper">
+                <input id="cr_rate" name="cr_rate" type="number" min="0.1" max="50" step="0.1" inputmode="decimal" placeholder="3.5" value="3.5" required />
+                <span class="cpc-input-unit">%</span>
+              </div>
+              <input class="cpc-slider" name="cr_rate_range" type="range" min="0.2" max="15" step="0.1" value="3.5" aria-label="Dönüşüm Oranı Kaydırıcı" />
+            </div>
+
+            <!-- 3. Ortalama Sipariş Değeri (AOV) -->
+            <div class="cpc-field">
+              <div class="cpc-field__header">
+                <label for="aov_value">Ortalama Sipariş / Talep Değeri</label>
+              </div>
+              <small>Müşteri başına ortalama sepet veya fatura tutarı</small>
+              <div class="cpc-input-wrapper">
+                <input id="aov_value" name="aov_value" type="number" min="1" step="10" inputmode="numeric" placeholder="1250" value="1250" required />
+                <span class="cpc-input-unit">TL</span>
+              </div>
+              <input class="cpc-slider" name="aov_value_range" type="range" min="50" max="10000" step="25" value="1250" aria-label="Ortalama Sipariş Değeri Kaydırıcı" />
+            </div>
+
+            <!-- 4. Brüt Kâr Marjı -->
+            <div class="cpc-field">
+              <div class="cpc-field__header">
+                <label for="profit_margin">Brüt Kâr Marjı (%)</label>
+              </div>
+              <small>Ürün / operasyon maliyeti çıktıktan sonra kalan marj</small>
+              <div class="cpc-input-wrapper">
+                <input id="profit_margin" name="profit_margin" type="number" min="1" max="100" step="1" inputmode="numeric" placeholder="40" value="40" required />
+                <span class="cpc-input-unit">%</span>
+              </div>
+              <input class="cpc-slider" name="profit_margin_range" type="range" min="5" max="95" step="1" value="40" aria-label="Brüt Kâr Marjı Kaydırıcı" />
+            </div>
+          </div>
+
+          <p class="cpc-error" data-cpc-error role="alert" hidden></p>
+          <button class="info-button" type="submit">Sonuçları güncelle <span aria-hidden="true">→</span></button>
+        </form>
+      </div>
+
+      <div class="cpc-result-container">
+        <section class="cpc-result" data-cpc-result aria-labelledby="cpc-sonucu">
+          <header>
+            <p>Canlı Açık Artırma Analizi</p>
+            <h2 id="cpc-sonucu">Teklif ve Kârlılık Karneniz</h2>
+          </header>
+
+          <div class="cpc-status-banner profitable" data-status-banner>
+            <span class="cpc-status-badge">Kârlı Teklif</span>
+            <div data-status-text>Hesaplama yapılıyor...</div>
+          </div>
+
+          <div class="cpc-metrics-grid">
+            <article class="cpc-metric-card cpc-metric-card--primary">
+              <span>Maksimum Kârlı TBM</span>
+              <strong data-max-cpc>—</strong>
+              <small>Hedef CPA için verilebilecek tavan tıklama maliyeti</small>
+            </article>
+
+            <article class="cpc-metric-card">
+              <span>Başabaş (Break-Even) TBM</span>
+              <strong data-breakeven-cpc>—</strong>
+              <small>Sıfır kâr / zarar eşiği (bu değerin üstü net zarar yazar)</small>
+            </article>
+
+            <article class="cpc-metric-card">
+              <span>Gereken Tıklama</span>
+              <strong data-clicks-needed>—</strong>
+              <small>1 satış veya form kazanmak için beklenen tıklama</small>
+            </article>
+
+            <article class="cpc-metric-card">
+              <span>Önerilen Başlangıç Teklifi</span>
+              <strong data-recommended-bid>—</strong>
+              <small>Max CPC'nin %75'i (öğrenim evresi güvenlik payı)</small>
+            </article>
+          </div>
+
+          <div class="cpc-diagnostics">
+            <div class="cpc-diag-item">
+              <span>Başabaş CPA Eşiği (Birim Brüt Kâr)</span>
+              <strong data-breakeven-cpa>—</strong>
+            </div>
+            <div class="cpc-diag-item">
+              <span>Satış Başı Net Kâr (Hedef CPA ile)</span>
+              <strong data-profit-per-sale>—</strong>
+            </div>
+            <div class="cpc-diag-item">
+              <span>Gereken Minimum ROAS</span>
+              <strong data-target-roas>—</strong>
+            </div>
+          </div>
+
+          <div class="cpc-scenarios-section">
+            <h3>Açık Artırma Büyüme Senaryoları</h3>
+            <p>Hedefinize göre hangi teklif stratejisini seçmeniz gerektiğini gösteren simülasyon tablosu:</p>
+
+            <div class="cpc-table-wrapper">
+              <table class="cpc-table">
+                <thead>
+                  <tr>
+                    <th>Büyüme Senaryosu</th>
+                    <th>Önerilen Teklif (CPC)</th>
+                    <th>Beklenen Efektif CPA</th>
+                    <th>Satış Başı Kâr</th>
+                    <th>Rekabet &amp; Hacim Gücü</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="cpc-scenario-tag cpc-scenario-tag--low">Muhafazakâr</span>
+                      <div><strong>Düşük Teklif / Maksimum Kâr</strong></div>
+                    </td>
+                    <td><span class="cpc-bid-val" data-scenario-low-bid>—</span></td>
+                    <td><span data-scenario-low-cpa>—</span></td>
+                    <td><strong data-scenario-low-profit>—</strong></td>
+                    <td>Düşük hacim (%30-45 Gösterim Payı), yalnızca en ucuz aramalarda gösterim</td>
+                  </tr>
+                  <tr class="recommended-row">
+                    <td>
+                      <span class="cpc-scenario-tag cpc-scenario-tag--balanced">Önerilen</span>
+                      <div><strong>Dengeli / Sürdürülebilir Büyüme</strong></div>
+                    </td>
+                    <td><span class="cpc-bid-val" data-scenario-balanced-bid>—</span></td>
+                    <td><span data-scenario-balanced-cpa>—</span></td>
+                    <td><strong data-scenario-balanced-profit>—</strong></td>
+                    <td>Sağlıklı hacim (%65-80 Gösterim Payı), dengeli nakit akışı ve kârlılık</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="cpc-scenario-tag cpc-scenario-tag--aggressive">Agresif</span>
+                      <div><strong>Pazar Payı / Tavan Teklif</strong></div>
+                    </td>
+                    <td><span class="cpc-bid-val" data-scenario-aggressive-bid>—</span></td>
+                    <td><span data-scenario-aggressive-cpa>—</span></td>
+                    <td><strong data-scenario-aggressive-profit>—</strong></td>
+                    <td>Maksimum hacim (%85-95 Mutlak Üst Sıra), sıfır kâr ile müşteri kazanımı (LTV odaklı)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="cpc-math-breakdown">
+            <h4>Hesaplama Formülü ve Matematiksel Adımlar</h4>
+            <ul class="cpc-math-steps">
+              <li data-math-step-1><strong>1. Başabaş CPA:</strong> AOV × Kâr Marjı</li>
+              <li data-math-step-2><strong>2. Başabaş TBM (Tavan):</strong> Başabaş CPA × CR%</li>
+              <li data-math-step-3><strong>3. Maksimum Kârlı TBM:</strong> Hedef CPA × CR%</li>
+            </ul>
+          </div>
+
+          <div class="cpc-actions">
+            <button class="info-button info-button--light" type="button" data-cpc-copy>Özeti kopyala</button>
+            <a class="info-button" data-cpc-whatsapp href="https://wa.me/905019441921" rel="noopener noreferrer">Teklif stratejisini Narvals ile yönetin <span aria-hidden="true">↗</span></a>
+          </div>
+
+          <p class="cpc-note">Hesaplama simülasyondur; reklam açık artırmalarında rakiplerin anlık teklifleri, kalite puanı (Quality Score) ve mevsimsel hacim dalgalanmaları nihai maliyeti etkileyebilir.</p>
+        </section>
+      </div>
+
+      <section class="cpc-reading">
+        <div>
+          <h2>Google Ads ve reklam tekliflerinizi uzmanına bırakın.</h2>
+          <p>Kalite Puanını yükselterek TBM maliyetlerinizi düşürüyor, negatif kelime filtreleri ve yüksek dönüşümlü açılış sayfalarıyla bütçenizin her kuruşunu koruyoruz.</p>
+        </div>
+        <a href="/hizmetler/google-ads/">Google Ads çözümleri <span aria-hidden="true">→</span></a>
+      </section>
+
+      <section class="info-section cpc-faq">
+        <p class="info-section__label">Sık Sorulan Sorular</p>
+        <h2>CPC ve maksimum teklif hakkında merak edilenler.</h2>
+        <div class="info-faq">
+          <details>
+            <summary>Maksimum TBM (Max CPC) nedir ve nasıl hesaplanır?</summary>
+            <p>Maksimum TBM (Max CPC), bir tıklama için kârlılığınızı bozmadan ödeyebileceğiniz en yüksek açık artırma teklifidir. Hedef CPA (Edinme Başı Maliyet) ile Web Sitesi Dönüşüm Oranının (CR %) çarpılmasıyla hesaplanır.</p>
+          </details>
+          <details>
+            <summary>Başabaş (Break-Even) TBM ile Maksimum TBM arasındaki fark nedir?</summary>
+            <p>Başabaş TBM, kâr veya zarar etmediğiniz sıfır noktasındaki tavan tekliftir (Birim Brüt Kâr × CR). Maksimum TBM ise işletmenizin belirlediği hedef kâr marjını koruyarak verebileceğiniz güvenli tavan tekliftir.</p>
+          </details>
+          <details>
+            <summary>Açık artırmada teklif verirken neden Max CPC'nin altında başlanmalıdır?</summary>
+            <p>Google Ads ve Meta açık artırmalarında ilk teklifinizi Max CPC'nin %70-%80'i seviyesinde tutmak, kalite puanı ve öğrenme evresindeki dalgalanmalarda bütçenizin hızla erimesini engeller ve optimizasyon alanı tanır.</p>
+          </details>
+          <details>
+            <summary>Dönüşüm oranı (CR) arttığında izin verilen Max CPC nasıl değişir?</summary>
+            <p>Dönüşüm oranınız arttığında aynı hedef müşteri maliyeti için tıklama başına daha yüksek teklif verebilirsiniz. Örneğin CR %2'den %4'e çıktığında, Max CPC teklif tavanınız iki katına çıkar ve açık artırmada rakiplerinizin önüne geçersiniz.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer"><div class="site-footer__brand"><a href="/"><img src="/assets/logo-v6/narvals-mascot-v6-transparent-96.png" alt="" width="96" height="96" loading="lazy" /><strong>narvals<span>//</span>labs</strong></a><p>Web sitesi, özel yazılım ve reklamı aynı iş hedefinde buluşturan dijital üretim stüdyosu.</p></div><nav aria-label="Hizmet bağlantıları"><strong>Hizmetler</strong><a href="/hizmetler/web-tasarim/">Web tasarım &amp; UX</a><a href="/hizmetler/e-ticaret/">E-ticaret</a><a href="/hizmetler/ozel-yazilim/">Özel yazılım</a><a href="/hizmetler/google-ads/">Google Ads</a></nav><nav aria-label="Bilgi merkezi bağlantıları"><strong>Bilgi merkezi</strong><a href="/blog/">Tüm rehberler</a><a href="/araclar/">Ücretsiz araçlar</a><a href="/araclar/google-ads-butce-hesaplama/">Google Ads bütçe</a><a href="/editoryal-ilkeler/">Editoryal ilkeler</a></nav><div class="site-footer__contact"><strong>Bir proje mi var?</strong><p>Hedefi ve en kritik darboğazı anlatarak ilk görüşmeyi başlatın.</p><a href="mailto:info@narvals.com">info@narvals.com</a><a href="https://wa.me/905019441921" rel="noopener noreferrer">WhatsApp: +90 501 944 19 21 ↗</a></div><p class="site-footer__legal">© <span data-current-year>2026</span> Narvals Labs. Tüm hakları saklıdır.</p></footer>
+    <script type="module" src="/src/info-main.js"></script><script type="module" src="/src/cpc-calculator.js"></script>
+  </body>
+</html>

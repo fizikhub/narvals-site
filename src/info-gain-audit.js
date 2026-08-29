@@ -68,7 +68,7 @@ if (form) {
     rag_chunks: {
       name: '256–512 Tokenlık Açık Başlık Hiyerarşisi',
       category: 'rag',
-      advice: 'Her H2 ve H3 başlığını tek bir kavramı 256-512 tokenlık (yaklaşık 200-350 kelime) bağımsız anlamsal bloklar halinde tüketecek şekilde düzenleyin.'
+      advice: 'Her H2 ve H3 altında tek bir ana fikri, insanın bağlamı kaybetmeden anlayacağı doğal uzunlukta açıklayın; sabit bir AI token veya kelime hedefi kullanmayın.'
     },
     rag_entity: {
       name: 'Zamir Belirsizliği Olmayan Önerme Yapısı',

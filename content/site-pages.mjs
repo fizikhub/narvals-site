@@ -32,6 +32,8 @@ export const staticPages = [
   { key: 'meta-tag-previewer', path: '/araclar/meta-etiket-onizleyici/', file: 'araclar/meta-etiket-onizleyici/index.html', lastModified: '2026-08-30', kind: 'tool' },
   { key: 'schema-generator', path: '/araclar/schema-olusturucu/', file: 'araclar/schema-olusturucu/index.html', lastModified: '2026-08-30', kind: 'tool' },
   { key: 'info-gain-audit', path: '/araclar/bilgi-kazanimi-kontrolu/', file: 'araclar/bilgi-kazanimi-kontrolu/index.html', lastModified: '2026-08-30', kind: 'tool' },
+  { key: 'cpc-calculator', path: '/araclar/cpc-hesaplama/', file: 'araclar/cpc-hesaplama/index.html', lastModified: '2026-08-30', kind: 'tool' },
+  { key: 'crawl-budget-calculator', path: '/araclar/tarama-butcesi-hesaplama/', file: 'araclar/tarama-butcesi-hesaplama/index.html', lastModified: '2026-08-30', kind: 'tool' },
   { key: 'blog', path: '/blog/', file: 'blog/index.html', lastModified: '2026-08-29', kind: 'collection' },
   { key: 'editorial-policy', path: '/editoryal-ilkeler/', file: 'editoryal-ilkeler/index.html', lastModified: '2026-08-23', kind: 'policy' }
 ];

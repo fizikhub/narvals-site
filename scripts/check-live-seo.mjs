@@ -82,6 +82,29 @@ for (const batch of batches) {
   }));
 }
 
+// A permissive robots.txt is not enough when a CDN or WAF challenges bots.
+// Probe the homepage with documented crawler user agents and require the same
+// public HTML response status that a normal visitor receives.
+const crawlerUserAgents = {
+  Googlebot: 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  Bingbot: 'Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)',
+  'OAI-SearchBot': 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; OAI-SearchBot/1.4; +https://openai.com/searchbot',
+  'Claude-SearchBot': 'Mozilla/5.0 (compatible; Claude-SearchBot/1.0; +https://www.anthropic.com/bot)',
+  PerplexityBot: 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; PerplexityBot/1.0; +https://perplexity.ai/perplexitybot)',
+  Applebot: 'Mozilla/5.0 (compatible; Applebot/0.1; +http://www.apple.com/go/applebot)'
+};
+await Promise.all(Object.entries(crawlerUserAgents).map(async ([agent, userAgent]) => {
+  try {
+    const response = await request(`${origin}/`, { headers: { 'user-agent': userAgent } });
+    if (response.status !== 200) errors.push(`${agent}: homepage returned ${response.status}; CDN/WAF may block crawling`);
+    if (!response.headers.get('content-type')?.toLowerCase().includes('text/html')) {
+      errors.push(`${agent}: homepage did not return HTML`);
+    }
+  } catch (error) {
+    errors.push(`${agent}: crawler probe failed (${error.message})`);
+  }
+}));
+
 const fetchText = async (path, expectedType) => {
   try {
     const response = await request(`${origin}${path}`);

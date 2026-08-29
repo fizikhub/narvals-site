@@ -1,0 +1,818 @@
+/* Tarama Bütçesi ve Bot Taranabilirlik Teşhisi CSS */
+
+.cbc-hero .info-hero__panel {
+  border-left: 3px solid var(--accent, #00e599);
+}
+
+.cbc-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: clamp(40px, 8vw, 120px);
+  align-items: end;
+  padding: clamp(64px, 8vw, 110px) var(--gutter);
+  background: var(--yellow);
+  color: var(--ink);
+}
+
+.cbc-intro h2,
+.cbc-section-title,
+.cbc-result h2,
+.cbc-sources h2 {
+  margin: 0;
+  font-family: 'Anybody Variable', sans-serif;
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  font-stretch: 84%;
+  font-weight: 850;
+  line-height: 0.96;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+.cbc-intro p {
+  max-width: 68ch;
+  margin: 24px 0 0;
+  font-size: clamp(16px, 1.25vw, 19px);
+  line-height: 1.65;
+}
+
+.cbc-intro ul {
+  display: grid;
+  gap: 10px;
+  min-width: 260px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'Azeret Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.cbc-intro li {
+  padding: 10px 0;
+  border-bottom: 2px solid currentColor;
+}
+
+.cbc-intro li::before {
+  content: '✓ ';
+  margin-right: 8px;
+}
+
+/* Preset Selector Bar */
+.cbc-preset-bar {
+  padding: clamp(28px, 4vw, 44px) var(--gutter);
+  background: var(--deep);
+  color: var(--offwhite);
+  border-bottom: 2px solid var(--ink);
+}
+
+.cbc-preset-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.cbc-preset-label {
+  font-family: 'Azeret Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--aqua);
+}
+
+.cbc-preset-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cbc-preset-btn {
+  padding: 10px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--offwhite);
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cbc-preset-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--aqua);
+}
+
+.cbc-preset-btn.active {
+  background: var(--aqua);
+  color: var(--deep);
+  border-color: var(--aqua);
+  font-weight: 700;
+}
+
+/* Main Form Area */
+.cbc-form {
+  background: var(--offwhite);
+  color: var(--ink);
+  padding: clamp(48px, 6vw, 84px) var(--gutter);
+}
+
+.cbc-form-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: clamp(40px, 5vw, 64px);
+}
+
+.cbc-group {
+  display: grid;
+  gap: 20px;
+  padding-bottom: clamp(32px, 4vw, 48px);
+  border-bottom: 2px solid var(--ice);
+}
+
+.cbc-group header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cbc-group-badge {
+  font-family: 'Azeret Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ocean-metal);
+}
+
+.cbc-group header h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+}
+
+.cbc-group header p {
+  margin: 0;
+  font-size: 15px;
+  color: var(--muted);
+  max-width: 65ch;
+  line-height: 1.5;
+}
+
+/* Fields Grid */
+.cbc-fields-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.cbc-field-card {
+  padding: 20px;
+  background: var(--ice);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cbc-field-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.cbc-field-header label {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--ink);
+}
+
+.cbc-field-desc {
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.cbc-input-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cbc-input-number {
+  flex: 1;
+  min-height: 48px;
+  padding: 10px 14px;
+  border: 2px solid var(--ink);
+  background: var(--offwhite);
+  color: var(--ink);
+  font: 700 16px/1.3 'Azeret Mono', monospace;
+  border-radius: 4px;
+}
+
+.cbc-input-unit {
+  font-family: 'Azeret Mono', monospace;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.cbc-range-slider {
+  width: 100%;
+  accent-color: var(--blue);
+  cursor: pointer;
+}
+
+.cbc-status-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: 'Azeret Mono', monospace;
+  text-transform: uppercase;
+  border-radius: 4px;
+  align-self: flex-start;
+}
+
+.cbc-status-tag--good {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.cbc-status-tag--fair {
+  background: #fef9c3;
+  color: #854d0e;
+}
+
+.cbc-status-tag--poor {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* Radio Cards Grid for Rendering Type */
+.cbc-render-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.cbc-render-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  background: var(--ice);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cbc-render-card:hover {
+  border-color: var(--blue);
+  background: #ffffff;
+}
+
+.cbc-render-card.active,
+.cbc-render-card input[type="radio"]:checked + .cbc-render-content {
+  border-color: var(--blue);
+}
+
+.cbc-render-card input[type="radio"] {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--blue);
+}
+
+.cbc-render-title {
+  font-weight: 750;
+  font-size: 16px;
+  color: var(--ink);
+  padding-right: 28px;
+}
+
+.cbc-render-desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.cbc-render-multiplier {
+  font-family: 'Azeret Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 8px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  align-self: flex-start;
+  color: var(--ink);
+}
+
+/* HTTP Status Code Distribution Matrix */
+.cbc-status-matrix {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.cbc-status-box {
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.cbc-status-box--200 { background: #f0fdf4; border-color: #bbf7d0; }
+.cbc-status-box--304 { background: #f0f9ff; border-color: #bae6fd; }
+.cbc-status-box--3xx { background: #fefce8; border-color: #fef08a; }
+.cbc-status-box--404 { background: #fff1f2; border-color: #fecdd3; }
+.cbc-status-box--5xx { background: #fef2f2; border-color: #fca5a5; }
+
+.cbc-status-box label {
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cbc-status-box input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  font-family: 'Azeret Mono', monospace;
+  font-size: 15px;
+  font-weight: 700;
+  background: #ffffff;
+}
+
+.cbc-status-box small {
+  font-size: 11.5px;
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+/* Distribution Bar */
+.cbc-dist-wrapper {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cbc-dist-bar {
+  height: 16px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  background: #e2e8f0;
+}
+
+.cbc-dist-segment {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.cbc-dist-segment--200 { background: #22c55e; }
+.cbc-dist-segment--304 { background: #0ea5e9; }
+.cbc-dist-segment--3xx { background: #eab308; }
+.cbc-dist-segment--404 { background: #f43f5e; }
+.cbc-dist-segment--5xx { background: #991b1b; }
+
+.cbc-dist-warning {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #dc2626;
+  font-family: 'Azeret Mono', monospace;
+}
+
+/* Results Section */
+.cbc-result {
+  padding: clamp(56px, 7vw, 96px) var(--gutter);
+  background: var(--deep);
+  color: var(--offwhite);
+}
+
+.cbc-result-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 40px;
+}
+
+.cbc-result header p {
+  font-family: 'Azeret Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--aqua);
+  margin-bottom: 8px;
+}
+
+.cbc-result header h2 {
+  color: var(--offwhite);
+}
+
+/* Big Score Hero Card */
+.cbc-score-hero {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: clamp(24px, 4vw, 48px);
+  align-items: center;
+  padding: clamp(28px, 4vw, 44px);
+  background: rgba(255, 255, 255, 0.04);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+}
+
+.cbc-score-badge {
+  width: clamp(100px, 14vw, 150px);
+  height: clamp(100px, 14vw, 150px);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--blue);
+  color: #ffffff;
+  box-shadow: 0 0 30px rgba(0, 229, 153, 0.2);
+  border: 4px solid var(--aqua);
+  transition: all 0.3s ease;
+}
+
+.cbc-score-badge--excellent {
+  border-color: #22c55e;
+  box-shadow: 0 0 30px rgba(34, 197, 94, 0.3);
+}
+
+.cbc-score-badge--good {
+  border-color: var(--aqua);
+  box-shadow: 0 0 30px rgba(0, 229, 153, 0.2);
+}
+
+.cbc-score-badge--fair {
+  border-color: #eab308;
+  box-shadow: 0 0 30px rgba(234, 179, 8, 0.3);
+}
+
+.cbc-score-badge--poor {
+  border-color: #ef4444;
+  box-shadow: 0 0 30px rgba(239, 68, 68, 0.3);
+}
+
+.cbc-score-number {
+  font-family: 'Anybody Variable', sans-serif;
+  font-size: clamp(2.4rem, 4vw, 3.8rem);
+  font-weight: 850;
+  line-height: 1;
+}
+
+.cbc-score-max {
+  font-family: 'Azeret Mono', monospace;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.cbc-score-details h3 {
+  font-family: 'Anybody Variable', sans-serif;
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  font-weight: 780;
+  margin: 0 0 8px;
+  color: var(--aqua);
+}
+
+.cbc-score-details p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 60ch;
+}
+
+/* Metric Cards Grid */
+.cbc-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.cbc-metric-card {
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cbc-metric-title {
+  font-family: 'Azeret Mono', monospace;
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.cbc-metric-value {
+  font-family: 'Anybody Variable', sans-serif;
+  font-size: clamp(1.8rem, 2.6vw, 2.4rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+.cbc-metric-sub {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.4;
+  margin-top: 4px;
+}
+
+/* Wastage Breakdown Box */
+.cbc-wastage-box {
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  display: grid;
+  gap: 16px;
+}
+
+.cbc-wastage-box h3 {
+  font-family: 'Anybody Variable', sans-serif;
+  font-size: 1.3rem;
+  margin: 0;
+  color: var(--yellow);
+}
+
+.cbc-wastage-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+}
+
+.cbc-wastage-item {
+  padding: 12px 16px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  border-left: 3px solid var(--coral);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cbc-wastage-item strong {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.cbc-wastage-item span {
+  font-family: 'Azeret Mono', monospace;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Recommendations List */
+.cbc-recommendations {
+  display: grid;
+  gap: 16px;
+}
+
+.cbc-rec-card {
+  padding: 20px 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: grid;
+  gap: 8px;
+}
+
+.cbc-rec-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cbc-rec-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.cbc-rec-badge {
+  font-family: 'Azeret Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.cbc-rec-badge--critical {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+.cbc-rec-badge--high {
+  background: #ea580c;
+  color: #ffffff;
+}
+
+.cbc-rec-badge--medium {
+  background: #ca8a04;
+  color: #ffffff;
+}
+
+.cbc-rec-badge--info {
+  background: #0284c7;
+  color: #ffffff;
+}
+
+.cbc-rec-desc {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Action Buttons */
+.cbc-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding-top: 16px;
+}
+
+.cbc-actions .info-button {
+  cursor: pointer;
+}
+
+/* Disclaimer & Scientific Sources */
+.cbc-sources {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: clamp(40px, 6vw, 80px);
+  padding: clamp(64px, 8vw, 110px) var(--gutter);
+  background: var(--offwhite);
+  color: var(--ink);
+  border-top: 2px solid var(--ink);
+}
+
+.cbc-sources h2 {
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  margin-bottom: 16px;
+}
+
+.cbc-sources p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 60ch;
+  margin: 0;
+}
+
+.cbc-sources ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 300px;
+}
+
+.cbc-sources li a {
+  display: block;
+  padding: 12px 16px;
+  background: var(--ice);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink);
+  transition: all 0.2s ease;
+}
+
+.cbc-sources li a:hover {
+  background: #ffffff;
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+/* Bridge CTA Section */
+.cbc-bridge {
+  padding: clamp(64px, 8vw, 100px) var(--gutter);
+  background: var(--yellow);
+  color: var(--ink);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.cbc-bridge h2 {
+  font-family: 'Anybody Variable', sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 850;
+  margin: 0 0 12px;
+  line-height: 1.05;
+}
+
+.cbc-bridge p {
+  font-size: 16px;
+  color: var(--ink);
+  max-width: 600px;
+  margin: 0;
+  line-height: 1.55;
+}
+
+.cbc-bridge a {
+  padding: 14px 28px;
+  background: var(--deep);
+  color: #ffffff;
+  border-radius: 6px;
+  font-weight: 750;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.cbc-bridge a:hover {
+  background: var(--abyss);
+  transform: translateY(-2px);
+}
+
+/* FAQ Section */
+.cbc-faq {
+  padding: clamp(64px, 8vw, 110px) var(--gutter);
+  background: var(--offwhite);
+}
+
+/* Print Stylesheet */
+@media print {
+  .info-nav,
+  .site-footer,
+  .cbc-actions,
+  .cbc-preset-bar,
+  .skip-link,
+  .cbc-bridge {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  .cbc-result {
+    background: #ffffff !important;
+    color: #000000 !important;
+    padding: 0 !important;
+  }
+
+  .cbc-metric-card,
+  .cbc-rec-card,
+  .cbc-score-hero,
+  .cbc-wastage-box {
+    border: 1px solid #cccccc !important;
+    background: #f9f9f9 !important;
+    color: #000000 !important;
+  }
+
+  .cbc-metric-value,
+  .cbc-rec-title {
+    color: #000000 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .cbc-intro,
+  .cbc-sources,
+  .cbc-score-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .cbc-score-badge {
+    margin: 0 auto;
+  }
+
+  .cbc-score-details {
+    text-align: center;
+  }
+}

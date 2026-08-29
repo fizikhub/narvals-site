@@ -26,6 +26,14 @@ const descriptions = new Set();
 const htmlByPath = new Map();
 const fileByPath = new Map(pages.map(([path, file]) => [path, file]));
 const kindByPath = new Map(pages.map(([path, , kind]) => [path, kind]));
+const incomingLinks = new Map(pages.map(([path]) => [path, new Set()]));
+const unsupportedSeoClaims = [
+  /\b(?:100-250|256-512)\s+token/i,
+  /\bPerplexity-Search\b/i,
+  /\bsıfır halüsinasyon/i,
+  /\bhalüsinasyon(?:larını| riskini) (?:engeller|en aza indirir)/i,
+  /\bAI (?:yanıtlarında )?kaynak gösterimi (?:sağlar|garanti)/i
+];
 
 const countMatches = (value, pattern) => [...value.matchAll(pattern)].length;
 const tags = (html, tagName) => [...html.matchAll(new RegExp(`<${tagName}\\b[^>]*>`, 'gi'))].map((match) => match[0]);
@@ -131,6 +139,9 @@ for (const [path, html] of htmlByPath) {
   if (/meta name="(?:geo\.(?:region|placename|position)|ICBM)"/i.test(html)) {
     errors.push(`${path}: legacy geolocation meta found; GEO is content/entity optimization, not coordinate stuffing`);
   }
+  for (const claim of unsupportedSeoClaims) {
+    if (claim.test(html)) errors.push(`${path}: unsupported or absolute SEO/GEO claim found (${claim.source})`);
+  }
 
   const jsonLdBlocks = [...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)];
   if (!jsonLdBlocks.length) errors.push(`${path}: JSON-LD missing`);
@@ -157,7 +168,7 @@ for (const [path, html] of htmlByPath) {
   const orgNode = structuredNodes.find((node) => node['@type'] === 'Organization');
   if (orgNode) {
     if (orgNode.name !== 'Narvals Labs') errors.push(`${path}: Organization name mismatch`);
-    if (orgNode.legalName !== 'Narvals Labs') errors.push(`${path}: Organization legalName mismatch`);
+    if (orgNode.legalName) errors.push(`${path}: unverified Organization legalName must not be published`);
     if (!Array.isArray(orgNode.sameAs) || !orgNode.sameAs.includes('https://github.com/fizikhub/narvals-site')) {
       errors.push(`${path}: Organization sameAs GitHub link missing`);
     }
@@ -166,9 +177,9 @@ for (const [path, html] of htmlByPath) {
     }
     if (orgNode.areaServed?.name !== 'Türkiye') errors.push(`${path}: Organization areaServed Country Türkiye missing`);
     if (orgNode.address?.addressCountry !== 'TR') errors.push(`${path}: Organization address country TR missing`);
-    if (orgNode.currenciesAccepted !== 'TRY, EUR, USD') errors.push(`${path}: Organization currenciesAccepted missing`);
-    if (orgNode.paymentAccepted !== 'Bank Transfer, Credit Card') errors.push(`${path}: Organization paymentAccepted missing`);
-    if (orgNode.founder?.name !== 'Narvals Labs Team') errors.push(`${path}: Organization founder missing`);
+    if (orgNode.currenciesAccepted || orgNode.paymentAccepted) errors.push(`${path}: unverified payment claims found in Organization`);
+    if (orgNode.founder) errors.push(`${path}: unverified Organization founder must not be published`);
+    if (orgNode.contactPoint?.hoursAvailable) errors.push(`${path}: unverified contact hours must not be published`);
     if (orgNode.email !== 'info@narvals.com') errors.push(`${path}: Organization email missing or wrong`);
     if (orgNode.telephone !== '+905019441921') errors.push(`${path}: Organization telephone missing or wrong`);
     if (!Array.isArray(orgNode.knowsAbout) || orgNode.knowsAbout.length < 5) errors.push(`${path}: Organization knowsAbout missing or insufficient`);
@@ -177,7 +188,7 @@ for (const [path, html] of htmlByPath) {
   const websiteNode = structuredNodes.find((node) => node['@type'] === 'WebSite');
   if (websiteNode) {
     if (websiteNode.name !== 'Narvals Labs') errors.push(`${path}: WebSite name mismatch`);
-    if (!Array.isArray(websiteNode.alternateName) || !websiteNode.alternateName.includes('Narvals')) {
+    if (JSON.stringify(websiteNode.alternateName) !== JSON.stringify(['Narvals'])) {
       errors.push(`${path}: WebSite alternateName missing`);
     }
     if (websiteNode.potentialAction?.['@type'] !== 'SearchAction') {
@@ -248,6 +259,7 @@ for (const [path, html] of htmlByPath) {
       errors.push(`${path}: internal link has no canonical page (${href})`);
       continue;
     }
+    if (targetPath !== path) incomingLinks.get(targetPath)?.add(path);
     if (target.hash) {
       const fragment = decodeURIComponent(target.hash.slice(1));
       const targetHtml = htmlByPath.get(targetPath);
@@ -258,6 +270,10 @@ for (const [path, html] of htmlByPath) {
   }
 
   if (!file) errors.push(`${path}: page mapping missing`);
+}
+
+for (const [path, sources] of incomingLinks) {
+  if (path !== '/' && sources.size === 0) errors.push(`${path}: orphan canonical page has no incoming internal link`);
 }
 
 for (const file of productionFiles) {
@@ -281,6 +297,11 @@ const robotsText = await readFile(join(discoveryRoot, 'robots.txt'), 'utf8').cat
 if (!/^User-agent:\s*\*\s*$[\s\S]*?^Allow:\s*\/\s*$/mi.test(robotsText)) errors.push('robots.txt must allow all crawlers through the wildcard group');
 if (/^Disallow:\s*\S+/mi.test(robotsText)) errors.push('robots.txt contains an unexpected crawl block');
 if (!robotsText.includes(`Sitemap: ${siteOrigin}/sitemap.xml`)) errors.push('robots.txt sitemap URL is wrong');
+for (const agent of ['Googlebot', 'OAI-SearchBot', 'Claude-SearchBot', 'PerplexityBot', 'Perplexity-User', 'Applebot']) {
+  if (!new RegExp(`^User-agent:\\s*${agent}\\s*$`, 'mi').test(robotsText)) {
+    errors.push(`robots.txt is missing documented crawler policy for ${agent}`);
+  }
+}
 
 const llmsText = await readFile(join(discoveryRoot, 'llms.txt'), 'utf8').catch(() => '');
 for (const [path] of pages) {

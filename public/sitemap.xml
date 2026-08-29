@@ -301,6 +301,26 @@
     </image:image>
   </url>
   <url>
+    <loc>https://narvals.com/araclar/cpc-hesaplama/</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
+      <image:title>CPC ve Maksimum Teklif Hesaplama Aracı</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://narvals.com/araclar/tarama-butcesi-hesaplama/</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
+      <image:title>Tarama Bütçesi ve Bot Taranabilirlik Aracı</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://narvals.com/blog/</loc>
     <lastmod>2026-08-29</lastmod>
     <changefreq>daily</changefreq>
@@ -508,6 +528,26 @@
     <image:image>
       <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
       <image:title>Web sitesi dönüşüm oranı nasıl hesaplanır?</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://narvals.com/blog/crawl-budget-ve-googlebot-tarama-verimliligi/</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
+      <image:title>Crawl budget nedir? Googlebot tarama verimliliği rehberi</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://narvals.com/blog/ga4-ve-server-side-gtm-kurulum-rehberi/</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://narvals.com/og/narvals-labs-og.jpg</image:loc>
+      <image:title>GA4 ve server-side GTM nasıl kurulur? Ölçüm rehberi</image:title>
     </image:image>
   </url>
   <url>

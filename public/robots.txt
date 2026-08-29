@@ -40,6 +40,9 @@ Allow: /
 User-agent: ChatGPT-User
 Allow: /
 
+User-agent: OAI-AdsBot
+Allow: /
+
 User-agent: ClaudeBot
 Allow: /
 
@@ -55,7 +58,7 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: Perplexity-Search
+User-agent: Perplexity-User
 Allow: /
 
 User-agent: Applebot

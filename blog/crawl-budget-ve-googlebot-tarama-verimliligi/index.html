@@ -1,0 +1,522 @@
+<!doctype html>
+<html class="no-js" lang="tr">
+  <head>
+    <script>document.documentElement.classList.replace('no-js', 'js');</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#03233a" />
+    <meta name="color-scheme" content="light" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="msapplication-TileColor" content="#03233a" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="description" content="Crawl budget kavramını, küçük ve büyük sitelerde gerçek önemini; sunucu logları, sitemap, iç bağlantı, kopya URL ve HTTP durumlarıyla teşhis edin." />
+    <meta name="keywords" content="crawl budget nedir, Googlebot tarama bütçesi, tarama verimliliği, Google indeksleme, sunucu log analizi" />
+    <meta name="author" content="Narvals Labs" />
+    <link rel="canonical" href="https://narvals.com/blog/crawl-budget-ve-googlebot-tarama-verimliligi/" />
+    <link rel="alternate" hreflang="tr" href="https://narvals.com/blog/crawl-budget-ve-googlebot-tarama-verimliligi/" />
+    <link rel="alternate" hreflang="tr-TR" href="https://narvals.com/blog/crawl-budget-ve-googlebot-tarama-verimliligi/" />
+    <link rel="alternate" hreflang="x-default" href="https://narvals.com/blog/crawl-budget-ve-googlebot-tarama-verimliligi/" />
+    <link rel="alternate" type="application/rss+xml" title="Narvals Labs Rehberleri" href="https://narvals.com/blog/feed.xml" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/assets/logo-v6/narvals-favicon-48.png" type="image/png" sizes="48x48" />
+    <link rel="icon" href="/assets/logo-v6/narvals-favicon-96.png" type="image/png" sizes="96x96" />
+    <link rel="icon" href="/assets/logo-v6/narvals-favicon-192.png" type="image/png" sizes="192x192" />
+    <link rel="icon" href="/assets/logo-v6/narvals-favicon-v6-256.png" type="image/png" sizes="256x256" />
+    <link rel="apple-touch-icon" href="/assets/logo-v6/narvals-avatar-v6-1080.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Narvals Labs" />
+    <meta property="og:title" content="Crawl Budget ve Googlebot Tarama Verimliliği | Narvals" />
+    <meta property="og:description" content="Crawl budget kavramını, küçük ve büyük sitelerde gerçek önemini; sunucu logları, sitemap, iç bağlantı, kopya URL ve HTTP durumlarıyla teşhis edin." />
+    <meta property="og:url" content="https://narvals.com/blog/crawl-budget-ve-googlebot-tarama-verimliligi/" />
+    <meta property="og:image" content="https://narvals.com/og/narvals-labs-og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Narvals Labs — Web, Yazılım ve Reklam" />
+    <meta property="article:published_time" content="2026-08-30T12:00:00+03:00" />
+    <meta property="article:modified_time" content="2026-08-30T12:00:00+03:00" />
+    <meta property="article:section" content="SEO &amp; GEO" />
+    <meta property="article:author" content="https://narvals.com/hakkimizda/" />
+    <meta property="article:publisher" content="https://narvals.com/" />
+    <meta property="article:tag" content="crawl budget nedir" />
+    <meta property="article:tag" content="Googlebot tarama bütçesi" />
+    <meta property="article:tag" content="tarama verimliliği" />
+    <meta property="article:tag" content="Google indeksleme" />
+    <meta property="article:tag" content="sunucu log analizi" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Crawl Budget ve Googlebot Tarama Verimliliği | Narvals" />
+    <meta name="twitter:description" content="Crawl budget kavramını, küçük ve büyük sitelerde gerçek önemini; sunucu logları, sitemap, iç bağlantı, kopya URL ve HTTP durumlarıyla teşhis edin." />
+    <meta name="twitter:image" content="https://narvals.com/og/narvals-labs-og.jpg" />
+    <meta name="twitter:image:alt" content="Narvals Labs — Web, Yazılım ve Reklam" />
+    <meta name="twitter:label1" content="Okuma Süresi" />
+    <meta name="twitter:data1" content="11 dk" />
+    <meta name="twitter:label2" content="Kategori" />
+    <meta name="twitter:data2" content="SEO &amp; GEO" />
+    <title>Crawl Budget ve Googlebot Tarama Verimliliği | Narvals</title>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://narvals.com/#organization",
+      "name": "Narvals Labs",
+      "url": "https://narvals.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://narvals.com/assets/logo-v6/narvals-avatar-v6-1080.png",
+        "contentUrl": "https://narvals.com/assets/logo-v6/narvals-avatar-v6-1080.png",
+        "width": 1080,
+        "height": 1080
+      },
+      "image": "https://narvals.com/og/narvals-labs-og.jpg",
+      "description": "Web sitesi ve UX, işletmeye özel yazılım, dijital reklam, marka, QR menü ve rezervasyon sistemleri üreten dijital stüdyo.",
+      "email": "info@narvals.com",
+      "telephone": "+905019441921",
+      "sameAs": [
+        "https://github.com/fizikhub/narvals-site"
+      ],
+      "publishingPrinciples": "https://narvals.com/editoryal-ilkeler/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "TR"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "info@narvals.com",
+        "telephone": "+905019441921",
+        "areaServed": "TR",
+        "availableLanguage": [
+          "Turkish",
+          "English"
+        ]
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Türkiye"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Narvals Labs Dijital Hizmetler",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Kurumsal Web Tasarım ve UX",
+              "url": "https://narvals.com/hizmetler/web-tasarim/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "E-Ticaret Sitesi Tasarımı ve Geliştirme",
+              "url": "https://narvals.com/hizmetler/e-ticaret/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "İşletmeye Özel Yazılım ve Otomasyon",
+              "url": "https://narvals.com/hizmetler/ozel-yazilim/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Google Ads Reklam ve Dönüşüm Yönetimi",
+              "url": "https://narvals.com/hizmetler/google-ads/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Meta (Instagram & Facebook) Reklam Yönetimi",
+              "url": "https://narvals.com/hizmetler/dijital-reklam/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sosyal Medya Yönetimi ve İçerik Stratejisi",
+              "url": "https://narvals.com/hizmetler/sosyal-medya-yonetimi/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Özel QR Menü Yazılımı ve Yönetim Paneli",
+              "url": "https://narvals.com/hizmetler/qr-menu/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Online Rezervasyon ve Randevu Sistemi",
+              "url": "https://narvals.com/hizmetler/rezervasyon-randevu/"
+            }
+          }
+        ]
+      },
+      "knowsAbout": [
+        "Web Tasarım ve UX",
+        "Özel Yazılım Geliştirme",
+        "Meta Reklam Yönetimi",
+        "Google Ads Yönetimi",
+        "E-Ticaret Sitesi",
+        "Sosyal Medya Yönetimi",
+        "QR Menü Sistemleri",
+        "Online Rezervasyon Sistemleri",
+        "Teknik SEO",
+        "Generative Engine Optimization (GEO)",
+        "Yapay Zeka Aramaları ve LLM İndeksleme",
+        "E-E-A-T ve Varlık Tabanlı SEO",
+        "Bilgi Kazanımı (Information Gain)",
+        "Yapılandırılmış Veri ve Schema Mimarisi",
+        "Core Web Vitals Optimizasyonu",
+        "Dönüşüm Oranı Optimizasyonu (CRO)",
+        "Conversions API (CAPI)",
+        "Google Analytics 4 (GA4)",
+        "Headless CMS ve API Mimarisi"
+      ],
+      "knowsLanguage": [
+        "tr",
+        "en"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://narvals.com/#website",
+      "url": "https://narvals.com/",
+      "name": "Narvals Labs",
+      "alternateName": [
+        "Narvals"
+      ],
+      "inLanguage": "tr-TR",
+      "publisher": {
+        "@id": "https://narvals.com/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://narvals.com/blog/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://narvals.com/blog/crawl-budget-ve-googlebot-tarama-verimliligi/#webpage",
+      "url": "https://narvals.com/blog/crawl-budget-ve-googlebot-tarama-verimliligi/",
+      "name": "Crawl Budget ve Googlebot Tarama Verimliliği | Narvals",
+      "description": "Crawl budget kavramını, küçük ve büyük sitelerde gerçek önemini; sunucu logları, sitemap, iç bağlantı, kopya URL ve HTTP durumlarıyla teşhis edin.",
+      "inLanguage": "tr-TR",
+      "isPartOf": {
+        "@id": "https://narvals.com/#website"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Crawl budget"
+        },
+        {
+          "@type": "Thing",
+          "name": "Googlebot",
+          "sameAs": "https://en.wikipedia.org/wiki/Googlebot"
+        },
+        {
+          "@type": "Thing",
+          "name": "Teknik SEO",
+          "sameAs": "https://tr.wikipedia.org/wiki/Arama_motoru_optimizasyonu"
+        },
+        {
+          "@type": "Thing",
+          "name": "Sunucu log analizi"
+        }
+      ],
+      "datePublished": "2026-08-30T12:00:00+03:00",
+      "dateModified": "2026-08-30T12:00:00+03:00",
+      "breadcrumb": {
+        "@id": "https://narvals.com/blog/crawl-budget-ve-googlebot-tarama-verimliligi/#breadcrumb"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "h1",
+          ".info-hero__answer",
+          ".article-summary ul",
+          ".article-section h2"
+        ]
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://narvals.com/og/narvals-labs-og.jpg",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://narvals.com/blog/crawl-budget-ve-googlebot-tarama-verimliligi/#article",
+      "mainEntityOfPage": {
+        "@id": "https://narvals.com/blog/crawl-budget-ve-googlebot-tarama-verimliligi/#webpage"
+      },
+      "headline": "Crawl budget nedir? Googlebot tarama verimliliği rehberi",
+      "description": "Crawl budget kavramını, küçük ve büyük sitelerde gerçek önemini; sunucu logları, sitemap, iç bağlantı, kopya URL ve HTTP durumlarıyla teşhis edin.",
+      "image": [
+        "https://narvals.com/og/narvals-labs-og.jpg"
+      ],
+      "datePublished": "2026-08-30T12:00:00+03:00",
+      "dateModified": "2026-08-30T12:00:00+03:00",
+      "timeRequired": "PT11M",
+      "inLanguage": "tr-TR",
+      "isAccessibleForFree": true,
+      "wordCount": 693,
+      "articleSection": "SEO & GEO",
+      "keywords": "crawl budget nedir, Googlebot tarama bütçesi, tarama verimliliği, Google indeksleme, sunucu log analizi",
+      "author": {
+        "@id": "https://narvals.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://narvals.com/#organization"
+      },
+      "copyrightHolder": {
+        "@id": "https://narvals.com/#organization"
+      },
+      "license": "https://narvals.com/editoryal-ilkeler/",
+      "publishingPrinciples": "https://narvals.com/editoryal-ilkeler/",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "h1",
+          ".info-hero__answer",
+          ".article-summary ul",
+          ".article-section h2"
+        ]
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Crawl budget"
+        },
+        {
+          "@type": "Thing",
+          "name": "Googlebot",
+          "sameAs": "https://en.wikipedia.org/wiki/Googlebot"
+        },
+        {
+          "@type": "Thing",
+          "name": "Teknik SEO",
+          "sameAs": "https://tr.wikipedia.org/wiki/Arama_motoru_optimizasyonu"
+        },
+        {
+          "@type": "Thing",
+          "name": "Sunucu log analizi"
+        }
+      ],
+      "citation": [
+        "https://developers.google.com/search/docs/crawling-indexing/large-site-managing-crawl-budget",
+        "https://developers.google.com/search/docs/crawling-indexing/verifying-googlebot",
+        "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap",
+        "https://support.google.com/webmasters/answer/9679690",
+        "https://www.indexnow.org"
+      ],
+      "isBasedOn": [
+        "https://developers.google.com/search/docs/crawling-indexing/large-site-managing-crawl-budget",
+        "https://developers.google.com/search/docs/crawling-indexing/verifying-googlebot",
+        "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap",
+        "https://support.google.com/webmasters/answer/9679690",
+        "https://www.indexnow.org"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://narvals.com/blog/crawl-budget-ve-googlebot-tarama-verimliligi/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ana sayfa",
+          "item": "https://narvals.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Rehberler",
+          "item": "https://narvals.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "SEO ve GEO rehberleri",
+          "item": "https://narvals.com/blog/konu/seo-geo/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Crawl budget nedir? Googlebot tarama verimliliği rehberi",
+          "item": "https://narvals.com/blog/crawl-budget-ve-googlebot-tarama-verimliligi/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://narvals.com/blog/crawl-budget-ve-googlebot-tarama-verimliligi/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Crawl budget küçük siteler için önemli mi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google’ın rehberine göre yüz milyonlarca dönemsel URL veya on milyonlarca sık değişen URL gibi çok büyük ölçekler asıl crawl budget adaylarıdır. Küçük siteler önce erişim, canonical, kalite ve iç bağlantıyı denetlemelidir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Sitemap göndermek bütün sayfaları indeksletir mi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hayır. Sitemap tercih edilen kanonik URL’leri keşfetmeye yardım eder; tarama, indeks veya sıralama garantisi vermez."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Googlebot taramasını nasıl ölçerim?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Search Console Crawl Stats genel görünüm sağlar. En kesin URL ve durum kodu ayrımı için doğrulanmış Googlebot isteklerini ham CDN veya sunucu erişim loglarında analiz edin."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "IndexNow Google’a URL gönderir mi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hayır. IndexNow Bing, Yandex ve diğer katılımcı motorlar içindir; Google şu anda IndexNow protokolünü desteklemez."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
+  </head>
+  <body class="info-page article-page">
+    <!-- Bu dosya content/blog-posts.mjs kaynağından otomatik üretilir. -->
+    <a class="skip-link" href="#main-content">Ana içeriğe geç</a>
+    <header class="info-nav">
+      <a class="info-nav__brand" href="/"><img src="/assets/logo-v6/narvals-mascot-v6-transparent-96.png" alt="" width="96" height="96" /><span>narvals<i>//</i>labs</span></a>
+      <nav class="info-nav__links" aria-label="Ana menü"><a href="/hizmetler/">Hizmetler</a><a href="/blog/" aria-current="page">Rehberler</a><a href="/hakkimizda/">Hakkımızda</a><a href="/iletisim/">Projeyi konuşalım</a></nav>
+    </header>
+    <main id="main-content">
+      <article>
+        <header class="info-hero article-hero">
+          <div class="info-hero__copy">
+            <nav class="breadcrumbs" aria-label="İçerik yolu"><a href="/">Ana sayfa</a><span>/</span><a href="/blog/">Rehberler</a><span>/</span><a href="/blog/konu/seo-geo/">SEO &amp; GEO</a></nav>
+            <p class="info-hero__kicker">SEO &amp; GEO · Karar rehberi</p>
+            <h1>Crawl budget nedir? Googlebot tarama verimliliği rehberi</h1>
+            <p class="info-hero__answer">Crawl budget, Googlebot’un bir site için taramak istediği ve sunucuyu zorlamadan tarayabildiği URL miktarının pratik birleşimidir. Google, tarama bütçesi yönetimini öncelikle çok büyük veya çok sık değişen siteler için önemli görür. Onlarca ya da yüzlerce temiz URL’si olan bir sitede indeks sorunu çoğu zaman bütçeden değil; erişim, canonical, iç bağlantı, kopya sayfa veya içerik değerinden kaynaklanır.</p>
+            <div class="article-meta"><span>Yayınlayan <a href="/hakkimizda/">Narvals Labs</a></span><span>Yayımlandı <time datetime="2026-08-30T12:00:00+03:00">30 Ağustos 2026</time></span><span>11 dk okuma</span></div>
+          </div>
+          <aside class="info-hero__panel article-summary" aria-labelledby="ozet-basligi"><strong id="ozet-basligi">Bu rehberin özeti</strong><ul><li>Küçük sitelerde “crawl budget artırma” çoğunlukla yanlış teşhistir.</li><li>Sitemap’in çekilmesi, içindeki her URL’nin tarandığı veya indekslendiği anlamına gelmez.</li><li>Ham sunucu logu botun gerçekten hangi URL’ye hangi durum koduyla geldiğini gösterir.</li><li>5xx ve 429 yanıtları tarama kapasitesini; kopya ve sonsuz URL uzayları tarama talebini olumsuz etkileyebilir.</li><li>İndekslenme ve sıralama hiçbir teknik ayarla garanti edilemez.</li></ul></aside>
+        </header>
+
+        <div class="info-layout article-layout">
+          <nav class="info-toc" aria-label="Makale içeriği"><strong>Bu rehberde</strong><a href="#ne-zaman-gercek-sorun">Doğru teşhis</a><a href="#loglarla-olc">Kanıta dayalı ölçüm</a><a href="#israfi-azalt">Uygulama</a><a href="#narvals-uygulamasi">Bu sitedeki uygulama</a><a href="#kisa-cevaplar">Kısa cevaplar</a><a href="#kaynaklar">Kaynaklar</a></nav>
+          <div class="info-content article-content">
+            <section class="info-section article-section" id="ne-zaman-gercek-sorun">
+        <p class="info-section__label">Doğru teşhis</p>
+        <h2>Önce gerçekten tarama bütçesi sorununuz olup olmadığını belirleyin.</h2>
+        <p>Google tarama kapasitesini sunucunun verdiği yanıtlara göre sınırlar; tarama talebini ise URL’nin algılanan önemi, güncelliği ve benzeri sinyaller etkileyebilir. Bu iki unsurun kesişimi pratik tarama miktarını oluşturur.</p>
+        <p>“Discovered – currently not indexed” raporu tek başına sunucunun yetersiz olduğunu kanıtlamaz. URL hiç taranmamış olabilir; fakat neden düşük öncelik, zayıf iç bağlantı, çok sayıda benzer şablon veya sınırlı site sinyali de olabilir. Reddit TechSEO ve BigSEO tartışmalarında bunlar sık tekrarlanır, ancak tekil vakalar nedensel kanıt değildir.</p>
+
+
+
+        <section class="article-table-wrap" tabindex="0" aria-label="Belirti, İlk kanıt, Olası sonraki adım tablosu">
+          <table class="decision-table"><thead><tr><th scope="col">Belirti</th><th scope="col">İlk kanıt</th><th scope="col">Olası sonraki adım</th></tr></thead><tbody><tr><th scope="row">5xx veya 429 artışı</th><td>Sunucu/CDN logu ve Crawl Stats</td><td>Kapasite, cache ve hata nedenini düzeltin</td></tr><tr><th scope="row">Çok sayıda parametre URL’si</th><td>Loglarda sorgu parametresi dağılımı</td><td>İç link, canonical ve gerektiğinde robots kurallarını sadeleştirin</td></tr><tr><th scope="row">Discovered, not indexed</th><td>URL Inspection ve iç bağlantı yolu</td><td>Şablon değerini, keşif yolunu ve site talebini birlikte inceleyin</td></tr><tr><th scope="row">Crawled, not indexed</th><td>Google canonical ve render edilmiş HTML</td><td>Kopya, soft 404 ve içerik değerini kontrol edin</td></tr></tbody></table>
+        </section>
+
+      </section>
+            <section class="info-section article-section" id="loglarla-olc">
+        <p class="info-section__label">Kanıta dayalı ölçüm</p>
+        <h2>Crawl Stats ile başlayın, ham logla doğrulayın.</h2>
+        <p>Search Console; istek sayısı, toplam indirme boyutu, ortalama yanıt süresi, dosya türü, amaç ve yanıt kodu dağılımını özetler. Ortalama grafikler, sürekli fakat düşük oranlı bir 5xx problemini veya belirli bir URL şablonundaki israfı saklayabilir.</p>
+        <p>Ham erişim logunda bot kimliğini yalnız user-agent ile kabul etmeyin. Sahte Googlebot kolaydır; Google’ın önerdiği reverse DNS ya da yayımlanmış IP aralıklarıyla doğrulayın. Ardından bot, gün, URL şablonu, durum kodu, yanıt süresi ve bayt dağılımını çıkarın.</p>
+
+
+        <ul class="article-checklist"><li>Googlebot istekleri doğrulanmış IP veya reverse DNS ile ayrıldı.</li><li>200, 3xx, 4xx, 429 ve 5xx oranları URL şablonuna göre hesaplandı.</li><li>En çok taranan fakat indekslenmesi istenmeyen URL kalıpları çıkarıldı.</li><li>Önemli URL’lerin son tarama zamanı ile gerçek lastmod tarihi karşılaştırıldı.</li><li>CSS, JS ve görsel dosyalarının Google render erişimi engellenmiyor.</li></ul>
+
+
+      </section>
+            <section class="info-section article-section" id="israfi-azalt">
+        <p class="info-section__label">Uygulama</p>
+        <h2>Tarama israfını URL ve sunucu katmanında azaltın.</h2>
+
+
+        <ol class="article-steps"><li><strong>Tek kanonik URL:</strong> HTTP/HTTPS, www/çıplak host, slash ve index.html varyasyonlarını tek adrese yönlendirin.</li><li><strong>Gerçek durum kodu:</strong> Silinen sayfaya 404/410; geçici sunucu sorununa 5xx; kalıcı taşımaya tek atlamalı 301/308 verin.</li><li><strong>Temiz keşif:</strong> Sitemap’e yalnız indekslenmesini istediğiniz kanonik 200 URL’leri koyun ve lastmod’u yalnız materyal değişiklikte güncelleyin.</li><li><strong>İç bağlantı:</strong> Önemli sayfaları trafik ve konu bakımından alakalı hub ve içeriklerden normal `a href` bağlantılarıyla bulunabilir yapın.</li><li><strong>URL uzayını sınırla:</strong> Takvim, filtre, dahili arama, oturum ve sıralama parametrelerinin sonsuz kombinasyon üretmesini önleyin.</li><li><strong>Sunucu sağlığı:</strong> Yanıt süresini, 429/5xx taban oranını ve WAF bot challenge’larını düzenli izleyin.</li></ol>
+
+
+
+      </section>
+            <section class="info-section article-section" id="narvals-uygulamasi">
+        <p class="info-section__label">Bu sitedeki uygulama</p>
+        <h2>Narvals tarama yüzeyini küçük, kanonik ve denetlenebilir tutuyor.</h2>
+        <p>Bu projede tüm indekslenebilir URL’ler tek veri kaynağından sitemap, RSS ve keşif dosyalarına üretilir. Derleme; canonical, title, meta robots, yapılandırılmış veri, iç bağlantı, gerçek hedef dosya, sitemap lastmod ve yetim sayfa kontrolleri başarısız olursa durur.</p>
+        <p>Canlı denetim bilinmeyen URL’nin gerçek 404 verdiğini, slash/index.html varyasyonlarının tek atlamalı yönlendiğini ve Googlebot, Bingbot, OAI-SearchBot, Claude-SearchBot, PerplexityBot ile Applebot user-agent’larının WAF’tan 200 HTML alabildiğini test eder. Bu uygunluk sağlar; indeks veya sıra garantisi vermez.</p>
+
+
+
+
+        <aside class="article-callout" aria-label="Narvals tarama yüzeyini küçük, kanonik ve denetlenebilir tutuyor.: karar notu"><strong>Karar notu</strong><p><a href="/araclar/tarama-butcesi-hesaplama/">Tarama bütçesi ve bot taranabilirlik aracını</a> kullanarak log verinizden ilk risk önceliğini çıkarabilirsiniz.</p></aside>
+      </section>
+            <aside class="article-tool-strip" aria-label="İlgili ücretsiz araç">
+              <div class="article-tool-strip__copy">
+                <small>İlgili ücretsiz araç · Kayıt gerekmez</small>
+                <strong>Tarama Bütçesi ve Bot Taranabilirlik Aracı</strong>
+                <p>Tarayıcınızda çalışan açık formüllü araçla kendi verilerinizi anında test edin.</p>
+              </div>
+              <a class="article-tool-strip__btn" href="/araclar/tarama-butcesi-hesaplama/">Aracı başlat <span aria-hidden="true">→</span></a>
+            </aside>
+            <section class="info-section article-section" id="kisa-cevaplar">
+              <p class="info-section__label">Sık sorulan sorular</p>
+              <h2>Kısa ve doğrudan cevaplar.</h2>
+              <div class="article-faq"><details><summary>Crawl budget küçük siteler için önemli mi?</summary><p>Google’ın rehberine göre yüz milyonlarca dönemsel URL veya on milyonlarca sık değişen URL gibi çok büyük ölçekler asıl crawl budget adaylarıdır. Küçük siteler önce erişim, canonical, kalite ve iç bağlantıyı denetlemelidir.</p></details><details><summary>Sitemap göndermek bütün sayfaları indeksletir mi?</summary><p>Hayır. Sitemap tercih edilen kanonik URL’leri keşfetmeye yardım eder; tarama, indeks veya sıralama garantisi vermez.</p></details><details><summary>Googlebot taramasını nasıl ölçerim?</summary><p>Search Console Crawl Stats genel görünüm sağlar. En kesin URL ve durum kodu ayrımı için doğrulanmış Googlebot isteklerini ham CDN veya sunucu erişim loglarında analiz edin.</p></details><details><summary>IndexNow Google’a URL gönderir mi?</summary><p>Hayır. IndexNow Bing, Yandex ve diğer katılımcı motorlar içindir; Google şu anda IndexNow protokolünü desteklemez.</p></details></div>
+            </section>
+            <section class="info-section article-section" id="kaynaklar">
+              <p class="info-section__label">Birincil kaynaklar</p>
+              <h2>Kaynaklar ve kapsam.</h2>
+              <p>Bağlantılar içerikteki değişebilir veya dış doğrulama gerektiren bilgilerin kaynağıdır. Ticari ilişki veya sponsorlu bağlantı değildir.</p>
+              <ol class="article-sources"><li><a href="https://developers.google.com/search/docs/crawling-indexing/large-site-managing-crawl-budget" rel="noopener noreferrer">Google Search Central — Büyük sitelerde crawl budget yönetimi</a></li><li><a href="https://developers.google.com/search/docs/crawling-indexing/verifying-googlebot" rel="noopener noreferrer">Google Search Central — Googlebot taramasını doğrulama</a></li><li><a href="https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap" rel="noopener noreferrer">Google Search Central — Sitemap oluşturma ve gönderme</a></li><li><a href="https://support.google.com/webmasters/answer/9679690" rel="noopener noreferrer">Google Search Console — Crawl Stats raporu</a></li><li><a href="https://www.indexnow.org" rel="noopener noreferrer">IndexNow — Katılımcı arama motorları ve protokol</a></li></ol>
+              <aside class="article-method" aria-label="Bu rehberin hazırlanma yöntemi"><strong>Hazırlama yöntemi</strong><p>Bu rehber Narvals Labs yayıncılığında; ilgili birincil kaynaklar, görünür hizmet kapsamı ve proje karar çerçeveleri incelenerek hazırlandı. Doğrulanamayan müşteri, fiyat, başarı oranı veya sonuç iddiası eklenmedi. Yöntem, düzeltme ve yapay zekâ desteği açıklaması için <a href="/editoryal-ilkeler/">editoryal ilkeleri</a> okuyabilirsiniz.</p></aside>
+            </section>
+            <section class="info-section article-section">
+              <p class="info-section__label">İlgili rehberler</p><h2>İlgili rehberlerle devam edin.</h2>
+              <div class="article-related"><a href="/blog/google-ve-ai-botlari-icin-site-indeksleme-rehberi/"><small>SEO &amp; GEO</small><strong>Google ve AI botları sitenizi nasıl tarar? İndeksleme rehberi</strong><span aria-hidden="true">→</span></a><a href="/blog/web-sitesi-googleda-neden-cikmiyor/"><small>SEO &amp; GEO</small><strong>Web sitesi Google’da neden çıkmıyor? Teşhis rehberi</strong><span aria-hidden="true">→</span></a><a href="/blog/web-sitesi-teknik-seo-kontrol-listesi/"><small>SEO &amp; GEO</small><strong>Web sitesi teknik SEO kontrol listesi: yayından önce ve sonra</strong><span aria-hidden="true">→</span></a></div>
+            </section>
+          </div>
+        </div>
+      </article>
+      <section class="info-cta"><h2>Bu kararı projenize uyarlayalım.</h2><p>Mevcut durumu, hedefi ve en kritik sınırı paylaşın; gerekli kapsamı birlikte netleştirelim.</p><div class="article-cta-actions"><a class="info-button" href="/hizmetler/web-tasarim/">Teknik SEO ve web altyapısını inceleyin <span aria-hidden="true">→</span></a><a class="info-button info-button--tool" href="/araclar/tarama-butcesi-hesaplama/">Tarama Bütçesi ve Bot Taranabilirlik Aracı <span aria-hidden="true">⚡</span></a><a class="info-button info-button--light" href="/iletisim/">Projeyi konuşalım <span aria-hidden="true">↗</span></a></div></section>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__brand"><a href="/"><img src="/assets/logo-v6/narvals-mascot-v6-transparent-96.png" alt="" width="96" height="96" loading="lazy" /><strong>narvals<span>//</span>labs</strong></a><p>Web sitesi, özel yazılım ve reklamı aynı iş hedefinde buluşturan dijital üretim stüdyosu.</p></div>
+      <nav aria-label="Hizmet bağlantıları"><strong>Hizmetler</strong><a href="/hizmetler/web-tasarim/">Web tasarım &amp; UX</a><a href="/hizmetler/e-ticaret/">E-ticaret</a><a href="/hizmetler/ozel-yazilim/">Özel yazılım</a><a href="/hizmetler/google-ads/">Google Ads</a><a href="/hizmetler/dijital-reklam/">Meta reklam</a><a href="/hizmetler/sosyal-medya-yonetimi/">Sosyal medya</a><a href="/hizmetler/qr-menu-rezervasyon/">İşletme sistemleri</a></nav>
+      <nav aria-label="Bilgi merkezi bağlantıları"><strong>Bilgi merkezi</strong><a href="/blog/">Tüm rehberler</a><a href="/araclar/">Ücretsiz araçlar</a><a href="/araclar/web-sitesi-kontrolu/">Site kontrolü</a><a href="/blog/konu/seo-geo/">SEO &amp; GEO rehberleri</a><a href="/blog/konu/e-ticaret/">E-ticaret rehberleri</a><a href="/blog/konu/web-sitesi/">Web sitesi rehberleri</a><a href="/blog/konu/reklam/">Reklam rehberleri</a><a href="/blog/konu/qr-menu/">QR menü rehberleri</a><a href="/editoryal-ilkeler/">Editoryal ilkeler</a></nav>
+      <div class="site-footer__contact"><strong>Bir proje mi var?</strong><p>Hedefi ve en kritik darboğazı anlatarak ilk görüşmeyi başlatın.</p><a href="mailto:info@narvals.com">info@narvals.com</a><a href="https://wa.me/905019441921" rel="noopener noreferrer">WhatsApp: +90 501 944 19 21 ↗</a></div>
+      <p class="site-footer__legal">© <span data-current-year>2026</span> Narvals Labs. Tüm hakları saklıdır.</p>
+    </footer>
+    <script type="module" src="/src/info-main.js"></script>
+  </body>
+</html>

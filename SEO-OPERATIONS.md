@@ -128,8 +128,13 @@ render kaynaklarına erişebilmelidir. `nosnippet` kullanılmamalıdır.
   model geliştirme (`ClaudeBot`) botları açık.
 - WAF loglarında bu botların başarılı `200` erişimi doğrulanmalı.
 - ChatGPT yönlendirmeleri analitikte `utm_source=chatgpt.com` ile izlenebilir.
-- `llms.txt` deneysel bir gezinme özetidir. Google bunu yok sayar; sıralama veya
-  citation artışı beklenmemelidir. Yetkili içerik her zaman HTML sayfalarıdır.
+- `llms.txt` deneysel bir gezinme özetidir. Google Temmuz 2026 rehberinde bu
+  dosyayı yok saydığını ve Google görünürlüğüne olumlu ya da olumsuz etkisi
+  olmadığını açıklar. Yetkili içerik her zaman HTML sayfalarıdır.
+- OpenAI dokümantasyonuna göre OAI-SearchBot arama, GPTBot model geliştirme,
+  ChatGPT-User ise kullanıcı tarafından başlatılan erişim içindir; üçü ayrı
+  tercihlerdir. Perplexity’nin güncel adları `PerplexityBot` ve
+  `Perplexity-User`dır; eski/uydurma `Perplexity-Search` kullanılmamalıdır.
 
 ## DuckDuckGo ve Brave
 

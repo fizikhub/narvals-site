@@ -24,6 +24,8 @@
 - **Ücretsiz meta etiketi ve sosyal önizleyici:** https://narvals.com/araclar/meta-etiket-onizleyici/
 - **Ücretsiz Schema Markup ve JSON-LD oluşturucu:** https://narvals.com/araclar/schema-olusturucu/
 - **Ücretsiz E-E-A-T ve bilgi kazanımı denetleyici:** https://narvals.com/araclar/bilgi-kazanimi-kontrolu/
+- **Ücretsiz CPC ve maksimum teklif hesaplayıcı:** https://narvals.com/araclar/cpc-hesaplama/
+- **Ücretsiz tarama bütçesi ve taranabilirlik teşhisi:** https://narvals.com/araclar/tarama-butcesi-hesaplama/
 
 ---
 
@@ -115,7 +117,7 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 
 ---
 
-## 5. Tüm Karar Rehberleri Özeti (37 Rehber)
+## 5. Tüm Karar Rehberleri Özeti (39 Rehber)
 
 ### E-ticaret sitesi nasıl açılır? 10 adımlı sade rehber
 - **URL:** https://narvals.com/blog/e-ticaret-sitesi-nasil-acilir/
@@ -261,6 +263,28 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
   * Talep oranı ve satış kapatma oranı ayrı izlenmelidir.
   * Evrensel oran yerine kendi güvenilir başlangıç verinizi kıyaslayın.
 
+### Crawl budget nedir? Googlebot tarama verimliliği rehberi
+- **URL:** https://narvals.com/blog/crawl-budget-ve-googlebot-tarama-verimliligi/
+- **Kategori:** SEO & GEO
+- **Kısa Cevap:** Crawl budget, Googlebot’un bir site için taramak istediği ve sunucuyu zorlamadan tarayabildiği URL miktarının pratik birleşimidir. Google, tarama bütçesi yönetimini öncelikle çok büyük veya çok sık değişen siteler için önemli görür. Onlarca ya da yüzlerce temiz URL’si olan bir sitede indeks sorunu çoğu zaman bütçeden değil; erişim, canonical, iç bağlantı, kopya sayfa veya içerik değerinden kaynaklanır.
+- **Önemli Çıkarımlar:**
+  * Küçük sitelerde “crawl budget artırma” çoğunlukla yanlış teşhistir.
+  * Sitemap’in çekilmesi, içindeki her URL’nin tarandığı veya indekslendiği anlamına gelmez.
+  * Ham sunucu logu botun gerçekten hangi URL’ye hangi durum koduyla geldiğini gösterir.
+  * 5xx ve 429 yanıtları tarama kapasitesini; kopya ve sonsuz URL uzayları tarama talebini olumsuz etkileyebilir.
+  * İndekslenme ve sıralama hiçbir teknik ayarla garanti edilemez.
+
+### GA4 ve server-side GTM nasıl kurulur? Ölçüm rehberi
+- **URL:** https://narvals.com/blog/ga4-ve-server-side-gtm-kurulum-rehberi/
+- **Kategori:** Ölçüm & Analitik
+- **Kısa Cevap:** GA4 kurulumu, işletme kararlarını temsil eden olayları tanımlayıp web veri akışını doğru mülke göndermekle başlar. Server-side GTM ise etiket isteklerini işletmenin kontrol ettiği bir sunucu container’ı üzerinden işleyebilir. Bu mimari veri kontrolü ve performans için seçenek sunar; izni ortadan kaldırmaz, reklam engelleyicileri tamamen aşmaz ve eksiksiz veri garantisi vermez.
+- **Önemli Çıkarımlar:**
+  * Önce ölçüm planı, sonra etiket kurulumu yapılır.
+  * Server-side tagging zorunlu değildir; bakım ve barındırma maliyeti getirir.
+  * Tarayıcı ve sunucu olayları ortak event_id ile tekilleştirilmelidir.
+  * DebugView, Tag Assistant ve gerçek iş kaydı birlikte doğrulanmalıdır.
+  * Kişisel veri ve izin yükümlülükleri teknik proxy ile ortadan kalkmaz.
+
 ### Kurumsal web sitesi briefi nasıl hazırlanır?
 - **URL:** https://narvals.com/blog/kurumsal-web-sitesi-briefi-nasil-hazirlanir/
 - **Kategori:** Web & UX
@@ -284,34 +308,34 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 ### GEO nedir? Google AI sonuçlarında görünürlük rehberi
 - **URL:** https://narvals.com/blog/google-ai-aramalari-icin-geo-rehberi/
 - **Kategori:** SEO & GEO
-- **Kısa Cevap:** GEO (generative engine optimization), bir markanın üretken yapay zekâ destekli arama ve yanıt motorlarında (Google AI Overviews, ChatGPT Search, Perplexity) taranabilir, anlaşılabilir ve birincil kaynak olarak alıntılanabilir olmasını sağlayan optimizasyon disiplinidir. Princeton ve KDD 2024 araştırmalarına göre doğrudan uzman alıntıları, istatistiksel veri entegrasyonu ve net ters piramit yanıt yapısı, AI yanıtlarındaki kaynak görünürlüğünü %30-40 oranında artırmaktadır.
+- **Kısa Cevap:** GEO (generative engine optimization), içeriğin üretken yapay zekâ destekli arama ve yanıt deneyimlerinde bulunma, kullanılma ve kaynak gösterilme olasılığını geliştirmeyi amaçlayan çalışmalara verilen addır. Google açısından bunun ayrı bir hile veya teknik katmanı yoktur: AI Overviews ve AI Mode görünürlüğünün temeli indekslenebilir, özgün, insan odaklı içerik ve yerleşik SEO uygulamalarıdır.
 - **Önemli Çıkarımlar:**
   * Google ve AI motorları için GEO’nun temeli taranabilir statik HTML ve Search kalite sistemleridir.
-  * KDD 2024 akademik araştırması: Doğrudan alıntı ve istatistik ekleme görünürlüğü %30-40 artırır.
-  * RAG modelleri anlamsal etiketlere (article, section, h2, table, dl) göre 100-250 tokenlık parçalama yapar.
+  * KDD 2024 çalışmasındaki “%40’a kadar” sonuç, önceden seçilmiş kaynakların yer aldığı kontrollü benchmarka aittir; canlı Google sırası veya kalıcı trafik garantisi değildir.
+  * Google ideal bir parça, kelime veya token uzunluğu önermiyor; içerik insan için anlaşılır bölümler hâlinde düzenlenmelidir.
   * Sıra konumu, AI kaynak gösterimi (citation), marka anılması ve yapay zekâ yönlendirmesi (referral) ayrı ölçülür.
 
 ### Google ve AI botları sitenizi nasıl tarar? İndeksleme rehberi
 - **URL:** https://narvals.com/blog/google-ve-ai-botlari-icin-site-indeksleme-rehberi/
 - **Kategori:** SEO & GEO
-- **Kısa Cevap:** Googlebot ve modern yapay zekâ tarayıcıları (OAI-SearchBot, Claude-SearchBot, PerplexityBot, Applebot) siteleri sadece anahtar kelime eşleşmesiyle indekslemez. İki aşamalı tarama (HTML çekme ve WRS render), RAG yoğun geçit erişimi (Dense Passage Retrieval), 256-512 tokenlık anlamsal parçalama (propositional chunking), Google Bilgi Kazanımı (Information Gain) patentleri ve Schema.org varlık (entity) grafı üzerinden tarama, puanlama ve alıntılama yaparlar.
+- **Kısa Cevap:** Googlebot sayfaları keşfeder, tarar, gerektiğinde JavaScript’i işler ve Google dizini için değerlendirir. OAI-SearchBot, Claude-SearchBot ve PerplexityBot ise kendi ürünlerinin arama indeksleri için ayrı tarayıcılardır. Yayıncı bu sistemlerin kapalı kaynak seçme algoritmalarını kontrol edemez; fakat 200 yanıtı, erişilebilir HTML, doğru canonical, gerçek iç bağlantı, sitemap, WAF erişimi ve yararlı özgün içerikle uygunluğu güçlendirebilir.
 - **Önemli Çıkarımlar:**
   * Arama botları (SearchBot) ile eğitim botları (Training Scraper) ayrıştırılmalıdır.
-  * RAG motorları sayfayı 256-512 tokenlık anlamsal parçalara (chunks) bölerek indeksler.
-  * KDD 2024 araştırması: Doğrudan uzman alıntısı ve istatistikler alıntılanmayı %40 artırır.
-  * Google Information Gain patenti özgün veri ve formül sunan siteleri ödüllendirir.
-  * Bağlantılı JSON-LD şema grafı ve llms.txt LLM halüsinasyon riskini en aza indirir.
+  * Ticari AI motorları için evrensel veya doğrulanmış bir token/parça boyutu yoktur; Google küçük parçalara bölmenin gerekmediğini belirtir.
+  * KDD 2024’teki “%40’a kadar” artış, önceden seçilmiş kaynaklarla yürütülen kontrollü benchmark sonucudur.
+  * Patentler canlı Google sıralama sisteminin doğrudan kanıtı değildir; özgün içerik önerisi Google’ın güncel insan odaklı içerik rehberine dayanmalıdır.
+  * Doğru JSON-LD görünür içeriği açıklar; llms.txt isteğe bağlıdır ve Google Search tarafından yok sayılır.
 
 ### Schema.org ve bağlantılı JSON-LD graf mimarisi rehberi
 - **URL:** https://narvals.com/blog/schema-org-ve-baglantili-jsonld-graflari/
 - **Kategori:** SEO & GEO
-- **Kısa Cevap:** Schema.org işaretlemesi, web sayfalarını arama motorları ve LLM yanıt ajanları için anlamsal birer varlığa (entity) dönüştüren yapılandırılmış veri standardıdır. Kopuk JSON-LD blokları yerine tek bir @graph dizisi içinde birbirine @id referanslarıyla bağlanan Organization, WebSite, WebPage, Article, Service ve Person nesneleri; Google Knowledge Graph ve AI alıntı doğruluğunu en üst düzeye çıkarır.
+- **Kısa Cevap:** Schema.org işaretlemesi sayfadaki görünür kişi, kurum, içerik, ürün veya hizmet bilgisini makinece okunabilir biçimde açıklar. JSON-LD nesnelerini kalıcı @id değerleriyle bağlamak tutarlılığı ve bakımı kolaylaştırabilir; ancak tek bir @graph zorunlu değildir, Google AI görünürlüğü için özel schema yoktur ve yapılandırılmış veri sıralama ya da kaynak gösterimi garantisi vermez.
 - **Önemli Çıkarımlar:**
-  * Ayrık JSON-LD blokları yerine tek bir @graph dizisi kullanılmalıdır.
+  * Tek bir @graph bakım tercihi olabilir; ayrı ve geçerli JSON-LD blokları da desteklenir.
   * Her ana varlık benzersiz ve kalıcı bir @id URI kimliğine sahip olmalıdır.
-  * Wikidata ve Wikipedia URL’leri (sameAs) varlık belirsizliğini (disambiguation) çözer.
-  * knowsAbout özelliği kurumun ve yazarın uzmanlık taksonomisini arama motoruna bildirir.
-  * Doğrulama Google Rich Results Test ve Schema.org Validator üzerinde sıfır hatayla yapılmalıdır.
+  * sameAs yalnız gerçekten aynı varlığın doğrulanabilir profillerini göstermelidir; rastgele kavram sayfaları kullanılmamalıdır.
+  * knowsAbout destekleyici bir Schema.org özelliğidir; tek başına uzmanlık veya Google güveni kanıtlamaz.
+  * Schema.org Validator söz dizimini, Rich Results Test ise Google’ın desteklediği zengin sonuç uygunluğunu farklı kapsamlarla denetler.
 
 ### E-E-A-T ve yazar otoritesi nasıl kurulur? Google güven rehberi
 - **URL:** https://narvals.com/blog/e-e-a-t-yazar-otoritesi-ve-google-guven-rehberi/
@@ -535,6 +559,8 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 - Meta Etiketi ve Sosyal Önizleyici: https://narvals.com/araclar/meta-etiket-onizleyici/
 - Schema Markup ve JSON-LD Oluşturucu: https://narvals.com/araclar/schema-olusturucu/
 - E-E-A-T ve Bilgi Kazanımı Denetleyici: https://narvals.com/araclar/bilgi-kazanimi-kontrolu/
+- CPC ve Maksimum Teklif Hesaplama: https://narvals.com/araclar/cpc-hesaplama/
+- Tarama Bütçesi Hesaplama: https://narvals.com/araclar/tarama-butcesi-hesaplama/
 - Blog & Rehberler: https://narvals.com/blog/
 - Editoryal İlkeler: https://narvals.com/editoryal-ilkeler/
 - Konu Merkezi: https://narvals.com/blog/konu/e-ticaret/
@@ -556,6 +582,8 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 - Rehber: https://narvals.com/blog/web-sitesi-neden-musteri-getirmiyor/
 - Rehber: https://narvals.com/blog/web-sitesi-googleda-neden-cikmiyor/
 - Rehber: https://narvals.com/blog/web-sitesi-donusum-orani-nasil-hesaplanir/
+- Rehber: https://narvals.com/blog/crawl-budget-ve-googlebot-tarama-verimliligi/
+- Rehber: https://narvals.com/blog/ga4-ve-server-side-gtm-kurulum-rehberi/
 - Rehber: https://narvals.com/blog/kurumsal-web-sitesi-briefi-nasil-hazirlanir/
 - Rehber: https://narvals.com/blog/web-sitesi-teknik-seo-kontrol-listesi/
 - Rehber: https://narvals.com/blog/google-ai-aramalari-icin-geo-rehberi/

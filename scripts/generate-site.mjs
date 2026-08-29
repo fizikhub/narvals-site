@@ -86,6 +86,8 @@ const getPageTitle = (path) => {
   if (path === '/araclar/meta-etiket-onizleyici/') return 'Meta Etiketi ve Sosyal Medya Önizleyici';
   if (path === '/araclar/schema-olusturucu/') return 'Schema Markup & JSON-LD Varlık Oluşturucu';
   if (path === '/araclar/bilgi-kazanimi-kontrolu/') return 'E-E-A-T ve Bilgi Kazanımı Denetim Aracı';
+  if (path === '/araclar/cpc-hesaplama/') return 'CPC ve Maksimum Teklif Hesaplama Aracı';
+  if (path === '/araclar/tarama-butcesi-hesaplama/') return 'Tarama Bütçesi ve Bot Taranabilirlik Aracı';
   if (path === '/blog/') return 'Narvals Labs Dijital Üretim ve Karar Rehberleri';
   if (path === '/editoryal-ilkeler/') return 'Narvals Labs Editoryal İlkeler ve Standartlar';
   const topicHub = topicHubs.find((hub) => `/blog/konu/${hub.slug}/` === path);
@@ -152,6 +154,9 @@ Allow: /
 User-agent: ChatGPT-User
 Allow: /
 
+User-agent: OAI-AdsBot
+Allow: /
+
 User-agent: ClaudeBot
 Allow: /
 
@@ -167,7 +172,7 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: Perplexity-Search
+User-agent: Perplexity-User
 Allow: /
 
 User-agent: Applebot
@@ -254,6 +259,8 @@ Tam kapsamlı yapay zekâ bilgi tabanı ve RAG dokümantasyonu için: [llms-full
 - [Meta etiketi ve sosyal önizleyici](${siteOrigin}/araclar/meta-etiket-onizleyici/): Google SERP snippet, WhatsApp kartı ve OpenGraph meta etiketlerini test ve kopyalama aracı
 - [Schema Markup ve JSON-LD oluşturucu](${siteOrigin}/araclar/schema-olusturucu/): Organization, LocalBusiness, Service, FAQ, Article ve Product için doğrulanabilir Schema.org JSON-LD kod oluşturucu ve varlık aracı
 - [E-E-A-T ve Bilgi Kazanımı Denetleyici](${siteOrigin}/araclar/bilgi-kazanimi-kontrolu/): Bilgi kazanımı (information gain), E-E-A-T yazar otoritesi, kanıt kalitesi ve RAG yapısını 12 kriterde denetleyen araç
+- [CPC ve maksimum teklif hesaplama](${siteOrigin}/araclar/cpc-hesaplama/): Hedef CPA, dönüşüm oranı ve kâr marjından maksimum kârlı TBM, başabaş teklif eşiği ve açık artırma başlangıç teklifini hesaplayan araç
+- [Tarama bütçesi ve taranabilirlik](${siteOrigin}/araclar/tarama-butcesi-hesaplama/): Googlebot günlük tarama kapasitesi, TTFB, CSR ve HTTP durum kodlarından tarama verimliliği ve israf simülatörü
 - [Rehberler](${siteOrigin}/blog/): Web, yazılım, reklam, SEO/GEO ve işletme sistemleri için kaynaklı karar rehberleri
 - [Editoryal ilkeler](${siteOrigin}/editoryal-ilkeler/): Kaynaklandırma, yapay zekâ şeffaflığı, güncelleme ve düzeltme politikası
 
@@ -305,6 +312,8 @@ const llmsFull = `# Narvals Labs — Kapsamlı Bilgi Tabanı ve Sistem Dokümant
 - **Ücretsiz meta etiketi ve sosyal önizleyici:** ${siteOrigin}/araclar/meta-etiket-onizleyici/
 - **Ücretsiz Schema Markup ve JSON-LD oluşturucu:** ${siteOrigin}/araclar/schema-olusturucu/
 - **Ücretsiz E-E-A-T ve bilgi kazanımı denetleyici:** ${siteOrigin}/araclar/bilgi-kazanimi-kontrolu/
+- **Ücretsiz CPC ve maksimum teklif hesaplayıcı:** ${siteOrigin}/araclar/cpc-hesaplama/
+- **Ücretsiz tarama bütçesi ve taranabilirlik teşhisi:** ${siteOrigin}/araclar/tarama-butcesi-hesaplama/
 
 ---
 
@@ -440,6 +449,8 @@ ${post.takeaways.map((t) => `  * ${t}`).join('\n')}
 - Meta Etiketi ve Sosyal Önizleyici: ${siteOrigin}/araclar/meta-etiket-onizleyici/
 - Schema Markup ve JSON-LD Oluşturucu: ${siteOrigin}/araclar/schema-olusturucu/
 - E-E-A-T ve Bilgi Kazanımı Denetleyici: ${siteOrigin}/araclar/bilgi-kazanimi-kontrolu/
+- CPC ve Maksimum Teklif Hesaplama: ${siteOrigin}/araclar/cpc-hesaplama/
+- Tarama Bütçesi Hesaplama: ${siteOrigin}/araclar/tarama-butcesi-hesaplama/
 - Blog & Rehberler: ${siteOrigin}/blog/
 - Editoryal İlkeler: ${siteOrigin}/editoryal-ilkeler/
 ${topicHubs.map((hub) => `- Konu Merkezi: ${siteOrigin}/blog/konu/${hub.slug}/`).join('\n')}
@@ -452,7 +463,6 @@ const sharedOrgNode = (origin) => ({
   '@type': 'Organization',
   '@id': `${origin}/#organization`,
   name: 'Narvals Labs',
-  legalName: 'Narvals Labs',
   url: `${origin}/`,
   logo: {
     '@type': 'ImageObject',
@@ -473,30 +483,17 @@ const sharedOrgNode = (origin) => ({
     '@type': 'PostalAddress',
     addressCountry: 'TR'
   },
-  currenciesAccepted: 'TRY, EUR, USD',
-  paymentAccepted: 'Bank Transfer, Credit Card',
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'customer support',
     email: 'info@narvals.com',
     telephone: '+905019441921',
     areaServed: 'TR',
-    availableLanguage: ['Turkish', 'English'],
-    hoursAvailable: {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      opens: '09:00',
-      closes: '18:00'
-    }
+    availableLanguage: ['Turkish', 'English']
   },
   areaServed: {
     '@type': 'Country',
     name: 'Türkiye'
-  },
-  founder: {
-    '@type': 'Organization',
-    name: 'Narvals Labs Team',
-    url: `${origin}/hakkimizda/`
   },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
@@ -541,7 +538,7 @@ const sharedWebsiteNode = (origin) => ({
   '@id': `${origin}/#website`,
   url: `${origin}/`,
   name: 'Narvals Labs',
-  alternateName: ['Narvals', 'Narvals Digital', 'Narvals Studio', 'Narvals Labs Dijital'],
+  alternateName: ['Narvals'],
   inLanguage: 'tr-TR',
   publisher: { '@id': `${origin}/#organization` },
   potentialAction: {

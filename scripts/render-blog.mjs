@@ -49,7 +49,6 @@ const organizationNode = (siteOrigin) => ({
   '@type': 'Organization',
   '@id': `${siteOrigin}/#organization`,
   name: 'Narvals Labs',
-  legalName: 'Narvals Labs',
   url: `${siteOrigin}/`,
   logo: {
     '@type': 'ImageObject',
@@ -70,30 +69,17 @@ const organizationNode = (siteOrigin) => ({
     '@type': 'PostalAddress',
     addressCountry: 'TR'
   },
-  currenciesAccepted: 'TRY, EUR, USD',
-  paymentAccepted: 'Bank Transfer, Credit Card',
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'customer support',
     email: 'info@narvals.com',
     telephone: '+905019441921',
     areaServed: 'TR',
-    availableLanguage: ['Turkish', 'English'],
-    hoursAvailable: {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      opens: '09:00',
-      closes: '18:00'
-    }
+    availableLanguage: ['Turkish', 'English']
   },
   areaServed: {
     '@type': 'Country',
     name: 'Türkiye'
-  },
-  founder: {
-    '@type': 'Organization',
-    name: 'Narvals Labs Team',
-    url: `${siteOrigin}/hakkimizda/`
   },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
@@ -138,7 +124,7 @@ const websiteNode = (siteOrigin) => ({
   '@id': `${siteOrigin}/#website`,
   url: `${siteOrigin}/`,
   name: 'Narvals Labs',
-  alternateName: ['Narvals', 'Narvals Digital', 'Narvals Studio', 'Narvals Labs Dijital'],
+  alternateName: ['Narvals'],
   inLanguage: 'tr-TR',
   publisher: { '@id': `${siteOrigin}/#organization` },
   potentialAction: {
@@ -340,6 +326,14 @@ const CATEGORY_HUB_MAP = {
 };
 
 const POST_TOOL_MAP = {
+  'crawl-budget-ve-googlebot-tarama-verimliligi': {
+    path: '/araclar/tarama-butcesi-hesaplama/',
+    label: 'Tarama Bütçesi ve Bot Taranabilirlik Aracı'
+  },
+  'ga4-ve-server-side-gtm-kurulum-rehberi': {
+    path: '/araclar/utm-link-olusturucu/',
+    label: 'GA4 & Meta Kampanya Takip Linki Oluşturucu'
+  },
   'schema-org-ve-baglantili-jsonld-graflari': {
     path: '/araclar/schema-olusturucu/',
     label: 'Schema Markup & JSON-LD Varlık Oluşturucu'
