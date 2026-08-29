@@ -31,6 +31,8 @@ Tam kapsamlı yapay zekâ bilgi tabanı ve RAG dokümantasyonu için: [llms-full
 - [UTM link oluşturucu](https://narvals.com/araclar/utm-link-olusturucu/): GA4 ve Meta reklamları için Türkçe karakter temizlikli ve hazır şablonlu kampanya URL oluşturucu
 - [QR kod oluşturucu](https://narvals.com/araclar/qr-kod-olusturucu/): URL, dijital menü, WhatsApp, Wi-Fi ve vCard için süresiz, vektörel SVG ve HD PNG QR kod oluşturucu
 - [E-ticaret kâr hesaplama](https://narvals.com/araclar/e-ticaret-kar-hesaplama/): Trendyol, Hepsiburada ve e-ticaret siteniz için komisyon, kargo ve iade payından net kâr ve başabaş fiyat hesaplayıcı
+- [KDV ve tevkifat hesaplama](https://narvals.com/araclar/kdv-hesaplama/): KDV dahil/hariç tutar, fatura tevkifat kesintisi ve ödenecek net tutar hesaplayıcı
+- [Core Web Vitals kontrolü](https://narvals.com/araclar/core-web-vitals-kontrolu/): LCP, INP, CLS ve sunucu hız metriklerini 10 maddede denetleyen teşhis aracı
 - [Rehberler](https://narvals.com/blog/): Web, yazılım, reklam, SEO/GEO ve işletme sistemleri için kaynaklı karar rehberleri
 - [Editoryal ilkeler](https://narvals.com/editoryal-ilkeler/): Kaynaklandırma, yapay zekâ şeffaflığı, güncelleme ve düzeltme politikası
 

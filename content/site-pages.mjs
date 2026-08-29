@@ -24,6 +24,8 @@ export const staticPages = [
   { key: 'utm-builder', path: '/araclar/utm-link-olusturucu/', file: 'araclar/utm-link-olusturucu/index.html', lastModified: '2026-08-30', kind: 'tool' },
   { key: 'qr-generator', path: '/araclar/qr-kod-olusturucu/', file: 'araclar/qr-kod-olusturucu/index.html', lastModified: '2026-08-30', kind: 'tool' },
   { key: 'ecommerce-profit', path: '/araclar/e-ticaret-kar-hesaplama/', file: 'araclar/e-ticaret-kar-hesaplama/index.html', lastModified: '2026-08-30', kind: 'tool' },
+  { key: 'vat-calculator', path: '/araclar/kdv-hesaplama/', file: 'araclar/kdv-hesaplama/index.html', lastModified: '2026-08-30', kind: 'tool' },
+  { key: 'cwv-check', path: '/araclar/core-web-vitals-kontrolu/', file: 'araclar/core-web-vitals-kontrolu/index.html', lastModified: '2026-08-30', kind: 'tool' },
   { key: 'blog', path: '/blog/', file: 'blog/index.html', lastModified: '2026-08-29', kind: 'collection' },
   { key: 'editorial-policy', path: '/editoryal-ilkeler/', file: 'editoryal-ilkeler/index.html', lastModified: '2026-08-23', kind: 'policy' }
 ];

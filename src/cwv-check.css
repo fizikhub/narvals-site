@@ -1,0 +1,218 @@
+.cwv-page .info-hero__panel {
+  border-left: 3px solid var(--accent, #00e599);
+}
+
+.cwv-explain {
+  padding: 2.5rem 1.5rem;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.cwv-explain h2 {
+  font-family: var(--font-display, "Anybody", sans-serif);
+  font-size: 1.5rem;
+  color: var(--text-primary, #03233a);
+  margin-bottom: 0.75rem;
+}
+
+.cwv-explain p {
+  color: var(--text-secondary, #4a5d6e);
+  line-height: 1.6;
+}
+
+.cwv-audit-form {
+  max-width: 860px;
+  margin: 0 auto 2.5rem;
+  padding: 2rem;
+  background: var(--surface-light, #f6f9fc);
+  border-radius: 12px;
+  border: 1px solid var(--border-color, #e2e8f0);
+}
+
+.cwv-section-title {
+  font-size: 1.15rem;
+  color: var(--text-primary, #03233a);
+  margin: 1.5rem 0 1rem;
+  border-bottom: 1px solid var(--border-color, #e2e8f0);
+  padding-bottom: 0.5rem;
+}
+
+.cwv-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.cwv-check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color, #e2e8f0);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cwv-check-item:hover {
+  border-color: var(--surface-dark, #03233a);
+}
+
+.cwv-check-item input[type="checkbox"] {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: 0.2rem;
+  accent-color: var(--accent-dark, #00a870);
+  cursor: pointer;
+}
+
+.cwv-check-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.cwv-check-content strong {
+  font-size: 0.95rem;
+  color: var(--text-primary, #03233a);
+}
+
+.cwv-check-content small {
+  font-size: 0.8rem;
+  color: var(--text-secondary, #64748b);
+  line-height: 1.4;
+}
+
+.cwv-result {
+  max-width: 860px;
+  margin: 0 auto 3rem;
+  padding: 2rem;
+  background: #ffffff;
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.cwv-result header p {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent-dark, #00a870);
+  margin-bottom: 0.25rem;
+}
+
+.cwv-result header h2 {
+  font-size: 1.5rem;
+  color: var(--text-primary, #03233a);
+  margin-bottom: 1.5rem;
+}
+
+.cwv-score-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  border: 1px solid #e2e8f0;
+}
+
+.cwv-score-circle {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: var(--surface-dark, #03233a);
+  color: var(--accent, #00e599);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  font-weight: 800;
+  font-family: var(--font-display, "Anybody", sans-serif);
+  flex-shrink: 0;
+}
+
+.cwv-score-details h3 {
+  font-size: 1.2rem;
+  color: var(--text-primary, #03233a);
+  margin-bottom: 0.25rem;
+}
+
+.cwv-score-details p {
+  font-size: 0.9rem;
+  color: var(--text-secondary, #4a5d6e);
+}
+
+.cwv-recommendations {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.cwv-rec-card {
+  padding: 1.25rem;
+  background: #ffffff;
+  border-left: 4px solid var(--accent-dark, #00a870);
+  border-radius: 4px;
+  border-top: 1px solid #e2e8f0;
+  border-right: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.cwv-rec-card h4 {
+  font-size: 1rem;
+  color: var(--text-primary, #03233a);
+  margin-bottom: 0.35rem;
+}
+
+.cwv-rec-card p {
+  font-size: 0.85rem;
+  color: var(--text-secondary, #475569);
+  line-height: 1.5;
+}
+
+.cwv-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cwv-bridge {
+  max-width: 860px;
+  margin: 0 auto 3rem;
+  padding: 2rem;
+  background: var(--surface-dark, #03233a);
+  color: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.cwv-bridge h2 {
+  font-size: 1.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.cwv-bridge p {
+  color: #94a3b8;
+  max-width: 540px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.cwv-bridge a {
+  padding: 0.75rem 1.5rem;
+  background: var(--accent, #00e599);
+  color: #03233a;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+}

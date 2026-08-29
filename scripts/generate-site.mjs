@@ -78,6 +78,8 @@ const getPageTitle = (path) => {
   if (path === '/araclar/utm-link-olusturucu/') return 'GA4 UTM Link ve URL Oluşturucu';
   if (path === '/araclar/qr-kod-olusturucu/') return 'Ücretsiz QR Kod Oluşturucu';
   if (path === '/araclar/e-ticaret-kar-hesaplama/') return 'E-Ticaret Net Kâr ve Komisyon Hesaplama';
+  if (path === '/araclar/kdv-hesaplama/') return 'KDV ve Tevkifat Hesaplama Aracı';
+  if (path === '/araclar/core-web-vitals-kontrolu/') return 'Core Web Vitals ve Hız Kontrolü';
   if (path === '/blog/') return 'Narvals Labs Dijital Üretim ve Karar Rehberleri';
   if (path === '/editoryal-ilkeler/') return 'Narvals Labs Editoryal İlkeler ve Standartlar';
   const topicHub = topicHubs.find((hub) => `/blog/konu/${hub.slug}/` === path);
@@ -201,6 +203,8 @@ Tam kapsamlı yapay zekâ bilgi tabanı ve RAG dokümantasyonu için: [llms-full
 - [UTM link oluşturucu](${siteOrigin}/araclar/utm-link-olusturucu/): GA4 ve Meta reklamları için Türkçe karakter temizlikli ve hazır şablonlu kampanya URL oluşturucu
 - [QR kod oluşturucu](${siteOrigin}/araclar/qr-kod-olusturucu/): URL, dijital menü, WhatsApp, Wi-Fi ve vCard için süresiz, vektörel SVG ve HD PNG QR kod oluşturucu
 - [E-ticaret kâr hesaplama](${siteOrigin}/araclar/e-ticaret-kar-hesaplama/): Trendyol, Hepsiburada ve e-ticaret siteniz için komisyon, kargo ve iade payından net kâr ve başabaş fiyat hesaplayıcı
+- [KDV ve tevkifat hesaplama](${siteOrigin}/araclar/kdv-hesaplama/): KDV dahil/hariç tutar, fatura tevkifat kesintisi ve ödenecek net tutar hesaplayıcı
+- [Core Web Vitals kontrolü](${siteOrigin}/araclar/core-web-vitals-kontrolu/): LCP, INP, CLS ve sunucu hız metriklerini 10 maddede denetleyen teşhis aracı
 - [Rehberler](${siteOrigin}/blog/): Web, yazılım, reklam, SEO/GEO ve işletme sistemleri için kaynaklı karar rehberleri
 - [Editoryal ilkeler](${siteOrigin}/editoryal-ilkeler/): Kaynaklandırma, yapay zekâ şeffaflığı, güncelleme ve düzeltme politikası
 
@@ -236,6 +240,8 @@ const llmsFull = `# Narvals Labs — Kapsamlı Bilgi Tabanı ve Sistem Dokümant
 - **Ücretsiz GA4 UTM link oluşturucu:** ${siteOrigin}/araclar/utm-link-olusturucu/
 - **Ücretsiz QR kod oluşturucu:** ${siteOrigin}/araclar/qr-kod-olusturucu/
 - **Ücretsiz e-ticaret kâr hesaplayıcı:** ${siteOrigin}/araclar/e-ticaret-kar-hesaplama/
+- **Ücretsiz KDV ve tevkifat hesaplama:** ${siteOrigin}/araclar/kdv-hesaplama/
+- **Ücretsiz Core Web Vitals hız kontrolü:** ${siteOrigin}/araclar/core-web-vitals-kontrolu/
 
 ---
 
