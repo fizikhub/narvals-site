@@ -303,6 +303,81 @@ const CATEGORY_HUB_MAP = {
   'QR menü': { name: 'QR menü rehberleri', path: '/blog/konu/qr-menu/' }
 };
 
+const POST_TOOL_MAP = {
+  'e-ticaret-sitesi-maliyeti-nasil-hesaplanir': {
+    path: '/araclar/e-ticaret-kar-hesaplama/',
+    label: 'E-Ticaret Net Kâr ve Başabaş Fiyat Hesaplayıcı'
+  },
+  'e-ticaret-donusum-orani-artirma-cro-rehberi': {
+    path: '/araclar/donusum-orani-hesaplama/',
+    label: 'Web Sitesi Dönüşüm Oranı ve Gelir Simülasyonu'
+  },
+  'web-sitesi-donusum-orani-nasil-hesaplanir': {
+    path: '/araclar/donusum-orani-hesaplama/',
+    label: 'Web Sitesi Dönüşüm Oranı Hesaplama Aracı'
+  },
+  'google-ads-butcesi-nasil-belirlenir': {
+    path: '/araclar/google-ads-butce-hesaplama/',
+    label: 'Google Ads Bütçe ve TBM Hesaplama Aracı'
+  },
+  'meta-reklam-butcesi-nasil-belirlenir': {
+    path: '/araclar/meta-reklam-butcesi-hesaplama/',
+    label: 'Meta ve Instagram Reklam Bütçesi Hesaplayıcı'
+  },
+  'web-sitesi-hizlandirma-core-web-vitals-rehberi': {
+    path: '/araclar/core-web-vitals-kontrolu/',
+    label: 'Core Web Vitals ve Sayfa Hızı Teşhis Aracı'
+  },
+  'qr-menu-nasil-yapilir': {
+    path: '/araclar/qr-kod-olusturucu/',
+    label: 'Ücretsiz Süresiz Vektörel QR Kod Oluşturucu'
+  },
+  'qr-menu-fiyatlari-ve-maliyet-kalemleri': {
+    path: '/araclar/qr-kod-olusturucu/',
+    label: 'Ücretsiz Süresiz Vektörel QR Kod Oluşturucu'
+  },
+  'web-sitesi-yaptirmadan-once-kapsam-teklif-karar-rehberi': {
+    path: '/araclar/teklif-karsilastirma/',
+    label: 'Web Sitesi Teklif Karşılaştırma Tablosu'
+  },
+  'web-tasarim-ajansi-secerken-sorulacak-sorular': {
+    path: '/araclar/teklif-karsilastirma/',
+    label: 'Web Sitesi Teklif Karşılaştırma Tablosu'
+  },
+  'web-sitesi-teknik-seo-kontrol-listesi': {
+    path: '/araclar/web-sitesi-kontrolu/',
+    label: '16 Soruda Ücretsiz Web Sitesi Sağlık Kontrolü'
+  },
+  'web-sitesi-neden-musteri-getirmiyor': {
+    path: '/araclar/web-sitesi-kontrolu/',
+    label: '16 Soruda Ücretsiz Web Sitesi Sağlık Kontrolü'
+  },
+  'web-sitesi-googleda-neden-cikmiyor': {
+    path: '/araclar/web-sitesi-kontrolu/',
+    label: '16 Soruda Ücretsiz Web Sitesi Sağlık Kontrolü'
+  },
+  'meta-pixel-ve-conversions-api-farki': {
+    path: '/araclar/utm-link-olusturucu/',
+    label: 'GA4 & Meta Kampanya Takip Linki Oluşturucu'
+  },
+  'google-ads-mi-meta-reklamlari-mi': {
+    path: '/araclar/roas-hesaplama/',
+    label: 'ROAS ve Reklam Başabaş Kârlılık Hesaplayıcı'
+  },
+  'meta-reklam-ajansi-secerken-sorulacak-sorular': {
+    path: '/araclar/roas-hesaplama/',
+    label: 'ROAS ve Reklam Başabaş Kârlılık Hesaplayıcı'
+  },
+  'web-sitesi-bakim-ucreti-ve-yillik-maliyet': {
+    path: '/araclar/saatlik-ucret-hesaplama/',
+    label: 'Freelance & Ajans Saatlik Ücret Simülatörü'
+  },
+  'google-ai-aramalari-icin-geo-rehberi': {
+    path: '/araclar/meta-etiket-onizleyici/',
+    label: 'SERP Önizleyici ve Meta Etiketi Test Aracı'
+  }
+};
+
 const renderRelated = (post) => post.related
   .map((slug) => blogPostBySlug.get(slug))
   .map((related) => `<a href="/blog/${related.slug}/"><small>${escapeHtml(related.category)}</small><strong>${escapeHtml(related.title)}</strong><span aria-hidden="true">→</span></a>`)
@@ -312,6 +387,7 @@ const renderArticle = (post, siteOrigin) => {
   const path = `/blog/${post.slug}/`;
   const url = `${siteOrigin}${path}`;
   const hubInfo = CATEGORY_HUB_MAP[post.category];
+  const toolInfo = POST_TOOL_MAP[post.slug];
   const breadcrumbElements = hubInfo ? [
     { '@type': 'ListItem', position: 1, name: 'Ana sayfa', item: `${siteOrigin}/` },
     { '@type': 'ListItem', position: 2, name: 'Rehberler', item: `${siteOrigin}/blog/` },
@@ -418,6 +494,14 @@ ${renderHead({ siteOrigin, path, title: post.metaTitle, description: post.descri
           <nav class="info-toc" aria-label="Makale içeriği"><strong>Bu rehberde</strong>${post.sections.map((section) => `<a href="#${escapeHtml(section.id)}">${escapeHtml(section.label)}</a>`).join('')}${post.faq?.length ? '<a href="#kisa-cevaplar">Kısa cevaplar</a>' : ''}<a href="#kaynaklar">Kaynaklar</a></nav>
           <div class="info-content article-content">
             ${post.sections.map(renderSection).join('\n            ')}
+            ${toolInfo ? `<aside class="article-tool-strip" aria-label="İlgili ücretsiz araç">
+              <div class="article-tool-strip__copy">
+                <small>İlgili ücretsiz araç · Kayıt gerekmez</small>
+                <strong>${escapeHtml(toolInfo.label)}</strong>
+                <p>Tarayıcınızda çalışan açık formüllü araçla kendi verilerinizi anında test edin.</p>
+              </div>
+              <a class="article-tool-strip__btn" href="${toolInfo.path}">Aracı başlat <span aria-hidden="true">→</span></a>
+            </aside>` : ''}
             ${post.faq?.length ? `<section class="info-section article-section" id="kisa-cevaplar">
               <p class="info-section__label">Sık sorulan sorular</p>
               <h2>Kısa ve doğrudan cevaplar.</h2>
@@ -437,7 +521,7 @@ ${renderHead({ siteOrigin, path, title: post.metaTitle, description: post.descri
           </div>
         </div>
       </article>
-      <section class="info-cta"><h2>Bu kararı projenize uyarlayalım.</h2><p>Mevcut durumu, hedefi ve en kritik sınırı paylaşın; gerekli kapsamı birlikte netleştirelim.</p><div class="article-cta-actions"><a class="info-button" href="${post.servicePath}">${escapeHtml(post.serviceLabel)} <span aria-hidden="true">→</span></a><a class="info-button info-button--light" href="/iletisim/">Projeyi konuşalım <span aria-hidden="true">↗</span></a></div></section>
+      <section class="info-cta"><h2>Bu kararı projenize uyarlayalım.</h2><p>Mevcut durumu, hedefi ve en kritik sınırı paylaşın; gerekli kapsamı birlikte netleştirelim.</p><div class="article-cta-actions"><a class="info-button" href="${post.servicePath}">${escapeHtml(post.serviceLabel)} <span aria-hidden="true">→</span></a>${toolInfo ? `<a class="info-button info-button--tool" href="${toolInfo.path}">${escapeHtml(toolInfo.label)} <span aria-hidden="true">⚡</span></a>` : ''}<a class="info-button info-button--light" href="/iletisim/">Projeyi konuşalım <span aria-hidden="true">↗</span></a></div></section>
     </main>
     ${renderFooter()}
     <script type="module" src="/src/info-main.js"></script>
