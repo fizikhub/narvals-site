@@ -340,6 +340,14 @@ const CATEGORY_HUB_MAP = {
 };
 
 const POST_TOOL_MAP = {
+  'schema-org-ve-baglantili-jsonld-graflari': {
+    path: '/araclar/schema-olusturucu/',
+    label: 'Schema Markup & JSON-LD Varlık Oluşturucu'
+  },
+  'e-e-a-t-yazar-otoritesi-ve-google-guven-rehberi': {
+    path: '/araclar/bilgi-kazanimi-kontrolu/',
+    label: 'E-E-A-T ve Bilgi Kazanımı Denetim Aracı'
+  },
   'google-ve-ai-botlari-icin-site-indeksleme-rehberi': {
     path: '/araclar/core-web-vitals-kontrolu/',
     label: 'Core Web Vitals ve Bot Hızı Teşhis Aracı'

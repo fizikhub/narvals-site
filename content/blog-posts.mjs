@@ -553,6 +553,215 @@ export const blogPosts = [
     ]
   },
   {
+    slug: 'schema-org-ve-baglantili-jsonld-graflari',
+    metaTitle: 'Schema.org ve JSON-LD Graf Mimarisi Rehberi | Narvals',
+    title: 'Schema.org ve bağlantılı JSON-LD graf mimarisi rehberi',
+    description: 'Google Knowledge Graph ve AI için Schema.org @graph mimarisi, Organization, Article, Wikidata sameAs ve knowsAbout entegrasyonu rehberi.',
+    keywords: ['Schema.org rehberi', 'JSON-LD grafı', 'Knowledge Graph SEO', 'sameAs Wikidata', 'yapılandırılmış veri'],
+    category: 'SEO & GEO',
+    published: '2026-08-30T00:00:00+03:00',
+    modified: '2026-08-30T00:00:00+03:00',
+    readingTime: 14,
+    answer: 'Schema.org işaretlemesi, web sayfalarını arama motorları ve LLM yanıt ajanları için anlamsal birer varlığa (entity) dönüştüren yapılandırılmış veri standardıdır. Kopuk JSON-LD blokları yerine tek bir @graph dizisi içinde birbirine @id referanslarıyla bağlanan Organization, WebSite, WebPage, Article, Service ve Person nesneleri; Google Knowledge Graph ve AI alıntı doğruluğunu en üst düzeye çıkarır.',
+    takeaways: [
+      'Ayrık JSON-LD blokları yerine tek bir @graph dizisi kullanılmalıdır.',
+      'Her ana varlık benzersiz ve kalıcı bir @id URI kimliğine sahip olmalıdır.',
+      'Wikidata ve Wikipedia URL’leri (sameAs) varlık belirsizliğini (disambiguation) çözer.',
+      'knowsAbout özelliği kurumun ve yazarın uzmanlık taksonomisini arama motoruna bildirir.',
+      'Doğrulama Google Rich Results Test ve Schema.org Validator üzerinde sıfır hatayla yapılmalıdır.'
+    ],
+    about: ['Schema.org', 'Yapılandırılmış Veri', 'Knowledge Graph', 'JSON-LD', 'Varlık Tabanlı SEO'],
+    mentions: ['Google Knowledge Graph', 'Wikidata', 'GraphRAG', 'E-E-A-T', 'Teknik SEO'],
+    related: ['google-ve-ai-botlari-icin-site-indeksleme-rehberi', 'e-e-a-t-yazar-otoritesi-ve-google-guven-rehberi', 'web-sitesi-teknik-seo-kontrol-listesi'],
+    servicePath: '/hizmetler/web-tasarim/',
+    serviceLabel: 'Teknik SEO ve yapılandırılmış veri hizmetini inceleyin',
+    faq: [
+      { question: 'Microdata mı yoksa JSON-LD mi tercih edilmelidir?', answer: 'Google ve W3C resmi olarak JSON-LD formatını önermektedir; HTML DOM yapısını kirletmeden script etiketi içinde temiz ve ayrıştırılabilir bir veri katmanı sağlar.' },
+      { question: '@graph kullanmanın avantajı nedir?', answer: 'Sayfadaki yazar, yayıncı, ana makale, web sitesi ve hizmet nesnelerini tekil `@id` referanslarıyla birbirine bağlayarak arama motoru Knowledge Graph ayrıştırıcısının ilişkileri eksiksiz anlamasını sağlar.' },
+      { question: 'sameAs özelliği neden önemlidir?', answer: 'Varlığın küresel Wikidata veya Wikipedia kimliğiyle eşleşmesini sağlayarak Google Knowledge Graph ve AI LLM modellerinin marka ve uzmanlık konusundaki halüsinasyonlarını engeller.' },
+      { question: 'Schema eklemek sıralamayı doğrudan yükseltir mi?', answer: 'Schema doğrudan bir sıralama faktörü değildir; ancak zengin sonuç (Rich Snippet) kazanımı, tıklama oranı (CTR) artışı, AI yanıtlarında kaynak gösterimi ve anlamsal güvenilirlik sağlar.' }
+    ],
+    sections: [
+      {
+        id: 'kopuk-bloklar-vs-graph',
+        label: 'Graf mimarisi',
+        heading: 'Kopuk JSON-LD blokları yerine birleşik @graph mimarisi kurun.',
+        paragraphs: [
+          'Geleneksel SEO uygulamalarında sayfaya 3-4 farklı JSON-LD script etiketi yerleştirilerek kopuk Organization, Article ve BreadcrumbList şemaları eklenir. Bu durum Google ve yapay zekâ ayrıştırıcılarının makalenin yazarının hangi kuruma bağlı olduğunu veya sayfanın hangi web sitesinin parçası olduğunu tespit etmesini zorlaştırır.',
+          'Modern yaklaşım, tüm nesneleri tek bir `@graph` dizisinde toplamak ve `@id` referanslarıyla (örneğin `"author": { "@id": "https://example.com/#organization" }`) birbirine bağlamaktır.'
+        ],
+        table: {
+          headers: ['Özellik', 'Kopuk JSON-LD Blokları', 'Birleşik @graph Mimarisi'],
+          rows: [
+            ['Varlık İlişkileri', 'Kopuk, bağımsız nesneler', '`@id` ile birbirine bağlı anlamsal graf'],
+            ['Ayrıştırma Hızı', 'Çoklu DOM araması', 'Tek geçişte eksiksiz Knowledge Graph inşası'],
+            ['AI / LLM Uyumu', 'Yüksek halüsinasyon riski', 'Sıfır belirsizlik ve net varlık eşleştirmesi'],
+            ['Kod Boyutu', 'Tekrarlayan logo ve kurum verisi', 'Tekilleştirilmiş, hafif ve temiz veri yapısı']
+          ]
+        }
+      },
+      {
+        id: 'varlik-eslestirme-ve-wikidata',
+        label: 'Varlık eşleştirme',
+        heading: 'sameAs ve knowsAbout ile Google Knowledge Graph eşleştirmesi.',
+        paragraphs: [
+          'Arama motorları kelimeleri değil, varlıkları (entities) anlar. Bir sayfada “B2B”, “SEO” veya “E-ticaret” geçtiğinde, bu kavramların ne anlama geldiği `about` ve `mentions` nesneleri altında Wikidata QID bağlantılarıyla (`https://www.wikidata.org/wiki/Q180711`) mühürlenmelidir.',
+          'Kurum ve yazar şemalarında kullanılan `knowsAbout` dizisi ise işletmenin ve uzmanın yetkinlik alanlarını arama motorunun ontoloji sözlüğüne açıkça kaydeder.'
+        ],
+        ordered: [
+          '<strong>Kurum @id Belirleme:</strong> Alan adının sonuna `/#organization` ekleyerek tekil bir URI tanımlayın.',
+          '<strong>sameAs ile Sosyal ve Bilgi Profilleri:</strong> Wikidata, LinkedIn, GitHub, Crunchbase ve Twitter profillerini eksiksiz listeleyin.',
+          '<strong>knowsAbout Taksonomisi:</strong> İşletmenin gerçekte sunduğu ve tecrübe sahibi olduğu 5-10 temel uzmanlık alanını ekleyin.',
+          '<strong>about &amp; mentions Ayrımı:</strong> Sayfanın ana konusunu `about`, değinilen yan kavramları `mentions` içinde Wikidata bağlantısıyla verin.'
+        ],
+        callout: 'Kritik uyarı: Sunulmayan hizmetleri veya alakasız varlıkları eklemek Google yapılandırılmış veri yönergelerine aykırıdır ve spam cezasına yol açabilir.'
+      },
+      {
+        id: 'temel-sema-turleri',
+        label: 'Şema türleri',
+        heading: 'İşletmeler ve dijital stüdyolar için kritik Schema.org türleri.',
+        paragraphs: [
+          'Her sayfa türünün kendine özgü zorunlu ve önerilen şema özellikleri vardır. B2B işletmeler, stüdyolar ve içerik yayıncıları için temel türler şunlardır:',
+          'Kurumlar için Organization / LocalBusiness, hizmet sayfaları için Service (ve `hasOfferCatalog`), karar rehberleri için BlogPosting / TechArticle, karar araçları için WebApplication ve soru-cevap blokları için FAQPage.'
+        ],
+        table: {
+          headers: ['Sayfa Türü', 'Temel Schema Türü', 'Zorunlu / Kritik Özellikler'],
+          rows: [
+            ['Ana Sayfa', 'Organization, WebSite', 'name, url, logo, sameAs, knowsAbout, contactPoint'],
+            ['Hizmet Sayfası', 'Service, WebPage', 'name, serviceType, provider (@id), areaServed, offers'],
+            ['Blog / Rehber', 'BlogPosting / TechArticle', 'headline, author (@id), datePublished, dateModified, about'],
+            ['Karar Aracı', 'WebApplication, WebPage', 'name, applicationCategory, operatingSystem, offers'],
+            ['Tüm Sayfalar', 'BreadcrumbList', 'itemListElement (position, name, item)']
+          ]
+        }
+      },
+      {
+        id: 'rich-results-ve-dogrulama',
+        label: 'Doğrulama protokolü',
+        heading: 'Yapılandırılmış verileri test etme ve canlıda izleme adımları.',
+        paragraphs: [
+          'Yazılan JSON-LD şemaları yayına alınmadan önce mutlaka iki aşamalı doğrulamadan geçirilmelidir: 1. Schema.org Validator (sentaks ve anlamsal standart kontrolü) ve 2. Google Rich Results Test (Google arama zengin sonuç uygunluğu).',
+          'Search Console üzerinde “Geliştirmeler (Enhancements)” sekmesinden Zengin Sonuç dizin durumu ve olası uyarılar haftalık olarak denetlenmelidir.'
+        ],
+        checklist: [
+          'Sayfada görünen metin ile JSON-LD içindeki verilerin (fiyat, başlık, tarih) %100 örtüştüğünü doğrulayın.',
+          'Gizlenmiş metinler veya yanıltıcı SSS (FAQ) eklemelerinden kaçının.',
+          'ISO 8601 tarih formatını (`YYYY-MM-DDThh:mm:ssTZD`) eksiksiz kullanın.',
+          'Kendi şemanızı hızlıca üretmek için Narvals Schema Markup Oluşturucu aracını kullanın.'
+        ]
+      }
+    ],
+    sources: [
+      { label: 'Schema.org — Official Community Documentation & Specifications', url: 'https://schema.org' },
+      { label: 'Google Search Central — Yapılandırılmış Veri Genel Kuralları', url: 'https://developers.google.com/search/docs/appearance/structured-data/sd-policies' },
+      { label: 'Google Search Central — Rich Results ve Desteklenen Şema Türleri', url: 'https://developers.google.com/search/docs/appearance/structured-data/search-gallery' },
+      { label: 'W3C — JSON-LD 1.1 A JSON-based Serialization for Linked Data', url: 'https://www.w3.org/TR/json-ld11/' },
+      { label: 'Wikidata.org — Global Entity Knowledge Base', url: 'https://www.wikidata.org' }
+    ]
+  },
+  {
+    slug: 'e-e-a-t-yazar-otoritesi-ve-google-guven-rehberi',
+    metaTitle: 'E-E-A-T ve Yazar Otoritesi Kurma Rehberi | Narvals',
+    title: 'E-E-A-T ve yazar otoritesi nasıl kurulur? Google güven rehberi',
+    description: 'Google Search Quality Rater ilkelerine göre E-E-A-T, doğrulanabilir yazar biyografileri, editoryal şeffaflık ve varlık güveni inşa etme rehberi.',
+    keywords: ['E-E-A-T nedir', 'yazar otoritesi', 'Google güven sinyalleri', 'Quality Rater Guidelines', 'E-E-A-T SEO'],
+    category: 'SEO & GEO',
+    published: '2026-08-30T00:00:00+03:00',
+    modified: '2026-08-30T00:00:00+03:00',
+    readingTime: 13,
+    answer: 'E-E-A-T (Deneyim, Uzmanlık, Otoriterlik ve Güvenilirlik), Google’ın Arama Kalitesi Değerlendirme İlkeleri’nde (Quality Rater Guidelines) tanımlanan ve temel sıralama algoritmaları tarafından taranan güven çerçevesidir. Sahte yazar profilleri veya jenerik metinler yerine doğrulanabilir dijital ayak izine sahip uzman biyografileri, açık editoryal ilkeler, birinci el test kanıtları ve kurumsal şeffaflık ile inşa edilir.',
+    takeaways: [
+      'E-E-A-T’nin kalbinde “Güven (Trust)” yer alır; Deneyim, Uzmanlık ve Otorite güveni destekler.',
+      'Doğrulanabilir dijital ayak izi (LinkedIn, yayınlar, akademik profil) olmayan sahte yazarlar risklidir.',
+      'Birinci el test ekran görüntüleri, gerçek proje metrikleri ve vaka çalışmaları birinci “E”yi (Deneyim) kanıtlar.',
+      'Açık künye, fiziksel adres, şirket unvanı, telefon ve editoryal politika sayfası zorunludur.',
+      'YMYL (Paranız veya Hayatınız) konularında uzman doğrulaması ve inceleme kurulu şarttır.'
+    ],
+    about: ['E-E-A-T', 'Yazar Otoritesi', 'Google Güven Sinyalleri', 'Search Quality Raters', 'Editoryal Şeffaflık'],
+    mentions: ['Information Gain', 'Knowledge Graph', 'Teknik SEO', 'İçerik Kalitesi', 'Kullanıcı Deneyimi'],
+    related: ['schema-org-ve-baglantili-jsonld-graflari', 'google-ve-ai-botlari-icin-site-indeksleme-rehberi', 'kurumsal-web-sitesi-briefi-nasil-hazirlanir'],
+    servicePath: '/hizmetler/web-tasarim/',
+    serviceLabel: 'Güvenilir web ve içerik altyapısını inceleyin',
+    faq: [
+      { question: 'E-E-A-T doğrudan bir Google sıralama algoritması mıdır?', answer: 'E-E-A-T tek bir sıralama faktörü veya sayısal metrik değildir; Google’ın arama kalitesi değerlendiricilerine kılavuzluk eden ve temel sıralama algoritmalarının (Helpful Content, Core Ranking) ölçmeye çalıştığı bütüncül bir güven konseptidir.' },
+      { question: 'Yapay zekâ (AI) ile içerik üretmek E-E-A-T’ye aykırı mıdır?', answer: 'Google yapay zekâ kullanımını tek başına cezalandırmaz; ancak uzman denetimi olmayan, özgün deneyim veya yeni veri içermeyen ölçekli AI metinleri düşük kalite (low quality) olarak değerlendirilir.' },
+      { question: 'Yazar profilinde hangi bilgiler yer almalıdır?', answer: 'Yazarın tam adı, unvanı, profesyonel biyografisi, uzmanlık alanı, çalıştığı kurum, LinkedIn / GitHub / Scholar profilleri ve editoryal sorumluluğu açıkça belirtilmelidir.' },
+      { question: 'Deneyim (Experience) faktörü içerikte nasıl kanıtlanır?', answer: 'Yalnızca teorik bilgi vermek yerine; gerçek test sonuçları, kullanılan araçların arayüz ekran görüntüleri, yaşanan teknik zorluklar ve somut vaka metrikleri paylaşarak kanıtlanır.' }
+    ],
+    sections: [
+      {
+        id: 'eeat-dort-sutunu',
+        label: 'E-E-A-T sütunları',
+        heading: 'E-E-A-T’nin dört sütunu: Deneyim, Uzmanlık, Otorite ve Güven.',
+        paragraphs: [
+          'Google 2022 yılında E-A-T kavramına ilk “E” harfini, yani “Deneyim (Experience)” boyutunu eklemiştir. Bir konuyu yalnızca teorik olarak bilmek (Uzmanlık) yetersizdir; o ürünü bizzat kullanmış, o kodu yazmış veya o projeyi canlıya almış olmak (Deneyim) en kritik ayırt edici sinyaldir.',
+          'Tüm bu yapının merkezinde ise “Güvenilirlik (Trustworthiness)” yer alır. Deneyim, uzmanlık ve otorite sinyalleri, kullanıcıya ve arama motoruna güven vermek için çalışan destekleyici mekanizmalardır.'
+        ],
+        table: {
+          headers: ['Sütun', 'Ne Anlama Gelir?', 'Sitede Nasıl Kanıtlanır?'],
+          rows: [
+            ['Deneyim (Experience)', 'Konuyla ilgili birinci el pratik tecrübe', 'Gerçek test fotoğrafları, kod demoları, vaka metrikleri'],
+            ['Uzmanlık (Expertise)', 'Konu hakkındaki derin teorik ve teknik bilgi', 'Akademik/sektörel sertifikalar, detaylı teknik analizler'],
+            ['Otoriterlik (Authoritativeness)', 'Sektördeki tanınırlık ve referans gösterilme', 'Bağımsız basın atıfları, Wikipedia/Wikidata kayıtları, podcastler'],
+            ['Güvenilirlik (Trustworthiness)', 'Şeffaflık, dürüstlük, güvenlik ve doğruluk', 'Açık künye, HTTPS, şeffaf fiyat/koşullar, editoryal ilkeler']
+          ]
+        }
+      },
+      {
+        id: 'yazar-ve-editoryal-seffaflik',
+        label: 'Yazar şeffaflığı',
+        heading: 'Doğrulanabilir yazar biyografileri ve editoryal politika.',
+        paragraphs: [
+          'Anonim yazarlar veya stok fotoğraflarla oluşturulmuş sahte uzman profilleri Google’ın kalite sistemleri tarafından hızla tespit edilir. Her içeriğin altında yazarın adı, uzmanlık alanı ve harici doğrulanabilir sosyal/akademik profillerine bağlantı yer almalıdır.',
+          'Ayrıca sitenin bir `/editoryal-ilkeler/` sayfası barındırması; içeriklerin nasıl hazırlandığını, kaynakların nasıl doğrulandığını ve hata düzeltme süreçlerini şeffafça açıklaması kurumsal güveni perçinler.'
+        ],
+        ordered: [
+          '<strong>Yazar Biyografi Sayfası:</strong> Her yazar için ad, fotoğraf, biyografi ve tüm makalelerini listeleyen ayrı bir yazar sayfası oluşturun.',
+          '<strong>Harici Varlık Bağlantıları:</strong> Yazarın LinkedIn, Twitter, GitHub veya Google Scholar profillerini şemada `sameAs` ile bağlayın.',
+          '<strong>Editoryal İlke Yayını:</strong> Kaynaklandırma, yapay zekâ kullanım şeffaflığı ve düzeltme politikanızı sitede açıkça yayımlayın.',
+          '<strong>Tarih Şeffaflığı:</strong> İlk yayın tarihi ile son güncelleme tarihini kullanıcılara ve botlara açıkça gösterin.'
+        ],
+        callout: 'Google Kalite Değerlendirici İlkeleri: “Sayfanın arkasında kimin olduğunu bilmek, güven değerlendirmesinin en temel adımıdır.”'
+      },
+      {
+        id: 'birinci-el-kanitlar',
+        label: 'Özgün kanıtlar',
+        heading: 'İçerikte birinci el deneyim ve vaka kanıtı üretme yöntemleri.',
+        paragraphs: [
+          'İnternetteki mevcut kaynakların özetini çıkaran jenerik içerikler Google’ın Bilgi Kazanımı (Information Gain) filtrelerine takılır. E-E-A-T puanı yüksek bir içerik mutlaka özgün test verisi, karşılaştırma matrisi veya hesaplama aracı içermelidir.',
+          'Örneğin bir teknik makalede yalnızca “hız optimizasyonu önemlidir” demek yerine, laboratuvar ve saha test sonuçlarını, kullanılan sunucu konfigürasyonlarını ve öncesi/sonrası metriklerini paylaşmak gerekir.'
+        ],
+        checklist: [
+          'Metin içinde “bizim testlerimizde”, “gerçekleştirdiğimiz projede” gibi birinci el deneyim ifadeleri ve verileri kullanın.',
+          'Ekran görüntüleri ve grafiklerin üzerinde özgün marka filigranı veya veri kaynağı belirtin.',
+          'Konunun sınırlarını ve hangi durumlarda önerilen yöntemin çalışmayacağını dürüstçe açıklayın.',
+          'Kullanıcıların kendi durumlarını test edebilecekleri interaktif karar araçları sunun.'
+        ]
+      },
+      {
+        id: 'kurumsal-guven-sinyalleri',
+        label: 'Kurumsal künye',
+        heading: 'İletişim, yasal kimlik ve kurumsal şeffaflık standartları.',
+        paragraphs: [
+          'Bir web sitesinin güvenilirliği yalnız blog yazılarıyla değil, sitenin tamamındaki kurumsal şeffaflıkla belirlenir. Footer ve iletişim sayfalarında tam ticari unvan, açık fiziksel adres, doğrulanmış e-posta ve telefon numarası yer almalıdır.',
+          'Ayrıca gizlilik politikası, kullanım koşulları, çerez politikası ve gerekiyorsa iade/iptal şartları standartlara uygun olarak erişilebilir olmalıdır.'
+        ],
+        checklist: [
+          'Footer alanında tam ticari unvan ve tescilli marka adını belirtin.',
+          'İletişim sayfasında yanıt verme sürelerini ve resmi destek kanallarını netleştirin.',
+          'Müşteri yorumlarında doğrulanabilir üçüncü taraf platformlara (Google İşletme, Trustpilot vb.) atıfta bulunun.',
+          'Site genelinde E-E-A-T denetimi yapmak için Narvals Bilgi Kazanımı Denetleyicisini kullanın.'
+        ]
+      }
+    ],
+    sources: [
+      { label: 'Google Search Quality Rater Guidelines (Aralık 2022 / Güncel Versiyon)', url: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content' },
+      { label: 'Google Search Central — İnsan Odaklı ve Güvenilir İçerik Oluşturma', url: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content' },
+      { label: 'Google Search Central — Arama Kalitesi ve E-E-A-T Açıklaması', url: 'https://developers.google.com/search/blog/2022/12/google-raters-guidelines-e-e-a-t' },
+      { label: 'W3C — Web İtibar ve Otorite Standartları', url: 'https://www.w3.org' }
+    ]
+  },
+  {
     slug: 'e-ticaret-altyapisi-nasil-secilir',
     metaTitle: 'E-Ticaret Altyapısı Nasıl Seçilir? | Narvals Labs',
     title: 'E-ticaret altyapısı nasıl seçilir? Dokuz karar sorusu',

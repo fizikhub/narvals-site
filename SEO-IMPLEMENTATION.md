@@ -4,7 +4,7 @@ Son güncelleme: 30 Ağustos 2026
 
 ## Yönetici özeti
 
-Site artık 70 canonical URL, 14 ücretsiz interaktif karar aracı, 35 kaynaklı
+Site artık 74 canonical URL, 16 ücretsiz interaktif karar aracı, 37 kaynaklı
 karar rehberi, 5 konu merkezi hub'ı (E-ticaret, Web Sitesi, Reklam, QR Menü, SEO & GEO),
 blog hub'ı, editoryal politika, RSS, URL bazlı sitemap tarihi, tüm arama ve AI
 tarayıcılarını (Googlebot, OAI-SearchBot, Claude-SearchBot, PerplexityBot, Applebot,
@@ -50,6 +50,8 @@ ele alınır. Şehir adı değiştirilmiş doorway sayfaları oluşturulmaz.
 | Web sitesi teknik SEO kontrol listesi | Yayın, taşıma, tarama ve indeks güvenliği |
 | GEO nedir? Google AI aramalarında görünürlük | SEO/GEO beklentisi ve ölçümü |
 | Google ve AI botları sitenizi nasıl tarar? | Bot ayrımı, RAG parçalama, Information Gain ve indeksleme |
+| Schema.org ve bağlantılı JSON-LD graf mimarisi | Varlık tabanlı SEO, Knowledge Graph ve şema doğrulama |
+| E-E-A-T ve yazar otoritesi nasıl kurulur? | Google Search Quality Rater güven ilkeleri ve yazar şeffaflığı |
 | E-ticaret altyapısı nasıl seçilir? | Hazır, headless ve özel mimari kararı |
 | Hazır yazılım mı, özel yazılım mı? | Yazılım satın alma karar matrisi |
 | Meta Pixel ve Conversions API farkı | Meta ölçüm mimarisi ve sınırlar |

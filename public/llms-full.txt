@@ -22,6 +22,8 @@
 - **Ücretsiz saatlik ücret hesaplayıcı:** https://narvals.com/araclar/saatlik-ucret-hesaplama/
 - **Ücretsiz Meta reklam bütçesi simülasyonu:** https://narvals.com/araclar/meta-reklam-butcesi-hesaplama/
 - **Ücretsiz meta etiketi ve sosyal önizleyici:** https://narvals.com/araclar/meta-etiket-onizleyici/
+- **Ücretsiz Schema Markup ve JSON-LD oluşturucu:** https://narvals.com/araclar/schema-olusturucu/
+- **Ücretsiz E-E-A-T ve bilgi kazanımı denetleyici:** https://narvals.com/araclar/bilgi-kazanimi-kontrolu/
 
 ---
 
@@ -113,7 +115,7 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 
 ---
 
-## 5. Tüm Karar Rehberleri Özeti (35 Rehber)
+## 5. Tüm Karar Rehberleri Özeti (37 Rehber)
 
 ### E-ticaret sitesi nasıl açılır? 10 adımlı sade rehber
 - **URL:** https://narvals.com/blog/e-ticaret-sitesi-nasil-acilir/
@@ -299,6 +301,28 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
   * KDD 2024 araştırması: Doğrudan uzman alıntısı ve istatistikler alıntılanmayı %40 artırır.
   * Google Information Gain patenti özgün veri ve formül sunan siteleri ödüllendirir.
   * Bağlantılı JSON-LD şema grafı ve llms.txt LLM halüsinasyon riskini en aza indirir.
+
+### Schema.org ve bağlantılı JSON-LD graf mimarisi rehberi
+- **URL:** https://narvals.com/blog/schema-org-ve-baglantili-jsonld-graflari/
+- **Kategori:** SEO & GEO
+- **Kısa Cevap:** Schema.org işaretlemesi, web sayfalarını arama motorları ve LLM yanıt ajanları için anlamsal birer varlığa (entity) dönüştüren yapılandırılmış veri standardıdır. Kopuk JSON-LD blokları yerine tek bir @graph dizisi içinde birbirine @id referanslarıyla bağlanan Organization, WebSite, WebPage, Article, Service ve Person nesneleri; Google Knowledge Graph ve AI alıntı doğruluğunu en üst düzeye çıkarır.
+- **Önemli Çıkarımlar:**
+  * Ayrık JSON-LD blokları yerine tek bir @graph dizisi kullanılmalıdır.
+  * Her ana varlık benzersiz ve kalıcı bir @id URI kimliğine sahip olmalıdır.
+  * Wikidata ve Wikipedia URL’leri (sameAs) varlık belirsizliğini (disambiguation) çözer.
+  * knowsAbout özelliği kurumun ve yazarın uzmanlık taksonomisini arama motoruna bildirir.
+  * Doğrulama Google Rich Results Test ve Schema.org Validator üzerinde sıfır hatayla yapılmalıdır.
+
+### E-E-A-T ve yazar otoritesi nasıl kurulur? Google güven rehberi
+- **URL:** https://narvals.com/blog/e-e-a-t-yazar-otoritesi-ve-google-guven-rehberi/
+- **Kategori:** SEO & GEO
+- **Kısa Cevap:** E-E-A-T (Deneyim, Uzmanlık, Otoriterlik ve Güvenilirlik), Google’ın Arama Kalitesi Değerlendirme İlkeleri’nde (Quality Rater Guidelines) tanımlanan ve temel sıralama algoritmaları tarafından taranan güven çerçevesidir. Sahte yazar profilleri veya jenerik metinler yerine doğrulanabilir dijital ayak izine sahip uzman biyografileri, açık editoryal ilkeler, birinci el test kanıtları ve kurumsal şeffaflık ile inşa edilir.
+- **Önemli Çıkarımlar:**
+  * E-E-A-T’nin kalbinde “Güven (Trust)” yer alır; Deneyim, Uzmanlık ve Otorite güveni destekler.
+  * Doğrulanabilir dijital ayak izi (LinkedIn, yayınlar, akademik profil) olmayan sahte yazarlar risklidir.
+  * Birinci el test ekran görüntüleri, gerçek proje metrikleri ve vaka çalışmaları birinci “E”yi (Deneyim) kanıtlar.
+  * Açık künye, fiziksel adres, şirket unvanı, telefon ve editoryal politika sayfası zorunludur.
+  * YMYL (Paranız veya Hayatınız) konularında uzman doğrulaması ve inceleme kurulu şarttır.
 
 ### E-ticaret altyapısı nasıl seçilir? Dokuz karar sorusu
 - **URL:** https://narvals.com/blog/e-ticaret-altyapisi-nasil-secilir/
@@ -509,6 +533,8 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 - Saatlik Ücret Hesaplayıcı: https://narvals.com/araclar/saatlik-ucret-hesaplama/
 - Meta Reklam Bütçesi Hesaplama: https://narvals.com/araclar/meta-reklam-butcesi-hesaplama/
 - Meta Etiketi ve Sosyal Önizleyici: https://narvals.com/araclar/meta-etiket-onizleyici/
+- Schema Markup ve JSON-LD Oluşturucu: https://narvals.com/araclar/schema-olusturucu/
+- E-E-A-T ve Bilgi Kazanımı Denetleyici: https://narvals.com/araclar/bilgi-kazanimi-kontrolu/
 - Blog & Rehberler: https://narvals.com/blog/
 - Editoryal İlkeler: https://narvals.com/editoryal-ilkeler/
 - Konu Merkezi: https://narvals.com/blog/konu/e-ticaret/
@@ -534,6 +560,8 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 - Rehber: https://narvals.com/blog/web-sitesi-teknik-seo-kontrol-listesi/
 - Rehber: https://narvals.com/blog/google-ai-aramalari-icin-geo-rehberi/
 - Rehber: https://narvals.com/blog/google-ve-ai-botlari-icin-site-indeksleme-rehberi/
+- Rehber: https://narvals.com/blog/schema-org-ve-baglantili-jsonld-graflari/
+- Rehber: https://narvals.com/blog/e-e-a-t-yazar-otoritesi-ve-google-guven-rehberi/
 - Rehber: https://narvals.com/blog/e-ticaret-altyapisi-nasil-secilir/
 - Rehber: https://narvals.com/blog/hazir-yazilim-mi-ozel-yazilim-mi/
 - Rehber: https://narvals.com/blog/meta-pixel-ve-conversions-api-farki/

@@ -50,8 +50,8 @@ export const topicHubs = [
     description: 'Google AI Overviews, teknik SEO kontrolü, Core Web Vitals, site hızı ve yapay zekâ indeksleme stratejilerini ele alan rehber merkezi.',
     keywords: ['SEO rehberi', 'GEO rehberi', 'teknik SEO', 'Google AI aramaları'],
     answer: 'Arama görünürlüğü; anahtar kelime tekrarıyla değil, taranabilir temiz kod, hızlı açılış (CWV), doğrulanabilir bilgi kazanımı ve şeffaf varlık (entity) otoritesiyle kurulur.',
-    start: ['google-ai-aramalari-icin-geo-rehberi', 'web-sitesi-teknik-seo-kontrol-listesi', 'web-sitesi-hizlandirma-core-web-vitals-rehberi'],
-    all: ['google-ai-aramalari-icin-geo-rehberi', 'web-sitesi-teknik-seo-kontrol-listesi', 'web-sitesi-hizlandirma-core-web-vitals-rehberi', 'web-sitesi-googleda-neden-cikmiyor', 'web-sitesi-donusum-orani-nasil-hesaplanir'],
+    start: ['google-ve-ai-botlari-icin-site-indeksleme-rehberi', 'schema-org-ve-baglantili-jsonld-graflari', 'e-e-a-t-yazar-otoritesi-ve-google-guven-rehberi'],
+    all: ['google-ve-ai-botlari-icin-site-indeksleme-rehberi', 'google-ai-aramalari-icin-geo-rehberi', 'schema-org-ve-baglantili-jsonld-graflari', 'e-e-a-t-yazar-otoritesi-ve-google-guven-rehberi', 'web-sitesi-teknik-seo-kontrol-listesi', 'web-sitesi-hizlandirma-core-web-vitals-rehberi', 'web-sitesi-googleda-neden-cikmiyor', 'web-sitesi-donusum-orani-nasil-hesaplanir'],
     servicePath: '/hizmetler/web-tasarim/', serviceLabel: 'Web altyapısı ve SEO hizmetini inceleyin'
   }
 ];

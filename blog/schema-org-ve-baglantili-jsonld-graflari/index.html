@@ -1,0 +1,558 @@
+<!doctype html>
+<html class="no-js" lang="tr">
+  <head>
+    <script>document.documentElement.classList.replace('no-js', 'js');</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#03233a" />
+    <meta name="color-scheme" content="light" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="msapplication-TileColor" content="#03233a" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="description" content="Google Knowledge Graph ve AI için Schema.org @graph mimarisi, Organization, Article, Wikidata sameAs ve knowsAbout entegrasyonu rehberi." />
+    <meta name="keywords" content="Schema.org rehberi, JSON-LD grafı, Knowledge Graph SEO, sameAs Wikidata, yapılandırılmış veri" />
+    <meta name="author" content="Narvals Labs" />
+    <link rel="canonical" href="https://narvals.com/blog/schema-org-ve-baglantili-jsonld-graflari/" />
+    <link rel="alternate" hreflang="tr" href="https://narvals.com/blog/schema-org-ve-baglantili-jsonld-graflari/" />
+    <link rel="alternate" hreflang="tr-TR" href="https://narvals.com/blog/schema-org-ve-baglantili-jsonld-graflari/" />
+    <link rel="alternate" hreflang="x-default" href="https://narvals.com/blog/schema-org-ve-baglantili-jsonld-graflari/" />
+    <link rel="alternate" type="application/rss+xml" title="Narvals Labs Rehberleri" href="https://narvals.com/blog/feed.xml" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/assets/logo-v6/narvals-favicon-48.png" type="image/png" sizes="48x48" />
+    <link rel="icon" href="/assets/logo-v6/narvals-favicon-96.png" type="image/png" sizes="96x96" />
+    <link rel="icon" href="/assets/logo-v6/narvals-favicon-192.png" type="image/png" sizes="192x192" />
+    <link rel="icon" href="/assets/logo-v6/narvals-favicon-v6-256.png" type="image/png" sizes="256x256" />
+    <link rel="apple-touch-icon" href="/assets/logo-v6/narvals-avatar-v6-1080.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Narvals Labs" />
+    <meta property="og:title" content="Schema.org ve JSON-LD Graf Mimarisi Rehberi | Narvals" />
+    <meta property="og:description" content="Google Knowledge Graph ve AI için Schema.org @graph mimarisi, Organization, Article, Wikidata sameAs ve knowsAbout entegrasyonu rehberi." />
+    <meta property="og:url" content="https://narvals.com/blog/schema-org-ve-baglantili-jsonld-graflari/" />
+    <meta property="og:image" content="https://narvals.com/og/narvals-labs-og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Narvals Labs — Web, Yazılım ve Reklam" />
+    <meta property="article:published_time" content="2026-08-30T00:00:00+03:00" />
+    <meta property="article:modified_time" content="2026-08-30T00:00:00+03:00" />
+    <meta property="article:section" content="SEO &amp; GEO" />
+    <meta property="article:author" content="https://narvals.com/hakkimizda/" />
+    <meta property="article:publisher" content="https://narvals.com/" />
+    <meta property="article:tag" content="Schema.org rehberi" />
+    <meta property="article:tag" content="JSON-LD grafı" />
+    <meta property="article:tag" content="Knowledge Graph SEO" />
+    <meta property="article:tag" content="sameAs Wikidata" />
+    <meta property="article:tag" content="yapılandırılmış veri" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Schema.org ve JSON-LD Graf Mimarisi Rehberi | Narvals" />
+    <meta name="twitter:description" content="Google Knowledge Graph ve AI için Schema.org @graph mimarisi, Organization, Article, Wikidata sameAs ve knowsAbout entegrasyonu rehberi." />
+    <meta name="twitter:image" content="https://narvals.com/og/narvals-labs-og.jpg" />
+    <meta name="twitter:image:alt" content="Narvals Labs — Web, Yazılım ve Reklam" />
+    <meta name="twitter:label1" content="Okuma Süresi" />
+    <meta name="twitter:data1" content="14 dk" />
+    <meta name="twitter:label2" content="Kategori" />
+    <meta name="twitter:data2" content="SEO &amp; GEO" />
+    <title>Schema.org ve JSON-LD Graf Mimarisi Rehberi | Narvals</title>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://narvals.com/#organization",
+      "name": "Narvals Labs",
+      "legalName": "Narvals Labs",
+      "url": "https://narvals.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://narvals.com/assets/logo-v6/narvals-avatar-v6-1080.png",
+        "contentUrl": "https://narvals.com/assets/logo-v6/narvals-avatar-v6-1080.png",
+        "width": 1080,
+        "height": 1080
+      },
+      "image": "https://narvals.com/og/narvals-labs-og.jpg",
+      "description": "Web sitesi ve UX, işletmeye özel yazılım, dijital reklam, marka, QR menü ve rezervasyon sistemleri üreten dijital stüdyo.",
+      "email": "info@narvals.com",
+      "telephone": "+905019441921",
+      "sameAs": [
+        "https://github.com/fizikhub/narvals-site"
+      ],
+      "publishingPrinciples": "https://narvals.com/editoryal-ilkeler/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "TR"
+      },
+      "currenciesAccepted": "TRY, EUR, USD",
+      "paymentAccepted": "Bank Transfer, Credit Card",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "info@narvals.com",
+        "telephone": "+905019441921",
+        "areaServed": "TR",
+        "availableLanguage": [
+          "Turkish",
+          "English"
+        ],
+        "hoursAvailable": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Türkiye"
+      },
+      "founder": {
+        "@type": "Organization",
+        "name": "Narvals Labs Team",
+        "url": "https://narvals.com/hakkimizda/"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Narvals Labs Dijital Hizmetler",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Kurumsal Web Tasarım ve UX",
+              "url": "https://narvals.com/hizmetler/web-tasarim/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "E-Ticaret Sitesi Tasarımı ve Geliştirme",
+              "url": "https://narvals.com/hizmetler/e-ticaret/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "İşletmeye Özel Yazılım ve Otomasyon",
+              "url": "https://narvals.com/hizmetler/ozel-yazilim/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Google Ads Reklam ve Dönüşüm Yönetimi",
+              "url": "https://narvals.com/hizmetler/google-ads/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Meta (Instagram & Facebook) Reklam Yönetimi",
+              "url": "https://narvals.com/hizmetler/dijital-reklam/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sosyal Medya Yönetimi ve İçerik Stratejisi",
+              "url": "https://narvals.com/hizmetler/sosyal-medya-yonetimi/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Özel QR Menü Yazılımı ve Yönetim Paneli",
+              "url": "https://narvals.com/hizmetler/qr-menu/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Online Rezervasyon ve Randevu Sistemi",
+              "url": "https://narvals.com/hizmetler/rezervasyon-randevu/"
+            }
+          }
+        ]
+      },
+      "knowsAbout": [
+        "Web Tasarım ve UX",
+        "Özel Yazılım Geliştirme",
+        "Meta Reklam Yönetimi",
+        "Google Ads Yönetimi",
+        "E-Ticaret Sitesi",
+        "Sosyal Medya Yönetimi",
+        "QR Menü Sistemleri",
+        "Online Rezervasyon Sistemleri",
+        "Teknik SEO",
+        "Generative Engine Optimization (GEO)",
+        "Yapay Zeka Aramaları ve LLM İndeksleme",
+        "E-E-A-T ve Varlık Tabanlı SEO",
+        "Bilgi Kazanımı (Information Gain)",
+        "Yapılandırılmış Veri ve Schema Mimarisi",
+        "Core Web Vitals Optimizasyonu",
+        "Dönüşüm Oranı Optimizasyonu (CRO)",
+        "Conversions API (CAPI)",
+        "Google Analytics 4 (GA4)",
+        "Headless CMS ve API Mimarisi"
+      ],
+      "knowsLanguage": [
+        "tr",
+        "en"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://narvals.com/#website",
+      "url": "https://narvals.com/",
+      "name": "Narvals Labs",
+      "alternateName": [
+        "Narvals",
+        "Narvals Digital",
+        "Narvals Studio",
+        "Narvals Labs Dijital"
+      ],
+      "inLanguage": "tr-TR",
+      "publisher": {
+        "@id": "https://narvals.com/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://narvals.com/blog/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://narvals.com/blog/schema-org-ve-baglantili-jsonld-graflari/#webpage",
+      "url": "https://narvals.com/blog/schema-org-ve-baglantili-jsonld-graflari/",
+      "name": "Schema.org ve JSON-LD Graf Mimarisi Rehberi | Narvals",
+      "description": "Google Knowledge Graph ve AI için Schema.org @graph mimarisi, Organization, Article, Wikidata sameAs ve knowsAbout entegrasyonu rehberi.",
+      "inLanguage": "tr-TR",
+      "isPartOf": {
+        "@id": "https://narvals.com/#website"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Schema.org",
+          "sameAs": "https://en.wikipedia.org/wiki/Schema.org"
+        },
+        {
+          "@type": "Thing",
+          "name": "Yapılandırılmış Veri",
+          "sameAs": "https://en.wikipedia.org/wiki/Schema.org"
+        },
+        {
+          "@type": "Thing",
+          "name": "Knowledge Graph",
+          "sameAs": "https://en.wikipedia.org/wiki/Google_Knowledge_Graph"
+        },
+        {
+          "@type": "Thing",
+          "name": "JSON-LD"
+        },
+        {
+          "@type": "Thing",
+          "name": "Varlık Tabanlı SEO"
+        }
+      ],
+      "datePublished": "2026-08-30T00:00:00+03:00",
+      "dateModified": "2026-08-30T00:00:00+03:00",
+      "breadcrumb": {
+        "@id": "https://narvals.com/blog/schema-org-ve-baglantili-jsonld-graflari/#breadcrumb"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "h1",
+          ".info-hero__answer",
+          ".article-summary ul",
+          ".article-section h2"
+        ]
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://narvals.com/og/narvals-labs-og.jpg",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://narvals.com/blog/schema-org-ve-baglantili-jsonld-graflari/#article",
+      "mainEntityOfPage": {
+        "@id": "https://narvals.com/blog/schema-org-ve-baglantili-jsonld-graflari/#webpage"
+      },
+      "headline": "Schema.org ve bağlantılı JSON-LD graf mimarisi rehberi",
+      "description": "Google Knowledge Graph ve AI için Schema.org @graph mimarisi, Organization, Article, Wikidata sameAs ve knowsAbout entegrasyonu rehberi.",
+      "image": [
+        "https://narvals.com/og/narvals-labs-og.jpg"
+      ],
+      "datePublished": "2026-08-30T00:00:00+03:00",
+      "dateModified": "2026-08-30T00:00:00+03:00",
+      "timeRequired": "PT14M",
+      "inLanguage": "tr-TR",
+      "isAccessibleForFree": true,
+      "wordCount": 680,
+      "articleSection": "SEO & GEO",
+      "keywords": "Schema.org rehberi, JSON-LD grafı, Knowledge Graph SEO, sameAs Wikidata, yapılandırılmış veri",
+      "author": {
+        "@id": "https://narvals.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://narvals.com/#organization"
+      },
+      "copyrightHolder": {
+        "@id": "https://narvals.com/#organization"
+      },
+      "license": "https://narvals.com/editoryal-ilkeler/",
+      "publishingPrinciples": "https://narvals.com/editoryal-ilkeler/",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "h1",
+          ".info-hero__answer",
+          ".article-summary ul",
+          ".article-section h2"
+        ]
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Schema.org",
+          "sameAs": "https://en.wikipedia.org/wiki/Schema.org"
+        },
+        {
+          "@type": "Thing",
+          "name": "Yapılandırılmış Veri",
+          "sameAs": "https://en.wikipedia.org/wiki/Schema.org"
+        },
+        {
+          "@type": "Thing",
+          "name": "Knowledge Graph",
+          "sameAs": "https://en.wikipedia.org/wiki/Google_Knowledge_Graph"
+        },
+        {
+          "@type": "Thing",
+          "name": "JSON-LD"
+        },
+        {
+          "@type": "Thing",
+          "name": "Varlık Tabanlı SEO"
+        }
+      ],
+      "citation": [
+        "https://schema.org",
+        "https://developers.google.com/search/docs/appearance/structured-data/sd-policies",
+        "https://developers.google.com/search/docs/appearance/structured-data/search-gallery",
+        "https://www.w3.org/TR/json-ld11/",
+        "https://www.wikidata.org"
+      ],
+      "isBasedOn": [
+        "https://schema.org",
+        "https://developers.google.com/search/docs/appearance/structured-data/sd-policies",
+        "https://developers.google.com/search/docs/appearance/structured-data/search-gallery",
+        "https://www.w3.org/TR/json-ld11/",
+        "https://www.wikidata.org"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://narvals.com/blog/schema-org-ve-baglantili-jsonld-graflari/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ana sayfa",
+          "item": "https://narvals.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Rehberler",
+          "item": "https://narvals.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "SEO ve GEO rehberleri",
+          "item": "https://narvals.com/blog/konu/seo-geo/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Schema.org ve bağlantılı JSON-LD graf mimarisi rehberi",
+          "item": "https://narvals.com/blog/schema-org-ve-baglantili-jsonld-graflari/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://narvals.com/blog/schema-org-ve-baglantili-jsonld-graflari/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Microdata mı yoksa JSON-LD mi tercih edilmelidir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google ve W3C resmi olarak JSON-LD formatını önermektedir; HTML DOM yapısını kirletmeden script etiketi içinde temiz ve ayrıştırılabilir bir veri katmanı sağlar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "@graph kullanmanın avantajı nedir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sayfadaki yazar, yayıncı, ana makale, web sitesi ve hizmet nesnelerini tekil `@id` referanslarıyla birbirine bağlayarak arama motoru Knowledge Graph ayrıştırıcısının ilişkileri eksiksiz anlamasını sağlar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "sameAs özelliği neden önemlidir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Varlığın küresel Wikidata veya Wikipedia kimliğiyle eşleşmesini sağlayarak Google Knowledge Graph ve AI LLM modellerinin marka ve uzmanlık konusundaki halüsinasyonlarını engeller."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Schema eklemek sıralamayı doğrudan yükseltir mi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Schema doğrudan bir sıralama faktörü değildir; ancak zengin sonuç (Rich Snippet) kazanımı, tıklama oranı (CTR) artışı, AI yanıtlarında kaynak gösterimi ve anlamsal güvenilirlik sağlar."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
+  </head>
+  <body class="info-page article-page">
+    <!-- Bu dosya content/blog-posts.mjs kaynağından otomatik üretilir. -->
+    <a class="skip-link" href="#main-content">Ana içeriğe geç</a>
+    <header class="info-nav">
+      <a class="info-nav__brand" href="/"><img src="/assets/logo-v6/narvals-mascot-v6-transparent-96.png" alt="" width="96" height="96" /><span>narvals<i>//</i>labs</span></a>
+      <nav class="info-nav__links" aria-label="Ana menü"><a href="/hizmetler/">Hizmetler</a><a href="/blog/" aria-current="page">Rehberler</a><a href="/hakkimizda/">Hakkımızda</a><a href="/iletisim/">Projeyi konuşalım</a></nav>
+    </header>
+    <main id="main-content">
+      <article>
+        <header class="info-hero article-hero">
+          <div class="info-hero__copy">
+            <nav class="breadcrumbs" aria-label="İçerik yolu"><a href="/">Ana sayfa</a><span>/</span><a href="/blog/">Rehberler</a><span>/</span><a href="/blog/konu/seo-geo/">SEO &amp; GEO</a></nav>
+            <p class="info-hero__kicker">SEO &amp; GEO · Karar rehberi</p>
+            <h1>Schema.org ve bağlantılı JSON-LD graf mimarisi rehberi</h1>
+            <p class="info-hero__answer">Schema.org işaretlemesi, web sayfalarını arama motorları ve LLM yanıt ajanları için anlamsal birer varlığa (entity) dönüştüren yapılandırılmış veri standardıdır. Kopuk JSON-LD blokları yerine tek bir @graph dizisi içinde birbirine @id referanslarıyla bağlanan Organization, WebSite, WebPage, Article, Service ve Person nesneleri; Google Knowledge Graph ve AI alıntı doğruluğunu en üst düzeye çıkarır.</p>
+            <div class="article-meta"><span>Yayınlayan <a href="/hakkimizda/">Narvals Labs</a></span><span>Yayımlandı <time datetime="2026-08-30T00:00:00+03:00">30 Ağustos 2026</time></span><span>14 dk okuma</span></div>
+          </div>
+          <aside class="info-hero__panel article-summary" aria-labelledby="ozet-basligi"><strong id="ozet-basligi">Bu rehberin özeti</strong><ul><li>Ayrık JSON-LD blokları yerine tek bir @graph dizisi kullanılmalıdır.</li><li>Her ana varlık benzersiz ve kalıcı bir @id URI kimliğine sahip olmalıdır.</li><li>Wikidata ve Wikipedia URL’leri (sameAs) varlık belirsizliğini (disambiguation) çözer.</li><li>knowsAbout özelliği kurumun ve yazarın uzmanlık taksonomisini arama motoruna bildirir.</li><li>Doğrulama Google Rich Results Test ve Schema.org Validator üzerinde sıfır hatayla yapılmalıdır.</li></ul></aside>
+        </header>
+
+        <div class="info-layout article-layout">
+          <nav class="info-toc" aria-label="Makale içeriği"><strong>Bu rehberde</strong><a href="#kopuk-bloklar-vs-graph">Graf mimarisi</a><a href="#varlik-eslestirme-ve-wikidata">Varlık eşleştirme</a><a href="#temel-sema-turleri">Şema türleri</a><a href="#rich-results-ve-dogrulama">Doğrulama protokolü</a><a href="#kisa-cevaplar">Kısa cevaplar</a><a href="#kaynaklar">Kaynaklar</a></nav>
+          <div class="info-content article-content">
+            <section class="info-section article-section" id="kopuk-bloklar-vs-graph">
+        <p class="info-section__label">Graf mimarisi</p>
+        <h2>Kopuk JSON-LD blokları yerine birleşik @graph mimarisi kurun.</h2>
+        <p>Geleneksel SEO uygulamalarında sayfaya 3-4 farklı JSON-LD script etiketi yerleştirilerek kopuk Organization, Article ve BreadcrumbList şemaları eklenir. Bu durum Google ve yapay zekâ ayrıştırıcılarının makalenin yazarının hangi kuruma bağlı olduğunu veya sayfanın hangi web sitesinin parçası olduğunu tespit etmesini zorlaştırır.</p>
+        <p>Modern yaklaşım, tüm nesneleri tek bir `@graph` dizisinde toplamak ve `@id` referanslarıyla (örneğin `"author": { "@id": "https://example.com/#organization" }`) birbirine bağlamaktır.</p>
+
+
+
+        <section class="article-table-wrap" tabindex="0" aria-label="Özellik, Kopuk JSON-LD Blokları, Birleşik @graph Mimarisi tablosu">
+          <table class="decision-table"><thead><tr><th scope="col">Özellik</th><th scope="col">Kopuk JSON-LD Blokları</th><th scope="col">Birleşik @graph Mimarisi</th></tr></thead><tbody><tr><th scope="row">Varlık İlişkileri</th><td>Kopuk, bağımsız nesneler</td><td>`@id` ile birbirine bağlı anlamsal graf</td></tr><tr><th scope="row">Ayrıştırma Hızı</th><td>Çoklu DOM araması</td><td>Tek geçişte eksiksiz Knowledge Graph inşası</td></tr><tr><th scope="row">AI / LLM Uyumu</th><td>Yüksek halüsinasyon riski</td><td>Sıfır belirsizlik ve net varlık eşleştirmesi</td></tr><tr><th scope="row">Kod Boyutu</th><td>Tekrarlayan logo ve kurum verisi</td><td>Tekilleştirilmiş, hafif ve temiz veri yapısı</td></tr></tbody></table>
+        </section>
+
+      </section>
+            <section class="info-section article-section" id="varlik-eslestirme-ve-wikidata">
+        <p class="info-section__label">Varlık eşleştirme</p>
+        <h2>sameAs ve knowsAbout ile Google Knowledge Graph eşleştirmesi.</h2>
+        <p>Arama motorları kelimeleri değil, varlıkları (entities) anlar. Bir sayfada “B2B”, “SEO” veya “E-ticaret” geçtiğinde, bu kavramların ne anlama geldiği `about` ve `mentions` nesneleri altında Wikidata QID bağlantılarıyla (`https://www.wikidata.org/wiki/Q180711`) mühürlenmelidir.</p>
+        <p>Kurum ve yazar şemalarında kullanılan `knowsAbout` dizisi ise işletmenin ve uzmanın yetkinlik alanlarını arama motorunun ontoloji sözlüğüne açıkça kaydeder.</p>
+
+        <ol class="article-steps"><li><strong>Kurum @id Belirleme:</strong> Alan adının sonuna `/#organization` ekleyerek tekil bir URI tanımlayın.</li><li><strong>sameAs ile Sosyal ve Bilgi Profilleri:</strong> Wikidata, LinkedIn, GitHub, Crunchbase ve Twitter profillerini eksiksiz listeleyin.</li><li><strong>knowsAbout Taksonomisi:</strong> İşletmenin gerçekte sunduğu ve tecrübe sahibi olduğu 5-10 temel uzmanlık alanını ekleyin.</li><li><strong>about &amp; mentions Ayrımı:</strong> Sayfanın ana konusunu `about`, değinilen yan kavramları `mentions` içinde Wikidata bağlantısıyla verin.</li></ol>
+
+
+        <aside class="article-callout" aria-label="sameAs ve knowsAbout ile Google Knowledge Graph eşleştirmesi.: karar notu"><strong>Karar notu</strong><p>Kritik uyarı: Sunulmayan hizmetleri veya alakasız varlıkları eklemek Google yapılandırılmış veri yönergelerine aykırıdır ve spam cezasına yol açabilir.</p></aside>
+      </section>
+            <section class="info-section article-section" id="temel-sema-turleri">
+        <p class="info-section__label">Şema türleri</p>
+        <h2>İşletmeler ve dijital stüdyolar için kritik Schema.org türleri.</h2>
+        <p>Her sayfa türünün kendine özgü zorunlu ve önerilen şema özellikleri vardır. B2B işletmeler, stüdyolar ve içerik yayıncıları için temel türler şunlardır:</p>
+        <p>Kurumlar için Organization / LocalBusiness, hizmet sayfaları için Service (ve `hasOfferCatalog`), karar rehberleri için BlogPosting / TechArticle, karar araçları için WebApplication ve soru-cevap blokları için FAQPage.</p>
+
+
+
+        <section class="article-table-wrap" tabindex="0" aria-label="Sayfa Türü, Temel Schema Türü, Zorunlu / Kritik Özellikler tablosu">
+          <table class="decision-table"><thead><tr><th scope="col">Sayfa Türü</th><th scope="col">Temel Schema Türü</th><th scope="col">Zorunlu / Kritik Özellikler</th></tr></thead><tbody><tr><th scope="row">Ana Sayfa</th><td>Organization, WebSite</td><td>name, url, logo, sameAs, knowsAbout, contactPoint</td></tr><tr><th scope="row">Hizmet Sayfası</th><td>Service, WebPage</td><td>name, serviceType, provider (@id), areaServed, offers</td></tr><tr><th scope="row">Blog / Rehber</th><td>BlogPosting / TechArticle</td><td>headline, author (@id), datePublished, dateModified, about</td></tr><tr><th scope="row">Karar Aracı</th><td>WebApplication, WebPage</td><td>name, applicationCategory, operatingSystem, offers</td></tr><tr><th scope="row">Tüm Sayfalar</th><td>BreadcrumbList</td><td>itemListElement (position, name, item)</td></tr></tbody></table>
+        </section>
+
+      </section>
+            <section class="info-section article-section" id="rich-results-ve-dogrulama">
+        <p class="info-section__label">Doğrulama protokolü</p>
+        <h2>Yapılandırılmış verileri test etme ve canlıda izleme adımları.</h2>
+        <p>Yazılan JSON-LD şemaları yayına alınmadan önce mutlaka iki aşamalı doğrulamadan geçirilmelidir: 1. Schema.org Validator (sentaks ve anlamsal standart kontrolü) ve 2. Google Rich Results Test (Google arama zengin sonuç uygunluğu).</p>
+        <p>Search Console üzerinde “Geliştirmeler (Enhancements)” sekmesinden Zengin Sonuç dizin durumu ve olası uyarılar haftalık olarak denetlenmelidir.</p>
+
+
+        <ul class="article-checklist"><li>Sayfada görünen metin ile JSON-LD içindeki verilerin (fiyat, başlık, tarih) %100 örtüştüğünü doğrulayın.</li><li>Gizlenmiş metinler veya yanıltıcı SSS (FAQ) eklemelerinden kaçının.</li><li>ISO 8601 tarih formatını (`YYYY-MM-DDThh:mm:ssTZD`) eksiksiz kullanın.</li><li>Kendi şemanızı hızlıca üretmek için Narvals Schema Markup Oluşturucu aracını kullanın.</li></ul>
+
+
+      </section>
+            <aside class="article-tool-strip" aria-label="İlgili ücretsiz araç">
+              <div class="article-tool-strip__copy">
+                <small>İlgili ücretsiz araç · Kayıt gerekmez</small>
+                <strong>Schema Markup &amp; JSON-LD Varlık Oluşturucu</strong>
+                <p>Tarayıcınızda çalışan açık formüllü araçla kendi verilerinizi anında test edin.</p>
+              </div>
+              <a class="article-tool-strip__btn" href="/araclar/schema-olusturucu/">Aracı başlat <span aria-hidden="true">→</span></a>
+            </aside>
+            <section class="info-section article-section" id="kisa-cevaplar">
+              <p class="info-section__label">Sık sorulan sorular</p>
+              <h2>Kısa ve doğrudan cevaplar.</h2>
+              <div class="article-faq"><details><summary>Microdata mı yoksa JSON-LD mi tercih edilmelidir?</summary><p>Google ve W3C resmi olarak JSON-LD formatını önermektedir; HTML DOM yapısını kirletmeden script etiketi içinde temiz ve ayrıştırılabilir bir veri katmanı sağlar.</p></details><details><summary>@graph kullanmanın avantajı nedir?</summary><p>Sayfadaki yazar, yayıncı, ana makale, web sitesi ve hizmet nesnelerini tekil `@id` referanslarıyla birbirine bağlayarak arama motoru Knowledge Graph ayrıştırıcısının ilişkileri eksiksiz anlamasını sağlar.</p></details><details><summary>sameAs özelliği neden önemlidir?</summary><p>Varlığın küresel Wikidata veya Wikipedia kimliğiyle eşleşmesini sağlayarak Google Knowledge Graph ve AI LLM modellerinin marka ve uzmanlık konusundaki halüsinasyonlarını engeller.</p></details><details><summary>Schema eklemek sıralamayı doğrudan yükseltir mi?</summary><p>Schema doğrudan bir sıralama faktörü değildir; ancak zengin sonuç (Rich Snippet) kazanımı, tıklama oranı (CTR) artışı, AI yanıtlarında kaynak gösterimi ve anlamsal güvenilirlik sağlar.</p></details></div>
+            </section>
+            <section class="info-section article-section" id="kaynaklar">
+              <p class="info-section__label">Birincil kaynaklar</p>
+              <h2>Kaynaklar ve kapsam.</h2>
+              <p>Bağlantılar içerikteki değişebilir veya dış doğrulama gerektiren bilgilerin kaynağıdır. Ticari ilişki veya sponsorlu bağlantı değildir.</p>
+              <ol class="article-sources"><li><a href="https://schema.org" rel="noopener noreferrer">Schema.org — Official Community Documentation &amp; Specifications</a></li><li><a href="https://developers.google.com/search/docs/appearance/structured-data/sd-policies" rel="noopener noreferrer">Google Search Central — Yapılandırılmış Veri Genel Kuralları</a></li><li><a href="https://developers.google.com/search/docs/appearance/structured-data/search-gallery" rel="noopener noreferrer">Google Search Central — Rich Results ve Desteklenen Şema Türleri</a></li><li><a href="https://www.w3.org/TR/json-ld11/" rel="noopener noreferrer">W3C — JSON-LD 1.1 A JSON-based Serialization for Linked Data</a></li><li><a href="https://www.wikidata.org" rel="noopener noreferrer">Wikidata.org — Global Entity Knowledge Base</a></li></ol>
+              <aside class="article-method" aria-label="Bu rehberin hazırlanma yöntemi"><strong>Hazırlama yöntemi</strong><p>Bu rehber Narvals Labs yayıncılığında; ilgili birincil kaynaklar, görünür hizmet kapsamı ve proje karar çerçeveleri incelenerek hazırlandı. Doğrulanamayan müşteri, fiyat, başarı oranı veya sonuç iddiası eklenmedi. Yöntem, düzeltme ve yapay zekâ desteği açıklaması için <a href="/editoryal-ilkeler/">editoryal ilkeleri</a> okuyabilirsiniz.</p></aside>
+            </section>
+            <section class="info-section article-section">
+              <p class="info-section__label">İlgili rehberler</p><h2>İlgili rehberlerle devam edin.</h2>
+              <div class="article-related"><a href="/blog/google-ve-ai-botlari-icin-site-indeksleme-rehberi/"><small>SEO &amp; GEO</small><strong>Google ve AI botları sitenizi nasıl tarar? İndeksleme rehberi</strong><span aria-hidden="true">→</span></a><a href="/blog/e-e-a-t-yazar-otoritesi-ve-google-guven-rehberi/"><small>SEO &amp; GEO</small><strong>E-E-A-T ve yazar otoritesi nasıl kurulur? Google güven rehberi</strong><span aria-hidden="true">→</span></a><a href="/blog/web-sitesi-teknik-seo-kontrol-listesi/"><small>SEO &amp; GEO</small><strong>Web sitesi teknik SEO kontrol listesi: yayından önce ve sonra</strong><span aria-hidden="true">→</span></a></div>
+            </section>
+          </div>
+        </div>
+      </article>
+      <section class="info-cta"><h2>Bu kararı projenize uyarlayalım.</h2><p>Mevcut durumu, hedefi ve en kritik sınırı paylaşın; gerekli kapsamı birlikte netleştirelim.</p><div class="article-cta-actions"><a class="info-button" href="/hizmetler/web-tasarim/">Teknik SEO ve yapılandırılmış veri hizmetini inceleyin <span aria-hidden="true">→</span></a><a class="info-button info-button--tool" href="/araclar/schema-olusturucu/">Schema Markup &amp; JSON-LD Varlık Oluşturucu <span aria-hidden="true">⚡</span></a><a class="info-button info-button--light" href="/iletisim/">Projeyi konuşalım <span aria-hidden="true">↗</span></a></div></section>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__brand"><a href="/"><img src="/assets/logo-v6/narvals-mascot-v6-transparent-96.png" alt="" width="96" height="96" loading="lazy" /><strong>narvals<span>//</span>labs</strong></a><p>Web sitesi, özel yazılım ve reklamı aynı iş hedefinde buluşturan dijital üretim stüdyosu.</p></div>
+      <nav aria-label="Hizmet bağlantıları"><strong>Hizmetler</strong><a href="/hizmetler/web-tasarim/">Web tasarım &amp; UX</a><a href="/hizmetler/e-ticaret/">E-ticaret</a><a href="/hizmetler/ozel-yazilim/">Özel yazılım</a><a href="/hizmetler/google-ads/">Google Ads</a><a href="/hizmetler/dijital-reklam/">Meta reklam</a><a href="/hizmetler/sosyal-medya-yonetimi/">Sosyal medya</a><a href="/hizmetler/qr-menu-rezervasyon/">İşletme sistemleri</a></nav>
+      <nav aria-label="Bilgi merkezi bağlantıları"><strong>Bilgi merkezi</strong><a href="/blog/">Tüm rehberler</a><a href="/araclar/">Ücretsiz araçlar</a><a href="/araclar/web-sitesi-kontrolu/">Site kontrolü</a><a href="/blog/konu/seo-geo/">SEO &amp; GEO rehberleri</a><a href="/blog/konu/e-ticaret/">E-ticaret rehberleri</a><a href="/blog/konu/web-sitesi/">Web sitesi rehberleri</a><a href="/blog/konu/reklam/">Reklam rehberleri</a><a href="/blog/konu/qr-menu/">QR menü rehberleri</a><a href="/editoryal-ilkeler/">Editoryal ilkeler</a></nav>
+      <div class="site-footer__contact"><strong>Bir proje mi var?</strong><p>Hedefi ve en kritik darboğazı anlatarak ilk görüşmeyi başlatın.</p><a href="mailto:info@narvals.com">info@narvals.com</a><a href="https://wa.me/905019441921" rel="noopener noreferrer">WhatsApp: +90 501 944 19 21 ↗</a></div>
+      <p class="site-footer__legal">© <span data-current-year>2026</span> Narvals Labs. Tüm hakları saklıdır.</p>
+    </footer>
+    <script type="module" src="/src/info-main.js"></script>
+  </body>
+</html>

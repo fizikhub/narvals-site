@@ -84,6 +84,8 @@ const getPageTitle = (path) => {
   if (path === '/araclar/saatlik-ucret-hesaplama/') return 'Freelance ve Ajans Saatlik Ücret Hesaplama';
   if (path === '/araclar/meta-reklam-butcesi-hesaplama/') return 'Meta ve Instagram Reklam Bütçesi Hesaplama';
   if (path === '/araclar/meta-etiket-onizleyici/') return 'Meta Etiketi ve Sosyal Medya Önizleyici';
+  if (path === '/araclar/schema-olusturucu/') return 'Schema Markup & JSON-LD Varlık Oluşturucu';
+  if (path === '/araclar/bilgi-kazanimi-kontrolu/') return 'E-E-A-T ve Bilgi Kazanımı Denetim Aracı';
   if (path === '/blog/') return 'Narvals Labs Dijital Üretim ve Karar Rehberleri';
   if (path === '/editoryal-ilkeler/') return 'Narvals Labs Editoryal İlkeler ve Standartlar';
   const topicHub = topicHubs.find((hub) => `/blog/konu/${hub.slug}/` === path);
@@ -250,6 +252,8 @@ Tam kapsamlı yapay zekâ bilgi tabanı ve RAG dokümantasyonu için: [llms-full
 - [Saatlik ücret hesaplayıcı](${siteOrigin}/araclar/saatlik-ucret-hesaplama/): Hedef net gelir, gider ve faturalandırılabilir çalışma saatinden minimum saatlik ve proje ücreti hesaplayan araç
 - [Meta reklam bütçesi simülasyonu](${siteOrigin}/araclar/meta-reklam-butcesi-hesaplama/): Instagram ve Facebook reklamları için bütçe, CPM, gösterim, tıklama ve CPA simülasyon aracı
 - [Meta etiketi ve sosyal önizleyici](${siteOrigin}/araclar/meta-etiket-onizleyici/): Google SERP snippet, WhatsApp kartı ve OpenGraph meta etiketlerini test ve kopyalama aracı
+- [Schema Markup ve JSON-LD oluşturucu](${siteOrigin}/araclar/schema-olusturucu/): Organization, LocalBusiness, Service, FAQ, Article ve Product için doğrulanabilir Schema.org JSON-LD kod oluşturucu ve varlık aracı
+- [E-E-A-T ve Bilgi Kazanımı Denetleyici](${siteOrigin}/araclar/bilgi-kazanimi-kontrolu/): Bilgi kazanımı (information gain), E-E-A-T yazar otoritesi, kanıt kalitesi ve RAG yapısını 12 kriterde denetleyen araç
 - [Rehberler](${siteOrigin}/blog/): Web, yazılım, reklam, SEO/GEO ve işletme sistemleri için kaynaklı karar rehberleri
 - [Editoryal ilkeler](${siteOrigin}/editoryal-ilkeler/): Kaynaklandırma, yapay zekâ şeffaflığı, güncelleme ve düzeltme politikası
 
@@ -299,6 +303,8 @@ const llmsFull = `# Narvals Labs — Kapsamlı Bilgi Tabanı ve Sistem Dokümant
 - **Ücretsiz saatlik ücret hesaplayıcı:** ${siteOrigin}/araclar/saatlik-ucret-hesaplama/
 - **Ücretsiz Meta reklam bütçesi simülasyonu:** ${siteOrigin}/araclar/meta-reklam-butcesi-hesaplama/
 - **Ücretsiz meta etiketi ve sosyal önizleyici:** ${siteOrigin}/araclar/meta-etiket-onizleyici/
+- **Ücretsiz Schema Markup ve JSON-LD oluşturucu:** ${siteOrigin}/araclar/schema-olusturucu/
+- **Ücretsiz E-E-A-T ve bilgi kazanımı denetleyici:** ${siteOrigin}/araclar/bilgi-kazanimi-kontrolu/
 
 ---
 
@@ -432,6 +438,8 @@ ${post.takeaways.map((t) => `  * ${t}`).join('\n')}
 - Saatlik Ücret Hesaplayıcı: ${siteOrigin}/araclar/saatlik-ucret-hesaplama/
 - Meta Reklam Bütçesi Hesaplama: ${siteOrigin}/araclar/meta-reklam-butcesi-hesaplama/
 - Meta Etiketi ve Sosyal Önizleyici: ${siteOrigin}/araclar/meta-etiket-onizleyici/
+- Schema Markup ve JSON-LD Oluşturucu: ${siteOrigin}/araclar/schema-olusturucu/
+- E-E-A-T ve Bilgi Kazanımı Denetleyici: ${siteOrigin}/araclar/bilgi-kazanimi-kontrolu/
 - Blog & Rehberler: ${siteOrigin}/blog/
 - Editoryal İlkeler: ${siteOrigin}/editoryal-ilkeler/
 ${topicHubs.map((hub) => `- Konu Merkezi: ${siteOrigin}/blog/konu/${hub.slug}/`).join('\n')}

@@ -170,6 +170,24 @@
       <content:encoded><![CDATA[<p>Googlebot ve modern yapay zekâ tarayıcıları (OAI-SearchBot, Claude-SearchBot, PerplexityBot, Applebot) siteleri sadece anahtar kelime eşleşmesiyle indekslemez. İki aşamalı tarama (HTML çekme ve WRS render), RAG yoğun geçit erişimi (Dense Passage Retrieval), 256-512 tokenlık anlamsal parçalama (propositional chunking), Google Bilgi Kazanımı (Information Gain) patentleri ve Schema.org varlık (entity) grafı üzerinden tarama, puanlama ve alıntılama yaparlar.</p><ul><li>Arama botları (SearchBot) ile eğitim botları (Training Scraper) ayrıştırılmalıdır.</li><li>RAG motorları sayfayı 256-512 tokenlık anlamsal parçalara (chunks) bölerek indeksler.</li><li>KDD 2024 araştırması: Doğrudan uzman alıntısı ve istatistikler alıntılanmayı %40 artırır.</li><li>Google Information Gain patenti özgün veri ve formül sunan siteleri ödüllendirir.</li><li>Bağlantılı JSON-LD şema grafı ve llms.txt LLM halüsinasyon riskini en aza indirir.</li></ul>]]></content:encoded>
     </item>
     <item>
+      <title>Schema.org ve bağlantılı JSON-LD graf mimarisi rehberi</title>
+      <link>https://narvals.com/blog/schema-org-ve-baglantili-jsonld-graflari/</link>
+      <guid isPermaLink="true">https://narvals.com/blog/schema-org-ve-baglantili-jsonld-graflari/</guid>
+      <pubDate>Sat, 29 Aug 2026 21:00:00 GMT</pubDate>
+      <category>SEO &amp; GEO</category>
+      <description>Google Knowledge Graph ve AI için Schema.org @graph mimarisi, Organization, Article, Wikidata sameAs ve knowsAbout entegrasyonu rehberi.</description>
+      <content:encoded><![CDATA[<p>Schema.org işaretlemesi, web sayfalarını arama motorları ve LLM yanıt ajanları için anlamsal birer varlığa (entity) dönüştüren yapılandırılmış veri standardıdır. Kopuk JSON-LD blokları yerine tek bir @graph dizisi içinde birbirine @id referanslarıyla bağlanan Organization, WebSite, WebPage, Article, Service ve Person nesneleri; Google Knowledge Graph ve AI alıntı doğruluğunu en üst düzeye çıkarır.</p><ul><li>Ayrık JSON-LD blokları yerine tek bir @graph dizisi kullanılmalıdır.</li><li>Her ana varlık benzersiz ve kalıcı bir @id URI kimliğine sahip olmalıdır.</li><li>Wikidata ve Wikipedia URL’leri (sameAs) varlık belirsizliğini (disambiguation) çözer.</li><li>knowsAbout özelliği kurumun ve yazarın uzmanlık taksonomisini arama motoruna bildirir.</li><li>Doğrulama Google Rich Results Test ve Schema.org Validator üzerinde sıfır hatayla yapılmalıdır.</li></ul>]]></content:encoded>
+    </item>
+    <item>
+      <title>E-E-A-T ve yazar otoritesi nasıl kurulur? Google güven rehberi</title>
+      <link>https://narvals.com/blog/e-e-a-t-yazar-otoritesi-ve-google-guven-rehberi/</link>
+      <guid isPermaLink="true">https://narvals.com/blog/e-e-a-t-yazar-otoritesi-ve-google-guven-rehberi/</guid>
+      <pubDate>Sat, 29 Aug 2026 21:00:00 GMT</pubDate>
+      <category>SEO &amp; GEO</category>
+      <description>Google Search Quality Rater ilkelerine göre E-E-A-T, doğrulanabilir yazar biyografileri, editoryal şeffaflık ve varlık güveni inşa etme rehberi.</description>
+      <content:encoded><![CDATA[<p>E-E-A-T (Deneyim, Uzmanlık, Otoriterlik ve Güvenilirlik), Google’ın Arama Kalitesi Değerlendirme İlkeleri’nde (Quality Rater Guidelines) tanımlanan ve temel sıralama algoritmaları tarafından taranan güven çerçevesidir. Sahte yazar profilleri veya jenerik metinler yerine doğrulanabilir dijital ayak izine sahip uzman biyografileri, açık editoryal ilkeler, birinci el test kanıtları ve kurumsal şeffaflık ile inşa edilir.</p><ul><li>E-E-A-T’nin kalbinde “Güven (Trust)” yer alır; Deneyim, Uzmanlık ve Otorite güveni destekler.</li><li>Doğrulanabilir dijital ayak izi (LinkedIn, yayınlar, akademik profil) olmayan sahte yazarlar risklidir.</li><li>Birinci el test ekran görüntüleri, gerçek proje metrikleri ve vaka çalışmaları birinci “E”yi (Deneyim) kanıtlar.</li><li>Açık künye, fiziksel adres, şirket unvanı, telefon ve editoryal politika sayfası zorunludur.</li><li>YMYL (Paranız veya Hayatınız) konularında uzman doğrulaması ve inceleme kurulu şarttır.</li></ul>]]></content:encoded>
+    </item>
+    <item>
       <title>E-ticaret altyapısı nasıl seçilir? Dokuz karar sorusu</title>
       <link>https://narvals.com/blog/e-ticaret-altyapisi-nasil-secilir/</link>
       <guid isPermaLink="true">https://narvals.com/blog/e-ticaret-altyapisi-nasil-secilir/</guid>
