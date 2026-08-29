@@ -162,8 +162,13 @@ for (const [path, html] of htmlByPath) {
       errors.push(`${path}: invalid JSON-LD (${error.message})`);
     }
   }
-  for (const type of ['Organization', 'WebSite']) {
-    if (!structuredTypes.has(type)) errors.push(`${path}: structured data type missing (${type})`);
+  if (path === '/') {
+    for (const type of ['Organization', 'WebSite']) {
+      if (!structuredTypes.has(type)) errors.push(`${path}: structured data type missing (${type})`);
+    }
+  } else {
+    if (structuredTypes.has('Organization')) errors.push(`${path}: Organization structured data must be consolidated on the homepage`);
+    if (structuredTypes.has('WebSite')) errors.push(`${path}: WebSite structured data must only appear on the homepage`);
   }
   const orgNode = structuredNodes.find((node) => node['@type'] === 'Organization');
   if (orgNode) {
@@ -191,9 +196,7 @@ for (const [path, html] of htmlByPath) {
     if (JSON.stringify(websiteNode.alternateName) !== JSON.stringify(['Narvals'])) {
       errors.push(`${path}: WebSite alternateName missing`);
     }
-    if (websiteNode.potentialAction?.['@type'] !== 'SearchAction') {
-      errors.push(`${path}: WebSite potentialAction SearchAction missing`);
-    }
+    if (websiteNode.potentialAction?.['@type'] === 'SearchAction') errors.push(`${path}: retired sitelinks SearchAction must not be published`);
   }
   if (structuredNodes.some((node) => node.address?.addressLocality === 'İstanbul')) {
     errors.push(`${path}: unverified İstanbul address found in structured data`);

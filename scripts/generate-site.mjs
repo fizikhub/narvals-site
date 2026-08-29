@@ -540,21 +540,13 @@ const sharedWebsiteNode = (origin) => ({
   name: 'Narvals Labs',
   alternateName: ['Narvals'],
   inLanguage: 'tr-TR',
-  publisher: { '@id': `${origin}/#organization` },
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: {
-      '@type': 'EntryPoint',
-      urlTemplate: `${origin}/blog/?q={search_term_string}`
-    },
-    'query-input': 'required name=search_term_string'
-  }
+  publisher: { '@id': `${origin}/#organization` }
 });
 
 // Authored HTML stays deployable when the production origin changes. Blog and
 // editorial files are rendered below, so only hand-authored pages are synced.
 const authoredPages = sitePages.filter(({ file }) => !file.startsWith('blog/') && file !== 'editoryal-ilkeler/index.html');
-await Promise.all(authoredPages.map(async ({ file }) => {
+await Promise.all(authoredPages.map(async ({ file, path }) => {
   const htmlPath = join(projectRoot, file);
   const html = await readFile(htmlPath, 'utf8');
   const canonicalHref = html.match(/<link\s+rel="canonical"\s+href="([^"]+)"/i)?.[1];
@@ -568,7 +560,8 @@ await Promise.all(authoredPages.map(async ({ file }) => {
     try {
       const data = JSON.parse(jsonText);
       if (data && Array.isArray(data['@graph'])) {
-        data['@graph'] = data['@graph'].map((node) => {
+        data['@graph'] = data['@graph'].flatMap((node) => {
+          if (path !== '/' && ['Organization', 'WebSite'].includes(node['@type'])) return [];
           if (node['@type'] === 'Organization') return sharedOrgNode(siteOrigin);
           if (node['@type'] === 'WebSite') return sharedWebsiteNode(siteOrigin);
           const types = Array.isArray(node['@type']) ? node['@type'] : [node['@type']];

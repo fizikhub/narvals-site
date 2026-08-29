@@ -45,98 +45,6 @@ const wordCount = (post) => stripHtml([
   ...(post.faq || []).flatMap((item) => [item.question, item.answer])
 ].join(' ')).split(' ').filter(Boolean).length;
 
-const organizationNode = (siteOrigin) => ({
-  '@type': 'Organization',
-  '@id': `${siteOrigin}/#organization`,
-  name: 'Narvals Labs',
-  url: `${siteOrigin}/`,
-  logo: {
-    '@type': 'ImageObject',
-    url: `${siteOrigin}/assets/logo-v6/narvals-avatar-v6-1080.png`,
-    contentUrl: `${siteOrigin}/assets/logo-v6/narvals-avatar-v6-1080.png`,
-    width: 1080,
-    height: 1080
-  },
-  image: `${siteOrigin}/og/narvals-labs-og.jpg`,
-  description: 'Web sitesi ve UX, işletmeye özel yazılım, dijital reklam, marka, QR menü ve rezervasyon sistemleri üreten dijital stüdyo.',
-  email: 'info@narvals.com',
-  telephone: '+905019441921',
-  sameAs: [
-    'https://github.com/fizikhub/narvals-site'
-  ],
-  publishingPrinciples: `${siteOrigin}/editoryal-ilkeler/`,
-  address: {
-    '@type': 'PostalAddress',
-    addressCountry: 'TR'
-  },
-  contactPoint: {
-    '@type': 'ContactPoint',
-    contactType: 'customer support',
-    email: 'info@narvals.com',
-    telephone: '+905019441921',
-    areaServed: 'TR',
-    availableLanguage: ['Turkish', 'English']
-  },
-  areaServed: {
-    '@type': 'Country',
-    name: 'Türkiye'
-  },
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'Narvals Labs Dijital Hizmetler',
-    itemListElement: [
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Kurumsal Web Tasarım ve UX', url: `${siteOrigin}/hizmetler/web-tasarim/` } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'E-Ticaret Sitesi Tasarımı ve Geliştirme', url: `${siteOrigin}/hizmetler/e-ticaret/` } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'İşletmeye Özel Yazılım ve Otomasyon', url: `${siteOrigin}/hizmetler/ozel-yazilim/` } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Google Ads Reklam ve Dönüşüm Yönetimi', url: `${siteOrigin}/hizmetler/google-ads/` } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Meta (Instagram & Facebook) Reklam Yönetimi', url: `${siteOrigin}/hizmetler/dijital-reklam/` } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Sosyal Medya Yönetimi ve İçerik Stratejisi', url: `${siteOrigin}/hizmetler/sosyal-medya-yonetimi/` } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Özel QR Menü Yazılımı ve Yönetim Paneli', url: `${siteOrigin}/hizmetler/qr-menu/` } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Online Rezervasyon ve Randevu Sistemi', url: `${siteOrigin}/hizmetler/rezervasyon-randevu/` } }
-    ]
-  },
-  knowsAbout: [
-    'Web Tasarım ve UX',
-    'Özel Yazılım Geliştirme',
-    'Meta Reklam Yönetimi',
-    'Google Ads Yönetimi',
-    'E-Ticaret Sitesi',
-    'Sosyal Medya Yönetimi',
-    'QR Menü Sistemleri',
-    'Online Rezervasyon Sistemleri',
-    'Teknik SEO',
-    'Generative Engine Optimization (GEO)',
-    'Yapay Zeka Aramaları ve LLM İndeksleme',
-    'E-E-A-T ve Varlık Tabanlı SEO',
-    'Bilgi Kazanımı (Information Gain)',
-    'Yapılandırılmış Veri ve Schema Mimarisi',
-    'Core Web Vitals Optimizasyonu',
-    'Dönüşüm Oranı Optimizasyonu (CRO)',
-    'Conversions API (CAPI)',
-    'Google Analytics 4 (GA4)',
-    'Headless CMS ve API Mimarisi'
-  ],
-  knowsLanguage: ['tr', 'en']
-});
-
-const websiteNode = (siteOrigin) => ({
-  '@type': 'WebSite',
-  '@id': `${siteOrigin}/#website`,
-  url: `${siteOrigin}/`,
-  name: 'Narvals Labs',
-  alternateName: ['Narvals'],
-  inLanguage: 'tr-TR',
-  publisher: { '@id': `${siteOrigin}/#organization` },
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: {
-      '@type': 'EntryPoint',
-      urlTemplate: `${siteOrigin}/blog/?q={search_term_string}`
-    },
-    'query-input': 'required name=search_term_string'
-  }
-});
-
 const renderHead = ({ siteOrigin, path, title, description, keywords, schema, type = 'website', published, modified, category, readingTime }) => {
   const canonical = `${siteOrigin}${path}`;
   return `    <meta charset="UTF-8" />
@@ -442,8 +350,6 @@ const renderArticle = (post, siteOrigin) => {
   ];
 
   const schema = [
-    organizationNode(siteOrigin),
-    websiteNode(siteOrigin),
     {
       '@type': 'WebPage',
       '@id': `${url}#webpage`,
@@ -578,8 +484,6 @@ const renderBlogIndex = (siteOrigin) => {
   const title = 'Web, Yazılım ve Reklam Rehberleri | Narvals Labs';
   const description = 'Web sitesi, e-ticaret, özel yazılım, Meta reklam, QR menü, rezervasyon, teknik SEO ve GEO kararları için kaynaklı uygulama rehberleri.';
   const schema = [
-    organizationNode(siteOrigin),
-    websiteNode(siteOrigin),
     {
       '@type': ['CollectionPage', 'Blog'],
       '@id': `${url}#blog`,
@@ -649,8 +553,6 @@ const renderTopicHub = (hub, siteOrigin) => {
   const starters = hub.start.map((slug) => blogPostBySlug.get(slug));
   if ([...posts, ...starters].some((post) => !post)) throw new Error(`${hub.slug} topic hub references a missing blog post.`);
   const schema = [
-    organizationNode(siteOrigin),
-    websiteNode(siteOrigin),
     {
       '@type': 'CollectionPage',
       '@id': `${url}#webpage`,
@@ -702,8 +604,6 @@ const renderEditorialPolicy = (siteOrigin) => {
   const title = 'Editoryal İlkeler ve Kaynak Politikası | Narvals Labs';
   const description = 'Narvals Labs rehberlerinin kaynaklandırma, yapay zekâ desteği, güncelleme, düzeltme, çıkar çatışması ve doğrulanabilirlik ilkeleri.';
   const schema = [
-    organizationNode(siteOrigin),
-    websiteNode(siteOrigin),
     { '@type': 'WebPage', '@id': `${url}#webpage`, url, name: title, description, inLanguage: 'tr-TR', isPartOf: { '@id': `${siteOrigin}/#website` }, about: { '@id': `${siteOrigin}/#organization` } },
     { '@type': 'BreadcrumbList', itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Ana sayfa', item: `${siteOrigin}/` },

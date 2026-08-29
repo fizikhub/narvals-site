@@ -1,5 +1,4 @@
 import './fonts-base.css';
-import './fonts-home.css';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './styles.css';
@@ -477,17 +476,23 @@ function initNarwhalHero() {
       hero.addEventListener('pointerleave', handlePointerLeave, { passive: true });
     }
 
-    tweens.push(gsap.to(scene, {
-      yPercent: 3,
-      ease: 'none',
-      scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: 0.9 }
-    }));
+    let scrollTween;
+    const enableScrollMotion = () => {
+      scrollTween = gsap.to(scene, {
+        yPercent: 3,
+        ease: 'none',
+        scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: 0.9 }
+      });
+    };
+    window.addEventListener('scroll', enableScrollMotion, { once: true, passive: true });
     // Do not animate the LCP image during initial load. A transform that runs
     // through the first few seconds keeps moving the largest painted element
     // and delays the measured LCP. Pointer and scroll motion remain available.
 
     return () => {
       tweens.forEach((tween) => tween.kill());
+      scrollTween?.kill();
+      window.removeEventListener('scroll', enableScrollMotion);
       if (handlePointerMove) hero.removeEventListener('pointermove', handlePointerMove);
       if (handlePointerLeave) hero.removeEventListener('pointerleave', handlePointerLeave);
       gsap.set([scene, mascot, wake], { clearProps: 'transform' });

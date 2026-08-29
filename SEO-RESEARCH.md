@@ -24,10 +24,42 @@ Bu nedenle uygulama önceliği şöyledir:
 4. Gerçek ekip deneyimi, vaka, yöntem, özgün veri ve üçüncü taraf mention.
 5. Arama sırası ile AI citation/mention/referral ölçümlerinin ayrı izlenmesi.
 
+## 30 Ağustos 2026 ikinci teknik denetim
+
+İkinci turda 78 canonical sayfa; canlı HTTP davranışı, yapılandırılmış veri,
+görsel ölçüleri, iç bağlantı grafiği, sayfa metin hacmi ve mobil Lighthouse ile
+yeniden tarandı. Yeni bulgular ve kararlar:
+
+- Google'ın Kasım 2024'te kaldırdığı sitelinks arama kutusuna ait `SearchAction`
+  şeması artık üretilmiyor. Google bunun sıralamayı etkilemediğini söylüyor;
+  kaldırma kararı desteklenmeyen ve gerçekte bir arama özelliğini temsil etmeyen
+  işaretlemeyi temiz tutmak içindir.
+- `WebSite` şeması yalnız ana sayfada bırakıldı. Google site adı yönergesi bu
+  işaretlemenin domain ana sayfasında bulunmasını ve her sayfada tekrarlanmamasını
+  söylüyor.
+- `Organization` şeması ana sayfada tek doğrulanmış düğüm olarak toplandı.
+  Makale, hizmet ve araç düğümleri aynı kalıcı `@id` değerine referans veriyor;
+  78 URL'de aynı kurum bloğu çoğaltılmıyor.
+- Mobil laboratuvar ölçümünde ana görsel hızlı indirilmesine rağmen yükleme
+  sonrasında çalışan scroll/animasyon yenilemesinin LCP'yi geciktirdiği görüldü.
+  İlk ekran görselinin scroll hareketi ilk gerçek kaydırmaya ertelendi ve yalnız
+  alt bölümlerde kullanılan Anek fontu kritik yükleme yolundan çıkarıldı.
+- WCAG AA denetiminde sarı zemin üstündeki mercan başlık 2,54:1 bulundu. Renk
+  koyulaştırılarak büyük metin için gereken en az 3:1 kontrast hedeflendi.
+- Schema aracındaki doğrulanmamış “Narvals Labs Team” örnek yazarı kaldırıldı;
+  varsayılan gerçek yayıncı `Organization / Narvals Labs` oldu.
+
+Bu turdaki kararlar [Google site adı yönergesi](https://developers.google.com/search/docs/appearance/site-names),
+[Organization şeması yönergesi](https://developers.google.com/search/docs/appearance/structured-data/organization),
+[sitelinks arama kutusunun kaldırılması](https://developers.google.com/search/blog/2024/10/sitelinks-search-box),
+[görsel SEO önerileri](https://developers.google.com/search/docs/appearance/google-images)
+ve [insan odaklı içerik rehberi](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
+ile karşılaştırıldı.
+
 ## Canlı SERP ve marka bulgusu
 
 - `https://narvals.com` canlıdır. HTTPS/canonical yönlendirmeleri, gerçek `404`,
-  `robots.txt`, sitemap ve denetim anındaki 22 canonical URL başarılı bulundu.
+  `robots.txt`, sitemap ve denetim anındaki 78 canonical URL başarılı bulundu.
 - Genel sonuç sayfası kontrolleri kesin sıra ölçümü olarak kullanılmadı. Mevcut
   gösterim, ortalama konum, sorgu ve sayfa dağılımı Search Console dışa aktarımı
   üzerinden baz alınmalıdır.
@@ -109,6 +141,16 @@ Tekil başarı hikâyeleri nedensellik kanıtı sayılmadı.
 - [Google AI özellikleri tartışması](https://www.reddit.com/r/SEO/comments/1m9k0kg/google_confirms_normal_seo_works_for_ai_overviews/):
   topluluk `llms.txt` ve “GEO hilesi” iddialarında bölünmüş durumda. Uygulama
   kararı topluluk görüşüne değil, Google’ın Temmuz 2026 resmî rehberine dayandırıldı.
+- [2026'da hızlı büyüyen araç sitesinin indeksleme tartışması](https://www.reddit.com/r/TechSEO/comments/1s9n9r4/site_growing_faster_than_google_can_index_whats/):
+  statik HTML, sitemap ve iç bağlantı mevcutken bile her işlevsel aracın otomatik
+  indekslenmediği bildirildi. Tekil örnek sonuç kanıtı değildir; Narvals için
+  çıkarım daha fazla URL basmak değil, araçların gerçek kullanımını ve sorgu
+  gösterimini Search Console'da izlemektir.
+- [Küçük sitelerde crawl budget tartışması](https://www.reddit.com/r/bigseo/comments/1ntkz8q/how_much_small_to_medium_sites_worry_about_crawl/):
+  tekrar eden görüş, birkaç yüz URL'de “bütçe” hesabından önce kopyalar, soft 404,
+  iç bağlantı ve içerik değerinin denetlenmesidir. Narvals 78 URL olduğu için
+  tarama bütçesi bir büyüme vaadi olarak değil, teknik öğretim konusu olarak ele
+  alındı.
 
 Bu saha araştırmasının koda dönüşen sonucu: canonical sayfalar için gerçek iç
 bağlantı kontrolü, üretim `404/3xx/5xx` denetimi, materyal değişiklik tarihleri,
