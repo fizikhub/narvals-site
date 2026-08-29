@@ -535,6 +535,12 @@ await Promise.all(authoredPages.map(async ({ file }) => {
         data['@graph'] = data['@graph'].map((node) => {
           if (node['@type'] === 'Organization') return sharedOrgNode(siteOrigin);
           if (node['@type'] === 'WebSite') return sharedWebsiteNode(siteOrigin);
+          const types = Array.isArray(node['@type']) ? node['@type'] : [node['@type']];
+          if (types.includes('WebApplication')) {
+            node.provider = { '@id': `${siteOrigin}/#organization` };
+            node.browserRequirements = 'JavaScript, HTML5, CSS3';
+            node.softwareVersion = '2.0';
+          }
           return node;
         });
         return `<script type="application/ld+json">\n      ${JSON.stringify(data, null, 2).replace(/\n/g, '\n      ')}\n    </script>`;

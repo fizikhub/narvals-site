@@ -193,7 +193,14 @@ for (const [path, html] of htmlByPath) {
   if (kind === 'service' && !pageTypes.has('Service')) errors.push(`${path}: Service structured data missing`);
   if (kind === 'comparison' && pageTypes.has('Service')) errors.push(`${path}: comparison page must not claim Service structured data`);
   if (kind === 'tool') {
-    if (!structuredTypes.has('WebApplication')) errors.push(`${path}: WebApplication structured data missing in tool`);
+    const webApp = structuredNodes.find((node) => {
+      const types = Array.isArray(node['@type']) ? node['@type'] : [node['@type']];
+      return types.includes('WebApplication');
+    });
+    if (!webApp) errors.push(`${path}: WebApplication structured data missing in tool`);
+    else {
+      if (webApp.provider?.['@id'] !== `${siteOrigin}/#organization`) errors.push(`${path}: WebApplication provider missing or mismatch`);
+    }
     if (!structuredTypes.has('FAQPage')) errors.push(`${path}: FAQPage structured data missing in tool`);
     if (!structuredTypes.has('BreadcrumbList')) errors.push(`${path}: BreadcrumbList structured data missing in tool`);
   }
