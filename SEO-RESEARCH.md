@@ -421,6 +421,15 @@ Bu turda modern tarayıcılar ve LLM arama ajanları için standart arama keşif
 - **Reddit TechSEO "Crawled - currently not indexed" Teşhisi:** 2025–2026 saha verilerinde bildirilen indeksleme gecikmelerinin en büyük nedeni olan yüzeysel içerik tekrarı ve zayıf iç bağlantılar; 18 interaktif hesaplama aracı, özgün karar algoritmaları, çift yönlü konu kümeleri ve doğrulanmış `OnlineBusiness` Knowledge Graph düğümüyle tamamen bertaraf edildi.
 - **Crawl Trap ve Parametre Koruması:** `robots.txt` wildcard kuralları, temiz canonical URL zinciri ve statik dizin yapısı ile sonsuz döngüler, oturum parametreleri ve yetkisiz yönlendirmeler engellendi.
 
+## 30 Ağustos 2026 on altıncı Wikidata Varlık Ayrıştırması, llms.txt v2 Keşfi ve Güven Standartları Denetimi
+
+Bu turda küresel Knowledge Graph düğümlerinde tam anlamsal netlik (semantic disambiguation), yapay zekâ arama ajanları için programatik v2 bağlam keşfi ve RFC 9116 güvenlik standartları entegre edildi:
+
+- **Wikidata ile Varlık Ayrıştırması (`knowsAbout` sameAs Eşlemesi):** Ana `OnlineBusiness` şemasındaki uzmanlık alanları salt metin olmaktan çıkarılarak küresel Wikidata Concept URI'lerine bağlandı (`Web Tasarımı: Q190637`, `SEO: Q180711`, `E-Ticaret: Q484876`, `Özel Yazılım: Q1341490`, `Dijital Pazarlama: Q1323528`, `Sosyal Medya Pazarlaması: Q261543`, `UX: Q1132455`, `CRO: Q5166418`, `QR Kod: Q12203`, `Schema.org: Q3475338`, `Üretken Yapay Zekâ: Q1170729`, `Google Ads: Q219563`, `OpenSearch: Q1056588`, `API: Q165149`). Bu yapı Google Knowledge Graph, Perplexity ve ChatGPT'nin marka uzmanlığını çelişkisiz tanımasını sağlar.
+- **llms.txt v2 Keşif Standardı (`rel="describedby"`):** Ağustos 2026 llmstxt.org v2 önerisine uygun olarak tüm 79 sayfanın `<head>` bloğuna `<link rel="describedby" type="text/plain" href="/llms.txt" />` ve CDN düzeyinde `Link: </llms.txt>; rel="describedby"` HTTP yanıt başlığı eklendi. Otonom yapay zekâ ajanları dosya yolunu tahmin etmek zorunda kalmadan sayfa bağlamına doğrudan erişir.
+- **WebApplication Güven ve Sınıflandırma Zenginleştirmesi:** 18 interaktif karar aracının şemasına `applicationCategory: 'BusinessApplication'`, `operatingSystem: 'All modern web browsers'`, `permissions: 'none'`, `isAccessibleForFree: true` ve `educationalUse: 'Interactive Calculation & Decision Support Tool'` öznitelikleri uygulandı.
+- **RFC 9116 ve humans.txt Güven Standartları:** `.well-known/security.txt` ve `humans.txt` dosyaları OpenSearch ve llms.txt referanslarıyla güçlendirildi; makine ve araştırmacı düzeyinde kurumsal şeffaflık sağlandı.
+
 ## Kanıt matrisi
 
 | Kaynak | Bulgu | Uygulama | Sınır |

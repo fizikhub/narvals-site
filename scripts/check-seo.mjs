@@ -112,6 +112,9 @@ for (const [path, html] of htmlByPath) {
   if (link(html, 'search', 'type', 'application/opensearchdescription+xml') !== '/opensearch.xml') {
     errors.push(`${path}: OpenSearch discovery link missing or wrong`);
   }
+  if (link(html, 'describedby', 'type', 'text/plain') !== '/llms.txt') {
+    errors.push(`${path}: llms.txt describedby discovery link missing or wrong`);
+  }
   if (meta(html, 'property', 'og:url') !== expectedCanonical) errors.push(`${path}: og:url does not match canonical`);
   if (!meta(html, 'property', 'og:title')) errors.push(`${path}: og:title missing`);
   if (!meta(html, 'property', 'og:description')) errors.push(`${path}: og:description missing`);

@@ -451,26 +451,25 @@ const sharedOrgNode = (origin) => ({
     ]
   },
   knowsAbout: [
-    'Web Tasarım ve UX',
-    'Özel Yazılım Geliştirme',
-    'Meta Reklam Yönetimi',
-    'Google Ads Yönetimi',
-    'E-Ticaret Sitesi',
-    'Sosyal Medya Yönetimi',
-    'QR Menü Sistemleri',
-    'Online Rezervasyon Sistemleri',
-    'Teknik SEO',
-    'Generative Engine Optimization (GEO)',
-    'Yapay Zeka Aramaları ve LLM İndeksleme',
-    'E-E-A-T ve Varlık Tabanlı SEO',
-    'Bilgi Kazanımı (Information Gain)',
+    { '@type': 'Thing', name: 'Web Tasarımı ve UX', sameAs: 'https://www.wikidata.org/wiki/Q190637' },
+    { '@type': 'Thing', name: 'Arama Motoru Optimizasyonu (SEO)', sameAs: 'https://www.wikidata.org/wiki/Q180711' },
+    { '@type': 'Thing', name: 'Elektronik Ticaret (E-Ticaret)', sameAs: 'https://www.wikidata.org/wiki/Q484876' },
+    { '@type': 'Thing', name: 'Özel Yazılım Geliştirme', sameAs: 'https://www.wikidata.org/wiki/Q1341490' },
+    { '@type': 'Thing', name: 'Dijital Pazarlama ve Reklam', sameAs: 'https://www.wikidata.org/wiki/Q1323528' },
+    { '@type': 'Thing', name: 'Sosyal Medya Pazarlaması', sameAs: 'https://www.wikidata.org/wiki/Q261543' },
+    { '@type': 'Thing', name: 'Kullanıcı Deneyimi (UX)', sameAs: 'https://www.wikidata.org/wiki/Q1132455' },
+    { '@type': 'Thing', name: 'Dönüşüm Oranı Optimizasyonu (CRO)', sameAs: 'https://www.wikidata.org/wiki/Q5166418' },
+    { '@type': 'Thing', name: 'QR Kod Teknolojisi', sameAs: 'https://www.wikidata.org/wiki/Q12203' },
+    { '@type': 'Thing', name: 'Schema.org ve Yapılandırılmış Veri', sameAs: 'https://www.wikidata.org/wiki/Q3475338' },
+    { '@type': 'Thing', name: 'Üretken Yapay Zekâ ve GEO', sameAs: 'https://www.wikidata.org/wiki/Q1170729' },
+    { '@type': 'Thing', name: 'Google Ads', sameAs: 'https://www.wikidata.org/wiki/Q219563' },
+    { '@type': 'Thing', name: 'OpenSearch Standartları', sameAs: 'https://www.wikidata.org/wiki/Q1056588' },
+    { '@type': 'Thing', name: 'Uygulama Programlama Arayüzü (API)', sameAs: 'https://www.wikidata.org/wiki/Q165149' },
     'NavBoost ve Arama Etkileşim Mimarisi',
+    'Bilgi Kazanımı (Information Gain)',
     'RAG ve Passage Chunking Optimizasyonu',
     'WebMCP (Web Model Context Protocol)',
-    'OpenSearch Standartları',
-    'Yapılandırılmış Veri ve Schema Mimarisi',
     'Core Web Vitals Optimizasyonu',
-    'Dönüşüm Oranı Optimizasyonu (CRO)',
     'Conversions API (CAPI)',
     'Google Analytics 4 (GA4)',
     'Headless CMS ve API Mimarisi'
@@ -543,6 +542,10 @@ await Promise.all(authoredPages.map(async ({ file, path }) => {
             node.provider = { '@id': `${siteOrigin}/#organization` };
             node.browserRequirements = 'JavaScript, HTML5, CSS3';
             node.softwareVersion = '2.0';
+            node.applicationCategory = 'BusinessApplication';
+            node.operatingSystem = 'All modern web browsers';
+            node.permissions = 'none';
+            node.isAccessibleForFree = true;
           }
           return node;
         });
@@ -554,11 +557,19 @@ await Promise.all(authoredPages.map(async ({ file, path }) => {
     return match;
   });
   const openSearchLink = '    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Narvals Labs" />';
+  const describedByLink = '    <link rel="describedby" type="text/plain" href="/llms.txt" />';
   if (!updatedHtml.includes('rel="search"')) {
     if (updatedHtml.includes('type="application/rss+xml"')) {
       updatedHtml = updatedHtml.replace(/(<link\s+rel="alternate"\s+type="application\/rss\+xml"[^>]*>)/i, `$1\n${openSearchLink}`);
     } else {
       updatedHtml = updatedHtml.replace('</head>', `${openSearchLink}\n  </head>`);
+    }
+  }
+  if (!updatedHtml.includes('rel="describedby"')) {
+    if (updatedHtml.includes('rel="search"')) {
+      updatedHtml = updatedHtml.replace(/(<link\s+rel="search"[^>]*>)/i, `$1\n${describedByLink}`);
+    } else {
+      updatedHtml = updatedHtml.replace('</head>', `${describedByLink}\n  </head>`);
     }
   }
   if (/<script\b[^>]*type="speculationrules"[^>]*>([\s\S]*?)<\/script>/i.test(updatedHtml)) {

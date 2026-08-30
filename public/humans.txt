@@ -6,10 +6,12 @@ Location: Türkiye
 GitHub: https://github.com/fizikhub/narvals-site
 
 /* SITE & TRUST */
-Standards: HTML5, CSS3, ES Modules, Schema.org (JSON-LD), WCAG 2.1 AA, RFC 9116
+Standards: HTML5, CSS3, ES Modules, Schema.org (JSON-LD), WCAG 2.1 AA, RFC 9116, OpenSearch 1.1
 Components: Static Semantic HTML, Optimized WebP/AVIF Assets, Zero Heavy Framework Runtime
 Policy: https://narvals.com/editoryal-ilkeler/
 Security: https://narvals.com/.well-known/security.txt
 Feed: https://narvals.com/blog/feed.xml
+Search: https://narvals.com/opensearch.xml
+LLMs: https://narvals.com/llms.txt
 Target: Web Sitesi, E-Ticaret, Özel Yazılım, Google Ads, Meta Reklam, QR Menü, Rezervasyon
 
