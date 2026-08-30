@@ -807,10 +807,10 @@ export const blogPosts = [
       }
     ],
     sources: [
-      { label: 'Google Search Quality Rater Guidelines (Aralık 2022 / Güncel Versiyon)', url: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content' },
+      { label: 'Google — Search Quality Evaluator Guidelines', url: 'https://guidelines.raterhub.com/searchqualityevaluatorguidelines.pdf' },
       { label: 'Google Search Central — İnsan Odaklı ve Güvenilir İçerik Oluşturma', url: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content' },
       { label: 'Google Search Central — Arama Kalitesi ve E-E-A-T Açıklaması', url: 'https://developers.google.com/search/blog/2022/12/google-raters-guidelines-e-e-a-t' },
-      { label: 'W3C — Web İtibar ve Otorite Standartları', url: 'https://www.w3.org' }
+      { label: 'Google Search Central — Üretken yapay zekâ içeriği rehberi', url: 'https://developers.google.com/search/docs/fundamentals/using-gen-ai-content' }
     ]
   },
   {

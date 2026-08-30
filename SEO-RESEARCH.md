@@ -24,6 +24,46 @@ Bu nedenle uygulama önceliği şöyledir:
 4. Gerçek ekip deneyimi, vaka, yöntem, özgün veri ve üçüncü taraf mention.
 5. Arama sırası ile AI citation/mention/referral ölçümlerinin ayrı izlenmesi.
 
+## 30 Ağustos 2026 Google spam, içerik kalitesi ve güvenlik Ar-Ge turu
+
+Google'ın 28 Ağustos 2026 site reputation açıklaması, güncel spam politikası,
+üretken yapay zekâ içerik rehberi ve people-first öz değerlendirmesi birlikte
+incelendi. Ana riskin “AI ile yazılmış olmak” değil; arama sırası için ölçekli,
+yakın kopya ve kullanıcıya özgün değer sunmayan sayfa üretmek olduğu yeniden
+doğrulandı. Bu turda yeni URL sayısı artırılmadı; mevcut içerik kalitesi ve
+güvenlik sözleşmesi güçlendirildi.
+
+- 42 rehber arasında beş kelimelik shingle/Jaccard benzerliği ölçen ve %72
+  üzerindeki yakın kopyayı build sırasında durduran kalite kapısı eklendi.
+- Her rehber için en az iki görünür HTTPS kaynak, benzersiz kaynak URL'si,
+  canonical iç bağlantı ve gerçek yayın tarihi zorunluluğu doğrulandı.
+- Ücretsiz araçlarda kalan kaynaksız kesin pazarlama iddiaları temizlendi:
+  “CAPI zorunludur”, “anında %40–50”, “%100 uyum”, “yüksek dönüşümlü” ve
+  bağlamsız vergi/komisyon genellemeleri koşullu ve doğrulanabilir açıklamalarla
+  değiştirildi.
+- Editoryal politika yeni URL açma ölçütünü, otomasyon kullanımını, benzerlik
+  denetimini ve gerçek düzeltme e-postasını görünür hâle getirdi.
+- CSP çerçeveleme politikası `frame-ancestors 'none'` ve `X-Frame-Options:
+  DENY` olarak sıkılaştırıldı. Inline olay işleyicileri kaldırıldı ve
+  `script-src-attr 'none'` ile engellendi. Build ve canlı denetim artık HSTS,
+  CSP, MIME sniffing, frame, COOP, CORP ve referrer başlıklarını ayrı doğrular.
+
+Bu değişiklikler sıralama garantisi değildir. Google'ın kendi people-first
+rehberi, içerik ekleme veya tarih yenilemenin sırf “taze görünmek” amacıyla
+yapılmaması gerektiğini söylüyor. Reddit r/bigseo'daki 2026 cannibalization
+tartışması da ticari hizmet sayfası ile bilgi rehberini ayrı niyetler olarak
+tutmayı; gerçek sorgu çakışmasını Search Console verisiyle doğrulamayı öneren
+saha yaklaşımı sundu. Reddit görüşü kanıt değil, uygulanmış niyet ayrımını
+zorlamak için hipotez kontrolü olarak kullanıldı.
+
+Kaynaklar: [Google spam policies](https://developers.google.com/search/docs/essentials/spam-policies),
+[Google people-first content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content),
+[Google generative AI content guidance](https://developers.google.com/search/docs/fundamentals/using-gen-ai-content),
+[28 Ağustos 2026 site reputation güncellemesi](https://developers.google.com/search/blog/2026/08/update-site-reputation-policy),
+[web.dev security headers](https://web.dev/articles/security-headers),
+[2026 authority-aware generative retrieval çalışması](https://arxiv.org/abs/2604.13468)
+ve [r/bigseo content cannibalisation tartışması](https://www.reddit.com/r/bigseo/comments/1vquo8e/).
+
 ## 30 Ağustos 2026 ticari arama niyeti ve GEO kanıt güncellemesi
 
 Bu turda “e-ticaret sitesi yaptırmak”, “Google Ads ajansı” ve “Meta reklam

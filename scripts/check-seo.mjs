@@ -35,7 +35,17 @@ const unsupportedSeoClaims = [
   /\bPerplexity-Search\b/i,
   /\bsıfır halüsinasyon/i,
   /\bhalüsinasyon(?:larını| riskini) (?:engeller|en aza indirir)/i,
-  /\bAI (?:yanıtlarında )?kaynak gösterimi (?:sağlar|garanti)/i
+  /\bAI (?:yanıtlarında )?kaynak gösterimi (?:sağlar|garanti)/i,
+  /\bCAPI\b[^<.]{0,80}\bzorunlu(?:dur)?\b/i,
+  /\banında\s+%\d+[–-]\d+\s+iyileştir/i,
+  /\btıklanma oranını\s+%100/i,
+  /\byüksek dönüşümlü\b/i,
+  /\bneredeyse tamamı\s+kas/i,
+  /\bbütçenizin her kuruşunu\b/i,
+  /\bkesinlikle (?:WebP|AVIF)\b/i,
+  /\bkopya içerik cezasını önle/i,
+  /\bCore Web Vitals[^<.]{0,60}\bgaranti/i,
+  /\b%100 doğrulukla okuy/i
 ];
 
 const countMatches = (value, pattern) => [...value.matchAll(pattern)].length;
@@ -431,6 +441,46 @@ for (const [path, sources] of incomingLinks) {
   if (path !== '/' && sources.size === 0) errors.push(`${path}: orphan canonical page has no incoming internal link`);
 }
 
+// Google classifies scaled pages with little original value as abuse regardless
+// of whether automation or people produced them. Keep the generated article
+// library from drifting into near-duplicate search pages and require each guide
+// to expose a real, independently checkable source set.
+const normalizedArticleText = (html) => (html.match(/<div class="info-content article-content">([\s\S]*?)<\/div>\s*<\/div>\s*<\/article>/i)?.[1] || '')
+  .replace(/<section\b[^>]*id="kaynaklar"[\s\S]*$/i, ' ')
+  .replace(/<script\b[\s\S]*?<\/script>/gi, ' ')
+  .replace(/<[^>]+>/g, ' ')
+  .replace(/&(?:nbsp|amp|quot|#39|apos);/gi, ' ')
+  .toLocaleLowerCase('tr')
+  .replace(/[^a-zçğıöşü0-9]+/gi, ' ')
+  .replace(/\s+/g, ' ')
+  .trim();
+const shingles = (text, size = 5) => {
+  const words = text.split(' ').filter(Boolean);
+  return new Set(words.slice(0, Math.max(0, words.length - size + 1)).map((_, index) => words.slice(index, index + size).join(' ')));
+};
+const articleEntries = [...htmlByPath.entries()].filter(([path]) => kindByPath.get(path) === 'article');
+for (const [path, html] of articleEntries) {
+  const sourceBlock = html.match(/<ol class="article-sources">([\s\S]*?)<\/ol>/i)?.[1] || '';
+  const sourceUrls = [...sourceBlock.matchAll(/<a\b[^>]*href="([^"]+)"/gi)].map((match) => match[1]);
+  if (sourceUrls.length < 2) errors.push(`${path}: article must expose at least two external sources`);
+  if (new Set(sourceUrls).size !== sourceUrls.length) errors.push(`${path}: duplicate article source URL found`);
+  if (sourceUrls.some((url) => !url.startsWith('https://'))) errors.push(`${path}: article source must use HTTPS`);
+}
+for (let left = 0; left < articleEntries.length; left += 1) {
+  const [leftPath, leftHtml] = articleEntries[left];
+  const leftShingles = shingles(normalizedArticleText(leftHtml));
+  for (let right = left + 1; right < articleEntries.length; right += 1) {
+    const [rightPath, rightHtml] = articleEntries[right];
+    const rightShingles = shingles(normalizedArticleText(rightHtml));
+    const intersection = [...leftShingles].filter((value) => rightShingles.has(value)).length;
+    const union = new Set([...leftShingles, ...rightShingles]).size;
+    const similarity = union ? intersection / union : 0;
+    if (similarity > 0.72) {
+      errors.push(`${leftPath} and ${rightPath}: article similarity ${(similarity * 100).toFixed(1)}% exceeds 72%`);
+    }
+  }
+}
+
 const imperativeWebMcpTools = [
   ['src/aspect-ratio-calculator.js', 'calculateImageDimensions'],
   ['src/meta-tag-previewer.js', 'previewMetaTags'],
@@ -492,6 +542,25 @@ for (const agent of ['Googlebot', 'OAI-SearchBot', 'Claude-SearchBot', 'Perplexi
   if (!new RegExp(`^User-agent:\\s*${agent}\\s*$`, 'mi').test(robotsText)) {
     errors.push(`robots.txt is missing documented crawler policy for ${agent}`);
   }
+}
+
+const securityHeaders = await readFile(join(discoveryRoot, '_headers'), 'utf8').catch(() => '');
+for (const required of [
+  "Content-Security-Policy: default-src 'self'",
+  "frame-ancestors 'none'",
+  "script-src-attr 'none'",
+  'Strict-Transport-Security: max-age=31536000; includeSubDomains; preload',
+  'X-Content-Type-Options: nosniff',
+  'X-Frame-Options: DENY',
+  'Cross-Origin-Opener-Policy: same-origin',
+  'Cross-Origin-Resource-Policy: same-origin',
+  'Referrer-Policy: strict-origin-when-cross-origin',
+  'X-Permitted-Cross-Domain-Policies: none'
+]) {
+  if (!securityHeaders.includes(required)) errors.push(`public/_headers missing required security policy: ${required}`);
+}
+if (/\bon(?:click|load|error|input|change|submit)\s*=/i.test([...htmlByPath.values()].join('\n'))) {
+  errors.push('inline event handler found; CSP script-src-attr none would block it');
 }
 
 const llmsText = await readFile(join(discoveryRoot, 'llms.txt'), 'utf8').catch(() => '');

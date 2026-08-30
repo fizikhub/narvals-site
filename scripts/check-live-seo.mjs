@@ -265,6 +265,28 @@ for (let index = 0; index < redirectPairs.length; index += 6) {
   }));
 }
 
+try {
+  const response = await request(`${origin}/`);
+  const requiredHeaders = {
+    'strict-transport-security': ['max-age=31536000', 'includesubdomains'],
+    'content-security-policy': ["default-src 'self'", "frame-ancestors 'none'", "script-src-attr 'none'", "object-src 'none'"],
+    'x-content-type-options': ['nosniff'],
+    'x-frame-options': ['deny'],
+    'cross-origin-opener-policy': ['same-origin'],
+    'cross-origin-resource-policy': ['same-origin'],
+    'referrer-policy': ['strict-origin-when-cross-origin'],
+    'x-permitted-cross-domain-policies': ['none']
+  };
+  for (const [name, expectedParts] of Object.entries(requiredHeaders)) {
+    const value = (response.headers.get(name) || '').toLowerCase();
+    for (const part of expectedParts) {
+      if (!value.includes(part.toLowerCase())) errors.push(`homepage security header ${name} is missing ${part}`);
+    }
+  }
+} catch (error) {
+  errors.push(`homepage security header audit failed (${error.message})`);
+}
+
 if (errors.length) {
   console.error(`Live SEO audit failed with ${errors.length} issue(s):`);
   errors.forEach((error) => console.error(`- ${error}`));

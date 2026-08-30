@@ -7,7 +7,7 @@ veya yapay zekâ yanıtında kaynak gösterilme garantisi vermez.
 ## 30 Ağustos 2026 canlılık durumu
 
 `https://narvals.com` yayındadır. Canlı denetimde HTTPS ve canonical
-yönlendirmeleri, gerçek `404`, `robots.txt`, sitemap, 79 canonical URL ve iç
+yönlendirmeleri, gerçek `404`, `robots.txt`, sitemap, 81 canonical URL ve iç
 bağlantılar başarılı bulundu. Denetim; masaüstü ve mobil Googlebot, Bingbot,
 OAI-SearchBot, ChatGPT-User, Claude-SearchBot, Claude-User, PerplexityBot,
 Perplexity-User ve Applebot için WAF/CDN erişimini de sınar.
