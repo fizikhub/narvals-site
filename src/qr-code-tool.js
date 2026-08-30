@@ -1,5 +1,6 @@
 import './qr-code-tool.css';
 import { generateQRCodeSVG } from './qr-core.js';
+import { registerReadOnlyTool } from './webmcp.js';
 
 const previewBox = document.querySelector('[data-qr-preview]');
 const typeButtons = document.querySelectorAll('[data-qr-type]');
@@ -173,3 +174,26 @@ if (downloadPngBtn) {
 }
 
 renderFields();
+
+registerReadOnlyTool({
+  name: 'previewQrCode',
+  description: 'Güvenli bir HTTP veya HTTPS bağlantısı için QR kod önizlemesi hazırlar; dosya indirme ya da ağ isteği yapmaz.',
+  inputSchema: {
+    type: 'object',
+    properties: {
+      url: { type: 'string', format: 'uri', maxLength: 2048, description: 'QR koda yazılacak HTTP veya HTTPS adresi.' }
+    },
+    required: ['url']
+  },
+  execute: async ({ url }) => {
+    const target = new URL(url);
+    if (!['http:', 'https:'].includes(target.protocol)) throw new TypeError('Yalnız HTTP veya HTTPS adresleri kabul edilir.');
+    if (target.href.length > 2048) throw new RangeError('URL 2048 karakteri aşamaz.');
+    currentType = 'url';
+    renderFields();
+    const input = document.querySelector('[data-input-url]');
+    if (input) input.value = target.href;
+    updateQR();
+    return `${target.href} adresi için QR kod önizlemesi hazırlandı. İndirme işlemi yalnız kullanıcı düğmeye bastığında yapılır.`;
+  }
+});

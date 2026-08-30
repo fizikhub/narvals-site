@@ -140,6 +140,10 @@ online ise sırf yerel görünürlük için Google Business Profile açılmamal�
 - Sunucu/CDN loglarında Googlebot ve Bingbot yanıt dağılımı.
 - Mobil gerçek cihaz, Lighthouse ve saha CWV başlangıç ölçümü.
 - Yalnız yeni/değişen URL'ler için IndexNow bildirimi.
+- Bing Webmaster AI Performance public preview içinde citation, cited page ve
+  grounding query başlangıç ölçümü.
+- Search Profiles uygunluğu hesapta sunulursa doğrulanmış profil talebi;
+  Discover raporu görünürse ayrı performans takibi.
 
 ### P2 — ilk 90 gün
 

@@ -80,6 +80,59 @@ Kararlar [Chrome WebMCP genel bakışı](https://developer.chrome.com/docs/ai/ag
 ve [Google Preferred Sources yayıncı dokümantasyonu](https://developers.google.com/search/docs/appearance/preferred-sources)
 ile doğrulandı. Bu katmanlar temel SEO'nun üstündeki kontrollü deneylerdir.
 
+## 30 Ağustos 2026 sekizinci deneysel teknoloji ve ölçüm denetimi
+
+Yeni arama yüzeyleri birbiriyle ve genel Google sırasıyla karıştırılmadan
+incelendi. Uygulanabilir teknik katman genişletildi, hesap veya uygunluk isteyen
+özellikler operasyon kapısı olarak bırakıldı:
+
+- **Imperative WebMCP:** Form etiketi kullanmayan görsel boyut, meta önizleme,
+  QR ve Organization schema araçları `document.modelContext.registerTool` ile
+  salt-okunur araçlara dönüştürüldü. API yoksa normal arayüz çalışır. Araçlar
+  HTTPS/protokol, karakter ve ölçü sınırları uygular; indirme veya veri gönderme
+  eylemini ajan adına başlatmaz. `readOnlyHint` ve güvenilir yerel çıktı için
+  `untrustedContentHint: false` bildirilir.
+- **Canlı kanıt:** Production denetimi artık dört imperative tool adının deploy
+  edilen JS paketlerinde bulunduğunu ve Preferred Sources bağlantısının bütün
+  blog yüzeylerinde kaldığını kontrol eder. Böylece yalnız kaynak kodda duran
+  deneysel özellik “yayında” sayılmaz.
+- **Bing AI Performance:** Public preview toplam citation, cited page, grounding
+  query ve trend ölçümü sunar. Bing Webmaster hesabı olmadan koddan veri
+  çekilemez; BWT doğrulama ve aylık export operasyon planına eklendi.
+- **Search Profiles ve Discover:** Search Profiles önce ABD'de ve uygun büyük
+  sosyal/video takipçi kitlesi bulunan hesaplarla sınırlıdır. Discover için özel
+  schema gerekmez; index ve politika uygunluğu yalnız adaylık sağlar. İki özellik
+  de kodla veya sahte profil verisiyle zorlanmadı.
+- **Carousel beta reddi:** Google'ın beta carousel schema'sı en az üç gerçek
+  `LocalBusiness`, `Product` veya `Event` detay sayfası ister. Narvals'ın hizmet
+  ve ücretsiz araç listeleri bu varlık türleri değildir; markup eklemek yanlış
+  beyan olacağı için uygulanmadı.
+- **Speculation Rules bekletildi:** Gelecek sayfayı prefetch/prerender etmek
+  dönüşüm yolunu hızlandırabilir ama sıralama teknolojisi değildir; ek bant
+  genişliği, ölçüm ve CSP/deploy kararı gerektirir. Sırf deneysel olduğu için
+  bütün iç bağlantılara açılmadı.
+
+Kararlar [WebMCP Imperative API](https://developer.chrome.com/docs/ai/webmcp/imperative-api),
+[WebMCP güvenlik rehberi](https://developer.chrome.com/docs/ai/webmcp/secure-tools),
+[Bing AI Performance](https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview),
+[Google Search Profiles](https://blog.google/products-and-platforms/products/search/a-new-profile-to-help-publishers-and-creators-highlight-their-work-on-search/),
+[Google Discover](https://developers.google.com/search/docs/appearance/google-discover),
+[Carousel beta](https://developers.google.com/search/docs/appearance/structured-data/carousels-beta)
+ve [Chrome Speculation Rules](https://developer.chrome.com/docs/web-platform/implementing-speculation-rules)
+ile doğrulandı.
+
+Reddit saha tartışmaları resmî kanıt değil, hipotez kaynağı olarak ayrıca
+incelendi. Bing AI Performance kullanan yayıncılar raporu “kesin sıralama”
+yerine yön gösteren citation verisi olarak ele alıp BWT, GSC, gerçek referral ve
+sabit manuel sorgularla karşılaştırmayı öneriyor. Search Profiles tartışmasında
+ise ABD/erişim eşiği ve eski Google Authorship deneyimi nedeniyle erken yatırım
+konusunda belirgin kuşku var. Bu görüşler ürün dokümanındaki kapsam sınırlarıyla
+uyumlu olduğundan hesap açma uğruna sahte takipçi/profil üretmeme ve AI ölçümünü
+çoklu veriyle doğrulama kararını güçlendirdi. Kaynaklar:
+[r/SEO — Bing AI Performance kullanımı](https://www.reddit.com/r/SEO/comments/1regu01/),
+[r/SEO_Xpert — raporun yönsel yorumlanması](https://www.reddit.com/r/SEO_Xpert/comments/1ueeztk/)
+ve [r/SEO — Search Profiles tartışması](https://www.reddit.com/r/SEO/comments/1txr393/).
+
 ## 30 Ağustos 2026 ikinci teknik denetim
 
 İkinci turda 78 canonical sayfa; canlı HTTP davranışı, yapılandırılmış veri,

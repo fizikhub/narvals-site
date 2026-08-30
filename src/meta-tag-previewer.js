@@ -1,4 +1,33 @@
 import './meta-tag-previewer.css';
+import { registerReadOnlyTool } from './webmcp.js';
+
+const escapeHtml = (value) => String(value)
+  .replaceAll('&', '&amp;')
+  .replaceAll('<', '&lt;')
+  .replaceAll('>', '&gt;')
+  .replaceAll('"', '&quot;')
+  .replaceAll("'", '&#39;');
+
+const buildMetaTags = ({ title, desc, url, img, brand }) => `<!-- Temel Meta Etiketleri -->
+<title>${escapeHtml(title)}</title>
+<meta name="description" content="${escapeHtml(desc)}" />
+<link rel="canonical" href="${escapeHtml(url)}" />
+
+<!-- OpenGraph (Facebook, WhatsApp, LinkedIn) -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="${escapeHtml(url)}" />
+<meta property="og:site_name" content="${escapeHtml(brand)}" />
+<meta property="og:title" content="${escapeHtml(title)}" />
+<meta property="og:description" content="${escapeHtml(desc)}" />
+<meta property="og:image" content="${escapeHtml(img)}" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Twitter / X Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="${escapeHtml(title)}" />
+<meta name="twitter:description" content="${escapeHtml(desc)}" />
+<meta name="twitter:image" content="${escapeHtml(img)}" />`;
 
 const titleInput = document.querySelector('[name="meta_title"]');
 const descInput = document.querySelector('[name="meta_desc"]');
@@ -65,26 +94,7 @@ const updatePreview = () => {
   }
 
   // Code Block
-  const htmlCode = `<!-- Temel Meta Etiketleri -->
-<title>${title}</title>
-<meta name="description" content="${desc}" />
-<link rel="canonical" href="${url}" />
-
-<!-- OpenGraph (Facebook, WhatsApp, LinkedIn) -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content="${url}" />
-<meta property="og:site_name" content="${brand}" />
-<meta property="og:title" content="${title}" />
-<meta property="og:description" content="${desc}" />
-<meta property="og:image" content="${img}" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-
-<!-- Twitter / X Cards -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="${title}" />
-<meta name="twitter:description" content="${desc}" />
-<meta name="twitter:image" content="${img}" />`;
+  const htmlCode = buildMetaTags({ title, desc, url, img, brand });
 
   if (codeOutput) codeOutput.textContent = htmlCode;
 };
@@ -109,3 +119,42 @@ if (copyBtn) {
 }
 
 updatePreview();
+
+registerReadOnlyTool({
+  name: 'previewMetaTags',
+  description: 'Bir web sayfası için güvenli HTML meta, canonical, Open Graph ve Twitter Card etiketleri üretir ve önizlemeyi günceller.',
+  inputSchema: {
+    type: 'object',
+    properties: {
+      title: { type: 'string', minLength: 1, maxLength: 65, description: 'Sayfa başlığı; en fazla 65 karakter.' },
+      description: { type: 'string', minLength: 1, maxLength: 170, description: 'Sayfa açıklaması; en fazla 170 karakter.' },
+      url: { type: 'string', format: 'uri', description: 'Canonical HTTPS sayfa adresi.' },
+      imageUrl: { type: 'string', format: 'uri', description: 'Sosyal paylaşım görselinin HTTPS adresi.' },
+      brand: { type: 'string', minLength: 1, maxLength: 100, description: 'Site veya marka adı.' }
+    },
+    required: ['title', 'description', 'url']
+  },
+  execute: async ({ title, description, url, imageUrl, brand }) => {
+    const canonical = new URL(url);
+    if (canonical.protocol !== 'https:') throw new TypeError('Canonical URL HTTPS olmalıdır.');
+    const image = imageUrl ? new URL(imageUrl) : new URL('/og/narvals-labs-og.jpg', canonical);
+    if (image.protocol !== 'https:') throw new TypeError('Görsel URL HTTPS olmalıdır.');
+    const values = {
+      title: String(title).trim().slice(0, 65),
+      desc: String(description).trim().slice(0, 170),
+      url: canonical.href,
+      img: image.href,
+      brand: String(brand || canonical.hostname).trim().slice(0, 100)
+    };
+    if (!values.title || !values.desc) throw new TypeError('Başlık ve açıklama boş olamaz.');
+    if (titleInput) titleInput.value = values.title;
+    if (descInput) descInput.value = values.desc;
+    if (urlInput) urlInput.value = values.url;
+    if (imgInput) imgInput.value = values.img;
+    if (brandInput) brandInput.value = values.brand;
+    updatePreview();
+    const output = buildMetaTags(values);
+    if (output.length > 1500) throw new RangeError('Üretilen araç çıktısı güvenli karakter bütçesini aşıyor.');
+    return output;
+  }
+});

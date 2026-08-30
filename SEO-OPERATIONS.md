@@ -85,8 +85,25 @@ Bu bilgiler geldikten sonra ana sayfa, `/iletisim/`, footer ve tüm sayfalardaki
 4. Yeni, önemli ölçüde güncellenen veya silinen canonical URL’leri IndexNow’a
    yayın iş akışından bildirin. Aynı URL’yi değişiklik olmadan tekrar göndermeyin.
 5. Bing AI Performance açıldığında citation, cited URL ve grounding query
-   raporlarını izleyin.
+   raporlarını izleyin. Aylık export'ta toplam citation, ortalama cited page,
+   en sık grounding query, cited URL ve bunların nitelikli lead ile ilişkisini
+   ayrı sütunlarda saklayın; bu veriyi klasik sıra konumu gibi yorumlamayın.
 6. Gerçek yerel işletmeyse Bing Places kaydını doğrulayın.
+
+## Yeni hesap düzeyi keşif yüzeyleri
+
+- Google Search Profiles yalnız hesap uygunluğu sunulduğunda talep edilmelidir.
+  Ağustos 2026 itibarıyla ilk dağıtım ABD ve büyük sosyal/video platformlarında
+  belirli takipçi kitlesine sahip yayıncı/üreticilerle sınırlıdır. Uygunluk
+  geldiğinde profil fotoğrafı, biyografi, `narvals.com` ve yalnız doğrulanmış
+  sosyal bağlantılar girilir.
+- Google Discover için ayrıca başvuru, özel etiket veya schema yoktur. Search
+  Console Discover raporu görünürse gösterim, tıklama, sayfa ve tarih izlenir.
+  Güçlü büyük görsel ve güncel içerik yararlı olabilir; Discover görünürlüğü
+  garanti değildir.
+- Preferred Sources düğmesi için analitikte dış bağlantı tıklaması izlenebilir;
+  ancak ölçüm kurulumu izin/consent ve gerçek analytics kimliği gelmeden koda
+  eklenmemelidir.
 
 Örnek IndexNow isteği, production alan adı kesinleşince:
 

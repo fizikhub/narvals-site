@@ -1,4 +1,5 @@
 import './schema-generator.css';
+import { registerReadOnlyTool } from './webmcp.js';
 
 // Active schema type state
 let currentType = 'Organization';
@@ -473,3 +474,51 @@ if (validateBtn) {
 // Initialize FAQ and first render
 renderFaqInputs();
 generateSchema();
+
+registerReadOnlyTool({
+  name: 'createOrganizationSchema',
+  description: 'Gerçek kurum bilgileriyle Schema.org Organization JSON-LD taslağı üretir ve görünür oluşturucuyu günceller.',
+  inputSchema: {
+    type: 'object',
+    properties: {
+      name: { type: 'string', minLength: 1, maxLength: 150, description: 'Kurumun gerçek ve resmî adı.' },
+      url: { type: 'string', format: 'uri', description: 'Kurumun resmî HTTPS ana sayfası.' },
+      description: { type: 'string', maxLength: 300, description: 'Kurumun doğrulanabilir kısa açıklaması.' },
+      logoUrl: { type: 'string', format: 'uri', description: 'Kurum logosunun HTTPS adresi.' },
+      sameAs: { type: 'array', maxItems: 5, items: { type: 'string', format: 'uri', maxLength: 200 }, description: 'Yalnız kuruma ait doğrulanabilir profil adresleri.' }
+    },
+    required: ['name', 'url']
+  },
+  execute: async ({ name, url, description = '', logoUrl = '', sameAs = [] }) => {
+    const organizationUrl = new URL(url);
+    if (organizationUrl.protocol !== 'https:') throw new TypeError('Kurum URL adresi HTTPS olmalıdır.');
+    const normalizedSameAs = sameAs.map((value) => {
+      const profile = new URL(value);
+      if (profile.protocol !== 'https:') throw new TypeError('sameAs adresleri HTTPS olmalıdır.');
+      return profile.href;
+    });
+    let normalizedLogo = '';
+    if (logoUrl) {
+      const logo = new URL(logoUrl);
+      if (logo.protocol !== 'https:') throw new TypeError('Logo URL adresi HTTPS olmalıdır.');
+      normalizedLogo = logo.href;
+    }
+
+    const values = {
+      org_name: String(name).trim().slice(0, 150),
+      org_url: organizationUrl.href,
+      org_desc: String(description).trim().slice(0, 300),
+      org_logo: normalizedLogo,
+      org_sameas: normalizedSameAs.join('\n')
+    };
+    if (!values.org_name) throw new TypeError('Kurum adı boş olamaz.');
+    document.querySelector('[data-schema-type="Organization"]')?.click();
+    for (const [field, value] of Object.entries(values)) {
+      const input = document.querySelector(`[name="${field}"]`);
+      if (input) input.value = value;
+    }
+    const { rawJson } = generateSchema();
+    if (rawJson.length > 1500) throw new RangeError('Üretilen araç çıktısı güvenli karakter bütçesini aşıyor.');
+    return rawJson;
+  }
+});

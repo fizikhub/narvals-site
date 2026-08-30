@@ -1,4 +1,5 @@
 import './aspect-ratio-calculator.css';
+import { registerReadOnlyTool } from './webmcp.js';
 
 const gcd = (a, b) => (b === 0 ? a : gcd(b, a % b));
 
@@ -115,3 +116,51 @@ if (copyBtn) {
 }
 
 calculateRatio();
+
+registerReadOnlyTool({
+  name: 'calculateImageDimensions',
+  description: 'Orijinal görsel ölçülerinden en-boy oranını ve verilen yeni genişlik ya da yüksekliğe göre deforme olmayan hedef ölçüyü hesaplar.',
+  inputSchema: {
+    type: 'object',
+    properties: {
+      originalWidth: { type: 'number', minimum: 1, description: 'Orijinal genişlik, piksel.' },
+      originalHeight: { type: 'number', minimum: 1, description: 'Orijinal yükseklik, piksel.' },
+      targetWidth: { type: 'number', minimum: 1, description: 'İstenen yeni genişlik, piksel.' },
+      targetHeight: { type: 'number', minimum: 1, description: 'Genişlik yoksa istenen yeni yükseklik, piksel.' }
+    },
+    required: ['originalWidth', 'originalHeight']
+  },
+  execute: async ({ originalWidth, originalHeight, targetWidth, targetHeight }) => {
+    const width = Number(originalWidth);
+    const height = Number(originalHeight);
+    if (!Number.isFinite(width) || !Number.isFinite(height) || width <= 0 || height <= 0) {
+      throw new TypeError('Orijinal ölçüler pozitif sayı olmalıdır.');
+    }
+    if (width > 100000 || height > 100000) throw new RangeError('Ölçüler 100000 pikseli aşamaz.');
+
+    const divisor = gcd(Math.round(width), Math.round(height));
+    const ratio = `${Math.round(width) / divisor}:${Math.round(height) / divisor}`;
+    let scaledWidth;
+    let scaledHeight;
+    if (Number.isFinite(Number(targetWidth)) && Number(targetWidth) > 0) {
+      scaledWidth = Number(targetWidth);
+      scaledHeight = Math.round((scaledWidth * height) / width);
+      lastModifiedTarget = 'w2';
+    } else if (Number.isFinite(Number(targetHeight)) && Number(targetHeight) > 0) {
+      scaledHeight = Number(targetHeight);
+      scaledWidth = Math.round((scaledHeight * width) / height);
+      lastModifiedTarget = 'h2';
+    } else {
+      scaledWidth = width;
+      scaledHeight = height;
+    }
+    if (scaledWidth > 100000 || scaledHeight > 100000) throw new RangeError('Hedef ölçüler 100000 pikseli aşamaz.');
+
+    if (w1Input) w1Input.value = width;
+    if (h1Input) h1Input.value = height;
+    if (w2Input) w2Input.value = scaledWidth;
+    if (h2Input) h2Input.value = scaledHeight;
+    calculateRatio();
+    return `En-boy oranı ${ratio}; orantılı hedef ölçü ${scaledWidth}×${scaledHeight} pikseldir.`;
+  }
+});

@@ -16,6 +16,7 @@ if (configuredSiteUrl.protocol !== 'https:') throw new Error('Live production au
 
 const origin = configuredSiteUrl.origin;
 const errors = [];
+const liveHtmlByPath = new Map();
 const attribute = (tag, name) => tag.match(new RegExp(`\\b${name}="([^"]*)"`, 'i'))?.[1];
 const request = async (url, options = {}) => {
   const signal = AbortSignal.timeout(15_000);
@@ -56,6 +57,7 @@ for (const batch of batches) {
         errors.push(`${path}: blocking X-Robots-Tag header found (${xRobotsTag})`);
       }
       const html = await response.text();
+      liveHtmlByPath.set(path, html);
       const canonical = html.match(/<link\s+rel="canonical"\s+href="([^"]+)"/i)?.[1];
       if (canonical !== expectedUrl) errors.push(`${path}: live canonical is ${canonical || 'missing'}`);
       const metaTags = [...html.matchAll(/<meta\b[^>]*>/gi)].map((match) => match[0]);
@@ -177,6 +179,42 @@ for (const { path, kind } of sitePages) {
   const url = `${origin}${path}`;
   if (!sitemap.includes(`<loc>${url}</loc>`)) errors.push(`sitemap.xml missing ${url}`);
   if (kind === 'article' && !feed.includes(`<link>${url}</link>`)) errors.push(`RSS feed missing ${url}`);
+}
+
+for (const { path, kind } of sitePages) {
+  if (path === '/blog/' || path.startsWith('/blog/konu/') || kind === 'article') {
+    if (!liveHtmlByPath.get(path)?.includes('https://www.google.com/preferences/source?q=narvals.com')) {
+      errors.push(`${path}: live Google Preferred Sources link is missing`);
+    }
+  }
+}
+
+const imperativeWebMcpPages = [
+  ['/araclar/gorsel-boyut-hesaplayici/', 'calculateImageDimensions'],
+  ['/araclar/meta-etiket-onizleyici/', 'previewMetaTags'],
+  ['/araclar/qr-kod-olusturucu/', 'previewQrCode'],
+  ['/araclar/schema-olusturucu/', 'createOrganizationSchema']
+];
+for (const [path, expectedToolName] of imperativeWebMcpPages) {
+  const html = liveHtmlByPath.get(path) || '';
+  const moduleSources = [...html.matchAll(/<script\b[^>]*type="module"[^>]*src="([^"]+)"/gi)]
+    .map((match) => new URL(match[1], origin).href);
+  if (!moduleSources.length) {
+    errors.push(`${path}: live module bundle is missing`);
+    continue;
+  }
+  const bundles = await Promise.all(moduleSources.map(async (url) => {
+    try {
+      const response = await request(url);
+      return response.status === 200 ? response.text() : '';
+    } catch {
+      return '';
+    }
+  }));
+  const source = (await Promise.all(bundles)).join('\n');
+  if (!source.includes(expectedToolName)) {
+    errors.push(`${path}: live imperative WebMCP tool ${expectedToolName} is missing`);
+  }
 }
 if (indexNowKey.trim() !== 'b04a90decae26feec44042e2c2e4dd84') errors.push('IndexNow key file content is wrong.');
 if (!llms.includes(`${origin}/`) || !llms.includes(`${origin}/sitemap.xml`)) {

@@ -49,6 +49,11 @@ dosyalarını (`robots.txt`, URL bazlı `sitemap.xml`, deneysel `llms.txt`) üre
 Tüm indexlenebilir sayfalarda title, description, canonical, tek H1, JSON-LD,
 iç bağlantılar ve sosyal önizleme direktiflerini doğrular.
 
+18 interaktif aracın 14 form tabanlı işlevi declarative WebMCP açıklamalarına,
+form dışı dört işlevi ise özellik algılamalı ve salt-okunur Imperative WebMCP
+araçlarına sahiptir. Bu deneysel katman desteklenmeyen tarayıcılarda normal
+arayüzü etkilemez ve bir arama sıralaması garantisi değildir.
+
 Üretim çıktısı yalnız kullanılan runtime varlıklarını içerir; büyük master,
 source ve eski tasarım export’ları `public/` içinde korunur ancak `dist/`
 paketine kopyalanmaz. Ayrıntılı operasyon adımları `SEO-OPERATIONS.md`, resmî ve

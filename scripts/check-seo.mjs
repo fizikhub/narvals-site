@@ -352,6 +352,34 @@ for (const [path, html] of htmlByPath) {
 for (const [path, sources] of incomingLinks) {
   if (path !== '/' && sources.size === 0) errors.push(`${path}: orphan canonical page has no incoming internal link`);
 }
+
+const imperativeWebMcpTools = [
+  ['src/aspect-ratio-calculator.js', 'calculateImageDimensions'],
+  ['src/meta-tag-previewer.js', 'previewMetaTags'],
+  ['src/qr-code-tool.js', 'previewQrCode'],
+  ['src/schema-generator.js', 'createOrganizationSchema']
+];
+for (const [sourceFile, expectedName] of imperativeWebMcpTools) {
+  const source = await readFile(join(projectRoot, sourceFile), 'utf8').catch(() => '');
+  const registration = source.match(/registerReadOnlyTool\(\{[\s\S]*?name:\s*'([^']+)'/);
+  const toolName = registration?.[1];
+  if (toolName !== expectedName) {
+    errors.push(`${sourceFile}: expected imperative WebMCP tool ${expectedName}`);
+    continue;
+  }
+  if (!/^[A-Za-z][A-Za-z0-9]{0,29}$/.test(toolName)) {
+    errors.push(`${sourceFile}: imperative WebMCP name must be alphanumeric and at most 30 characters (${toolName})`);
+  }
+  if (webMcpToolNames.has(toolName)) errors.push(`${sourceFile}: duplicate WebMCP tool name (${toolName})`);
+  webMcpToolNames.add(toolName);
+}
+const webMcpHelper = await readFile(join(projectRoot, 'src/webmcp.js'), 'utf8').catch(() => '');
+if (!webMcpHelper.includes('readOnlyHint: true') || !webMcpHelper.includes('untrustedContentHint: false')) {
+  errors.push('src/webmcp.js: read-only WebMCP security annotations are missing');
+}
+if (!webMcpHelper.includes('if (!modelContext?.registerTool) return false')) {
+  errors.push('src/webmcp.js: experimental WebMCP feature detection is missing');
+}
 for (const path of ['/hizmetler/web-tasarim/', '/hizmetler/qr-menu/']) {
   const sources = incomingLinks.get(path);
   if (!sources || sources.size < 20) {

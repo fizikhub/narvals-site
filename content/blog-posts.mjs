@@ -265,13 +265,14 @@ export const blogPosts = [
     category: 'SEO & GEO',
     published: '2026-08-21T09:20:00+03:00',
     modified: '2026-08-30T00:00:00+03:00',
-    readingTime: 14,
+    readingTime: 15,
     answer: 'GEO (generative engine optimization), içeriğin üretken yapay zekâ destekli arama ve yanıt deneyimlerinde bulunma, kullanılma ve kaynak gösterilme olasılığını geliştirmeyi amaçlayan çalışmalara verilen addır. Google açısından bunun ayrı bir hile veya teknik katmanı yoktur: AI Overviews ve AI Mode görünürlüğünün temeli indekslenebilir, özgün, insan odaklı içerik ve yerleşik SEO uygulamalarıdır.',
     takeaways: [
       'Google ve AI motorları için GEO’nun temeli taranabilir statik HTML ve Search kalite sistemleridir.',
       'KDD 2024 çalışmasındaki “%40’a kadar” sonuç, önceden seçilmiş kaynakların yer aldığı kontrollü benchmarka aittir; canlı Google sırası veya kalıcı trafik garantisi değildir.',
       'Google ideal bir parça, kelime veya token uzunluğu önermiyor; içerik insan için anlaşılır bölümler hâlinde düzenlenmelidir.',
-      'Sıra konumu, AI kaynak gösterimi (citation), marka anılması ve yapay zekâ yönlendirmesi (referral) ayrı ölçülür.'
+      'Sıra konumu, AI kaynak gösterimi (citation), marka anılması ve yapay zekâ yönlendirmesi (referral) ayrı ölçülür.',
+      'Bing AI Performance, Google Search Profiles ve Discover ayrı yüzeylerdir; hesap uygunluğu ve kullanıcı tercihi teknik SEO’nun yerine geçmez.'
     ],
     about: ['Generative Engine Optimization', 'Google AI Overviews', 'AI arama görünürlüğü', 'Information Gain'],
     related: ['web-sitesi-teknik-seo-kontrol-listesi', 'kurumsal-web-sitesi-briefi-nasil-hazirlanir', 'meta-pixel-ve-conversions-api-farki'],
@@ -392,6 +393,26 @@ export const blogPosts = [
         callout: 'Eksik gerçek işletme verisini schema ile doldurmayın. Adres, telefon, kurucu, müşteri ve puan yalnız doğrulanabildiğinde yayınlanmalıdır.'
       },
       {
+        id: 'yeni-ai-kesif-yuzeyleri',
+        label: '2026 deneyleri',
+        heading: 'Yeni arama yüzeylerini tek bir “AI sıralaması” gibi ölçmeyin.',
+        paragraphs: [
+          'Bing Webmaster Tools içindeki AI Performance public preview; Microsoft Copilot ve ilişkili deneyimlerde toplam citation, citation alan URL, grounding query ve zaman içindeki eğilimi gösterir. Bu rapor klasik sıra takibi değildir: bir sayfanın cevap oluşturulurken kaynak olarak seçilmesini ölçer. IndexNow güncelliği hızlandırabilir ama citation garantisi vermez.',
+          'Google Search Profiles Haziran 2026’da önce ABD’de, büyük sosyal veya video platformlarında belirli takipçi kitlesi bulunan bazı yayıncı ve üreticiler için açıldı. Uygun hesap; biyografi, site ve sosyal bağlantıları yönetebilir. Bu özellik kodla talep edilemez ve uygunluk uydurma takipçi ya da sahte profille oluşturulmamalıdır.',
+          'Google Discover için özel etiket veya schema gerekmez. İndekslenmiş ve Discover politikalarına uygun sayfalar otomatik olarak uygun olabilir; kullanıcı ilgisi, güncellik ve güçlü görsel sunum görünürlüğü etkileyebilir fakat görünme garantisi yoktur.'
+        ],
+        table: {
+          headers: ['Yüzey', 'Kontrol edilebilen', 'Doğru başarı metriği'],
+          rows: [
+            ['Bing AI Performance', 'BWT doğrulama, erişim, sitemap, güncel URL için IndexNow', 'Citation, cited page, grounding query, AI referral'],
+            ['Google Search Profiles', 'Yalnız uygun hesaptaysa profil talebi ve doğrulanmış bağlantılar', 'Takip/geri dönüş, ilgili içerik keşfi; genel sıra değil'],
+            ['Google Discover', 'İnsan odaklı güncel içerik, büyük kaliteli görsel, politika uyumu', 'Discover gösterimi, tıklama, geri dönen okur'],
+            ['Google Preferred Sources', 'Okura resmî domain tercih bağlantısı sunmak', 'Tercih tıklaması ve geri dönen okur; genel sıra değil']
+          ]
+        },
+        callout: 'Google’ın Carousel beta işaretlemesi yalnız en az üç gerçek LocalBusiness, Product veya Event detayına bağlanan uygun özet sayfalar içindir. Narvals hizmet ve araç listelerine bu tipleri zorla vermek gerçeğe aykırı olacağından uygulanmadı.'
+      },
+      {
         id: 'geo-mitleri',
         label: 'Yanlış öncelikler',
         heading: 'GEO için yapmanız gerekmeyenler.',
@@ -438,6 +459,10 @@ export const blogPosts = [
       { label: 'ACL 2024 — WebCiteS: Atıflı web yanıtlarında kaynak doğruluğu değerlendirmesi', url: 'https://aclanthology.org/2024.acl-long.806/' },
       { label: 'Google — İnsan odaklı, güvenilir içerik ve Bilgi Kazanımı', url: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content' },
       { label: 'OpenAI — Search botları ve yayıncı erişimi', url: 'https://developers.openai.com/api/docs/bots' },
+      { label: 'Bing — AI Performance public preview', url: 'https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview' },
+      { label: 'Google — Search Profiles yayıncı ve üretici profilleri', url: 'https://blog.google/products-and-platforms/products/search/a-new-profile-to-help-publishers-and-creators-highlight-their-work-on-search/' },
+      { label: 'Google Search Central — Discover görünürlüğü', url: 'https://developers.google.com/search/docs/appearance/google-discover' },
+      { label: 'Google Search Central — Carousel beta yapılandırılmış verisi', url: 'https://developers.google.com/search/docs/appearance/structured-data/carousels-beta' },
       { label: 'Bing Webmaster Guidelines', url: 'https://www.bing.com/webmasters/help/webmaster-guidelines-30fba23a' }
     ]
   },
