@@ -121,11 +121,12 @@ export const technicalSeoPosts = [
     category: 'SEO & GEO',
     published: '2026-08-30T13:00:00+03:00',
     modified: '2026-08-30T13:00:00+03:00',
-    readingTime: 10,
+    readingTime: 12,
     answer: 'WebMCP, web sitelerinin form ve JavaScript işlevlerini tarayıcı içindeki yapay zekâ ajanlarına ad, açıklama ve yapılandırılmış parametrelerle sunmasını amaçlayan deneysel bir web standardıdır. Chrome 149 origin trial aşamasındadır; Google sıralama sinyali değildir. Doğru kullanıldığında bir ajanın hesaplama, karşılaştırma veya talep hazırlama görevini daha güvenilir tamamlamasına yardımcı olabilir.',
     takeaways: [
       'WebMCP henüz deneysel bir origin trial teknolojisidir; standartlaşacağı veya sıralamayı artıracağı garanti değildir.',
       'Standart HTML formları toolname ve tooldescription açıklamalarıyla progressive enhancement olarak ajanlara tanıtılabilir.',
+      'Araç seçimi yalnız derleme kontrolüyle değil, doğrudan ve örtük kullanıcı niyetlerini kapsayan WebMCP eval veri setiyle sınanmalıdır.',
       'Durum değiştiren veya veri gönderen işlemlerde açık kullanıcı onayı, doğrulama ve prompt injection savunması gerekir.',
       'Google Preferred Sources, WebMCP’den ayrıdır ve okurun seçtiği yayıncıyı kendi Search ve AI deneyiminde öne çıkarabilir.',
       'Başarı; tool activation, tamamlanan görev, nitelikli iletişim ve gerçek müşteri sonucuyla ölçülmelidir.'
@@ -138,6 +139,7 @@ export const technicalSeoPosts = [
       { question: 'WebMCP Google sıralamasını artırır mı?', answer: 'Buna dair resmî bir sıralama sinyali veya nedensel kanıt yoktur. WebMCP, tarayıcı içindeki AI ajanlarının site işlevlerini daha güvenilir kullanmasını hedefler; SEO’nun yerine geçmez.' },
       { question: 'WebMCP bugün bütün tarayıcılarda çalışır mı?', answer: 'Hayır. Ağustos 2026 itibarıyla Chrome origin trial aşamasındadır ve taslak değişebilir. Ek açıklamalar desteklemeyen tarayıcılarda normal HTML form davranışını bozmamalıdır.' },
       { question: 'WebMCP ile form otomatik gönderilmeli mi?', answer: 'Hassas, mali veya veri gönderen işlemlerde otomatik gönderim varsayılan olmamalıdır. Kullanıcı formu ve değerleri görmeli, son eylemi doğrulamalı ve sunucu tarafı kontroller devam etmelidir.' },
+      { question: 'NLWeb ile WebMCP aynı teknoloji mi?', answer: 'Hayır. WebMCP tarayıcıdaki görünür sayfa işlevlerini ajanlara araç olarak sunar. NLWeb ise bir sitenin doğal dilde sorgulanması için sunucu tarafında /ask ve /mcp uçları, arama/veri katmanı ve çoğu uygulamada model altyapısı kurar.' },
       { question: 'Google Preferred Sources ne sağlar?', answer: 'Bir kullanıcı sitenizi tercih edilen kaynak seçerse içerikleriniz o kullanıcı için Top Stories, AI Overviews ve AI Mode içinde tercih rozetiyle daha görünür olabilir. Bu genel sıralama garantisi değildir.' }
     ],
     sections: [
@@ -177,6 +179,25 @@ export const technicalSeoPosts = [
         ]
       },
       {
+        id: 'eval-ve-nlweb',
+        label: 'Test ve protokol seçimi',
+        heading: 'Araç sayısını artırmadan önce doğru araç seçimini eval ile kanıtlayın.',
+        paragraphs: [
+          'Chrome’un WebMCP eval rehberi iki ayrı kontrol önerir: deterministik testler araç mantığı, parametre ve arayüz güncellemesini; model tabanlı eval ise ajanın açık veya örtük kullanıcı niyetinden doğru aracı seçmesini ölçer. Aynı işi yapan çakışan araç adları seçim doğruluğunu düşürebilir.',
+          'Narvals build süreci 18 aracın her biri için bir doğrudan ve bir örtük Türkçe istekten oluşan 36 vakalık sözleşmeyi doğrular. Eval; beklenen tool adını, sayfa durumunu ve izin verilen parametreleri kontrol eder. Veri seti farklı WebMCP uyumlu modellerde probabilistik seçim testi için başlangıç noktasıdır; tek bir modelin geçmesi evrensel başarı anlamına gelmez.',
+          'Microsoft’un NLWeb projesi farklı bir mimaridir: doğal dil sorgusuna Schema.org tabanlı JSON döndüren `/ask` ve MCP uyumlu `/mcp` uçları sağlar. Statik bir pazarlama sitesinde çalışan arama, model, vektör deposu, maliyet ve güvenlik sahibi olmadan boş endpoint yayımlamak ajanları yanıltır; bu nedenle Narvals’a sahte NLWeb keşfi eklenmedi.'
+        ],
+        table: {
+          headers: ['Seçenek', 'Uygun kullanım', 'Narvals kararı'],
+          rows: [
+            ['Declarative WebMCP', 'Mevcut görünür HTML formu', '14 hesaplama ve denetim formunda aktif'],
+            ['Imperative WebMCP', 'Form dışı salt-okunur JavaScript işlevi', '4 önizleme/üretim aracında özellik algılamalı'],
+            ['WebMCP evals', 'Araç ve parametre seçim regresyonu', '36 Türkçe doğrudan/örtük vaka build kapısında'],
+            ['NLWeb', 'Sunucu tarafı doğal dil arama ve MCP servisi', 'Gerçek backend ve ölçüm kararı gelene kadar uygulanmadı']
+          ]
+        }
+      },
+      {
         id: 'preferred-sources',
         label: 'Yeni Google kanalı',
         heading: 'Preferred Sources, geri dönen okuyucuyla Google arasında doğrudan tercih sinyali kurar.',
@@ -208,6 +229,9 @@ export const technicalSeoPosts = [
       { label: 'Chrome for Developers — WebMCP ve AI ajanları', url: 'https://developer.chrome.com/docs/ai/agents' },
       { label: 'Chrome for Developers — WebMCP Declarative API', url: 'https://developer.chrome.com/docs/ai/webmcp/declarative-api' },
       { label: 'Chrome for Developers — WebMCP güvenlik rehberi', url: 'https://developer.chrome.com/docs/ai/webmcp/secure-tools' },
+      { label: 'Chrome for Developers — WebMCP eval rehberi', url: 'https://developer.chrome.com/docs/ai/webmcp/evals' },
+      { label: 'Chrome for Developers — WebMCP araç stratejisi', url: 'https://developer.chrome.com/docs/ai/webmcp/build-tools' },
+      { label: 'NLWeb — resmî protokol ve referans uygulama', url: 'https://github.com/nlweb-ai/NLWeb' },
       { label: 'Google Search Central — Preferred Sources yayıncı rehberi', url: 'https://developers.google.com/search/docs/appearance/preferred-sources' },
       { label: 'Google — Search, Discover ve News kişiselleştirme duyurusu', url: 'https://blog.google/products-and-platforms/products/search/personalize-search-discover-news/' },
       { label: 'Google — Üretken AI aramalarında optimizasyon rehberi', url: 'https://developers.google.com/search/docs/fundamentals/ai-optimization-guide' }

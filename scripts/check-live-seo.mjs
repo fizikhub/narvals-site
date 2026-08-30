@@ -195,13 +195,15 @@ const imperativeWebMcpPages = [
   ['/araclar/qr-kod-olusturucu/', 'previewQrCode'],
   ['/araclar/schema-olusturucu/', 'createOrganizationSchema']
 ];
-for (const [path, expectedToolName] of imperativeWebMcpPages) {
+const liveModuleSourceCache = new Map();
+const fetchLiveModuleSource = async (path) => {
+  if (liveModuleSourceCache.has(path)) return liveModuleSourceCache.get(path);
   const html = liveHtmlByPath.get(path) || '';
   const moduleSources = [...html.matchAll(/<script\b[^>]*type="module"[^>]*src="([^"]+)"/gi)]
     .map((match) => new URL(match[1], origin).href);
   if (!moduleSources.length) {
     errors.push(`${path}: live module bundle is missing`);
-    continue;
+    return '';
   }
   const bundles = await Promise.all(moduleSources.map(async (url) => {
     try {
@@ -212,8 +214,19 @@ for (const [path, expectedToolName] of imperativeWebMcpPages) {
     }
   }));
   const source = (await Promise.all(bundles)).join('\n');
+  liveModuleSourceCache.set(path, source);
+  return source;
+};
+for (const [path, expectedToolName] of imperativeWebMcpPages) {
+  const source = await fetchLiveModuleSource(path);
   if (!source.includes(expectedToolName)) {
     errors.push(`${path}: live imperative WebMCP tool ${expectedToolName} is missing`);
+  }
+}
+for (const path of ['/', '/iletisim/']) {
+  const source = await fetchLiveModuleSource(path);
+  if (!source.includes('narvals_attribution_v1') || !source.includes('chatgpt.com')) {
+    errors.push(`${path}: live first-party AI referral attribution is missing`);
   }
 }
 if (indexNowKey.trim() !== 'b04a90decae26feec44042e2c2e4dd84') errors.push('IndexNow key file content is wrong.');

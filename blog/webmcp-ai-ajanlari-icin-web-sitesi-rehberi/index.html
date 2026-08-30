@@ -54,7 +54,7 @@
     <meta name="twitter:image" content="https://narvals.com/og/narvals-labs-og.jpg" />
     <meta name="twitter:image:alt" content="Narvals Labs — Web, Yazılım ve Reklam" />
     <meta name="twitter:label1" content="Okuma Süresi" />
-    <meta name="twitter:data1" content="10 dk" />
+    <meta name="twitter:data1" content="12 dk" />
     <meta name="twitter:label2" content="Kategori" />
     <meta name="twitter:data2" content="SEO &amp; GEO" />
     <title>WebMCP Nedir? AI Ajanlarına Hazır Web Sitesi | Narvals</title>
@@ -114,10 +114,10 @@
       ],
       "datePublished": "2026-08-30T13:00:00+03:00",
       "dateModified": "2026-08-30T13:00:00+03:00",
-      "timeRequired": "PT10M",
+      "timeRequired": "PT12M",
       "inLanguage": "tr-TR",
       "isAccessibleForFree": true,
-      "wordCount": 752,
+      "wordCount": 1013,
       "articleSection": "SEO & GEO",
       "keywords": "WebMCP nedir, AI ajanı web sitesi, agentic web, Google Preferred Sources, AI müşteri yolculuğu",
       "author": {
@@ -153,6 +153,9 @@
         "https://developer.chrome.com/docs/ai/agents",
         "https://developer.chrome.com/docs/ai/webmcp/declarative-api",
         "https://developer.chrome.com/docs/ai/webmcp/secure-tools",
+        "https://developer.chrome.com/docs/ai/webmcp/evals",
+        "https://developer.chrome.com/docs/ai/webmcp/build-tools",
+        "https://github.com/nlweb-ai/NLWeb",
         "https://developers.google.com/search/docs/appearance/preferred-sources",
         "https://blog.google/products-and-platforms/products/search/personalize-search-discover-news/",
         "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide"
@@ -161,6 +164,9 @@
         "https://developer.chrome.com/docs/ai/agents",
         "https://developer.chrome.com/docs/ai/webmcp/declarative-api",
         "https://developer.chrome.com/docs/ai/webmcp/secure-tools",
+        "https://developer.chrome.com/docs/ai/webmcp/evals",
+        "https://developer.chrome.com/docs/ai/webmcp/build-tools",
+        "https://github.com/nlweb-ai/NLWeb",
         "https://developers.google.com/search/docs/appearance/preferred-sources",
         "https://blog.google/products-and-platforms/products/search/personalize-search-discover-news/",
         "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide"
@@ -226,6 +232,14 @@
         },
         {
           "@type": "Question",
+          "name": "NLWeb ile WebMCP aynı teknoloji mi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hayır. WebMCP tarayıcıdaki görünür sayfa işlevlerini ajanlara araç olarak sunar. NLWeb ise bir sitenin doğal dilde sorgulanması için sunucu tarafında /ask ve /mcp uçları, arama/veri katmanı ve çoğu uygulamada model altyapısı kurar."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "Google Preferred Sources ne sağlar?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -252,13 +266,13 @@
             <p class="info-hero__kicker">SEO &amp; GEO · Karar rehberi</p>
             <h1>WebMCP nedir? AI ajanları için web sitesi hazırlama rehberi</h1>
             <p class="info-hero__answer">WebMCP, web sitelerinin form ve JavaScript işlevlerini tarayıcı içindeki yapay zekâ ajanlarına ad, açıklama ve yapılandırılmış parametrelerle sunmasını amaçlayan deneysel bir web standardıdır. Chrome 149 origin trial aşamasındadır; Google sıralama sinyali değildir. Doğru kullanıldığında bir ajanın hesaplama, karşılaştırma veya talep hazırlama görevini daha güvenilir tamamlamasına yardımcı olabilir.</p>
-            <div class="article-meta"><span>Yayınlayan <a href="/hakkimizda/">Narvals Labs</a></span><span>Yayımlandı <time datetime="2026-08-30T13:00:00+03:00">30 Ağustos 2026</time></span><span>10 dk okuma</span></div>
+            <div class="article-meta"><span>Yayınlayan <a href="/hakkimizda/">Narvals Labs</a></span><span>Yayımlandı <time datetime="2026-08-30T13:00:00+03:00">30 Ağustos 2026</time></span><span>12 dk okuma</span></div>
           </div>
-          <aside class="info-hero__panel article-summary" aria-labelledby="ozet-basligi"><strong id="ozet-basligi">Bu rehberin özeti</strong><ul><li>WebMCP henüz deneysel bir origin trial teknolojisidir; standartlaşacağı veya sıralamayı artıracağı garanti değildir.</li><li>Standart HTML formları toolname ve tooldescription açıklamalarıyla progressive enhancement olarak ajanlara tanıtılabilir.</li><li>Durum değiştiren veya veri gönderen işlemlerde açık kullanıcı onayı, doğrulama ve prompt injection savunması gerekir.</li><li>Google Preferred Sources, WebMCP’den ayrıdır ve okurun seçtiği yayıncıyı kendi Search ve AI deneyiminde öne çıkarabilir.</li><li>Başarı; tool activation, tamamlanan görev, nitelikli iletişim ve gerçek müşteri sonucuyla ölçülmelidir.</li></ul></aside>
+          <aside class="info-hero__panel article-summary" aria-labelledby="ozet-basligi"><strong id="ozet-basligi">Bu rehberin özeti</strong><ul><li>WebMCP henüz deneysel bir origin trial teknolojisidir; standartlaşacağı veya sıralamayı artıracağı garanti değildir.</li><li>Standart HTML formları toolname ve tooldescription açıklamalarıyla progressive enhancement olarak ajanlara tanıtılabilir.</li><li>Araç seçimi yalnız derleme kontrolüyle değil, doğrudan ve örtük kullanıcı niyetlerini kapsayan WebMCP eval veri setiyle sınanmalıdır.</li><li>Durum değiştiren veya veri gönderen işlemlerde açık kullanıcı onayı, doğrulama ve prompt injection savunması gerekir.</li><li>Google Preferred Sources, WebMCP’den ayrıdır ve okurun seçtiği yayıncıyı kendi Search ve AI deneyiminde öne çıkarabilir.</li><li>Başarı; tool activation, tamamlanan görev, nitelikli iletişim ve gerçek müşteri sonucuyla ölçülmelidir.</li></ul></aside>
         </header>
 
         <div class="info-layout article-layout">
-          <nav class="info-toc" aria-label="Makale içeriği"><strong>Bu rehberde</strong><a href="#webmcp-nedir">Deneysel standart</a><a href="#uygulama-stratejisi">Uygulama</a><a href="#preferred-sources">Yeni Google kanalı</a><a href="#guvenlik-ve-olcum">Deney tasarımı</a><a href="#kisa-cevaplar">Kısa cevaplar</a><a href="#kaynaklar">Kaynaklar</a></nav>
+          <nav class="info-toc" aria-label="Makale içeriği"><strong>Bu rehberde</strong><a href="#webmcp-nedir">Deneysel standart</a><a href="#uygulama-stratejisi">Uygulama</a><a href="#eval-ve-nlweb">Test ve protokol seçimi</a><a href="#preferred-sources">Yeni Google kanalı</a><a href="#guvenlik-ve-olcum">Deney tasarımı</a><a href="#kisa-cevaplar">Kısa cevaplar</a><a href="#kaynaklar">Kaynaklar</a></nav>
           <div class="info-content article-content">
             <section class="info-section article-section" id="webmcp-nedir">
         <p class="info-section__label">Deneysel standart</p>
@@ -282,6 +296,20 @@
 
         <ul class="article-checklist"><li>Araç adı 30 karakteri geçmeyen, tek görevi anlatan kararlı bir fiil içeriyor.</li><li>Açıklama ne yaptığını ve yapmadığını kısa biçimde söylüyor.</li><li>Form alanlarının görünür label değerleri var ve aynı parametre adı tekrar kullanılmıyor.</li><li>Hesaplama sonucu metin olarak görünür; yalnız renk veya animasyona bağlı değil.</li><li>Veri gönderen eylem kullanıcı onayı olmadan tamamlanmıyor.</li><li>Ajan çağrısı da normal kullanıcıyla aynı doğrulama, hız sınırı ve güvenlik kontrollerinden geçiyor.</li></ul>
 
+
+      </section>
+            <section class="info-section article-section" id="eval-ve-nlweb">
+        <p class="info-section__label">Test ve protokol seçimi</p>
+        <h2>Araç sayısını artırmadan önce doğru araç seçimini eval ile kanıtlayın.</h2>
+        <p>Chrome’un WebMCP eval rehberi iki ayrı kontrol önerir: deterministik testler araç mantığı, parametre ve arayüz güncellemesini; model tabanlı eval ise ajanın açık veya örtük kullanıcı niyetinden doğru aracı seçmesini ölçer. Aynı işi yapan çakışan araç adları seçim doğruluğunu düşürebilir.</p>
+        <p>Narvals build süreci 18 aracın her biri için bir doğrudan ve bir örtük Türkçe istekten oluşan 36 vakalık sözleşmeyi doğrular. Eval; beklenen tool adını, sayfa durumunu ve izin verilen parametreleri kontrol eder. Veri seti farklı WebMCP uyumlu modellerde probabilistik seçim testi için başlangıç noktasıdır; tek bir modelin geçmesi evrensel başarı anlamına gelmez.</p>
+        <p>Microsoft’un NLWeb projesi farklı bir mimaridir: doğal dil sorgusuna Schema.org tabanlı JSON döndüren `/ask` ve MCP uyumlu `/mcp` uçları sağlar. Statik bir pazarlama sitesinde çalışan arama, model, vektör deposu, maliyet ve güvenlik sahibi olmadan boş endpoint yayımlamak ajanları yanıltır; bu nedenle Narvals’a sahte NLWeb keşfi eklenmedi.</p>
+
+
+
+        <section class="article-table-wrap" tabindex="0" aria-label="Seçenek, Uygun kullanım, Narvals kararı tablosu">
+          <table class="decision-table"><thead><tr><th scope="col">Seçenek</th><th scope="col">Uygun kullanım</th><th scope="col">Narvals kararı</th></tr></thead><tbody><tr><th scope="row">Declarative WebMCP</th><td>Mevcut görünür HTML formu</td><td>14 hesaplama ve denetim formunda aktif</td></tr><tr><th scope="row">Imperative WebMCP</th><td>Form dışı salt-okunur JavaScript işlevi</td><td>4 önizleme/üretim aracında özellik algılamalı</td></tr><tr><th scope="row">WebMCP evals</th><td>Araç ve parametre seçim regresyonu</td><td>36 Türkçe doğrudan/örtük vaka build kapısında</td></tr><tr><th scope="row">NLWeb</th><td>Sunucu tarafı doğal dil arama ve MCP servisi</td><td>Gerçek backend ve ölçüm kararı gelene kadar uygulanmadı</td></tr></tbody></table>
+        </section>
 
       </section>
             <section class="info-section article-section" id="preferred-sources">
@@ -312,13 +340,13 @@
             <section class="info-section article-section" id="kisa-cevaplar">
               <p class="info-section__label">Sık sorulan sorular</p>
               <h2>Kısa ve doğrudan cevaplar.</h2>
-              <div class="article-faq"><details><summary>WebMCP Google sıralamasını artırır mı?</summary><p>Buna dair resmî bir sıralama sinyali veya nedensel kanıt yoktur. WebMCP, tarayıcı içindeki AI ajanlarının site işlevlerini daha güvenilir kullanmasını hedefler; SEO’nun yerine geçmez.</p></details><details><summary>WebMCP bugün bütün tarayıcılarda çalışır mı?</summary><p>Hayır. Ağustos 2026 itibarıyla Chrome origin trial aşamasındadır ve taslak değişebilir. Ek açıklamalar desteklemeyen tarayıcılarda normal HTML form davranışını bozmamalıdır.</p></details><details><summary>WebMCP ile form otomatik gönderilmeli mi?</summary><p>Hassas, mali veya veri gönderen işlemlerde otomatik gönderim varsayılan olmamalıdır. Kullanıcı formu ve değerleri görmeli, son eylemi doğrulamalı ve sunucu tarafı kontroller devam etmelidir.</p></details><details><summary>Google Preferred Sources ne sağlar?</summary><p>Bir kullanıcı sitenizi tercih edilen kaynak seçerse içerikleriniz o kullanıcı için Top Stories, AI Overviews ve AI Mode içinde tercih rozetiyle daha görünür olabilir. Bu genel sıralama garantisi değildir.</p></details></div>
+              <div class="article-faq"><details><summary>WebMCP Google sıralamasını artırır mı?</summary><p>Buna dair resmî bir sıralama sinyali veya nedensel kanıt yoktur. WebMCP, tarayıcı içindeki AI ajanlarının site işlevlerini daha güvenilir kullanmasını hedefler; SEO’nun yerine geçmez.</p></details><details><summary>WebMCP bugün bütün tarayıcılarda çalışır mı?</summary><p>Hayır. Ağustos 2026 itibarıyla Chrome origin trial aşamasındadır ve taslak değişebilir. Ek açıklamalar desteklemeyen tarayıcılarda normal HTML form davranışını bozmamalıdır.</p></details><details><summary>WebMCP ile form otomatik gönderilmeli mi?</summary><p>Hassas, mali veya veri gönderen işlemlerde otomatik gönderim varsayılan olmamalıdır. Kullanıcı formu ve değerleri görmeli, son eylemi doğrulamalı ve sunucu tarafı kontroller devam etmelidir.</p></details><details><summary>NLWeb ile WebMCP aynı teknoloji mi?</summary><p>Hayır. WebMCP tarayıcıdaki görünür sayfa işlevlerini ajanlara araç olarak sunar. NLWeb ise bir sitenin doğal dilde sorgulanması için sunucu tarafında /ask ve /mcp uçları, arama/veri katmanı ve çoğu uygulamada model altyapısı kurar.</p></details><details><summary>Google Preferred Sources ne sağlar?</summary><p>Bir kullanıcı sitenizi tercih edilen kaynak seçerse içerikleriniz o kullanıcı için Top Stories, AI Overviews ve AI Mode içinde tercih rozetiyle daha görünür olabilir. Bu genel sıralama garantisi değildir.</p></details></div>
             </section>
             <section class="info-section article-section" id="kaynaklar">
               <p class="info-section__label">Birincil kaynaklar</p>
               <h2>Kaynaklar ve kapsam.</h2>
               <p>Bağlantılar içerikteki değişebilir veya dış doğrulama gerektiren bilgilerin kaynağıdır. Ticari ilişki veya sponsorlu bağlantı değildir.</p>
-              <ol class="article-sources"><li><a href="https://developer.chrome.com/docs/ai/agents" rel="noopener noreferrer">Chrome for Developers — WebMCP ve AI ajanları</a></li><li><a href="https://developer.chrome.com/docs/ai/webmcp/declarative-api" rel="noopener noreferrer">Chrome for Developers — WebMCP Declarative API</a></li><li><a href="https://developer.chrome.com/docs/ai/webmcp/secure-tools" rel="noopener noreferrer">Chrome for Developers — WebMCP güvenlik rehberi</a></li><li><a href="https://developers.google.com/search/docs/appearance/preferred-sources" rel="noopener noreferrer">Google Search Central — Preferred Sources yayıncı rehberi</a></li><li><a href="https://blog.google/products-and-platforms/products/search/personalize-search-discover-news/" rel="noopener noreferrer">Google — Search, Discover ve News kişiselleştirme duyurusu</a></li><li><a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide" rel="noopener noreferrer">Google — Üretken AI aramalarında optimizasyon rehberi</a></li></ol>
+              <ol class="article-sources"><li><a href="https://developer.chrome.com/docs/ai/agents" rel="noopener noreferrer">Chrome for Developers — WebMCP ve AI ajanları</a></li><li><a href="https://developer.chrome.com/docs/ai/webmcp/declarative-api" rel="noopener noreferrer">Chrome for Developers — WebMCP Declarative API</a></li><li><a href="https://developer.chrome.com/docs/ai/webmcp/secure-tools" rel="noopener noreferrer">Chrome for Developers — WebMCP güvenlik rehberi</a></li><li><a href="https://developer.chrome.com/docs/ai/webmcp/evals" rel="noopener noreferrer">Chrome for Developers — WebMCP eval rehberi</a></li><li><a href="https://developer.chrome.com/docs/ai/webmcp/build-tools" rel="noopener noreferrer">Chrome for Developers — WebMCP araç stratejisi</a></li><li><a href="https://github.com/nlweb-ai/NLWeb" rel="noopener noreferrer">NLWeb — resmî protokol ve referans uygulama</a></li><li><a href="https://developers.google.com/search/docs/appearance/preferred-sources" rel="noopener noreferrer">Google Search Central — Preferred Sources yayıncı rehberi</a></li><li><a href="https://blog.google/products-and-platforms/products/search/personalize-search-discover-news/" rel="noopener noreferrer">Google — Search, Discover ve News kişiselleştirme duyurusu</a></li><li><a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide" rel="noopener noreferrer">Google — Üretken AI aramalarında optimizasyon rehberi</a></li></ol>
               <aside class="article-method" aria-label="Bu rehberin hazırlanma yöntemi"><strong>Hazırlama yöntemi</strong><p>Bu rehber Narvals Labs yayıncılığında; ilgili birincil kaynaklar, görünür hizmet kapsamı ve proje karar çerçeveleri incelenerek hazırlandı. Doğrulanamayan müşteri, fiyat, başarı oranı veya sonuç iddiası eklenmedi. Yöntem, düzeltme ve yapay zekâ desteği açıklaması için <a href="/editoryal-ilkeler/">editoryal ilkeleri</a> okuyabilirsiniz.</p></aside>
             </section>
             <section class="info-section article-section">

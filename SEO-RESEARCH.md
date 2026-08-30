@@ -133,6 +133,48 @@ uyumlu olduğundan hesap açma uğruna sahte takipçi/profil üretmeme ve AI öl
 [r/SEO_Xpert — raporun yönsel yorumlanması](https://www.reddit.com/r/SEO_Xpert/comments/1ueeztk/)
 ve [r/SEO — Search Profiles tartışması](https://www.reddit.com/r/SEO/comments/1txr393/).
 
+## 30 Ağustos 2026 dokuzuncu ajan kalite ve müşteri atıf denetimi
+
+Bu turda yeni protokol eklemekten önce yayımlanmış ajan araçlarının seçilme
+kalitesi ve AI kaynaklı müşterinin ölçülebilirliği ele alındı:
+
+- **WebMCP eval sözleşmesi:** 18 aracın her biri için açık ve örtük Türkçe
+  kullanıcı niyeti yazıldı. 36 vaka beklenen araç adını, sayfa durumunu ve
+  parametre anahtarlarını kontrol eder. Yeni araç eklenip eval unutulursa veya
+  eski alan adı kullanılırsa production build durur. Bunlar deterministik
+  sözleşme testidir; model tabanlı probabilistik çalıştırmalar için taşınabilir
+  başlangıç veri setidir.
+- **Araç çakışması sınırı:** Chrome'un yeni araç stratejisi, context büyüdükçe
+  benzer araçların seçimi zorlaştırabileceğini belirtiyor. Bu nedenle genel
+  “siteyi optimize et” mega-aracı eklenmedi; her araç tek sayfa ve tek işleve
+  bağlı kaldı.
+- **Birinci taraf AI atfı:** ChatGPT, Copilot, Gemini, Claude, Perplexity ve
+  diğer bilinen AI referrer hostları oturum düzeyinde sınıflandırılır. Kaynak
+  yalnız `sessionStorage` içinde tutulur; haricî piksel kurulmaz. Kullanıcı
+  WhatsApp'a geçtiğinde kaynak, görebildiği önceden doldurulmuş mesaja eklenir;
+  mevcutsa `gtag` olayına kişisel veri olmayan channel/source/landing parametresi
+  verilir. 11 deterministik sınıflandırma testi build kapısına eklendi.
+- **Clarity bulgusu sınırı:** Microsoft'un 1.200'den fazla yayıncı sitesi
+  örnekleminde AI referral oranı düşük fakat dönüşüm eğilimi daha yüksek rapor
+  edildi. Bu üçüncü taraf platform verisi Narvals sonucu değildir; yerel atıf
+  katmanı iddiayı kendi nitelikli lead verimizle sınamak için kuruldu.
+- **NLWeb bekletildi:** NLWeb gerçek `/ask` ve `/mcp` servisi, Schema.org/RSS
+  ingestion, retrieval/veri deposu ve model gerektirir. Statik siteye boş
+  endpoint veya yalnız keşif dosyası eklemek işlev sağlamayacağı için uygulanmadı.
+- **Search Console BigQuery bekletildi:** Günlük bulk export büyük sorgu/URL
+  hacminde değerlidir; 79 URL'lik mevcut sitede Search Console arayüzü/API ve
+  hesap erişimi olmadan Cloud maliyeti yaratmak gereksizdir. Hacim ve sahiplik
+  oluştuğunda operasyon seçeneği olarak korunur.
+
+Kararlar [Chrome WebMCP evals](https://developer.chrome.com/docs/ai/webmcp/evals),
+[WebMCP araç stratejisi](https://developer.chrome.com/docs/ai/webmcp/build-tools),
+[WebMCP best practices](https://developer.chrome.com/docs/ai/webmcp/best-practices),
+[NLWeb resmî deposu](https://github.com/nlweb-ai/NLWeb),
+[Microsoft Clarity scrape-to-referral](https://clarity.microsoft.com/blog/scrape-to-referral-insights/),
+[Clarity AI dönüşüm araştırması](https://clarity.microsoft.com/blog/ai-traffic-converts-at-3x-the-rate-of-other-channels-study/)
+ve [Search Console BigQuery bulk export](https://developers.google.com/search/blog/2023/02/bulk-data-export)
+ile doğrulandı.
+
 ## 30 Ağustos 2026 ikinci teknik denetim
 
 İkinci turda 78 canonical sayfa; canlı HTTP davranışı, yapılandırılmış veri,

@@ -292,6 +292,7 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 - **Önemli Çıkarımlar:**
   * WebMCP henüz deneysel bir origin trial teknolojisidir; standartlaşacağı veya sıralamayı artıracağı garanti değildir.
   * Standart HTML formları toolname ve tooldescription açıklamalarıyla progressive enhancement olarak ajanlara tanıtılabilir.
+  * Araç seçimi yalnız derleme kontrolüyle değil, doğrudan ve örtük kullanıcı niyetlerini kapsayan WebMCP eval veri setiyle sınanmalıdır.
   * Durum değiştiren veya veri gönderen işlemlerde açık kullanıcı onayı, doğrulama ve prompt injection savunması gerekir.
   * Google Preferred Sources, WebMCP’den ayrıdır ve okurun seçtiği yayıncıyı kendi Search ve AI deneyiminde öne çıkarabilir.
   * Başarı; tool activation, tamamlanan görev, nitelikli iletişim ve gerçek müşteri sonucuyla ölçülmelidir.

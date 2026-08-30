@@ -28,6 +28,13 @@ Deploy tamamlandıktan sonra canlı DNS/HTTP/canonical denetimi:
 SITE_URL=https://narvals.com npm run seo:check-live
 ```
 
+WebMCP araç sözleşmesi ve birinci taraf kanal sınıflandırması ayrı çalıştırılabilir:
+
+```bash
+npm run webmcp:check
+npm run attribution:check
+```
+
 ## Yayından önce zorunlu gerçek veriler
 
 - Kesin production alan adı ve tercih edilen host (`www` veya çıplak alan adı)
@@ -153,6 +160,11 @@ render kaynaklarına erişebilmelidir. `nosnippet` kullanılmamalıdır.
   ChatGPT-User ise kullanıcı tarafından başlatılan erişim içindir; üçü ayrı
   tercihlerdir. Perplexity’nin güncel adları `PerplexityBot` ve
   `Perplexity-User`dır; eski/uydurma `Perplexity-Search` kullanılmamalıdır.
+- Birinci ziyaret kaynağı aynı sekmedeki oturum boyunca tutulur. ChatGPT,
+  Copilot, Gemini, Claude, Perplexity ve bilinen diğer AI hostları `ai` kanalına;
+  Google/Bing/Yandex normal referrer'ları `organic_search` kanalına ayrılır.
+  UTM kaynağı varsa önceliklidir. Bu sınıflandırma platform raporunun yerine
+  geçmez; nitelikli WhatsApp/e-posta niyetiyle kaynak hipotezini bağlar.
 
 ## Deneysel keşif: WebMCP ve Google Preferred Sources
 

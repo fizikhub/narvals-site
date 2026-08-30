@@ -144,6 +144,10 @@ online ise sırf yerel görünürlük için Google Business Profile açılmamal�
   grounding query başlangıç ölçümü.
 - Search Profiles uygunluğu hesapta sunulursa doğrulanmış profil talebi;
   Discover raporu görünürse ayrı performans takibi.
+- 18 WebMCP aracı için 36 doğrudan/örtük niyet eval sözleşmesi; her build'de
+  araç adı, sayfa ve parametre regresyonu kontrolü.
+- AI/referral/organik/kampanya kaynağını oturum düzeyinde sınıflandırıp nitelikli
+  iletişim niyetiyle bağlayan birinci taraf atıf testi.
 
 ### P2 — ilk 90 gün
 

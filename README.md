@@ -53,6 +53,9 @@ iç bağlantılar ve sosyal önizleme direktiflerini doğrular.
 form dışı dört işlevi ise özellik algılamalı ve salt-okunur Imperative WebMCP
 araçlarına sahiptir. Bu deneysel katman desteklenmeyen tarayıcılarda normal
 arayüzü etkilemez ve bir arama sıralaması garantisi değildir.
+Her araç için doğrudan ve örtük Türkçe niyeti kapsayan 36 eval sözleşmesi ile
+AI/referral kanal sınıflandırmasının 11 deterministik testi production build'in
+parçasıdır.
 
 Üretim çıktısı yalnız kullanılan runtime varlıklarını içerir; büyük master,
 source ve eski tasarım export’ları `public/` içinde korunur ancak `dist/`
