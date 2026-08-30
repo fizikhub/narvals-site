@@ -190,6 +190,19 @@ for (const [path, html] of htmlByPath) {
   if (path === '/iletisim/' && !html.includes('mailto:info@narvals.com')) errors.push(`${path}: verified contact email missing`);
   if (path === '/iletisim/' && !html.includes('https://wa.me/905019441921')) errors.push(`${path}: verified WhatsApp link missing`);
   if (path === '/' && !html.includes('href="/gizlilik/"')) errors.push(`${path}: privacy and data-use link missing`);
+  if (path === '/') {
+    const priorityServiceLinks = [
+      '/hizmetler/web-tasarim/',
+      '/hizmetler/e-ticaret/',
+      '/hizmetler/google-ads/',
+      '/hizmetler/dijital-reklam/'
+    ];
+    for (const servicePath of priorityServiceLinks) {
+      if (!html.includes(`href="${servicePath}"`)) {
+        errors.push(`${path}: priority commercial service must have a visible home-page link (${servicePath})`);
+      }
+    }
+  }
   if (path === '/gizlilik/' && (!html.includes('sessionStorage') || !html.includes('contact_intent'))) {
     errors.push(`${path}: actual browser storage and conditional analytics behavior must be disclosed`);
   }

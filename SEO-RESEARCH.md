@@ -29,16 +29,49 @@ Bu nedenle uygulama önceliği şöyledir:
 Kullanıcının "e-ticaret sitesi yaptırmak isteyenler, google ads reklamı yaptırmak isteyenler, meta reklamı hizmeti almak isteyenler sitemize girmeli; google'da üst sıralara çıkmalı ve güvenilir olmalı" hedefi doğrultusunda akademik GEO literatürü, Google Information Gain patenti (US 10,657,175), Google Search Quality Rater (E-E-A-T) kuralları ve r/PPC, r/ecommerce, r/SEO topluluk verileri incelendi.
 
 ### 1. Akademik GEO & Bilgi Kazanımı (Information Gain) Bulguları
-- **Princeton / Georgia Tech GEO (KDD 2024 / 2025–2026):** Üretken arama motorları (Perplexity, ChatGPT Search, Claude, Google AI Overviews) arama sonuçlarında standart tanımları tekrar eden sayfalar yerine somut istatistikler, karşılaştırma matrisleri ve net karar adımları içeren kaynakları %40'a kadar daha yüksek oranda alıntılar (citation).
-- **Google Information Gain Patent Prensibi (US 10,657,175):** Bir arama sorgusunda kullanıcının diğer sayfalardan elde edemeyeceği özgün karar ölçütlerini, gizli maliyet uyarılarını ve karşılaştırmalı seçim adımlarını sunan sayfalar sıralama avantajı kazanır.
-- **Googlebot & AI Crawler Taraması:** Sayfaların ilk 128 KB içinde kritik `<head>` verilerini (title, canonical, JSON-LD, robots) barındırması, Speculation Rules API ile anında prerender edilmesi ve semantik HTML5 mimarisinde bulunması indeksleme hızını ve tarama verimliliğini maksimize eder.
+- **Princeton / Georgia Tech / Allen Institute GEO (KDD 2024):** Çalışma, kaynağın zaten sabit bir bağlama getirildiği kontrollü GEO-bench ortamında kaynak, istatistik ve alıntı ekleme gibi sunumların görünürlük ölçümünü bazı alanlarda değiştirebildiğini gösterdi. Bildirilen “%40'a kadar” sonuç organik keşif, gerçek Google/ChatGPT sırası veya uzun dönem trafik artışı değildir; motor ve alan koşullarına bağlı deney sonucudur.
+- **Google Information Gain patenti (US 10,657,175):** Patent, arama oturumunda daha önce görülmeyen bilgiyi değerlendiren olası bir yaklaşımı tarif eder. Bir patentin varlığı sistemin bugün aynı biçimde kullanıldığını veya belirli içerik kalıplarına sıralama avantajı verildiğini kanıtlamaz. Özgün karar ölçütleri bu nedenle algoritma hilesi olarak değil, kullanıcı yararı olarak uygulanır.
+- **Googlebot & AI crawler taraması:** Kritik `<head>` verilerini belgenin erken kısmında tutmak ve okunabilir semantik HTML kullanmak sağlamlık sağlar. İlk 128 KB kuralı Narvals'ın kendi regresyon kapısıdır, Google sıralama eşiği değildir. Speculation Rules destekleyen tarayıcılarda gezinme gecikmesini azaltabilir; indeksleme hızı veya tarama bütçesi sinyali olarak değerlendirilmez.
 
 ### 2. Reddit ve Topluluk İçgörüleri (r/PPC, r/ecommerce, r/SEO)
-- **E-Ticaret Sitesi Yaptırma Niyeti:** Müşterilerin en büyük korkuları gizli yazılım/lisans maliyetleri, yavaş açılan sayfalar (Core Web Vitals kaybı), sepet terk oranları, ödeme/kargo entegrasyonu problemleri ve ajans bağımlılığıdır. Karşılaştırma matrisleri ve açık teslim listeleri dönüşüm güvenini inşa eder.
-- **Google Ads Reklamı Yaptırma Niyeti:** r/PPC topluluğunda öne çıkan kırmızı bayraklar; ajansın reklam hesabı mülkiyetini müşteriye vermemesi, negatif anahtar kelime filtrelemesi yapmadan bütçeyi tüketmesi ve GA4 / GTM Server-Side dönüşüm takibi kurmadan yalnızca tıklama raporlamasıdır.
-- **Meta Reklamı Hizmeti Alma Niyeti:** Tarayıcı Pixel'inin iOS kısıtlamaları sebebiyle %20-40 veri kaybetmesi, Conversions API (CAPI) hibrit modelinin kurulmaması, haftalık kreatif test çerçevesinin olmaması ve başabaş (break-even) ROAS hesaplanmadan bütçe ölçeklenmesi ana risklerdir.
+- **E-ticaret sitesi yaptırma niyeti:** Türkçe e-ticaret tartışmalarında platform/özel geliştirme seçimi, alan adı ve hosting sahipliği, ödeme-kargo operasyonu, bakım bağımlılığı ve değiştirilebilir kod tekrar eden sorular olarak görüldü. Bunlar pazar araştırması değil saha hipotezidir; sayfalarda açık sorumluluk ve teslim sorularına dönüştürüldü.
+- **Google Ads hizmeti alma niyeti:** PPC tartışmalarında hesap sahipliği, arama terimi/negatif kelime disiplini, tıklama yerine iş sonucu ölçümü ve açılış sayfası uyumu tekrar ediyor. Her projede server-side GTM gerektiği varsayılmadı; ölçüm yöntemi altyapı, izin ve iş ihtiyacına bağlandı.
+- **Meta reklam hizmeti alma niyeti:** Kreatif test, Business Portfolio ve veri varlıklarının müşteride kalması, medya bütçesiyle yönetim/üretim maliyetinin ayrılması ve Pixel–CAPI uygunluğu tekrar eden risklerdir. Sabit veri kaybı yüzdesi veya CAPI zorunluluğu doğrulanamadığı için yayın içeriğinde kullanılmadı.
 
 Bu araştırma doğrultusunda 3 yeni kapsamlı karar rehberi (`e-ticaret-sitesi-yaptirmak-isteyenler-icin-kapsamli-rehber`, `google-ads-reklami-yaptirmak-isteyenler-icin-rehber`, `meta-reklami-hizmeti-almak-isteyenler-icin-rehber`) oluşturuldu ve hizmet sayfalarıyla çift yönlü bağlandı.
+
+### 3. Ana sayfa hizmet eşleşmesi ve güven sonucu
+
+Türkiye'deki güncel ticari sonuç örnekleri ile ajans tartışmaları birlikte
+incelendiğinde yalnız title ve şema içinde hizmet adı geçirmenin yeterli olmadığı
+görüldü. Ziyaretçi ana sayfada Google Ads ile Meta'nın ayrı görevlerini ve ayrı
+hizmet yollarını görebilmelidir. Narvals ana sayfası Google Ads'i metadata ve
+JSON-LD içinde tanımlıyor fakat hero, reklam istasyonu ve footer yalnız Meta'yı
+görünür biçimde bağlıyordu.
+
+Bu turda hero “dijital reklam” başlığı altında Google Ads ve Meta'yı açıkça
+adlandıracak şekilde düzeltildi; reklam bölümü arama niyeti/anahtar kelime ile
+kitle/kreatif görevlerini ayırdı; iki hizmete ayrı görünür bağlantı verildi.
+Bir `SiteNavigationElement` içinde iki hizmeti tek Meta URL'sine bağlayan varlık
+grafı da iki doğru düğüme ayrıldı. Production SEO testi artık web tasarım,
+e-ticaret, Google Ads ve Meta hizmetlerinin ana sayfadan görünür bağlantı almasını
+zorunlu tutuyor.
+
+Reddit ajans tartışmalarındaki ortak uyarı, teknik SEO'nun tek başına güven ve
+talep üretmediğidir: gerçek ekip/kurucu kimliği, izinli müşteri vakaları, gerçek
+iş örnekleri, üçüncü taraf mention'ları ve doğrulanmış yorumlar kodla
+uydurulamaz. Bu nedenle sahte referans, puan, ödül, şehir sayfası veya performans
+yüzdesi eklenmedi. Bunlar yayın sahibinden doğrulanmış veri geldiğinde açılacak
+en yüksek öncelikli otorite katmanı olarak kaldı.
+
+Kaynaklar: [Google Search Essentials](https://developers.google.com/search/docs/essentials),
+[Google insan odaklı içerik rehberi](https://developers.google.com/search/docs/fundamentals/creating-helpful-content),
+[KDD 2024 GEO çalışması](https://arxiv.org/abs/2311.09735),
+[2023–2026 GEO eleştirel taraması](https://arxiv.org/abs/2607.14035),
+[ACL 2025 kaynak güvenilirliği çalışması](https://aclanthology.org/2025.emnlp-main.1738/),
+[r/SEO ajans görünürlüğü tartışması](https://www.reddit.com/r/SEO/comments/1t207d3/),
+[r/SEO yeni ajans sıralama tartışması](https://www.reddit.com/r/SEO/comments/1tae7qa/)
+ve [r/CodingTR e-ticaret sitesi maliyeti tartışması](https://www.reddit.com/r/CodingTR/comments/1eckt4c/).
 
 ## 30 Ağustos 2026 Googlebot byte sınırı ve üretken arama sağlamlık denetimi
 
