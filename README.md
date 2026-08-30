@@ -25,7 +25,7 @@ geçer. Bu yalnız açık origin/HTTPS biçimi korumasıdır; DNS ve deploy ger�
 çalışıyor mu sorusunun yayın kapısı `npm run seo:check-live` komutudur. Yerel
 deneme için `npm run build` kullanılabilir.
 
-Deploy sonrasında DNS, 79 canlı URL, canonical, HTTP durumları, meta/header
+Deploy sonrasında DNS, 81 canlı URL, canonical, HTTP durumları, meta/header
 `noindex`, robots tam engeli, sitemap, RSS, IndexNow anahtarı, slash ve
 `index.html` yönlendirmeleri ile gerçek 404 davranışını denetleyin:
 
@@ -44,7 +44,7 @@ SITE_URL=https://narvals.com npm run build:production
 Alternatif olarak `.env.example` dosyasını `.env` adıyla kopyalayıp gerçek
 `SITE_URL` değerini yazabilirsiniz; `.env` Git’e eklenmez.
 
-Build; 79 canonical sayfayı, 40 kaynaklı rehberi, blog RSS akışını ve keşif
+Build; 81 canonical sayfayı, 42 kaynaklı rehberi, blog RSS akışını ve keşif
 dosyalarını (`robots.txt`, URL bazlı `sitemap.xml`, deneysel `llms.txt`) üretir.
 Tüm indexlenebilir sayfalarda title, description, canonical, tek H1, JSON-LD,
 iç bağlantılar ve sosyal önizleme direktiflerini doğrular.

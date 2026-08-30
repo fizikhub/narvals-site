@@ -384,13 +384,13 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 ### E-E-A-T ve yazar otoritesi nasıl kurulur? Google güven rehberi
 - **URL:** https://narvals.com/blog/e-e-a-t-yazar-otoritesi-ve-google-guven-rehberi/
 - **Kategori:** SEO & GEO
-- **Kısa Cevap:** E-E-A-T (Deneyim, Uzmanlık, Otoriterlik ve Güvenilirlik), Google’ın Arama Kalitesi Değerlendirme İlkeleri’nde (Quality Rater Guidelines) tanımlanan ve temel sıralama algoritmaları tarafından taranan güven çerçevesidir. Sahte yazar profilleri veya jenerik metinler yerine doğrulanabilir dijital ayak izine sahip uzman biyografileri, açık editoryal ilkeler, birinci el test kanıtları ve kurumsal şeffaflık ile inşa edilir.
+- **Kısa Cevap:** E-E-A-T; deneyim, uzmanlık, otoriterlik ve güvenilirlik kavramlarını birlikte anlatan bir kalite çerçevesidir. Google, E-E-A-T’nin tek bir sıralama faktörü veya site sahibinin ölçebildiği sayısal skor olmadığını; güvenin bu çerçevede en önemli unsur olduğunu açıklar. İçeriğin konusu ve amacıyla orantılı yazarlık, kaynak, birinci elden kanıt ve kurumsal şeffaflık okurun güven değerlendirmesine yardım eder.
 - **Önemli Çıkarımlar:**
   * E-E-A-T’nin kalbinde “Güven (Trust)” yer alır; Deneyim, Uzmanlık ve Otorite güveni destekler.
-  * Doğrulanabilir dijital ayak izi (LinkedIn, yayınlar, akademik profil) olmayan sahte yazarlar risklidir.
-  * Birinci el test ekran görüntüleri, gerçek proje metrikleri ve vaka çalışmaları birinci “E”yi (Deneyim) kanıtlar.
-  * Açık künye, fiziksel adres, şirket unvanı, telefon ve editoryal politika sayfası zorunludur.
-  * YMYL (Paranız veya Hayatınız) konularında uzman doğrulaması ve inceleme kurulu şarttır.
+  * Hayalî kişi profili üretmeyin; yazar veya yayıncı bilgisini içeriğin gerçek sorumluluğuna göre gösterin.
+  * Birinci el test ekran görüntüleri, yöntem ve sınırları açıklanmış proje ölçümleri deneyimi görünür kılabilir.
+  * İşletme adı, iletişim, fiziksel adres ve editoryal politika yalnız gerçek ve uygulanabilir olduğu ölçüde yayımlanmalıdır.
+  * Sağlık ve finansal güvenlik gibi YMYL konularında güçlü güven ve uzmanlık sinyalleri daha fazla önem taşır.
 
 ### E-ticaret altyapısı nasıl seçilir? Dokuz karar sorusu
 - **URL:** https://narvals.com/blog/e-ticaret-altyapisi-nasil-secilir/

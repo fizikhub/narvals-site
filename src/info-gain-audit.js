@@ -11,7 +11,7 @@ if (form) {
     ig: 'Bilgi Kazanımı & Özgünlük',
     eeat: 'E-E-A-T & Yazar Otoritesi',
     cite: 'Kanıt & Alıntı Kalitesi',
-    rag: 'RAG & Anlamsal Parçalama'
+    rag: 'Açıklık & Sayfa Yapısı'
   };
 
   const criteriaData = {
@@ -66,7 +66,7 @@ if (form) {
       advice: 'Sayfanın en başına, arama niyeti sorusunu 50 kelimede doğrudan yanıtlayan ters piramit bir özet ve tanım kutusu yerleştirin.'
     },
     rag_chunks: {
-      name: '256–512 Tokenlık Açık Başlık Hiyerarşisi',
+      name: 'İnsan Odaklı Açık Başlık Hiyerarşisi',
       category: 'rag',
       advice: 'Her H2 ve H3 altında tek bir ana fikri, insanın bağlamı kaybetmeden anlayacağı doğal uzunlukta açıklayın; sabit bir AI token veya kelime hedefi kullanmayın.'
     },
@@ -145,29 +145,29 @@ if (form) {
     };
 
     let gradeLetter = 'A+';
-    let gradeTitle = 'Maksimum Bilgi Kazanımı & Otoriter Lider';
-    let gradeDesc = 'İçeriğiniz tescilli veri, yüksek yazar otoritesi, güçlü alıntılar ve kusursuz RAG anlamsal yapısıyla hem Google hem de LLM aramalarında zirveye aday.';
+    let gradeTitle = 'Güçlü Kanıt ve İçerik Temeli';
+    let gradeDesc = 'Yanıtlarınıza göre içerik; özgün kanıt, açık yazarlık, kaynak kalitesi ve okunabilir yapı açısından güçlü bir öz-değerlendirme sonucu aldı. Bu sonuç sıralama veya AI kaynak gösterimi tahmini değildir.';
 
     if (score >= 90) {
       gradeLetter = 'A+';
-      gradeTitle = 'Maksimum Bilgi Kazanımı & Otoriter Lider';
-      gradeDesc = 'İçeriğiniz tescilli veri, yüksek yazar otoritesi, güçlü alıntılar ve kusursuz RAG anlamsal yapısıyla hem Google hem de LLM aramalarında zirveye aday.';
+      gradeTitle = 'Güçlü Kanıt ve İçerik Temeli';
+      gradeDesc = 'Yanıtlarınıza göre içerik; özgün kanıt, açık yazarlık, kaynak kalitesi ve okunabilir yapı açısından güçlü bir öz-değerlendirme sonucu aldı. Bu sonuç sıralama veya AI kaynak gösterimi tahmini değildir.';
     } else if (score >= 75) {
       gradeLetter = 'A';
-      gradeTitle = 'Yüksek E-E-A-T & Güçlü Bilgi Kazanımı';
-      gradeDesc = 'Güçlü bir temel ve net bir uzmanlık var. Birkaç küçük veri ve biçimlendirme eksiğini tamamlayarak A+ lider seviyesine çıkabilirsiniz.';
+      gradeTitle = 'İyi Temel — Birkaç Kanıt Boşluğu Var';
+      gradeDesc = 'Yanıtlarınız iyi bir içerik temeline işaret ediyor. Eksik görünen kanıt ve açıklık alanlarını kullanıcıya gerçek değer sağladığı ölçüde geliştirin.';
     } else if (score >= 55) {
       gradeLetter = 'B';
-      gradeTitle = 'Orta Düzey — Standart İçerik, Özgünlük Artırılmalı';
-      gradeDesc = 'İçeriğiniz temel bilgileri veriyor ancak webdeki diğer kaynaklardan yeterince ayrışmıyor. Birincil veri ve interaktif araç eklemelisiniz.';
+      gradeTitle = 'Orta Düzey — Özgün Değer Netleştirilmeli';
+      gradeDesc = 'Yanıtlarınız içeriğin temel bilgileri verdiğini, fakat ilk elden kanıt veya karar desteğinin daha görünür olabileceğini gösteriyor. Yalnız doğrulayabildiğiniz unsurları ekleyin.';
     } else if (score >= 35) {
       gradeLetter = 'C';
-      gradeTitle = 'Zayıf Bilgi Kazanımı — Jenerik AI İçeriği Riski';
-      gradeDesc = 'Sayfanız arama motorları ve yapay zekâ botları tarafından jenerik/derleme olarak algılanabilir. Yazar profili ve tescilli veri eksikliği ciddi sıralama riski oluşturuyor.';
+      gradeTitle = 'Geliştirilmeli — Kanıt ve Şeffaflık Eksikleri';
+      gradeDesc = 'Yanıtlarınıza göre sayfa; kaynak, yazarlık, özgün kanıt veya yapı alanlarında kullanıcı güvenini azaltabilecek boşluklar içeriyor. Öncelikleri gerçek içerikle kapatın.';
     } else {
       gradeLetter = 'Riskli';
-      gradeTitle = 'Yüksek Sıralama Kaybı & İndeks Riski';
-      gradeDesc = 'İçerik E-E-A-T ve Bilgi Kazanımı standartlarının çok gerisinde. Google Yardımcı Olmayan İçerik (Helpful Content) güncellemelerinde ceza alma riski yüksek.';
+      gradeTitle = 'Temel İçerik Kalitesi Gözden Geçirilmeli';
+      gradeDesc = 'Yanıtlarınız önemli kanıt, kaynaklandırma, şeffaflık ve okunabilirlik eksiklerine işaret ediyor. Bu öz-değerlendirme Google cezası, indeks veya sıralama riski ölçmez.';
     }
 
     const titleInput = form.querySelector('[name="content_title"]');
@@ -237,7 +237,7 @@ if (form) {
                 <span>${item.advice}</span>
               </li>
             `).join('')
-          : '<li><strong>Kusursuz Yapı!</strong><span>İçeriğiniz 12 kriterin tamamında üst düzey E-E-A-T ve Bilgi Kazanımı standartlarına sahip.</span></li>';
+          : '<li><strong>Tüm öz-değerlendirme ölçütleri karşılandı.</strong><span>Yanıtları gerçek sayfa içeriğiyle doğrulayın; bu sonuç Google sıralaması veya AI alıntısı garantisi değildir.</span></li>';
       }
 
       // Update Full Checklist Table

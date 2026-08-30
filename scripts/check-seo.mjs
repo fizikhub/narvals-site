@@ -45,7 +45,12 @@ const unsupportedSeoClaims = [
   /\bkesinlikle (?:WebP|AVIF)\b/i,
   /\bkopya içerik cezasını önle/i,
   /\bCore Web Vitals[^<.]{0,60}\bgaranti/i,
-  /\b%100 doğrulukla okuy/i
+  /\b%100 doğrulukla okuy/i,
+  /\bGoogle(?:'ın)? patentli bilgi kazanımı[^<.]{0,100}\bskoru/i,
+  /\byüksek bilgi kazanımı puanı vererek sıralamayı yukarı taşı/i,
+  /\b(?:Google|LLM)[^<.]{0,120}\bzirveye aday/i,
+  /\bHelpful Content[^<.]{0,100}\bceza alma riski yüksek/i,
+  /\b256[–-]512 tokenlık parçalara böl/i
 ];
 
 const countMatches = (value, pattern) => [...value.matchAll(pattern)].length;

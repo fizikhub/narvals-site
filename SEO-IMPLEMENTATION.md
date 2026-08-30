@@ -4,7 +4,7 @@ Son güncelleme: 30 Ağustos 2026
 
 ## Yönetici özeti
 
-Site artık 79 canonical URL, 18 ücretsiz interaktif karar aracı, 40 kaynaklı
+Site artık 81 canonical URL, 18 ücretsiz interaktif karar aracı, 42 kaynaklı
 karar rehberi, 5 konu merkezi hub'ı (E-ticaret, Web Sitesi, Reklam, QR Menü, SEO & GEO),
 blog hub'ı, editoryal politika, RSS, URL bazlı sitemap tarihi, tüm arama ve AI
 tarayıcılarını (Googlebot, OAI-SearchBot, Claude-SearchBot, PerplexityBot, Applebot,
@@ -75,21 +75,19 @@ yayıncı şimdilik Narvals Labs organizasyonudur.
 - Statik ana içerik; JavaScript beklemeden okunabilir HTML.
 - Her sayfada benzersiz title/description, self-canonical, `tr` + `x-default`,
   OG/Twitter kartı, Schema.org varlık temelli GEO işaretlemesi (ülke, dil, hizmet alanı ve doğrulanmış iletişim), yazar, manifest, RSS keşif bağlantısı, OpenSearch 1.1 arama tanımı (`/opensearch.xml`) ve AI bağlam keşfi (`rel="describedby"` -> `/llms.txt`).
-- COOP ve CORP Güvenlik İzolasyonu: `Cross-Origin-Opener-Policy: same-origin` ve `Cross-Origin-Resource-Policy: same-origin` ile tarayıcı düzeyinde pencere izolasyonu ve Spectre koruması.
-- Wikidata Knowledge Graph Ayrıştırması: `OnlineBusiness` şemasındaki `knowsAbout` varlıkları küresel Wikidata Concept URI'lerine bağlanarak tam anlamsal netlik sağlandı.
-- Speculation Rules API (`<script type="speculationrules">`): Dahili bağlantılarda kullanıcı etkileşimi ve hover durumunda anlık sayfa geçişleri (<50ms) sağlayan modern tarayıcı standardı.
+- COOP ve CORP güvenlik başlıkları: `Cross-Origin-Opener-Policy: same-origin` ve `Cross-Origin-Resource-Policy: same-origin` ile tarayıcı kaynak ve pencere sınırları sıkılaştırıldı.
+- Doğrulanmış konu eşlemesi: `OnlineBusiness` şemasındaki uygun `knowsAbout` kavramları ilgili Wikidata URI'lerine bağlandı; bu bağlantılar sıralama veya Knowledge Graph sonucu garanti etmez.
+- Speculation Rules API (`<script type="speculationrules">`): Uygun dahili bağlantılar destekleyen tarayıcılarda ölçülü biçimde önceden getirilebilir; gerçek hız etkisi ağ, önbellek ve tarayıcı kararına bağlıdır.
 - WebMCP (Web Model Context Protocol): 18 interaktif hesaplama ve denetim aracı için tarayıcı AI modellerine yönelik güvenli, deterministik, salt-okunur declarative/imperative araç sözleşmeleri ve 36 eval test senaryosu.
 - WebApplication Şema Zenginleştirmesi: 18 interaktif araç `educationalUse`, `applicationCategory: 'BusinessApplication'`, `operatingSystem: 'All modern web browsers'`, `permissions: 'none'` ve `isAccessibleForFree: true` ile zenginleştirildi.
-- Atomic Passage Extractability ve Text Fragments (`#:~:text=`): Her H2 alt başlığının ilk 100 kelimesinde doğrudan cevabın yer alması, dolgu metinsiz yüksek olgu yoğunluğu ve semantik passage chunking mimarisi.
-- ColBERT Late Interaction & MaxSim Token Uyumu: Token düzeyinde anlamsal temsil ve ince taneli terim eşleşmesiyle nöral yeniden sıralayıcılarda (neural rerankers) en yüksek skoru üreten atomik içerik mimarisi.
-- Reciprocal Rank Fusion (RRF, k=60): BM25 seyrek anahtar kelime eşleşmesi ile yoğun vektör aramalarının birleşiminde zirve pozisyonu garantileyen hibrit arama uyumu.
-- Google Twiddler ve Topical Focus: `siteFocusScore` ve `siteRadius` topikal kısıtlarına tam uyumlu, sapmasız dijital odak ve `EntityAnnotations` Knowledge Graph şebekesi.
-- Perplexity & SearchGPT RAG Reranking Uyumu: İlk %30 doğrudan cevap yerleşimi, context-aware embeddings ve çok katmanlı kalite filtrelerine tam uyumlu şema varlık ağı (`about`, `mentions`, `knowsAbout`, `isPartOf`).
-- NavBoost ve Glue Görev Tamamlama: Dwell time ve Last Longest Click sinyallerini maksimize eden 18 yerel hesaplama aracı, sıfır pogo-sticking ve W3C/Schema.org doğrulanabilir citation grafı.
-- 40 rehberde görünür standart `<img>`, `og:image`, Twitter, `primaryImageOfPage`
+- İnsan odaklı bölüm yapısı: Başlık, paragraf, liste ve tablolar konuya göre okunabilir bölümler kurar; sabit token, kelime veya “AI chunk” hedefi uygulanmaz.
+- Akademik retrieval bulguları yalnız araştırma bağlamıyla yorumlanır: ColBERT, RRF veya başka kapalı sistem varsayımlarının canlı arama motorlarında site sahibinin kontrol ettiği bir uyum skoru olduğu iddia edilmez.
+- Özgün karar desteği: Hesaplayıcılar ve karşılaştırma tabloları kullanıcı görevini tamamlamaya yardım eder; dwell time, pogo-sticking, sıralama veya citation sonucu vaat etmez.
+- Schema varlık grafı görünür içeriği tanımlar. `about`, `mentions`, `knowsAbout` ve `isPartOf` alanları yalnız doğrulanabilen ilişkiler için kullanılır; özel GEO şeması veya reranking garantisi değildir.
+- 42 rehberde görünür standart `<img>`, `og:image`, Twitter, `primaryImageOfPage`
   ve `BlogPosting.image` alanlarını aynı 1200×675, 16:9 konu görseline bağlayan
   Discover/görsel arama katmanı; gerçek JPEG ölçüsü ve alt metin build kapısı.
-- 79 canonical URL'yi tek manifestten yöneten build, sitemap ve SEO kontrolü;
+- 81 canonical URL'yi tek manifestten yöneten build, sitemap ve SEO kontrolü;
   key/path/file/tarih ve ilgili içerik hedefleri için başlangıç doğrulamaları.
 - URL başına gerçek içerik değişikliğine bağlı `lastmod`; build tarihi kullanılmaz.
 - Wildcard `robots.txt` ile açık tarama ve tek sitemap bildirimi.

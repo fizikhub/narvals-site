@@ -24,6 +24,45 @@ Bu nedenle uygulama önceliği şöyledir:
 4. Gerçek ekip deneyimi, vaka, yöntem, özgün veri ve üçüncü taraf mention.
 5. Arama sırası ile AI citation/mention/referral ölçümlerinin ayrı izlenmesi.
 
+## 30 Ağustos 2026 kanıt dili ve öz-denetim güvenilirliği turu
+
+Google'ın 2026 üretken AI optimizasyon rehberi, insan odaklı içerik rehberi ve
+spam politikası; OpenAI'ın güncel crawler ayrımı; 2023–2026 GEO literatürünün
+eleştirel taraması ve güncel Reddit saha tartışmaları yeniden karşılaştırıldı.
+Ortak sonuç, site sahibinin görebildiği bir “Google Information Gain skoru”,
+evrensel RAG parça boyutu veya içerikten sıralama/citation tahmini bulunmadığıdır.
+
+Bu nedenle E-E-A-T ve bilgi kazanımı aracı yeniden çerçevelendi:
+
+- Araç artık Google metriği değil, kullanıcının kendi yanıtlarına dayalı 12
+  maddelik içerik öz-değerlendirmesi olduğunu sonuç ekranında açıkça söyler.
+- “256–512 token”, “zirveye aday”, “ceza alma riski” ve patentten canlı sıralama
+  sonucu çıkaran ifadeler kaldırıldı.
+- E-E-A-T içeriğinde fiziksel adres, kişi yazarı, sosyal profil veya inceleme
+  kurulunun her site için zorunlu olduğu yönündeki genellemeler düzeltildi.
+- Organization şemasındaki `knowsAbout` alanından NavBoost ve RAG optimizasyonu
+  gibi doğrulanamayan ranking uzmanlığı iddiaları çıkarıldı; görünür hizmet ve
+  yayın yaklaşımıyla uyumlu somut konular bırakıldı.
+- Aynı yanıltıcı iddiaların tekrar yayınlanmasını engelleyen build kalıpları
+  eklendi.
+
+Reddit'teki AI crawler ve `llms.txt` tartışmaları yalnız hipotez kaynağı olarak
+kullanıldı: toplulukta arama botu ile eğitim botunu ayırma ve sunucu loglarında
+gerçek erişimi ölçme yaklaşımı tekrar ediyor; `llms.txt` için nedensel sıralama
+kanıtı bildirilmiyor. Resmî kaynaklar bu sınırı destekliyor: Google, `llms.txt`
+dosyasını arama görünürlüğü için yok saydığını; OpenAI ise OAI-SearchBot,
+GPTBot ve ChatGPT-User rollerinin birbirinden farklı olduğunu açıklıyor.
+
+Kaynaklar: [Google üretken AI optimizasyon rehberi](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide),
+[Google insan odaklı içerik rehberi](https://developers.google.com/search/docs/fundamentals/creating-helpful-content),
+[Google spam politikası](https://developers.google.com/search/docs/essentials/spam-policies),
+[OpenAI crawler dokümantasyonu](https://developers.openai.com/api/docs/bots),
+[KDD 2024 GEO çalışması](https://arxiv.org/abs/2311.09735),
+[2023–2026 GEO kritik taraması](https://arxiv.org/abs/2607.14035),
+[citation selection–absorption çalışması](https://arxiv.org/abs/2604.25707),
+[r/TechSEO AI crawler tartışması](https://www.reddit.com/r/TechSEO/comments/1op42ux/)
+ve [r/SEO_LLM llms.txt tartışması](https://www.reddit.com/r/SEO_LLM/comments/1ts3djx/).
+
 ## 30 Ağustos 2026 Google spam, içerik kalitesi ve güvenlik Ar-Ge turu
 
 Google'ın 28 Ağustos 2026 site reputation açıklaması, güncel spam politikası,

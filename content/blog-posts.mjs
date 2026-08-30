@@ -721,13 +721,13 @@ export const blogPosts = [
     published: '2026-08-30T00:00:00+03:00',
     modified: '2026-08-30T00:00:00+03:00',
     readingTime: 13,
-    answer: 'E-E-A-T (Deneyim, Uzmanlık, Otoriterlik ve Güvenilirlik), Google’ın Arama Kalitesi Değerlendirme İlkeleri’nde (Quality Rater Guidelines) tanımlanan ve temel sıralama algoritmaları tarafından taranan güven çerçevesidir. Sahte yazar profilleri veya jenerik metinler yerine doğrulanabilir dijital ayak izine sahip uzman biyografileri, açık editoryal ilkeler, birinci el test kanıtları ve kurumsal şeffaflık ile inşa edilir.',
+    answer: 'E-E-A-T; deneyim, uzmanlık, otoriterlik ve güvenilirlik kavramlarını birlikte anlatan bir kalite çerçevesidir. Google, E-E-A-T’nin tek bir sıralama faktörü veya site sahibinin ölçebildiği sayısal skor olmadığını; güvenin bu çerçevede en önemli unsur olduğunu açıklar. İçeriğin konusu ve amacıyla orantılı yazarlık, kaynak, birinci elden kanıt ve kurumsal şeffaflık okurun güven değerlendirmesine yardım eder.',
     takeaways: [
       'E-E-A-T’nin kalbinde “Güven (Trust)” yer alır; Deneyim, Uzmanlık ve Otorite güveni destekler.',
-      'Doğrulanabilir dijital ayak izi (LinkedIn, yayınlar, akademik profil) olmayan sahte yazarlar risklidir.',
-      'Birinci el test ekran görüntüleri, gerçek proje metrikleri ve vaka çalışmaları birinci “E”yi (Deneyim) kanıtlar.',
-      'Açık künye, fiziksel adres, şirket unvanı, telefon ve editoryal politika sayfası zorunludur.',
-      'YMYL (Paranız veya Hayatınız) konularında uzman doğrulaması ve inceleme kurulu şarttır.'
+      'Hayalî kişi profili üretmeyin; yazar veya yayıncı bilgisini içeriğin gerçek sorumluluğuna göre gösterin.',
+      'Birinci el test ekran görüntüleri, yöntem ve sınırları açıklanmış proje ölçümleri deneyimi görünür kılabilir.',
+      'İşletme adı, iletişim, fiziksel adres ve editoryal politika yalnız gerçek ve uygulanabilir olduğu ölçüde yayımlanmalıdır.',
+      'Sağlık ve finansal güvenlik gibi YMYL konularında güçlü güven ve uzmanlık sinyalleri daha fazla önem taşır.'
     ],
     about: ['E-E-A-T', 'Yazar Otoritesi', 'Google Güven Sinyalleri', 'Search Quality Raters', 'Editoryal Şeffaflık'],
     mentions: ['Information Gain', 'Knowledge Graph', 'Teknik SEO', 'İçerik Kalitesi', 'Kullanıcı Deneyimi'],
@@ -735,9 +735,9 @@ export const blogPosts = [
     servicePath: '/hizmetler/web-tasarim/',
     serviceLabel: 'Güvenilir web ve içerik altyapısını inceleyin',
     faq: [
-      { question: 'E-E-A-T doğrudan bir Google sıralama algoritması mıdır?', answer: 'E-E-A-T tek bir sıralama faktörü veya sayısal metrik değildir; Google’ın arama kalitesi değerlendiricilerine kılavuzluk eden ve temel sıralama algoritmalarının (Helpful Content, Core Ranking) ölçmeye çalıştığı bütüncül bir güven konseptidir.' },
-      { question: 'Yapay zekâ (AI) ile içerik üretmek E-E-A-T’ye aykırı mıdır?', answer: 'Google yapay zekâ kullanımını tek başına cezalandırmaz; ancak uzman denetimi olmayan, özgün deneyim veya yeni veri içermeyen ölçekli AI metinleri düşük kalite (low quality) olarak değerlendirilir.' },
-      { question: 'Yazar profilinde hangi bilgiler yer almalıdır?', answer: 'Yazarın tam adı, unvanı, profesyonel biyografisi, uzmanlık alanı, çalıştığı kurum, LinkedIn / GitHub / Scholar profilleri ve editoryal sorumluluğu açıkça belirtilmelidir.' },
+      { question: 'E-E-A-T doğrudan bir Google sıralama algoritması mıdır?', answer: 'Hayır. Google, E-E-A-T’nin tek bir sıralama faktörü veya sayısal metrik olmadığını açıklar. Kalite değerlendirici ilkelerinde kullanılan bu çerçeve, Google sistemlerinin yararlı ve güvenilir içeriği değerlendirme amacını anlamaya yardım eder.' },
+      { question: 'Yapay zekâ (AI) ile içerik üretmek E-E-A-T’ye aykırı mıdır?', answer: 'Hayır. Google üretim aracından çok içeriğin doğruluğuna, kalitesine ve amacına bakılmasını önerir. Kullanıcıya değer katmadan çok sayıda sayfa üretmek ise nasıl üretildiğinden bağımsız olarak scaled content abuse kapsamına girebilir.' },
+      { question: 'Yazar profilinde hangi bilgiler yer almalıdır?', answer: 'İçeriğin gerçek sorumlusu kimse adı veya kurum bilgisi, ilgili deneyimi, uzmanlığı, editoryal rolü ve doğrulanabilir profilleri yalnız mevcut ve yararlı olduğu ölçüde gösterilmelidir. Her içerik için kişi yazarı veya her sosyal profil zorunlu değildir.' },
       { question: 'Deneyim (Experience) faktörü içerikte nasıl kanıtlanır?', answer: 'Yalnızca teorik bilgi vermek yerine; gerçek test sonuçları, kullanılan araçların arayüz ekran görüntüleri, yaşanan teknik zorluklar ve somut vaka metrikleri paylaşarak kanıtlanır.' }
     ],
     sections: [
@@ -746,7 +746,7 @@ export const blogPosts = [
         label: 'E-E-A-T sütunları',
         heading: 'E-E-A-T’nin dört sütunu: Deneyim, Uzmanlık, Otorite ve Güven.',
         paragraphs: [
-          'Google 2022 yılında E-A-T kavramına ilk “E” harfini, yani “Deneyim (Experience)” boyutunu eklemiştir. Bir konuyu yalnızca teorik olarak bilmek (Uzmanlık) yetersizdir; o ürünü bizzat kullanmış, o kodu yazmış veya o projeyi canlıya almış olmak (Deneyim) en kritik ayırt edici sinyaldir.',
+          'Google 2022 yılında E-A-T kavramına “Deneyim (Experience)” boyutunu ekledi. Konuya göre bir ürünü kullanmış, bir süreci uygulamış veya benzer bir durumu yaşamış olmak yararlı birinci elden bağlam sağlayabilir; bazı konular ise resmî veya uzman kaynak gerektirir.',
           'Tüm bu yapının merkezinde ise “Güvenilirlik (Trustworthiness)” yer alır. Deneyim, uzmanlık ve otorite sinyalleri, kullanıcıya ve arama motoruna güven vermek için çalışan destekleyici mekanizmalardır.'
         ],
         table: {
@@ -764,23 +764,23 @@ export const blogPosts = [
         label: 'Yazar şeffaflığı',
         heading: 'Doğrulanabilir yazar biyografileri ve editoryal politika.',
         paragraphs: [
-          'Anonim yazarlar veya stok fotoğraflarla oluşturulmuş sahte uzman profilleri Google’ın kalite sistemleri tarafından hızla tespit edilir. Her içeriğin altında yazarın adı, uzmanlık alanı ve harici doğrulanabilir sosyal/akademik profillerine bağlantı yer almalıdır.',
-          'Ayrıca sitenin bir `/editoryal-ilkeler/` sayfası barındırması; içeriklerin nasıl hazırlandığını, kaynakların nasıl doğrulandığını ve hata düzeltme süreçlerini şeffafça açıklaması kurumsal güveni perçinler.'
+          'Hayalî uzman profili, uydurma unvan veya izinsiz stok kişi görseli kullanmayın. İçeriğin gerçek sorumlusu bir kişi, ekip ya da kurum olabilir; okurun konuyla ilgili yeterlilik ve sorumluluğu anlayacağı doğru bilgiyi gösterin.',
+          'Ayrıca bir editoryal ilkeler sayfası; içeriklerin nasıl hazırlandığını, kaynakların nasıl doğrulandığını ve hata düzeltme sürecini okura açıklayabilir. Böyle bir sayfa tek başına sıralama veya güven üretmez; uygulamayla tutarlı olmalıdır.'
         ],
         ordered: [
-          '<strong>Yazar Biyografi Sayfası:</strong> Her yazar için ad, fotoğraf, biyografi ve tüm makalelerini listeleyen ayrı bir yazar sayfası oluşturun.',
-          '<strong>Harici Varlık Bağlantıları:</strong> Yazarın LinkedIn, Twitter, GitHub veya Google Scholar profillerini şemada `sameAs` ile bağlayın.',
+          '<strong>Yazar veya Yayıncı Bilgisi:</strong> İçeriğin gerçek sorumlusunu, ilgili deneyimini ve editoryal rolünü görünür biçimde açıklayın.',
+          '<strong>Harici Varlık Bağlantıları:</strong> Yalnız gerçekten aynı kişi veya kuruma ait doğrulanabilir profilleri, kullanıcı için yararlıysa `sameAs` ile bağlayın.',
           '<strong>Editoryal İlke Yayını:</strong> Kaynaklandırma, yapay zekâ kullanım şeffaflığı ve düzeltme politikanızı sitede açıkça yayımlayın.',
           '<strong>Tarih Şeffaflığı:</strong> İlk yayın tarihi ile son güncelleme tarihini kullanıcılara ve botlara açıkça gösterin.'
         ],
-        callout: 'Google Kalite Değerlendirici İlkeleri: “Sayfanın arkasında kimin olduğunu bilmek, güven değerlendirmesinin en temel adımıdır.”'
+        callout: 'Google, güvenin E-E-A-T ailesinin en önemli unsuru olduğunu; içeriğin arkasındaki kişi veya site hakkında açık bilgi vermenin güven değerlendirmesine yardım edebileceğini belirtir.'
       },
       {
         id: 'birinci-el-kanitlar',
         label: 'Özgün kanıtlar',
         heading: 'İçerikte birinci el deneyim ve vaka kanıtı üretme yöntemleri.',
         paragraphs: [
-          'İnternetteki mevcut kaynakların özetini çıkaran jenerik içerikler Google’ın Bilgi Kazanımı (Information Gain) filtrelerine takılır. E-E-A-T puanı yüksek bir içerik mutlaka özgün test verisi, karşılaştırma matrisi veya hesaplama aracı içermelidir.',
+          'İnternetteki mevcut kaynakları yalnız yeniden özetleyen içerik kullanıcıya sınırlı değer sunar. Google özgün bilgi, analiz ve birinci elden deneyimi önerir; yayımlanmış “bilgi kazanımı” patentleri ise site sahibinin ölçebildiği bir skorun veya canlı sıralama filtresinin kanıtı değildir.',
           'Örneğin bir teknik makalede yalnızca “hız optimizasyonu önemlidir” demek yerine, laboratuvar ve saha test sonuçlarını, kullanılan sunucu konfigürasyonlarını ve öncesi/sonrası metriklerini paylaşmak gerekir.'
         ],
         checklist: [
@@ -795,12 +795,12 @@ export const blogPosts = [
         label: 'Kurumsal künye',
         heading: 'İletişim, yasal kimlik ve kurumsal şeffaflık standartları.',
         paragraphs: [
-          'Bir web sitesinin güvenilirliği yalnız blog yazılarıyla değil, sitenin tamamındaki kurumsal şeffaflıkla belirlenir. Footer ve iletişim sayfalarında tam ticari unvan, açık fiziksel adres, doğrulanmış e-posta ve telefon numarası yer almalıdır.',
-          'Ayrıca gizlilik politikası, kullanım koşulları, çerez politikası ve gerekiyorsa iade/iptal şartları standartlara uygun olarak erişilebilir olmalıdır.'
+          'Bir web sitesinin güvenilirliği yalnız blog yazılarıyla değil, sitenin tamamındaki kurumsal şeffaflıkla değerlendirilir. İşletme adı, hizmet kapsamı ve gerçekten kullanılan iletişim yolları açık olmalı; fiziksel adres yalnız işletmenin gerçek ve kullanıcıya açık konumu varsa yayımlanmalıdır.',
+          'Gizlilik, kullanım, çerez ve iade/iptal açıklamaları yalnız sitenin gerçek veri ve ticaret akışına göre, gerektiğinde yetkili hukuk danışmanıyla hazırlanmalıdır. Şablon metin eklemek tek başına güven sinyali değildir.'
         ],
         checklist: [
-          'Footer alanında tam ticari unvan ve tescilli marka adını belirtin.',
-          'İletişim sayfasında yanıt verme sürelerini ve resmi destek kanallarını netleştirin.',
+          'Yasal/ticari unvan ve marka ilişkisini yalnız doğrulanmış bilgiyle belirtin.',
+          'İletişim sayfasında gerçekten kullanılan destek kanallarını netleştirin; doğrulanmamış yanıt süresi vaat etmeyin.',
           'Müşteri yorumlarında doğrulanabilir üçüncü taraf platformlara (Google İşletme, Trustpilot vb.) atıfta bulunun.',
           'Site genelinde E-E-A-T denetimi yapmak için Narvals Bilgi Kazanımı Denetleyicisini kullanın.'
         ]
