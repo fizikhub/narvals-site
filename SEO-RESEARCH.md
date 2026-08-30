@@ -501,93 +501,65 @@ esas alındı.
 Uygulanan ayrıntılı sorgu haritası ve yayın planı `SEO-IMPLEMENTATION.md`
 dosyasındadır.
 
-## 30 Ağustos 2026 on birinci akademik GEO, Information Gain ve LLM indeksleme denetimi
+## 30 Ağustos 2026 kanıt sınırı yeniden denetimi
 
-Bu turda akademik literatür (Princeton, Georgia Tech, Allen AI, IIT Delhi - KDD 2024 GEO-bench çalışması, ACL 2024 WebCiteS, SIGIR 2026), Google Bilgi Kazanımı (Information Gain) patentleri (US11354342B2 & US10621249), Reddit TechSEO/BigSEO 2025–2026 saha gözlemleri ve Chrome Speculation Rules API standartları birlikte incelendi:
+Önceki araştırma notlarındaki kapalı sistemlere ilişkin kesin hükümler yeniden
+incelendi. Google, OpenAI, Anthropic ve Perplexity; tarama erişimini ve bazı ürün
+rollerini açıklar, fakat üretimdeki sıralama, yeniden sıralama, pasaj boyutu veya
+kaynak seçme formüllerini yayımlamaz. Bu nedenle aşağıdaki ayrımlar korunmalıdır:
 
-- **Akademik GEO Bulguları (KDD 2024):** 10.000 sorguluk kontrollü GEO-bench çalışması; yapay zekâ yanıt motorlarında (ChatGPT, Perplexity, Gemini, Claude) kaynak olarak seçilme ve alıntılanma oranını en çok artıran faktörlerin doğrulanabilir istatistiksel veriler, somut karşılaştırma tabloları, açık teknik tanımlar ve ilk elden karar metinleri (%30–40 arası görünürlük artışı) olduğunu ortaya koydu. Salt anahtar kelime tekrarının ve bağlamsız metin uzatmanın ise citation skorunu düşürdüğü doğrulandı.
-- **Google Information Gain Patentleri:** Google patentlerinde belgelenen "Information Gain Score", bir içeriğin kullanıcının daha önce karşılaştığı web konsensüsüne kıyasla sunduğu özgün bilgi farkını ("Knowledge Delta", entropi azaltımı) ölçer. Standart genel tanımları tekrarlayan sayfalar düşük puan alırken; özgün hesaplama modelleri (ROAS, CPA, Tarama Bütçesi, Dönüşüm Oranı simülasyonları), yöntem sınırları ve somut karar matrisleri yüksek bilgi kazanımı üretir.
-- **LLM / AI Botlarının Parçalama (Chunking) Mekanizması:** LLM arama ajanları (OAI-SearchBot, Claude-SearchBot, PerplexityBot, Applebot vb.) sayfaları anlamsal HTML bloklarına (`<header>`, `<main>`, `<article>`, `<section>`, `<table>`, `<dl>`, `<blockquote>`) göre parçalar. Sayfa ve bölüm başlarındaki doğrudan tanımlar ("Answer Capsules") RAG embedding aramalarında en yüksek kosinüs benzerliğini alarak yanıtlara taşınır.
-- **Reddit TechSEO Saha Deneyimleri:** 2025–2026 topluluk tartışmaları; Google'ın "Crawled - currently not indexed" durumunu önlemek için düşük TTFB, sıfır gereksiz JS yükü, temiz iç bağlantı hiyerarşisi ve tekil varlık şemasının zorunlu olduğunu gösteriyor.
-- **Speculation Rules API Entegrasyonu:** Modern tarayıcılarda (Chrome 121+) dahili gezinmeyi anlık (instant navigation, <50ms) hale getiren Speculation Rules API (`prefetch` moderate, `prerender` conservative) uygulanarak Core Web Vitals ve kullanıcı tutma oranı en üst seviyeye taşındı.
+- KDD 2024 GEO sonuçları kontrollü bir benchmark'a aittir. Kaynak ve istatistik
+  ekleme bazı koşullarda görünürlüğü artırmıştır; bu sonuç canlı Google sırası,
+  ChatGPT citation'ı veya her sektör için sabit artış vaadi değildir.
+- Google patentleri ve kamuya sızan/mahkeme dosyalarındaki alan adları olası
+  sistem bileşenleri hakkında araştırma ipucu verebilir. Bir patent ya da alan
+  adı, özelliğin bugün kullanıldığını, ağırlığını veya site sahibi tarafından
+  optimize edilebilir bir metrik olduğunu kanıtlamaz.
+- ColBERT, RRF, dense retrieval ve passage ranking akademik/teknik bilgi erişim
+  yöntemleridir. ChatGPT Search, Perplexity, Claude veya Google'ın aynı modeli,
+  aynı sabiti ya da aynı pasaj penceresini kullandığı varsayılamaz.
+- Semantik HTML, kısa ve açık bölümler, tablolar ve kaynaklar önce insanın bilgiyi
+  anlamasına ve erişilebilirliğe yarar. Bunların AI citation olasılığını belirli
+  bir yüzdeyle artırdığı veya gizli bir “zero-vector penalty”yi kaldırdığına dair
+  yayımlanmış platform garantisi yoktur.
+- `llms.txt`, OpenSearch, Wikidata bağlantıları ve geniş Schema.org özellikleri
+  yardımcı makine açıklamaları olabilir; Google bunların hiçbirini özel bir AI
+  sıralama şartı olarak istemez. İşaretleme yalnız görünür ve doğrulanabilir
+  içeriği temsil etmelidir.
+- COOP/CORP ve güvenlik başlıkları saldırı yüzeyini azaltan savunma katmanlarıdır;
+  riski sıfırlamaz ve doğrudan SEO sıralama sinyali olarak sunulmamalıdır.
+- PWA manifesti, prefetch/prerender ve modern CSS kullanıcı deneyimini belirli
+  tarayıcılarda iyileştirebilir. Gerçek Core Web Vitals ve dönüşüm etkisi saha
+  ölçümü olmadan ileri sürülmemelidir.
 
-## 30 Ağustos 2026 on ikinci RAG, Passage Chunking ve Fractal Content Model mimarisi
+Bu yeniden denetim sonucunda strateji; gizli algoritmayı tahmin etmekten
+çıkarılarak taranabilir HTML, doğru kurum bilgisi, alakalı iç bağlantılar, özgün
+karar desteği, kaynak doğruluğu ve gerçek kullanıcı dönüşümünün ölçülmesine
+bağlandı.
 
-Bu turda 2025–2026 RAG (Retrieval-Augmented Generation) literatürü, Passage Ranking algoritmaları ve LLM chunking modelleri derinlemesine incelendi:
+## 30 Ağustos 2026 Türkiye ticari sorgu ve güven araştırması
 
-- **Answer Density (Cevap Yoğunluğu) Standardı:** LLM yanıt motorları ve Google AI Overviews, kelime kalabalığı (narrative fluff) içeren sayfalar yerine, kelime başına düşen doğrulanabilir olgu ve karar oranı yüksek metinleri filtreler. Dolgu metin içeren kısımlar embedding aşamasında "Zero-Vector Penalty" alırken; doğrudan sonuç veren net paragraflar yüksek ağırlık kazanır.
-- **Fractal Content Model (Fraktal İçerik Mimarisi):** Sayfadaki her H2 alt başlığı ve bölümü, kendi başına bağımsız bir "mikro-karar rehberi" (standalone passage) olarak tasarlanır. LLM bir sayfadan yalnızca tek bir 150–250 kelimelik bölümü RAG bağlamına aldığında dahi, bağlam kaybı (semantic drift) yaşamadan tam ve yetkili bir yanıt üretir.
-- **Passage Chunking ve Anlamsal HTML Blokları:** LLM crawler'larının içeriği 100–300 kelimelik pencerelere bölme mekanizmasına uygun olarak; semantik `<section id="...">`, `<h2/h3>`, `<p class="article-answer">`, `<table>`, `<dl>` ve `<aside class="article-callout">` etiketleri kullanılarak embedding uyumu maksimize edildi.
-- **Entity Salience ve Hibrit Arama (BM25 + Dense Retrieval / RRF):** Arama motorlarının Reciprocal Rank Fusion (RRF) algoritmalarında öne çıkmak için anahtar kelime tekrarı yerine kesin teknik varlık adları, somut sayısal eşikler ve net karar sınırları yerleştirildi.
+“E-ticaret sitesi yaptırma”, “Google Ads ajansı” ve “Meta reklam ajansı” sorguları
+için incelenen Türkiye sonuçlarında fiyat/teklif şeffaflığı güçlü bir karşılaştırma
+temasıydı. Rakip örnekleri kesin pazar fiyatı veya kalite kanıtı sayılmadı; hangi
+soruların satın alma kararında görünür olduğunu belirlemek için kullanıldı.
 
-## 30 Ağustos 2026 on üçüncü Perplexity/SearchGPT RAG mimarisi, Unlinked Mention ve Entity Salience denetimi
+Akademik e-ticaret ve çevrimiçi güven çalışmaları da bilgi şeffaflığı, algılanan
+fiyat adaleti, satıcı güveni ve riskin satın alma niyetiyle ilişkili olduğunu
+bildiriyor. Örneklem, ülke ve ürün türü etkileri nedeniyle bu bulgular Narvals için
+nedensel dönüşüm garantisi değildir. Uygulanabilir ve dürüst sonuç, üç ana hizmet
+sayfasında şu kalemleri görünür biçimde ayırmaktır:
 
-Bu turda Perplexity ve SearchGPT'nin çok aşamalı RAG (Retrieval-Augmented Generation) işlem hatları, unlinked mention (bağlantısız marka anılmaları) korelasyonları ve pasaj çıkarma modelleri incelendi:
+- Platforma/üçüncü tarafa ödenen bütçe ile Narvals hizmet bedeli.
+- Yönetim, ölçüm, kreatif/sayfa üretimi ve entegrasyon sınırları.
+- Alan adı, reklam hesabı, analitik, Pixel ve diğer dijital varlıkların sahipliği.
+- Tek seferlik proje giderleri, dönemsel servis ücretleri ve yayın sonrası destek.
+- Sonuç garantisi yerine doğrulanabilir kapsam, erişim ve ölçüm soruları.
 
-- **Perplexity 6 Aşamalı RAG ve 3 Katmanlı Reranking:** Perplexity ve modern nöral arama motorları; sorgu niyeti ayrıştırma, BM25 + yoğun vektör hibrit erişimi ve 3 katmanlı filtreleme (Alaka puanı -> 12–18 aylık tazelik ve otorite -> XGBoost / Cross-encoder kalite kapısı) kullanır. Son aşamada yalnızca açık entity sinyali veren ve çelişkisiz kaynaklar alıntılanır.
-- **Unlinked Brand Mentions Ağırlığı (r ≈ 0.66):** 2026 yapay zekâ görünürlük araştırmalarında, bağlantısız marka anılmalarının AI citation oranlarıyla korelasyonunun (r ≈ 0.66), klasik backlink korelasyonundan (r ≈ 0.22) belirgin şekilde daha güçlü olduğu kanıtlandı. LLM'ler link grafiğinden ziyade anlamsal birlikte geçiş (co-occurrence) ve varlık haritasını değerlendirir.
-- **İlk %30 Pasaj Kuralı (First 30% Extractability):** AI modelleri bir sayfanın ilk üçte birlik bölümünde doğrudan, doğrulanabilir bir cevap ("Answer-first" formatı) bulduğunda alıntılama olasılığı katlanarak artar. Rehberlerimiz her alt başlığın ilk paragrafında doğrudan cevabı vererek bu kurala uyar.
-- **Context-Aware Embeddings (`pplx-embed-context-v1`):** Pasajların sayfa genelindeki ana tema ile bağını koparmaması için `Schema.org/WebPage` üzerinde `isPartOf`, `about` ve `mentions` ilişkileri tekil Knowledge Graph düğümüyle perçinlenmiştir.
-
-## 30 Ağustos 2026 on dördüncü NavBoost, Glue ve Task Completion deneyimi denetimi
-
-Bu turda Google'ın organik ve zengin sonuç sıralama sistemleri olan NavBoost, Glue ve kullanıcı görev tamamlama (task completion) mekanizmaları incelendi:
-
-- **NavBoost (13 Aylık Yuvarlanan Etkileşim Hafızası):** Google'ın organik web sonuçları için en güçlü sıralama sinyallerinden biri olan NavBoost; kullanıcıların tıklama, hover, kaydırma ve dwell time verilerini 13 aylık pencerelerde toplar. Sayfada kalma süresini artıran ve arama sonucuna geri dönmeyi ("bad click / pogo-sticking") engelleyen "Last Longest Click" (kullanıcının aradığı cevabı bulduğu son ve en uzun oturum) sinyali önceliklendirildi.
-- **Glue Sistemi ve Zengin SERP Özellikleri:** Arama sonuçlarındaki AI Overviews, hesaplama araçları ve interaktif bileşenlerle kullanıcı etkileşimini değerlendiren Glue sistemi için; 18 interaktif yerel hesaplama aracı ve zengin SSS düğümleri aktif tutuldu.
-- **Bilişsel Yük ve Information Scent Azaltımı:** Kullanıcının karar noktasına en hızlı şekilde ulaşabilmesi için sayfa içi sticky gezinme (`info-toc`), anlık form hesaplamaları ve WCAG uyumlu kontrast/erişilebilirlik standartları korundu.
-- **Makine Tarafından Doğrulanabilir Citation Grafı:** Rehberlerin JSON-LD şemalarında `citation` ve `isBasedOn` özellikleri W3C, Schema.org ve Google Search Central resmî standartlarına doğrudan bağlanarak E-E-A-T kanıt bağı güçlendirildi.
-
-## 30 Ağustos 2026 on beşinci OpenSearch, Crawl Traps ve Googlebot İndeksleme Denetimi
-
-Bu turda modern tarayıcılar ve LLM arama ajanları için standart arama keşif protokolü olan OpenSearch 1.1, Googlebot tarama tuzaklarının (crawl traps) önlenmesi ve "Crawled - currently not indexed" durumuna karşı tam taranabilirlik mimarisi devreye alındı:
-
-- **OpenSearch 1.1 Standart Entegrasyonu (`/opensearch.xml`):** Web sitemizin karar rehberleri ve interaktif araçlar indeksini doğrudan tarayıcıların arama çubuğuna ve otonom yapay zekâ araştırma ajanlarına bağlayan OpenSearch tanımı yayımlandı. Tüm 79 canonical sayfanın `<head>` bloğuna `<link rel="search" ...>` otomatik keşif bağlantısı eklendi.
-- **Googlebot & AI Bot Taranabilirlik Güvencesi:** Tüm sayfaların sıfır JavaScript bağımlılığı ile anında saf HTML olarak işlenmesi ("SSR/SSG Advantage") korundu; Googlebot'un 2. aşama render kuyruğuna (WRS - Web Rendering Service) girmesine gerek kalmaksızın ilk HTTP yanıtında tam metin, şema grafı ve görsel verisi sunulur.
-- **Reddit TechSEO "Crawled - currently not indexed" Teşhisi:** 2025–2026 saha verilerinde bildirilen indeksleme gecikmelerinin en büyük nedeni olan yüzeysel içerik tekrarı ve zayıf iç bağlantılar; 18 interaktif hesaplama aracı, özgün karar algoritmaları, çift yönlü konu kümeleri ve doğrulanmış `OnlineBusiness` Knowledge Graph düğümüyle tamamen bertaraf edildi.
-- **Crawl Trap ve Parametre Koruması:** `robots.txt` wildcard kuralları, temiz canonical URL zinciri ve statik dizin yapısı ile sonsuz döngüler, oturum parametreleri ve yetkisiz yönlendirmeler engellendi.
-
-## 30 Ağustos 2026 on altıncı Wikidata Varlık Ayrıştırması, llms.txt v2 Keşfi ve Güven Standartları Denetimi
-
-Bu turda küresel Knowledge Graph düğümlerinde tam anlamsal netlik (semantic disambiguation), yapay zekâ arama ajanları için programatik v2 bağlam keşfi ve RFC 9116 güvenlik standartları entegre edildi:
-
-- **Wikidata ile Varlık Ayrıştırması (`knowsAbout` sameAs Eşlemesi):** Ana `OnlineBusiness` şemasındaki uzmanlık alanları salt metin olmaktan çıkarılarak küresel Wikidata Concept URI'lerine bağlandı (`Web Tasarımı: Q190637`, `SEO: Q180711`, `E-Ticaret: Q484876`, `Özel Yazılım: Q1341490`, `Dijital Pazarlama: Q1323528`, `Sosyal Medya Pazarlaması: Q261543`, `UX: Q1132455`, `CRO: Q5166418`, `QR Kod: Q12203`, `Schema.org: Q3475338`, `Üretken Yapay Zekâ: Q1170729`, `Google Ads: Q219563`, `OpenSearch: Q1056588`, `API: Q165149`). Bu yapı Google Knowledge Graph, Perplexity ve ChatGPT'nin marka uzmanlığını çelişkisiz tanımasını sağlar.
-- **llms.txt v2 Keşif Standardı (`rel="describedby"`):** Ağustos 2026 llmstxt.org v2 önerisine uygun olarak tüm 79 sayfanın `<head>` bloğuna `<link rel="describedby" type="text/plain" href="/llms.txt" />` ve CDN düzeyinde `Link: </llms.txt>; rel="describedby"` HTTP yanıt başlığı eklendi. Otonom yapay zekâ ajanları dosya yolunu tahmin etmek zorunda kalmadan sayfa bağlamına doğrudan erişir.
-- **WebApplication Güven ve Sınıflandırma Zenginleştirmesi:** 18 interaktif karar aracının şemasına `applicationCategory: 'BusinessApplication'`, `operatingSystem: 'All modern web browsers'`, `permissions: 'none'`, `isAccessibleForFree: true` ve `educationalUse: 'Interactive Calculation & Decision Support Tool'` öznitelikleri uygulandı.
-- **RFC 9116 ve humans.txt Güven Standartları:** `.well-known/security.txt` ve `humans.txt` dosyaları OpenSearch ve llms.txt referanslarıyla güçlendirildi; makine ve araştırmacı düzeyinde kurumsal şeffaflık sağlandı.
-
-## 30 Ağustos 2026 on yedinci COOP/CORP Güvenlik İzolasyonu, Atomic Passage Extractability ve Çok Modlu İndeksleme Denetimi
-
-Bu turda tarayıcı düzeyinde en yüksek güvenlik izolasyonu ve AI yanıt motorlarının pasaj çıkarma (passage ranking & text fragments) mekanizmalarına yönelik ince ayarlar uygulandı:
-
-- **COOP ve CORP Güvenlik İzolasyonu:** CDN ve sunucu katmanında `Cross-Origin-Opener-Policy: same-origin` ve `Cross-Origin-Resource-Policy: same-origin` başlıkları etkinleştirildi. Bu mimari, sitenin pencere bağlamını harici sitelerden izole ederek Spectre yan kanal risklerini sıfırlar ve tarayıcının ana iş parçacığı (main thread) optimizasyonunu güçlendirir.
-- **Atomic Passage Extractability & Text Fragments (`#:~:text=`):** AI Overviews, SearchGPT ve Perplexity'nin RAG aşamasında aradığı "atomik kanıt" standardı pekiştirildi. Her H2 bölümünün ilk 100 kelimesinde doğrudan cevap yer alması; LLM'lerin sayfayı kaynak gösterirken `#:~:text=` ile doğrudan ilgili pasajı vurgulamasına imkân tanır.
-- **MUM ve Çok Modlu (Multimodal) Varlık Korelasyonu:** 40 rehberin görsel varlıkları `<figure class="article-cover">`, `BlogPosting.image` ve `primaryImageOfPage` nesneleriyle semantik olarak birbirine bağlanarak Google MUM ve Gemini görsel-metin arama algoritmalarında tam örtüşme sağlandı.
-
-## 30 Ağustos 2026 on sekizinci Neural Retrieval (ColBERT Late Interaction, RRF) ve Twiddler Kalite Sinyalleri Denetimi
-
-Bu turda nöral bilgi erişimi (Neural Information Retrieval), hibrit RAG füsyonu ve Google sıralama algoritmasının son aşama filtreleri (Twiddlers) derinlemesine incelendi ve site mimarisine entegre edildi:
-
-- **ColBERT Late Interaction ve MaxSim Token Uyumu:** Modern yapay zekâ arama motorları (Perplexity, SearchGPT, Cohere Rerank) içeriği tek bir yoğun vektöre indirgemek yerine token düzeyinde temsil eden ColBERT (Contextualized Late Interaction over BERT) mimarisini ve `MaxSim` operatörünü kullanır. 40 rehber ve 18 araçtaki açık formüller, kesin teknik tanımlar ve sayısal veri noktaları, ColBERT'in token düzeyindeki benzerlik matrisinde en yüksek skorları üretecek şekilde atomik tutuldu.
-- **Reciprocal Rank Fusion (RRF, $k=60$) Hibrit Arama Optimizasyonu:** BM25 seyrek anahtar kelime eşleşmesi ile yoğun anlamsal vektörlerin skor ölçekleri farklı olduğundan, modern RAG sistemleri $RRF = \sum \frac{1}{60 + r}$ formülüyle sıralama pozisyonlarını birleştirir. Sitemizin hem doğrudan terim hem de semantik varlık eşleşmelerinde güçlü olması, RRF füsyonunda her iki yöntemden de pozisyon puanı toplayarak üst sıraya yerleşmesini garantiler.
-- **Google Search API Leak - Twiddler ve Topical Authority:** Google'ın Content API Warehouse belgelerindeki `siteFocusScore` (tematik odaklanma skoru) ve `siteRadius` (topikal sapma kısıtı) mekanizmaları incelendi. Narvals Labs; dijital sistemler, e-ticaret, özel yazılım, reklam ve teknik SEO/GEO dışına taşmayan katı tematik odağıyla `siteRadius` cezasını sıfırlar; Wikidata `EntityAnnotations` ile `topicalAuthority` sinyalini maksimize eder. `QualityBoost` ve `FreshnessTwiddler` mekanizmaları için 18 araç ve gerçek `lastmod` verileri tam uyumludur.
-
-## 30 Ağustos 2026 on dokuzuncu Modern PWA Standartları, Web App Manifest 2026 ve Mobil Kullanıcı Bağlılığı Denetimi
-
-Bu turda sitenin mobil cihazlar ve masaüstü tarayıcılarda bağımsız bir web uygulaması (PWA) olarak çalışabilmesi için W3C Web App Manifest 2026 standartları uygulandı:
-
-- **Web App Manifest 2026 Entegrasyonu (`/site.webmanifest`):** `id: "/"`, `scope: "/"`, `orientation: "any"`, `categories: ["business", "productivity", "utilities"]` ve 4 doğrudan işlem kısayolu (`shortcuts`: Araçlar, Rehberler, Hizmetler, İletişim) eklendi. Mobil kullanıcıların siteyi ana ekrana eklemesi ve araçlara anında erişebilmesi sağlanarak doğrudan kullanıcı sadakati ("Direct Traffic & NavBoost Return Visits") desteklendi.
-- **Sitelinks Searchbox Kaldırılması ve Çekirdek Şema Netliği:** Google'ın Kasım 2024'te resmi olarak sonlandırdığı Sitelinks Searchbox sonrası; gereksiz karmaşıklık yerine temel varlık netliği (`Organization`, `WebSite`, `Service`, `BlogPosting`, `FAQPage`, `BreadcrumbList`) korundu.
-- **İnteraktif Blog Arama Filtresi:** Blog merkezindeki dinamik `?q=` URL parametresi ve anlık JavaScript arama filtresi (`#blog-search-input`) hem kullanıcıların hem de OpenSearch 1.1 arama parametrelerinin kusursuz çalışmasını garanti eder.
-
-## 30 Ağustos 2026 yirminci Semantik `<search>` Elementi, CSS Text-Wrap Balance/Pretty ve Tipografi Erişilebilirliği Denetimi
-
-Bu turda W3C HTML5.3 ve modern CSS Baseline (2024–2026) tipografi standartları tam olarak devreye alındı:
-
-- **Semantik `<search>` Elementi Entegrasyonu:** Blog arama bileşeni generic `<div>` veya eski ARIA landmarkları yerine doğrudan yerel W3C `<search>` elementiyle sarmalandı. Bu yapı ekran okuyucular, modern tarayıcılar ve arama motoru botları için yerel bir gezinme referansı (native landmark) oluşturur.
-- **Modern CSS Tipografi ve Okunabilirlik (`text-wrap: balance` & `text-wrap: pretty`):**
-  - Başlıklar (`h1`, `h2`, `h3`, `h4`, `h5`, `h6`) için `text-wrap: balance` aktif edilerek satır uzunluklarının dengeli ve simetrik dağıtılması sağlandı; görsel bilişsel yük azaltıldı.
-  - Paragraflar ve listeler (`p`, `li`, `dd`) için `text-wrap: pretty` devreye alınarak son satırda tek kelime kalması ("orphan words") engellendi; okuma akıcılığı ve kullanıcı dwell time sinyalleri güçlendirildi.
+Reddit'teki Türkiye odaklı e-ticaret tartışmalarında platforma kilitlenme, sürpriz
+giderler ve projenin kapsamını fiyatla birlikte okuyamama tekrar eden endişelerdi.
+Bunlar öz-seçilimli kullanıcı anlatılarıdır; uygulamaya yalnız akademik şeffaflık
+bulguları ve kullanıcıya açık karar desteğiyle örtüştüğü ölçüde yön verdi.
 
 ## Kanıt matrisi
 
@@ -606,6 +578,9 @@ Bu turda W3C HTML5.3 ve modern CSS Baseline (2024–2026) tipografi standartlar�
 | [ACL 2024 çalışması](https://aclanthology.org/2024.acl-long.403/) | Kaynak seçimi ve yanıt üretiminde içerik alakası, yüzeysel otorite sinyallerinden daha belirleyici olabilir. | Anahtar kelime yığmak yerine her URL’ye tek konu sahipliği verildi. | Model, corpus ve sorgu kümesine bağlı deneysel sonuçtur. |
 | [ACL 2024 WebCiteS](https://aclanthology.org/2024.acl-long.806/) | Atıflı web yanıtlarında kaynak doğruluğu ve iddia desteği ayrı sorunlardır; modeller doğru kaynak göstermekte hâlâ zorlanır. | İddialar birincil kaynağa yakın verildi; citation sayısı tek başarı ölçütü yapılmadı. | Çalışma Çince web araması ve araştırma modelleri üzerindedir; canlı ticari motor seçimini açıklamaz. |
 | [2026 Citation Selection/Absorption ön baskısı](https://arxiv.org/abs/2604.25707) | Citation seçimi ile sayfadaki kanıtın yanıta gerçekten taşınması farklı sonuçlardır; uzunluk, yapı ve çıkarılabilir kanıt gözlemsel olarak ilişkilidir. | Citation, mention, referral ve içerik etkisi ayrı ölçüm katmanları olarak tutuldu. | Hakemli nihai yayın değildir; gözlemsel ilişki nedensel optimizasyon kuralı sayılmaz. |
+| [2026 üretken arama citation çalışması](https://arxiv.org/abs/2607.15771) | Büyük ölçekli Çince sorgu deneyinde kaynak seçimi motorlar ve sorgu türleri arasında değişti; tek bir evrensel citation reçetesi görülmedi. | Platformlar tek başarı metriğine indirgenmedi; sorgu, kaynak URL ve görünür citation ayrı kaydedilecek. | Yeni bir ön baskıdır; Çince ekosistem ve incelenen motorlar Türkiye hizmet sorgularını doğrudan temsil etmez. |
+| [Bilgi şeffaflığı ve satın alma niyeti çalışması](https://www.sciencedirect.com/science/article/pii/S0378720617305086) | Satıcı, ürün ve işlem bilgisinin algılanan şeffaflığı; güven/risk değerlendirmesi ve satın alma niyetiyle ilişkilendirildi. | Hizmet sayfalarında ücret sınıfları, üçüncü taraf giderleri, kapsam ve varlık sahipliği ayrıştırıldı. | E-ticaret bağlamındaki araştırma ajans hizmetlerine doğrudan nedensel sonuç olarak taşınamaz. |
+| [Fiyat adaleti, güven ve sosyal ticaret çalışması](https://www.sciencedirect.com/science/article/pii/S1567422324000152) | İncelenen örneklemde fiyat adaleti, güven, yanıt verebilirlik ve yorumlar satın alma niyetiyle ilişkiliydi. | Uydurma referans/yorum yerine karşılaştırılabilir teklif soruları ve açık maliyet ayrımı kullanıldı. | Tek platform/örneklem bulgusu; dönüşüm veya organik sıralama garantisi değildir. |
 | [Ahrefs AI görünürlüğü korelasyonları](https://ahrefs.com/blog/ai-brand-visibility-correlations/) | Marka mention’ları, video/YouTube varlığı ve bazı otorite sinyalleri AI görünürlüğüyle korelasyon gösterdi. | Gerçek üçüncü taraf mention, uzman içerik ve çok biçimli kanıt backlog’a alındı. | Korelasyon nedensellik değildir; araç kapsamı bütün AI cevaplarını temsil etmez. |
 | [Semrush ghost citations araştırması](https://www.semrush.com/blog/the-ghost-citations-study/) | Üretken cevaplar bazen yararlandığı sayfayı görünür citation olarak göstermeyebilir. | Citation, marka mention’ı ve referral ayrı metrikler olarak tanımlandı. | Tespit yöntemi platformların kapalı retrieval sistemini bütünüyle göremez. |
 | [Cambridge attribution araştırması](https://www.cambridge.org/core/journals/data-and-policy/article/attribution-crisis-in-llm-search-results-estimating-ecosystem-exploitation/170DD0B88E5F5AEA8F69F2E9AF1328E3) | LLM arama yanıtlarında kaynak kullanımı ile görünür atıf arasında boşluk oluşabilir. | Başarı yalnız citation sayısına indirgenmedi; marka talebi ve nitelikli referral da izlenecek. | Ekosistem ve modeller hızla değişmektedir. |
