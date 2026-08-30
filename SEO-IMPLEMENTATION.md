@@ -75,11 +75,12 @@ yayıncı şimdilik Narvals Labs organizasyonudur.
 - Statik ana içerik; JavaScript beklemeden okunabilir HTML.
 - Her sayfada benzersiz title/description, self-canonical, `tr` + `x-default`,
   OG/Twitter kartı, Schema.org varlık temelli GEO işaretlemesi (ülke, dil, hizmet alanı ve doğrulanmış iletişim), yazar, manifest, RSS keşif bağlantısı, OpenSearch 1.1 arama tanımı (`/opensearch.xml`) ve AI bağlam keşfi (`rel="describedby"` -> `/llms.txt`).
+- COOP ve CORP Güvenlik İzolasyonu: `Cross-Origin-Opener-Policy: same-origin` ve `Cross-Origin-Resource-Policy: same-origin` ile tarayıcı düzeyinde pencere izolasyonu ve Spectre koruması.
 - Wikidata Knowledge Graph Ayrıştırması: `OnlineBusiness` şemasındaki `knowsAbout` varlıkları küresel Wikidata Concept URI'lerine bağlanarak tam anlamsal netlik sağlandı.
 - Speculation Rules API (`<script type="speculationrules">`): Dahili bağlantılarda kullanıcı etkileşimi ve hover durumunda anlık sayfa geçişleri (<50ms) sağlayan modern tarayıcı standardı.
 - WebMCP (Web Model Context Protocol): 18 interaktif hesaplama ve denetim aracı için tarayıcı AI modellerine yönelik güvenli, deterministik, salt-okunur declarative/imperative araç sözleşmeleri ve 36 eval test senaryosu.
 - WebApplication Şema Zenginleştirmesi: 18 interaktif araç `educationalUse`, `applicationCategory: 'BusinessApplication'`, `operatingSystem: 'All modern web browsers'`, `permissions: 'none'` ve `isAccessibleForFree: true` ile zenginleştirildi.
-- Answer Density ve Fractal Content Modeli: Her H2 alt başlığının bağımsız "mikro-cevap" olarak çalışması, dolgu metinsiz yüksek olgu yoğunluğu ve semantik passage chunking mimarisi.
+- Atomic Passage Extractability ve Text Fragments (`#:~:text=`): Her H2 alt başlığının ilk 100 kelimesinde doğrudan cevabın yer alması, dolgu metinsiz yüksek olgu yoğunluğu ve semantik passage chunking mimarisi.
 - Perplexity & SearchGPT RAG Reranking Uyumu: İlk %30 doğrudan cevap yerleşimi, context-aware embeddings ve çok katmanlı kalite filtrelerine tam uyumlu şema varlık ağı (`about`, `mentions`, `knowsAbout`, `isPartOf`).
 - NavBoost ve Glue Görev Tamamlama: Dwell time ve Last Longest Click sinyallerini maksimize eden 18 yerel hesaplama aracı, sıfır pogo-sticking ve W3C/Schema.org doğrulanabilir citation grafı.
 - 40 rehberde görünür standart `<img>`, `og:image`, Twitter, `primaryImageOfPage`

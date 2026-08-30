@@ -430,6 +430,14 @@ Bu turda küresel Knowledge Graph düğümlerinde tam anlamsal netlik (semantic 
 - **WebApplication Güven ve Sınıflandırma Zenginleştirmesi:** 18 interaktif karar aracının şemasına `applicationCategory: 'BusinessApplication'`, `operatingSystem: 'All modern web browsers'`, `permissions: 'none'`, `isAccessibleForFree: true` ve `educationalUse: 'Interactive Calculation & Decision Support Tool'` öznitelikleri uygulandı.
 - **RFC 9116 ve humans.txt Güven Standartları:** `.well-known/security.txt` ve `humans.txt` dosyaları OpenSearch ve llms.txt referanslarıyla güçlendirildi; makine ve araştırmacı düzeyinde kurumsal şeffaflık sağlandı.
 
+## 30 Ağustos 2026 on yedinci COOP/CORP Güvenlik İzolasyonu, Atomic Passage Extractability ve Çok Modlu İndeksleme Denetimi
+
+Bu turda tarayıcı düzeyinde en yüksek güvenlik izolasyonu ve AI yanıt motorlarının pasaj çıkarma (passage ranking & text fragments) mekanizmalarına yönelik ince ayarlar uygulandı:
+
+- **COOP ve CORP Güvenlik İzolasyonu:** CDN ve sunucu katmanında `Cross-Origin-Opener-Policy: same-origin` ve `Cross-Origin-Resource-Policy: same-origin` başlıkları etkinleştirildi. Bu mimari, sitenin pencere bağlamını harici sitelerden izole ederek Spectre yan kanal risklerini sıfırlar ve tarayıcının ana iş parçacığı (main thread) optimizasyonunu güçlendirir.
+- **Atomic Passage Extractability & Text Fragments (`#:~:text=`):** AI Overviews, SearchGPT ve Perplexity'nin RAG aşamasında aradığı "atomik kanıt" standardı pekiştirildi. Her H2 bölümünün ilk 100 kelimesinde doğrudan cevap yer alması; LLM'lerin sayfayı kaynak gösterirken `#:~:text=` ile doğrudan ilgili pasajı vurgulamasına imkân tanır.
+- **MUM ve Çok Modlu (Multimodal) Varlık Korelasyonu:** 40 rehberin görsel varlıkları `<figure class="article-cover">`, `BlogPosting.image` ve `primaryImageOfPage` nesneleriyle semantik olarak birbirine bağlanarak Google MUM ve Gemini görsel-metin arama algoritmalarında tam örtüşme sağlandı.
+
 ## Kanıt matrisi
 
 | Kaynak | Bulgu | Uygulama | Sınır |
