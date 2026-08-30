@@ -1,6 +1,7 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { blogPostBySlug, blogPosts } from '../content/blog-posts.mjs';
+import { getBlogImage, getTopicHubImage } from '../content/blog-images.mjs';
 import { topicHubs } from '../content/topic-hubs.mjs';
 
 const escapeHtml = (value) => String(value)
@@ -45,8 +46,14 @@ const wordCount = (post) => stripHtml([
   ...(post.faq || []).flatMap((item) => [item.question, item.answer])
 ].join(' ')).split(' ').filter(Boolean).length;
 
-const renderHead = ({ siteOrigin, path, title, description, keywords, schema, type = 'website', published, modified, category, readingTime }) => {
+const renderHead = ({ siteOrigin, path, title, description, keywords, schema, type = 'website', published, modified, category, readingTime, image }) => {
   const canonical = `${siteOrigin}${path}`;
+  const socialImage = image || {
+    path: '/og/narvals-labs-og.jpg',
+    width: 1200,
+    height: 630,
+    alt: 'Narvals Labs — Web, Yazılım ve Reklam'
+  };
   return `    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#03233a" />
@@ -79,15 +86,16 @@ const renderHead = ({ siteOrigin, path, title, description, keywords, schema, ty
     <meta property="og:title" content="${escapeHtml(title)}" />
     <meta property="og:description" content="${escapeHtml(description)}" />
     <meta property="og:url" content="${canonical}" />
-    <meta property="og:image" content="${siteOrigin}/og/narvals-labs-og.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Narvals Labs — Web, Yazılım ve Reklam" />
+    <meta property="og:image" content="${siteOrigin}${socialImage.path}" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="${socialImage.width}" />
+    <meta property="og:image:height" content="${socialImage.height}" />
+    <meta property="og:image:alt" content="${escapeHtml(socialImage.alt)}" />
 ${published ? `    <meta property="article:published_time" content="${published}" />\n` : ''}${modified ? `    <meta property="article:modified_time" content="${modified}" />\n` : ''}${category ? `    <meta property="article:section" content="${escapeHtml(category)}" />\n` : ''}${type === 'article' ? `    <meta property="article:author" content="${siteOrigin}/hakkimizda/" />\n    <meta property="article:publisher" content="${siteOrigin}/" />\n` : ''}${type === 'article' && Array.isArray(keywords) ? keywords.map((kw) => `    <meta property="article:tag" content="${escapeHtml(kw)}" />`).join('\n') + '\n' : ''}    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${escapeHtml(title)}" />
     <meta name="twitter:description" content="${escapeHtml(description)}" />
-    <meta name="twitter:image" content="${siteOrigin}/og/narvals-labs-og.jpg" />
-    <meta name="twitter:image:alt" content="Narvals Labs — Web, Yazılım ve Reklam" />
+    <meta name="twitter:image" content="${siteOrigin}${socialImage.path}" />
+    <meta name="twitter:image:alt" content="${escapeHtml(socialImage.alt)}" />
 ${readingTime ? `    <meta name="twitter:label1" content="Okuma Süresi" />\n    <meta name="twitter:data1" content="${readingTime} dk" />\n` : ''}${category ? `    <meta name="twitter:label2" content="Kategori" />\n    <meta name="twitter:data2" content="${escapeHtml(category)}" />\n` : ''}    <title>${escapeHtml(title)}</title>
     <script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': schema }, null, 2)}</script>`;
 };
@@ -343,6 +351,8 @@ const renderArticle = (post, siteOrigin) => {
   const url = `${siteOrigin}${path}`;
   const hubInfo = CATEGORY_HUB_MAP[post.category];
   const toolInfo = POST_TOOL_MAP[post.slug];
+  const image = getBlogImage(post);
+  const imageUrl = `${siteOrigin}${image.path}`;
   const breadcrumbElements = hubInfo ? [
     { '@type': 'ListItem', position: 1, name: 'Ana sayfa', item: `${siteOrigin}/` },
     { '@type': 'ListItem', position: 2, name: 'Rehberler', item: `${siteOrigin}/blog/` },
@@ -367,7 +377,7 @@ const renderArticle = (post, siteOrigin) => {
       datePublished: post.published,
       dateModified: post.modified,
       breadcrumb: { '@id': `${url}#breadcrumb` },
-      primaryImageOfPage: { '@type': 'ImageObject', url: `${siteOrigin}/og/narvals-labs-og.jpg`, width: 1200, height: 630 }
+      primaryImageOfPage: { '@type': 'ImageObject', url: imageUrl, width: image.width, height: image.height, caption: image.alt }
     },
     {
       '@type': 'BlogPosting',
@@ -375,7 +385,7 @@ const renderArticle = (post, siteOrigin) => {
       mainEntityOfPage: { '@id': `${url}#webpage` },
       headline: post.title,
       description: post.description,
-      image: [`${siteOrigin}/og/narvals-labs-og.jpg`],
+      image: [{ '@type': 'ImageObject', url: imageUrl, width: image.width, height: image.height, caption: image.alt }],
       datePublished: post.published,
       dateModified: post.modified,
       timeRequired: `PT${post.readingTime}M`,
@@ -416,7 +426,7 @@ const renderArticle = (post, siteOrigin) => {
 <html class="no-js" lang="tr">
   <head>
     <script>document.documentElement.classList.replace('no-js', 'js');</script>
-${renderHead({ siteOrigin, path, title: post.metaTitle, description: post.description, keywords: post.keywords, schema, type: 'article', published: post.published, modified: post.modified, category: post.category, readingTime: post.readingTime })}
+${renderHead({ siteOrigin, path, title: post.metaTitle, description: post.description, keywords: post.keywords, schema, type: 'article', published: post.published, modified: post.modified, category: post.category, readingTime: post.readingTime, image })}
   </head>
   <body class="info-page article-page">
     <!-- Bu dosya content/blog-posts.mjs kaynağından otomatik üretilir. -->
@@ -434,6 +444,10 @@ ${renderHead({ siteOrigin, path, title: post.metaTitle, description: post.descri
           </div>
           <aside class="info-hero__panel article-summary" aria-labelledby="ozet-basligi"><strong id="ozet-basligi">Bu rehberin özeti</strong><ul>${post.takeaways.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul></aside>
         </header>
+
+        <figure class="article-cover">
+          <img src="${image.path}" alt="${escapeHtml(image.alt)}" width="${image.width}" height="${image.height}" loading="lazy" decoding="async" />
+        </figure>
 
         <div class="info-layout article-layout">
           <nav class="info-toc" aria-label="Makale içeriği"><strong>Bu rehberde</strong>${post.sections.map((section) => `<a href="#${escapeHtml(section.id)}">${escapeHtml(section.label)}</a>`).join('')}${post.faq?.length ? '<a href="#kisa-cevaplar">Kısa cevaplar</a>' : ''}<a href="#kaynaklar">Kaynaklar</a></nav>
@@ -550,6 +564,7 @@ const renderTopicHub = (hub, siteOrigin) => {
   const url = `${siteOrigin}${path}`;
   const posts = hub.all.map((slug) => blogPostBySlug.get(slug));
   const starters = hub.start.map((slug) => blogPostBySlug.get(slug));
+  const image = getTopicHubImage(hub);
   if ([...posts, ...starters].some((post) => !post)) throw new Error(`${hub.slug} topic hub references a missing blog post.`);
   const schema = [
     {
@@ -579,7 +594,7 @@ const renderTopicHub = (hub, siteOrigin) => {
 <html class="no-js" lang="tr">
   <head>
     <script>document.documentElement.classList.replace('no-js', 'js');</script>
-${renderHead({ siteOrigin, path, title: hub.metaTitle, description: hub.description, keywords: hub.keywords, schema })}
+${renderHead({ siteOrigin, path, title: hub.metaTitle, description: hub.description, keywords: hub.keywords, schema, image })}
   </head>
   <body class="info-page topic-page">
     <a class="skip-link" href="#main-content">Ana içeriğe geç</a>

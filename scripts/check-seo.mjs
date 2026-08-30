@@ -2,6 +2,7 @@ import { access, readFile, readdir, stat } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { sitePages } from '../content/site-pages.mjs';
+import { blogTopicImages, getBlogImage, getTopicHubImage } from '../content/blog-images.mjs';
 import { loadSiteEnvironment } from './site-environment.mjs';
 import { productionFiles } from './production-files.mjs';
 
@@ -19,6 +20,7 @@ if (configuredSiteUrl.protocol !== 'https:' && !['localhost', '127.0.0.1'].inclu
 }
 const siteOrigin = configuredSiteUrl.origin;
 const pages = sitePages.map(({ path, file, kind, lastModified }) => [path, file, kind, lastModified]);
+const pageByPath = new Map(sitePages.map((page) => [page.path, page]));
 
 const errors = [];
 const titles = new Set();
@@ -62,6 +64,7 @@ for (const [path, file] of pages) {
 for (const [path, html] of htmlByPath) {
   const file = fileByPath.get(path);
   const kind = kindByPath.get(path);
+  const page = pageByPath.get(path);
   const title = html.match(/<title>([^<]+)<\/title>/i)?.[1]?.trim();
   const description = meta(html, 'name', 'description')?.trim();
   const keywords = meta(html, 'name', 'keywords')?.split(',').map((keyword) => keyword.trim()).filter(Boolean);
@@ -109,12 +112,23 @@ for (const [path, html] of htmlByPath) {
   if (meta(html, 'property', 'og:url') !== expectedCanonical) errors.push(`${path}: og:url does not match canonical`);
   if (!meta(html, 'property', 'og:title')) errors.push(`${path}: og:title missing`);
   if (!meta(html, 'property', 'og:description')) errors.push(`${path}: og:description missing`);
-  if (meta(html, 'property', 'og:image') !== `${siteOrigin}/og/narvals-labs-og.jpg`) errors.push(`${path}: shared OG image missing or wrong`);
+  const expectedSocialImage = page?.post
+    ? getBlogImage(page.post)
+    : page?.hub
+      ? getTopicHubImage(page.hub)
+      : { path: '/og/narvals-labs-og.jpg', width: 1200, height: 630, alt: 'Narvals Labs — Web, Yazılım ve Reklam' };
+  const expectedSocialImageUrl = `${siteOrigin}${expectedSocialImage.path}`;
+  if (meta(html, 'property', 'og:image') !== expectedSocialImageUrl) errors.push(`${path}: preferred OG image missing or wrong`);
+  if ((page?.post || page?.hub) && meta(html, 'property', 'og:image:type') !== 'image/jpeg') {
+    errors.push(`${path}: og:image:type missing or wrong`);
+  }
+  if (meta(html, 'property', 'og:image:width') !== String(expectedSocialImage.width)) errors.push(`${path}: og:image width is wrong`);
+  if (meta(html, 'property', 'og:image:height') !== String(expectedSocialImage.height)) errors.push(`${path}: og:image height is wrong`);
   if (!meta(html, 'property', 'og:image:alt')) errors.push(`${path}: og:image:alt missing`);
   if (meta(html, 'name', 'twitter:card') !== 'summary_large_image') errors.push(`${path}: large Twitter card missing`);
   if (!meta(html, 'name', 'twitter:title')) errors.push(`${path}: twitter:title missing`);
   if (!meta(html, 'name', 'twitter:description')) errors.push(`${path}: twitter:description missing`);
-  if (meta(html, 'name', 'twitter:image') !== `${siteOrigin}/og/narvals-labs-og.jpg`) errors.push(`${path}: twitter:image missing or wrong`);
+  if (meta(html, 'name', 'twitter:image') !== expectedSocialImageUrl) errors.push(`${path}: twitter:image missing or wrong`);
   if (!meta(html, 'name', 'twitter:image:alt')) errors.push(`${path}: twitter:image:alt missing`);
   if (!robots.includes('index') || !robots.includes('max-image-preview:large')) errors.push(`${path}: index/full preview robots directives missing`);
   const bingbot = meta(html, 'name', 'bingbot') || '';
@@ -306,6 +320,22 @@ for (const [path, html] of htmlByPath) {
       if (article.dateModified !== article.datePublished && !html.includes(`<time datetime="${article.dateModified}">`)) {
         errors.push(`${path}: visible machine-readable modified date missing`);
       }
+      const articleImage = Array.isArray(article.image) ? article.image[0] : article.image;
+      const articleImageUrl = typeof articleImage === 'string' ? articleImage : articleImage?.url;
+      if (articleImageUrl !== expectedSocialImageUrl) errors.push(`${path}: BlogPosting.image does not match the preferred image`);
+    }
+    const webPage = structuredNodes.find((node) => node['@type'] === 'WebPage');
+    const primaryImageUrl = typeof webPage?.primaryImageOfPage === 'string'
+      ? webPage.primaryImageOfPage
+      : webPage?.primaryImageOfPage?.url;
+    if (primaryImageUrl !== expectedSocialImageUrl) errors.push(`${path}: primaryImageOfPage does not match the preferred image`);
+    const visibleImageTag = tags(html, 'img').find((tag) => attribute(tag, 'src') === expectedSocialImage.path);
+    if (!visibleImageTag) errors.push(`${path}: preferred image is not embedded with a standard img element`);
+    else {
+      if (attribute(visibleImageTag, 'width') !== String(expectedSocialImage.width) || attribute(visibleImageTag, 'height') !== String(expectedSocialImage.height)) {
+        errors.push(`${path}: preferred image intrinsic dimensions missing or wrong`);
+      }
+      if (attribute(visibleImageTag, 'alt') !== expectedSocialImage.alt) errors.push(`${path}: preferred image alt text missing or wrong`);
     }
     if (!structuredTypes.has('FAQPage')) errors.push(`${path}: FAQPage structured data missing in article`);
     if (!html.includes('id="kisa-cevaplar"')) errors.push(`${path}: visible FAQ section #kisa-cevaplar missing in article`);
@@ -347,6 +377,34 @@ for (const [path, html] of htmlByPath) {
   }
 
   if (!file) errors.push(`${path}: page mapping missing`);
+}
+
+const jpegDimensions = (buffer) => {
+  if (buffer[0] !== 0xff || buffer[1] !== 0xd8) return undefined;
+  let offset = 2;
+  while (offset + 8 < buffer.length) {
+    if (buffer[offset] !== 0xff) { offset += 1; continue; }
+    const marker = buffer[offset + 1];
+    const size = buffer.readUInt16BE(offset + 2);
+    if ([0xc0, 0xc1, 0xc2, 0xc3, 0xc5, 0xc6, 0xc7, 0xc9, 0xca, 0xcb, 0xcd, 0xce, 0xcf].includes(marker)) {
+      return { height: buffer.readUInt16BE(offset + 5), width: buffer.readUInt16BE(offset + 7) };
+    }
+    if (size < 2) return undefined;
+    offset += size + 2;
+  }
+  return undefined;
+};
+
+for (const image of new Map(Object.values(blogTopicImages).map((item) => [item.path, item])).values()) {
+  try {
+    const imageBuffer = await readFile(join(discoveryRoot, image.path.slice(1)));
+    const dimensions = jpegDimensions(imageBuffer);
+    if (dimensions?.width !== image.width || dimensions?.height !== image.height) {
+      errors.push(`${image.path}: expected a real ${image.width}x${image.height} JPEG image`);
+    }
+  } catch {
+    errors.push(`${image.path}: topic image file missing`);
+  }
 }
 
 for (const [path, sources] of incomingLinks) {

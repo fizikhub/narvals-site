@@ -11,7 +11,8 @@ tarayıcılarını (Googlebot, OAI-SearchBot, Claude-SearchBot, PerplexityBot, A
 Meta-ExternalAgent vb.) destekleyen robots politikası, zenginleştirilmiş
 JSON-LD şema grafı (`Organization`, `WebSite`, `WebPage`, `BlogPosting`, `Service`,
 `WebApplication`, `FAQPage`, `BreadcrumbList`), tam sosyal metadata, iki yönlü
-iç bağlantılar ve otomatik SEO/HTML kontrolleri içeriyor.
+iç bağlantılar, beş konuya özgü 1200×675 Discover/görsel arama varlığı ve
+otomatik SEO/HTML kontrolleri içeriyor.
 
 Google ve üretken yapay zekâ motorlarında birinci sıra veya alıntı garantisi
 verilemez. Organik sıra ve AI alıntıları; arama niyeti, taranabilirlik, gerçek
@@ -74,6 +75,9 @@ yayıncı şimdilik Narvals Labs organizasyonudur.
 - Statik ana içerik; JavaScript beklemeden okunabilir HTML.
 - Her sayfada benzersiz title/description, self-canonical, `tr` + `x-default`,
   OG/Twitter kartı, Schema.org varlık temelli GEO işaretlemesi (ülke, dil, hizmet alanı ve doğrulanmış iletişim), yazar, manifest ve RSS keşif bağlantısı.
+- 40 rehberde görünür standart `<img>`, `og:image`, Twitter, `primaryImageOfPage`
+  ve `BlogPosting.image` alanlarını aynı 1200×675, 16:9 konu görseline bağlayan
+  Discover/görsel arama katmanı; gerçek JPEG ölçüsü ve alt metin build kapısı.
 - 79 canonical URL'yi tek manifestten yöneten build, sitemap ve SEO kontrolü;
   key/path/file/tarih ve ilgili içerik hedefleri için başlangıç doğrulamaları.
 - URL başına gerçek içerik değişikliğine bağlı `lastmod`; build tarihi kullanılmaz.

@@ -175,6 +175,35 @@ Kararlar [Chrome WebMCP evals](https://developer.chrome.com/docs/ai/webmcp/evals
 ve [Search Console BigQuery bulk export](https://developers.google.com/search/blog/2023/02/bulk-data-export)
 ile doğrulandı.
 
+## 30 Ağustos 2026 onuncu Discover ve görsel arama denetimi
+
+Google'ın Mart 2026'da güncellediği Discover ve görsel SEO dokümantasyonu,
+blogdaki tek ve metin ağırlıklı marka kartının bütün rehberlerde tekrar
+kullanılmasının zayıf bir tercih olduğunu gösterdi. Uygulama şu şekilde
+değiştirildi:
+
+- Web/UX, SEO/GEO, reklam, e-ticaret ve QR menü/rezervasyon için metinsiz,
+  konuyla ilgili beş özgün görsel üretildi. Görseller 1200×675 piksel, gerçek
+  16:9 JPEG olarak kırpıldı; her biri 300.000 piksel eşiğini fazlasıyla aşar.
+- 40 rehber kategoriye göre deterministik görsele bağlandı. Aynı URL; görünür
+  standart `<img src>`, `og:image`, Twitter kartı, `WebPage.primaryImageOfPage`
+  ve `BlogPosting.image` içinde kullanılır. Konu merkezlerinin sosyal kartları
+  da aynı kümeyle eşleşir.
+- Görseller içeriğin içinde, anlamlı Türkçe alt metinle bulunur. Aşağı katmanda
+  oldukları için `loading="lazy"` kullanılır; böylece görsel keşfi korunurken ilk
+  ekranın ağ önceliği gereksiz yere yükseltilmez.
+- Build denetimi kategori eşleşmesi olmayan içeriği, farklı meta/schema/HTML
+  URL'sini, eksik alt metni ve JPEG dosyasındaki gerçek piksel ölçüsü sapmasını
+  hata olarak durdurur.
+
+Bu değişiklik Discover'a kabul veya trafik garantisi vermez. Google'a göre
+indeks ve politika uygunluğu içeriği yalnız aday yapar; başlık, özgün yarar,
+sayfa deneyimi ve kullanıcı ilgisi ayrıca belirleyicidir. Kararlar
+[Google Discover](https://developers.google.com/search/docs/appearance/google-discover),
+[Google görsel SEO](https://developers.google.com/search/docs/appearance/google-images)
+ve [Article yapılandırılmış veri](https://developers.google.com/search/docs/appearance/structured-data/article)
+rehberleriyle doğrulandı.
+
 ## 30 Ağustos 2026 ikinci teknik denetim
 
 İkinci turda 78 canonical sayfa; canlı HTTP davranışı, yapılandırılmış veri,

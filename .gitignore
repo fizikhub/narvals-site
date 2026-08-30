@@ -35,6 +35,8 @@ public/blog/*
 !public/og/
 public/og/*
 !public/og/narvals-labs-og.jpg
+!public/og/topics/
+!public/og/topics/*.jpg
 !public/assets/
 public/assets/*
 !public/assets/campaign/
@@ -79,3 +81,5 @@ public/assets/web/**
 
 public/og/*
 !public/og/narvals-labs-og.jpg
+!public/og/topics/
+!public/og/topics/*.jpg
