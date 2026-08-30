@@ -631,7 +631,287 @@ export const buyerIntentPosts = [
       { label: 'Meta for Developers — Dynamic Creative & Asset Customization', url: 'https://developers.facebook.com/docs/marketing-api' },
       { label: 'Google Search Central — İnsan Odaklı ve Nitelikli İçerik Rehberi', url: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content' }
     ]
+  },
+  {
+    slug: 'e-ticaret-odeme-sistemleri-ve-sanal-pos-rehberi',
+    metaTitle: 'E-Ticaret Ödeme Sistemleri ve Sanal POS Rehberi | Narvals',
+    title: 'E-ticaret ödeme sistemleri ve sanal POS rehberi: PayTR, iyzico ve Stripe',
+    description: 'E-ticaret sitelerinde PayTR, iyzico, Stripe ve banka sanal POS seçeneklerini komisyon, entegrasyon hızı, taksit ve güvenlik kriterleriyle karşılaştırın.',
+    keywords: ['e-ticaret ödeme sistemleri', 'sanal POS entegrasyonu', 'PayTR mi iyzico mu', 'e-ticaret ödeme yöntemleri'],
+    category: 'E-ticaret',
+    published: '2026-08-30T20:10:00+03:00',
+    modified: '2026-08-30T20:10:00+03:00',
+    readingTime: 11,
+    answer: 'E-ticaret sitesi kurarken ödeme sistemi seçimi satış hacmine, hedef pazara (yurt içi veya yurt dışı), nakit akışına ve teknik entegrasyon kolaylığına göre yapılır. BDDK lisanslı ödeme kuruluşları (PayTR, iyzico vb.) tek sözleşmeyle tüm bankaların kredi kartlarına taksit ve ertesi gün ödeme avantajı sunarken; banka sanal POS\'ları yüksek ciroda daha düşük komisyon sağlayabilir. Yurt dışı satışta ise Stripe ve yerel ödeme yöntemleri öne çıkar.',
+    takeaways: [
+      'Ödeme kuruluşu (PayTR/iyzico) tek entegrasyonla tüm bankaların taksit altyapısını açar.',
+      'Nakit akışı takvimi (ertesi gün ödeme vs haftalık blokaj) sözleşmede netleştirilmelidir.',
+      '3D Secure 2.0 ve tek tıkla kayıtlı kartla ödeme sepet tamamlama oranını doğrudan artırır.',
+      'Yurt dışı dövizli satışlarda Stripe, PayPal veya yerel ödeme ağ geçitleri incelenmelidir.'
+    ],
+    about: ['E-ticaret ödeme sistemleri', 'Sanal POS entegrasyonu', 'Ödeme güvenliği', 'Nakit akışı'],
+    related: ['e-ticaret-sitesi-yaptirmak-isteyenler-icin-kapsamli-rehber', 'e-ticaret-sepet-terk-ve-odeme-sayfasi-optimizasyonu', 'e-ticaret-altyapisi-nasil-secilir'],
+    servicePath: '/hizmetler/e-ticaret/',
+    serviceLabel: 'E-ticaret tasarım ve entegrasyon hizmetimizi inceleyin',
+    faq: [
+      {
+        question: 'Ödeme kuruluşu (PayTR, iyzico) mu yoksa doğrudan banka POS mu seçilmeli?',
+        answer: 'Yeni ve orta ölçekli mağazalarda tek entegrasyonla tüm bankalara taksit imkânı verdiği ve ertesi gün ödeme sunduğu için ödeme kuruluşları daha avantajlıdır. Aylık hacim milyonlarca liraya ulaştığında doğrudan banka sanal POS komisyonları değerlendirilebilir.'
+      },
+      {
+        question: '3D Secure zorunlu mudur?',
+        answer: 'Türkiye\'de BDDK ve TCMB düzenlemeleri uyarınca güvenli internet alışverişi için 3D Secure standardı uygulanmaktadır; sahte işlem (chargeback) riskini minimuma indirir.'
+      },
+      {
+        question: 'Yurt dışından dövizle ödeme nasıl alınır?',
+        answer: 'PayTR veya iyzico\'nun yurt dışı kart açılışı kullanılabilir ya da yurt dışında kurulu şirket varsa Stripe ile yerel para birimlerinde ve Apple Pay/Google Pay ile doğrudan tahsilat yapılabilir.'
+      }
+    ],
+    sections: [
+      {
+        id: 'odeme-modelleri-karsilastirma',
+        label: 'Model Karşılaştırması',
+        heading: 'Ödeme Kuruluşları ve Banka Sanal POS Karşılaştırma Matrisi',
+        table: {
+          headers: ['Özellik', 'Ödeme Kuruluşları (PayTR / iyzico)', 'Banka Sanal POS', 'Global Ağ Geçitleri (Stripe)'],
+          rows: [
+            ['Başvuru ve Kurulum', 'Tek sözleşmeyle 1-2 iş gününde aktif', 'Her banka için ayrı başvuru ve teknik kurulum', 'Yurt dışı şirket veya hesap gerektirir'],
+            ['Taksit İmkanı', 'Tüm yerli kart ailelerine (Bonus, World, Maximum vb.) tek elden', 'Yalnızca ilgili bankanın kart ailesine taksit', 'Genellikle tek çekim veya anlaşmalı yabancı taksit'],
+            ['Nakit Akışı ve Valör', 'Ertesi gün ödeme veya haftalık takvim seçenekleri', 'Bankaya ve anlaşmaya bağlı blokaj süresi', 'Ülkeye göre 2-7 iş günü içinde aktarım'],
+            ['Komisyon Yapısı', 'İşlem başına sabit yüzdelik (aylık/yıllık aidatsız model yaygın)', 'Düşük işlem komisyonu ancak yıllık POS ve yazılım aidatı olabilir', 'Yurt dışı kartlar için standart global oranlar']
+          ]
+        }
+      },
+      {
+        id: 'odeme-guvenligi-ve-pci-dss',
+        label: 'Güvenlik Standartları',
+        heading: 'PCI-DSS, Tokenization ve 3D Secure 2.0 Güvenlik Standartları',
+        paragraphs: [
+          'E-ticarette kredi kartı verilerinin sunucunuzda saklanması en üst düzey PCI-DSS güvenlik sertifikası gerektirir. Ödeme kuruluşlarının iFrame veya API tokenization çözümleri kullanıldığında, kart bilgisi sunucunuza hiç uğramadan güvenli şifrelemeyle işlenir.',
+          '3D Secure 2.0 protokolü sürtünmesiz kimlik doğrulama (frictionless authentication) sağlayarak risk taşımayan işlemlerde SMS şifre adımını otomatik atlar ve dönüşüm oranını artırır.'
+        ],
+        checklist: [
+          'Kart saklama yerine güvenli tokenization ve saklama altyapısı tercih edildi.',
+          'SSL / TLS sertifikası ve HTTPS şifreleme eksiksiz kuruldu.',
+          'Ödeme sayfasında BDDK, Visa, Mastercard ve 3D Secure güven damgaları yerleştirildi.',
+          'Sahtecilik (fraud) filtreleme ve IP/kart denetim kuralları aktif edildi.'
+        ]
+      },
+      {
+        id: 'entegrasyon-ve-nakit-akisi',
+        label: 'Nakit Akışı',
+        heading: 'E-Ticarette Nakit Akışı ve Valör Yönetimi',
+        paragraphs: [
+          'E-ticaret işletmelerinin en sık karşılaştığı darboğaz nakit akışıdır. Tedarikçilere peşin ödeme yaparken müşteriden yapılan tahsilatın 30 gün blokajda kalması işletme sermayesini tüketir.',
+          'Ertesi gün ödeme modeli sunan altyapılar, biraz daha yüksek komisyon oranıyla bile olsa nakit döngüsünü hızlandırarak stok çevrimini güçlendirir.'
+        ]
+      },
+      {
+        id: 'secim-rehberi',
+        label: 'Karar Adımları',
+        heading: 'İşletmeniz İçin Doğru Ödeme Yöntemini Seçme Adımları',
+        ordered: [
+          '<strong>Satış Hedefinizi Belirleyin:</strong> Yalnızca Türkiye içi ise PayTR/iyzico; global ise Stripe ve çoklu para birimi.',
+          '<strong>Tek Tıkla Ödeme (Kayıtlı Kart) Desteği İsteyin:</strong> Tekrar eden müşteriler için kart saklama (Masterpass vb.) dönüşümü belirgin artırır.',
+          '<strong>Alternatif Ödeme Yöntemleri Sunun:</strong> Kredi kartı yanı sıra Havale/EFT, Kapıda Ödeme (varsa) ve Alışveriş Kredisi seçeneklerini değerlendirin.',
+          '<strong>Muhasebe ve ERP Entegrasyonunu Doğrulayın:</strong> Tahsilatların ön muhasebe ve e-fatura programınıza otomatik akmasını sağlayın.'
+        ],
+        callout: 'E-ticaret satışlarınızdan sonra net kârınızı hesaplamak için ücretsiz e-ticaret kâr hesaplama aracımızı kullanabilirsiniz.'
+      }
+    ],
+    sources: [
+      { label: 'TCMB — Ödeme ve Menkul Kıymet Mutabakat Sistemleri', url: 'https://www.tcmb.gov.tr' },
+      { label: 'PCI Security Standards Council — Quick Reference Guide', url: 'https://www.pcisecuritystandards.org' },
+      { label: 'Google Search Central — E-ticaret Güvenlik ve Merchant Kuralları', url: 'https://developers.google.com/search/docs/specialty/ecommerce' }
+    ]
+  },
+  {
+    slug: 'google-ads-arama-terimleri-ve-butce-optimizasyonu',
+    metaTitle: 'Google Ads Arama Terimleri ve Bütçe Tasarrufu | Narvals',
+    title: 'Google Ads arama terimleri analizi: bütçe tasarrufu ve niyet madenciliği',
+    description: 'Google Ads Arama Terimleri Raporunu inceleyerek alakasız tıklamaları engelleme, yeni kârlı anahtar kelimeleri keşfetme ve bütçe verimliliği rehberi.',
+    keywords: ['Google Ads arama terimleri', 'arama terimleri raporu', 'Google reklam bütçe tasarrufu', 'Google Ads optimizasyonu'],
+    category: 'Google Ads',
+    published: '2026-08-30T20:10:00+03:00',
+    modified: '2026-08-30T20:10:00+03:00',
+    readingTime: 11,
+    answer: 'Google Ads kampanyalarında hedeflediğiniz anahtar kelime ile kullanıcının Google\'a yazdığı gerçek arama terimi birbirinden farklıdır. Arama Terimleri Raporu (Search Terms Report); bütçenizi tüketen alakasız sorguları tespit edip negatif kelimeye dönüştürmenizi ve yüksek dönüşüm getiren yeni kârlı terimleri keşfetmenizi sağlar. Düzenli arama terimi madenciliği, reklam bütçesinde %20 ila %40 oranında net tasarruf sağlayabilir.',
+    takeaways: [
+      'Hedeflenen anahtar kelime ile kullanıcının yazdığı arama terimi aynı şey değildir.',
+      'Geniş eşleme kullanan kampanyalar haftalık arama terimi denetimi gerektirir.',
+      'Dönüşüm getiren uzun kuyruklu (long-tail) terimler yeni reklam gruplarına taşınmalıdır.',
+      'Sıfır dönüşümlü yüksek maliyetli terimler derhal negatif listelere eklenmelidir.'
+    ],
+    about: ['Arama terimleri raporu', 'Google Ads optimizasyonu', 'Bütçe tasarrufu', 'Anahtar kelime madenciliği'],
+    related: ['google-ads-kalite-puani-ve-negatif-kelime-rehberi', 'google-ads-reklami-yaptirmak-isteyenler-icin-rehber', 'google-ads-butcesi-nasil-belirlenir'],
+    servicePath: '/hizmetler/google-ads/',
+    serviceLabel: 'Google Ads reklam yönetimi hizmetimizi inceleyin',
+    faq: [
+      {
+        question: 'Arama Terimleri Raporu ile Anahtar Kelimeler arasındaki fark nedir?',
+        answer: 'Anahtar kelimeler sizin reklamı tetiklemek için belirlediğiniz terimlerdir; arama terimleri ise kullanıcıların Google\'a fiilen yazdığı ve reklamınızın gösterilmesine neden olan gerçek sorgulardır.'
+      },
+      {
+        question: 'Arama terimleri raporu ne sıklıkla denetlenmelidir?',
+        answer: 'Yeni açılan kampanyalarda ilk haftalarda her gün; oturmuş kampanyalarda ise haftada en az bir kez taranarak negatif kelime temizliği yapılmalıdır.'
+      },
+      {
+        question: 'Geniş eşleme (Broad Match) neden tehlikeli olabilir?',
+        answer: 'Geniş eşleme algoritmanın geniş varyasyonları denemesine izin verir; negatif filtreler sıkı tutulmazsa bütçe hızla alakasız aramalara harcanabilir.'
+      }
+    ],
+    sections: [
+      {
+        id: 'eslesme-turleri-ve-gercek-sorgular',
+        label: 'Eşleme Türleri',
+        heading: 'Eşleme Türleri ve Arama Terimi Ayrışması',
+        table: {
+          headers: ['Eşleme Türü', 'Hedeflenen Anahtar Kelime', 'Tetiklenebilecek Arama Terimi Örneği', 'Risk Düzeyi'],
+          rows: [
+            ['Tam Eşleme [kelime]', '[e-ticaret sitesi yaptırma]', '"e-ticaret sitesi yaptırma" veya çok yakın anlamı', 'Düşük (Kontrollü)'],
+            ['Sıralı Eşleme "kelime"', '"web tasarım ajansı"', '"en iyi web tasarım ajansı istanbul fiyatları"', 'Orta (Dengeli)'],
+            ['Geniş Eşleme kelime', 'yazılım şirketi', '"yazılım mühendisliği staj başvurusu ücretsiz"', 'Yüksek (Sıkı negatif gerektirir)']
+          ]
+        }
+      },
+      {
+        id: 'arama-terimi-madenciligi',
+        label: 'Madencilik',
+        heading: 'Arama Terimi Madenciliği ile Yeni Kârlı Fırsatlar Bulma',
+        paragraphs: [
+          'Arama terimleri raporu yalnızca bütçe israfını yakalamak için değil; müşterilerin aklındaki yeni satın alma niyetlerini keşfetmek için de bir altın madenidir.',
+          'Yüksek dönüşüm oranı üreten uzun kuyruklu (long-tail) bir arama terimi tespit edildiğinde (ör. "özel b2b sipariş paneli fiyatı"), bu terim bağımsız bir reklam grubu veya özel bir açılış sayfasıyla hedeflenerek kalite puanı ve dönüşüm artırılır.'
+        ],
+        checklist: [
+          'Dönüşüm getiren terimler bağımsız reklam gruplarına taşındı.',
+          'Alakasız sorgular (staj, iş, bedava, pdf vb.) tek tıkla negatif listeye eklendi.',
+          'Marka arayan kullanıcılar için marka kampanyası ayrıştırıldı.',
+          'Farklı lokasyon ve cihaz filtrelerine göre arama terimleri kıyaslandı.'
+        ]
+      },
+      {
+        id: 'israf-eden-terimleri-temizleme',
+        label: 'Tasarruf',
+        heading: 'Bütçe Yiyen Sıfır Dönüşümlü Terimleri Ayıklama',
+        paragraphs: [
+          'Bir arama terimi ortalama dönüşüm maliyetinizin 2-3 katı kadar bütçe harcamış ve hiç dönüşüm üretmemişse, arama niyeti teklifinizle uyuşmuyor demektir.',
+          'Bu terimler derhal negatif anahtar kelime olarak eklenmeli ve harcanan bütçe kanıtlanmış kârlı kampanyalara aktarılmalıdır.'
+        ]
+      },
+      {
+        id: 'arama-terimi-is-akisi',
+        label: 'Optimizasyon Döngüsü',
+        heading: 'Haftalık 15 Dakikalık Arama Terimi İnceleme İş Akışı',
+        ordered: [
+          '<strong>Maliyete Göre Sıralayın:</strong> En çok harcama yapan ilk 20 terimi inceleyin; dönüşümü olmayanları tespit edin.',
+          '<strong>Gösterime Göre Sıralayın:</strong> Yüksek gösterim alıp tıklanmayan terimleri bulun (reklam alaka düzeyi düşüktür).',
+          '<strong>Negatif Kütüphanesine Ekleyin:</strong> Bulunan alakasız kelimeleri ortak negatif listelerine ekleyerek tüm hesabı koruyun.',
+          '<strong>Dönüşüm Sağlayanları Ödüllendirin:</strong> Başarılı terimlerin reklam metinlerini ve tekliflerini güçlendirin.'
+        ],
+        callout: 'Google Ads bütçenizi simüle etmek için ücretsiz Google Ads bütçe hesaplayıcımızı kullanabilirsiniz.'
+      }
+    ],
+    sources: [
+      { label: 'Google Ads Yardım — Arama Terimleri Raporunu Görüntüleme', url: 'https://support.google.com/google-ads/answer/2472708' },
+      { label: 'Google Ads Yardım — Anahtar Kelime Eşleme Seçenekleri', url: 'https://support.google.com/google-ads/answer/7478529' },
+      { label: 'Google Search Central — Arama Niyeti ve Relevans', url: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content' }
+    ]
+  },
+  {
+    slug: 'meta-reklam-metni-ve-reklam-yazarligi-rehberi',
+    metaTitle: 'Meta Reklam Metni Yazarlığı: Kanca, Değer ve CTA | Narvals',
+    title: 'Meta reklam metni ve reklam yazarlığı rehberi: kanca, değer ve eylem',
+    description: 'Instagram ve Facebook reklamlarında tıklama ve dönüşüm oranını artıran reklam metni yazarlığı (copywriting) çerçeveleri, kanca ve CTA formülleri.',
+    keywords: ['Meta reklam metni', 'Instagram reklam yazarlığı', 'reklam copywriting', 'dönüşüm odaklı metin'],
+    category: 'Meta reklam',
+    published: '2026-08-30T20:10:00+03:00',
+    modified: '2026-08-30T20:10:00+03:00',
+    readingTime: 11,
+    answer: 'Meta (Instagram ve Facebook) reklamlarında görsel dikkat çeker; ancak satın alma veya form doldurma kararını reklam metni ve açılış sayfası mesajı tamamlar. Başarılı bir Meta reklam metni; ilk satırda merak veya acı noktası uyandıran kanca (hook), teklifin somut faydasını anlatan gövde (body) ve net bir harekete geçirici mesajdan (CTA) oluşur. PAS (Problem-Agitate-Solution) ve AIDA çerçeveleri reklam tıklama oranlarını (CTR) doğrudan yükseltir.',
+    takeaways: [
+      'İlk iki satır (Daha Fazlasını Gör öncesi) reklam metninin okunma kaderini belirler.',
+      'Özellik sıralamak yerine müşterinin elde edeceği somut iş faydası anlatılmalıdır.',
+      'Meta reklam politikalarını ihlal eden yanıltıcı veya aşırı iddialı ifadelerden kaçınılmalıdır.',
+      'Kısa, orta ve uzun metin varyasyonları aynı reklam setinde test edilmelidir.'
+    ],
+    about: ['Meta reklam metni', 'Reklam yazarlığı (copywriting)', 'Dönüşüm metinleri', 'Reklam politikaları'],
+    related: ['meta-reklamlarinda-kreatif-ve-kanca-stratejisi', 'meta-reklami-hizmeti-almak-isteyenler-icin-rehber', 'meta-reklam-butcesi-nasil-belirlenir'],
+    servicePath: '/hizmetler/dijital-reklam/',
+    serviceLabel: 'Meta reklam ve kreatif yönetim hizmetimizi inceleyin',
+    faq: [
+      {
+        question: 'Meta reklamlarında kısa metin mi uzun metin mi daha iyi çalışır?',
+        answer: 'Düşük fiyatlı ve anlık satın alınan ürünlerde kısa ve vurucu metinler öne çıkarken; yüksek fiyatlı B2B hizmetlerde ve karmaşık çözümlerde güven veren detaylı uzun metinler (long-form copy) daha yüksek dönüşüm sağlayabilir.'
+      },
+      {
+        question: 'Reklam metninde emoji kullanılmalı mıdır?',
+        answer: 'Önemli maddeleri ayırmak ve göz akışını kolaylaştırmak için 2-3 sade emoji kullanımı okunabilirliği artırır; ancak aşırı ve dikkat dağıtıcı emoji kullanımı profesyonel algıyı zedeler.'
+      },
+      {
+        question: 'Hangi ifadeler Meta reklam hesabının askıya alınmasına yol açabilir?',
+        answer: 'Kişisel özellikleri doğrudan sorgulayan ifadeler (ör. "Borcunuz mu var?"), gerçek dışı zenginleşme veya kilo verme iddiaları ve yanıltıcı "Önce / Sonra" vaatleri reklam onayını engeller.'
+      }
+    ],
+    sections: [
+      {
+        id: 'metin-anatomisi-ve-kanca',
+        label: 'Metin Anatomisi',
+        heading: 'Meta Reklam Metninin 3 Temel Anatomik Parçası',
+        table: {
+          headers: ['Bölüm', 'Görevi', 'En İyi Pratik'],
+          rows: [
+            ['Açılış Kancası (Hook - İlk 125 Karakter)', 'Kullanıcının akışta durmasını ve "Daha Fazlasını Gör"e basmasını sağlamak', 'Soru sorma, şaşırtıcı istatistik veya tanıdık bir acı noktası'],
+            ['Gövde (Body - Değer ve Kanıt)', 'Çözümün nasıl çalıştığını ve faydasını açıklamak', 'Müşteri yorumu, vaka sonucu veya 3 maddelik net avantaj listesi'],
+            ['Kapanış ve CTA (Harekete Geçirici Mesaj)', 'Kullanıcıyı doğrudan açılış sayfasına yönlendirmek', 'Net yönlendirme: "Web sitesinden inceleyin", "Ücretsiz teklif alın"']
+          ]
+        }
+      },
+      {
+        id: 'kanitlanmis-copywriting-cerceveleri',
+        label: 'Metin Çerçeveleri',
+        heading: 'Dönüşüm Getiren 3 Kanıtlanmış Reklam Metni Formülü',
+        paragraphs: [
+          'Sıfırdan metin yazmak yerine psikolojik olarak kanıtlanmış metin çerçevelerini kullanmak süreci hızlandırır ve başarı ihtimalini artırır:',
+          '<strong>1) PAS Formülü (Problem - Agitate - Solution):</strong> "Reklam bütçeniz eriyor mu? (Problem) Her ay binlerce lira harcayıp niteliksiz tıklamalar almak kârlılığınızı tüketir. (Agitate) Dönüşüm odaklı kampanya yönetimimizle her kuruşu ölçülebilir satışa bağlayın. (Solution)"',
+          '<strong>2) AIDA Formülü (Attention - Interest - Desire - Action):</strong> Dikkat çek, ilgi uyandır, arzu yarat ve eyleme geçir.',
+          '<strong>3) Öncesi ve Sonrası Köprüsü (BAB - Before / After / Bridge):</strong> Mevcut zorluk, ideal durum ve aradaki çözüm köprüsü.'
+        ],
+        checklist: [
+          'İlk satırda dikkat çeken net soru veya iddia yer alıyor.',
+          'Metinde teknik jargon yerine müşterinin günlük dili kullanıldı.',
+          'Fiyat, teslimat veya teklif şeffaf olarak belirtildi.',
+          'Açılış sayfası mesajıyla reklam metninin dili birebir örtüşüyor.'
+        ]
+      },
+      {
+        id: 'meta-politika-uyumlulugu',
+        label: 'Politika Güvenliği',
+        heading: 'Meta Reklam Politikaları ve Hesap Güvenliği',
+        paragraphs: [
+          'Meta\'nın otomatik denetim botları reklam metinlerini kelime kelime tarar. "Garantili", "%100 Kesin", kişisel sağlık ve finans durumuna yönelik varsayımlar içeren metinler reklamın reddedilmesine veya işletme hesabının kısıtlanmasına neden olur.',
+          'Dürüst, gerçekçi ve müşteriyi yanıltmayan şeffaf ifadeler hem reklam onay oranını yükseltir hem de uzun vadeli marka güvenini inşa eder.'
+        ]
+      },
+      {
+        id: 'test-ve-varyasyon',
+        label: 'Test Planı',
+        heading: 'Dinamik Metin Varyasyonları ile Öğrenme Hızını Artırma',
+        ordered: [
+          '<strong>3 Farklı Açılış Satırı Yazın:</strong> Biri soru odaklı, biri istatistik odaklı, biri doğrudan teklif odaklı.',
+          '<strong>2 Farklı Metin Uzunluğu Deneyin:</strong> Biri 2 cümlelik mikro metin, biri 3 paragraflık detaylı açıklama.',
+          '<strong>Dinamik Kreatif (DCT) ile Eşleştirin:</strong> Algoritmanın kitleye en uygun metin ve görsel kombinasyonunu bulmasını sağlayın.',
+          '<strong>En İyi Metni Ölçeklendirin:</strong> Kazanan metni tüm benzer hedef kitlelere ve kampanyalara uyarlayın.'
+        ],
+        callout: 'Reklam metinlerinizin sosyal medya kartı önizlemesini test etmek için ücretsiz meta etiket ve önizleme aracımızı kullanabilirsiniz.'
+      }
+    ],
+    sources: [
+      { label: 'Meta Advertising Standards — Reklam İlkeleri', url: 'https://transparency.fb.com/policies/ad-standards' },
+      { label: 'Meta Business Help — Reklam Metni En İyi Uygulamaları', url: 'https://www.facebook.com/business/help' },
+      { label: 'Google Search Central — Nitelikli ve İnsan Odaklı İçerik İlkeleri', url: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content' }
+    ]
   }
 ];
+
 
 

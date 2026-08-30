@@ -5,7 +5,7 @@
     <link>https://narvals.com/blog/</link>
     <description>Web, yazılım, reklam ve işletme sistemleri için kaynaklı karar rehberleri.</description>
     <language>tr-TR</language>
-    <lastBuildDate>Sun, 30 Aug 2026 16:40:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 17:10:00 GMT</lastBuildDate>
     <atom:link href="https://narvals.com/blog/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>E-ticaret sitesi nasıl açılır? 10 adımlı sade rehber</title>
@@ -177,6 +177,33 @@
       <category>Meta reklam</category>
       <description>Instagram ve Facebook reklamlarında kreatif yorgunluğunu aşmak, ilk 3 saniye kancaları ve format testleriyle ROAS artırmak için rehber.</description>
       <content:encoded><![CDATA[<p>Meta (Facebook ve Instagram) reklamlarında yapay zekâ hedeflemesi geliştikçe, en büyük performans kaldıracı kitle seçiminden reklam kreatifine geçmiştir. Algoritma kullanıcıların görsel ve video ile etkileşimini doğrudan analiz eder. Başarılı bir Meta kreatif stratejisi; ilk 3 saniyede dikkat çeken görsel ve işitsel kancalar (hook), farklı tüketici psikolojilerine hitap eden açılar (angle) ve düzenli format çeşitlendirmesiyle (Reels, Karusel, Statik) kreatif yorgunluğunu önler.</p><ul><li>Meta reklamlarında kreatif en güçlü hedefleme aracıdır; doğru mesaj doğru kitleyi çeker.</li><li>İlk 3 saniye (hook rate) video reklamın izlenme ve dönüşüm maliyetini belirler.</li><li>Statik, karusel ve dikey video (9:16) formatları aynı hesapta dengeli kullanılmalıdır.</li><li>Kazanan kreatiflerin mesajı açılış sayfasının hero alanında anında devam ettirilmelidir.</li></ul>]]></content:encoded>
+    </item>
+    <item>
+      <title>E-ticaret ödeme sistemleri ve sanal POS rehberi: PayTR, iyzico ve Stripe</title>
+      <link>https://narvals.com/blog/e-ticaret-odeme-sistemleri-ve-sanal-pos-rehberi/</link>
+      <guid isPermaLink="true">https://narvals.com/blog/e-ticaret-odeme-sistemleri-ve-sanal-pos-rehberi/</guid>
+      <pubDate>Sun, 30 Aug 2026 17:10:00 GMT</pubDate>
+      <category>E-ticaret</category>
+      <description>E-ticaret sitelerinde PayTR, iyzico, Stripe ve banka sanal POS seçeneklerini komisyon, entegrasyon hızı, taksit ve güvenlik kriterleriyle karşılaştırın.</description>
+      <content:encoded><![CDATA[<p>E-ticaret sitesi kurarken ödeme sistemi seçimi satış hacmine, hedef pazara (yurt içi veya yurt dışı), nakit akışına ve teknik entegrasyon kolaylığına göre yapılır. BDDK lisanslı ödeme kuruluşları (PayTR, iyzico vb.) tek sözleşmeyle tüm bankaların kredi kartlarına taksit ve ertesi gün ödeme avantajı sunarken; banka sanal POS&#39;ları yüksek ciroda daha düşük komisyon sağlayabilir. Yurt dışı satışta ise Stripe ve yerel ödeme yöntemleri öne çıkar.</p><ul><li>Ödeme kuruluşu (PayTR/iyzico) tek entegrasyonla tüm bankaların taksit altyapısını açar.</li><li>Nakit akışı takvimi (ertesi gün ödeme vs haftalık blokaj) sözleşmede netleştirilmelidir.</li><li>3D Secure 2.0 ve tek tıkla kayıtlı kartla ödeme sepet tamamlama oranını doğrudan artırır.</li><li>Yurt dışı dövizli satışlarda Stripe, PayPal veya yerel ödeme ağ geçitleri incelenmelidir.</li></ul>]]></content:encoded>
+    </item>
+    <item>
+      <title>Google Ads arama terimleri analizi: bütçe tasarrufu ve niyet madenciliği</title>
+      <link>https://narvals.com/blog/google-ads-arama-terimleri-ve-butce-optimizasyonu/</link>
+      <guid isPermaLink="true">https://narvals.com/blog/google-ads-arama-terimleri-ve-butce-optimizasyonu/</guid>
+      <pubDate>Sun, 30 Aug 2026 17:10:00 GMT</pubDate>
+      <category>Google Ads</category>
+      <description>Google Ads Arama Terimleri Raporunu inceleyerek alakasız tıklamaları engelleme, yeni kârlı anahtar kelimeleri keşfetme ve bütçe verimliliği rehberi.</description>
+      <content:encoded><![CDATA[<p>Google Ads kampanyalarında hedeflediğiniz anahtar kelime ile kullanıcının Google&#39;a yazdığı gerçek arama terimi birbirinden farklıdır. Arama Terimleri Raporu (Search Terms Report); bütçenizi tüketen alakasız sorguları tespit edip negatif kelimeye dönüştürmenizi ve yüksek dönüşüm getiren yeni kârlı terimleri keşfetmenizi sağlar. Düzenli arama terimi madenciliği, reklam bütçesinde %20 ila %40 oranında net tasarruf sağlayabilir.</p><ul><li>Hedeflenen anahtar kelime ile kullanıcının yazdığı arama terimi aynı şey değildir.</li><li>Geniş eşleme kullanan kampanyalar haftalık arama terimi denetimi gerektirir.</li><li>Dönüşüm getiren uzun kuyruklu (long-tail) terimler yeni reklam gruplarına taşınmalıdır.</li><li>Sıfır dönüşümlü yüksek maliyetli terimler derhal negatif listelere eklenmelidir.</li></ul>]]></content:encoded>
+    </item>
+    <item>
+      <title>Meta reklam metni ve reklam yazarlığı rehberi: kanca, değer ve eylem</title>
+      <link>https://narvals.com/blog/meta-reklam-metni-ve-reklam-yazarligi-rehberi/</link>
+      <guid isPermaLink="true">https://narvals.com/blog/meta-reklam-metni-ve-reklam-yazarligi-rehberi/</guid>
+      <pubDate>Sun, 30 Aug 2026 17:10:00 GMT</pubDate>
+      <category>Meta reklam</category>
+      <description>Instagram ve Facebook reklamlarında tıklama ve dönüşüm oranını artıran reklam metni yazarlığı (copywriting) çerçeveleri, kanca ve CTA formülleri.</description>
+      <content:encoded><![CDATA[<p>Meta (Instagram ve Facebook) reklamlarında görsel dikkat çeker; ancak satın alma veya form doldurma kararını reklam metni ve açılış sayfası mesajı tamamlar. Başarılı bir Meta reklam metni; ilk satırda merak veya acı noktası uyandıran kanca (hook), teklifin somut faydasını anlatan gövde (body) ve net bir harekete geçirici mesajdan (CTA) oluşur. PAS (Problem-Agitate-Solution) ve AIDA çerçeveleri reklam tıklama oranlarını (CTR) doğrudan yükseltir.</p><ul><li>İlk iki satır (Daha Fazlasını Gör öncesi) reklam metninin okunma kaderini belirler.</li><li>Özellik sıralamak yerine müşterinin elde edeceği somut iş faydası anlatılmalıdır.</li><li>Meta reklam politikalarını ihlal eden yanıltıcı veya aşırı iddialı ifadelerden kaçınılmalıdır.</li><li>Kısa, orta ve uzun metin varyasyonları aynı reklam setinde test edilmelidir.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>Web sitesi neden müşteri getirmiyor? 8 olası neden</title>

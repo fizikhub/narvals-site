@@ -128,7 +128,7 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 
 ---
 
-## 6. Tüm Karar Rehberleri Özeti (48 Rehber)
+## 6. Tüm Karar Rehberleri Özeti (51 Rehber)
 
 ### E-ticaret sitesi nasıl açılır? 10 adımlı sade rehber
 - **URL:** https://narvals.com/blog/e-ticaret-sitesi-nasil-acilir/
@@ -323,6 +323,36 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
   * İlk 3 saniye (hook rate) video reklamın izlenme ve dönüşüm maliyetini belirler.
   * Statik, karusel ve dikey video (9:16) formatları aynı hesapta dengeli kullanılmalıdır.
   * Kazanan kreatiflerin mesajı açılış sayfasının hero alanında anında devam ettirilmelidir.
+
+### E-ticaret ödeme sistemleri ve sanal POS rehberi: PayTR, iyzico ve Stripe
+- **URL:** https://narvals.com/blog/e-ticaret-odeme-sistemleri-ve-sanal-pos-rehberi/
+- **Kategori:** E-ticaret
+- **Kısa Cevap:** E-ticaret sitesi kurarken ödeme sistemi seçimi satış hacmine, hedef pazara (yurt içi veya yurt dışı), nakit akışına ve teknik entegrasyon kolaylığına göre yapılır. BDDK lisanslı ödeme kuruluşları (PayTR, iyzico vb.) tek sözleşmeyle tüm bankaların kredi kartlarına taksit ve ertesi gün ödeme avantajı sunarken; banka sanal POS'ları yüksek ciroda daha düşük komisyon sağlayabilir. Yurt dışı satışta ise Stripe ve yerel ödeme yöntemleri öne çıkar.
+- **Önemli Çıkarımlar:**
+  * Ödeme kuruluşu (PayTR/iyzico) tek entegrasyonla tüm bankaların taksit altyapısını açar.
+  * Nakit akışı takvimi (ertesi gün ödeme vs haftalık blokaj) sözleşmede netleştirilmelidir.
+  * 3D Secure 2.0 ve tek tıkla kayıtlı kartla ödeme sepet tamamlama oranını doğrudan artırır.
+  * Yurt dışı dövizli satışlarda Stripe, PayPal veya yerel ödeme ağ geçitleri incelenmelidir.
+
+### Google Ads arama terimleri analizi: bütçe tasarrufu ve niyet madenciliği
+- **URL:** https://narvals.com/blog/google-ads-arama-terimleri-ve-butce-optimizasyonu/
+- **Kategori:** Google Ads
+- **Kısa Cevap:** Google Ads kampanyalarında hedeflediğiniz anahtar kelime ile kullanıcının Google'a yazdığı gerçek arama terimi birbirinden farklıdır. Arama Terimleri Raporu (Search Terms Report); bütçenizi tüketen alakasız sorguları tespit edip negatif kelimeye dönüştürmenizi ve yüksek dönüşüm getiren yeni kârlı terimleri keşfetmenizi sağlar. Düzenli arama terimi madenciliği, reklam bütçesinde %20 ila %40 oranında net tasarruf sağlayabilir.
+- **Önemli Çıkarımlar:**
+  * Hedeflenen anahtar kelime ile kullanıcının yazdığı arama terimi aynı şey değildir.
+  * Geniş eşleme kullanan kampanyalar haftalık arama terimi denetimi gerektirir.
+  * Dönüşüm getiren uzun kuyruklu (long-tail) terimler yeni reklam gruplarına taşınmalıdır.
+  * Sıfır dönüşümlü yüksek maliyetli terimler derhal negatif listelere eklenmelidir.
+
+### Meta reklam metni ve reklam yazarlığı rehberi: kanca, değer ve eylem
+- **URL:** https://narvals.com/blog/meta-reklam-metni-ve-reklam-yazarligi-rehberi/
+- **Kategori:** Meta reklam
+- **Kısa Cevap:** Meta (Instagram ve Facebook) reklamlarında görsel dikkat çeker; ancak satın alma veya form doldurma kararını reklam metni ve açılış sayfası mesajı tamamlar. Başarılı bir Meta reklam metni; ilk satırda merak veya acı noktası uyandıran kanca (hook), teklifin somut faydasını anlatan gövde (body) ve net bir harekete geçirici mesajdan (CTA) oluşur. PAS (Problem-Agitate-Solution) ve AIDA çerçeveleri reklam tıklama oranlarını (CTR) doğrudan yükseltir.
+- **Önemli Çıkarımlar:**
+  * İlk iki satır (Daha Fazlasını Gör öncesi) reklam metninin okunma kaderini belirler.
+  * Özellik sıralamak yerine müşterinin elde edeceği somut iş faydası anlatılmalıdır.
+  * Meta reklam politikalarını ihlal eden yanıltıcı veya aşırı iddialı ifadelerden kaçınılmalıdır.
+  * Kısa, orta ve uzun metin varyasyonları aynı reklam setinde test edilmelidir.
 
 ### Web sitesi neden müşteri getirmiyor? 8 olası neden
 - **URL:** https://narvals.com/blog/web-sitesi-neden-musteri-getirmiyor/
@@ -692,6 +722,9 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 - Rehber: https://narvals.com/blog/e-ticaret-sepet-terk-ve-odeme-sayfasi-optimizasyonu/
 - Rehber: https://narvals.com/blog/google-ads-kalite-puani-ve-negatif-kelime-rehberi/
 - Rehber: https://narvals.com/blog/meta-reklamlarinda-kreatif-ve-kanca-stratejisi/
+- Rehber: https://narvals.com/blog/e-ticaret-odeme-sistemleri-ve-sanal-pos-rehberi/
+- Rehber: https://narvals.com/blog/google-ads-arama-terimleri-ve-butce-optimizasyonu/
+- Rehber: https://narvals.com/blog/meta-reklam-metni-ve-reklam-yazarligi-rehberi/
 - Rehber: https://narvals.com/blog/web-sitesi-neden-musteri-getirmiyor/
 - Rehber: https://narvals.com/blog/web-sitesi-googleda-neden-cikmiyor/
 - Rehber: https://narvals.com/blog/web-sitesi-donusum-orani-nasil-hesaplanir/
