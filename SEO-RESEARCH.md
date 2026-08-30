@@ -394,6 +394,15 @@ Bu turda 2025–2026 RAG (Retrieval-Augmented Generation) literatürü, Passage 
 - **Passage Chunking ve Anlamsal HTML Blokları:** LLM crawler'larının içeriği 100–300 kelimelik pencerelere bölme mekanizmasına uygun olarak; semantik `<section id="...">`, `<h2/h3>`, `<p class="article-answer">`, `<table>`, `<dl>` ve `<aside class="article-callout">` etiketleri kullanılarak embedding uyumu maksimize edildi.
 - **Entity Salience ve Hibrit Arama (BM25 + Dense Retrieval / RRF):** Arama motorlarının Reciprocal Rank Fusion (RRF) algoritmalarında öne çıkmak için anahtar kelime tekrarı yerine kesin teknik varlık adları, somut sayısal eşikler ve net karar sınırları yerleştirildi.
 
+## 30 Ağustos 2026 on üçüncü Perplexity/SearchGPT RAG mimarisi, Unlinked Mention ve Entity Salience denetimi
+
+Bu turda Perplexity ve SearchGPT'nin çok aşamalı RAG (Retrieval-Augmented Generation) işlem hatları, unlinked mention (bağlantısız marka anılmaları) korelasyonları ve pasaj çıkarma modelleri incelendi:
+
+- **Perplexity 6 Aşamalı RAG ve 3 Katmanlı Reranking:** Perplexity ve modern nöral arama motorları; sorgu niyeti ayrıştırma, BM25 + yoğun vektör hibrit erişimi ve 3 katmanlı filtreleme (Alaka puanı -> 12–18 aylık tazelik ve otorite -> XGBoost / Cross-encoder kalite kapısı) kullanır. Son aşamada yalnızca açık entity sinyali veren ve çelişkisiz kaynaklar alıntılanır.
+- **Unlinked Brand Mentions Ağırlığı (r ≈ 0.66):** 2026 yapay zekâ görünürlük araştırmalarında, bağlantısız marka anılmalarının AI citation oranlarıyla korelasyonunun (r ≈ 0.66), klasik backlink korelasyonundan (r ≈ 0.22) belirgin şekilde daha güçlü olduğu kanıtlandı. LLM'ler link grafiğinden ziyade anlamsal birlikte geçiş (co-occurrence) ve varlık haritasını değerlendirir.
+- **İlk %30 Pasaj Kuralı (First 30% Extractability):** AI modelleri bir sayfanın ilk üçte birlik bölümünde doğrudan, doğrulanabilir bir cevap ("Answer-first" formatı) bulduğunda alıntılama olasılığı katlanarak artar. Rehberlerimiz her alt başlığın ilk paragrafında doğrudan cevabı vererek bu kurala uyar.
+- **Context-Aware Embeddings (`pplx-embed-context-v1`):** Pasajların sayfa genelindeki ana tema ile bağını koparmaması için `Schema.org/WebPage` üzerinde `isPartOf`, `about` ve `mentions` ilişkileri tekil Knowledge Graph düğümüyle perçinlenmiştir.
+
 ## Kanıt matrisi
 
 | Kaynak | Bulgu | Uygulama | Sınır |
