@@ -24,6 +24,34 @@ Bu nedenle uygulama önceliği şöyledir:
 4. Gerçek ekip deneyimi, vaka, yöntem, özgün veri ve üçüncü taraf mention.
 5. Arama sırası ile AI citation/mention/referral ölçümlerinin ayrı izlenmesi.
 
+## 30 Ağustos 2026 altıncı Search generative AI ve crawler denetimi
+
+Google'ın Haziran 2026'da test etmeye başladığı Search Console düzeyi
+`Search generative AI` kontrolü ile OpenAI'ın güncel crawler ayrımı yeniden
+doğrulandı. Bu turda şu kararlar uygulandı:
+
+- Google AI Overviews, AI Mode ve Discover içindeki üretken AI görünürlüğü için
+  Search Console kontrolü mülkte sunulduğunda `Include` seçimi doğrulanmalıdır.
+  Varsayılan dahil etmedir; ayar genel Search sıralamasında bir sinyal değildir
+  ve `Google-Extended` model eğitimi tercihinden ayrıdır.
+- OpenAI'ın resmî dokümantasyonunda `OAI-SearchBot` arama görünürlüğü,
+  `GPTBot` model geliştirme ve `ChatGPT-User` kullanıcı isteği erişimi olarak
+  ayrı tanımlanır. Canlı denetime otomatik arama botunun yanında kullanıcı
+  tetiklemeli erişim kimlikleri de eklendi; bu yalnız WAF/CDN erişimini sınar.
+- Production denetimi artık mobil Googlebot, ChatGPT-User, Claude-User ve
+  Perplexity-User yanıtlarını; ayrıca `llms.txt` ve `llms-full.txt` dosyalarının
+  canlı içerik türü ile temel kimlik/origin tutarlılığını kontrol eder.
+- Reddit'teki 2025–2026 `llms.txt` tartışmalarında ortak bir nedensel sıralama
+  kanıtı bulunmadı. Dosya isteğe bağlı keşif özeti olarak korunurken HTML,
+  Search indexi, özgün kanıt ve gerçek üçüncü taraf mention'ları öncelikli kaldı.
+
+Kararlar [Google Search generative AI kontrolü](https://support.google.com/webmasters/answer/16908024),
+[Google'ın üretken AI optimizasyon rehberi](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide),
+[OpenAI crawler dokümantasyonu](https://developers.openai.com/api/docs/bots) ve
+[r/TechSEO llms.txt saha tartışması](https://www.reddit.com/r/TechSEO/comments/1l705kn/)
+ile karşılaştırıldı. Hesap düzeyi Search Console ayarı koddan değiştirilemediği
+için operasyon kapısı olarak belgelendi.
+
 ## 30 Ağustos 2026 ikinci teknik denetim
 
 İkinci turda 78 canonical sayfa; canlı HTTP davranışı, yapılandırılmış veri,

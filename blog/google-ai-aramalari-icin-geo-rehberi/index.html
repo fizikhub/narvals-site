@@ -121,7 +121,7 @@
       "timeRequired": "PT14M",
       "inLanguage": "tr-TR",
       "isAccessibleForFree": true,
-      "wordCount": 1492,
+      "wordCount": 1584,
       "articleSection": "SEO & GEO",
       "keywords": "GEO nedir, AI arama optimizasyonu, Google AI Overviews, AEO, KDD GEO",
       "author": {
@@ -163,6 +163,7 @@
         "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
         "https://web.dev/articles/ai-agent-site-ux",
         "https://support.google.com/webmasters/answer/16984139",
+        "https://support.google.com/webmasters/answer/16908024",
         "https://aclanthology.org/2024.acl-long.806/",
         "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
         "https://developers.openai.com/api/docs/bots",
@@ -174,6 +175,7 @@
         "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
         "https://web.dev/articles/ai-agent-site-ux",
         "https://support.google.com/webmasters/answer/16984139",
+        "https://support.google.com/webmasters/answer/16908024",
         "https://aclanthology.org/2024.acl-long.806/",
         "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
         "https://developers.openai.com/api/docs/bots",
@@ -236,6 +238,14 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Bazı ajanlara önemli sayfaların isteğe bağlı temiz metin haritasını sunabilir. Google Search llms.txt dosyasını yok saydığını ve dosyanın Google görünürlüğüne ne olumlu ne olumsuz etkisi olduğunu açıkça belirtir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Google AI Overviews ve AI Mode için site ayrıca açılmalı mı?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google Search Console’daki Search generative AI kontrolü varsayılan olarak dahil etme yönündedir ve yalnız bazı mülklerde kullanıma açılmış olabilir. Görünürlük hedefleniyorsa mülk sahibi bu ayarın “Include” konumunda olduğunu doğrulamalıdır; robots.txt veya özel bir HTML etiketi bu hesap ayarının yerini tutmaz."
           }
         },
         {
@@ -369,6 +379,7 @@
         <h2>AI görünürlüğünü tek bir “kaç kez çıktık?” sayısına indirmeyin.</h2>
         <p>Üretken yanıtlar kişiye, konuma, zamana ve sorgu biçimine göre değişebilir. Sabit bir prompt seti trend görmek için yararlıdır; fakat bütün görünürlüğün ölçümü değildir. Search Console verisini, AI kaynaklı yönlendirmeleri, marka aramalarını ve nitelikli dönüşümleri birlikte okuyun.</p>
         <p>Search Console Generative AI Performance raporu mülkünüzde kullanıma açıldıysa AI Overviews ve AI Mode görünürlüğünü kaynak URL, ülke ve cihaz düzeyinde ayrı inceleyin. Bu raporu normal Web performansının yerine değil, yanına koyun; her mülkte aynı anda görünmeyebileceğini hesaba katın.</p>
+        <p>Aynı ayarlar alanındaki Search generative AI kontrolü varsayılan olarak dahil etmedir. Görünürlük hedefleniyorsa “Include my site’s links and content” seçimini doğrulayın. Bu hesap düzeyi kontrol, Search dışındaki model eğitimi tercihi olan Google-Extended’dan ayrıdır ve robots.txt içine yazılan yeni bir direktif değildir.</p>
 
 
 
@@ -388,13 +399,13 @@
             <section class="info-section article-section" id="kisa-cevaplar">
               <p class="info-section__label">Sık sorulan sorular</p>
               <h2>Kısa ve doğrudan cevaplar.</h2>
-              <div class="article-faq"><details><summary>GEO (Generative Engine Optimization) nedir?</summary><p>Web sitesi içeriğinin ve varlık sinyallerinin ChatGPT, Google AI Overviews ve Perplexity gibi üretken yapay zekâ yanıt motorları tarafından taranabilir, anlaşılabilir ve kaynak gösterilebilir hale getirilmesidir.</p></details><details><summary>Yapay zekâ motorları hangi içerikleri kaynak gösterir?</summary><p>Tek bir yayınlanmış seçim formülü yoktur. Taranabilirlik ve konu alakası temel koşullardır; özgün deneyim, doğrulanabilir kanıt, açık kaynaklar ve iyi kullanıcı deneyimi içeriği daha yararlı bir kaynak adayı yapar.</p></details><details><summary>llms.txt dosyası ne işe yarar?</summary><p>Bazı ajanlara önemli sayfaların isteğe bağlı temiz metin haritasını sunabilir. Google Search llms.txt dosyasını yok saydığını ve dosyanın Google görünürlüğüne ne olumlu ne olumsuz etkisi olduğunu açıkça belirtir.</p></details><details><summary>Akademik GEO araştırmaları hangi taktikleri öneriyor?</summary><p>KDD 2024 kontrollü deneyleri kaynak ve istatistik ekleme gibi sunumların bazı sorgu alanlarında görünürlüğü artırabildiğini gösterdi. 2026 eleştirel incelemesi ise bunun organik keşif veya uzun dönem trafik etkisini kanıtlamadığını vurgular.</p></details></div>
+              <div class="article-faq"><details><summary>GEO (Generative Engine Optimization) nedir?</summary><p>Web sitesi içeriğinin ve varlık sinyallerinin ChatGPT, Google AI Overviews ve Perplexity gibi üretken yapay zekâ yanıt motorları tarafından taranabilir, anlaşılabilir ve kaynak gösterilebilir hale getirilmesidir.</p></details><details><summary>Yapay zekâ motorları hangi içerikleri kaynak gösterir?</summary><p>Tek bir yayınlanmış seçim formülü yoktur. Taranabilirlik ve konu alakası temel koşullardır; özgün deneyim, doğrulanabilir kanıt, açık kaynaklar ve iyi kullanıcı deneyimi içeriği daha yararlı bir kaynak adayı yapar.</p></details><details><summary>llms.txt dosyası ne işe yarar?</summary><p>Bazı ajanlara önemli sayfaların isteğe bağlı temiz metin haritasını sunabilir. Google Search llms.txt dosyasını yok saydığını ve dosyanın Google görünürlüğüne ne olumlu ne olumsuz etkisi olduğunu açıkça belirtir.</p></details><details><summary>Google AI Overviews ve AI Mode için site ayrıca açılmalı mı?</summary><p>Google Search Console’daki Search generative AI kontrolü varsayılan olarak dahil etme yönündedir ve yalnız bazı mülklerde kullanıma açılmış olabilir. Görünürlük hedefleniyorsa mülk sahibi bu ayarın “Include” konumunda olduğunu doğrulamalıdır; robots.txt veya özel bir HTML etiketi bu hesap ayarının yerini tutmaz.</p></details><details><summary>Akademik GEO araştırmaları hangi taktikleri öneriyor?</summary><p>KDD 2024 kontrollü deneyleri kaynak ve istatistik ekleme gibi sunumların bazı sorgu alanlarında görünürlüğü artırabildiğini gösterdi. 2026 eleştirel incelemesi ise bunun organik keşif veya uzun dönem trafik etkisini kanıtlamadığını vurgular.</p></details></div>
             </section>
             <section class="info-section article-section" id="kaynaklar">
               <p class="info-section__label">Birincil kaynaklar</p>
               <h2>Kaynaklar ve kapsam.</h2>
               <p>Bağlantılar içerikteki değişebilir veya dış doğrulama gerektiren bilgilerin kaynağıdır. Ticari ilişki veya sponsorlu bağlantı değildir.</p>
-              <ol class="article-sources"><li><a href="https://arxiv.org/abs/2311.09735" rel="noopener noreferrer">KDD 2024 — GEO: Generative Engine Optimization (Aggarwal et al., arXiv:2311.09735)</a></li><li><a href="https://arxiv.org/abs/2607.14035" rel="noopener noreferrer">Martinez 2026 — GEO araştırmalarının eleştirel incelemesi (45 çalışma)</a></li><li><a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide" rel="noopener noreferrer">Google — Üretken AI özellikleri için optimizasyon rehberi</a></li><li><a href="https://web.dev/articles/ai-agent-site-ux" rel="noopener noreferrer">web.dev — Tarayıcı ajanları için erişilebilir ve semantik site rehberi</a></li><li><a href="https://support.google.com/webmasters/answer/16984139" rel="noopener noreferrer">Google Search Console — Generative AI Performance raporu</a></li><li><a href="https://aclanthology.org/2024.acl-long.806/" rel="noopener noreferrer">ACL 2024 — WebCiteS: Atıflı web yanıtlarında kaynak doğruluğu değerlendirmesi</a></li><li><a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" rel="noopener noreferrer">Google — İnsan odaklı, güvenilir içerik ve Bilgi Kazanımı</a></li><li><a href="https://developers.openai.com/api/docs/bots" rel="noopener noreferrer">OpenAI — Search botları ve yayıncı erişimi</a></li><li><a href="https://www.bing.com/webmasters/help/webmaster-guidelines-30fba23a" rel="noopener noreferrer">Bing Webmaster Guidelines</a></li></ol>
+              <ol class="article-sources"><li><a href="https://arxiv.org/abs/2311.09735" rel="noopener noreferrer">KDD 2024 — GEO: Generative Engine Optimization (Aggarwal et al., arXiv:2311.09735)</a></li><li><a href="https://arxiv.org/abs/2607.14035" rel="noopener noreferrer">Martinez 2026 — GEO araştırmalarının eleştirel incelemesi (45 çalışma)</a></li><li><a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide" rel="noopener noreferrer">Google — Üretken AI özellikleri için optimizasyon rehberi</a></li><li><a href="https://web.dev/articles/ai-agent-site-ux" rel="noopener noreferrer">web.dev — Tarayıcı ajanları için erişilebilir ve semantik site rehberi</a></li><li><a href="https://support.google.com/webmasters/answer/16984139" rel="noopener noreferrer">Google Search Console — Generative AI Performance raporu</a></li><li><a href="https://support.google.com/webmasters/answer/16908024" rel="noopener noreferrer">Google Search Console — Search generative AI dahil etme kontrolü</a></li><li><a href="https://aclanthology.org/2024.acl-long.806/" rel="noopener noreferrer">ACL 2024 — WebCiteS: Atıflı web yanıtlarında kaynak doğruluğu değerlendirmesi</a></li><li><a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" rel="noopener noreferrer">Google — İnsan odaklı, güvenilir içerik ve Bilgi Kazanımı</a></li><li><a href="https://developers.openai.com/api/docs/bots" rel="noopener noreferrer">OpenAI — Search botları ve yayıncı erişimi</a></li><li><a href="https://www.bing.com/webmasters/help/webmaster-guidelines-30fba23a" rel="noopener noreferrer">Bing Webmaster Guidelines</a></li></ol>
               <aside class="article-method" aria-label="Bu rehberin hazırlanma yöntemi"><strong>Hazırlama yöntemi</strong><p>Bu rehber Narvals Labs yayıncılığında; ilgili birincil kaynaklar, görünür hizmet kapsamı ve proje karar çerçeveleri incelenerek hazırlandı. Doğrulanamayan müşteri, fiyat, başarı oranı veya sonuç iddiası eklenmedi. Yöntem, düzeltme ve yapay zekâ desteği açıklaması için <a href="/editoryal-ilkeler/">editoryal ilkeleri</a> okuyabilirsiniz.</p></aside>
             </section>
             <section class="info-section article-section">

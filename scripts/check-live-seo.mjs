@@ -87,10 +87,14 @@ for (const batch of batches) {
 // public HTML response status that a normal visitor receives.
 const crawlerUserAgents = {
   Googlebot: 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+  'Googlebot-Smartphone': 'Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
   Bingbot: 'Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)',
   'OAI-SearchBot': 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; OAI-SearchBot/1.4; +https://openai.com/searchbot',
+  'ChatGPT-User': 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; ChatGPT-User/1.0; +https://openai.com/bot',
   'Claude-SearchBot': 'Mozilla/5.0 (compatible; Claude-SearchBot/1.0; +https://www.anthropic.com/bot)',
+  'Claude-User': 'Mozilla/5.0 (compatible; Claude-User/1.0; +https://claude.ai/user)',
   PerplexityBot: 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; PerplexityBot/1.0; +https://perplexity.ai/perplexitybot)',
+  'Perplexity-User': 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Perplexity-User/1.0; +https://docs.perplexity.ai/guides/bots)',
   Applebot: 'Mozilla/5.0 (compatible; Applebot/0.1; +http://www.apple.com/go/applebot)'
 };
 await Promise.all(Object.entries(crawlerUserAgents).map(async ([agent, userAgent]) => {
@@ -122,10 +126,12 @@ const fetchText = async (path, expectedType) => {
   }
 };
 
-const [robots, sitemap, feed, indexNowKey] = await Promise.all([
+const [robots, sitemap, feed, llms, llmsFull, indexNowKey] = await Promise.all([
   fetchText('/robots.txt', 'text/plain'),
   fetchText('/sitemap.xml', 'xml'),
   fetchText('/blog/feed.xml', 'xml'),
+  fetchText('/llms.txt', 'text/plain'),
+  fetchText('/llms-full.txt', 'text/plain'),
   fetchText('/b04a90decae26feec44042e2c2e4dd84.txt', 'text/plain')
 ]);
 
@@ -151,7 +157,18 @@ for (const line of robotsLines) {
   if (!directive) continue;
   groupHasDirectives = true;
   const blocksEverything = directive === 'disallow' && ['/', '/*', '/*$'].includes(value.replaceAll(' ', ''));
-  const relevantAgents = activeAgents.filter((agent) => ['*', 'googlebot', 'bingbot', 'oai-searchbot', 'perplexitybot'].includes(agent));
+  const relevantAgents = activeAgents.filter((agent) => [
+    '*',
+    'googlebot',
+    'bingbot',
+    'oai-searchbot',
+    'chatgpt-user',
+    'claude-searchbot',
+    'claude-user',
+    'perplexitybot',
+    'perplexity-user',
+    'applebot'
+  ].includes(agent));
   if (blocksEverything && relevantAgents.length) {
     errors.push(`robots.txt blocks all crawling for ${relevantAgents.join(', ')}.`);
   }
@@ -162,6 +179,12 @@ for (const { path, kind } of sitePages) {
   if (kind === 'article' && !feed.includes(`<link>${url}</link>`)) errors.push(`RSS feed missing ${url}`);
 }
 if (indexNowKey.trim() !== 'b04a90decae26feec44042e2c2e4dd84') errors.push('IndexNow key file content is wrong.');
+if (!llms.includes(`${origin}/`) || !llms.includes(`${origin}/sitemap.xml`)) {
+  errors.push('llms.txt is missing the canonical origin or sitemap discovery link.');
+}
+if (!llmsFull.includes(`${origin}/`) || !llmsFull.includes('Narvals Labs')) {
+  errors.push('llms-full.txt is missing the canonical origin or publisher identity.');
+}
 
 try {
   const response = await request(`${origin}/__narvals-seo-404-check__/`);

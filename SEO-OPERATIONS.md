@@ -4,14 +4,13 @@ Bu dosya kodla çözülemeyen, hesap/doğrulama veya gerçek işletme verisi
 gerektiren yayın sonrası işleri takip eder. Hiçbir madde sıralama, indekslenme
 veya yapay zekâ yanıtında kaynak gösterilme garantisi vermez.
 
-## 23 Ağustos 2026 canlılık durumu
+## 30 Ağustos 2026 canlılık durumu
 
 `https://narvals.com` yayındadır. Canlı denetimde HTTPS ve canonical
-yönlendirmeleri, gerçek `404`, `robots.txt`, sitemap, 22 mevcut canonical URL ve
-iç bağlantılar başarılı bulundu. Bu kaynak güncellemesi sosyal medya yönetimi
-hizmet sayfası, web sitesi yaptırma rehberi ve dört yeni ticari karar rehberiyle
-üretim sitemap'ini 28 canonical URL'ye çıkarır; bu altı URL deploy sonrasında
-canlı denetime dahil edilmelidir.
+yönlendirmeleri, gerçek `404`, `robots.txt`, sitemap, 78 canonical URL ve iç
+bağlantılar başarılı bulundu. Denetim; masaüstü ve mobil Googlebot, Bingbot,
+OAI-SearchBot, ChatGPT-User, Claude-SearchBot, Claude-User, PerplexityBot,
+Perplexity-User ve Applebot için WAF/CDN erişimini de sınar.
 
 Production derlemesi gerçek canonical adres açıkça verilmeden artık durur:
 
@@ -68,8 +67,10 @@ Bu bilgiler geldikten sonra ana sayfa, `/iletisim/`, footer ve tüm sayfalardaki
 3. Page Indexing, Crawl Stats, Core Web Vitals, HTTPS, Manual Actions ve Security
    Issues raporlarını izleyin.
 4. Rich Results Test ve Schema.org Validator ile JSON-LD’yi kontrol edin.
-5. Search Console'da sitenin üretken yapay zekâ özelliklerine uygunluk durumunu
-   kontrol edin; uygunluk gösterim veya kaynak gösterilme garantisi değildir.
+5. Search Console > Settings > Search generative AI kontrolü mülkte görünüyorsa
+   görünürlük hedefi için `Include my site's links and content` seçimini doğrulayın.
+   Varsayılan dahil etmedir; özellik hâlen yalnız bazı mülklere sunulabilir.
+   Bu hesap ayarı robots.txt veya HTML ile değiştirilemez.
 6. `Generative AI Performance` raporunda gösterim, tıklama, kaynak URL ve
    sorguları izleyip normal Web performansıyla birlikte değerlendirin.
 7. Gerçek yerel işletmeyse Google Business Profile oluşturun ve siteyle aynı
@@ -144,7 +145,7 @@ render kaynaklarına erişebilmelidir. `nosnippet` kullanılmamalıdır.
 
 ## İçerik ve otorite takvimi
 
-- `/blog/` altında 14 karar rehberi ve `/editoryal-ilkeler/` yayın sistemi
+- `/blog/` altında 39 karar rehberi ve `/editoryal-ilkeler/` yayın sistemi
   hazırdır. Her metin production öncesi marka sorumlusu tarafından okunmalı;
   platform/mevzuat iddialarının bağlantıları yeniden açılmalıdır.
 - Uydurma veya yüzeysel “SEO blogları” yerine, yayın izni olan gerçek proje vaka

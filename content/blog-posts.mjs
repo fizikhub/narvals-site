@@ -281,6 +281,7 @@ export const blogPosts = [
       { question: 'GEO (Generative Engine Optimization) nedir?', answer: 'Web sitesi içeriğinin ve varlık sinyallerinin ChatGPT, Google AI Overviews ve Perplexity gibi üretken yapay zekâ yanıt motorları tarafından taranabilir, anlaşılabilir ve kaynak gösterilebilir hale getirilmesidir.' },
       { question: 'Yapay zekâ motorları hangi içerikleri kaynak gösterir?', answer: 'Tek bir yayınlanmış seçim formülü yoktur. Taranabilirlik ve konu alakası temel koşullardır; özgün deneyim, doğrulanabilir kanıt, açık kaynaklar ve iyi kullanıcı deneyimi içeriği daha yararlı bir kaynak adayı yapar.' },
       { question: 'llms.txt dosyası ne işe yarar?', answer: 'Bazı ajanlara önemli sayfaların isteğe bağlı temiz metin haritasını sunabilir. Google Search llms.txt dosyasını yok saydığını ve dosyanın Google görünürlüğüne ne olumlu ne olumsuz etkisi olduğunu açıkça belirtir.' },
+      { question: 'Google AI Overviews ve AI Mode için site ayrıca açılmalı mı?', answer: 'Google Search Console’daki Search generative AI kontrolü varsayılan olarak dahil etme yönündedir ve yalnız bazı mülklerde kullanıma açılmış olabilir. Görünürlük hedefleniyorsa mülk sahibi bu ayarın “Include” konumunda olduğunu doğrulamalıdır; robots.txt veya özel bir HTML etiketi bu hesap ayarının yerini tutmaz.' },
       { question: 'Akademik GEO araştırmaları hangi taktikleri öneriyor?', answer: 'KDD 2024 kontrollü deneyleri kaynak ve istatistik ekleme gibi sunumların bazı sorgu alanlarında görünürlüğü artırabildiğini gösterdi. 2026 eleştirel incelemesi ise bunun organik keşif veya uzun dönem trafik etkisini kanıtlamadığını vurgular.' }
     ],
     sections: [
@@ -411,7 +412,8 @@ export const blogPosts = [
         heading: 'AI görünürlüğünü tek bir “kaç kez çıktık?” sayısına indirmeyin.',
         paragraphs: [
           'Üretken yanıtlar kişiye, konuma, zamana ve sorgu biçimine göre değişebilir. Sabit bir prompt seti trend görmek için yararlıdır; fakat bütün görünürlüğün ölçümü değildir. Search Console verisini, AI kaynaklı yönlendirmeleri, marka aramalarını ve nitelikli dönüşümleri birlikte okuyun.',
-          'Search Console Generative AI Performance raporu mülkünüzde kullanıma açıldıysa AI Overviews ve AI Mode görünürlüğünü kaynak URL, ülke ve cihaz düzeyinde ayrı inceleyin. Bu raporu normal Web performansının yerine değil, yanına koyun; her mülkte aynı anda görünmeyebileceğini hesaba katın.'
+          'Search Console Generative AI Performance raporu mülkünüzde kullanıma açıldıysa AI Overviews ve AI Mode görünürlüğünü kaynak URL, ülke ve cihaz düzeyinde ayrı inceleyin. Bu raporu normal Web performansının yerine değil, yanına koyun; her mülkte aynı anda görünmeyebileceğini hesaba katın.',
+          'Aynı ayarlar alanındaki Search generative AI kontrolü varsayılan olarak dahil etmedir. Görünürlük hedefleniyorsa “Include my site’s links and content” seçimini doğrulayın. Bu hesap düzeyi kontrol, Search dışındaki model eğitimi tercihi olan Google-Extended’dan ayrıdır ve robots.txt içine yazılan yeni bir direktif değildir.'
         ],
         table: {
           headers: ['Metrik', 'Ne anlatır?', 'Neyi anlatmaz?'],
@@ -432,6 +434,7 @@ export const blogPosts = [
       { label: 'Google — Üretken AI özellikleri için optimizasyon rehberi', url: 'https://developers.google.com/search/docs/fundamentals/ai-optimization-guide' },
       { label: 'web.dev — Tarayıcı ajanları için erişilebilir ve semantik site rehberi', url: 'https://web.dev/articles/ai-agent-site-ux' },
       { label: 'Google Search Console — Generative AI Performance raporu', url: 'https://support.google.com/webmasters/answer/16984139' },
+      { label: 'Google Search Console — Search generative AI dahil etme kontrolü', url: 'https://support.google.com/webmasters/answer/16908024' },
       { label: 'ACL 2024 — WebCiteS: Atıflı web yanıtlarında kaynak doğruluğu değerlendirmesi', url: 'https://aclanthology.org/2024.acl-long.806/' },
       { label: 'Google — İnsan odaklı, güvenilir içerik ve Bilgi Kazanımı', url: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content' },
       { label: 'OpenAI — Search botları ve yayıncı erişimi', url: 'https://developers.openai.com/api/docs/bots' },

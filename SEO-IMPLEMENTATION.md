@@ -4,7 +4,7 @@ Son güncelleme: 30 Ağustos 2026
 
 ## Yönetici özeti
 
-Site artık 74 canonical URL, 16 ücretsiz interaktif karar aracı, 37 kaynaklı
+Site artık 78 canonical URL, 18 ücretsiz interaktif karar aracı, 39 kaynaklı
 karar rehberi, 5 konu merkezi hub'ı (E-ticaret, Web Sitesi, Reklam, QR Menü, SEO & GEO),
 blog hub'ı, editoryal politika, RSS, URL bazlı sitemap tarihi, tüm arama ve AI
 tarayıcılarını (Googlebot, OAI-SearchBot, Claude-SearchBot, PerplexityBot, Applebot,
@@ -74,7 +74,7 @@ yayıncı şimdilik Narvals Labs organizasyonudur.
 - Statik ana içerik; JavaScript beklemeden okunabilir HTML.
 - Her sayfada benzersiz title/description, self-canonical, `tr` + `x-default`,
   OG/Twitter kartı, Schema.org varlık temelli GEO işaretlemesi (ülke, dil, hizmet alanı ve doğrulanmış iletişim), yazar, manifest ve RSS keşif bağlantısı.
-- 31 canonical URL'yi tek manifestten yöneten build, sitemap ve SEO kontrolü;
+- 78 canonical URL'yi tek manifestten yöneten build, sitemap ve SEO kontrolü;
   key/path/file/tarih ve ilgili içerik hedefleri için başlangıç doğrulamaları.
 - URL başına gerçek içerik değişikliğine bağlı `lastmod`; build tarihi kullanılmaz.
 - Wildcard `robots.txt` ile açık tarama ve tek sitemap bildirimi.

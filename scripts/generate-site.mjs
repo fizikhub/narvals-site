@@ -214,7 +214,7 @@ ${topicHubs.map((hub) => `- [${hub.title}](${siteOrigin}/blog/konu/${hub.slug}/)
 
 ## İsteğe Bağlı / Optional
 
-- [Tam Dokümantasyon (llms-full.txt)](${siteOrigin}/llms-full.txt): LLM ve RAG sistemleri için 34 karar rehberi, 14 araç ve mimari kuralları içeren tam metin bilgi tabanı
+- [Tam Dokümantasyon (llms-full.txt)](${siteOrigin}/llms-full.txt): LLM ve RAG sistemleri için ${blogPosts.length} karar rehberi, ${sitePages.filter(({ kind }) => kind === 'tool').length} araç ve mimari kuralları içeren tam metin bilgi tabanı
 - [XML Site Haritası](${siteOrigin}/sitemap.xml): Arama motorları ve botlar için tam kanonik sayfa ve görsel indeksi
 - [RSS Akışı](${siteOrigin}/blog/feed.xml): En son yayınlanan rehberlerin makine tarafından okunabilir XML akışı
 `;
