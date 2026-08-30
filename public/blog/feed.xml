@@ -5,7 +5,7 @@
     <link>https://narvals.com/blog/</link>
     <description>Web, yazılım, reklam ve işletme sistemleri için kaynaklı karar rehberleri.</description>
     <language>tr-TR</language>
-    <lastBuildDate>Sun, 30 Aug 2026 17:10:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 17:50:00 GMT</lastBuildDate>
     <atom:link href="https://narvals.com/blog/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>E-ticaret sitesi nasıl açılır? 10 adımlı sade rehber</title>
@@ -204,6 +204,33 @@
       <category>Meta reklam</category>
       <description>Instagram ve Facebook reklamlarında tıklama ve dönüşüm oranını artıran reklam metni yazarlığı (copywriting) çerçeveleri, kanca ve CTA formülleri.</description>
       <content:encoded><![CDATA[<p>Meta (Instagram ve Facebook) reklamlarında görsel dikkat çeker; ancak satın alma veya form doldurma kararını reklam metni ve açılış sayfası mesajı tamamlar. Başarılı bir Meta reklam metni; ilk satırda merak veya acı noktası uyandıran kanca (hook), teklifin somut faydasını anlatan gövde (body) ve net bir harekete geçirici mesajdan (CTA) oluşur. PAS (Problem-Agitate-Solution) ve AIDA çerçeveleri reklam tıklama oranlarını (CTR) doğrudan yükseltir.</p><ul><li>İlk iki satır (Daha Fazlasını Gör öncesi) reklam metninin okunma kaderini belirler.</li><li>Özellik sıralamak yerine müşterinin elde edeceği somut iş faydası anlatılmalıdır.</li><li>Meta reklam politikalarını ihlal eden yanıltıcı veya aşırı iddialı ifadelerden kaçınılmalıdır.</li><li>Kısa, orta ve uzun metin varyasyonları aynı reklam setinde test edilmelidir.</li></ul>]]></content:encoded>
+    </item>
+    <item>
+      <title>Yerel SEO ve Google Haritalar rehberi: yerel aramada müşteri kazanma</title>
+      <link>https://narvals.com/blog/yerel-seo-ve-google-haritalar-rehberi/</link>
+      <guid isPermaLink="true">https://narvals.com/blog/yerel-seo-ve-google-haritalar-rehberi/</guid>
+      <pubDate>Sun, 30 Aug 2026 17:50:00 GMT</pubDate>
+      <category>Web &amp; UX</category>
+      <description>Google İşletme Profilini optimize ederek haritalarda öne çıkma, yerel arama sıralamasını yükseltme ve telefon/yol tarifi alma taktikleri.</description>
+      <content:encoded><![CDATA[<p>Yerel SEO (Local SEO); işletmenizin Google Haritalar ve &quot;yakınımdaki&quot; yerel arama sonuçlarında (Local Pack) ilk 3 sırada görünmesini sağlayan optimizasyon sürecidir. Başarılı bir yerel SEO stratejisi; Google İşletme Profilinin eksiksiz doğrulanması, NAP (İsim, Adres, Telefon) bilgilerinin web sitesi ve dizinlerde birebir tutarlı olması, gerçek müşteri yorumlarının düzenli yönetilmesi ve LocalBusiness şema işaretlemesinin kurulmasını kapsar.</p><ul><li>Google İşletme Profilindeki birincil kategori seçimi yerel sıralamanın en güçlü sinyalidir.</li><li>NAP (Ad, Adres, Telefon) bilgilerinin tüm platformlarda harfiyen aynı olması güveni pekiştirir.</li><li>Müşteri yorumlarına düzenli ve anahtar kelime içeren profesyonel yanıtlar verilmelidir.</li><li>Web sitesinde LocalBusiness ve GeoCoordinates şema işaretlemesi kurulmalıdır.</li></ul>]]></content:encoded>
+    </item>
+    <item>
+      <title>B2B lead generation ve potansiyel müşteri edinme stratejileri</title>
+      <link>https://narvals.com/blog/b2b-lead-generation-ve-musteri-edinme-rehberi/</link>
+      <guid isPermaLink="true">https://narvals.com/blog/b2b-lead-generation-ve-musteri-edinme-rehberi/</guid>
+      <pubDate>Sun, 30 Aug 2026 17:50:00 GMT</pubDate>
+      <category>Web &amp; UX</category>
+      <description>B2B şirketler için web sitesi, Google Ads ve LinkedIn ile yüksek değerli potansiyel müşteri (lead) toplama, form ve teklif optimizasyonu rehberi.</description>
+      <content:encoded><![CDATA[<p>B2B (kurumsal) pazarlamada müşteri edinme süreci son tüketiciye satıştan farklıdır; daha uzun karar döngüleri, çoklu karar vericiler ve yüksek sözleşme tutarları içerir. Başarılı bir B2B lead generation sistemi; arama niyetine odaklanan Google Arama Ağı reklamları, güven veren vaka çalışmaları (case studies), sürtünmesiz teklif formları ve CRM / pazarlama otomasyonu entegrasyonuyla nitelikli görüşmeler üretir.</p><ul><li>B2B web sitelerinde genel tanıtım yerine sektörel vaka analizleri ve net çözümler öne çıkmalıdır.</li><li>Teklif formlarında gereksiz soru sayısını azaltmak form tamamlama oranını belirgin artırır.</li><li>Gelen talepler ilk 15 dakika içinde yanıtlandığında nitelikli satışa dönüşme ihtimali katlanır.</li><li>Google Arama Ağı ve LinkedIn reklamları B2B karar vericilere ulaşmada en yüksek niyetli kanallardır.</li></ul>]]></content:encoded>
+    </item>
+    <item>
+      <title>E-ticaret ürün ve kategori sayfası optimizasyonu: UX, SEO ve dönüşüm</title>
+      <link>https://narvals.com/blog/e-ticaret-urun-ve-kategori-sayfasi-optimizasyonu/</link>
+      <guid isPermaLink="true">https://narvals.com/blog/e-ticaret-urun-ve-kategori-sayfasi-optimizasyonu/</guid>
+      <pubDate>Sun, 30 Aug 2026 17:50:00 GMT</pubDate>
+      <category>E-ticaret</category>
+      <description>E-ticaret mağazalarında ürün (PDP) ve kategori (PLP) sayfalarını optimize ederek hemen çıkmayı azaltma, Googlebot indekslemesi ve satış artırma rehberi.</description>
+      <content:encoded><![CDATA[<p>E-ticarette ziyaretçilerin %80&#39;inden fazlası doğrudan kategori veya ürün sayfalarına iniş yapar. Kategori sayfaları (PLP) arama motorlarında geniş hacimli ürün aramalarını yakalarken; ürün detay sayfaları (PDP) kullanıcının satın alma kararını verdiği son aşamadır. Başarılı bir sayfa optimizasyonu; yüksek çözünürlüklü çok açılı görseller, video demonstrasyonları, net stok/kargo bilgisi, kullanıcı yorumları ve Product/AggregateRating yapılandırılmış veri işaretlemesini bir araya getirir.</p><ul><li>Kategori sayfalarındaki filtreleme parametreleri canonical etiketleriyle doğru yönetilmelidir.</li><li>Ürün sayfalarında gerçek müşteri fotoğrafları ve doğrulanmış yorumlar dönüşüm güvenini kurar.</li><li>Fiyat, taksit seçenekleri ve kargo süresi ekranın ilk kaydırma (above-the-fold) alanında olmalıdır.</li><li>Benzer ve tamamlayıcı ürün önerileri (Cross-sell/Up-sell) sepet tutarını (AOV) artırır.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>Web sitesi neden müşteri getirmiyor? 8 olası neden</title>

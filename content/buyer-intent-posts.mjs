@@ -910,8 +910,293 @@ export const buyerIntentPosts = [
       { label: 'Meta Business Help — Reklam Metni En İyi Uygulamaları', url: 'https://www.facebook.com/business/help' },
       { label: 'Google Search Central — Nitelikli ve İnsan Odaklı İçerik İlkeleri', url: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content' }
     ]
+  },
+  {
+    slug: 'yerel-seo-ve-google-haritalar-rehberi',
+    metaTitle: 'Yerel SEO ve Google Haritalar Optimizasyon Rehberi | Narvals',
+    title: 'Yerel SEO ve Google Haritalar rehberi: yerel aramada müşteri kazanma',
+    description: 'Google İşletme Profilini optimize ederek haritalarda öne çıkma, yerel arama sıralamasını yükseltme ve telefon/yol tarifi alma taktikleri.',
+    keywords: ['yerel SEO rehberi', 'Google Haritalar optimizasyonu', 'Google İşletme Profili', 'yerel müşteri kazanma'],
+    category: 'Web & UX',
+    published: '2026-08-30T20:50:00+03:00',
+    modified: '2026-08-30T20:50:00+03:00',
+    readingTime: 11,
+    answer: 'Yerel SEO (Local SEO); işletmenizin Google Haritalar ve "yakınımdaki" yerel arama sonuçlarında (Local Pack) ilk 3 sırada görünmesini sağlayan optimizasyon sürecidir. Başarılı bir yerel SEO stratejisi; Google İşletme Profilinin eksiksiz doğrulanması, NAP (İsim, Adres, Telefon) bilgilerinin web sitesi ve dizinlerde birebir tutarlı olması, gerçek müşteri yorumlarının düzenli yönetilmesi ve LocalBusiness şema işaretlemesinin kurulmasını kapsar.',
+    takeaways: [
+      'Google İşletme Profilindeki birincil kategori seçimi yerel sıralamanın en güçlü sinyalidir.',
+      'NAP (Ad, Adres, Telefon) bilgilerinin tüm platformlarda harfiyen aynı olması güveni pekiştirir.',
+      'Müşteri yorumlarına düzenli ve anahtar kelime içeren profesyonel yanıtlar verilmelidir.',
+      'Web sitesinde LocalBusiness ve GeoCoordinates şema işaretlemesi kurulmalıdır.'
+    ],
+    about: ['Yerel SEO', 'Google Haritalar', 'Google İşletme Profili', 'LocalBusiness şeması'],
+    related: ['web-sitesi-teknik-seo-kontrol-listesi', 'schema-org-ve-baglantili-jsonld-graflari', 'google-ai-aramalari-icin-geo-rehberi'],
+    servicePath: '/hizmetler/web-tasarim/',
+    serviceLabel: 'Kurumsal web tasarım ve yerel optimizasyon hizmetimizi inceleyin',
+    faq: [
+      {
+        question: 'Google Haritalarda üst sıralara çıkmak ne kadar sürer?',
+        answer: 'İşletme profili doğrulandıktan ve NAP bilgileri eşitlendikten sonra rekabete bağlı olarak 2 ila 8 hafta içinde yerel aramalarda görünürlük artışı başlar.'
+      },
+      {
+        question: 'Yerel SEO için web sitesi şart mıdır?',
+        answer: 'Google İşletme Profili tek başına açılabilir; ancak güçlü bir web sitesi, yerel açılış sayfaları ve LocalBusiness şeması Harita sıralamasını doğrudan güçlendirir.'
+      },
+      {
+        question: 'Olumsuz yorumlar yerel sıralamayı düşürür mü?',
+        answer: 'Az sayıda olumsuz yoruma nazik ve çözüm odaklı yanıt verilmesi işletmenin güvenilirliğini artırır; asıl önemli olan düzenli yeni ve olumlu müşteri geri bildirimleri almaktır.'
+      }
+    ],
+    sections: [
+      {
+        id: 'yerel-siralama-faktorleri',
+        label: 'Sıralama Faktörleri',
+        heading: 'Google Yerel Algoritmasını Belirleyen 3 Temel Unsur',
+        table: {
+          headers: ['Faktör', 'Anlamı', 'Optimizasyon Yolu'],
+          rows: [
+            ['Alaka Düzeyi (Relevance)', 'İşletmenizin kullanıcının aradığı hizmetle ne kadar örtüştüğü', 'Doğru birincil kategori, detaylı hizmet listesi ve ürün açıklamaları.'],
+            ['Uzaklık (Distance)', 'Arama yapan kullanıcının işletmenize olan fiziksel mesafesi', 'Hizmet verilen ilçeleri ve açık posta adresini net belirtmek.'],
+            ['Belirginlik (Prominence)', 'İşletmenizin internet genelindeki bilinirliği ve itibarı', 'Yorum sayısı, puan ortalaması, yerel basında yer alma ve kaliteli backlinkler.']
+          ]
+        }
+      },
+      {
+        id: 'isletme-profili-optimizasyonu',
+        label: 'Profil Yönetimi',
+        heading: 'Google İşletme Profilini Zirveye Taşıyan 5 Ayar',
+        ordered: [
+          '<strong>Doğru Birincil Kategori:</strong> İşletmenizi en net anlatan ana kategoriyi seçin; ardından 4-5 ikincil alt kategori ekleyin.',
+          '<strong>Eksiksiz İletişim (NAP):</strong> İsim, açık sokak adresi ve sabit/mobil telefon numaranızı web sitenizdeki footer ile harfiyen eşleştirin.',
+          '<strong>Yüksek Kaliteli Fotoğraflar:</strong> İşletme içi, dış cephe, ekip ve hizmet fotoğraflarını düzenli olarak yükleyin.',
+          '<strong>Haftalık Google Güncellemeleri (Yayınlar):</strong> Kampanyalarınızı, yeni hizmetlerinizi ve duyurularınızı Google Yayınlar üzerinden paylaşın.',
+          '<strong>Soru ve Cevap Bölümü:</strong> Müşterilerin sık sorduğu soruları profilinizin Soru-Cevap alanına proaktif olarak ekleyip yanıtlayın.'
+        ]
+      },
+      {
+        id: 'yapilandirilmis-veri-ve-yerel-sayfalar',
+        label: 'Teknik Yapı',
+        heading: 'Web Sitesinde Yerel SEO: LocalBusiness Şeması ve Şehir Sayfaları',
+        paragraphs: [
+          'Web sitenizin kaynak koduna eklenen LocalBusiness, OpeningHoursSpecification ve GeoCoordinates JSON-LD şemaları, Googlebot\'a fiziksel konumunuzu ve çalışma saatlerinizi makine dilinde anlatır.',
+          'Farklı il veya ilçelerde fiziksel şubeleriniz varsa, her şube için özgün içerikli, adres ve harita gömülü ayrı açılış sayfaları oluşturulmalıdır.'
+        ],
+        checklist: [
+          'Web sitesine LocalBusiness ve GeoCoordinates şeması eklendi.',
+          'Footer alanına tıklanabilir telefon (tel:) ve açık adres yerleştirildi.',
+          'Google Haritalar konumu iletişim sayfasına entegre edildi.',
+          'Mobil aramalarda "Hemen Ara" ve "Yol Tarifi Al" butonları test edildi.'
+        ]
+      },
+      {
+        id: 'yorum-toplama-stratejisi',
+        label: 'İtibar ve Güven',
+        heading: 'Müşterilerden Düzenli ve Doğal Yorum Toplama',
+        paragraphs: [
+          'Google sıralamasında yalnızca yıldız puanı değil; yorumların düzenli aralıklarla gelmesi ve içinde hizmet anahtar kelimelerinin geçmesi de etkilidir.',
+          'Hizmet tamamlandıktan hemen sonra müşteriye doğrudan yorum bağlantısı içeren kısa bir WhatsApp teşekkür mesajı iletmek geri dönüş oranını belirgin artırır.'
+        ],
+        callout: 'İşletmenizin web sitesi hızını ve SEO sağlığını test etmek için ücretsiz web sitesi kontrol aracımızı kullanabilirsiniz.'
+      }
+    ],
+    sources: [
+      { label: 'Google Search Central — Yerel Arama Sıralamasını İyileştirme', url: 'https://support.google.com/business/answer/7091' },
+      { label: 'Schema.org — LocalBusiness Specification', url: 'https://schema.org/LocalBusiness' },
+      { label: 'Google Search Central — Yapılandırılmış Veri Rehberi', url: 'https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data' }
+    ]
+  },
+  {
+    slug: 'b2b-lead-generation-ve-musteri-edinme-rehberi',
+    metaTitle: 'B2B Lead Generation ve Müşteri Edinme Stratejisi | Narvals',
+    title: 'B2B lead generation ve potansiyel müşteri edinme stratejileri',
+    description: 'B2B şirketler için web sitesi, Google Ads ve LinkedIn ile yüksek değerli potansiyel müşteri (lead) toplama, form ve teklif optimizasyonu rehberi.',
+    keywords: ['B2B lead generation', 'potansiyel müşteri kazanma', 'B2B pazarlama', 'lead optimizasyonu'],
+    category: 'Web & UX',
+    published: '2026-08-30T20:50:00+03:00',
+    modified: '2026-08-30T20:50:00+03:00',
+    readingTime: 11,
+    answer: 'B2B (kurumsal) pazarlamada müşteri edinme süreci son tüketiciye satıştan farklıdır; daha uzun karar döngüleri, çoklu karar vericiler ve yüksek sözleşme tutarları içerir. Başarılı bir B2B lead generation sistemi; arama niyetine odaklanan Google Arama Ağı reklamları, güven veren vaka çalışmaları (case studies), sürtünmesiz teklif formları ve CRM / pazarlama otomasyonu entegrasyonuyla nitelikli görüşmeler üretir.',
+    takeaways: [
+      'B2B web sitelerinde genel tanıtım yerine sektörel vaka analizleri ve net çözümler öne çıkmalıdır.',
+      'Teklif formlarında gereksiz soru sayısını azaltmak form tamamlama oranını belirgin artırır.',
+      'Gelen talepler ilk 15 dakika içinde yanıtlandığında nitelikli satışa dönüşme ihtimali katlanır.',
+      'Google Arama Ağı ve LinkedIn reklamları B2B karar vericilere ulaşmada en yüksek niyetli kanallardır.'
+    ],
+    about: ['B2B lead generation', 'Kurumsal müşteri edinme', 'Teklif formu optimizasyonu', 'B2B dijital pazarlama'],
+    related: ['b2b-web-sitesi-nasil-olmali', 'google-ads-reklami-yaptirmak-isteyenler-icin-rehber', 'web-sitesi-donusum-orani-nasil-hesaplanir'],
+    servicePath: '/hizmetler/web-tasarim/',
+    serviceLabel: 'B2B kurumsal web tasarım ve yazılım hizmetimizi inceleyin',
+    faq: [
+      {
+        question: 'B2B şirketler için en etkili dijital müşteri edinme kanalı hangisidir?',
+        answer: 'Aktif satın alma arayışındaki şirketleri yakalamak için Google Arama Ağı reklamları; hedef sektördeki karar vericileri (C-level, satın alma müdürleri) nokta atışı hedeflemek için LinkedIn reklamları en yüksek dönüşümü sağlar.'
+      },
+      {
+        question: 'Teklif formunda kaç soru sorulmalıdır?',
+        answer: 'İlk aşamada sadece isim, kurumsal e-posta, telefon ve kısa proje ihtiyacı sorulmalıdır. Çok uzun formlar dönüşüm oranını %50\'ye kadar düşürebilir.'
+      },
+      {
+        question: 'Gelen potansiyel müşteri talepleri ne kadar sürede yanıtlanmalıdır?',
+        answer: 'Harvard Business Review araştırmalarına göre ilk 1 saat içinde (ideal olarak ilk 15 dakikada) aranan veya yanıtlanan lead\'lerin satışa dönüşme olasılığı 7 kat daha fazladır.'
+      }
+    ],
+    sections: [
+      {
+        id: 'b2b-musteri-hunisi',
+        label: 'Lead Hunisi',
+        heading: 'B2B Müşteri Edinme Hunisi (Funnel) Mimarisi',
+        table: {
+          headers: ['Huni Aşaması', 'Müşteri Psikolojisi', 'İçerik ve Kanal', 'Hedef Eylem'],
+          rows: [
+            ['Farkındalık (TOFU)', '"Sektörümüzdeki bu operasyonel sorunu nasıl çözeriz?"', 'SEO odaklı sektör rehberleri ve LinkedIn içerikleri', 'Rehber okuma, bülten aboneliği'],
+            ['Değerlendirme (MOFU)', '"Hangi yazılım veya ajans çözümü bizim için uygun?"', 'Karşılaştırma matrisleri, vaka incelemeleri ve e-kitaplar', 'Demo talebi, örnek vaka inceleme'],
+            ['Karar (BOFU)', '"Teklif alıp sözleşme şartlarını netleştirelim."', 'Açılış sayfası, Google Arama Ağı reklamları ve referanslar', 'Teklif formu doldurma, toplantı planlama']
+          ]
+        }
+      },
+      {
+        id: 'acilis-sayfasi-ve-form-ux',
+        label: 'Açılış Sayfası',
+        heading: 'B2B Açılış Sayfası ve Teklif Formu Optimizasyonu',
+        paragraphs: [
+          'B2B karar vericilerin zamanı kısıtlıdır. Açılış sayfasının hero bölümünde şirketin hangi sorunu kimin için çözdüğü 5 saniyede anlaşılmalıdır.',
+          'Teklif formlarında çok adımlı (multi-step) form yapısı kullanmak, kullanıcıyı yormadan temel bilgileri toplar ve form terkini belirgin şekilde azaltır.'
+        ],
+        checklist: [
+          'Hero alanında net değer önerisi ve kurumsal referans logoları yer alıyor.',
+          'Müşteri vaka analizleri (önceki durum vs elde edilen sonuç) eklendi.',
+          'Teklif formunda kurumsal e-posta doğrulaması sağlandı.',
+          'Form gönderildikten sonra toplantı takvimi (Calendly vb.) entegrasyonu sunuldu.'
+        ]
+      },
+      {
+        id: 'hizli-yanit-ve-crm',
+        label: 'CRM ve Hız',
+        heading: 'İlk 15 Dakika Kuralı ve Otomasyon Entegrasyonu',
+        paragraphs: [
+          'B2B pazarlamada reklam bütçesinin boşa gitmesinin en büyük sebebi gelen taleplerin saatler veya günler sonra yanıtlanmasıdır.',
+          'Web sitesindeki teklif formu webhook ve API bağlantılarıyla doğrudan CRM (HubSpot, Zoho vb.) veya şirket WhatsApp/Slack hattına düşmeli; anında otomatik bilgilendirme e-postası iletilmelidir.'
+        ]
+      },
+      {
+        id: 'b2b-eylem-adimlari',
+        label: 'Uygulama Planı',
+        heading: 'B2B Şirketler İçin 4 Adımlı Büyüme Eylemi',
+        ordered: [
+          '<strong>Yüksek Niyetli Arama Kelimelerine Odaklanın:</strong> "[sektör] yazılımı fiyatları" ve "[hizmet] danışmanlığı ajansı" gibi doğrudan satın alma kelimelerini hedefleyin.',
+          '<strong>Detaylı Vaka İncelemeleri (Case Study) Yayınlayın:</strong> Gerçek iş sonuçlarını ve metrikleri gösteren başarı hikâyeleri ekleyin.',
+          '<strong>Retargeting (Yeniden Pazarlama) Kurun:</strong> Teklif sayfasına gelip ayrılan kurumsal yöneticilere LinkedIn ve Meta üzerinden güven mesajları gösterin.',
+          '<strong>Lead Kalitesini Düzenli Puanlayın:</strong> Satış ekibiyle haftalık değerlendirme yaparak hangi kanalın en nitelikli müşteriyi getirdiğini ölçün.'
+        ],
+        callout: 'Web sitenizin teklif dönüşüm oranını hesaplamak için ücretsiz dönüşüm oranı hesaplayıcımızı kullanabilirsiniz.'
+      }
+    ],
+    sources: [
+      { label: 'Harvard Business Review — The Short Life of Online Sales Leads', url: 'https://hbr.org' },
+      { label: 'Google Search Central — B2B Arama Niyeti ve İçerik Kılavuzu', url: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content' },
+      { label: 'HubSpot — State of Marketing & Lead Generation Benchmarks', url: 'https://www.hubspot.com' }
+    ]
+  },
+  {
+    slug: 'e-ticaret-urun-ve-kategori-sayfasi-optimizasyonu',
+    metaTitle: 'E-Ticaret Ürün ve Kategori Sayfası Optimizasyonu | Narvals',
+    title: 'E-ticaret ürün ve kategori sayfası optimizasyonu: UX, SEO ve dönüşüm',
+    description: 'E-ticaret mağazalarında ürün (PDP) ve kategori (PLP) sayfalarını optimize ederek hemen çıkmayı azaltma, Googlebot indekslemesi ve satış artırma rehberi.',
+    keywords: ['ürün sayfası optimizasyonu', 'kategori sayfası SEO', 'e-ticaret PDP PLP', 'e-ticaret dönüşüm artırma'],
+    category: 'E-ticaret',
+    published: '2026-08-30T20:50:00+03:00',
+    modified: '2026-08-30T20:50:00+03:00',
+    readingTime: 11,
+    answer: 'E-ticarette ziyaretçilerin %80\'inden fazlası doğrudan kategori veya ürün sayfalarına iniş yapar. Kategori sayfaları (PLP) arama motorlarında geniş hacimli ürün aramalarını yakalarken; ürün detay sayfaları (PDP) kullanıcının satın alma kararını verdiği son aşamadır. Başarılı bir sayfa optimizasyonu; yüksek çözünürlüklü çok açılı görseller, video demonstrasyonları, net stok/kargo bilgisi, kullanıcı yorumları ve Product/AggregateRating yapılandırılmış veri işaretlemesini bir araya getirir.',
+    takeaways: [
+      'Kategori sayfalarındaki filtreleme parametreleri canonical etiketleriyle doğru yönetilmelidir.',
+      'Ürün sayfalarında gerçek müşteri fotoğrafları ve doğrulanmış yorumlar dönüşüm güvenini kurar.',
+      'Fiyat, taksit seçenekleri ve kargo süresi ekranın ilk kaydırma (above-the-fold) alanında olmalıdır.',
+      'Benzer ve tamamlayıcı ürün önerileri (Cross-sell/Up-sell) sepet tutarını (AOV) artırır.'
+    ],
+    about: ['Ürün sayfası optimizasyonu (PDP)', 'Kategori sayfası SEO (PLP)', 'E-ticaret UX', 'Product schema'],
+    related: ['e-ticaret-sepet-terk-ve-odeme-sayfasi-optimizasyonu', 'e-ticaret-sitesi-yaptirmak-isteyenler-icin-kapsamli-rehber', 'e-ticaret-odeme-sistemleri-ve-sanal-pos-rehberi'],
+    servicePath: '/hizmetler/e-ticaret/',
+    serviceLabel: 'E-ticaret mağaza tasarım ve dönüşüm hizmetimizi inceleyin',
+    faq: [
+      {
+        question: 'Kategori sayfalarında filtreleme URL\'leri indeksletilmeli midir?',
+        answer: 'Arama hacmi olan popüler kombinasyonlar (ör. "kadın deri ceket") statik ve indekslenebilir yapılmalı; çoklu rastgele parametreler ise canonical etiketiyle ana kategoriye yönlendirilmelidir.'
+      },
+      {
+        question: 'Ürün sayfalarında video kullanmak dönüşümü artırır mı?',
+        answer: 'Evet; ürünün kullanımını, boyutunu ve detaylarını gösteren 10-15 saniyelik kısa videolar iade oranlarını düşürür ve dönüşüm oranını belirgin artırır.'
+      },
+      {
+        question: 'Stokta kalmayan ürün sayfaları silinmeli midir?',
+        answer: 'Hayır; sayfa silinirse Google sıralama değeri kaybolur. Sayfada "Stokta Yok" belirtilmeli, benzer alternatif ürünler önerilmeli ve "Gelince Haber Ver" butonu konulmalıdır.'
+      }
+    ],
+    sections: [
+      {
+        id: 'kategori-sayfasi-mimarisi',
+        label: 'Kategori (PLP)',
+        heading: 'Kategori Sayfaları (PLP) İçin SEO ve Filtreleme Standartları',
+        table: {
+          headers: ['Bileşen', 'SEO ve UX Görevi', 'Kritik Kural'],
+          rows: [
+            ['H1 Başlığı ve Giriş Metni', 'Kategori niyetini tanımlar ve arama alakasını güçlendirir', 'Ürünlerin üstünde 2-3 cümlelik özgün açıklama, detay metni ürünlerin altında'],
+            ['Akıllı Filtreleme', 'Kullanıcının beden, renk ve fiyata göre ürüne hızlı ulaşması', 'Fasetli (faceted) filtrelerin yinelenen içerik yaratmaması için canonical kontrolü'],
+            ['Ürün Kartı Bilgileri', 'Fiyat, varyant sayısı, indirim oranı ve hızlı sepete ekleme', 'Görsellerde webp formatı ve görsel alt etiketleri eksiksiz olmalı'],
+            ['Sayfalama (Pagination)', 'Googlebot\'un tüm ürünleri tarayabilmesi', 'Sonsuz kaydırma yerine numaralandırılmış veya "Daha Fazla Yükle" mimarisi']
+          ]
+        }
+      },
+      {
+        id: 'urun-sayfasi-anatomisi',
+        label: 'Ürün Detay (PDP)',
+        heading: 'Dönüşüm Odaklı Ürün Detay Sayfası (PDP) Anatomisi',
+        paragraphs: [
+          'Ürün detay sayfasında kullanıcının satın alma kararını ertelemesine neden olan tüm belirsizlikler ilk ekranda giderilmelidir.',
+          'Net KDV dahil fiyat, taksit tablosu, stok durumu, tahmini kargo teslim tarihi ve kolay iade garantisi Sepete Ekle butonunun hemen çevresinde yer almalıdır.'
+        ],
+        ordered: [
+          '<strong>Çok Açılı Görsel Galerisi:</strong> Ürünün detaylarını, dokusunu ve ölçeğini gösteren en az 4-5 yüksek kaliteli fotoğraf.',
+          '<strong>Belirgin Sepete Ekle Butonu:</strong> Mobilde ekranın altında sabitlenen (sticky ATC) sepete ekle butonu.',
+          '<strong>Doğrulanmış Müşteri Yorumları:</strong> Yıldız puanları ve müşteri tarafından yüklenen gerçek fotoğraflar.',
+          '<strong>Beden / Ölçü Tablosu:</strong> Giyim ve mobilya gibi kategorilerde iade oranını düşüren interaktif ölçü rehberi.',
+          '<strong>Yapılandırılmış Veri:</strong> Google arama sonuçlarında fiyat ve stok göstermek için Product şeması.'
+        ]
+      },
+      {
+        id: 'capraz-satis-ve-sepet-buyutme',
+        label: 'AOV Artırma',
+        heading: 'Çapraz Satış (Cross-Sell) ve Birlikte Al Önerileri',
+        paragraphs: [
+          'Ortalama sepet tutarını (AOV) artırmak için ürün sayfasında "Birlikte Sıkça Alınanlar" veya "Kombini Tamamla" modülleri sunulmalıdır.',
+          'Bu öneriler rastgele değil; satın alma geçmişi ve ürün uyumu verilerine dayalı akıllı algoritmalarla eşleştirilmelidir.'
+        ],
+        checklist: [
+          'Ürün sayfasında tamamlayıcı ürün paketleri (bundle) indirimli sunuldu.',
+          'Stokta olmayan varyantlar için "Gelince Haber Ver" formu aktif edildi.',
+          'Kullanıcı yorumları filtreleme (fotoğraflı yorumlar vb.) desteği eklendi.',
+          'Product ve Offer şema işaretlemeleri Google Rich Results Test ile doğrulandı.'
+        ]
+      },
+      {
+        id: 'sayfa-hizi-ve-core-web-vitals',
+        label: 'Performans',
+        heading: 'Ürün Sayfalarında Core Web Vitals ve Mobil Hız',
+        paragraphs: [
+          'Ağır ürün galerileri ve üçüncü taraf yorum eklentileri ürün sayfalarını yavaşlatabilir. Görseller modern WebP formatında sıkıştırılmalı ve ilk ekran dışındaki görseller tembel yükleme (lazy loading) ile yüklenmelidir.',
+          'Etkileşim hızı (INP) ve kayma engelleme (CLS) için görsel boyutları HTML içinde width ve height öznitelikleriyle sabitlenmelidir.'
+        ],
+        callout: 'Görsellerinizi doğru en-boy oranında optimize etmek için ücretsiz görsel boyut hesaplayıcımızı kullanabilirsiniz.'
+      }
+    ],
+    sources: [
+      { label: 'Baymard Institute — Product Page UX Research & Benchmarks', url: 'https://baymard.com/lists/cart-abandonment-rate' },
+      { label: 'Google Search Central — E-ticaret Ürün Verisi İlkeleri', url: 'https://developers.google.com/search/docs/specialty/ecommerce' },
+      { label: 'Schema.org — Product & AggregateRating Type', url: 'https://schema.org/Product' },
+      { label: 'web.dev — Optimizing E-commerce Core Web Vitals', url: 'https://web.dev/articles/vitals' }
+    ]
   }
 ];
+
 
 
 

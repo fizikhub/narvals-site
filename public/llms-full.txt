@@ -128,7 +128,7 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 
 ---
 
-## 6. Tüm Karar Rehberleri Özeti (51 Rehber)
+## 6. Tüm Karar Rehberleri Özeti (54 Rehber)
 
 ### E-ticaret sitesi nasıl açılır? 10 adımlı sade rehber
 - **URL:** https://narvals.com/blog/e-ticaret-sitesi-nasil-acilir/
@@ -353,6 +353,36 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
   * Özellik sıralamak yerine müşterinin elde edeceği somut iş faydası anlatılmalıdır.
   * Meta reklam politikalarını ihlal eden yanıltıcı veya aşırı iddialı ifadelerden kaçınılmalıdır.
   * Kısa, orta ve uzun metin varyasyonları aynı reklam setinde test edilmelidir.
+
+### Yerel SEO ve Google Haritalar rehberi: yerel aramada müşteri kazanma
+- **URL:** https://narvals.com/blog/yerel-seo-ve-google-haritalar-rehberi/
+- **Kategori:** Web & UX
+- **Kısa Cevap:** Yerel SEO (Local SEO); işletmenizin Google Haritalar ve "yakınımdaki" yerel arama sonuçlarında (Local Pack) ilk 3 sırada görünmesini sağlayan optimizasyon sürecidir. Başarılı bir yerel SEO stratejisi; Google İşletme Profilinin eksiksiz doğrulanması, NAP (İsim, Adres, Telefon) bilgilerinin web sitesi ve dizinlerde birebir tutarlı olması, gerçek müşteri yorumlarının düzenli yönetilmesi ve LocalBusiness şema işaretlemesinin kurulmasını kapsar.
+- **Önemli Çıkarımlar:**
+  * Google İşletme Profilindeki birincil kategori seçimi yerel sıralamanın en güçlü sinyalidir.
+  * NAP (Ad, Adres, Telefon) bilgilerinin tüm platformlarda harfiyen aynı olması güveni pekiştirir.
+  * Müşteri yorumlarına düzenli ve anahtar kelime içeren profesyonel yanıtlar verilmelidir.
+  * Web sitesinde LocalBusiness ve GeoCoordinates şema işaretlemesi kurulmalıdır.
+
+### B2B lead generation ve potansiyel müşteri edinme stratejileri
+- **URL:** https://narvals.com/blog/b2b-lead-generation-ve-musteri-edinme-rehberi/
+- **Kategori:** Web & UX
+- **Kısa Cevap:** B2B (kurumsal) pazarlamada müşteri edinme süreci son tüketiciye satıştan farklıdır; daha uzun karar döngüleri, çoklu karar vericiler ve yüksek sözleşme tutarları içerir. Başarılı bir B2B lead generation sistemi; arama niyetine odaklanan Google Arama Ağı reklamları, güven veren vaka çalışmaları (case studies), sürtünmesiz teklif formları ve CRM / pazarlama otomasyonu entegrasyonuyla nitelikli görüşmeler üretir.
+- **Önemli Çıkarımlar:**
+  * B2B web sitelerinde genel tanıtım yerine sektörel vaka analizleri ve net çözümler öne çıkmalıdır.
+  * Teklif formlarında gereksiz soru sayısını azaltmak form tamamlama oranını belirgin artırır.
+  * Gelen talepler ilk 15 dakika içinde yanıtlandığında nitelikli satışa dönüşme ihtimali katlanır.
+  * Google Arama Ağı ve LinkedIn reklamları B2B karar vericilere ulaşmada en yüksek niyetli kanallardır.
+
+### E-ticaret ürün ve kategori sayfası optimizasyonu: UX, SEO ve dönüşüm
+- **URL:** https://narvals.com/blog/e-ticaret-urun-ve-kategori-sayfasi-optimizasyonu/
+- **Kategori:** E-ticaret
+- **Kısa Cevap:** E-ticarette ziyaretçilerin %80'inden fazlası doğrudan kategori veya ürün sayfalarına iniş yapar. Kategori sayfaları (PLP) arama motorlarında geniş hacimli ürün aramalarını yakalarken; ürün detay sayfaları (PDP) kullanıcının satın alma kararını verdiği son aşamadır. Başarılı bir sayfa optimizasyonu; yüksek çözünürlüklü çok açılı görseller, video demonstrasyonları, net stok/kargo bilgisi, kullanıcı yorumları ve Product/AggregateRating yapılandırılmış veri işaretlemesini bir araya getirir.
+- **Önemli Çıkarımlar:**
+  * Kategori sayfalarındaki filtreleme parametreleri canonical etiketleriyle doğru yönetilmelidir.
+  * Ürün sayfalarında gerçek müşteri fotoğrafları ve doğrulanmış yorumlar dönüşüm güvenini kurar.
+  * Fiyat, taksit seçenekleri ve kargo süresi ekranın ilk kaydırma (above-the-fold) alanında olmalıdır.
+  * Benzer ve tamamlayıcı ürün önerileri (Cross-sell/Up-sell) sepet tutarını (AOV) artırır.
 
 ### Web sitesi neden müşteri getirmiyor? 8 olası neden
 - **URL:** https://narvals.com/blog/web-sitesi-neden-musteri-getirmiyor/
@@ -725,6 +755,9 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 - Rehber: https://narvals.com/blog/e-ticaret-odeme-sistemleri-ve-sanal-pos-rehberi/
 - Rehber: https://narvals.com/blog/google-ads-arama-terimleri-ve-butce-optimizasyonu/
 - Rehber: https://narvals.com/blog/meta-reklam-metni-ve-reklam-yazarligi-rehberi/
+- Rehber: https://narvals.com/blog/yerel-seo-ve-google-haritalar-rehberi/
+- Rehber: https://narvals.com/blog/b2b-lead-generation-ve-musteri-edinme-rehberi/
+- Rehber: https://narvals.com/blog/e-ticaret-urun-ve-kategori-sayfasi-optimizasyonu/
 - Rehber: https://narvals.com/blog/web-sitesi-neden-musteri-getirmiyor/
 - Rehber: https://narvals.com/blog/web-sitesi-googleda-neden-cikmiyor/
 - Rehber: https://narvals.com/blog/web-sitesi-donusum-orani-nasil-hesaplanir/

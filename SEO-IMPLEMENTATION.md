@@ -4,7 +4,7 @@ Son güncelleme: 30 Ağustos 2026
 
 ## Yönetici özeti
 
-Site artık 91 canonical URL, 18 ücretsiz interaktif karar aracı, 51 kaynaklı
+Site artık 94 canonical URL, 18 ücretsiz interaktif karar aracı, 54 kaynaklı
 karar rehberi, 5 konu merkezi hub'ı (E-ticaret, Web Sitesi, Reklam, QR Menü, SEO & GEO),
 blog hub'ı, editoryal politika, RSS, URL bazlı sitemap tarihi, tüm arama ve AI
 tarayıcılarını (Googlebot, OAI-SearchBot, Claude-SearchBot, PerplexityBot, Applebot,
@@ -24,6 +24,9 @@ Son Ar-Ge ve optimizasyon turunda eklenen yüksek niyetli alıcı ve optimizasyo
 7. `e-ticaret-odeme-sistemleri-ve-sanal-pos-rehberi`
 8. `google-ads-arama-terimleri-ve-butce-optimizasyonu`
 9. `meta-reklam-metni-ve-reklam-yazarligi-rehberi`
+10. `yerel-seo-ve-google-haritalar-rehberi`
+11. `b2b-lead-generation-ve-musteri-edinme-rehberi`
+12. `e-ticaret-urun-ve-kategori-sayfasi-optimizasyonu`
 
 Google ve üretken yapay zekâ motorlarında birinci sıra veya alıntı garantisi
 verilemez. Organik sıra ve AI alıntıları; arama niyeti, taranabilirlik, gerçek
