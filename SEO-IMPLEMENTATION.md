@@ -78,6 +78,7 @@ yayıncı şimdilik Narvals Labs organizasyonudur.
 - Speculation Rules API (`<script type="speculationrules">`): Dahili bağlantılarda kullanıcı etkileşimi ve hover durumunda anlık sayfa geçişleri (<50ms) sağlayan modern tarayıcı standardı.
 - Answer Density ve Fractal Content Modeli: Her H2 alt başlığının bağımsız "mikro-cevap" olarak çalışması, dolgu metinsiz yüksek olgu yoğunluğu ve semantik passage chunking mimarisi.
 - Perplexity & SearchGPT RAG Reranking Uyumu: İlk %30 doğrudan cevap yerleşimi, context-aware embeddings ve çok katmanlı kalite filtrelerine tam uyumlu şema varlık ağı (`about`, `mentions`, `knowsAbout`, `isPartOf`).
+- NavBoost ve Glue Görev Tamamlama: Dwell time ve Last Longest Click sinyallerini maksimize eden 18 yerel hesaplama aracı, sıfır pogo-sticking ve W3C/Schema.org doğrulanabilir citation grafı.
 - 40 rehberde görünür standart `<img>`, `og:image`, Twitter, `primaryImageOfPage`
   ve `BlogPosting.image` alanlarını aynı 1200×675, 16:9 konu görseline bağlayan
   Discover/görsel arama katmanı; gerçek JPEG ölçüsü ve alt metin build kapısı.

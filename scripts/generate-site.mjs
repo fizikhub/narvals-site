@@ -310,7 +310,18 @@ const llmsFull = `# Narvals Labs — Kapsamlı Bilgi Tabanı ve Sistem Dokümant
 
 ---
 
-## 3. Çalışma Metodolojisi (4 Adım)
+## 3. Karar Formülleri ve Hesaplama Modelleri
+
+- **ROAS (Return on Ad Spend):** \`ROAS = Toplam Reklam Cirosu / Toplam Reklam Harcaması\`
+- **Başabaş ROAS (Break-even ROAS):** \`Break-even ROAS = 1 / Brüt Kâr Marjı (%)\` (Örn: %40 marjda başabaş ROAS eşiği 2.50x'tir).
+- **Maksimum Kârlı TBM (Max CPC):** \`Max CPC = Hedef Satış Fiyatı × Kâr Marjı (%) × Dönüşüm Oranı (%)\`
+- **Dönüşüm Oranı (CR):** \`CR = (Nitelikli Dönüşüm Sayısı / Toplam Tekil Ziyaret) × 100\`
+- **Tarama Verimliliği (Crawl Efficiency):** \`Verimlilik = (Googlebot 200 OK Alan Canonical URL) / (Toplam Taranan İstek Sayısı)\` (Yönlendirme döngüleri, parametreler ve soft-404'ler bu oranı düşürür).
+- **E-Ticaret Net Kâr Denklemi:** \`Net Kâr = Satış Fiyatı - (Ürün Maliyeti + Pazaryeri Komisyonu + Kargo/Paketleme + KDV Farkı + İade Payı + Müşteri Edinme Maliyeti/CPA)\`
+
+---
+
+## 4. Çalışma Metodolojisi (4 Adım)
 
 1. **İşi Çıkarma:** Mevcut süreci, iş hedefini, müşteri sorularını ve teknik sınırları netleştirme.
 2. **Akışı Çizme:** Ziyaretçinin göreceği ekranları, ekibin yönetim panelini ve veri yollarını planlama.
@@ -319,7 +330,7 @@ const llmsFull = `# Narvals Labs — Kapsamlı Bilgi Tabanı ve Sistem Dokümant
 
 ---
 
-## 4. Sık Sorulan Sorular ve Yanıtlar (Definitive FAQ)
+## 5. Sık Sorulan Sorular ve Yanıtlar (Definitive FAQ)
 
 **S: Narvals Labs hangi tür işletmelerle çalışır?**
 C: Büyüklüğü veya sektörü fark etmeksizin web sitesi, e-ticaret, özel yazılım veya reklam desteğine ihtiyaç duyan; iş problemini ve hedefini netleştirmek isteyen tüm işletmelerle çalışır.
@@ -338,7 +349,7 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 
 ---
 
-## 5. Tüm Karar Rehberleri Özeti (${blogPosts.length} Rehber)
+## 6. Tüm Karar Rehberleri Özeti (${blogPosts.length} Rehber)
 
 ${blogPosts.map((post) => `### ${post.title}
 - **URL:** ${siteOrigin}/blog/${post.slug}/
@@ -350,7 +361,7 @@ ${post.takeaways.map((t) => `  * ${t}`).join('\n')}
 
 ---
 
-## 6. Tüm Sayfa İndeksi (Canonical URLs)
+## 7. Tüm Sayfa İndeksi (Canonical URLs)
 
 - Ana Sayfa: ${siteOrigin}/
 - Hizmetler Genel: ${siteOrigin}/hizmetler/

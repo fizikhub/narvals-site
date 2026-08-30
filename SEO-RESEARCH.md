@@ -403,6 +403,15 @@ Bu turda Perplexity ve SearchGPT'nin çok aşamalı RAG (Retrieval-Augmented Gen
 - **İlk %30 Pasaj Kuralı (First 30% Extractability):** AI modelleri bir sayfanın ilk üçte birlik bölümünde doğrudan, doğrulanabilir bir cevap ("Answer-first" formatı) bulduğunda alıntılama olasılığı katlanarak artar. Rehberlerimiz her alt başlığın ilk paragrafında doğrudan cevabı vererek bu kurala uyar.
 - **Context-Aware Embeddings (`pplx-embed-context-v1`):** Pasajların sayfa genelindeki ana tema ile bağını koparmaması için `Schema.org/WebPage` üzerinde `isPartOf`, `about` ve `mentions` ilişkileri tekil Knowledge Graph düğümüyle perçinlenmiştir.
 
+## 30 Ağustos 2026 on dördüncü NavBoost, Glue ve Task Completion deneyimi denetimi
+
+Bu turda Google'ın organik ve zengin sonuç sıralama sistemleri olan NavBoost, Glue ve kullanıcı görev tamamlama (task completion) mekanizmaları incelendi:
+
+- **NavBoost (13 Aylık Yuvarlanan Etkileşim Hafızası):** Google'ın organik web sonuçları için en güçlü sıralama sinyallerinden biri olan NavBoost; kullanıcıların tıklama, hover, kaydırma ve dwell time verilerini 13 aylık pencerelerde toplar. Sayfada kalma süresini artıran ve arama sonucuna geri dönmeyi ("bad click / pogo-sticking") engelleyen "Last Longest Click" (kullanıcının aradığı cevabı bulduğu son ve en uzun oturum) sinyali önceliklendirildi.
+- **Glue Sistemi ve Zengin SERP Özellikleri:** Arama sonuçlarındaki AI Overviews, hesaplama araçları ve interaktif bileşenlerle kullanıcı etkileşimini değerlendiren Glue sistemi için; 18 interaktif yerel hesaplama aracı ve zengin SSS düğümleri aktif tutuldu.
+- **Bilişsel Yük ve Information Scent Azaltımı:** Kullanıcının karar noktasına en hızlı şekilde ulaşabilmesi için sayfa içi sticky gezinme (`info-toc`), anlık form hesaplamaları ve WCAG uyumlu kontrast/erişilebilirlik standartları korundu.
+- **Makine Tarafından Doğrulanabilir Citation Grafı:** Rehberlerin JSON-LD şemalarında `citation` ve `isBasedOn` özellikleri W3C, Schema.org ve Google Search Central resmî standartlarına doğrudan bağlanarak E-E-A-T kanıt bağı güçlendirildi.
+
 ## Kanıt matrisi
 
 | Kaynak | Bulgu | Uygulama | Sınır |
