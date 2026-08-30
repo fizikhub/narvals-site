@@ -3,10 +3,44 @@
   "short_name": "Narvals",
   "description": "Web sitesi, özel yazılım ve reklamı tek sistemde kuran dijital üretim stüdyosu.",
   "lang": "tr",
+  "id": "/",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
+  "orientation": "any",
+  "categories": ["business", "productivity", "utilities"],
   "background_color": "#f8fbfa",
   "theme_color": "#03233a",
+  "shortcuts": [
+    {
+      "name": "Ücretsiz Araçlar",
+      "short_name": "Araçlar",
+      "description": "18 interaktif web ve reklam hesaplama aracı",
+      "url": "/araclar/",
+      "icons": [{ "src": "/assets/logo-v6/narvals-favicon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Karar Rehberleri",
+      "short_name": "Rehberler",
+      "description": "40 teknik SEO, GEO, web ve e-ticaret rehberi",
+      "url": "/blog/",
+      "icons": [{ "src": "/assets/logo-v6/narvals-favicon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Hizmetler",
+      "short_name": "Hizmetler",
+      "description": "Dijital üretim stüdyosu hizmetleri",
+      "url": "/hizmetler/",
+      "icons": [{ "src": "/assets/logo-v6/narvals-favicon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "İletişim",
+      "short_name": "İletişim",
+      "description": "Projeyi konuşalım",
+      "url": "/iletisim/",
+      "icons": [{ "src": "/assets/logo-v6/narvals-favicon-192.png", "sizes": "192x192" }]
+    }
+  ],
   "icons": [
     {
       "src": "/assets/logo-v6/narvals-favicon-192.png",

@@ -96,6 +96,7 @@ yayıncı şimdilik Narvals Labs organizasyonudur.
 - `Organization` (İstanbul/Türkiye entity, `knowsAbout`, `areaServed`), `WebSite`, `WebPage`/`CollectionPage`/`AboutPage`/`ContactPage`, hizmet sayfalarında `Service` ve `hasOfferCatalog`, içeriklerde `BlogPosting`, SSS içeren tüm sayfalarda `FAQPage`, görünür yollar için standart 3 basamaklı `BreadcrumbList`.
 - Karşılaştırma sayfasından çakışan `Service` şeması kaldırıldı.
 - Ana sayfa hizmet listesi `ListItem(position, item)` modeline düzeltildi.
+- Web App Manifest 2026 Standartları: `/site.webmanifest` üzerinde `id`, `scope`, `categories` ve doğrudan araç/rehber kısayolları (`shortcuts`) ile PWA uyumu ve doğrudan kullanıcı sadakati (Direct Traffic).
 - Standart `llms.txt` ve kapsamlı RAG bilgi tabanı olan `llms-full.txt`; HTML her zaman yetkili kaynak.
 - IndexNow anahtar dosyası ve yalnız değişen URL'leri gönderen komut.
 - Vite ve tüm SEO komutlarında aynı `.env`/mode zincirini kullanan ortak

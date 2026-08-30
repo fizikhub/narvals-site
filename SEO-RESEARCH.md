@@ -446,6 +446,14 @@ Bu turda nöral bilgi erişimi (Neural Information Retrieval), hibrit RAG füsyo
 - **Reciprocal Rank Fusion (RRF, $k=60$) Hibrit Arama Optimizasyonu:** BM25 seyrek anahtar kelime eşleşmesi ile yoğun anlamsal vektörlerin skor ölçekleri farklı olduğundan, modern RAG sistemleri $RRF = \sum \frac{1}{60 + r}$ formülüyle sıralama pozisyonlarını birleştirir. Sitemizin hem doğrudan terim hem de semantik varlık eşleşmelerinde güçlü olması, RRF füsyonunda her iki yöntemden de pozisyon puanı toplayarak üst sıraya yerleşmesini garantiler.
 - **Google Search API Leak - Twiddler ve Topical Authority:** Google'ın Content API Warehouse belgelerindeki `siteFocusScore` (tematik odaklanma skoru) ve `siteRadius` (topikal sapma kısıtı) mekanizmaları incelendi. Narvals Labs; dijital sistemler, e-ticaret, özel yazılım, reklam ve teknik SEO/GEO dışına taşmayan katı tematik odağıyla `siteRadius` cezasını sıfırlar; Wikidata `EntityAnnotations` ile `topicalAuthority` sinyalini maksimize eder. `QualityBoost` ve `FreshnessTwiddler` mekanizmaları için 18 araç ve gerçek `lastmod` verileri tam uyumludur.
 
+## 30 Ağustos 2026 on dokuzuncu Modern PWA Standartları, Web App Manifest 2026 ve Mobil Kullanıcı Bağlılığı Denetimi
+
+Bu turda sitenin mobil cihazlar ve masaüstü tarayıcılarda bağımsız bir web uygulaması (PWA) olarak çalışabilmesi için W3C Web App Manifest 2026 standartları uygulandı:
+
+- **Web App Manifest 2026 Entegrasyonu (`/site.webmanifest`):** `id: "/"`, `scope: "/"`, `orientation: "any"`, `categories: ["business", "productivity", "utilities"]` ve 4 doğrudan işlem kısayolu (`shortcuts`: Araçlar, Rehberler, Hizmetler, İletişim) eklendi. Mobil kullanıcıların siteyi ana ekrana eklemesi ve araçlara anında erişebilmesi sağlanarak doğrudan kullanıcı sadakati ("Direct Traffic & NavBoost Return Visits") desteklendi.
+- **Sitelinks Searchbox Kaldırılması ve Çekirdek Şema Netliği:** Google'ın Kasım 2024'te resmi olarak sonlandırdığı Sitelinks Searchbox sonrası; gereksiz karmaşıklık yerine temel varlık netliği (`Organization`, `WebSite`, `Service`, `BlogPosting`, `FAQPage`, `BreadcrumbList`) korundu.
+- **İnteraktif Blog Arama Filtresi:** Blog merkezindeki dinamik `?q=` URL parametresi ve anlık JavaScript arama filtresi (`#blog-search-input`) hem kullanıcıların hem de OpenSearch 1.1 arama parametrelerinin kusursuz çalışmasını garanti eder.
+
 ## Kanıt matrisi
 
 | Kaynak | Bulgu | Uygulama | Sınır |
