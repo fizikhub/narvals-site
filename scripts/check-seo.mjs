@@ -197,6 +197,20 @@ for (const [path, html] of htmlByPath) {
     if (claim.test(html)) errors.push(`${path}: unsupported or absolute SEO/GEO claim found (${claim.source})`);
   }
 
+  const speculationRulesBlock = html.match(/<script\b[^>]*type="speculationrules"[^>]*>([\s\S]*?)<\/script>/i)?.[1];
+  if (!speculationRulesBlock) {
+    errors.push(`${path}: Speculation Rules API script missing`);
+  } else {
+    try {
+      const parsedRules = JSON.parse(speculationRulesBlock);
+      if (!Array.isArray(parsedRules.prefetch) || !Array.isArray(parsedRules.prerender)) {
+        errors.push(`${path}: Speculation Rules must declare both prefetch and prerender rules`);
+      }
+    } catch (error) {
+      errors.push(`${path}: invalid Speculation Rules JSON (${error.message})`);
+    }
+  }
+
   const jsonLdBlocks = [...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)];
   if (!jsonLdBlocks.length) errors.push(`${path}: JSON-LD missing`);
   const structuredTypes = new Set();

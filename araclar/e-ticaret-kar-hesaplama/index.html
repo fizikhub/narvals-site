@@ -97,6 +97,54 @@
         ]
       }
     </script>
+      <script type="speculationrules">{
+  "prefetch": [
+    {
+      "source": "document",
+      "where": {
+        "and": [
+          {
+            "href_matches": "/*"
+          },
+          {
+            "not": {
+              "href_matches": "/*\\?*"
+            }
+          },
+          {
+            "not": {
+              "selector_matches": "[rel~=nofollow]"
+            }
+          }
+        ]
+      },
+      "eagerness": "moderate"
+    }
+  ],
+  "prerender": [
+    {
+      "source": "document",
+      "where": {
+        "and": [
+          {
+            "href_matches": "/hizmetler/*"
+          },
+          {
+            "not": {
+              "href_matches": "/*\\?*"
+            }
+          },
+          {
+            "not": {
+              "selector_matches": "[rel~=nofollow]"
+            }
+          }
+        ]
+      },
+      "eagerness": "conservative"
+    }
+  ]
+}</script>
   </head>
   <body class="info-page ecom-profit-page">
     <a class="skip-link" href="#main-content">Ana içeriğe geç</a>

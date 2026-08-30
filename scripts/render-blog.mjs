@@ -97,7 +97,35 @@ ${published ? `    <meta property="article:published_time" content="${published}
     <meta name="twitter:image" content="${siteOrigin}${socialImage.path}" />
     <meta name="twitter:image:alt" content="${escapeHtml(socialImage.alt)}" />
 ${readingTime ? `    <meta name="twitter:label1" content="Okuma Süresi" />\n    <meta name="twitter:data1" content="${readingTime} dk" />\n` : ''}${category ? `    <meta name="twitter:label2" content="Kategori" />\n    <meta name="twitter:data2" content="${escapeHtml(category)}" />\n` : ''}    <title>${escapeHtml(title)}</title>
-    <script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': schema }, null, 2)}</script>`;
+    <script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': schema }, null, 2)}</script>
+    <script type="speculationrules">${JSON.stringify({
+      prefetch: [
+        {
+          source: 'document',
+          where: {
+            and: [
+              { href_matches: '/*' },
+              { not: { href_matches: '/*\\?*' } },
+              { not: { selector_matches: '[rel~=nofollow]' } }
+            ]
+          },
+          eagerness: 'moderate'
+        }
+      ],
+      prerender: [
+        {
+          source: 'document',
+          where: {
+            and: [
+              { href_matches: '/hizmetler/*' },
+              { not: { href_matches: '/*\\?*' } },
+              { not: { selector_matches: '[rel~=nofollow]' } }
+            ]
+          },
+          eagerness: 'conservative'
+        }
+      ]
+    }, null, 2)}</script>`;
 };
 
 const renderNav = (current = '') => `<header class="info-nav">

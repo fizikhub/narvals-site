@@ -472,6 +472,35 @@ const sharedWebsiteNode = (origin) => ({
   publisher: { '@id': `${origin}/#organization` }
 });
 
+const speculationRulesBlock = `    <script type="speculationrules">${JSON.stringify({
+      prefetch: [
+        {
+          source: 'document',
+          where: {
+            and: [
+              { href_matches: '/*' },
+              { not: { href_matches: '/*\\?*' } },
+              { not: { selector_matches: '[rel~=nofollow]' } }
+            ]
+          },
+          eagerness: 'moderate'
+        }
+      ],
+      prerender: [
+        {
+          source: 'document',
+          where: {
+            and: [
+              { href_matches: '/hizmetler/*' },
+              { not: { href_matches: '/*\\?*' } },
+              { not: { selector_matches: '[rel~=nofollow]' } }
+            ]
+          },
+          eagerness: 'conservative'
+        }
+      ]
+    }, null, 2)}</script>`;
+
 // Authored HTML stays deployable when the production origin changes. Blog and
 // editorial files are rendered below, so only hand-authored pages are synced.
 const authoredPages = sitePages.filter(({ file }) => !file.startsWith('blog/') && file !== 'editoryal-ilkeler/index.html');
@@ -508,6 +537,11 @@ await Promise.all(authoredPages.map(async ({ file, path }) => {
     }
     return match;
   });
+  if (/<script\b[^>]*type="speculationrules"[^>]*>([\s\S]*?)<\/script>/i.test(updatedHtml)) {
+    updatedHtml = updatedHtml.replace(/<script\b[^>]*type="speculationrules"[^>]*>([\s\S]*?)<\/script>/i, speculationRulesBlock.trim());
+  } else {
+    updatedHtml = updatedHtml.replace('</head>', `${speculationRulesBlock}\n  </head>`);
+  }
   if (updatedHtml !== html) await writeFile(htmlPath, updatedHtml);
 }));
 

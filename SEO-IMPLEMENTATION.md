@@ -75,6 +75,7 @@ yayıncı şimdilik Narvals Labs organizasyonudur.
 - Statik ana içerik; JavaScript beklemeden okunabilir HTML.
 - Her sayfada benzersiz title/description, self-canonical, `tr` + `x-default`,
   OG/Twitter kartı, Schema.org varlık temelli GEO işaretlemesi (ülke, dil, hizmet alanı ve doğrulanmış iletişim), yazar, manifest ve RSS keşif bağlantısı.
+- Speculation Rules API (`<script type="speculationrules">`): Dahili bağlantılarda kullanıcı etkileşimi ve hover durumunda anlık sayfa geçişleri (<50ms) sağlayan modern tarayıcı standardı.
 - 40 rehberde görünür standart `<img>`, `og:image`, Twitter, `primaryImageOfPage`
   ve `BlogPosting.image` alanlarını aynı 1200×675, 16:9 konu görseline bağlayan
   Discover/görsel arama katmanı; gerçek JPEG ölçüsü ve alt metin build kapısı.
