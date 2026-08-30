@@ -217,6 +217,7 @@ ${topicHubs.map((hub) => `- [${hub.title}](${siteOrigin}/blog/konu/${hub.slug}/)
 - [Tam Dokümantasyon (llms-full.txt)](${siteOrigin}/llms-full.txt): LLM ve RAG sistemleri için ${blogPosts.length} karar rehberi, ${sitePages.filter(({ kind }) => kind === 'tool').length} araç ve mimari kuralları içeren tam metin bilgi tabanı
 - [XML Site Haritası](${siteOrigin}/sitemap.xml): Arama motorları ve botlar için tam kanonik sayfa ve görsel indeksi
 - [RSS Akışı](${siteOrigin}/blog/feed.xml): En son yayınlanan rehberlerin makine tarafından okunabilir XML akışı
+- [OpenSearch XML](${siteOrigin}/opensearch.xml): Tarayıcılar ve AI ajanları için standart arama tanımı
 `;
 
 const llmsFull = `# Narvals Labs — Kapsamlı Bilgi Tabanı ve Sistem Dokümantasyonu (GEO Knowledge Base)
@@ -463,6 +464,10 @@ const sharedOrgNode = (origin) => ({
     'Yapay Zeka Aramaları ve LLM İndeksleme',
     'E-E-A-T ve Varlık Tabanlı SEO',
     'Bilgi Kazanımı (Information Gain)',
+    'NavBoost ve Arama Etkileşim Mimarisi',
+    'RAG ve Passage Chunking Optimizasyonu',
+    'WebMCP (Web Model Context Protocol)',
+    'OpenSearch Standartları',
     'Yapılandırılmış Veri ve Schema Mimarisi',
     'Core Web Vitals Optimizasyonu',
     'Dönüşüm Oranı Optimizasyonu (CRO)',
@@ -548,6 +553,14 @@ await Promise.all(authoredPages.map(async ({ file, path }) => {
     }
     return match;
   });
+  const openSearchLink = '    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Narvals Labs" />';
+  if (!updatedHtml.includes('rel="search"')) {
+    if (updatedHtml.includes('type="application/rss+xml"')) {
+      updatedHtml = updatedHtml.replace(/(<link\s+rel="alternate"\s+type="application\/rss\+xml"[^>]*>)/i, `$1\n${openSearchLink}`);
+    } else {
+      updatedHtml = updatedHtml.replace('</head>', `${openSearchLink}\n  </head>`);
+    }
+  }
   if (/<script\b[^>]*type="speculationrules"[^>]*>([\s\S]*?)<\/script>/i.test(updatedHtml)) {
     updatedHtml = updatedHtml.replace(/<script\b[^>]*type="speculationrules"[^>]*>([\s\S]*?)<\/script>/i, speculationRulesBlock.trim());
   } else {

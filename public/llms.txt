@@ -107,3 +107,4 @@ Tam kapsamlı yapay zekâ bilgi tabanı ve RAG dokümantasyonu için: [llms-full
 - [Tam Dokümantasyon (llms-full.txt)](https://narvals.com/llms-full.txt): LLM ve RAG sistemleri için 40 karar rehberi, 18 araç ve mimari kuralları içeren tam metin bilgi tabanı
 - [XML Site Haritası](https://narvals.com/sitemap.xml): Arama motorları ve botlar için tam kanonik sayfa ve görsel indeksi
 - [RSS Akışı](https://narvals.com/blog/feed.xml): En son yayınlanan rehberlerin makine tarafından okunabilir XML akışı
+- [OpenSearch XML](https://narvals.com/opensearch.xml): Tarayıcılar ve AI ajanları için standart arama tanımı

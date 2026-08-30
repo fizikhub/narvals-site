@@ -29,6 +29,7 @@ public/blog/*
 !public/blog/feed.xml
 !public/llms.txt
 !public/llms-full.txt
+!public/opensearch.xml
 !public/robots.txt
 !public/site.webmanifest
 !public/sitemap.xml

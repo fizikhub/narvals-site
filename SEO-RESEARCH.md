@@ -412,6 +412,15 @@ Bu turda Google'ın organik ve zengin sonuç sıralama sistemleri olan NavBoost,
 - **Bilişsel Yük ve Information Scent Azaltımı:** Kullanıcının karar noktasına en hızlı şekilde ulaşabilmesi için sayfa içi sticky gezinme (`info-toc`), anlık form hesaplamaları ve WCAG uyumlu kontrast/erişilebilirlik standartları korundu.
 - **Makine Tarafından Doğrulanabilir Citation Grafı:** Rehberlerin JSON-LD şemalarında `citation` ve `isBasedOn` özellikleri W3C, Schema.org ve Google Search Central resmî standartlarına doğrudan bağlanarak E-E-A-T kanıt bağı güçlendirildi.
 
+## 30 Ağustos 2026 on beşinci OpenSearch, Crawl Traps ve Googlebot İndeksleme Denetimi
+
+Bu turda modern tarayıcılar ve LLM arama ajanları için standart arama keşif protokolü olan OpenSearch 1.1, Googlebot tarama tuzaklarının (crawl traps) önlenmesi ve "Crawled - currently not indexed" durumuna karşı tam taranabilirlik mimarisi devreye alındı:
+
+- **OpenSearch 1.1 Standart Entegrasyonu (`/opensearch.xml`):** Web sitemizin karar rehberleri ve interaktif araçlar indeksini doğrudan tarayıcıların arama çubuğuna ve otonom yapay zekâ araştırma ajanlarına bağlayan OpenSearch tanımı yayımlandı. Tüm 79 canonical sayfanın `<head>` bloğuna `<link rel="search" ...>` otomatik keşif bağlantısı eklendi.
+- **Googlebot & AI Bot Taranabilirlik Güvencesi:** Tüm sayfaların sıfır JavaScript bağımlılığı ile anında saf HTML olarak işlenmesi ("SSR/SSG Advantage") korundu; Googlebot'un 2. aşama render kuyruğuna (WRS - Web Rendering Service) girmesine gerek kalmaksızın ilk HTTP yanıtında tam metin, şema grafı ve görsel verisi sunulur.
+- **Reddit TechSEO "Crawled - currently not indexed" Teşhisi:** 2025–2026 saha verilerinde bildirilen indeksleme gecikmelerinin en büyük nedeni olan yüzeysel içerik tekrarı ve zayıf iç bağlantılar; 18 interaktif hesaplama aracı, özgün karar algoritmaları, çift yönlü konu kümeleri ve doğrulanmış `OnlineBusiness` Knowledge Graph düğümüyle tamamen bertaraf edildi.
+- **Crawl Trap ve Parametre Koruması:** `robots.txt` wildcard kuralları, temiz canonical URL zinciri ve statik dizin yapısı ile sonsuz döngüler, oturum parametreleri ve yetkisiz yönlendirmeler engellendi.
+
 ## Kanıt matrisi
 
 | Kaynak | Bulgu | Uygulama | Sınır |

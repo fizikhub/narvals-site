@@ -109,6 +109,9 @@ for (const [path, html] of htmlByPath) {
   if (link(html, 'alternate', 'type', 'application/rss+xml') !== `${siteOrigin}/blog/feed.xml`) {
     errors.push(`${path}: RSS discovery link missing or wrong`);
   }
+  if (link(html, 'search', 'type', 'application/opensearchdescription+xml') !== '/opensearch.xml') {
+    errors.push(`${path}: OpenSearch discovery link missing or wrong`);
+  }
   if (meta(html, 'property', 'og:url') !== expectedCanonical) errors.push(`${path}: og:url does not match canonical`);
   if (!meta(html, 'property', 'og:title')) errors.push(`${path}: og:title missing`);
   if (!meta(html, 'property', 'og:description')) errors.push(`${path}: og:description missing`);

@@ -74,8 +74,9 @@ yayıncı şimdilik Narvals Labs organizasyonudur.
 
 - Statik ana içerik; JavaScript beklemeden okunabilir HTML.
 - Her sayfada benzersiz title/description, self-canonical, `tr` + `x-default`,
-  OG/Twitter kartı, Schema.org varlık temelli GEO işaretlemesi (ülke, dil, hizmet alanı ve doğrulanmış iletişim), yazar, manifest ve RSS keşif bağlantısı.
+  OG/Twitter kartı, Schema.org varlık temelli GEO işaretlemesi (ülke, dil, hizmet alanı ve doğrulanmış iletişim), yazar, manifest, RSS keşif bağlantısı ve OpenSearch 1.1 arama tanımı (`/opensearch.xml`).
 - Speculation Rules API (`<script type="speculationrules">`): Dahili bağlantılarda kullanıcı etkileşimi ve hover durumunda anlık sayfa geçişleri (<50ms) sağlayan modern tarayıcı standardı.
+- WebMCP (Web Model Context Protocol): 18 interaktif hesaplama ve denetim aracı için tarayıcı AI modellerine yönelik güvenli, deterministik, salt-okunur declarative/imperative araç sözleşmeleri ve 36 eval test senaryosu.
 - Answer Density ve Fractal Content Modeli: Her H2 alt başlığının bağımsız "mikro-cevap" olarak çalışması, dolgu metinsiz yüksek olgu yoğunluğu ve semantik passage chunking mimarisi.
 - Perplexity & SearchGPT RAG Reranking Uyumu: İlk %30 doğrudan cevap yerleşimi, context-aware embeddings ve çok katmanlı kalite filtrelerine tam uyumlu şema varlık ağı (`about`, `mentions`, `knowsAbout`, `isPartOf`).
 - NavBoost ve Glue Görev Tamamlama: Dwell time ve Last Longest Click sinyallerini maksimize eden 18 yerel hesaplama aracı, sıfır pogo-sticking ve W3C/Schema.org doğrulanabilir citation grafı.

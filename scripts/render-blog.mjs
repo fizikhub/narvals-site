@@ -73,6 +73,7 @@ const renderHead = ({ siteOrigin, path, title, description, keywords, schema, ty
     <link rel="alternate" hreflang="tr-TR" href="${canonical}" />
     <link rel="alternate" hreflang="x-default" href="${canonical}" />
     <link rel="alternate" type="application/rss+xml" title="Narvals Labs Rehberleri" href="${siteOrigin}/blog/feed.xml" />
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Narvals Labs" />
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
     <link rel="icon" href="/assets/logo-v6/narvals-favicon-48.png" type="image/png" sizes="48x48" />
     <link rel="icon" href="/assets/logo-v6/narvals-favicon-96.png" type="image/png" sizes="96x96" />

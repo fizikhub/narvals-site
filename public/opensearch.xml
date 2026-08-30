@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>Narvals Labs</ShortName>
+  <Description>Narvals Labs — Web Tasarım, Özel Yazılım, E-Ticaret, Reklam ve GEO Karar Rehberleri Arama</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <OutputEncoding>UTF-8</OutputEncoding>
+  <Image width="48" height="48" type="image/png">https://narvals.com/assets/logo-v6/narvals-favicon-48.png</Image>
+  <Url type="text/html" template="https://narvals.com/blog/?q={searchTerms}"/>
+  <moz:SearchForm xmlns:moz="http://www.mozilla.org/2006/browser/search/">https://narvals.com/blog/</moz:SearchForm>
+</OpenSearchDescription>

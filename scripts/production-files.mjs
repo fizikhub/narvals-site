@@ -12,6 +12,7 @@ export const productionFiles = [
   'llms.txt',
   'llms-full.txt',
   'robots.txt',
+  'opensearch.xml',
   'site.webmanifest',
   'sitemap.xml',
   'og/narvals-labs-og.jpg',
