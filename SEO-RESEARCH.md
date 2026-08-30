@@ -385,6 +385,15 @@ Bu turda akademik literatür (Princeton, Georgia Tech, Allen AI, IIT Delhi - KDD
 - **Reddit TechSEO Saha Deneyimleri:** 2025–2026 topluluk tartışmaları; Google'ın "Crawled - currently not indexed" durumunu önlemek için düşük TTFB, sıfır gereksiz JS yükü, temiz iç bağlantı hiyerarşisi ve tekil varlık şemasının zorunlu olduğunu gösteriyor.
 - **Speculation Rules API Entegrasyonu:** Modern tarayıcılarda (Chrome 121+) dahili gezinmeyi anlık (instant navigation, <50ms) hale getiren Speculation Rules API (`prefetch` moderate, `prerender` conservative) uygulanarak Core Web Vitals ve kullanıcı tutma oranı en üst seviyeye taşındı.
 
+## 30 Ağustos 2026 on ikinci RAG, Passage Chunking ve Fractal Content Model mimarisi
+
+Bu turda 2025–2026 RAG (Retrieval-Augmented Generation) literatürü, Passage Ranking algoritmaları ve LLM chunking modelleri derinlemesine incelendi:
+
+- **Answer Density (Cevap Yoğunluğu) Standardı:** LLM yanıt motorları ve Google AI Overviews, kelime kalabalığı (narrative fluff) içeren sayfalar yerine, kelime başına düşen doğrulanabilir olgu ve karar oranı yüksek metinleri filtreler. Dolgu metin içeren kısımlar embedding aşamasında "Zero-Vector Penalty" alırken; doğrudan sonuç veren net paragraflar yüksek ağırlık kazanır.
+- **Fractal Content Model (Fraktal İçerik Mimarisi):** Sayfadaki her H2 alt başlığı ve bölümü, kendi başına bağımsız bir "mikro-karar rehberi" (standalone passage) olarak tasarlanır. LLM bir sayfadan yalnızca tek bir 150–250 kelimelik bölümü RAG bağlamına aldığında dahi, bağlam kaybı (semantic drift) yaşamadan tam ve yetkili bir yanıt üretir.
+- **Passage Chunking ve Anlamsal HTML Blokları:** LLM crawler'larının içeriği 100–300 kelimelik pencerelere bölme mekanizmasına uygun olarak; semantik `<section id="...">`, `<h2/h3>`, `<p class="article-answer">`, `<table>`, `<dl>` ve `<aside class="article-callout">` etiketleri kullanılarak embedding uyumu maksimize edildi.
+- **Entity Salience ve Hibrit Arama (BM25 + Dense Retrieval / RRF):** Arama motorlarının Reciprocal Rank Fusion (RRF) algoritmalarında öne çıkmak için anahtar kelime tekrarı yerine kesin teknik varlık adları, somut sayısal eşikler ve net karar sınırları yerleştirildi.
+
 ## Kanıt matrisi
 
 | Kaynak | Bulgu | Uygulama | Sınır |
