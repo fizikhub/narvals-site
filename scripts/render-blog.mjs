@@ -362,10 +362,6 @@ const renderArticle = (post, siteOrigin) => {
       datePublished: post.published,
       dateModified: post.modified,
       breadcrumb: { '@id': `${url}#breadcrumb` },
-      speakable: {
-        '@type': 'SpeakableSpecification',
-        cssSelector: ['h1', '.info-hero__answer', '.article-summary ul', '.article-section h2']
-      },
       primaryImageOfPage: { '@type': 'ImageObject', url: `${siteOrigin}/og/narvals-labs-og.jpg`, width: 1200, height: 630 }
     },
     {
@@ -388,10 +384,6 @@ const renderArticle = (post, siteOrigin) => {
       copyrightHolder: { '@id': `${siteOrigin}/#organization` },
       license: `${siteOrigin}/editoryal-ilkeler/`,
       publishingPrinciples: `${siteOrigin}/editoryal-ilkeler/`,
-      speakable: {
-        '@type': 'SpeakableSpecification',
-        cssSelector: ['h1', '.info-hero__answer', '.article-summary ul', '.article-section h2']
-      },
       about: post.about.map(resolveEntity),
       citation: post.sources.map((source) => source.url),
       isBasedOn: post.sources.map((source) => source.url)

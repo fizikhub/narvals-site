@@ -116,6 +116,39 @@ salt biçimsel “AI optimizasyonu” yerine konu alakası, erişilebilir kanıt
 ve [QR/PDF menü deneyimi tartışması](https://www.reddit.com/r/restaurateur/comments/okj3yy/)
 yalnız soru keşfi için kullanıldı; fiyat veya performans kanıtı sayılmadı.
 
+## 30 Ağustos 2026 beşinci şema ve görsel keşif denetimi
+
+78 canonical sayfanın ana içerik benzerliği, ana sayfadan tıklama derinliği,
+görsel kullanımı ve yapılandırılmış veri türleri yeniden tarandı. Sayfalar ana
+sayfadan en fazla iki tık uzakta kaldı; yüksek düzeyde içerik kopyası bulunmadı.
+Yeni öncelik daha fazla URL üretmek değil, desteklenmeyen işaretlemeyi azaltmak
+ve iki ticari sayfanın gerçek görsel bağlamını güçlendirmek oldu.
+
+- Türkçe hizmet ve rehber sayfalarındaki `speakable` kaldırıldı. Google bu beta
+  özelliğin ABD'de İngilizce haber sorguları için kullanıldığını belirtiyor;
+  Narvals'ın dili, ülkesi ve içerik türü uygun değil.
+- Kullanımdan kaldırılmış `HowTo` zengin sonuç işaretlemesi web hizmetinden
+  çıkarıldı. Süreç adımları kullanıcı için görünür HTML olarak korunuyor.
+- Fiziksel adres yayımlamayan işletmenin eksik `PostalAddress` nesnesi
+  kaldırıldı; Google'ın daha özel tür önerisine uygun olarak ana kurum düğümü
+  `OnlineBusiness` oldu. Türkiye hizmet alanı, telefon ve e-posta korunuyor.
+- Web sitesi yaptırma ve QR menü yaptırma sayfalarına mevcut özgün hizmet
+  görselleri standart `img`, açıklayıcı alt metin, responsive `srcset`, görünür
+  açıklama ve eşleşen `primaryImageOfPage` ile eklendi. Build artık görsel veya
+  şema eşleşmesi kaybolursa duruyor.
+- [SAGEO Arena (KDD 2026)](https://arxiv.org/abs/2602.12187), basitleştirilmiş
+  GEO yeniden yazımlarının gerçek retrieval/reranking zincirinde sıkça işe
+  yaramadığını veya performansı düşürdüğünü; yapısal bilginin ise ancak bütün
+  zincir bağlamında değerlendirilmesi gerektiğini gösteriyor. Bu nedenle yeni
+  “AI uyumlu” metin katmanları eklenmedi.
+
+Kararlar [Google görsel SEO rehberi](https://developers.google.com/search/docs/appearance/google-images),
+[Organization işaretleme rehberi](https://developers.google.com/search/docs/appearance/structured-data/organization),
+[Speakable uygunluğu](https://developers.google.com/search/docs/appearance/structured-data/speakable),
+[FAQ/HowTo görünüm değişikliği](https://developers.google.com/search/blog/2023/08/howto-faq-changes)
+ve [genel yapılandırılmış veri kuralları](https://developers.google.com/search/docs/appearance/structured-data/sd-policies)
+ile sınandı.
+
 ## Canlı SERP ve marka bulgusu
 
 - `https://narvals.com` canlıdır. HTTPS/canonical yönlendirmeleri, gerçek `404`,

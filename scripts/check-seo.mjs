@@ -178,14 +178,13 @@ for (const [path, html] of htmlByPath) {
     }
   }
   if (path === '/') {
-    for (const type of ['Organization', 'WebSite']) {
-      if (!structuredTypes.has(type)) errors.push(`${path}: structured data type missing (${type})`);
-    }
+    if (!structuredTypes.has('OnlineBusiness')) errors.push(`${path}: structured data type missing (OnlineBusiness)`);
+    if (!structuredTypes.has('WebSite')) errors.push(`${path}: structured data type missing (WebSite)`);
   } else {
-    if (structuredTypes.has('Organization')) errors.push(`${path}: Organization structured data must be consolidated on the homepage`);
+    if (structuredTypes.has('Organization') || structuredTypes.has('OnlineBusiness')) errors.push(`${path}: organization structured data must be consolidated on the homepage`);
     if (structuredTypes.has('WebSite')) errors.push(`${path}: WebSite structured data must only appear on the homepage`);
   }
-  const orgNode = structuredNodes.find((node) => node['@type'] === 'Organization');
+  const orgNode = structuredNodes.find((node) => ['Organization', 'OnlineBusiness'].includes(node['@type']));
   if (orgNode) {
     if (orgNode.name !== 'Narvals Labs') errors.push(`${path}: Organization name mismatch`);
     if (orgNode.legalName) errors.push(`${path}: unverified Organization legalName must not be published`);
@@ -196,7 +195,7 @@ for (const [path, html] of htmlByPath) {
       errors.push(`${path}: Organization publishingPrinciples missing or wrong`);
     }
     if (orgNode.areaServed?.name !== 'Türkiye') errors.push(`${path}: Organization areaServed Country Türkiye missing`);
-    if (orgNode.address?.addressCountry !== 'TR') errors.push(`${path}: Organization address country TR missing`);
+    if (orgNode.address) errors.push(`${path}: unverified or incomplete physical address must not be published`);
     if (orgNode.currenciesAccepted || orgNode.paymentAccepted) errors.push(`${path}: unverified payment claims found in Organization`);
     if (orgNode.founder) errors.push(`${path}: unverified Organization founder must not be published`);
     if (orgNode.contactPoint?.hoursAvailable) errors.push(`${path}: unverified contact hours must not be published`);
@@ -217,17 +216,24 @@ for (const [path, html] of htmlByPath) {
     errors.push(`${path}: unverified İstanbul address found in structured data`);
   }
   if (!structuredTypes.has('WebPage') && !structuredTypes.has('CollectionPage')) errors.push(`${path}: WebPage/CollectionPage structured data missing`);
-  for (const node of structuredNodes.filter((candidate) => candidate.speakable?.cssSelector)) {
-    for (const selector of node.speakable.cssSelector) {
-      for (const className of selector.matchAll(/\.([a-z0-9_-]+)/gi)) {
-        const escapedClass = className[1].replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-        if (!new RegExp(`\\bclass="[^"]*\\b${escapedClass}\\b`, 'i').test(html)) {
-          errors.push(`${path}: speakable selector references a missing class (${selector})`);
-        }
-      }
-    }
+  if (structuredNodes.some((node) => node.speakable)) {
+    errors.push(`${path}: unsupported Turkish service/editorial speakable markup found`);
+  }
+  if (structuredTypes.has('HowTo') || structuredTypes.has('HowToStep')) {
+    errors.push(`${path}: deprecated Google HowTo rich-result markup found`);
   }
   if (['/hizmetler/web-tasarim/', '/hizmetler/qr-menu/'].includes(path)) {
+    const expectedImagePath = path === '/hizmetler/web-tasarim/'
+      ? '/assets/services-v3/web-tool-v2.webp'
+      : '/assets/services-v3/booking-tool-v1.webp';
+    const contentImage = tags(html, 'img').find((tag) => attribute(tag, 'src') === expectedImagePath);
+    if (!contentImage || !attribute(contentImage, 'alt')?.trim()) {
+      errors.push(`${path}: priority commercial page is missing its descriptive content image`);
+    }
+    const primaryImage = structuredNodes.find((node) => node.primaryImageOfPage)?.primaryImageOfPage;
+    if (primaryImage?.url !== `${siteOrigin}${expectedImagePath}`) {
+      errors.push(`${path}: primaryImageOfPage does not match the visible service image`);
+    }
     const visibleText = html
       .replace(/<script\b[\s\S]*?<\/script>/gi, ' ')
       .replace(/<style\b[\s\S]*?<\/style>/gi, ' ')

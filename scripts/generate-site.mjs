@@ -393,7 +393,7 @@ ${blogPosts.map((post) => `- Rehber: ${siteOrigin}/blog/${post.slug}/`).join('\n
 await mkdir(publicRoot, { recursive: true });
 
 const sharedOrgNode = (origin) => ({
-  '@type': 'Organization',
+  '@type': 'OnlineBusiness',
   '@id': `${origin}/#organization`,
   name: 'Narvals Labs',
   url: `${origin}/`,
@@ -412,10 +412,6 @@ const sharedOrgNode = (origin) => ({
     'https://github.com/fizikhub/narvals-site'
   ],
   publishingPrinciples: `${origin}/editoryal-ilkeler/`,
-  address: {
-    '@type': 'PostalAddress',
-    addressCountry: 'TR'
-  },
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'customer support',
@@ -494,8 +490,8 @@ await Promise.all(authoredPages.map(async ({ file, path }) => {
       const data = JSON.parse(jsonText);
       if (data && Array.isArray(data['@graph'])) {
         data['@graph'] = data['@graph'].flatMap((node) => {
-          if (path !== '/' && ['Organization', 'WebSite'].includes(node['@type'])) return [];
-          if (node['@type'] === 'Organization') return sharedOrgNode(siteOrigin);
+          if (path !== '/' && ['Organization', 'OnlineBusiness', 'WebSite'].includes(node['@type'])) return [];
+          if (['Organization', 'OnlineBusiness'].includes(node['@type'])) return sharedOrgNode(siteOrigin);
           if (node['@type'] === 'WebSite') return sharedWebsiteNode(siteOrigin);
           const types = Array.isArray(node['@type']) ? node['@type'] : [node['@type']];
           if (types.includes('WebApplication')) {

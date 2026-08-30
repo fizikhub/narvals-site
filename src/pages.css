@@ -170,6 +170,34 @@
   color: var(--aqua);
 }
 
+.info-section__media {
+  max-width: 780px;
+  margin: 34px 0 42px;
+  border: 2px solid var(--deep);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--deep);
+  box-shadow: 8px 8px 0 var(--aqua);
+}
+
+.info-section__media picture {
+  display: block;
+}
+
+.info-section__media img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center 42%;
+}
+
+.info-section__media figcaption {
+  padding: 14px 16px 16px;
+  color: var(--offwhite);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
 .info-layout {
   display: grid;
   grid-template-columns: minmax(210px, 0.28fr) minmax(0, 0.72fr);
