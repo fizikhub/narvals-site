@@ -2,15 +2,15 @@ import { blogPosts } from './blog-posts.mjs';
 import { topicHubs } from './topic-hubs.mjs';
 
 export const staticPages = [
-  { key: 'home', path: '/', file: 'index.html', lastModified: '2026-08-29', kind: 'home' },
-  { key: 'services', path: '/hizmetler/', file: 'hizmetler/index.html', lastModified: '2026-08-27', kind: 'collection' },
-  { key: 'web-design', path: '/hizmetler/web-tasarim/', file: 'hizmetler/web-tasarim/index.html', lastModified: '2026-08-29', kind: 'service' },
+  { key: 'home', path: '/', file: 'index.html', lastModified: '2026-08-30', kind: 'home' },
+  { key: 'services', path: '/hizmetler/', file: 'hizmetler/index.html', lastModified: '2026-08-30', kind: 'collection' },
+  { key: 'web-design', path: '/hizmetler/web-tasarim/', file: 'hizmetler/web-tasarim/index.html', lastModified: '2026-08-30', kind: 'service' },
   { key: 'ecommerce', path: '/hizmetler/e-ticaret/', file: 'hizmetler/e-ticaret/index.html', lastModified: '2026-08-29', kind: 'service' },
   { key: 'custom-software', path: '/hizmetler/ozel-yazilim/', file: 'hizmetler/ozel-yazilim/index.html', lastModified: '2026-08-23', kind: 'service' },
   { key: 'meta-ads', path: '/hizmetler/dijital-reklam/', file: 'hizmetler/dijital-reklam/index.html', lastModified: '2026-08-27', kind: 'service' },
   { key: 'google-ads', path: '/hizmetler/google-ads/', file: 'hizmetler/google-ads/index.html', lastModified: '2026-08-29', kind: 'service' },
   { key: 'social-media-management', path: '/hizmetler/sosyal-medya-yonetimi/', file: 'hizmetler/sosyal-medya-yonetimi/index.html', lastModified: '2026-08-23', kind: 'service' },
-  { key: 'qr-menu', path: '/hizmetler/qr-menu/', file: 'hizmetler/qr-menu/index.html', lastModified: '2026-08-29', kind: 'service' },
+  { key: 'qr-menu', path: '/hizmetler/qr-menu/', file: 'hizmetler/qr-menu/index.html', lastModified: '2026-08-30', kind: 'service' },
   { key: 'reservations', path: '/hizmetler/rezervasyon-randevu/', file: 'hizmetler/rezervasyon-randevu/index.html', lastModified: '2026-08-23', kind: 'service' },
   { key: 'system-comparison', path: '/hizmetler/qr-menu-rezervasyon/', file: 'hizmetler/qr-menu-rezervasyon/index.html', lastModified: '2026-08-23', kind: 'comparison' },
   { key: 'about', path: '/hakkimizda/', file: 'hakkimizda/index.html', lastModified: '2026-08-23', kind: 'about' },

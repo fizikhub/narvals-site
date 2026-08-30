@@ -70,8 +70,8 @@
               "cssSelector": [
                 "h1",
                 ".info-hero__answer",
-                ".faq-item__question",
-                ".faq-item__answer"
+                ".info-faq summary",
+                ".info-faq details > p"
               ]
             },
             "inLanguage": "tr-TR",
@@ -141,10 +141,18 @@
             "mainEntity": [
               {
                 "@type": "Question",
+                "name": "Web sitesi yaptırmak için nereden başlamalıyım?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Önce sitenin hangi iş sonucuna hizmet edeceğini, ziyaretçinin hangi ana eylemi tamamlayacağını ve bugün nerede zorlandığını netleştirmek gerekir. İçerik, ekranlar, yönetim ihtiyacı, entegrasyonlar ve başarı ölçütleri bu kararın ardından kapsamlandırılır."
+                }
+              },
+              {
+                "@type": "Question",
                 "name": "Kurumsal site ile e-ticaret sitesi arasındaki fark nedir?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Kurumsal site hizmeti, uzmanlığı ve güveni anlatarak ziyaretçiyi teklif alma veya doğrudan iletişim adımına götürür. E-ticaret sitesi ise ürün keşfi, filtreleme, stok, sepet, ödeme ve kargo entegrasyonu gibi ek ticari akışlar gerektirir."
+                  "text": "Kurumsal site hizmeti ve güveni anlatarak teklif veya iletişim adımına götürür. E-ticaret sitesi ürün keşfi, stok, sepet, ödeme ve sipariş yönetimi gibi ek ticari akışlar gerektirir."
                 }
               },
               {
@@ -152,7 +160,7 @@
                 "name": "İçerikleri sonradan kendimiz güncelleyebilir miyiz?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "İçeriğin değişim sıklığına göre uygun yönetim paneli (Headless CMS veya özel yönetim alanı) kurulur. Hangi alanların ekip tarafından güncelleneceği kapsam aşamasında netleştirilir."
+                  "text": "İçeriğin değişim sıklığına göre uygun yönetim alanı kurulabilir. Hangi alanların ekip tarafından güncelleneceği kapsam aşamasında netleştirilir."
                 }
               },
               {
@@ -160,15 +168,15 @@
                 "name": "Mevcut site yeniden tasarlanırken SEO kaybı önlenebilir mi?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Mevcut URL, içerik ve organik trafik verisi incelenir; korunacak URL’ler, değişecek sayfalar için 301 yönlendirme haritası ve canonical planı yayın öncesinde hazırlanarak SEO riskleri minimize edilir."
+                  "text": "Mevcut URL, içerik ve performans verisi incelenir; korunacak URL’ler, değişecek sayfalar, yönlendirmeler ve canonical planı yayın öncesinde hazırlanır. Buna rağmen sıralama sonucu garanti edilemez."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Proje teslim süresini hangi unsurlar belirler?",
+                "name": "Proje süresini hangi unsurlar etkiler?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Sayfa ve içerik sayısı, içerik hazırlığı durumu, özel arayüz gereksinimleri, yönetim paneli mimarisi, CRM/ödeme entegrasyonları, onay döngüleri ve teknik testler süreyi belirler."
+                  "text": "Sayfa ve içerik sayısı, içerik hazırlığı, özgün arayüzler, yönetim paneli, entegrasyonlar, veri taşıma, onay ve test kapsamı süreyi belirler."
                 }
               },
               {
@@ -176,7 +184,7 @@
                 "name": "Teknik SEO neleri kapsar?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Taranabilir semantik HTML mimarisi, optimize edilmiş metadata, canonical etiketler, XML sitemap, robots.txt, Schema.org yapılandırılmış verisi, Core Web Vitals performans optimizasyonu ve görsel sıkıştırmaları kapsar."
+                  "text": "Taranabilir yapı, metadata, canonical, sitemap, robots, semantik başlıklar, yapılandırılmış veri, görsel ve performans temelleri kapsama göre kurulur. İçerik otoritesi ve bağımsız itibar ayrıca geliştirilmelidir."
                 }
               }
             ]
@@ -234,7 +242,7 @@
       </section>
 
       <div class="info-layout">
-        <nav class="info-toc" aria-label="Sayfa içeriği"><strong>Bu sayfada</strong><a href="#uygunluk">Kimler için?</a><a href="#kapsam">Kapsam</a><a href="#surec">Süreç</a><a href="#teknik-seo">Teknik SEO</a><a href="#sorular">Sorular</a></nav>
+        <nav class="info-toc" aria-label="Sayfa içeriği"><strong>Bu sayfada</strong><a href="#uygunluk">Kimler için?</a><a href="#teklif">Teklif ve sahiplik</a><a href="#kapsam">Kapsam</a><a href="#surec">Süreç</a><a href="#teknik-seo">Teknik SEO</a><a href="#sorular">Sorular</a></nav>
         <div class="info-content">
           <section class="info-section" id="uygunluk">
             <p class="info-section__label">Doğru başlangıç</p><h2>Web sitesi ne zaman işin zayıf halkasıdır?</h2>
@@ -245,6 +253,13 @@
               <article class="info-card"><b>03 / KAMPANYA</b><h3>Tek hedefli sayfa</h3><p>Reklam mesajı ile yönlendirme sayfasını aynı teklif ve ölçüm planında buluşturan odaklı deneyim.</p></article>
               <article class="info-card"><b>04 / E-TİCARET</b><h3>Üründen ödemeye yol</h3><p>Ürün keşfi, filtre, ürün detayı, sepet ve ödeme adımlarını mobil öncelikli düzenleyen satış deneyimi.</p></article>
             </div>
+          </section>
+
+          <section class="info-section" id="teklif">
+            <p class="info-section__label">Teklif ve sahiplik</p><h2>Teklifi yalnız toplam fiyata göre değil, teslim ve devir sınırlarına göre karşılaştırın.</h2>
+            <p>Web sitesi yaptırma teklifinde sayfa sayısı tek başına yeterli bir kapsam değildir. İçerik hazırlığı, özgün ekranlar, entegrasyonlar, veri taşıma, test, yayın ve yayın sonrası sorumluluklar ayrı ayrı görünmelidir. Alan adı, barındırma hesabı, kaynak dosyalar, içerik ve ölçüm hesaplarının kimin kontrolünde olacağı sözleşmede açıkça yazılmalıdır.</p>
+            <table class="decision-table"><thead><tr><th scope="col">Teklif kalemi</th><th scope="col">Açıkça yazılması gereken</th><th scope="col">Kabul ölçütü</th></tr></thead><tbody><tr><td>İçerik ve sayfalar</td><td>Sayfa listesi, metni ve görseli kimin hazırladığı, revizyon sınırı</td><td>Onaylanan site haritasındaki içeriklerin eksiksiz olması</td></tr><tr><td>Tasarım ve geliştirme</td><td>Özgün ekranlar, mobil durumlar, tarayıcı ve cihaz kapsamı</td><td>Kritik akışların hedeflenen cihazlarda çalışması</td></tr><tr><td>Hesap ve sahiplik</td><td>Alan adı, barındırma, kod, analitik ve üçüncü taraf hesaplarının erişimi</td><td>Yetkilerin ve gerekli dosyaların teslim kaydı</td></tr><tr><td>Yayın sonrası</td><td>Hata düzeltme dönemi, bakım kapsamı, yenileme ve üçüncü taraf ücretleri</td><td>Sorumlu kişi, süre ve hariçlerin belgelenmesi</td></tr></tbody></table>
+            <p>Hazırlık için <a href="/blog/web-sitesi-yaptirmadan-once-kapsam-teklif-karar-rehberi/">kapsam ve teklif karar rehberini</a> kullanın; elinizde birden fazla teklif varsa <a href="/araclar/teklif-karsilastirma/">ücretsiz teklif karşılaştırma aracında</a> teslim, sahiplik ve bakım risklerini yan yana görün.</p>
           </section>
 
           <section class="info-section" id="kapsam">

@@ -78,6 +78,44 @@ ve [web.dev ajan dostu site rehberi](https://web.dev/articles/ai-agent-site-ux)
 ile sınandı. Ajan uyumluluğu bir Google sıralama sinyali veya görünürlük garantisi
 olarak sunulmadı.
 
+## 30 Ağustos 2026 dördüncü ticari niyet denetimi
+
+Bu turda `web sitesi yaptırma` ve `QR menü yaptırma` niyetleri ayrı para
+sayfaları olarak yeniden incelendi. Türkiye sonuçlarındaki hizmet sayfaları,
+güncel Reddit işletme tartışmaları, Google iç bağlantı/yerel görünürlük
+rehberleri ve 2026 GEO yayınları birlikte değerlendirildi.
+
+- Web sitesi tekliflerinde toplam fiyat kadar alan adı, barındırma, kaynak
+  dosyalar, içerik, analitik, bakım ve çıkış koşullarının kimin kontrolünde
+  olduğu tekrar eden karar sorusudur. Bu nedenle hizmet sayfasına teslim,
+  sahiplik ve kabul ölçütü tablosu eklendi; piyasa fiyatı gibi doğrulanamayacak
+  bir rakam yayımlanmadı.
+- QR menü sonuçlarında demo, paket, çoklu dil, şube, uygulamasız kullanım ve
+  panelden güncelleme öne çıkıyor. Narvals'ın doğrulanmış kapsamı korunarak
+  kurulum/yinelenen maliyet, veri girişi, QR adresi, panel erişimi ve çıkış
+  koşullarını ayıran teklif tablosu eklendi. Sunulmayan demo, sabit fiyat veya
+  müşteri sayısı iddia edilmedi.
+- Dahili bağlantı grafiğinde web tasarım hizmeti 78 sayfadan, doğrudan QR menü
+  hizmeti yalnız 9 sayfadan bağlantı alıyordu. Blog altbilgisindeki belirsiz
+  “işletme sistemleri” bağlantısı korunabilir karşılaştırma yolundan ayrıldı;
+  `QR menü yaptırma` hizmeti artık ayrıca ve açıklayıcı metinle bağlanıyor.
+- Görünür SSS ile eski JSON-LD cevapları arasındaki anlam/kapsam farkları
+  giderildi. Var olmayan `.faq-item` sınıflarını gösteren `speakable`
+  seçicileri gerçek görünür SSS seçicilerine bağlandı ve build doğrulamasına
+  seçici/öncelikli bağlantı regresyon kontrolleri eklendi.
+
+Google'ın [iç bağlantı rehberi](https://developers.google.com/search/docs/crawling-indexing/links-crawlable),
+[sitelinks önerileri](https://developers.google.com/search/docs/appearance/sitelinks),
+[insan odaklı içerik rehberi](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
+ve [yerel sıralama açıklaması](https://support.google.com/business/answer/7091)
+uygulama sınırını belirledi. 2026 [GEO eleştirel incelemesi](https://arxiv.org/abs/2607.14035)
+ile [citation selection/absorption çerçevesi](https://arxiv.org/abs/2604.25707),
+salt biçimsel “AI optimizasyonu” yerine konu alakası, erişilebilir kanıt ve ayrı
+ölçüm gereğini destekliyor. Reddit'teki güncel
+[web sitesi maliyet tartışması](https://www.reddit.com/r/smallbusiness/comments/1w245xb/what_is_the_expected_cost_of_having_a_website/)
+ve [QR/PDF menü deneyimi tartışması](https://www.reddit.com/r/restaurateur/comments/okj3yy/)
+yalnız soru keşfi için kullanıldı; fiyat veya performans kanıtı sayılmadı.
+
 ## Canlı SERP ve marka bulgusu
 
 - `https://narvals.com` canlıdır. HTTPS/canonical yönlendirmeleri, gerçek `404`,

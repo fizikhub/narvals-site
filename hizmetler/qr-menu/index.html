@@ -13,8 +13,8 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    <meta name="description" content="Ürün, fiyat, seçenek, alerjen ve stok bilgisini panelden güncelleyebileceğiniz; çoklu dil, şube ve masa yapısına uyarlanabilen mobil QR menü." />
-    <meta name="keywords" content="QR menü, dijital menü, QR menü sistemi, menü yönetim paneli" />
+    <meta name="description" content="QR menü yaptırma sürecinde ürün, fiyat, seçenek ve alerjen bilgisini panelden yönetin; dil, şube, masa ve entegrasyon kapsamını işletmenize göre kurun." />
+    <meta name="keywords" content="QR menü yaptırma, QR menü, dijital menü, QR menü sistemi, menü yönetim paneli" />
     <meta name="author" content="Narvals Labs" />
     <link rel="canonical" href="https://narvals.com/hizmetler/qr-menu/" />
     <link rel="alternate" hreflang="tr" href="https://narvals.com/hizmetler/qr-menu/" />
@@ -31,7 +31,7 @@
     <meta property="og:locale" content="tr_TR" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Narvals Labs" />
-    <meta property="og:title" content="Özel QR Menü Yazılımı ve Yönetim Paneli | Narvals Labs" />
+    <meta property="og:title" content="QR Menü Yaptırma ve Yönetim Paneli | Narvals Labs" />
     <meta property="og:description" content="PDF’e sıkışmayan, telefonda okunabilir ve içeriği işletme tarafından yönetilebilen QR menü." />
     <meta property="og:url" content="https://narvals.com/hizmetler/qr-menu/" />
     <meta property="og:image" content="https://narvals.com/og/narvals-labs-og.jpg" />
@@ -39,11 +39,11 @@
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Narvals Labs QR menü sistemi hizmeti" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Özel QR Menü Yazılımı ve Yönetim Paneli | Narvals Labs" />
+    <meta name="twitter:title" content="QR Menü Yaptırma ve Yönetim Paneli | Narvals Labs" />
     <meta name="twitter:description" content="Güncel, mobil ve panelden yönetilebilen dijital menü deneyimi kurun." />
     <meta name="twitter:image" content="https://narvals.com/og/narvals-labs-og.jpg" />
     <meta name="twitter:image:alt" content="Narvals Labs QR menü sistemi hizmeti" />
-    <title>Özel QR Menü Yazılımı ve Yönetim Paneli | Narvals Labs</title>
+    <title>QR Menü Yaptırma ve Yönetim Paneli | Narvals Labs</title>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -63,8 +63,8 @@
               "cssSelector": [
                 "h1",
                 ".info-hero__answer",
-                ".faq-item__question",
-                ".faq-item__answer"
+                ".info-faq summary",
+                ".info-faq details > p"
               ]
             },
             "mainEntity": {
@@ -103,7 +103,7 @@
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Anlık Fiyat, Alerjen & Stok Yönetim Paneli"
+                    "name": "Fiyat, Alerjen & Stok Yönetim Paneli"
                   }
                 },
                 {
@@ -153,50 +153,50 @@
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "QR menü için uygulama indirmek gerekir mi?",
+                "name": "QR menü için müşterinin uygulama indirmesi gerekir mi?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Hayır. Standart akışta müşteri telefon kamerasıyla kodu tarar ve menüyü doğrudan tarayıcıda açar; ayrıca uygulama indirmesi gerekmez."
+                  "text": "Web tabanlı kurulumda müşteri QR kodu telefon kamerasıyla tarar ve menüyü tarayıcıda açar; ayrıca bir uygulama indirmesi gerekmez."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Fiyat, içerik ve “tükendi” bilgisi nasıl güncellenir?",
+                "name": "Fiyat, ürün ve “tükendi” bilgisi nasıl güncellenir?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "İşletmeye sağlanan yönetim panelinden ürün bilgisi, fiyat, görsel, açıklama, alerjen veya stok durumu anında değiştirilebilir."
+                  "text": "Yetkili kullanıcı, proje kapsamında kurulan yönetim alanından ilgili içeriği değiştirir. Alanlar ve yetkiler işletmenin gerçek güncelleme düzenine göre belirlenir."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Birden fazla dil, şube veya masaya özel QR desteklenebilir mi?",
+                "name": "İçerik değiştiğinde QR kodu yeniden basmak gerekir mi?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Evet. İşletmenin ihtiyacına göre dil seçenekleri, şube menüleri veya masaya özel QR kodlar kapsamlandırılabilir."
+                  "text": "QR kodun yönlendirdiği web adresi korunuyorsa menü içeriği panelden değiştirilebilir ve kod aynı kalabilir. Alan adı veya yönlendirme yapısı değişecekse ayrıca geçiş planı gerekir."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Garson çağırma, sipariş veya ödeme eklenebilir mi?",
+                "name": "Birden fazla dil veya şube desteklenebilir mi?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "İşletmenin operasyonuna göre WhatsApp ile sipariş, garson çağırma butonu veya online ödeme bağlantıları entegre edilebilir."
+                  "text": "Evet, gerçek ihtiyaç doğrulandığında dil ve şube bazlı ürün, fiyat veya görünürlük yapıları kapsamlandırılabilir. Çeviri içeriğinin hazırlanması ve güncel tutulması için sorumluluk ayrıca belirlenir."
                 }
               },
               {
                 "@type": "Question",
-                "name": "QR menü projesinin süresini ve maliyetini ne belirler?",
+                "name": "QR menüden sipariş veya ödeme alınabilir mi?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Ürün ve kategori sayısı, görsel hazırlığı, çoklu dil, şube veya masa sayısı ve ek entegrasyonlar belirleyicidir."
+                  "text": "Bu özellikler basit menü kapsamından farklı ticari ve operasyonel akışlar gerektirir. Sepet, ödeme sağlayıcısı, sipariş durumu ve işletmenin karşılama süreci incelendikten sonra değerlendirilebilir."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Mevcut basılı menü veya PDF doğrudan aktarılabilir mi?",
+                "name": "QR menü ile rezervasyon sistemi aynı şey midir?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Basılı menüdeki ürün ve fiyat verisi çıkarılarak mobil öncelikli dijital formata dönüştürülür. PDF dosyası doğrudan yüklenmek yerine taranabilir ürün verisi oluşturulur."
+                  "text": "Hayır. QR menü ürün ve içerik keşfine odaklanır; rezervasyon sistemi uygun zaman ve kapasite ayırır. İki ihtiyaç ayrı kapsamlandırılmalıdır."
                 }
               }
             ]
@@ -223,7 +223,7 @@
       </section>
 
       <div class="info-layout">
-        <nav class="info-toc" aria-label="Sayfa içeriği"><strong>Bu sayfada</strong><a href="#karar">Doğru çözüm</a><a href="#kapsam">Kapsam</a><a href="#yonetim">Yönetim</a><a href="#surec">Süreç</a><a href="#sorular">Sorular</a></nav>
+        <nav class="info-toc" aria-label="Sayfa içeriği"><strong>Bu sayfada</strong><a href="#karar">Doğru çözüm</a><a href="#teklif">Teklif ve maliyet</a><a href="#kapsam">Kapsam</a><a href="#yonetim">Yönetim</a><a href="#surec">Süreç</a><a href="#sorular">Sorular</a></nav>
         <div class="info-content">
           <section class="info-section" id="karar">
             <p class="info-section__label">Doğru menü biçimi</p>
@@ -238,6 +238,14 @@
                 <tr><td>Sipariş bağlantılı menü</td><td>Müşterinin seçimi işlemle tamamlaması gerekiyorsa</td><td>Sepet, ödeme, mutfak veya operasyon kuralları ayrıca kapsamlandırılır.</td></tr>
               </tbody>
             </table>
+          </section>
+
+          <section class="info-section" id="teklif">
+            <p class="info-section__label">Teklif ve toplam maliyet</p>
+            <h2>QR menü teklifinde kurulum ile devam eden giderleri ayırın.</h2>
+            <p>QR menü fiyatı yalnız QR kod sayısıyla belirlenmez. Ürün ve kategori hacmi, ilk veri girişi, görsel hazırlığı, dil ve şube sayısı, kullanıcı rolleri, sipariş veya ödeme bağlantıları, entegrasyonlar ve destek modeli kapsamı değiştirir. Teklifte ilk kurulum, yinelenen lisans veya barındırma, üçüncü taraf ücretleri ve sonradan yapılacak içerik işlerinin ayrı gösterilmesini isteyin.</p>
+            <table class="decision-table"><thead><tr><th scope="col">Karar alanı</th><th scope="col">Tekliften önce paylaşın</th><th scope="col">Teklifte doğrulayın</th></tr></thead><tbody><tr><td>Menü verisi</td><td>Kategori, ürün, seçenek, alerjen ve görsel sayısı</td><td>İlk veri girişini ve sonraki güncellemeyi kimin yapacağı</td></tr><tr><td>İşletme yapısı</td><td>Dil, şube, masa ve kullanıcı rolleri</td><td>Hangi bilginin ortak, hangisinin şubeye özel yönetileceği</td></tr><tr><td>Teknik sahiplik</td><td>Mevcut alan adı, site, POS veya sipariş araçları</td><td>Adresin, QR kodların, verinin ve panel erişiminin devir koşulları</td></tr><tr><td>Devam eden gider</td><td>Destek, yedekleme ve güncelleme beklentisi</td><td>Yenileme dönemi, üçüncü taraf ücretleri ve çıkış/veri aktarım biçimi</td></tr></tbody></table>
+            <p>Aynı kapsamı karşılaştırmak için <a href="/blog/qr-menu-fiyatlari-ve-maliyet-kalemleri/">QR menü fiyat ve maliyet rehberini</a>; hazır PDF ile yönetilebilir sistem arasında karar vermek için <a href="/blog/qr-menu-mu-pdf-menu-mu/">QR menü–PDF menü karşılaştırmasını</a> kullanın.</p>
           </section>
 
           <section class="info-section" id="kapsam">
@@ -283,7 +291,7 @@
             </div>
           </section>
 
-          <section class="info-section"><p class="info-section__label">Bağlantılı hizmetler</p><h2>Menüyü kayıt ve operasyona bağlayın.</h2><div class="info-related"><a href="/hizmetler/rezervasyon-randevu/">Rezervasyon ve randevu sistemi <span>→</span></a><a href="/hizmetler/ozel-yazilim/">Özel panel ve entegrasyon <span>→</span></a><a href="/hizmetler/web-tasarim/">Web tasarım ve mobil deneyim <span>→</span></a></div><p>Kuruluma başlamak için <a href="/blog/qr-menu-nasil-yapilir/">QR menü nasıl yapılır rehberini</a>, format kararı için <a href="/blog/qr-menu-mu-pdf-menu-mu/">QR menü ve PDF menü karşılaştırmasını</a> okuyun. <a href="/hizmetler/">Tüm Narvals Labs hizmetlerini inceleyin.</a></p></section>
+          <section class="info-section"><p class="info-section__label">Bağlantılı hizmetler</p><h2>Menüyü kayıt ve operasyona bağlayın.</h2><div class="info-related"><a href="/hizmetler/rezervasyon-randevu/">Rezervasyon ve randevu sistemi <span>→</span></a><a href="/hizmetler/ozel-yazilim/">Özel panel ve entegrasyon <span>→</span></a><a href="/hizmetler/web-tasarim/">Web tasarım ve mobil deneyim <span>→</span></a></div><p>Kuruluma başlamak için <a href="/blog/qr-menu-nasil-yapilir/">QR menü nasıl yapılır rehberini</a>; fiyat ve kapsam için <a href="/blog/qr-menu-fiyatlari-ve-maliyet-kalemleri/">QR menü maliyet rehberini</a> okuyun. <a href="/hizmetler/">Tüm Narvals Labs hizmetlerini inceleyin.</a></p></section>
         </div>
       </div>
 

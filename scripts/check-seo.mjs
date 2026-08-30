@@ -217,6 +217,34 @@ for (const [path, html] of htmlByPath) {
     errors.push(`${path}: unverified İstanbul address found in structured data`);
   }
   if (!structuredTypes.has('WebPage') && !structuredTypes.has('CollectionPage')) errors.push(`${path}: WebPage/CollectionPage structured data missing`);
+  for (const node of structuredNodes.filter((candidate) => candidate.speakable?.cssSelector)) {
+    for (const selector of node.speakable.cssSelector) {
+      for (const className of selector.matchAll(/\.([a-z0-9_-]+)/gi)) {
+        const escapedClass = className[1].replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        if (!new RegExp(`\\bclass="[^"]*\\b${escapedClass}\\b`, 'i').test(html)) {
+          errors.push(`${path}: speakable selector references a missing class (${selector})`);
+        }
+      }
+    }
+  }
+  if (['/hizmetler/web-tasarim/', '/hizmetler/qr-menu/'].includes(path)) {
+    const visibleText = html
+      .replace(/<script\b[\s\S]*?<\/script>/gi, ' ')
+      .replace(/<style\b[\s\S]*?<\/style>/gi, ' ')
+      .replace(/<[^>]+>/g, ' ')
+      .replace(/&(?:#39|apos);/g, "'")
+      .replace(/&quot;/g, '"')
+      .replace(/&amp;/g, '&')
+      .replace(/\s+/g, ' ')
+      .toLocaleLowerCase('tr');
+    for (const faq of structuredNodes.filter((node) => node['@type'] === 'FAQPage')) {
+      for (const question of faq.mainEntity || []) {
+        if (!visibleText.includes(question.name.toLocaleLowerCase('tr'))) {
+          errors.push(`${path}: FAQ structured question is not visible (${question.name})`);
+        }
+      }
+    }
+  }
   const pageNodes = structuredNodes.filter((node) => node.url === expectedCanonical || node['@id']?.startsWith(expectedCanonical));
   const pageTypes = new Set(pageNodes.flatMap((node) => Array.isArray(node['@type']) ? node['@type'] : [node['@type']]).filter(Boolean));
   if (kind === 'service' && !pageTypes.has('Service')) errors.push(`${path}: Service structured data missing`);
@@ -292,6 +320,12 @@ for (const [path, html] of htmlByPath) {
 
 for (const [path, sources] of incomingLinks) {
   if (path !== '/' && sources.size === 0) errors.push(`${path}: orphan canonical page has no incoming internal link`);
+}
+for (const path of ['/hizmetler/web-tasarim/', '/hizmetler/qr-menu/']) {
+  const sources = incomingLinks.get(path);
+  if (!sources || sources.size < 20) {
+    errors.push(`${path}: priority commercial service has only ${sources?.size || 0} incoming source pages; expected at least 20`);
+  }
 }
 
 for (const file of productionFiles) {
