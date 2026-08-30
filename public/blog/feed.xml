@@ -5,7 +5,7 @@
     <link>https://narvals.com/blog/</link>
     <description>Web, yazılım, reklam ve işletme sistemleri için kaynaklı karar rehberleri.</description>
     <language>tr-TR</language>
-    <lastBuildDate>Sun, 30 Aug 2026 10:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 15:10:00 GMT</lastBuildDate>
     <atom:link href="https://narvals.com/blog/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>E-ticaret sitesi nasıl açılır? 10 adımlı sade rehber</title>
@@ -69,6 +69,24 @@
       <category>Google Ads</category>
       <description>Google Ads bütçesini hedef, dönüşüm değeri, kabul edilebilir maliyet, arama talebi, test süresi ve harcama sınırlarıyla planlayın.</description>
       <content:encoded><![CDATA[<p>Google Ads bütçesi; işletmenin kaybedebileceği rastgele bir rakamla değil, hedef dönüşüm, kabul edilebilir müşteri edinme maliyeti, arama talebi, kampanya süresi ve ölçüm güvenilirliğiyle belirlenir. Aylık medya sınırını kampanyalara bölmeden önce hangi iş sonucunun ne kadar değer taşıdığını hesaplayın.</p><ul><li>Herkese uyan tek başlangıç bütçesi yoktur.</li><li>Medya bütçesi yönetim ve üretim ücretinden ayrılır.</li><li>Google ortalama günlük bütçeyi ay içindeki talebe göre farklı günlerde kullanabilir.</li><li>Bütçe artırımı yalnız nitelikli sonuç ve operasyon kapasitesi uygunsa yapılır.</li></ul>]]></content:encoded>
+    </item>
+    <item>
+      <title>Google Ads ajansı ücretleri: yönetim modeli ve teklif karşılaştırma rehberi</title>
+      <link>https://narvals.com/blog/google-ads-ajansi-ucretleri-ve-yonetim-modelleri/</link>
+      <guid isPermaLink="true">https://narvals.com/blog/google-ads-ajansi-ucretleri-ve-yonetim-modelleri/</guid>
+      <pubDate>Sun, 30 Aug 2026 15:00:00 GMT</pubDate>
+      <category>Google Ads</category>
+      <description>Google Ads ajans ücretini medya bütçesinden ayırın; sabit ücret, bütçe yüzdesi, performans ve hibrit modelleri kapsam ve hesap sahipliğiyle karşılaştırın.</description>
+      <content:encoded><![CDATA[<p>Google Ads ajansı ücreti, Google’a ödenen medya bütçesinden ayrı bir hizmet bedelidir. Sabit aylık ücret, medya harcamasının yüzdesi, proje bedeli, performansa bağlı ücret veya bunların birleşimi kullanılabilir. Doğru karşılaştırma için kampanya sayısını değil; araştırma, kurulum, kreatif, açılış sayfası, dönüşüm ölçümü, optimizasyon, raporlama, hesap sahipliği ve çıkış teslimlerini aynı tabloda inceleyin.</p><ul><li>Medya harcaması ile ajans hizmet bedeli ayrı gösterilmelidir.</li><li>Ucuz teklif; ölçüm, kreatif veya açılış sayfasını kapsam dışında bırakıyorsa aynı hizmet değildir.</li><li>Reklam hesabı ve birinci taraf verileri işletmenin kontrolünde kalmalıdır.</li><li>Başarı primi; dönüşüm tanımı, atıf penceresi, iptal ve iade kuralları yazılmadan karşılaştırılamaz.</li></ul>]]></content:encoded>
+    </item>
+    <item>
+      <title>Meta reklam ajansı ücretleri: Instagram ve Facebook yönetim teklifi rehberi</title>
+      <link>https://narvals.com/blog/meta-reklam-ajansi-ucretleri-ve-yonetim-modelleri/</link>
+      <guid isPermaLink="true">https://narvals.com/blog/meta-reklam-ajansi-ucretleri-ve-yonetim-modelleri/</guid>
+      <pubDate>Sun, 30 Aug 2026 15:10:00 GMT</pubDate>
+      <category>Meta reklam</category>
+      <description>Meta reklam ajansı ücretini medya bütçesinden ayırın; kreatif, Pixel, Conversions API, optimizasyon, raporlama ve hesap sahipliğini karşılaştırın.</description>
+      <content:encoded><![CDATA[<p>Meta reklam ajansı ücreti, Instagram ve Facebook’ta harcanan medya bütçesinden ayrıdır. Yönetim teklifi; strateji, kampanya kurulumu, hedef kitle, kreatif üretim, metin, Pixel ve Conversions API ölçümü, optimizasyon, raporlama ve toplantı kapsamına göre değerlendirilmelidir. Sabit ücret, medya yüzdesi, kreatif paketi ve performans primi aynı işi ifade etmez.</p><ul><li>Meta medya bütçesi, ajans yönetimi ve kreatif üretimi üç ayrı maliyet olabilir.</li><li>Kreatif adedi yerine format, varyasyon, kullanım hakkı ve revizyon sınırı karşılaştırılmalıdır.</li><li>Pixel, veri kümesi, katalog ve Business Portfolio işletmenin kontrolünde kalmalıdır.</li><li>Ucuz trafik, nitelikli talep veya kârlı sipariş anlamına gelmez.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>Restoran web sitesi nasıl olmalı? Menü, rezervasyon ve Google rehberi</title>

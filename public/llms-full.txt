@@ -128,7 +128,7 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 
 ---
 
-## 6. Tüm Karar Rehberleri Özeti (40 Rehber)
+## 6. Tüm Karar Rehberleri Özeti (42 Rehber)
 
 ### E-ticaret sitesi nasıl açılır? 10 adımlı sade rehber
 - **URL:** https://narvals.com/blog/e-ticaret-sitesi-nasil-acilir/
@@ -203,6 +203,26 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
   * Medya bütçesi yönetim ve üretim ücretinden ayrılır.
   * Google ortalama günlük bütçeyi ay içindeki talebe göre farklı günlerde kullanabilir.
   * Bütçe artırımı yalnız nitelikli sonuç ve operasyon kapasitesi uygunsa yapılır.
+
+### Google Ads ajansı ücretleri: yönetim modeli ve teklif karşılaştırma rehberi
+- **URL:** https://narvals.com/blog/google-ads-ajansi-ucretleri-ve-yonetim-modelleri/
+- **Kategori:** Google Ads
+- **Kısa Cevap:** Google Ads ajansı ücreti, Google’a ödenen medya bütçesinden ayrı bir hizmet bedelidir. Sabit aylık ücret, medya harcamasının yüzdesi, proje bedeli, performansa bağlı ücret veya bunların birleşimi kullanılabilir. Doğru karşılaştırma için kampanya sayısını değil; araştırma, kurulum, kreatif, açılış sayfası, dönüşüm ölçümü, optimizasyon, raporlama, hesap sahipliği ve çıkış teslimlerini aynı tabloda inceleyin.
+- **Önemli Çıkarımlar:**
+  * Medya harcaması ile ajans hizmet bedeli ayrı gösterilmelidir.
+  * Ucuz teklif; ölçüm, kreatif veya açılış sayfasını kapsam dışında bırakıyorsa aynı hizmet değildir.
+  * Reklam hesabı ve birinci taraf verileri işletmenin kontrolünde kalmalıdır.
+  * Başarı primi; dönüşüm tanımı, atıf penceresi, iptal ve iade kuralları yazılmadan karşılaştırılamaz.
+
+### Meta reklam ajansı ücretleri: Instagram ve Facebook yönetim teklifi rehberi
+- **URL:** https://narvals.com/blog/meta-reklam-ajansi-ucretleri-ve-yonetim-modelleri/
+- **Kategori:** Meta reklam
+- **Kısa Cevap:** Meta reklam ajansı ücreti, Instagram ve Facebook’ta harcanan medya bütçesinden ayrıdır. Yönetim teklifi; strateji, kampanya kurulumu, hedef kitle, kreatif üretim, metin, Pixel ve Conversions API ölçümü, optimizasyon, raporlama ve toplantı kapsamına göre değerlendirilmelidir. Sabit ücret, medya yüzdesi, kreatif paketi ve performans primi aynı işi ifade etmez.
+- **Önemli Çıkarımlar:**
+  * Meta medya bütçesi, ajans yönetimi ve kreatif üretimi üç ayrı maliyet olabilir.
+  * Kreatif adedi yerine format, varyasyon, kullanım hakkı ve revizyon sınırı karşılaştırılmalıdır.
+  * Pixel, veri kümesi, katalog ve Business Portfolio işletmenin kontrolünde kalmalıdır.
+  * Ucuz trafik, nitelikli talep veya kârlı sipariş anlamına gelmez.
 
 ### Restoran web sitesi nasıl olmalı? Menü, rezervasyon ve Google rehberi
 - **URL:** https://narvals.com/blog/restoran-web-sitesi-nasil-olmali/
@@ -599,6 +619,8 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 - Rehber: https://narvals.com/blog/qr-menu-fiyatlari-ve-maliyet-kalemleri/
 - Rehber: https://narvals.com/blog/web-sitesi-ne-kadar-surer/
 - Rehber: https://narvals.com/blog/google-ads-butcesi-nasil-belirlenir/
+- Rehber: https://narvals.com/blog/google-ads-ajansi-ucretleri-ve-yonetim-modelleri/
+- Rehber: https://narvals.com/blog/meta-reklam-ajansi-ucretleri-ve-yonetim-modelleri/
 - Rehber: https://narvals.com/blog/restoran-web-sitesi-nasil-olmali/
 - Rehber: https://narvals.com/blog/web-tasarim-ajansi-secerken-sorulacak-sorular/
 - Rehber: https://narvals.com/blog/web-sitesi-bakim-ucreti-ve-yillik-maliyet/

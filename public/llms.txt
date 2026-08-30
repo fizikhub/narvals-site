@@ -53,6 +53,8 @@ Tam kapsamlı yapay zekâ bilgi tabanı ve RAG dokümantasyonu için: [llms-full
 - [QR menü fiyatları: maliyeti hangi özellikler belirler?](https://narvals.com/blog/qr-menu-fiyatlari-ve-maliyet-kalemleri/): QR menü fiyatlarını ürün, dil, şube, tasarım, panel, sipariş, ödeme, entegrasyon ve destek kapsamına göre karşılaştırmak için sade rehber.
 - [Web sitesi ne kadar sürer? Gerçekçi proje takvimi rehberi](https://narvals.com/blog/web-sitesi-ne-kadar-surer/): Web sitesi yapım süresini içerik, sayfa şablonu, tasarım, entegrasyon, veri taşıma, test ve onay akışına göre planlamayı öğrenin.
 - [Google Ads bütçesi nasıl belirlenir? Planlama rehberi](https://narvals.com/blog/google-ads-butcesi-nasil-belirlenir/): Google Ads bütçesini hedef, dönüşüm değeri, kabul edilebilir maliyet, arama talebi, test süresi ve harcama sınırlarıyla planlayın.
+- [Google Ads ajansı ücretleri: yönetim modeli ve teklif karşılaştırma rehberi](https://narvals.com/blog/google-ads-ajansi-ucretleri-ve-yonetim-modelleri/): Google Ads ajans ücretini medya bütçesinden ayırın; sabit ücret, bütçe yüzdesi, performans ve hibrit modelleri kapsam ve hesap sahipliğiyle karşılaştırın.
+- [Meta reklam ajansı ücretleri: Instagram ve Facebook yönetim teklifi rehberi](https://narvals.com/blog/meta-reklam-ajansi-ucretleri-ve-yonetim-modelleri/): Meta reklam ajansı ücretini medya bütçesinden ayırın; kreatif, Pixel, Conversions API, optimizasyon, raporlama ve hesap sahipliğini karşılaştırın.
 - [Restoran web sitesi nasıl olmalı? Menü, rezervasyon ve Google rehberi](https://narvals.com/blog/restoran-web-sitesi-nasil-olmali/): Restoran web sitesinde menü, konum, çalışma saatleri, rezervasyon, hızlı mobil deneyim, Google İşletme Profili ve yerel SEO nasıl kurulmalı?
 - [Web tasarım ajansı seçerken sorulacak 15 soru](https://narvals.com/blog/web-tasarim-ajansi-secerken-sorulacak-sorular/): Web tasarım ajansını canlı işler, kapsam, hesap sahipliği, SEO, bakım, ölçüm, sözleşme ve teslim kriterleriyle karşılaştırmak için sade kontrol listesi.
 - [Web sitesi bakım ücreti ve yıllık maliyet neleri kapsar?](https://narvals.com/blog/web-sitesi-bakim-ucreti-ve-yillik-maliyet/): Web sitesi bakımında hosting, alan adı, güncelleme, yedek, güvenlik, içerik, destek ve geliştirme kalemlerini ayırarak teklifleri karşılaştırın.
@@ -104,7 +106,7 @@ Tam kapsamlı yapay zekâ bilgi tabanı ve RAG dokümantasyonu için: [llms-full
 
 ## İsteğe Bağlı / Optional
 
-- [Tam Dokümantasyon (llms-full.txt)](https://narvals.com/llms-full.txt): LLM ve RAG sistemleri için 40 karar rehberi, 18 araç ve mimari kuralları içeren tam metin bilgi tabanı
+- [Tam Dokümantasyon (llms-full.txt)](https://narvals.com/llms-full.txt): LLM ve RAG sistemleri için 42 karar rehberi, 18 araç ve mimari kuralları içeren tam metin bilgi tabanı
 - [XML Site Haritası](https://narvals.com/sitemap.xml): Arama motorları ve botlar için tam kanonik sayfa ve görsel indeksi
 - [RSS Akışı](https://narvals.com/blog/feed.xml): En son yayınlanan rehberlerin makine tarafından okunabilir XML akışı
 - [OpenSearch XML](https://narvals.com/opensearch.xml): Tarayıcılar ve AI ajanları için standart arama tanımı

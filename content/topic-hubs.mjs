@@ -29,7 +29,7 @@ export const topicHubs = [
     keywords: ['dijital reklam rehberi', 'Google Ads bütçesi', 'Meta reklam bütçesi', 'reklam ajansı seçimi'],
     answer: 'Reklamı kanal seçerek değil, gerçek iş sonucunu ve ölçüm yöntemini tanımlayarak başlatın. Sonra bütçe, kampanya, kreatif ve açılış sayfasını aynı hedefe bağlayın.',
     start: ['google-ads-reklam-nasil-verilir', 'google-ads-butcesi-nasil-belirlenir', 'ga4-ve-server-side-gtm-kurulum-rehberi'],
-    all: ['google-ads-reklam-nasil-verilir', 'google-ads-butcesi-nasil-belirlenir', 'google-ads-mi-meta-reklamlari-mi', 'google-ads-ajansi-secerken-sorulacak-sorular', 'meta-reklam-butcesi-nasil-belirlenir', 'meta-reklam-ajansi-secerken-sorulacak-sorular', 'meta-pixel-ve-conversions-api-farki', 'ga4-ve-server-side-gtm-kurulum-rehberi', 'sosyal-medya-yonetimi-neleri-kapsar'],
+    all: ['google-ads-reklam-nasil-verilir', 'google-ads-butcesi-nasil-belirlenir', 'google-ads-ajansi-ucretleri-ve-yonetim-modelleri', 'google-ads-mi-meta-reklamlari-mi', 'google-ads-ajansi-secerken-sorulacak-sorular', 'meta-reklam-butcesi-nasil-belirlenir', 'meta-reklam-ajansi-ucretleri-ve-yonetim-modelleri', 'meta-reklam-ajansi-secerken-sorulacak-sorular', 'meta-pixel-ve-conversions-api-farki', 'ga4-ve-server-side-gtm-kurulum-rehberi', 'sosyal-medya-yonetimi-neleri-kapsar'],
     servicePath: '/hizmetler/google-ads/', serviceLabel: 'Google Ads hizmetini inceleyin'
   },
   {

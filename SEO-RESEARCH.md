@@ -24,6 +24,53 @@ Bu nedenle uygulama önceliği şöyledir:
 4. Gerçek ekip deneyimi, vaka, yöntem, özgün veri ve üçüncü taraf mention.
 5. Arama sırası ile AI citation/mention/referral ölçümlerinin ayrı izlenmesi.
 
+## 30 Ağustos 2026 ticari arama niyeti ve GEO kanıt güncellemesi
+
+Bu turda “e-ticaret sitesi yaptırmak”, “Google Ads ajansı” ve “Meta reklam
+ajansı” niyetleri Türkiye sonuçlarıyla karşılaştırıldı. Mevcut hizmet sayfaları
+bu üç ana talebi doğrudan kapsıyordu; açık kalan konu, reklamverenin medya
+bütçesi ile ajans yönetim ücretini ayıran karar içeriğiydi. İki yeni rehber bu
+boşluğu kapatmak için yayınlandı:
+
+- Google Ads yönetim ücreti; medya, yönetim, üretim, ölçüm ve araç maliyetlerini
+  ayrı gösteren dört modelle açıklandı. Google'ın resmî manager account ve
+  account budget belgelerine dayanılarak işletmenin kendi hesap/veri
+  varlıklarında yönetici kalması önerildi.
+- Meta reklam yönetim ücreti; medya, kreatif, ölçüm altyapısı ve yönetim olarak
+  ayrıldı. Pixel, Conversions API, katalog ve Business Portfolio sahipliği
+  görünür bir teklif ölçütüne dönüştürüldü.
+- İki rehber reklam konu merkezine ve ilgili hizmet sayfasına bağlandı. Böylece
+  “bütçe ne olmalı?”, “ajans nasıl seçilir?” ve “ajans ücreti neyi kapsar?”
+  birbirini tekrarlamayan üç ayrı karar niyeti oldu.
+
+Akademik GEO literatüründeki son çalışmalar tedbirli yorumlandı. KDD 2024'te
+yayımlanan Princeton/Georgia Tech/Allen Institute çalışması görünürlükte
+kaynaklandırma ve istatistik gibi içerik niteliklerini deneysel olarak sınasa da
+sonraki 2026 literatürü metriklerin ve platform davranışının hâlâ heterojen
+olduğunu vurguluyor. 602 kontrollü prompt ve çoklu AI platformu kullanan yeni
+ölçüm çalışması ayrıca “kaynak olarak seçilme” ile kaynağın cevaba gerçekten
+kanıt taşımasını ayrı aşamalar olarak ele alıyor. Bu nedenle siteye cümle
+şablonu, yapay anahtar kelime yoğunluğu veya doğrulanmamış otorite iddiası
+eklenmedi; açık kapsam, birincil kaynak, hesap sahipliği ve özgün karar tabloları
+uygulandı. 2026 çalışmaları henüz preprint niteliğinde olduğundan kesin sıralama
+kuralı olarak sunulmadı.
+
+Reddit'teki r/TechSEO, r/SEO ve r/bigseo tartışmalarında tekrar eden iki saha
+gözlemi vardı: `llms.txt` ile citation artışı arasında ikna edici nedensel kanıt
+bulunmaması ve schema'nın tek başına güven/sıralama üretmemesi. Bunlar resmî veya
+akademik kanıt sayılmadı; Google'ın 2026 AI optimization rehberindeki “özel GEO
+markup gerekmez” açıklamasıyla uyumlu hipotez kontrolü olarak kullanıldı.
+
+Kaynaklar: [Google AI optimization guide](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide),
+[Google Ads manager accounts](https://support.google.com/google-ads/answer/6139186),
+[Google Ads account budgets](https://support.google.com/google-ads/answer/7054229),
+[Princeton GEO / KDD 2024](https://arxiv.org/abs/2311.09735),
+[Citation selection–absorption ölçüm çalışması](https://arxiv.org/abs/2604.25707),
+[2023–2026 GEO kritik taraması](https://arxiv.org/abs/2607.14035),
+[r/TechSEO Google GEO rehberi tartışması](https://www.reddit.com/r/TechSEO/comments/1te4xtn/),
+[r/SEO llms.txt saha araştırması tartışması](https://www.reddit.com/r/SEO/comments/1uclth8/)
+ve [r/SEO schema tartışması](https://www.reddit.com/r/SEO/comments/1nztb1k/).
+
 ## 30 Ağustos 2026 altıncı Search generative AI ve crawler denetimi
 
 Google'ın Haziran 2026'da test etmeye başladığı Search Console düzeyi
