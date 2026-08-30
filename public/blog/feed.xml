@@ -5,7 +5,7 @@
     <link>https://narvals.com/blog/</link>
     <description>Web, yazılım, reklam ve işletme sistemleri için kaynaklı karar rehberleri.</description>
     <language>tr-TR</language>
-    <lastBuildDate>Sun, 30 Aug 2026 09:10:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 10:00:00 GMT</lastBuildDate>
     <atom:link href="https://narvals.com/blog/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>E-ticaret sitesi nasıl açılır? 10 adımlı sade rehber</title>
@@ -150,6 +150,15 @@
       <category>Ölçüm &amp; Analitik</category>
       <description>GA4 ve server-side Google Tag Manager mimarisini amaç, veri akışı, izin, test, maliyet ve veri doğruluğu açısından planlayın; yanlış vaatlerden kaçının.</description>
       <content:encoded><![CDATA[<p>GA4 kurulumu, işletme kararlarını temsil eden olayları tanımlayıp web veri akışını doğru mülke göndermekle başlar. Server-side GTM ise etiket isteklerini işletmenin kontrol ettiği bir sunucu container’ı üzerinden işleyebilir. Bu mimari veri kontrolü ve performans için seçenek sunar; izni ortadan kaldırmaz, reklam engelleyicileri tamamen aşmaz ve eksiksiz veri garantisi vermez.</p><ul><li>Önce ölçüm planı, sonra etiket kurulumu yapılır.</li><li>Server-side tagging zorunlu değildir; bakım ve barındırma maliyeti getirir.</li><li>Tarayıcı ve sunucu olayları ortak event_id ile tekilleştirilmelidir.</li><li>DebugView, Tag Assistant ve gerçek iş kaydı birlikte doğrulanmalıdır.</li><li>Kişisel veri ve izin yükümlülükleri teknik proxy ile ortadan kalkmaz.</li></ul>]]></content:encoded>
+    </item>
+    <item>
+      <title>WebMCP nedir? AI ajanları için web sitesi hazırlama rehberi</title>
+      <link>https://narvals.com/blog/webmcp-ai-ajanlari-icin-web-sitesi-rehberi/</link>
+      <guid isPermaLink="true">https://narvals.com/blog/webmcp-ai-ajanlari-icin-web-sitesi-rehberi/</guid>
+      <pubDate>Sun, 30 Aug 2026 10:00:00 GMT</pubDate>
+      <category>SEO &amp; GEO</category>
+      <description>Chrome WebMCP origin trial, agent dostu formlar, Google Preferred Sources ve güvenli AI müşteri yolculuğunu uygulama sınırlarıyla öğrenin.</description>
+      <content:encoded><![CDATA[<p>WebMCP, web sitelerinin form ve JavaScript işlevlerini tarayıcı içindeki yapay zekâ ajanlarına ad, açıklama ve yapılandırılmış parametrelerle sunmasını amaçlayan deneysel bir web standardıdır. Chrome 149 origin trial aşamasındadır; Google sıralama sinyali değildir. Doğru kullanıldığında bir ajanın hesaplama, karşılaştırma veya talep hazırlama görevini daha güvenilir tamamlamasına yardımcı olabilir.</p><ul><li>WebMCP henüz deneysel bir origin trial teknolojisidir; standartlaşacağı veya sıralamayı artıracağı garanti değildir.</li><li>Standart HTML formları toolname ve tooldescription açıklamalarıyla progressive enhancement olarak ajanlara tanıtılabilir.</li><li>Durum değiştiren veya veri gönderen işlemlerde açık kullanıcı onayı, doğrulama ve prompt injection savunması gerekir.</li><li>Google Preferred Sources, WebMCP’den ayrıdır ve okurun seçtiği yayıncıyı kendi Search ve AI deneyiminde öne çıkarabilir.</li><li>Başarı; tool activation, tamamlanan görev, nitelikli iletişim ve gerçek müşteri sonucuyla ölçülmelidir.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>Kurumsal web sitesi briefi nasıl hazırlanır?</title>

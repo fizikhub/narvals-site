@@ -111,5 +111,106 @@ export const technicalSeoPosts = [
       { label: 'Google Analytics — DebugView', url: 'https://support.google.com/analytics/answer/7201382' },
       { label: 'Google Analytics — Kişisel olarak tanımlanabilir bilgi politikası', url: 'https://support.google.com/analytics/answer/6366371' }
     ]
+  },
+  {
+    slug: 'webmcp-ai-ajanlari-icin-web-sitesi-rehberi',
+    metaTitle: 'WebMCP Nedir? AI Ajanlarına Hazır Web Sitesi | Narvals',
+    title: 'WebMCP nedir? AI ajanları için web sitesi hazırlama rehberi',
+    description: 'Chrome WebMCP origin trial, agent dostu formlar, Google Preferred Sources ve güvenli AI müşteri yolculuğunu uygulama sınırlarıyla öğrenin.',
+    keywords: ['WebMCP nedir', 'AI ajanı web sitesi', 'agentic web', 'Google Preferred Sources', 'AI müşteri yolculuğu'],
+    category: 'SEO & GEO',
+    published: '2026-08-30T13:00:00+03:00',
+    modified: '2026-08-30T13:00:00+03:00',
+    readingTime: 10,
+    answer: 'WebMCP, web sitelerinin form ve JavaScript işlevlerini tarayıcı içindeki yapay zekâ ajanlarına ad, açıklama ve yapılandırılmış parametrelerle sunmasını amaçlayan deneysel bir web standardıdır. Chrome 149 origin trial aşamasındadır; Google sıralama sinyali değildir. Doğru kullanıldığında bir ajanın hesaplama, karşılaştırma veya talep hazırlama görevini daha güvenilir tamamlamasına yardımcı olabilir.',
+    takeaways: [
+      'WebMCP henüz deneysel bir origin trial teknolojisidir; standartlaşacağı veya sıralamayı artıracağı garanti değildir.',
+      'Standart HTML formları toolname ve tooldescription açıklamalarıyla progressive enhancement olarak ajanlara tanıtılabilir.',
+      'Durum değiştiren veya veri gönderen işlemlerde açık kullanıcı onayı, doğrulama ve prompt injection savunması gerekir.',
+      'Google Preferred Sources, WebMCP’den ayrıdır ve okurun seçtiği yayıncıyı kendi Search ve AI deneyiminde öne çıkarabilir.',
+      'Başarı; tool activation, tamamlanan görev, nitelikli iletişim ve gerçek müşteri sonucuyla ölçülmelidir.'
+    ],
+    about: ['WebMCP', 'AI ajanları', 'Agentic web', 'Google Preferred Sources'],
+    related: ['google-ai-aramalari-icin-geo-rehberi', 'google-ve-ai-botlari-icin-site-indeksleme-rehberi', 'web-sitesi-teknik-seo-kontrol-listesi'],
+    servicePath: '/hizmetler/web-tasarim/',
+    serviceLabel: 'AI ajanlarına hazır web altyapısını inceleyin',
+    faq: [
+      { question: 'WebMCP Google sıralamasını artırır mı?', answer: 'Buna dair resmî bir sıralama sinyali veya nedensel kanıt yoktur. WebMCP, tarayıcı içindeki AI ajanlarının site işlevlerini daha güvenilir kullanmasını hedefler; SEO’nun yerine geçmez.' },
+      { question: 'WebMCP bugün bütün tarayıcılarda çalışır mı?', answer: 'Hayır. Ağustos 2026 itibarıyla Chrome origin trial aşamasındadır ve taslak değişebilir. Ek açıklamalar desteklemeyen tarayıcılarda normal HTML form davranışını bozmamalıdır.' },
+      { question: 'WebMCP ile form otomatik gönderilmeli mi?', answer: 'Hassas, mali veya veri gönderen işlemlerde otomatik gönderim varsayılan olmamalıdır. Kullanıcı formu ve değerleri görmeli, son eylemi doğrulamalı ve sunucu tarafı kontroller devam etmelidir.' },
+      { question: 'Google Preferred Sources ne sağlar?', answer: 'Bir kullanıcı sitenizi tercih edilen kaynak seçerse içerikleriniz o kullanıcı için Top Stories, AI Overviews ve AI Mode içinde tercih rozetiyle daha görünür olabilir. Bu genel sıralama garantisi değildir.' }
+    ],
+    sections: [
+      {
+        id: 'webmcp-nedir',
+        label: 'Deneysel standart',
+        heading: 'WebMCP, görünür arayüz ile AI ajanı arasında yapılandırılmış bir sözleşme kurar.',
+        paragraphs: [
+          'Tarayıcı ajanları bugün ekran görüntüsü, DOM ve erişilebilirlik ağacından butonları ve alanları tahmin ederek işlem yapabilir. WebMCP, sitenin desteklediği görevi açık bir araç adı, kısa açıklama ve JSON Schema parametreleriyle tarayıcıya bildirmeyi amaçlar.',
+          'Declarative API standart HTML formlarına `toolname`, `tooldescription` ve gerektiğinde alan açıklamaları ekler. Destekleyen tarayıcı formu görünür tutar ve alanları doldurabilir. Desteklemeyen tarayıcı bu özel nitelikleri yok saydığı için form normal biçimde çalışmaya devam eder.'
+        ],
+        table: {
+          headers: ['Katman', 'İnsan deneyimi', 'Ajan deneyimi'],
+          rows: [
+            ['Standart form', 'Etiketleri okuyup değerleri girer', 'DOM ve erişilebilirlik ağacını yorumlar'],
+            ['WebMCP açıklaması', 'Form görünür kalır', 'Görevin adı ve parametre sözleşmesini alır'],
+            ['Kullanıcı onayı', 'Sonucu veya gönderimi kontrol eder', 'İzin ve onay sınırına uyar'],
+            ['Sunucu doğrulaması', 'Hata ve başarı mesajını görür', 'Yalnız doğrulanmış sonucu alır']
+          ]
+        }
+      },
+      {
+        id: 'uygulama-stratejisi',
+        label: 'Uygulama',
+        heading: 'Önce salt okunur hesaplama ve karşılaştırma araçlarıyla başlayın.',
+        paragraphs: [
+          'En düşük riskli başlangıç; tarayıcıda çalışan bütçe, ROAS, dönüşüm, teklif karşılaştırma ve site kontrolü gibi görevlerdir. Narvals araçlarındaki 14 standart form WebMCP açıklamalarıyla işaretlendi; otomatik gönderim açılmadı ve mevcut kullanıcı arayüzü yetkili kontrol yüzeyi olarak korundu.',
+          'İletişim, rezervasyon, satın alma veya hesap değişikliği gibi durum değiştiren işlemler daha yüksek risklidir. Bu görevlerde tool çağrısı doğrudan iş sonucu üretmemeli; kullanıcıya özet ve son onay gösterilmeli, kimlik/izin ve sunucu doğrulaması yeniden yapılmalıdır.'
+        ],
+        checklist: [
+          'Araç adı 30 karakteri geçmeyen, tek görevi anlatan kararlı bir fiil içeriyor.',
+          'Açıklama ne yaptığını ve yapmadığını kısa biçimde söylüyor.',
+          'Form alanlarının görünür label değerleri var ve aynı parametre adı tekrar kullanılmıyor.',
+          'Hesaplama sonucu metin olarak görünür; yalnız renk veya animasyona bağlı değil.',
+          'Veri gönderen eylem kullanıcı onayı olmadan tamamlanmıyor.',
+          'Ajan çağrısı da normal kullanıcıyla aynı doğrulama, hız sınırı ve güvenlik kontrollerinden geçiyor.'
+        ]
+      },
+      {
+        id: 'preferred-sources',
+        label: 'Yeni Google kanalı',
+        heading: 'Preferred Sources, geri dönen okuyucuyla Google arasında doğrudan tercih sinyali kurar.',
+        paragraphs: [
+          'Google Ağustos 2026’da yayıncıların sayfalarına Preferred Sources düğmesi veya deeplink ekleyebileceğini duyurdu. Kullanıcı bir domaini tercih ettiğinde o kaynağın uygun içerikleri kullanıcıya özel Top Stories, AI Overviews ve AI Mode yüzeylerinde tercih rozetiyle öne çıkabilir.',
+          'Bu özellik siteye ilk kez müşteri getiren genel bir sıralama kısayolu değildir. Önce içerikten gerçek değer alan okurun Narvals’ı yeniden bulmasını kolaylaştıran bir sadakat ve yeniden keşif katmanıdır. Bu nedenle bağlantı yalnız rehberler ve konu merkezlerinde, açık kullanıcı eylemi olarak sunulur.'
+        ],
+        callout: 'Preferred Sources genel algoritmayı manipüle etmez; etkisi seçim yapan kullanıcının kişiselleştirilmiş deneyimiyle sınırlıdır.'
+      },
+      {
+        id: 'guvenlik-ve-olcum',
+        label: 'Deney tasarımı',
+        heading: 'Deneysel teknoloji yalnız ölçülebilir hipotez ve geri alma planıyla yayına alınmalıdır.',
+        paragraphs: [
+          'Chrome, WebMCP araçlarının dolaylı prompt injection ve yetki kötüye kullanımına açık olabileceğini özellikle vurgular. Kullanıcı veya dış kaynaktan gelen metin güvenilir talimat sayılmamalı; araçlar en az yetkiyle sınırlandırılmalı ve açıklamalar kısa tutulmalıdır.',
+          'WebMCP aktivasyonu sıralama metriği değildir. Deney, ajan tarafından alan doldurma, kullanıcının sonucu onaylama, araç sonucundan iletişime geçiş ve CRM’de nitelikli müşteri sonucu gibi basamaklarla ölçülmelidir. Preferred Sources için de tıklama olayı, geri dönen okur ve Search Console AI görünürlüğü ayrı izlenmelidir.'
+        ],
+        table: {
+          headers: ['Hipotez', 'Öncü metrik', 'İş metriği', 'Durdurma koşulu'],
+          rows: [
+            ['Ajan hesaplayıcıyı doğru kullanır', 'Tool activation ve geçerli sonuç', 'Sonuçtan nitelikli iletişim', 'Yanlış alan eşleme veya kullanıcı şaşkınlığı'],
+            ['Tercih edilen kaynak bağlantısı kullanılır', 'Google deeplink tıklaması', 'Geri dönen ilgili okur', 'CTA ana görevi gölgeler'],
+            ['AI referral daha niteliklidir', 'AI kaynaklı oturum', 'Nitelikli talep oranı', 'Düşük kalite veya spam artışı']
+          ]
+        }
+      }
+    ],
+    sources: [
+      { label: 'Chrome for Developers — WebMCP ve AI ajanları', url: 'https://developer.chrome.com/docs/ai/agents' },
+      { label: 'Chrome for Developers — WebMCP Declarative API', url: 'https://developer.chrome.com/docs/ai/webmcp/declarative-api' },
+      { label: 'Chrome for Developers — WebMCP güvenlik rehberi', url: 'https://developer.chrome.com/docs/ai/webmcp/secure-tools' },
+      { label: 'Google Search Central — Preferred Sources yayıncı rehberi', url: 'https://developers.google.com/search/docs/appearance/preferred-sources' },
+      { label: 'Google — Search, Discover ve News kişiselleştirme duyurusu', url: 'https://blog.google/products-and-platforms/products/search/personalize-search-discover-news/' },
+      { label: 'Google — Üretken AI aramalarında optimizasyon rehberi', url: 'https://developers.google.com/search/docs/fundamentals/ai-optimization-guide' }
+    ]
   }
 ];

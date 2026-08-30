@@ -97,6 +97,11 @@ const renderNav = (current = '') => `<header class="info-nav">
       <nav class="info-nav__links" aria-label="Ana menü"><a href="/hizmetler/">Hizmetler</a><a href="/blog/"${current === 'blog' ? ' aria-current="page"' : ''}>Rehberler</a><a href="/hakkimizda/">Hakkımızda</a><a href="/iletisim/">Projeyi konuşalım</a></nav>
     </header>`;
 
+const renderPreferredSource = () => `<div class="preferred-source">
+      <div><small>Google Search · Yeni</small><strong>Narvals Labs rehberlerini daha sık görün.</strong><p>Narvals Labs’ı Google’da tercih edilen kaynak olarak seçerek içeriklerimizi destekleyebilirsiniz.</p></div>
+      <a href="https://www.google.com/preferences/source?q=narvals.com" rel="noopener noreferrer">Google’da tercih et <span aria-hidden="true">↗</span></a>
+    </div>`;
+
 const renderFooter = () => `<footer class="site-footer">
       <div class="site-footer__brand"><a href="/"><img src="/assets/logo-v6/narvals-mascot-v6-transparent-96.png" alt="" width="96" height="96" loading="lazy" /><strong>narvals<span>//</span>labs</strong></a><p>Web sitesi, özel yazılım ve reklamı aynı iş hedefinde buluşturan dijital üretim stüdyosu.</p></div>
       <nav aria-label="Hizmet bağlantıları"><strong>Hizmetler</strong><a href="/hizmetler/web-tasarim/">Web sitesi yaptırma</a><a href="/hizmetler/e-ticaret/">E-ticaret</a><a href="/hizmetler/ozel-yazilim/">Özel yazılım</a><a href="/hizmetler/google-ads/">Google Ads</a><a href="/hizmetler/dijital-reklam/">Meta reklam</a><a href="/hizmetler/sosyal-medya-yonetimi/">Sosyal medya</a><a href="/hizmetler/qr-menu/">QR menü yaptırma</a><a href="/hizmetler/qr-menu-rezervasyon/">Sistem karşılaştırması</a></nav>
@@ -461,6 +466,7 @@ ${renderHead({ siteOrigin, path, title: post.metaTitle, description: post.descri
           </div>
         </div>
       </article>
+      ${renderPreferredSource()}
       <section class="info-cta"><h2>Bu kararı projenize uyarlayalım.</h2><p>Mevcut durumu, hedefi ve en kritik sınırı paylaşın; gerekli kapsamı birlikte netleştirelim.</p><div class="article-cta-actions"><a class="info-button" href="${post.servicePath}">${escapeHtml(post.serviceLabel)} <span aria-hidden="true">→</span></a>${toolInfo ? `<a class="info-button info-button--tool" href="${toolInfo.path}">${escapeHtml(toolInfo.label)} <span aria-hidden="true">⚡</span></a>` : ''}<a class="info-button info-button--light" href="/iletisim/">Projeyi konuşalım <span aria-hidden="true">↗</span></a></div></section>
     </main>
     ${renderFooter()}
@@ -529,6 +535,7 @@ ${renderHead({ siteOrigin, path, title, description, keywords: ['dijital rehberl
         <div class="blog-grid">${blogPosts.map((post) => `<article class="blog-card"><div class="blog-card__meta"><span>${escapeHtml(post.category)}</span><span>${post.readingTime} dk</span></div><h3><a href="/blog/${post.slug}/">${escapeHtml(post.title)}</a></h3><p>${escapeHtml(post.description)}</p><a class="blog-card__link" href="/blog/${post.slug}/" aria-label="${escapeHtml(post.title)} içeriğini okuyun">Rehberi okuyun <span aria-hidden="true">→</span></a></article>`).join('')}</div>
       </section>
       <section class="editorial-strip"><div><p class="info-section__label">Yayın standardı</p><h2>Her rehberde kaynakları, kapsamı ve düzeltme yolunu açıkça gösteriyoruz.</h2></div><p>Doğrulanmayan fiyat, müşteri, performans veya başarı iddiası yayınlamıyoruz. İçeriklerin nasıl hazırlandığını ve güncellendiğini <a href="/editoryal-ilkeler/">editoryal ilkelerde</a> açıklıyoruz.</p></section>
+      ${renderPreferredSource()}
       <section class="info-cta"><h2>Rehberden uygulamaya geçin.</h2><p>Hangi hizmetle başlamanız gerektiğinden emin değilseniz mevcut durumu birlikte netleştirelim.</p><a class="info-button" href="/iletisim/">Projeyi konuşalım <span aria-hidden="true">↗</span></a></section>
     </main>
     ${renderFooter()}
@@ -582,6 +589,7 @@ ${renderHead({ siteOrigin, path, title: hub.metaTitle, description: hub.descript
       <section class="topic-path" aria-labelledby="baslangic-yolu"><header><p>Önerilen başlangıç</p><h2 id="baslangic-yolu">Üç kararla ilerleyin.</h2></header><ol>${starters.map((post) => `<li><a href="/blog/${post.slug}/"><small>${escapeHtml(post.category)} · ${post.readingTime} dk</small><strong>${escapeHtml(post.title)}</strong><span>${escapeHtml(post.answer)}</span><i aria-hidden="true">→</i></a></li>`).join('')}</ol></section>
       ${hub.slug === 'web-sitesi' ? '<section class="blog-tool blog-tool--topic" aria-labelledby="konu-araci-basligi"><div><p>Mevcut siteniz varsa</p><h2 id="konu-araci-basligi">Okumadan önce durumunuzu puanlayın.</h2><span>16 soruluk ücretsiz kontrol, hangi rehberden başlamanız gerektiğini görünür kılar.</span></div><a href="/araclar/web-sitesi-kontrolu/">Web sitesini kontrol et <i aria-hidden="true">→</i></a></section>' : ''}
       <section class="topic-library" aria-labelledby="tum-rehberler"><header><h2 id="tum-rehberler">Bu konudaki tüm rehberler.</h2><p>İhtiyacınız olan karardan başlayın; her içerik ilgili sonraki adıma bağlanır.</p></header><div>${posts.map((post) => `<article><small>${escapeHtml(post.category)} · ${post.readingTime} dk</small><h3><a href="/blog/${post.slug}/">${escapeHtml(post.title)}</a></h3><p>${escapeHtml(post.description)}</p><a href="/blog/${post.slug}/" aria-label="${escapeHtml(post.title)} rehberini okuyun">Rehberi okuyun <span aria-hidden="true">→</span></a></article>`).join('')}</div></section>
+      ${renderPreferredSource()}
       <section class="info-cta"><h2>Rehberden uygulamaya geçin.</h2><p>Mevcut durumunuzu ve en kritik sınırı paylaşın; gereksiz kapsamı ayıklayıp doğru başlangıcı birlikte belirleyelim.</p><div class="article-cta-actions"><a class="info-button" href="${hub.servicePath}">${escapeHtml(hub.serviceLabel)} <span aria-hidden="true">→</span></a><a class="info-button info-button--light" href="/iletisim/">Projeyi konuşalım <span aria-hidden="true">↗</span></a></div></section>
     </main>
     ${renderFooter()}

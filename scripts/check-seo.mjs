@@ -27,6 +27,7 @@ const htmlByPath = new Map();
 const fileByPath = new Map(pages.map(([path, file]) => [path, file]));
 const kindByPath = new Map(pages.map(([path, , kind]) => [path, kind]));
 const incomingLinks = new Map(pages.map(([path]) => [path, new Set()]));
+const webMcpToolNames = new Set();
 const unsupportedSeoClaims = [
   /\b(?:100-250|256-512)\s+token/i,
   /\bPerplexity-Search\b/i,
@@ -152,6 +153,30 @@ for (const [path, html] of htmlByPath) {
       if (!controlledId || !new RegExp(`\\bid="${controlledId.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}"`).test(html)) {
         errors.push(`${path}: tab button must control an existing panel`);
       }
+    }
+  }
+  if (kind === 'tool') {
+    for (const formTag of tags(html, 'form')) {
+      const toolName = attribute(formTag, 'toolname');
+      const toolDescription = attribute(formTag, 'tooldescription');
+      if (!toolName || !toolDescription) {
+        errors.push(`${path}: interactive tool form is missing experimental WebMCP toolname/tooldescription`);
+        continue;
+      }
+      if (!/^[A-Za-z][A-Za-z0-9_]{0,29}$/.test(toolName)) {
+        errors.push(`${path}: WebMCP toolname must be stable, alphanumeric and at most 30 characters (${toolName})`);
+      }
+      if (toolDescription.length > 500) errors.push(`${path}: WebMCP tool description exceeds 500 characters`);
+      if (webMcpToolNames.has(toolName)) errors.push(`${path}: duplicate WebMCP toolname (${toolName})`);
+      webMcpToolNames.add(toolName);
+      if (/\btoolautosubmit(?:\s|>|=)/i.test(formTag)) {
+        errors.push(`${path}: experimental WebMCP form must preserve explicit user submit confirmation`);
+      }
+    }
+  }
+  if (path === '/blog/' || path.startsWith('/blog/konu/') || kind === 'article') {
+    if (!html.includes('https://www.google.com/preferences/source?q=narvals.com')) {
+      errors.push(`${path}: Google Preferred Sources reader link missing`);
     }
   }
   for (const claim of unsupportedSeoClaims) {

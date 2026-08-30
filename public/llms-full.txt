@@ -117,7 +117,7 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 
 ---
 
-## 5. Tüm Karar Rehberleri Özeti (39 Rehber)
+## 5. Tüm Karar Rehberleri Özeti (40 Rehber)
 
 ### E-ticaret sitesi nasıl açılır? 10 adımlı sade rehber
 - **URL:** https://narvals.com/blog/e-ticaret-sitesi-nasil-acilir/
@@ -284,6 +284,17 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
   * Tarayıcı ve sunucu olayları ortak event_id ile tekilleştirilmelidir.
   * DebugView, Tag Assistant ve gerçek iş kaydı birlikte doğrulanmalıdır.
   * Kişisel veri ve izin yükümlülükleri teknik proxy ile ortadan kalkmaz.
+
+### WebMCP nedir? AI ajanları için web sitesi hazırlama rehberi
+- **URL:** https://narvals.com/blog/webmcp-ai-ajanlari-icin-web-sitesi-rehberi/
+- **Kategori:** SEO & GEO
+- **Kısa Cevap:** WebMCP, web sitelerinin form ve JavaScript işlevlerini tarayıcı içindeki yapay zekâ ajanlarına ad, açıklama ve yapılandırılmış parametrelerle sunmasını amaçlayan deneysel bir web standardıdır. Chrome 149 origin trial aşamasındadır; Google sıralama sinyali değildir. Doğru kullanıldığında bir ajanın hesaplama, karşılaştırma veya talep hazırlama görevini daha güvenilir tamamlamasına yardımcı olabilir.
+- **Önemli Çıkarımlar:**
+  * WebMCP henüz deneysel bir origin trial teknolojisidir; standartlaşacağı veya sıralamayı artıracağı garanti değildir.
+  * Standart HTML formları toolname ve tooldescription açıklamalarıyla progressive enhancement olarak ajanlara tanıtılabilir.
+  * Durum değiştiren veya veri gönderen işlemlerde açık kullanıcı onayı, doğrulama ve prompt injection savunması gerekir.
+  * Google Preferred Sources, WebMCP’den ayrıdır ve okurun seçtiği yayıncıyı kendi Search ve AI deneyiminde öne çıkarabilir.
+  * Başarı; tool activation, tamamlanan görev, nitelikli iletişim ve gerçek müşteri sonucuyla ölçülmelidir.
 
 ### Kurumsal web sitesi briefi nasıl hazırlanır?
 - **URL:** https://narvals.com/blog/kurumsal-web-sitesi-briefi-nasil-hazirlanir/
@@ -584,6 +595,7 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 - Rehber: https://narvals.com/blog/web-sitesi-donusum-orani-nasil-hesaplanir/
 - Rehber: https://narvals.com/blog/crawl-budget-ve-googlebot-tarama-verimliligi/
 - Rehber: https://narvals.com/blog/ga4-ve-server-side-gtm-kurulum-rehberi/
+- Rehber: https://narvals.com/blog/webmcp-ai-ajanlari-icin-web-sitesi-rehberi/
 - Rehber: https://narvals.com/blog/kurumsal-web-sitesi-briefi-nasil-hazirlanir/
 - Rehber: https://narvals.com/blog/web-sitesi-teknik-seo-kontrol-listesi/
 - Rehber: https://narvals.com/blog/google-ai-aramalari-icin-geo-rehberi/

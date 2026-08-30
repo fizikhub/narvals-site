@@ -62,6 +62,7 @@ Tam kapsamlı yapay zekâ bilgi tabanı ve RAG dokümantasyonu için: [llms-full
 - [Web sitesi dönüşüm oranı nasıl hesaplanır?](https://narvals.com/blog/web-sitesi-donusum-orani-nasil-hesaplanir/): Ziyaret, nitelikli talep ve müşteri sayılarını birbirinden ayırarak web sitesi dönüşüm oranını doğru hesaplayın ve iyileştirme senaryosu oluşturun.
 - [Crawl budget nedir? Googlebot tarama verimliliği rehberi](https://narvals.com/blog/crawl-budget-ve-googlebot-tarama-verimliligi/): Crawl budget kavramını, küçük ve büyük sitelerde gerçek önemini; sunucu logları, sitemap, iç bağlantı, kopya URL ve HTTP durumlarıyla teşhis edin.
 - [GA4 ve server-side GTM nasıl kurulur? Ölçüm rehberi](https://narvals.com/blog/ga4-ve-server-side-gtm-kurulum-rehberi/): GA4 ve server-side Google Tag Manager mimarisini amaç, veri akışı, izin, test, maliyet ve veri doğruluğu açısından planlayın; yanlış vaatlerden kaçının.
+- [WebMCP nedir? AI ajanları için web sitesi hazırlama rehberi](https://narvals.com/blog/webmcp-ai-ajanlari-icin-web-sitesi-rehberi/): Chrome WebMCP origin trial, agent dostu formlar, Google Preferred Sources ve güvenli AI müşteri yolculuğunu uygulama sınırlarıyla öğrenin.
 - [Kurumsal web sitesi briefi nasıl hazırlanır?](https://narvals.com/blog/kurumsal-web-sitesi-briefi-nasil-hazirlanir/): Kurumsal web sitesi projesinde hedefi, kapsamı, içeriği, entegrasyonları ve başarı ölçütlerini netleştiren uygulanabilir brief rehberi.
 - [Web sitesi teknik SEO kontrol listesi: yayından önce ve sonra](https://narvals.com/blog/web-sitesi-teknik-seo-kontrol-listesi/): Tarama, index, canonical, yönlendirme, sitemap, yapılandırılmış veri, performans ve ölçümü kapsayan uygulamalı teknik SEO kontrol listesi.
 - [GEO nedir? Google AI sonuçlarında görünürlük rehberi](https://narvals.com/blog/google-ai-aramalari-icin-geo-rehberi/): GEO, AEO ve AI arama görünürlüğünü KDD 2024 akademik bulguları, teknik SEO, özgün kanıt, bot erişimi ve ölçüm üzerinden açıklayan güncel rehber.
@@ -103,6 +104,6 @@ Tam kapsamlı yapay zekâ bilgi tabanı ve RAG dokümantasyonu için: [llms-full
 
 ## İsteğe Bağlı / Optional
 
-- [Tam Dokümantasyon (llms-full.txt)](https://narvals.com/llms-full.txt): LLM ve RAG sistemleri için 39 karar rehberi, 18 araç ve mimari kuralları içeren tam metin bilgi tabanı
+- [Tam Dokümantasyon (llms-full.txt)](https://narvals.com/llms-full.txt): LLM ve RAG sistemleri için 40 karar rehberi, 18 araç ve mimari kuralları içeren tam metin bilgi tabanı
 - [XML Site Haritası](https://narvals.com/sitemap.xml): Arama motorları ve botlar için tam kanonik sayfa ve görsel indeksi
 - [RSS Akışı](https://narvals.com/blog/feed.xml): En son yayınlanan rehberlerin makine tarafından okunabilir XML akışı

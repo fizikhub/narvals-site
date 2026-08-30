@@ -34,7 +34,7 @@ export const staticPages = [
   { key: 'info-gain-audit', path: '/araclar/bilgi-kazanimi-kontrolu/', file: 'araclar/bilgi-kazanimi-kontrolu/index.html', lastModified: '2026-08-30', kind: 'tool' },
   { key: 'cpc-calculator', path: '/araclar/cpc-hesaplama/', file: 'araclar/cpc-hesaplama/index.html', lastModified: '2026-08-30', kind: 'tool' },
   { key: 'crawl-budget-calculator', path: '/araclar/tarama-butcesi-hesaplama/', file: 'araclar/tarama-butcesi-hesaplama/index.html', lastModified: '2026-08-30', kind: 'tool' },
-  { key: 'blog', path: '/blog/', file: 'blog/index.html', lastModified: '2026-08-29', kind: 'collection' },
+  { key: 'blog', path: '/blog/', file: 'blog/index.html', lastModified: '2026-08-30', kind: 'collection' },
   { key: 'editorial-policy', path: '/editoryal-ilkeler/', file: 'editoryal-ilkeler/index.html', lastModified: '2026-08-23', kind: 'policy' }
 ];
 
@@ -51,7 +51,7 @@ export const topicHubPages = topicHubs.map((hub) => ({
   key: `blog-topic-${hub.slug}`,
   path: `/blog/konu/${hub.slug}/`,
   file: `blog/konu/${hub.slug}/index.html`,
-  lastModified: '2026-08-29',
+  lastModified: '2026-08-30',
   kind: 'collection',
   hub
 }));

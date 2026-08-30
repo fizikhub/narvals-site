@@ -52,6 +52,34 @@ Kararlar [Google Search generative AI kontrolü](https://support.google.com/webm
 ile karşılaştırıldı. Hesap düzeyi Search Console ayarı koddan değiştirilemediği
 için operasyon kapısı olarak belgelendi.
 
+## 30 Ağustos 2026 yedinci deneysel keşif teknolojileri denetimi
+
+Chrome 149 WebMCP origin trial ve Google'ın 20 Ağustos 2026 Preferred Sources
+yayıncı özelliği incelendi. İki teknoloji farklı amaçlarla uygulandı:
+
+- **WebMCP:** 14 yerel hesaplama ve denetim formuna deneysel declarative
+  `toolname`/`tooldescription` sözleşmeleri eklendi. Otomatik gönderim açılmadı;
+  normal form, erişilebilir label ve görünür kullanıcı onayı yetkili arayüz
+  olarak kaldı. Build, araç adlarının benzersiz ve 30 karakter sınırında
+  olduğunu; açıklamaların bulunduğunu ve `toolautosubmit` eklenmediğini denetler.
+- **Preferred Sources:** Blog, 5 konu merkezi ve 40 rehbere Google'ın resmî
+  domain deeplink'i eklendi. Bu, seçim yapan okurun kişiselleştirilmiş Top
+  Stories, AI Overviews ve AI Mode deneyiminde Narvals'ı tekrar bulmasına yardım
+  edebilir; genel sıralama sinyali veya ilk ziyaretçi edinme garantisi değildir.
+- **Erken konu sahipliği:** WebMCP, agentic web, kullanıcı onayı, prompt
+  injection ve Preferred Sources sınırlarını açıklayan kaynaklı Türkçe rehber
+  yayımlandı. İçerik yeni terimi hedeflese de web tasarım hizmetine yalnız gerçek
+  altyapı kapsamıyla bağlandı; “AI-ready” sıralama garantisi üretilmedi.
+- **Güvenlik sınırı:** Chrome'un resmî rehberindeki prompt injection riski,
+  kısa açıklama bütçeleri ve en az yetki yaklaşımı uygulama kararını sınırladı.
+  Origin trial token'ı alan adına özel kayıt gerektirdiğinden koda uydurulmadı.
+
+Kararlar [Chrome WebMCP genel bakışı](https://developer.chrome.com/docs/ai/agents),
+[Declarative API](https://developer.chrome.com/docs/ai/webmcp/declarative-api),
+[WebMCP güvenlik rehberi](https://developer.chrome.com/docs/ai/webmcp/secure-tools)
+ve [Google Preferred Sources yayıncı dokümantasyonu](https://developers.google.com/search/docs/appearance/preferred-sources)
+ile doğrulandı. Bu katmanlar temel SEO'nun üstündeki kontrollü deneylerdir.
+
 ## 30 Ağustos 2026 ikinci teknik denetim
 
 İkinci turda 78 canonical sayfa; canlı HTTP davranışı, yapılandırılmış veri,

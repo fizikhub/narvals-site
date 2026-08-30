@@ -7,7 +7,7 @@ veya yapay zekâ yanıtında kaynak gösterilme garantisi vermez.
 ## 30 Ağustos 2026 canlılık durumu
 
 `https://narvals.com` yayındadır. Canlı denetimde HTTPS ve canonical
-yönlendirmeleri, gerçek `404`, `robots.txt`, sitemap, 78 canonical URL ve iç
+yönlendirmeleri, gerçek `404`, `robots.txt`, sitemap, 79 canonical URL ve iç
 bağlantılar başarılı bulundu. Denetim; masaüstü ve mobil Googlebot, Bingbot,
 OAI-SearchBot, ChatGPT-User, Claude-SearchBot, Claude-User, PerplexityBot,
 Perplexity-User ve Applebot için WAF/CDN erişimini de sınar.
@@ -137,6 +137,22 @@ render kaynaklarına erişebilmelidir. `nosnippet` kullanılmamalıdır.
   tercihlerdir. Perplexity’nin güncel adları `PerplexityBot` ve
   `Perplexity-User`dır; eski/uydurma `Perplexity-Search` kullanılmamalıdır.
 
+## Deneysel keşif: WebMCP ve Google Preferred Sources
+
+- 14 tarayıcı içi hesaplama/denetim formu Chrome WebMCP Declarative API taslağına
+  uygun `toolname` ve `tooldescription` açıklamaları taşır. Desteklemeyen
+  tarayıcılarda bu nitelikler etkisizdir ve normal form davranışı korunur.
+- `toolautosubmit` kullanılmaz. Ajan alanları hazırlasa bile kullanıcı sonucu
+  görür ve gönderme/hesaplama eylemini kendisi onaylar.
+- WebMCP Chrome 149 origin trial aşamasındadır. `narvals.com` için origin trial
+  token'ı ancak alan adı sahibi Google'ın kayıt ekranından deneye katıldığında
+  üretilebilir; token uydurulmamalı veya başka origin'den kopyalanmamalıdır.
+- Blog ve konu merkezi sayfalarında Google'ın resmî Preferred Sources deeplink'i
+  bulunur. Bu bağlantı yalnız kullanıcının kendi Google deneyimindeki tercihini
+  yönetir; genel sıralamayı değiştirme veya yeni müşteri garantisi değildir.
+- Deney ölçümleri: WebMCP tool activation, geçerli sonuç, sonuçtan iletişime
+  geçiş, Preferred Sources tıklaması, geri dönen okur ve nitelikli müşteri.
+
 ## DuckDuckGo ve Brave
 
 - DuckDuckGo’nun kendi `DuckDuckBot` tarayıcısı açık tutulmuştur.
@@ -145,7 +161,7 @@ render kaynaklarına erişebilmelidir. `nosnippet` kullanılmamalıdır.
 
 ## İçerik ve otorite takvimi
 
-- `/blog/` altında 39 karar rehberi ve `/editoryal-ilkeler/` yayın sistemi
+- `/blog/` altında 40 karar rehberi ve `/editoryal-ilkeler/` yayın sistemi
   hazırdır. Her metin production öncesi marka sorumlusu tarafından okunmalı;
   platform/mevzuat iddialarının bağlantıları yeniden açılmalıdır.
 - Uydurma veya yüzeysel “SEO blogları” yerine, yayın izni olan gerçek proje vaka
