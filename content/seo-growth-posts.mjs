@@ -783,7 +783,7 @@ export const newBlogPosts = [
     keywords: ['B2B web sitesi', 'B2B web tasarım', 'lead generation', 'kurumsal teklif formu', 'B2B dönüşüm'],
     category: 'Web & UX',
     published: '2026-08-27T10:00:00+03:00',
-    modified: '2026-08-27T10:00:00+03:00',
+    modified: '2026-08-30T18:00:00+03:00',
     readingTime: 9,
     answer: 'Başarılı bir B2B web sitesi bir vitrin değil; satın alma komitesindeki karar vericilerin (yönetici, teknik sorumlu, satın alma) şüphelerini gideren, teknik yetkinliği kanıtlayan ve nitelikli teklif talebine (lead generation) yönlendiren stratejik bir satış aracıdır. Doğrudan ürün satışı yerine güven inşası, süreç şeffaflığı ve sürtünmesiz iletişim akışı üzerine kurulur.',
     takeaways: [
@@ -851,9 +851,9 @@ export const newBlogPosts = [
         heading: 'Kurumsal SEO, hız ve CRM entegrasyonu.',
         paragraphs: [
           'B2B müşteriler genellikle sektörlerine özgü teknik anahtar kelimeler ve problem odaklı aramalarla (örn. “ERP entegrasyonu ajansı”, “özel depo yönetim yazılımı”) sitenize ulaşır. Sayfa yapısı semantik başlıklar ve Schema.org yapısal verileriyle donatılmalıdır.',
-          'Form doldurulduğu anda gelen talebin satış ekibinin kullandığı CRM sistemine (HubSpot, Salesforce veya özel panel) anlık düşmesi ve ilgili kişiye SMS/e-posta bildirimi gitmesi dönüşüm başarısını katlar.'
+          'Formdan gelen talebin satış ekibinin kullandığı CRM sistemine güvenilir biçimde aktarılması ve ilgili kişiye bildirim gitmesi yanıt süresini ölçmeyi ve kaçan talepleri teşhis etmeyi kolaylaştırır.'
         ],
-        callout: 'Talebe ilk 15 dakika içinde geri dönen işletmelerin satış kapama oranı, ertesi gün dönenlere göre 7 kat daha yüksektir.'
+        callout: 'Yanıt hızını tek başına başarı vaadi yapmayın. Talebin alındığı, ilk anlamlı yanıtın verildiği ve nitelikli görüşmeye dönüştüğü zamanı CRM üzerinde ayrı ölçün.'
       }
     ],
     sources: [
@@ -869,12 +869,12 @@ export const newBlogPosts = [
     keywords: ['web sitesi hızlandırma', 'Core Web Vitals', 'LCP optimizasyonu', 'INP optimizasyonu', 'CLS optimizasyonu', 'site hızı'],
     category: 'SEO & Performans',
     published: '2026-08-27T10:00:00+03:00',
-    modified: '2026-08-27T10:00:00+03:00',
+    modified: '2026-08-30T18:00:00+03:00',
     readingTime: 10,
-    answer: 'Web sitesi hızlandırma, yalnızca görselleri sıkıştırmaktan ibaret değildir. Google’ın sıralama sinyali olarak kullandığı Core Web Vitals standartlarında LCP (En Büyük İçerikli Boyama ≤ 2.5s), INP (Sonraki Etkileşime Yanıt Verme ≤ 200ms) ve CLS (Kümülatif Düzen Kayması ≤ 0.1) metriklerini yeşil bölgeye çekerek hem arama motorlarında üst sıralara çıkmayı hem de kullanıcı terk oranını düşürmeyi hedefler.',
+    answer: 'Web sitesi hızlandırma yalnız görselleri sıkıştırmak değildir. Core Web Vitals; gerçek kullanıcı deneyiminde LCP, INP ve CLS metriklerini 75. yüzdelikte değerlendirir. İyi eşikler sırasıyla ≤2,5 saniye, ≤200 ms ve ≤0,1’dir; sonuç cihaz, ağ, sayfa türü ve kullanıcı kitlesine göre saha verisiyle ölçülmelidir.',
     takeaways: [
-      'Site açılış hızındaki her 1 saniyelik gecikme dönüşüm oranlarını ortalama %7 oranında düşürür.',
-      'LCP için en kritik adım: Hero görselinin AVIF/WebP olarak sunulması ve render-blocking CSS/JS’in kaldırılmasıdır.',
+      'Hızın dönüşüme etkisi evrensel tek yüzde değildir; kendi gerçek kullanıcı ve dönüşüm veriniz birlikte incelenmelidir.',
+      'LCP öğesini saha ve laboratuvar araçlarında belirleyin; görsel, sunucu, font veya render engeli nedenlerinden hangisinin baskın olduğunu ölçün.',
       'INP metriği, ağır JavaScript kütüphanelerini temizleyerek ve ana iş parçacığını (main thread) rahatlatarak iyileştirilir.',
       'CLS için tüm görsel ve reklam alanlarına sabit width/height değerleri tanımlanmalıdır.'
     ],
@@ -912,8 +912,8 @@ export const newBlogPosts = [
           'LCP genellikle ana sayfadaki büyük kahraman görseli (Hero image) veya H1 başlığıdır. Yavaş yüklenen LCP’nin ana nedeni büyük dosya boyutları ve sunucu yanıt süresidir.'
         ],
         ordered: [
-          '<strong>Modern Görsel Formatları:</strong> PNG ve JPG yerine %40-%60 daha hafif AVIF ve WebP formatlarına geçin.',
-          '<strong>Fetch Priority ve Preload:</strong> Hero görseline <code>fetchpriority="high"</code> ve <code>loading="eager"</code> vererek tarayıcının ilk bu kaynağı indirmesini sağlayın.',
+          '<strong>Modern Görsel Formatları:</strong> Görsel kalite ve dosya boyutunu karşılaştırarak uygun olduğunda AVIF veya WebP kullanın.',
+          '<strong>Önceliklendirme:</strong> Gerçek LCP görseli için gerektiğinde <code>fetchpriority="high"</code> ve eager yükleme kullanın; her görseli yüksek öncelikli yapmayın.',
           '<strong>Kritik CSS Ayırma:</strong> Ekranın üst kısmında (above-the-fold) gerekmeyen tüm stil dosyalarını ve scriptleri erteleyin (defer/async).',
           '<strong>CDN ve Edge Caching:</strong> Statik varlıkları Cloudflare veya hızlı bir CDN üzerinden kullanıcıya coğrafi olarak en yakın sunucudan dağıtın.'
         ]
@@ -926,14 +926,14 @@ export const newBlogPosts = [
           'Sayfada çok fazla üçüncü taraf izleme kodu (etiketler, canlı destek araçları, ağır animasyon kütüphaneleri) bulunduğunda ana iş parçacığı kilitlenir. Kullanıcı bir butona bastığında arayüz milisaniyelerce tepki veremez.',
           'Gereksiz JavaScript paketlerini silin; ağır işlemleri Web Workers veya requestIdleCallback ile ana iş akışının dışına taşıyın.'
         ],
-        callout: 'Kullanılmayan her 50 KB harici JS kütüphanesi, mobil cihazlarda ortalama 200 ms işlemci gecikmesi yaratır.'
+        callout: 'Aynı JavaScript miktarının işlem maliyeti cihaz ve kod yapısına göre değişir. Chrome Performance ve gerçek kullanıcı INP verisiyle uzun görevleri ölçmeden sabit gecikme varsaymayın.'
       },
       {
         id: 'cls-duzen-kaymasi',
         label: 'Görsel kararlılık',
-        heading: 'CLS’yi sıfırlama: Kaymaları ve zıplamaları önleyin.',
+        heading: 'CLS’yi iyileştirme: Beklenmedik kaymaları azaltın.',
         paragraphs: [
-          'Kullanıcı tam bir butona tıklayacakken üstte aniden bir banner veya resim belirmesi ve sayfanın aşağı kayması CLS cezasının başlıca sebebidir.',
+          'Kullanıcı bir butona tıklayacakken üstte banner veya görsel belirmesi beklenmedik düzen kaymasına yol açabilir. CLS doğrudan “ceza” olarak değil, sayfa deneyiminin ölçülen bileşenlerinden biri olarak ele alınmalıdır.',
           'Tüm <code>&lt;img&gt;</code> ve <code>&lt;video&gt;</code> etiketlerinde <code>width</code> ve <code>height</code> özniteliklerini mutlaka belirtin; özel yazı tipleri yüklenirken metin kaymalarını önlemek için <code>font-display: swap</code> kuralını dikkatli yapılandırın.'
         ]
       }
@@ -951,14 +951,14 @@ export const newBlogPosts = [
     keywords: ['dönüşüm oranı artırma', 'e-ticaret CRO', 'sepet terkini önleme', 'ödeme sayfası UX', 'sepet optimizasyonu'],
     category: 'E-Ticaret',
     published: '2026-08-27T10:00:00+03:00',
-    modified: '2026-08-27T10:00:00+03:00',
+    modified: '2026-08-30T18:00:00+03:00',
     readingTime: 9,
-    answer: 'E-ticarette reklam bütçesini artırmadan geliri ve kârlılığı katlamanın en doğrudan yolu dönüşüm oranı optimizasyonudur (CRO). Ziyaretçinin ürün keşfinden sepete eklemesine ve ödeme adımını tamamlamasına kadar olan satın alma hunisindeki (funnel) tüm sürtünmeleri ortadan kaldırarak terk oranlarını minimize etmeyi amaçlar.',
+    answer: 'E-ticarette dönüşüm oranı optimizasyonu (CRO), ürün keşfinden ödeme tamamlamaya kadar ölçülen kullanıcı yolundaki sorunları belirleyip kontrollü değişikliklerle test etme sürecidir. Daha yüksek sipariş oranı hedeflenir; gelir ve kârlılık etkisi trafik kalitesi, sepet değeri, marj, iade ve test sonucuna bağlıdır.',
     takeaways: [
       'Dönüşüm oranını %1’den %2’ye çıkarmak, reklam harcamasını ikiye katlamadan aynı satışı üretir.',
       'Sepet terklerinin en yaygın nedeni: Son adımda çıkan beklenmedik kargo/ek ücretler ve zorunlu üyeliktir.',
-      'Mobil ürün sayfasında sepete ekle butonu ekranın altında yapışkan (sticky) kalmalıdır.',
-      'Güven rozetleri, taksit tablosu ve iade garantisi karar verme süresini kısaltır.'
+      'Mobil ürün sayfasında yapışkan sepete ekle butonu ancak içeriği kapatmıyor ve kontrollü testte yarar sağlıyorsa kullanılmalıdır.',
+      'Ödeme, taksit ve iade bilgileri yalnız gerçek koşulları yansıtmalı; sahte güven rozetleri kullanılmamalıdır.'
     ],
     about: ['Dönüşüm oranı optimizasyonu', 'E-ticaret CRO', 'Sepet terki', 'Ödeme sayfası UX'],
     related: ['e-ticaret-altyapisi-nasil-secilir', 'e-ticaret-sitesi-maliyeti-nasil-hesaplanir', 'meta-pixel-ve-conversions-api-farki'],
@@ -975,7 +975,7 @@ export const newBlogPosts = [
         label: 'Ekonomik etki',
         heading: 'Trafik çekmek mi, mevcut trafiğin dönüşümünü artırmak mı?',
         paragraphs: [
-          'Dijital reklam maliyetlerinin (TBM/BGBM) sürekli yükseldiği bir ortamda, yalnızca daha fazla trafik satın almak birim kârlılığı eritir. Sitenize gelen 10.000 ziyaretçiden 100 kişi alışveriş yapıyorsa dönüşüm oranınız %1’dir. Küçük UX iyileştirmeleriyle bunu 200 kişiye (%2) çıkardığınızda, tek bir kuruş ek reklam harcamadan cironuzu ikiye katlamış olursunuz.'
+          'Yalnız daha fazla trafik satın almak, trafik kalitesi ve marj izlenmiyorsa birim kârlılığı azaltabilir. 10.000 ziyarette 100 sipariş %1; 200 sipariş %2 dönüşüm oranıdır. Trafik, ortalama sepet, iptal ve iade aynı kalırsa brüt sipariş geliri yaklaşık iki katına çıkar; bu bir test sonucu veya net kâr garantisi değildir.'
         ],
         callout: 'CRO bir tahmin sanatı değil; kullanıcı davranış verileri, analitik huniler ve kontrollü A/B testleri bütünüdür.'
       },
@@ -996,7 +996,7 @@ export const newBlogPosts = [
         label: 'Ödeme akışı',
         heading: 'Sepet terkini önleyen 4 ödeme sayfası kuralı.',
         paragraphs: [
-          'Küresel e-ticaret verilerine göre sepete eklenen her 100 üründen yaklaşık 70’i satın alma tamamlanmadan terk edilir. Bu kaybı önlemek için ödeme adımı kusursuzlaştırılmalıdır.'
+          'Baymard’ın farklı çalışmaları birleştiren ortalaması, çevrimiçi sepetlerin yaklaşık %70’inin terk edildiğini gösterir. Bu genel kıyas tek mağazanın oranı değildir; kendi ödeme huninizde cihaz, ülke, trafik kaynağı ve terk adımını ayrıca ölçün.'
         ],
         table: {
           headers: ['Terk Sebebi', 'Müşteri Tepkisi', 'Çözüm Yöntemi'],
@@ -1015,7 +1015,7 @@ export const newBlogPosts = [
         paragraphs: [
           'Tasarımı rastgele değiştirmek yerine Google Analytics 4 hunilerini ve Clarity/Hotjar gibi ısı haritalarını inceleyin. Kullanıcıların sepete ekledikten sonra adres mi, ödeme mi yoksa kargo aşamasında mı takıldığını tespit edin. Hipotez kurun ve test edin.'
         ],
-        callout: 'Asla aynı anda 5 farklı öğeyi değiştirmeyin; hangi değişikliğin dönüşümü artırdığını izole edebilmek için tek bir değişkeni test edin.'
+        callout: 'Nedensel etkiyi ayırmak istiyorsanız kontrollü testte değişken sayısını sınırlayın. Çok değişkenli test ancak yeterli trafik, önceden tanımlı hipotez ve uygun analizle anlamlıdır.'
       }
     ],
     sources: [

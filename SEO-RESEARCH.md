@@ -561,11 +561,37 @@ giderler ve projenin kapsamını fiyatla birlikte okuyamama tekrar eden endişel
 Bunlar öz-seçilimli kullanıcı anlatılarıdır; uygulamaya yalnız akademik şeffaflık
 bulguları ve kullanıcıya açık karar desteğiyle örtüştüğü ölçüde yön verdi.
 
+## 30 Ağustos 2026 ölçüm iddiaları ve veri şeffaflığı denetimi
+
+Bu turda yayın metni; sabit dönüşüm yüzdesi, eksiksiz atıf, zengin sonuç garantisi
+ve kayıpsız ölçüm iddiaları için yeniden tarandı. Uygulama kararları şunlardır:
+
+- UTM parametreleri manuel trafik kaynağı boyutlarını besler; satışın nedenini
+  tek başına kanıtlamaz. İzin, yönlendirme, etiket korunması, Analytics kurulumu
+  ve dönüşüm olayı ayrıca test edilmelidir.
+- JSON-LD'nin söz dizimsel olarak geçerli olması, görünür bilginin doğru olduğunu
+  veya Google'ın zengin sonuç göstereceğini kanıtlamaz. Araç yalnız taslak ve
+  temel doğrulama sağlar; Google Rich Results Test ayrı adımdır.
+- Core Web Vitals eşikleri 75. yüzdelikte değerlendirilir. “Her 1 saniye yüzde
+  X dönüşüm kaybettirir” veya “50 KB JavaScript sabit Y ms gecikme yaratır” gibi
+  bağlamsız genellemeler kaldırıldı; saha ve laboratuvar ölçümü ayrıldı.
+- Baymard'ın sepet terki ortalaması genel bir kıyastır; tek mağazanın sonucu veya
+  yapılacak değişikliğin etkisi değildir. CRO örnekleri, diğer değişkenler sabit
+  varsayımı ve net kâr sınırıyla açıklandı.
+- Sitenin gerçek davranışına göre `/gizlilik/` sayfası eklendi. Tarayıcıda çalışan
+  araçlar, `sessionStorage` içindeki kaynak/kanal/ilk sayfa, koşullu
+  `contact_intent` analitik olayı ve WhatsApp/e-posta geçişleri ayrı açıklandı.
+  Bu sayfa genel şeffaflık metnidir; uydurma tüzel kişilik veya hukuk beyanı
+  eklenmedi.
+
 ## Kanıt matrisi
 
 | Kaynak | Bulgu | Uygulama | Sınır |
 |---|---|---|---|
 | [Google AI optimizasyon rehberi](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide) | Google AI yüzeyleri temel arama dizini ve kalite sistemlerine dayanır; özel AI dosyası/işaretlemesi gerekmez. | Temel SEO, crawlability ve özgün içerik ana katman yapıldı. | Uygunluk görünürlük veya citation garantisi değildir. |
+| [Google yapılandırılmış veri kalite ilkeleri](https://developers.google.com/search/docs/appearance/structured-data/sd-policies) | Doğru işaretleme zengin sonuca uygunluk sağlayabilir; görünürlük garanti edilmez ve işaretleme sayfadaki gerçek içeriği temsil etmelidir. | Schema aracındaki “kusursuz/geçerli/otorite” vaatleri kaldırıldı; haricî test ve içerik doğruluğu ayrı gösterildi. | Rich Results Test sözdizimi/uygunluk sorunlarının tümünü veya sonuç görünürlüğünü garanti etmez. |
+| [GA4 trafik kaynağı ve manuel etiketleme](https://support.google.com/analytics/answer/11242870) | UTM değerleri manuel kaynak, mecra ve kampanya boyutlarını besler; otomatik etiketleme ve eksik parametrelerle etkileşimleri vardır. | UTM aracı atıf doğruluğu veya ciro ispatı vaat etmiyor; tutarlı adlandırma ve ölçüm sınırlamalarını açıklıyor. | Raporlanan kampanya boyutu nedensel satış etkisi değildir. |
+| [Core Web Vitals eşik yöntemi](https://web.dev/articles/defining-core-web-vitals-thresholds) | LCP, INP ve CLS eşikleri gerçek kullanıcı ziyaretlerinin 75. yüzdeliği üzerinden sınıflandırılır. | Evrensel hız-dönüşüm yüzdeleri kaldırıldı; gerçek kullanıcı verisi ve sayfaya özgü teşhis öne alındı. | İyi CWV tek başına sıralama veya dönüşüm garantisi değildir. |
 | [Bing Webmaster Guidelines](https://www.bing.com/webmasters/help/webmaster-guidelines-30fba23a) | Açık konu, erken cevap, net HTML, sitemap ve IndexNow Copilot grounding için de önemlidir. | Doğrudan cevap paragrafları, tablolar, FAQ, IndexNow anahtarı ve gönderim betiği eklendi. | Bing de indeks veya AI citation garantisi vermez. |
 | [Yandex AI](https://yandex.com/support/webmaster/en/yandex-ai) | AI yanıt kaynağı olabilmek için sayfanın Yandex indeksinde bulunması; içeriğin iyi yapılandırılmış ve bilgilendirici olması gerekir. | Statik HTML ve `YandexAdditional` bot erişimi korundu. | Yandex’in seçimi yayıncı tarafından zorlanamaz. |
 | [Applebot](https://support.apple.com/en-us/119829) | Applebot Safari, Spotlight ve Siri deneyimlerini besler; `nosnippet` güncel AI bağlamı kullanımını sınırlar. | Applebot açık, snippet sınırları maksimum; `nosnippet` yok. | Safari bağımsız bir genel arama motoru değildir. |

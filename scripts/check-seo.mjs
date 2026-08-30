@@ -166,6 +166,10 @@ for (const [path, html] of htmlByPath) {
   if (/https:\/\/wa\.me\/\?/.test(html)) errors.push(`${path}: numberless WhatsApp URL found`);
   if (path === '/iletisim/' && !html.includes('mailto:info@narvals.com')) errors.push(`${path}: verified contact email missing`);
   if (path === '/iletisim/' && !html.includes('https://wa.me/905019441921')) errors.push(`${path}: verified WhatsApp link missing`);
+  if (path === '/' && !html.includes('href="/gizlilik/"')) errors.push(`${path}: privacy and data-use link missing`);
+  if (path === '/gizlilik/' && (!html.includes('sessionStorage') || !html.includes('contact_intent'))) {
+    errors.push(`${path}: actual browser storage and conditional analytics behavior must be disclosed`);
+  }
   if (meta(html, 'name', 'author') !== 'Narvals Labs') errors.push(`${path}: author meta missing or wrong`);
   if (meta(html, 'name', 'theme-color') !== '#03233a') errors.push(`${path}: theme-color meta missing or wrong`);
   if (meta(html, 'name', 'color-scheme') !== 'light') errors.push(`${path}: color-scheme meta missing or wrong`);

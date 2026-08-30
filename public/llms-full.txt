@@ -541,22 +541,22 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 ### Web sitesi hızlandırma ve Core Web Vitals (LCP, INP, CLS) rehberi
 - **URL:** https://narvals.com/blog/web-sitesi-hizlandirma-core-web-vitals-rehberi/
 - **Kategori:** SEO & Performans
-- **Kısa Cevap:** Web sitesi hızlandırma, yalnızca görselleri sıkıştırmaktan ibaret değildir. Google’ın sıralama sinyali olarak kullandığı Core Web Vitals standartlarında LCP (En Büyük İçerikli Boyama ≤ 2.5s), INP (Sonraki Etkileşime Yanıt Verme ≤ 200ms) ve CLS (Kümülatif Düzen Kayması ≤ 0.1) metriklerini yeşil bölgeye çekerek hem arama motorlarında üst sıralara çıkmayı hem de kullanıcı terk oranını düşürmeyi hedefler.
+- **Kısa Cevap:** Web sitesi hızlandırma yalnız görselleri sıkıştırmak değildir. Core Web Vitals; gerçek kullanıcı deneyiminde LCP, INP ve CLS metriklerini 75. yüzdelikte değerlendirir. İyi eşikler sırasıyla ≤2,5 saniye, ≤200 ms ve ≤0,1’dir; sonuç cihaz, ağ, sayfa türü ve kullanıcı kitlesine göre saha verisiyle ölçülmelidir.
 - **Önemli Çıkarımlar:**
-  * Site açılış hızındaki her 1 saniyelik gecikme dönüşüm oranlarını ortalama %7 oranında düşürür.
-  * LCP için en kritik adım: Hero görselinin AVIF/WebP olarak sunulması ve render-blocking CSS/JS’in kaldırılmasıdır.
+  * Hızın dönüşüme etkisi evrensel tek yüzde değildir; kendi gerçek kullanıcı ve dönüşüm veriniz birlikte incelenmelidir.
+  * LCP öğesini saha ve laboratuvar araçlarında belirleyin; görsel, sunucu, font veya render engeli nedenlerinden hangisinin baskın olduğunu ölçün.
   * INP metriği, ağır JavaScript kütüphanelerini temizleyerek ve ana iş parçacığını (main thread) rahatlatarak iyileştirilir.
   * CLS için tüm görsel ve reklam alanlarına sabit width/height değerleri tanımlanmalıdır.
 
 ### E-ticaret dönüşüm oranı artırma (CRO) ve sepet terkini önleme rehberi
 - **URL:** https://narvals.com/blog/e-ticaret-donusum-orani-artirma-cro-rehberi/
 - **Kategori:** E-Ticaret
-- **Kısa Cevap:** E-ticarette reklam bütçesini artırmadan geliri ve kârlılığı katlamanın en doğrudan yolu dönüşüm oranı optimizasyonudur (CRO). Ziyaretçinin ürün keşfinden sepete eklemesine ve ödeme adımını tamamlamasına kadar olan satın alma hunisindeki (funnel) tüm sürtünmeleri ortadan kaldırarak terk oranlarını minimize etmeyi amaçlar.
+- **Kısa Cevap:** E-ticarette dönüşüm oranı optimizasyonu (CRO), ürün keşfinden ödeme tamamlamaya kadar ölçülen kullanıcı yolundaki sorunları belirleyip kontrollü değişikliklerle test etme sürecidir. Daha yüksek sipariş oranı hedeflenir; gelir ve kârlılık etkisi trafik kalitesi, sepet değeri, marj, iade ve test sonucuna bağlıdır.
 - **Önemli Çıkarımlar:**
   * Dönüşüm oranını %1’den %2’ye çıkarmak, reklam harcamasını ikiye katlamadan aynı satışı üretir.
   * Sepet terklerinin en yaygın nedeni: Son adımda çıkan beklenmedik kargo/ek ücretler ve zorunlu üyeliktir.
-  * Mobil ürün sayfasında sepete ekle butonu ekranın altında yapışkan (sticky) kalmalıdır.
-  * Güven rozetleri, taksit tablosu ve iade garantisi karar verme süresini kısaltır.
+  * Mobil ürün sayfasında yapışkan sepete ekle butonu ancak içeriği kapatmıyor ve kontrollü testte yarar sağlıyorsa kullanılmalıdır.
+  * Ödeme, taksit ve iade bilgileri yalnız gerçek koşulları yansıtmalı; sahte güven rozetleri kullanılmamalıdır.
 
 ### İşletmeye özel CRM ve yönetim paneli seçim rehberi
 - **URL:** https://narvals.com/blog/yonetim-paneli-ve-crm-yazilimi-nasil-secilir/
@@ -586,6 +586,7 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 - Sistem Karşılaştırması: https://narvals.com/hizmetler/qr-menu-rezervasyon/
 - Hakkımızda: https://narvals.com/hakkimizda/
 - İletişim: https://narvals.com/iletisim/
+- Gizlilik ve Veri Kullanımı: https://narvals.com/gizlilik/
 - Ücretsiz Araçlar: https://narvals.com/araclar/
 - Ücretsiz Web Sitesi Kontrolü: https://narvals.com/araclar/web-sitesi-kontrolu/
 - Web Sitesi Teklif Karşılaştırma: https://narvals.com/araclar/teklif-karsilastirma/

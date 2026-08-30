@@ -42,7 +42,7 @@
     <meta property="og:image:height" content="675" />
     <meta property="og:image:alt" content="Bir narvalın arama görünürlüğü, bağlantılar ve yapay zekâ kaynak yollarını incelediği illüstrasyon" />
     <meta property="article:published_time" content="2026-08-27T10:00:00+03:00" />
-    <meta property="article:modified_time" content="2026-08-27T10:00:00+03:00" />
+    <meta property="article:modified_time" content="2026-08-30T18:00:00+03:00" />
     <meta property="article:section" content="SEO &amp; Performans" />
     <meta property="article:author" content="https://narvals.com/hakkimizda/" />
     <meta property="article:publisher" content="https://narvals.com/" />
@@ -98,7 +98,7 @@
         }
       ],
       "datePublished": "2026-08-27T10:00:00+03:00",
-      "dateModified": "2026-08-27T10:00:00+03:00",
+      "dateModified": "2026-08-30T18:00:00+03:00",
       "breadcrumb": {
         "@id": "https://narvals.com/blog/web-sitesi-hizlandirma-core-web-vitals-rehberi/#breadcrumb"
       },
@@ -128,11 +128,11 @@
         }
       ],
       "datePublished": "2026-08-27T10:00:00+03:00",
-      "dateModified": "2026-08-27T10:00:00+03:00",
+      "dateModified": "2026-08-30T18:00:00+03:00",
       "timeRequired": "PT10M",
       "inLanguage": "tr-TR",
       "isAccessibleForFree": true,
-      "wordCount": 508,
+      "wordCount": 516,
       "articleSection": "SEO & Performans",
       "keywords": "web sitesi hızlandırma, Core Web Vitals, LCP optimizasyonu, INP optimizasyonu, CLS optimizasyonu, site hızı",
       "author": {
@@ -302,10 +302,10 @@
             <nav class="breadcrumbs" aria-label="İçerik yolu"><a href="/">Ana sayfa</a><span>/</span><a href="/blog/">Rehberler</a><span>/</span><a href="/blog/konu/seo-geo/">SEO &amp; Performans</a></nav>
             <p class="info-hero__kicker">SEO &amp; Performans · Karar rehberi</p>
             <h1>Web sitesi hızlandırma ve Core Web Vitals (LCP, INP, CLS) rehberi</h1>
-            <p class="info-hero__answer">Web sitesi hızlandırma, yalnızca görselleri sıkıştırmaktan ibaret değildir. Google’ın sıralama sinyali olarak kullandığı Core Web Vitals standartlarında LCP (En Büyük İçerikli Boyama ≤ 2.5s), INP (Sonraki Etkileşime Yanıt Verme ≤ 200ms) ve CLS (Kümülatif Düzen Kayması ≤ 0.1) metriklerini yeşil bölgeye çekerek hem arama motorlarında üst sıralara çıkmayı hem de kullanıcı terk oranını düşürmeyi hedefler.</p>
-            <div class="article-meta"><span>Yayınlayan <a href="/hakkimizda/">Narvals Labs</a></span><span>Yayımlandı <time datetime="2026-08-27T10:00:00+03:00">27 Ağustos 2026</time></span><span>10 dk okuma</span></div>
+            <p class="info-hero__answer">Web sitesi hızlandırma yalnız görselleri sıkıştırmak değildir. Core Web Vitals; gerçek kullanıcı deneyiminde LCP, INP ve CLS metriklerini 75. yüzdelikte değerlendirir. İyi eşikler sırasıyla ≤2,5 saniye, ≤200 ms ve ≤0,1’dir; sonuç cihaz, ağ, sayfa türü ve kullanıcı kitlesine göre saha verisiyle ölçülmelidir.</p>
+            <div class="article-meta"><span>Yayınlayan <a href="/hakkimizda/">Narvals Labs</a></span><span>Yayımlandı <time datetime="2026-08-27T10:00:00+03:00">27 Ağustos 2026</time></span><span>Güncellendi <time datetime="2026-08-30T18:00:00+03:00">30 Ağustos 2026</time></span><span>10 dk okuma</span></div>
           </div>
-          <aside class="info-hero__panel article-summary" aria-labelledby="ozet-basligi"><strong id="ozet-basligi">Bu rehberin özeti</strong><ul><li>Site açılış hızındaki her 1 saniyelik gecikme dönüşüm oranlarını ortalama %7 oranında düşürür.</li><li>LCP için en kritik adım: Hero görselinin AVIF/WebP olarak sunulması ve render-blocking CSS/JS’in kaldırılmasıdır.</li><li>INP metriği, ağır JavaScript kütüphanelerini temizleyerek ve ana iş parçacığını (main thread) rahatlatarak iyileştirilir.</li><li>CLS için tüm görsel ve reklam alanlarına sabit width/height değerleri tanımlanmalıdır.</li></ul></aside>
+          <aside class="info-hero__panel article-summary" aria-labelledby="ozet-basligi"><strong id="ozet-basligi">Bu rehberin özeti</strong><ul><li>Hızın dönüşüme etkisi evrensel tek yüzde değildir; kendi gerçek kullanıcı ve dönüşüm veriniz birlikte incelenmelidir.</li><li>LCP öğesini saha ve laboratuvar araçlarında belirleyin; görsel, sunucu, font veya render engeli nedenlerinden hangisinin baskın olduğunu ölçün.</li><li>INP metriği, ağır JavaScript kütüphanelerini temizleyerek ve ana iş parçacığını (main thread) rahatlatarak iyileştirilir.</li><li>CLS için tüm görsel ve reklam alanlarına sabit width/height değerleri tanımlanmalıdır.</li></ul></aside>
         </header>
 
         <figure class="article-cover">
@@ -332,7 +332,7 @@
         <h2>LCP süresini 2.5 saniyenin altına çekmenin 4 yolu.</h2>
         <p>LCP genellikle ana sayfadaki büyük kahraman görseli (Hero image) veya H1 başlığıdır. Yavaş yüklenen LCP’nin ana nedeni büyük dosya boyutları ve sunucu yanıt süresidir.</p>
 
-        <ol class="article-steps"><li><strong>Modern Görsel Formatları:</strong> PNG ve JPG yerine %40-%60 daha hafif AVIF ve WebP formatlarına geçin.</li><li><strong>Fetch Priority ve Preload:</strong> Hero görseline <code>fetchpriority="high"</code> ve <code>loading="eager"</code> vererek tarayıcının ilk bu kaynağı indirmesini sağlayın.</li><li><strong>Kritik CSS Ayırma:</strong> Ekranın üst kısmında (above-the-fold) gerekmeyen tüm stil dosyalarını ve scriptleri erteleyin (defer/async).</li><li><strong>CDN ve Edge Caching:</strong> Statik varlıkları Cloudflare veya hızlı bir CDN üzerinden kullanıcıya coğrafi olarak en yakın sunucudan dağıtın.</li></ol>
+        <ol class="article-steps"><li><strong>Modern Görsel Formatları:</strong> Görsel kalite ve dosya boyutunu karşılaştırarak uygun olduğunda AVIF veya WebP kullanın.</li><li><strong>Önceliklendirme:</strong> Gerçek LCP görseli için gerektiğinde <code>fetchpriority="high"</code> ve eager yükleme kullanın; her görseli yüksek öncelikli yapmayın.</li><li><strong>Kritik CSS Ayırma:</strong> Ekranın üst kısmında (above-the-fold) gerekmeyen tüm stil dosyalarını ve scriptleri erteleyin (defer/async).</li><li><strong>CDN ve Edge Caching:</strong> Statik varlıkları Cloudflare veya hızlı bir CDN üzerinden kullanıcıya coğrafi olarak en yakın sunucudan dağıtın.</li></ol>
 
 
 
@@ -346,12 +346,12 @@
 
 
 
-        <aside class="article-callout" aria-label="INP metriğini iyileştirme: Ağır JavaScript yükünden kurtulun.: karar notu"><strong>Karar notu</strong><p>Kullanılmayan her 50 KB harici JS kütüphanesi, mobil cihazlarda ortalama 200 ms işlemci gecikmesi yaratır.</p></aside>
+        <aside class="article-callout" aria-label="INP metriğini iyileştirme: Ağır JavaScript yükünden kurtulun.: karar notu"><strong>Karar notu</strong><p>Aynı JavaScript miktarının işlem maliyeti cihaz ve kod yapısına göre değişir. Chrome Performance ve gerçek kullanıcı INP verisiyle uzun görevleri ölçmeden sabit gecikme varsaymayın.</p></aside>
       </section>
             <section class="info-section article-section" id="cls-duzen-kaymasi">
         <p class="info-section__label">Görsel kararlılık</p>
-        <h2>CLS’yi sıfırlama: Kaymaları ve zıplamaları önleyin.</h2>
-        <p>Kullanıcı tam bir butona tıklayacakken üstte aniden bir banner veya resim belirmesi ve sayfanın aşağı kayması CLS cezasının başlıca sebebidir.</p>
+        <h2>CLS’yi iyileştirme: Beklenmedik kaymaları azaltın.</h2>
+        <p>Kullanıcı bir butona tıklayacakken üstte banner veya görsel belirmesi beklenmedik düzen kaymasına yol açabilir. CLS doğrudan “ceza” olarak değil, sayfa deneyiminin ölçülen bileşenlerinden biri olarak ele alınmalıdır.</p>
         <p>Tüm <code>&lt;img&gt;</code> ve <code>&lt;video&gt;</code> etiketlerinde <code>width</code> ve <code>height</code> özniteliklerini mutlaka belirtin; özel yazı tipleri yüklenirken metin kaymalarını önlemek için <code>font-display: swap</code> kuralını dikkatli yapılandırın.</p>
 
 

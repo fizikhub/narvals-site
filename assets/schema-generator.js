@@ -441,7 +441,7 @@ if (validateBtn) {
     try {
       const parsed = JSON.parse(rawJson);
       if (parsed['@type'] && parsed['@context']) {
-        showToast(`✓ Schema.org (${parsed['@type']}) formatı kusursuz ve geçerli!`);
+        showToast(`✓ JSON sözdizimi ve temel Schema.org alanları okunabilir (${parsed['@type']}). Google uygunluğu için Rich Results Test'i de kullanın.`);
       } else {
         showToast('⚠ @context veya @type eksik.', true);
       }

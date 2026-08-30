@@ -22,6 +22,7 @@ Tam kapsamlı yapay zekâ bilgi tabanı ve RAG dokümantasyonu için: [llms-full
 - [QR menü ve rezervasyon karşılaştırması](https://narvals.com/hizmetler/qr-menu-rezervasyon/): Menü, randevu ve rezervasyon akışlarının ayrımı ve doğru araç seçimi
 - [Hakkımızda](https://narvals.com/hakkimizda/): Narvals Labs çalışma ilkeleri, hizmet sınırları ve stüdyo yaklaşımı
 - [İletişim](https://narvals.com/iletisim/): Proje talebi, ilk görüşme hazırlığı ve iletişim rehberi
+- [Gizlilik ve veri kullanımı](https://narvals.com/gizlilik/): Tarayıcı araçları, oturum içi kaynak sınıflandırması, iletişim geçişleri ve koşullu analitik açıklaması
 - [Ücretsiz araçlar](https://narvals.com/araclar/): Web sitesi, ajans teklifi ve proje kapsamı karar araçları
 - [Ücretsiz web sitesi kontrolü](https://narvals.com/araclar/web-sitesi-kontrolu/): Teklif, güven, dönüşüm ve teknik görünürlüğü 16 soruda değerlendiren, kayıt gerektirmeyen araç
 - [Teklif karşılaştırma aracı](https://narvals.com/araclar/teklif-karsilastirma/): İki veya üç web sitesi teklifini 12 kapsam ve risk ölçütüyle karşılaştıran araç

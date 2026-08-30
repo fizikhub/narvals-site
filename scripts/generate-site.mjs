@@ -175,6 +175,7 @@ Tam kapsamlı yapay zekâ bilgi tabanı ve RAG dokümantasyonu için: [llms-full
 - [QR menü ve rezervasyon karşılaştırması](${siteOrigin}/hizmetler/qr-menu-rezervasyon/): Menü, randevu ve rezervasyon akışlarının ayrımı ve doğru araç seçimi
 - [Hakkımızda](${siteOrigin}/hakkimizda/): Narvals Labs çalışma ilkeleri, hizmet sınırları ve stüdyo yaklaşımı
 - [İletişim](${siteOrigin}/iletisim/): Proje talebi, ilk görüşme hazırlığı ve iletişim rehberi
+- [Gizlilik ve veri kullanımı](${siteOrigin}/gizlilik/): Tarayıcı araçları, oturum içi kaynak sınıflandırması, iletişim geçişleri ve koşullu analitik açıklaması
 - [Ücretsiz araçlar](${siteOrigin}/araclar/): Web sitesi, ajans teklifi ve proje kapsamı karar araçları
 - [Ücretsiz web sitesi kontrolü](${siteOrigin}/araclar/web-sitesi-kontrolu/): Teklif, güven, dönüşüm ve teknik görünürlüğü 16 soruda değerlendiren, kayıt gerektirmeyen araç
 - [Teklif karşılaştırma aracı](${siteOrigin}/araclar/teklif-karsilastirma/): İki veya üç web sitesi teklifini 12 kapsam ve risk ölçütüyle karşılaştıran araç
@@ -377,6 +378,7 @@ ${post.takeaways.map((t) => `  * ${t}`).join('\n')}
 - Sistem Karşılaştırması: ${siteOrigin}/hizmetler/qr-menu-rezervasyon/
 - Hakkımızda: ${siteOrigin}/hakkimizda/
 - İletişim: ${siteOrigin}/iletisim/
+- Gizlilik ve Veri Kullanımı: ${siteOrigin}/gizlilik/
 - Ücretsiz Araçlar: ${siteOrigin}/araclar/
 - Ücretsiz Web Sitesi Kontrolü: ${siteOrigin}/araclar/web-sitesi-kontrolu/
 - Web Sitesi Teklif Karşılaştırma: ${siteOrigin}/araclar/teklif-karsilastirma/
