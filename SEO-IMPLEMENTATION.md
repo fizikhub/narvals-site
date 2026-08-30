@@ -97,6 +97,7 @@ yayıncı şimdilik Narvals Labs organizasyonudur.
 - Karşılaştırma sayfasından çakışan `Service` şeması kaldırıldı.
 - Ana sayfa hizmet listesi `ListItem(position, item)` modeline düzeltildi.
 - Web App Manifest 2026 Standartları: `/site.webmanifest` üzerinde `id`, `scope`, `categories` ve doğrudan araç/rehber kısayolları (`shortcuts`) ile PWA uyumu ve doğrudan kullanıcı sadakati (Direct Traffic).
+- Semantik `<search>` Elementi ve CSS Tipografi: Arama bileşeninde yerel W3C `<search>` elementi; başlıklar için `text-wrap: balance`, gövde metinleri için `text-wrap: pretty` ile modern erişilebilirlik.
 - Standart `llms.txt` ve kapsamlı RAG bilgi tabanı olan `llms-full.txt`; HTML her zaman yetkili kaynak.
 - IndexNow anahtar dosyası ve yalnız değişen URL'leri gönderen komut.
 - Vite ve tüm SEO komutlarında aynı `.env`/mode zincirini kullanan ortak

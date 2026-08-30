@@ -454,6 +454,15 @@ Bu turda sitenin mobil cihazlar ve masaüstü tarayıcılarda bağımsız bir we
 - **Sitelinks Searchbox Kaldırılması ve Çekirdek Şema Netliği:** Google'ın Kasım 2024'te resmi olarak sonlandırdığı Sitelinks Searchbox sonrası; gereksiz karmaşıklık yerine temel varlık netliği (`Organization`, `WebSite`, `Service`, `BlogPosting`, `FAQPage`, `BreadcrumbList`) korundu.
 - **İnteraktif Blog Arama Filtresi:** Blog merkezindeki dinamik `?q=` URL parametresi ve anlık JavaScript arama filtresi (`#blog-search-input`) hem kullanıcıların hem de OpenSearch 1.1 arama parametrelerinin kusursuz çalışmasını garanti eder.
 
+## 30 Ağustos 2026 yirminci Semantik `<search>` Elementi, CSS Text-Wrap Balance/Pretty ve Tipografi Erişilebilirliği Denetimi
+
+Bu turda W3C HTML5.3 ve modern CSS Baseline (2024–2026) tipografi standartları tam olarak devreye alındı:
+
+- **Semantik `<search>` Elementi Entegrasyonu:** Blog arama bileşeni generic `<div>` veya eski ARIA landmarkları yerine doğrudan yerel W3C `<search>` elementiyle sarmalandı. Bu yapı ekran okuyucular, modern tarayıcılar ve arama motoru botları için yerel bir gezinme referansı (native landmark) oluşturur.
+- **Modern CSS Tipografi ve Okunabilirlik (`text-wrap: balance` & `text-wrap: pretty`):**
+  - Başlıklar (`h1`, `h2`, `h3`, `h4`, `h5`, `h6`) için `text-wrap: balance` aktif edilerek satır uzunluklarının dengeli ve simetrik dağıtılması sağlandı; görsel bilişsel yük azaltıldı.
+  - Paragraflar ve listeler (`p`, `li`, `dd`) için `text-wrap: pretty` devreye alınarak son satırda tek kelime kalması ("orphan words") engellendi; okuma akıcılığı ve kullanıcı dwell time sinyalleri güçlendirildi.
+
 ## Kanıt matrisi
 
 | Kaynak | Bulgu | Uygulama | Sınır |
