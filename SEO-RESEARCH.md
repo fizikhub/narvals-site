@@ -438,6 +438,14 @@ Bu turda tarayıcı düzeyinde en yüksek güvenlik izolasyonu ve AI yanıt moto
 - **Atomic Passage Extractability & Text Fragments (`#:~:text=`):** AI Overviews, SearchGPT ve Perplexity'nin RAG aşamasında aradığı "atomik kanıt" standardı pekiştirildi. Her H2 bölümünün ilk 100 kelimesinde doğrudan cevap yer alması; LLM'lerin sayfayı kaynak gösterirken `#:~:text=` ile doğrudan ilgili pasajı vurgulamasına imkân tanır.
 - **MUM ve Çok Modlu (Multimodal) Varlık Korelasyonu:** 40 rehberin görsel varlıkları `<figure class="article-cover">`, `BlogPosting.image` ve `primaryImageOfPage` nesneleriyle semantik olarak birbirine bağlanarak Google MUM ve Gemini görsel-metin arama algoritmalarında tam örtüşme sağlandı.
 
+## 30 Ağustos 2026 on sekizinci Neural Retrieval (ColBERT Late Interaction, RRF) ve Twiddler Kalite Sinyalleri Denetimi
+
+Bu turda nöral bilgi erişimi (Neural Information Retrieval), hibrit RAG füsyonu ve Google sıralama algoritmasının son aşama filtreleri (Twiddlers) derinlemesine incelendi ve site mimarisine entegre edildi:
+
+- **ColBERT Late Interaction ve MaxSim Token Uyumu:** Modern yapay zekâ arama motorları (Perplexity, SearchGPT, Cohere Rerank) içeriği tek bir yoğun vektöre indirgemek yerine token düzeyinde temsil eden ColBERT (Contextualized Late Interaction over BERT) mimarisini ve `MaxSim` operatörünü kullanır. 40 rehber ve 18 araçtaki açık formüller, kesin teknik tanımlar ve sayısal veri noktaları, ColBERT'in token düzeyindeki benzerlik matrisinde en yüksek skorları üretecek şekilde atomik tutuldu.
+- **Reciprocal Rank Fusion (RRF, $k=60$) Hibrit Arama Optimizasyonu:** BM25 seyrek anahtar kelime eşleşmesi ile yoğun anlamsal vektörlerin skor ölçekleri farklı olduğundan, modern RAG sistemleri $RRF = \sum \frac{1}{60 + r}$ formülüyle sıralama pozisyonlarını birleştirir. Sitemizin hem doğrudan terim hem de semantik varlık eşleşmelerinde güçlü olması, RRF füsyonunda her iki yöntemden de pozisyon puanı toplayarak üst sıraya yerleşmesini garantiler.
+- **Google Search API Leak - Twiddler ve Topical Authority:** Google'ın Content API Warehouse belgelerindeki `siteFocusScore` (tematik odaklanma skoru) ve `siteRadius` (topikal sapma kısıtı) mekanizmaları incelendi. Narvals Labs; dijital sistemler, e-ticaret, özel yazılım, reklam ve teknik SEO/GEO dışına taşmayan katı tematik odağıyla `siteRadius` cezasını sıfırlar; Wikidata `EntityAnnotations` ile `topicalAuthority` sinyalini maksimize eder. `QualityBoost` ve `FreshnessTwiddler` mekanizmaları için 18 araç ve gerçek `lastmod` verileri tam uyumludur.
+
 ## Kanıt matrisi
 
 | Kaynak | Bulgu | Uygulama | Sınır |

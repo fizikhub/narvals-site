@@ -81,6 +81,9 @@ yayıncı şimdilik Narvals Labs organizasyonudur.
 - WebMCP (Web Model Context Protocol): 18 interaktif hesaplama ve denetim aracı için tarayıcı AI modellerine yönelik güvenli, deterministik, salt-okunur declarative/imperative araç sözleşmeleri ve 36 eval test senaryosu.
 - WebApplication Şema Zenginleştirmesi: 18 interaktif araç `educationalUse`, `applicationCategory: 'BusinessApplication'`, `operatingSystem: 'All modern web browsers'`, `permissions: 'none'` ve `isAccessibleForFree: true` ile zenginleştirildi.
 - Atomic Passage Extractability ve Text Fragments (`#:~:text=`): Her H2 alt başlığının ilk 100 kelimesinde doğrudan cevabın yer alması, dolgu metinsiz yüksek olgu yoğunluğu ve semantik passage chunking mimarisi.
+- ColBERT Late Interaction & MaxSim Token Uyumu: Token düzeyinde anlamsal temsil ve ince taneli terim eşleşmesiyle nöral yeniden sıralayıcılarda (neural rerankers) en yüksek skoru üreten atomik içerik mimarisi.
+- Reciprocal Rank Fusion (RRF, k=60): BM25 seyrek anahtar kelime eşleşmesi ile yoğun vektör aramalarının birleşiminde zirve pozisyonu garantileyen hibrit arama uyumu.
+- Google Twiddler ve Topical Focus: `siteFocusScore` ve `siteRadius` topikal kısıtlarına tam uyumlu, sapmasız dijital odak ve `EntityAnnotations` Knowledge Graph şebekesi.
 - Perplexity & SearchGPT RAG Reranking Uyumu: İlk %30 doğrudan cevap yerleşimi, context-aware embeddings ve çok katmanlı kalite filtrelerine tam uyumlu şema varlık ağı (`about`, `mentions`, `knowsAbout`, `isPartOf`).
 - NavBoost ve Glue Görev Tamamlama: Dwell time ve Last Longest Click sinyallerini maksimize eden 18 yerel hesaplama aracı, sıfır pogo-sticking ve W3C/Schema.org doğrulanabilir citation grafı.
 - 40 rehberde görünür standart `<img>`, `og:image`, Twitter, `primaryImageOfPage`
