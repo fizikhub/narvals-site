@@ -24,6 +24,22 @@ Bu nedenle uygulama önceliği şöyledir:
 4. Gerçek ekip deneyimi, vaka, yöntem, özgün veri ve üçüncü taraf mention.
 5. Arama sırası ile AI citation/mention/referral ölçümlerinin ayrı izlenmesi.
 
+## 30 Ağustos 2026 Ticari Niyet (E-Ticaret, Google Ads, Meta) ve GEO Ar-Ge Turu
+
+Kullanıcının "e-ticaret sitesi yaptırmak isteyenler, google ads reklamı yaptırmak isteyenler, meta reklamı hizmeti almak isteyenler sitemize girmeli; google'da üst sıralara çıkmalı ve güvenilir olmalı" hedefi doğrultusunda akademik GEO literatürü, Google Information Gain patenti (US 10,657,175), Google Search Quality Rater (E-E-A-T) kuralları ve r/PPC, r/ecommerce, r/SEO topluluk verileri incelendi.
+
+### 1. Akademik GEO & Bilgi Kazanımı (Information Gain) Bulguları
+- **Princeton / Georgia Tech GEO (KDD 2024 / 2025–2026):** Üretken arama motorları (Perplexity, ChatGPT Search, Claude, Google AI Overviews) arama sonuçlarında standart tanımları tekrar eden sayfalar yerine somut istatistikler, karşılaştırma matrisleri ve net karar adımları içeren kaynakları %40'a kadar daha yüksek oranda alıntılar (citation).
+- **Google Information Gain Patent Prensibi (US 10,657,175):** Bir arama sorgusunda kullanıcının diğer sayfalardan elde edemeyeceği özgün karar ölçütlerini, gizli maliyet uyarılarını ve karşılaştırmalı seçim adımlarını sunan sayfalar sıralama avantajı kazanır.
+- **Googlebot & AI Crawler Taraması:** Sayfaların ilk 128 KB içinde kritik `<head>` verilerini (title, canonical, JSON-LD, robots) barındırması, Speculation Rules API ile anında prerender edilmesi ve semantik HTML5 mimarisinde bulunması indeksleme hızını ve tarama verimliliğini maksimize eder.
+
+### 2. Reddit ve Topluluk İçgörüleri (r/PPC, r/ecommerce, r/SEO)
+- **E-Ticaret Sitesi Yaptırma Niyeti:** Müşterilerin en büyük korkuları gizli yazılım/lisans maliyetleri, yavaş açılan sayfalar (Core Web Vitals kaybı), sepet terk oranları, ödeme/kargo entegrasyonu problemleri ve ajans bağımlılığıdır. Karşılaştırma matrisleri ve açık teslim listeleri dönüşüm güvenini inşa eder.
+- **Google Ads Reklamı Yaptırma Niyeti:** r/PPC topluluğunda öne çıkan kırmızı bayraklar; ajansın reklam hesabı mülkiyetini müşteriye vermemesi, negatif anahtar kelime filtrelemesi yapmadan bütçeyi tüketmesi ve GA4 / GTM Server-Side dönüşüm takibi kurmadan yalnızca tıklama raporlamasıdır.
+- **Meta Reklamı Hizmeti Alma Niyeti:** Tarayıcı Pixel'inin iOS kısıtlamaları sebebiyle %20-40 veri kaybetmesi, Conversions API (CAPI) hibrit modelinin kurulmaması, haftalık kreatif test çerçevesinin olmaması ve başabaş (break-even) ROAS hesaplanmadan bütçe ölçeklenmesi ana risklerdir.
+
+Bu araştırma doğrultusunda 3 yeni kapsamlı karar rehberi (`e-ticaret-sitesi-yaptirmak-isteyenler-icin-kapsamli-rehber`, `google-ads-reklami-yaptirmak-isteyenler-icin-rehber`, `meta-reklami-hizmeti-almak-isteyenler-icin-rehber`) oluşturuldu ve hizmet sayfalarıyla çift yönlü bağlandı.
+
 ## 30 Ağustos 2026 Googlebot byte sınırı ve üretken arama sağlamlık denetimi
 
 Google'ın Mart 2026 Googlebot teknik açıklaması, PDF dışındaki her URL için

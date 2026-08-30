@@ -1,0 +1,386 @@
+<!doctype html>
+<html class="no-js" lang="tr">
+  <head>
+    <script>document.documentElement.classList.replace('no-js', 'js');</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#03233a" />
+    <meta name="color-scheme" content="light" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="msapplication-TileColor" content="#03233a" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="description" content="Instagram ve Facebook reklamı yaptırırken ajans seçimi, Conversions API, kreatif test mimarisi, bütçe yönetimi ve ROAS hesabını karşılaştırın." />
+    <meta name="keywords" content="Meta reklamı hizmeti almak, Meta reklam ajansı, Instagram reklam yönetimi, Facebook reklam ajansı" />
+    <meta name="author" content="Narvals Labs" />
+    <link rel="canonical" href="https://narvals.com/blog/meta-reklami-hizmeti-almak-isteyenler-icin-rehber/" />
+    <link rel="alternate" hreflang="tr" href="https://narvals.com/blog/meta-reklami-hizmeti-almak-isteyenler-icin-rehber/" />
+    <link rel="alternate" hreflang="tr-TR" href="https://narvals.com/blog/meta-reklami-hizmeti-almak-isteyenler-icin-rehber/" />
+    <link rel="alternate" hreflang="x-default" href="https://narvals.com/blog/meta-reklami-hizmeti-almak-isteyenler-icin-rehber/" />
+    <link rel="alternate" type="application/rss+xml" title="Narvals Labs Rehberleri" href="https://narvals.com/blog/feed.xml" />
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Narvals Labs" />
+    <link rel="describedby" type="text/plain" href="/llms.txt" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/assets/logo-v6/narvals-favicon-48.png" type="image/png" sizes="48x48" />
+    <link rel="icon" href="/assets/logo-v6/narvals-favicon-96.png" type="image/png" sizes="96x96" />
+    <link rel="icon" href="/assets/logo-v6/narvals-favicon-192.png" type="image/png" sizes="192x192" />
+    <link rel="icon" href="/assets/logo-v6/narvals-favicon-v6-256.png" type="image/png" sizes="256x256" />
+    <link rel="apple-touch-icon" href="/assets/logo-v6/narvals-avatar-v6-1080.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Narvals Labs" />
+    <meta property="og:title" content="Meta Reklamı Hizmeti Almak: Ajans, CAPI ve ROAS | Narvals" />
+    <meta property="og:description" content="Instagram ve Facebook reklamı yaptırırken ajans seçimi, Conversions API, kreatif test mimarisi, bütçe yönetimi ve ROAS hesabını karşılaştırın." />
+    <meta property="og:url" content="https://narvals.com/blog/meta-reklami-hizmeti-almak-isteyenler-icin-rehber/" />
+    <meta property="og:image" content="https://narvals.com/og/topics/dijital-reklam-rehberleri-v1.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="675" />
+    <meta property="og:image:alt" content="Bir narvalın reklam sinyallerini, hedef kitle yollarını ve dönüşüm ölçümünü yönettiği illüstrasyon" />
+    <meta property="article:published_time" content="2026-08-30T19:00:00+03:00" />
+    <meta property="article:modified_time" content="2026-08-30T19:00:00+03:00" />
+    <meta property="article:section" content="Meta reklam" />
+    <meta property="article:author" content="https://narvals.com/hakkimizda/" />
+    <meta property="article:publisher" content="https://narvals.com/" />
+    <meta property="article:tag" content="Meta reklamı hizmeti almak" />
+    <meta property="article:tag" content="Meta reklam ajansı" />
+    <meta property="article:tag" content="Instagram reklam yönetimi" />
+    <meta property="article:tag" content="Facebook reklam ajansı" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Meta Reklamı Hizmeti Almak: Ajans, CAPI ve ROAS | Narvals" />
+    <meta name="twitter:description" content="Instagram ve Facebook reklamı yaptırırken ajans seçimi, Conversions API, kreatif test mimarisi, bütçe yönetimi ve ROAS hesabını karşılaştırın." />
+    <meta name="twitter:image" content="https://narvals.com/og/topics/dijital-reklam-rehberleri-v1.jpg" />
+    <meta name="twitter:image:alt" content="Bir narvalın reklam sinyallerini, hedef kitle yollarını ve dönüşüm ölçümünü yönettiği illüstrasyon" />
+    <meta name="twitter:label1" content="Okuma Süresi" />
+    <meta name="twitter:data1" content="11 dk" />
+    <meta name="twitter:label2" content="Kategori" />
+    <meta name="twitter:data2" content="Meta reklam" />
+    <title>Meta Reklamı Hizmeti Almak: Ajans, CAPI ve ROAS | Narvals</title>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://narvals.com/blog/meta-reklami-hizmeti-almak-isteyenler-icin-rehber/#webpage",
+      "url": "https://narvals.com/blog/meta-reklami-hizmeti-almak-isteyenler-icin-rehber/",
+      "name": "Meta Reklamı Hizmeti Almak: Ajans, CAPI ve ROAS | Narvals",
+      "description": "Instagram ve Facebook reklamı yaptırırken ajans seçimi, Conversions API, kreatif test mimarisi, bütçe yönetimi ve ROAS hesabını karşılaştırın.",
+      "inLanguage": "tr-TR",
+      "isPartOf": {
+        "@id": "https://narvals.com/#website"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Meta reklamı hizmeti"
+        },
+        {
+          "@type": "Thing",
+          "name": "Meta reklam ajansı seçimi"
+        },
+        {
+          "@type": "Thing",
+          "name": "Conversions API",
+          "sameAs": "https://en.wikipedia.org/wiki/Facebook_Platform"
+        },
+        {
+          "@type": "Thing",
+          "name": "ROAS yönetimi"
+        }
+      ],
+      "datePublished": "2026-08-30T19:00:00+03:00",
+      "dateModified": "2026-08-30T19:00:00+03:00",
+      "breadcrumb": {
+        "@id": "https://narvals.com/blog/meta-reklami-hizmeti-almak-isteyenler-icin-rehber/#breadcrumb"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://narvals.com/og/topics/dijital-reklam-rehberleri-v1.jpg",
+        "width": 1200,
+        "height": 675,
+        "caption": "Bir narvalın reklam sinyallerini, hedef kitle yollarını ve dönüşüm ölçümünü yönettiği illüstrasyon"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://narvals.com/blog/meta-reklami-hizmeti-almak-isteyenler-icin-rehber/#article",
+      "mainEntityOfPage": {
+        "@id": "https://narvals.com/blog/meta-reklami-hizmeti-almak-isteyenler-icin-rehber/#webpage"
+      },
+      "headline": "Meta reklamı hizmeti almak isteyenler için rehber: ajans, CAPI ve ROAS",
+      "description": "Instagram ve Facebook reklamı yaptırırken ajans seçimi, Conversions API, kreatif test mimarisi, bütçe yönetimi ve ROAS hesabını karşılaştırın.",
+      "image": [
+        {
+          "@type": "ImageObject",
+          "url": "https://narvals.com/og/topics/dijital-reklam-rehberleri-v1.jpg",
+          "width": 1200,
+          "height": 675,
+          "caption": "Bir narvalın reklam sinyallerini, hedef kitle yollarını ve dönüşüm ölçümünü yönettiği illüstrasyon"
+        }
+      ],
+      "datePublished": "2026-08-30T19:00:00+03:00",
+      "dateModified": "2026-08-30T19:00:00+03:00",
+      "timeRequired": "PT11M",
+      "inLanguage": "tr-TR",
+      "isAccessibleForFree": true,
+      "wordCount": 567,
+      "articleSection": "Meta reklam",
+      "keywords": "Meta reklamı hizmeti almak, Meta reklam ajansı, Instagram reklam yönetimi, Facebook reklam ajansı",
+      "author": {
+        "@id": "https://narvals.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://narvals.com/#organization"
+      },
+      "copyrightHolder": {
+        "@id": "https://narvals.com/#organization"
+      },
+      "license": "https://narvals.com/editoryal-ilkeler/",
+      "publishingPrinciples": "https://narvals.com/editoryal-ilkeler/",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Meta reklamı hizmeti"
+        },
+        {
+          "@type": "Thing",
+          "name": "Meta reklam ajansı seçimi"
+        },
+        {
+          "@type": "Thing",
+          "name": "Conversions API",
+          "sameAs": "https://en.wikipedia.org/wiki/Facebook_Platform"
+        },
+        {
+          "@type": "Thing",
+          "name": "ROAS yönetimi"
+        }
+      ],
+      "citation": [
+        "https://www.facebook.com/business/help/204114870265825",
+        "https://developers.facebook.com/docs/marketing-api/conversions-api",
+        "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+      ],
+      "isBasedOn": [
+        "https://www.facebook.com/business/help/204114870265825",
+        "https://developers.facebook.com/docs/marketing-api/conversions-api",
+        "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://narvals.com/blog/meta-reklami-hizmeti-almak-isteyenler-icin-rehber/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ana sayfa",
+          "item": "https://narvals.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Rehberler",
+          "item": "https://narvals.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Meta reklamı hizmeti almak isteyenler için rehber: ajans, CAPI ve ROAS",
+          "item": "https://narvals.com/blog/meta-reklami-hizmeti-almak-isteyenler-icin-rehber/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://narvals.com/blog/meta-reklami-hizmeti-almak-isteyenler-icin-rehber/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Meta reklamları için aylık ne kadar bütçe ayrılmalıdır?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tek bir standart tutar yoktur. Ürün fiyatınıza ve hedef CPA'nıza göre algoritmanın öğrenme aşamasını tamamlayabileceği bir test bütçesiyle başlanmalı ve kanıtlandıkça artırılmalıdır."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Instagram reklamı ile Facebook reklamı ayrı mı yönetilir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Meta Business Manager üzerinden tek merkezden yönetilir; algoritma kitle davranışına göre bütçeyi Instagram, Facebook ve Messenger yerleşimleri arasında otomatik dağıtır."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Meta reklamlarında satış garantisi verilebilir mi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hayır; dürüst hiçbir ajans satış garantisi veremez. Satış; ürün çekiciliği, fiyat, pazar talebi, açılış sayfası güveni ve operasyonel teslim hızına bağlıdır."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
+    <script type="speculationrules">{
+  "prefetch": [
+    {
+      "source": "document",
+      "where": {
+        "and": [
+          {
+            "href_matches": "/*"
+          },
+          {
+            "not": {
+              "href_matches": "/*\\?*"
+            }
+          },
+          {
+            "not": {
+              "selector_matches": "[rel~=nofollow]"
+            }
+          }
+        ]
+      },
+      "eagerness": "moderate"
+    }
+  ],
+  "prerender": [
+    {
+      "source": "document",
+      "where": {
+        "and": [
+          {
+            "href_matches": "/hizmetler/*"
+          },
+          {
+            "not": {
+              "href_matches": "/*\\?*"
+            }
+          },
+          {
+            "not": {
+              "selector_matches": "[rel~=nofollow]"
+            }
+          }
+        ]
+      },
+      "eagerness": "conservative"
+    }
+  ]
+}</script>
+  </head>
+  <body class="info-page article-page">
+    <!-- Bu dosya content/blog-posts.mjs kaynağından otomatik üretilir. -->
+    <a class="skip-link" href="#main-content">Ana içeriğe geç</a>
+    <header class="info-nav">
+      <a class="info-nav__brand" href="/"><img src="/assets/logo-v6/narvals-mascot-v6-transparent-96.png" alt="" width="96" height="96" /><span>narvals<i>//</i>labs</span></a>
+      <nav class="info-nav__links" aria-label="Ana menü"><a href="/hizmetler/">Hizmetler</a><a href="/blog/" aria-current="page">Rehberler</a><a href="/hakkimizda/">Hakkımızda</a><a href="/iletisim/">Projeyi konuşalım</a></nav>
+    </header>
+    <main id="main-content">
+      <article>
+        <header class="info-hero article-hero">
+          <div class="info-hero__copy">
+            <nav class="breadcrumbs" aria-label="İçerik yolu"><a href="/">Ana sayfa</a><span>/</span><a href="/blog/">Rehberler</a><span>/</span><span>Meta reklam</span></nav>
+            <p class="info-hero__kicker">Meta reklam · Karar rehberi</p>
+            <h1>Meta reklamı hizmeti almak isteyenler için rehber: ajans, CAPI ve ROAS</h1>
+            <p class="info-hero__answer">Meta (Instagram ve Facebook) reklamı hizmeti alırken en kritik unsurlar; tarayıcı Pixel&#39;inin veri kayıplarını önleyen Conversions API (CAPI) kurulumu, haftalık kreatif test döngüsü ve reklam harcamasını gerçek kârlılığa (ROAS) bağlayan bütçe yönetimidir. Profesyonel bir Meta reklam ajansı sadece reklam açmakla kalmaz; kanca (hook), açı (angle), yönlendirme sayfası ve teklif optimizasyonunu tek bir müşteri yolculuğu olarak yönetir.</p>
+            <div class="article-meta"><span>Yayınlayan <a href="/hakkimizda/">Narvals Labs</a></span><span>Yayımlandı <time datetime="2026-08-30T19:00:00+03:00">30 Ağustos 2026</time></span><span>11 dk okuma</span></div>
+          </div>
+          <aside class="info-hero__panel article-summary" aria-labelledby="ozet-basligi"><strong id="ozet-basligi">Bu rehberin özeti</strong><ul><li>Yalnızca tarayıcı Pixel&#39;ine güvenmek reklam engelleyiciler ve çerez kısıtlamaları sebebiyle %20-40 veri kaybına yol açabilir.</li><li>Meta reklamlarında asıl kaldıraç hedeflemeden çok reklam kreatifi ve açılış sayfası teklifidir.</li><li>Advantage+ kampanyaları geniş kitlelere ulaşmada etkilidir ancak düzenli kreatif tazelemesi gerektirir.</li><li>Net kâr marjına göre başabaş (break-even) ROAS hesaplanmadan bütçe artırımı yapılmamalıdır.</li></ul></aside>
+        </header>
+
+        <figure class="article-cover">
+          <img src="/og/topics/dijital-reklam-rehberleri-v1.jpg" alt="Bir narvalın reklam sinyallerini, hedef kitle yollarını ve dönüşüm ölçümünü yönettiği illüstrasyon" width="1200" height="675" loading="lazy" decoding="async" />
+        </figure>
+
+        <div class="info-layout article-layout">
+          <nav class="info-toc" aria-label="Makale içeriği"><strong>Bu rehberde</strong><a href="#olcum-ve-capi">Veri Altyapısı</a><a href="#kreatif-ve-test">Kreatif Strateji</a><a href="#butce-ve-roas">Birim Ekonomi</a><a href="#ajans-degerlendirme">Ajans Seçimi</a><a href="#kisa-cevaplar">Kısa cevaplar</a><a href="#kaynaklar">Kaynaklar</a></nav>
+          <div class="info-content article-content">
+            <section class="info-section article-section" id="olcum-ve-capi">
+        <p class="info-section__label">Veri Altyapısı</p>
+        <h2>Pixel Tek Başına Yetmez: Conversions API (CAPI) ve Hibrit Ölçüm Modeli</h2>
+        <p>Apple iOS 14.5+ kısıtlamaları ve tarayıcı gizlilik korumaları nedeniyle yalnızca tarayıcı tabanlı Meta Pixel kullanan hesaplar ciddi veri kaybı yaşar. Conversions API (CAPI), web sunucunuzdan doğrudan Meta sunucularına şifreli (hashed) dönüşüm verisi iletir.</p>
+        <p>En sağlıklı mimari, Pixel ve CAPI'nin aynı Event ID ile tekilleştirildiği (deduplication) hibrit modeldir. Bu sayede Meta yapay zekâsı gerçek satın almaları daha iyi öğrenir ve reklam bütçenizi doğru kullanıcılara yönlendirir.</p>
+
+
+
+        <section class="article-table-wrap" tabindex="0" aria-label="Ölçüm Yöntemi, Veri Doğruluğu, Reklam Engelleyici Etkisi, Öneri tablosu">
+          <table class="decision-table"><thead><tr><th scope="col">Ölçüm Yöntemi</th><th scope="col">Veri Doğruluğu</th><th scope="col">Reklam Engelleyici Etkisi</th><th scope="col">Öneri</th></tr></thead><tbody><tr><th scope="row">Yalnızca Tarayıcı Pixel</th><td>Düşük-Orta (Veri kaybı riski yüksek)</td><td>Etkilenir ve engellenebilir</td><td>Tek başına yetersiz</td></tr><tr><th scope="row">Yalnızca Sunucu CAPI</th><td>Yüksek (Güvenilir sunucu iletişimi)</td><td>Etkilenmez</td><td>Tek başına bazı tarayıcı sinyallerini kaçırabilir</td></tr><tr><th scope="row">Pixel + CAPI Hibrit (Deduplicated)</th><td>En Yüksek (%95+ Eşleşme Kalitesi)</td><td>Korumalı ve eksiksiz</td><td>Sektör standardı ve en iyi pratik</td></tr></tbody></table>
+        </section>
+
+      </section>
+            <section class="info-section article-section" id="kreatif-ve-test">
+        <p class="info-section__label">Kreatif Strateji</p>
+        <h2>Kreatif Yorgunluğu ve Haftalık Test Çerçevesi</h2>
+        <p>Meta algoritması görsel ve video içeriği doğrudan tarayarak kullanıcı ilgisine göre dağıtım yapar. Reklam performansının zamanla düşmesinin (kreatif yorgunluğu) ana sebebi, aynı kitlenin aynı görselleri tekrar tekrar görmesidir.</p>
+        <p>Sürekli kârlı reklam yönetimi için haftalık kreatif test sistemi kurulmalıdır: 1) Kanca Testi (İlk 3 saniye), 2) Format Testi (Reels, Karusel, Statik), 3) Açılış Sayfası ve Teklif Testi.</p>
+
+
+        <ul class="article-checklist"><li>İlk 3 saniyede izleyiciyi yakalayan net problem ve kanca (hook) belirlendi.</li><li>Mobil ekran oranlarına uygun dikey (9:16) ve kare (1:1) formatlar hazırlandı.</li><li>Sosyal kanıt (müşteri yorumları, vaka sonuçları, uzman incelemeleri) eklendi.</li><li>Net harekete geçirici mesaj (CTA) ve yönlendirme sayfası uyumu kontrol edildi.</li></ul>
+
+
+      </section>
+            <section class="info-section article-section" id="butce-ve-roas">
+        <p class="info-section__label">Birim Ekonomi</p>
+        <h2>ROAS ve Kârlılık: Başabaş Eşiği Nasıl Hesaplanır?</h2>
+        <p>Ajansın "4x ROAS yakaladık" demesi işletmenin kâr ettiği anlamına gelmez. Brüt kâr marjınız %25 ise başabaş ROAS eşiğiniz 4.00x'tir (1 / 0.25). Bu eşiğin altındaki her satış net zarar üretir.</p>
+        <p>Bütçe ölçekleme (scaling) kararı yalnız platform ROAS'ına göre değil; iade oranları, kargo maliyetleri ve net banka cirosu doğrulanarak verilmelidir.</p>
+
+
+
+
+
+      </section>
+            <section class="info-section article-section" id="ajans-degerlendirme">
+        <p class="info-section__label">Ajans Seçimi</p>
+        <h2>Meta Reklam Ajansı Seçerken Sorulacak 5 Kritik Soru</h2>
+
+
+        <ol class="article-steps"><li>Meta Business Manager, Reklam Hesabı ve Piksel mülkiyeti kimde kalacak?</li><li>Conversions API (CAPI) kurulumu ve Event Quality skoru optimizasyonu dahil mi?</li><li>Aylık kaç yeni kreatif test edilecek ve kreatif yönlendirmesi kimin sorumluluğunda?</li><li>Advantage+ kampanyaları ile manuel test setleri nasıl dengeleniyor?</li><li>Raporlamada tıklama ve gösterim yerine ROAS, CPA ve net müşteri kazanımı nasıl izleniyor?</li></ol>
+
+
+        <aside class="article-callout" aria-label="Meta Reklam Ajansı Seçerken Sorulacak 5 Kritik Soru: karar notu"><strong>Karar notu</strong><p>Meta reklam bütçenizi ve beklenen getirinizi simüle etmek için ücretsiz Meta reklam bütçesi hesaplayıcımızı kullanın.</p></aside>
+      </section>
+
+            <section class="info-section article-section" id="kisa-cevaplar">
+              <p class="info-section__label">Sık sorulan sorular</p>
+              <h2>Kısa ve doğrudan cevaplar.</h2>
+              <div class="article-faq"><details><summary>Meta reklamları için aylık ne kadar bütçe ayrılmalıdır?</summary><p>Tek bir standart tutar yoktur. Ürün fiyatınıza ve hedef CPA&#39;nıza göre algoritmanın öğrenme aşamasını tamamlayabileceği bir test bütçesiyle başlanmalı ve kanıtlandıkça artırılmalıdır.</p></details><details><summary>Instagram reklamı ile Facebook reklamı ayrı mı yönetilir?</summary><p>Meta Business Manager üzerinden tek merkezden yönetilir; algoritma kitle davranışına göre bütçeyi Instagram, Facebook ve Messenger yerleşimleri arasında otomatik dağıtır.</p></details><details><summary>Meta reklamlarında satış garantisi verilebilir mi?</summary><p>Hayır; dürüst hiçbir ajans satış garantisi veremez. Satış; ürün çekiciliği, fiyat, pazar talebi, açılış sayfası güveni ve operasyonel teslim hızına bağlıdır.</p></details></div>
+            </section>
+            <section class="info-section article-section" id="kaynaklar">
+              <p class="info-section__label">Birincil kaynaklar</p>
+              <h2>Kaynaklar ve kapsam.</h2>
+              <p>Bağlantılar içerikteki değişebilir veya dış doğrulama gerektiren bilgilerin kaynağıdır. Ticari ilişki veya sponsorlu bağlantı değildir.</p>
+              <ol class="article-sources"><li><a href="https://www.facebook.com/business/help/204114870265825" rel="noopener noreferrer">Meta Business Help — Conversions API Kılavuzu</a></li><li><a href="https://developers.facebook.com/docs/marketing-api/conversions-api" rel="noopener noreferrer">Meta for Developers — Event Quality ve Deduplication</a></li><li><a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" rel="noopener noreferrer">Google Search Central — Üretken Arama ve Dijital Pazarlama İlkeleri</a></li></ol>
+              <aside class="article-method" aria-label="Bu rehberin hazırlanma yöntemi"><strong>Hazırlama yöntemi</strong><p>Bu rehber Narvals Labs yayıncılığında; ilgili birincil kaynaklar, görünür hizmet kapsamı ve proje karar çerçeveleri incelenerek hazırlandı. Doğrulanamayan müşteri, fiyat, başarı oranı veya sonuç iddiası eklenmedi. Yöntem, düzeltme ve yapay zekâ desteği açıklaması için <a href="/editoryal-ilkeler/">editoryal ilkeleri</a> okuyabilirsiniz.</p></aside>
+            </section>
+            <section class="info-section article-section">
+              <p class="info-section__label">İlgili rehberler</p><h2>İlgili rehberlerle devam edin.</h2>
+              <div class="article-related"><a href="/blog/meta-reklam-ajansi-secerken-sorulacak-sorular/"><small>Meta reklam</small><strong>Meta reklam ajansı seçerken hangi sorular sorulmalı?</strong><span aria-hidden="true">→</span></a><a href="/blog/meta-reklam-butcesi-nasil-belirlenir/"><small>Meta reklam</small><strong>Meta reklam bütçesi nasıl belirlenir? Planlama rehberi</strong><span aria-hidden="true">→</span></a><a href="/blog/meta-pixel-ve-conversions-api-farki/"><small>Meta reklam</small><strong>Meta Pixel ve Conversions API: farkları ve birlikte kullanım</strong><span aria-hidden="true">→</span></a></div>
+            </section>
+          </div>
+        </div>
+      </article>
+      <div class="preferred-source">
+      <div><small>Google Search · Yeni</small><strong>Narvals Labs rehberlerini daha sık görün.</strong><p>Narvals Labs’ı Google’da tercih edilen kaynak olarak seçerek içeriklerimizi destekleyebilirsiniz.</p></div>
+      <a href="https://www.google.com/preferences/source?q=narvals.com" rel="noopener noreferrer">Google’da tercih et <span aria-hidden="true">↗</span></a>
+    </div>
+      <section class="info-cta"><h2>Bu kararı projenize uyarlayalım.</h2><p>Mevcut durumu, hedefi ve en kritik sınırı paylaşın; gerekli kapsamı birlikte netleştirelim.</p><div class="article-cta-actions"><a class="info-button" href="/hizmetler/dijital-reklam/">Meta reklam ve performans pazarlama hizmetimizi inceleyin <span aria-hidden="true">→</span></a><a class="info-button info-button--light" href="/iletisim/">Projeyi konuşalım <span aria-hidden="true">↗</span></a></div></section>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__brand"><a href="/"><img src="/assets/logo-v6/narvals-mascot-v6-transparent-96.png" alt="" width="96" height="96" loading="lazy" /><strong>narvals<span>//</span>labs</strong></a><p>Web sitesi, özel yazılım ve reklamı aynı iş hedefinde buluşturan dijital üretim stüdyosu.</p></div>
+      <nav aria-label="Hizmet bağlantıları"><strong>Hizmetler</strong><a href="/hizmetler/web-tasarim/">Web sitesi yaptırma</a><a href="/hizmetler/e-ticaret/">E-ticaret</a><a href="/hizmetler/ozel-yazilim/">Özel yazılım</a><a href="/hizmetler/google-ads/">Google Ads</a><a href="/hizmetler/dijital-reklam/">Meta reklam</a><a href="/hizmetler/sosyal-medya-yonetimi/">Sosyal medya</a><a href="/hizmetler/qr-menu/">QR menü yaptırma</a><a href="/hizmetler/qr-menu-rezervasyon/">Sistem karşılaştırması</a></nav>
+      <nav aria-label="Bilgi merkezi bağlantıları"><strong>Bilgi merkezi</strong><a href="/blog/">Tüm rehberler</a><a href="/araclar/">Ücretsiz araçlar</a><a href="/araclar/web-sitesi-kontrolu/">Site kontrolü</a><a href="/blog/konu/seo-geo/">SEO &amp; GEO rehberleri</a><a href="/blog/konu/e-ticaret/">E-ticaret rehberleri</a><a href="/blog/konu/web-sitesi/">Web sitesi rehberleri</a><a href="/blog/konu/reklam/">Reklam rehberleri</a><a href="/blog/konu/qr-menu/">QR menü rehberleri</a><a href="/editoryal-ilkeler/">Editoryal ilkeler</a></nav>
+      <div class="site-footer__contact"><strong>Bir proje mi var?</strong><p>Hedefi ve en kritik darboğazı anlatarak ilk görüşmeyi başlatın.</p><a href="mailto:info@narvals.com">info@narvals.com</a><a href="https://wa.me/905019441921" rel="noopener noreferrer">WhatsApp: +90 501 944 19 21 ↗</a></div>
+      <p class="site-footer__legal">© <span data-current-year>2026</span> Narvals Labs. Tüm hakları saklıdır.</p>
+    </footer>
+    <script type="module" src="/src/info-main.js"></script>
+  </body>
+</html>

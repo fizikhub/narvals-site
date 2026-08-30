@@ -61,5 +61,292 @@ export const buyerIntentPosts = [
     ],
     faq: [{ question: 'Hazır web sitesi SEO için kötü müdür?', answer: 'Otomatik olarak kötü değildir. Taranabilir bağlantılar, doğru başlıklar, içerik kontrolü, hız, yönlendirme ve yapılandırılmış veri gibi gereksinimleri karşılayıp karşılamadığı test edilmelidir.' }, { question: 'Özel tasarım daha mı hızlı olur?', answer: 'Her zaman değil. Özel tasarım daha fazla karar ve test içerir; doğru geliştirildiğinde performans hedeflerine göre optimize edilebilir ancak süreç hazır temadan uzun olabilir.' }, { question: 'Hazır site sonradan özel sisteme taşınabilir mi?', answer: 'Genellikle mümkündür; fakat içerik, görsel, ürün, URL, sipariş ve kullanıcı verisinin hangi formatta dışa alınabildiği platforma göre değişir. Çıkış planı başlamadan sorulmalıdır.' }],
     sources: [{ label: 'Google — SEO Başlangıç Rehberi', url: 'https://developers.google.com/search/docs/fundamentals/seo-starter-guide' }, { label: 'Google — Site taşıma ve URL değişiklikleri', url: 'https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes' }, { label: 'W3C — WCAG 2.2', url: 'https://www.w3.org/TR/WCAG22/' }, { label: 'web.dev — Core Web Vitals', url: 'https://web.dev/articles/vitals' }]
+  },
+  {
+    slug: 'e-ticaret-sitesi-yaptirmak-isteyenler-icin-kapsamli-rehber',
+    metaTitle: 'E-Ticaret Sitesi Yaptırmak: Ajans, Altyapı ve Maliyet | Narvals',
+    title: 'E-ticaret sitesi yaptırmak isteyenler için rehber: altyapı, ajans ve maliyet',
+    description: 'E-ticaret sitesi yaptırma sürecinde Shopify, WooCommerce, özel yazılım, ödeme, kargo, teknik SEO ve ajans seçimini tek rehberde karşılaştırın.',
+    keywords: ['e-ticaret sitesi yaptırmak', 'e-ticaret sitesi kurma', 'e-ticaret ajansı seçimi', 'e-ticaret sitesi maliyeti'],
+    category: 'E-ticaret',
+    published: '2026-08-30T19:00:00+03:00',
+    modified: '2026-08-30T19:00:00+03:00',
+    readingTime: 12,
+    answer: 'E-ticaret sitesi yaptırırken en sık yapılan hata doğrudan tema veya ajans seçimiyle başlamaktır. Başarılı bir e-ticaret projesi; ürün ve varyant karmaşıklığı, operasyon modeli, ödeme ve kargo entegrasyonları, sayfa yükleme hızı (Core Web Vitals), sepet sürtünmesi ve teknik SEO temellerinin aynı kapsam belgesinde netleştirilmesiyle başlar. Aşağıdaki karar matrisi, hazır altyapı ile özel geliştirme arasındaki maliyet ve operasyon farklarını gösterir.',
+    takeaways: [
+      'Altyapı seçimi marka prestijine değil, ürün varyantı ve operasyon hacmine göre yapılmalıdır.',
+      'Gizli maliyetler (ödeme komisyonu, eklenti lisansları, kargo API) baştan hesaplanmalıdır.',
+      'Mobil ödeme deneyimi ve tek sayfa ödeme (one-page checkout) sepet terkini doğrudan etkiler.',
+      'E-ticaret teknik SEO teslimleri (Product şeması, Merchant Return, canonical) sözleşmeye yazılmalıdır.'
+    ],
+    about: ['E-ticaret sitesi yaptırma', 'E-ticaret ajansı seçimi', 'E-ticaret altyapısı', 'Ödeme entegrasyonu'],
+    related: ['e-ticaret-altyapisi-nasil-secilir', 'e-ticaret-sitesi-maliyeti-nasil-hesaplanir', 'e-ticaret-donusum-orani-artirma-cro-rehberi'],
+    servicePath: '/hizmetler/e-ticaret/',
+    serviceLabel: 'E-ticaret tasarım ve geliştirme hizmetimizi inceleyin',
+    faq: [
+      {
+        question: 'E-ticaret sitesi yaptırmak ne kadar sürer?',
+        answer: 'Kapsama göre değişir. Hazır şablon ve standart entegrasyonlarla 2-4 hafta sürerken; ERP bağlantılı, özel tasarımlı ve veri taşımalı projeler 8-12 hafta arasında tamamlanır.'
+      },
+      {
+        question: 'E-ticaret sitesinde ödeme komisyonları kime ödenir?',
+        answer: 'Ödeme kuruluşu komisyonları (PayTR, iyzico vb.) doğrudan anlaştığınız kuruluşa ödenir; ajans maliyetinden ayrı bir operasyonel giderdir.'
+      },
+      {
+        question: 'E-ticaret sitesinin yönetimi için teknik bilgi gerekir mi?',
+        answer: 'Hayır; modern e-ticaret altyapılarında ürün ekleme, fiyat güncelleme, sipariş yönetimi ve kampanya kurguları kullanıcı dostu paneller üzerinden kolayca yönetilir.'
+      }
+    ],
+    sections: [
+      {
+        id: 'altyapi-karsilastirma',
+        label: 'Altyapı Kararı',
+        heading: 'Shopify, WooCommerce veya Özel Yazılım: Hangisi Ne Zaman Seçilmeli?',
+        table: {
+          headers: ['Kriter', 'Shopify / SaaS', 'WooCommerce / Açık Kaynak', 'Özel Geliştirme (Headless)'],
+          rows: [
+            ['Kurulum Hızı', '1-3 hafta (Hızlı yayına alma)', '3-6 hafta (Eklenti ve tema ayarı)', '8-16 hafta (Özel mimari ve test)'],
+            ['Aylık Sabit Maliyet', 'Platform aboneliği + işlem payı', 'Sunucu + lisanslı eklenti yenilemeleri', 'Yalnız barındırma ve bakım'],
+            ['Özelleştirme Sınırı', 'Platform kuralları ve API sınırları', 'Yüksek fakat eklenti çatışma riski', 'Sınırsız (İş kurallarına tam uyum)'],
+            ['Entegrasyon Yükü', 'Hazır uygulama mağazası', 'Yerel eklentiler / API bağlantıları', 'Doğrudan ERP / Muhasebe / Kargo API'],
+            ['İdeal Hacim', 'Standart katalog ve hızlı başlangıç', 'Orta ölçekli katalog ve içerik dengesi', 'Karmaşık B2B kuralları veya yüksek trafik']
+          ]
+        }
+      },
+      {
+        id: 'odeme-ve-kargo',
+        label: 'Entegrasyonlar',
+        heading: 'Ödeme Ağ Geçitleri, Kargo ve Pazaryeri Bağlantıları',
+        paragraphs: [
+          'E-ticarette ödeme adımı kullanıcının en hassas olduğu aşamadır. Türkiye pazarında PayTR, iyzico gibi BDDK lisanslı sanal POS ve ödeme kuruluşları; global satışta ise Stripe veya yerel ödeme yöntemleri tercih edilir. Entegrasyon planında 3D Secure akışı, taksit seçenekleri, tek tıkla ödeme ve iade süreçleri baştan modellenmelidir.',
+          'Kargo entegrasyonlarında ise barkod oluşturma, sipariş durumunun otomatik güncellenmesi ve müşteriye SMS/e-posta takip bağlantısı iletilmesi operasyon yükünü belirgin şekilde hafifletir.'
+        ],
+        checklist: [
+          'BDDK lisanslı ödeme kuruluşu veya banka sanal POS entegrasyonu tamamlandı.',
+          'Tek sayfa ödeme ve misafir kullanıcıyla sipariş tamamlama seçeneği sunuldu.',
+          'Kargo API bağlantısı ve otomatik takip numarası iletimi test edildi.',
+          'Mesafeli satış sözleşmesi, ön bilgilendirme formu ve KVKK onay kutuları eklendi.'
+        ]
+      },
+      {
+        id: 'teknik-seo-ve-schema',
+        label: 'Görünürlük',
+        heading: 'E-Ticarette Googlebot ve Arama Görünürlüğü (Product & Offer Schema)',
+        paragraphs: [
+          'Google\'ın e-ticaret sitelerini doğru indekslemesi için sadece ürün başlığı yeterli değildir. Her ürün sayfasında Product, Offer, AggregateRating (varsa) ve MerchantReturnPolicy gibi yapılandırılmış veri işaretlemeleri bulunmalıdır. Bu veriler Google Alışveriş ve organik arama sonuçlarında fiyat, stok durumu ve kargo bilgilerinin zengin sonuç (Rich Snippet) olarak görünmesini sağlar.',
+          'Kategori sayfalarında ise filtreleme parametrelerinin (renk, beden, fiyat) yinelenen içerik (duplicate content) yaratmaması için canonical ve robots etiketleri doğru yönetilmelidir.'
+        ]
+      },
+      {
+        id: 'ajans-kirmizi-bayraklar',
+        label: 'Ajans Seçimi',
+        heading: 'E-Ticaret Ajansı Seçerken Dikkat Edilmesi Gereken 6 Kırmızı Bayrak',
+        list: [
+          'Ödeme veya kargo entegrasyonu için “hazır eklenti kurarız, gerisine karışmayız” denmesi.',
+          'Mevcut ürün, müşteri ve geçmiş sipariş verilerinin taşınması için yazılı göç planı sunulmaması.',
+          'Mobil ödeme hızının (Core Web Vitals) sözleşmede bir kabul kriteri olarak yer almaması.',
+          'Yönetici paneli, kaynak kodlar ve analitik mülkiyetinin müşteriye devredilmemesi.',
+          'Arama motorlarında sıralama veya ciro için gerçek dışı garantiler verilmesi.',
+          'Yayın sonrası hata düzeltme ve güvenlik güncellemelerinin bakım kapsamından hariç tutulması.'
+        ],
+        callout: 'E-ticaret projenizi başlatmadan önce e-ticaret kâr hesaplama ve teklif karşılaştırma araçlarımızı ücretsiz kullanabilirsiniz.'
+      }
+    ],
+    sources: [
+      { label: 'Google Search Central — E-ticaret siteleri için en iyi uygulamalar', url: 'https://developers.google.com/search/docs/specialty/ecommerce' },
+      { label: 'Schema.org — Product & Offer Type', url: 'https://schema.org/Product' },
+      { label: 'W3C — Web Accessibility Guidelines', url: 'https://www.w3.org/TR/WCAG22/' },
+      { label: 'web.dev — E-commerce Core Web Vitals', url: 'https://web.dev/articles/vitals' }
+    ]
+  },
+  {
+    slug: 'google-ads-reklami-yaptirmak-isteyenler-icin-rehber',
+    metaTitle: 'Google Ads Reklamı Yaptırmak: Ajans, Bütçe ve ROI | Narvals',
+    title: 'Google Ads reklamı yaptırmak isteyenler için rehber: ajans, bütçe ve ölçüm',
+    description: 'Google Ads reklamı yaptırırken ajans seçimi, arama ağı vs PMax, negatif kelime yönetimi, dönüşüm takibi ve bütçe planlamasını öğrenin.',
+    keywords: ['Google Ads reklamı yaptırmak', 'Google reklam ajansı', 'Google Ads yönetimi', 'Google reklam danışmanlığı'],
+    category: 'Google Ads',
+    published: '2026-08-30T19:00:00+03:00',
+    modified: '2026-08-30T19:00:00+03:00',
+    readingTime: 11,
+    answer: 'Google Ads reklamı yaptırmak isteyen işletmeler için en kritik konu, medya bütçesinin boşa harcanmasını önleyen arama niyeti eşleşmesi, negatif anahtar kelime filtrelemesi ve sunucu taraflı dönüşüm takibidir. Doğru bir Google Ads yönetimi; hesap mülkiyetinin müşteride kalmasını, tıklama yerine gerçek satış ve nitelikli form dönüşümlerinin izlenmesini ve açılış sayfası uyumunun sağlanmasını kapsar.',
+    takeaways: [
+      'Reklam hesabı ve dönüşüm verisi her zaman işletmenin mülkiyetinde olmalıdır.',
+      'Negatif anahtar kelime listeleri bütçe israfını önlemenin birincil kalkanıdır.',
+      'Performance Max (PMax) kampanyaları ancak güçlü ilk taraf veri ve dönüşüm sinyaliyle verimli çalışır.',
+      'Ajans hizmet bedeli ile Google medya harcaması sözleşmede kesin olarak ayrılmalıdır.'
+    ],
+    about: ['Google Ads reklamı yaptırma', 'Google reklam ajansı seçimi', 'Dönüşüm ölçümü', 'Arama ağı reklamları'],
+    related: ['google-ads-ajansi-secerken-sorulacak-sorular', 'google-ads-butcesi-nasil-belirlenir', 'google-ads-ajansi-ucretleri-ve-yonetim-modelleri'],
+    servicePath: '/hizmetler/google-ads/',
+    serviceLabel: 'Google Ads reklam yönetimi hizmetimizi inceleyin',
+    faq: [
+      {
+        question: 'Google Ads reklamlarında bütçemin tamamı hemen harcanır mı?',
+        answer: 'Hayır; günlük bütçe bir ortalamadır ve sistem arama talebine göre harcamayı optimize eder. Belirlenen aylık limit aşılmaz.'
+      },
+      {
+        question: 'Google Ads ile ilk günden müşteri gelir mi?',
+        answer: 'Arama ağı reklamları anında yayına girer ve arama yapan kullanıcıları sitenize çeker; ancak dönüşüm alabilmek açılış sayfanızın güvenilirliğine, fiyatınıza ve teklifinize bağlıdır.'
+      },
+      {
+        question: 'Ajans değiştirdiğimde reklam hesabımdaki veriler kaybolur mu?',
+        answer: 'Hesap mülkiyeti sizde olduğu sürece tüm geçmiş kampanya verileri, kitle listeleri ve kalite puanı geçmişi korunur.'
+      }
+    ],
+    sections: [
+      {
+        id: 'kampanya-mimarisi',
+        label: 'Strateji',
+        heading: 'Arama Ağı mı, Performance Max mi? Doğru Kampanya Kurgusu',
+        table: {
+          headers: ['Kampanya Türü', 'Kullanım Amacı', 'Veri ve Bütçe Gereksinimi', 'Yönetim Odağı'],
+          rows: [
+            ['Arama Ağı (Search)', 'Aktif olarak çözüm arayan yüksek niyetli kullanıcılar', 'Düşük-Orta bütçeyle başlatılabilir', 'Eşleme türleri, negatif kelimeler ve metin uyumu'],
+            ['Performance Max (PMax)', 'YouTube, Görüntülü, Keşfet, Arama ve Haritalar genelinde ölçekleme', 'Yüksek dönüşüm geçmişi ve zengin görsel/video varlığı', 'Kitle sinyalleri, negatif marka listeleri ve ürün akışı'],
+            ['Yeniden Pazarlama (Display/Discovery)', 'Siteyi ziyaret edip işlem yapmayanları hatırlatma', 'Birinci taraf kitle listesi ve çerez onayı', 'Kreatif çeşitliliği ve frekans sınırlaması']
+          ]
+        }
+      },
+      {
+        id: 'butce-ve-israf-yonetimi',
+        label: 'Bütçe Verimliliği',
+        heading: 'Bütçenizi Koruyan 3 Temel Direk: Negatif Kelimeler, Kalite Puanı ve TBM',
+        paragraphs: [
+          'Google Ads açık artırmasında daha fazla para harcamak her zaman daha fazla müşteri getirmez. Reklam Kalite Puanı (Açılış sayfası deneyimi, reklam alaka düzeyi ve beklenen TO) yükseltildiğinde, aynı konum için rakiplerden daha düşük TBM (Tıklama Başına Maliyet) ödenir.',
+          'Düzenli arama terimleri raporu denetimi ve proaktif negatif kelime eklemeleri, alakasız aramaların (ör. "ücretsiz", "staj", "nedir") bütçeyi tüketmesini engeller.'
+        ],
+        ordered: [
+          '<strong>Arama Niyetine Uygun Açılış Sayfası:</strong> Reklam metninde vaat edilen teklif açılış sayfasında anında karşılanmalıdır.',
+          '<strong>Haftalık Negatif Terim Denetimi:</strong> Alakasız tıklamalar arama terimleri raporundan tespit edilip negatif listelere eklenmelidir.',
+          '<strong>Teklif Stratejisi Uyumu:</strong> Kampanya başlangıcında Tıklamaları En Üst Düzeye Çıkarma veya Manuel TBM; yeterli dönüşüm verisi toplandığında Hedef EBM (tCPA) veya Hedef ROAS modellerine geçilmelidir.'
+        ]
+      },
+      {
+        id: 'donusum-olcum-mimarisi',
+        label: 'Ölçüm',
+        heading: 'Tıklamayı Değil, Geliri ve Nitelikli Talebi Ölçmek (GA4 & GTM)',
+        paragraphs: [
+          'Sadece sayfa görüntülemesini "dönüşüm" sayan bir reklam yönetimi yanıltıcıdır. Doğru ölçüm mimarisi; tamamlanan satın almaları, doğrulanmış form gönderimlerini ve telefon aramalarını GA4 ve Server-Side Google Tag Manager üzerinden doğrudan Google Ads hesabına aktarır.',
+          'Gelişmiş Dönüşümler (Enhanced Conversions) kurulumu, çerez kısıtlamalarına rağmen birinci taraf müşteri verilerini şifreli (hashed) ileterek atıf doğruluğunu artırır.'
+        ]
+      },
+      {
+        id: 'ajans-secim-matrisi',
+        label: 'Ajans Seçimi',
+        heading: 'Google Ads Ajansı Seçerken Masaya Konulacak Sorular',
+        checklist: [
+          'Reklam hesabı kimin adına açılacak? (Hesap mülkiyeti ve geçmiş veri işletmede kalmalıdır).',
+          'Dönüşüm kurulumu ve etiket denetimi kapsama dahil mi?',
+          'Negatif kelime optimizasyonu ve arama terimi temizliği hangi sıklıkla yapılıyor?',
+          'Aylık yönetim ücreti ile Google medya harcaması net şekilde ayrılmış mı?',
+          'Açılış sayfası iyileştirme ve dönüşüm oranı optimizasyonu (CRO) önerileri sunuluyor mu?'
+        ],
+        callout: 'Google Ads bütçenizi simüle etmek için ücretsiz Google Ads bütçe hesaplayıcımızı kullanabilirsiniz.'
+      }
+    ],
+    sources: [
+      { label: 'Google Ads Yardım — Arama Ağı Kampanyaları Kılavuzu', url: 'https://support.google.com/google-ads/answer/6142444' },
+      { label: 'Google Ads Yardım — Kalite Puanı Hakkında', url: 'https://support.google.com/google-ads/answer/6167118' },
+      { label: 'Google Search Central — Arama Motoru Optimizasyonu ve Reklam Ayrımı', url: 'https://developers.google.com/search/docs/fundamentals/seo-starter-guide' }
+    ]
+  },
+  {
+    slug: 'meta-reklami-hizmeti-almak-isteyenler-icin-rehber',
+    metaTitle: 'Meta Reklamı Hizmeti Almak: Ajans, CAPI ve ROAS | Narvals',
+    title: 'Meta reklamı hizmeti almak isteyenler için rehber: ajans, CAPI ve ROAS',
+    description: 'Instagram ve Facebook reklamı yaptırırken ajans seçimi, Conversions API, kreatif test mimarisi, bütçe yönetimi ve ROAS hesabını karşılaştırın.',
+    keywords: ['Meta reklamı hizmeti almak', 'Meta reklam ajansı', 'Instagram reklam yönetimi', 'Facebook reklam ajansı'],
+    category: 'Meta reklam',
+    published: '2026-08-30T19:00:00+03:00',
+    modified: '2026-08-30T19:00:00+03:00',
+    readingTime: 11,
+    answer: 'Meta (Instagram ve Facebook) reklamı hizmeti alırken en kritik unsurlar; tarayıcı Pixel\'inin veri kayıplarını önleyen Conversions API (CAPI) kurulumu, haftalık kreatif test döngüsü ve reklam harcamasını gerçek kârlılığa (ROAS) bağlayan bütçe yönetimidir. Profesyonel bir Meta reklam ajansı sadece reklam açmakla kalmaz; kanca (hook), açı (angle), yönlendirme sayfası ve teklif optimizasyonunu tek bir müşteri yolculuğu olarak yönetir.',
+    takeaways: [
+      'Yalnızca tarayıcı Pixel\'ine güvenmek reklam engelleyiciler ve çerez kısıtlamaları sebebiyle %20-40 veri kaybına yol açabilir.',
+      'Meta reklamlarında asıl kaldıraç hedeflemeden çok reklam kreatifi ve açılış sayfası teklifidir.',
+      'Advantage+ kampanyaları geniş kitlelere ulaşmada etkilidir ancak düzenli kreatif tazelemesi gerektirir.',
+      'Net kâr marjına göre başabaş (break-even) ROAS hesaplanmadan bütçe artırımı yapılmamalıdır.'
+    ],
+    about: ['Meta reklamı hizmeti', 'Meta reklam ajansı seçimi', 'Conversions API', 'ROAS yönetimi'],
+    related: ['meta-reklam-ajansi-secerken-sorulacak-sorular', 'meta-reklam-butcesi-nasil-belirlenir', 'meta-pixel-ve-conversions-api-farki'],
+    servicePath: '/hizmetler/dijital-reklam/',
+    serviceLabel: 'Meta reklam ve performans pazarlama hizmetimizi inceleyin',
+    faq: [
+      {
+        question: 'Meta reklamları için aylık ne kadar bütçe ayrılmalıdır?',
+        answer: 'Tek bir standart tutar yoktur. Ürün fiyatınıza ve hedef CPA\'nıza göre algoritmanın öğrenme aşamasını tamamlayabileceği bir test bütçesiyle başlanmalı ve kanıtlandıkça artırılmalıdır.'
+      },
+      {
+        question: 'Instagram reklamı ile Facebook reklamı ayrı mı yönetilir?',
+        answer: 'Meta Business Manager üzerinden tek merkezden yönetilir; algoritma kitle davranışına göre bütçeyi Instagram, Facebook ve Messenger yerleşimleri arasında otomatik dağıtır.'
+      },
+      {
+        question: 'Meta reklamlarında satış garantisi verilebilir mi?',
+        answer: 'Hayır; dürüst hiçbir ajans satış garantisi veremez. Satış; ürün çekiciliği, fiyat, pazar talebi, açılış sayfası güveni ve operasyonel teslim hızına bağlıdır.'
+      }
+    ],
+    sections: [
+      {
+        id: 'olcum-ve-capi',
+        label: 'Veri Altyapısı',
+        heading: 'Pixel Tek Başına Yetmez: Conversions API (CAPI) ve Hibrit Ölçüm Modeli',
+        paragraphs: [
+          'Apple iOS 14.5+ kısıtlamaları ve tarayıcı gizlilik korumaları nedeniyle yalnızca tarayıcı tabanlı Meta Pixel kullanan hesaplar ciddi veri kaybı yaşar. Conversions API (CAPI), web sunucunuzdan doğrudan Meta sunucularına şifreli (hashed) dönüşüm verisi iletir.',
+          'En sağlıklı mimari, Pixel ve CAPI\'nin aynı Event ID ile tekilleştirildiği (deduplication) hibrit modeldir. Bu sayede Meta yapay zekâsı gerçek satın almaları daha iyi öğrenir ve reklam bütçenizi doğru kullanıcılara yönlendirir.'
+        ],
+        table: {
+          headers: ['Ölçüm Yöntemi', 'Veri Doğruluğu', 'Reklam Engelleyici Etkisi', 'Öneri'],
+          rows: [
+            ['Yalnızca Tarayıcı Pixel', 'Düşük-Orta (Veri kaybı riski yüksek)', 'Etkilenir ve engellenebilir', 'Tek başına yetersiz'],
+            ['Yalnızca Sunucu CAPI', 'Yüksek (Güvenilir sunucu iletişimi)', 'Etkilenmez', 'Tek başına bazı tarayıcı sinyallerini kaçırabilir'],
+            ['Pixel + CAPI Hibrit (Deduplicated)', 'En Yüksek (%95+ Eşleşme Kalitesi)', 'Korumalı ve eksiksiz', 'Sektör standardı ve en iyi pratik']
+          ]
+        }
+      },
+      {
+        id: 'kreatif-ve-test',
+        label: 'Kreatif Strateji',
+        heading: 'Kreatif Yorgunluğu ve Haftalık Test Çerçevesi',
+        paragraphs: [
+          'Meta algoritması görsel ve video içeriği doğrudan tarayarak kullanıcı ilgisine göre dağıtım yapar. Reklam performansının zamanla düşmesinin (kreatif yorgunluğu) ana sebebi, aynı kitlenin aynı görselleri tekrar tekrar görmesidir.',
+          'Sürekli kârlı reklam yönetimi için haftalık kreatif test sistemi kurulmalıdır: 1) Kanca Testi (İlk 3 saniye), 2) Format Testi (Reels, Karusel, Statik), 3) Açılış Sayfası ve Teklif Testi.'
+        ],
+        checklist: [
+          'İlk 3 saniyede izleyiciyi yakalayan net problem ve kanca (hook) belirlendi.',
+          'Mobil ekran oranlarına uygun dikey (9:16) ve kare (1:1) formatlar hazırlandı.',
+          'Sosyal kanıt (müşteri yorumları, vaka sonuçları, uzman incelemeleri) eklendi.',
+          'Net harekete geçirici mesaj (CTA) ve yönlendirme sayfası uyumu kontrol edildi.'
+        ]
+      },
+      {
+        id: 'butce-ve-roas',
+        label: 'Birim Ekonomi',
+        heading: 'ROAS ve Kârlılık: Başabaş Eşiği Nasıl Hesaplanır?',
+        paragraphs: [
+          'Ajansın "4x ROAS yakaladık" demesi işletmenin kâr ettiği anlamına gelmez. Brüt kâr marjınız %25 ise başabaş ROAS eşiğiniz 4.00x\'tir (1 / 0.25). Bu eşiğin altındaki her satış net zarar üretir.',
+          'Bütçe ölçekleme (scaling) kararı yalnız platform ROAS\'ına göre değil; iade oranları, kargo maliyetleri ve net banka cirosu doğrulanarak verilmelidir.'
+        ]
+      },
+      {
+        id: 'ajans-degerlendirme',
+        label: 'Ajans Seçimi',
+        heading: 'Meta Reklam Ajansı Seçerken Sorulacak 5 Kritik Soru',
+        ordered: [
+          'Meta Business Manager, Reklam Hesabı ve Piksel mülkiyeti kimde kalacak?',
+          'Conversions API (CAPI) kurulumu ve Event Quality skoru optimizasyonu dahil mi?',
+          'Aylık kaç yeni kreatif test edilecek ve kreatif yönlendirmesi kimin sorumluluğunda?',
+          'Advantage+ kampanyaları ile manuel test setleri nasıl dengeleniyor?',
+          'Raporlamada tıklama ve gösterim yerine ROAS, CPA ve net müşteri kazanımı nasıl izleniyor?'
+        ],
+        callout: 'Meta reklam bütçenizi ve beklenen getirinizi simüle etmek için ücretsiz Meta reklam bütçesi hesaplayıcımızı kullanın.'
+      }
+    ],
+    sources: [
+      { label: 'Meta Business Help — Conversions API Kılavuzu', url: 'https://www.facebook.com/business/help/204114870265825' },
+      { label: 'Meta for Developers — Event Quality ve Deduplication', url: 'https://developers.facebook.com/docs/marketing-api/conversions-api' },
+      { label: 'Google Search Central — Üretken Arama ve Dijital Pazarlama İlkeleri', url: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content' }
+    ]
   }
 ];
+

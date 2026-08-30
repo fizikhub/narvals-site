@@ -128,7 +128,7 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 
 ---
 
-## 6. Tüm Karar Rehberleri Özeti (42 Rehber)
+## 6. Tüm Karar Rehberleri Özeti (45 Rehber)
 
 ### E-ticaret sitesi nasıl açılır? 10 adımlı sade rehber
 - **URL:** https://narvals.com/blog/e-ticaret-sitesi-nasil-acilir/
@@ -263,6 +263,36 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
   * İlk yayın hızı ile uzun vadeli değiştirme maliyetini birlikte değerlendirin.
   * Tema demosu gerçek içerikle aynı sonucu garanti etmez.
   * Çıkış, veri aktarımı ve hesap sahipliği kararın parçasıdır.
+
+### E-ticaret sitesi yaptırmak isteyenler için rehber: altyapı, ajans ve maliyet
+- **URL:** https://narvals.com/blog/e-ticaret-sitesi-yaptirmak-isteyenler-icin-kapsamli-rehber/
+- **Kategori:** E-ticaret
+- **Kısa Cevap:** E-ticaret sitesi yaptırırken en sık yapılan hata doğrudan tema veya ajans seçimiyle başlamaktır. Başarılı bir e-ticaret projesi; ürün ve varyant karmaşıklığı, operasyon modeli, ödeme ve kargo entegrasyonları, sayfa yükleme hızı (Core Web Vitals), sepet sürtünmesi ve teknik SEO temellerinin aynı kapsam belgesinde netleştirilmesiyle başlar. Aşağıdaki karar matrisi, hazır altyapı ile özel geliştirme arasındaki maliyet ve operasyon farklarını gösterir.
+- **Önemli Çıkarımlar:**
+  * Altyapı seçimi marka prestijine değil, ürün varyantı ve operasyon hacmine göre yapılmalıdır.
+  * Gizli maliyetler (ödeme komisyonu, eklenti lisansları, kargo API) baştan hesaplanmalıdır.
+  * Mobil ödeme deneyimi ve tek sayfa ödeme (one-page checkout) sepet terkini doğrudan etkiler.
+  * E-ticaret teknik SEO teslimleri (Product şeması, Merchant Return, canonical) sözleşmeye yazılmalıdır.
+
+### Google Ads reklamı yaptırmak isteyenler için rehber: ajans, bütçe ve ölçüm
+- **URL:** https://narvals.com/blog/google-ads-reklami-yaptirmak-isteyenler-icin-rehber/
+- **Kategori:** Google Ads
+- **Kısa Cevap:** Google Ads reklamı yaptırmak isteyen işletmeler için en kritik konu, medya bütçesinin boşa harcanmasını önleyen arama niyeti eşleşmesi, negatif anahtar kelime filtrelemesi ve sunucu taraflı dönüşüm takibidir. Doğru bir Google Ads yönetimi; hesap mülkiyetinin müşteride kalmasını, tıklama yerine gerçek satış ve nitelikli form dönüşümlerinin izlenmesini ve açılış sayfası uyumunun sağlanmasını kapsar.
+- **Önemli Çıkarımlar:**
+  * Reklam hesabı ve dönüşüm verisi her zaman işletmenin mülkiyetinde olmalıdır.
+  * Negatif anahtar kelime listeleri bütçe israfını önlemenin birincil kalkanıdır.
+  * Performance Max (PMax) kampanyaları ancak güçlü ilk taraf veri ve dönüşüm sinyaliyle verimli çalışır.
+  * Ajans hizmet bedeli ile Google medya harcaması sözleşmede kesin olarak ayrılmalıdır.
+
+### Meta reklamı hizmeti almak isteyenler için rehber: ajans, CAPI ve ROAS
+- **URL:** https://narvals.com/blog/meta-reklami-hizmeti-almak-isteyenler-icin-rehber/
+- **Kategori:** Meta reklam
+- **Kısa Cevap:** Meta (Instagram ve Facebook) reklamı hizmeti alırken en kritik unsurlar; tarayıcı Pixel'inin veri kayıplarını önleyen Conversions API (CAPI) kurulumu, haftalık kreatif test döngüsü ve reklam harcamasını gerçek kârlılığa (ROAS) bağlayan bütçe yönetimidir. Profesyonel bir Meta reklam ajansı sadece reklam açmakla kalmaz; kanca (hook), açı (angle), yönlendirme sayfası ve teklif optimizasyonunu tek bir müşteri yolculuğu olarak yönetir.
+- **Önemli Çıkarımlar:**
+  * Yalnızca tarayıcı Pixel'ine güvenmek reklam engelleyiciler ve çerez kısıtlamaları sebebiyle %20-40 veri kaybına yol açabilir.
+  * Meta reklamlarında asıl kaldıraç hedeflemeden çok reklam kreatifi ve açılış sayfası teklifidir.
+  * Advantage+ kampanyaları geniş kitlelere ulaşmada etkilidir ancak düzenli kreatif tazelemesi gerektirir.
+  * Net kâr marjına göre başabaş (break-even) ROAS hesaplanmadan bütçe artırımı yapılmamalıdır.
 
 ### Web sitesi neden müşteri getirmiyor? 8 olası neden
 - **URL:** https://narvals.com/blog/web-sitesi-neden-musteri-getirmiyor/
@@ -626,6 +656,9 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 - Rehber: https://narvals.com/blog/web-tasarim-ajansi-secerken-sorulacak-sorular/
 - Rehber: https://narvals.com/blog/web-sitesi-bakim-ucreti-ve-yillik-maliyet/
 - Rehber: https://narvals.com/blog/hazir-web-sitesi-mi-ozel-tasarim-mi/
+- Rehber: https://narvals.com/blog/e-ticaret-sitesi-yaptirmak-isteyenler-icin-kapsamli-rehber/
+- Rehber: https://narvals.com/blog/google-ads-reklami-yaptirmak-isteyenler-icin-rehber/
+- Rehber: https://narvals.com/blog/meta-reklami-hizmeti-almak-isteyenler-icin-rehber/
 - Rehber: https://narvals.com/blog/web-sitesi-neden-musteri-getirmiyor/
 - Rehber: https://narvals.com/blog/web-sitesi-googleda-neden-cikmiyor/
 - Rehber: https://narvals.com/blog/web-sitesi-donusum-orani-nasil-hesaplanir/

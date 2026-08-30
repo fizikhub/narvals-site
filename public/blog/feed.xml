@@ -5,7 +5,7 @@
     <link>https://narvals.com/blog/</link>
     <description>Web, yazılım, reklam ve işletme sistemleri için kaynaklı karar rehberleri.</description>
     <language>tr-TR</language>
-    <lastBuildDate>Sun, 30 Aug 2026 15:10:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2026 16:00:00 GMT</lastBuildDate>
     <atom:link href="https://narvals.com/blog/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>E-ticaret sitesi nasıl açılır? 10 adımlı sade rehber</title>
@@ -123,6 +123,33 @@
       <category>Web &amp; UX</category>
       <description>Hazır tema, site kurucu ve özel tasarım seçeneklerini hız, bütçe, marka, içerik, entegrasyon, sahiplik ve bakım açısından karşılaştırın.</description>
       <content:encoded><![CDATA[<p>Hızlı doğrulama, standart sayfalar ve sınırlı bütçe için hazır tema veya site kurucu yeterli olabilir. Marka anlatısı, farklı kullanıcı akışları, özel entegrasyon, yüksek performans hedefi veya uzun vadeli içerik mimarisi gerekiyorsa özel tasarım ve geliştirme daha uygun olabilir. Kararı prestijle değil iş gereksinimiyle verin.</p><ul><li>Hazır çözüm kötü, özel çözüm otomatik olarak iyi değildir.</li><li>İlk yayın hızı ile uzun vadeli değiştirme maliyetini birlikte değerlendirin.</li><li>Tema demosu gerçek içerikle aynı sonucu garanti etmez.</li><li>Çıkış, veri aktarımı ve hesap sahipliği kararın parçasıdır.</li></ul>]]></content:encoded>
+    </item>
+    <item>
+      <title>E-ticaret sitesi yaptırmak isteyenler için rehber: altyapı, ajans ve maliyet</title>
+      <link>https://narvals.com/blog/e-ticaret-sitesi-yaptirmak-isteyenler-icin-kapsamli-rehber/</link>
+      <guid isPermaLink="true">https://narvals.com/blog/e-ticaret-sitesi-yaptirmak-isteyenler-icin-kapsamli-rehber/</guid>
+      <pubDate>Sun, 30 Aug 2026 16:00:00 GMT</pubDate>
+      <category>E-ticaret</category>
+      <description>E-ticaret sitesi yaptırma sürecinde Shopify, WooCommerce, özel yazılım, ödeme, kargo, teknik SEO ve ajans seçimini tek rehberde karşılaştırın.</description>
+      <content:encoded><![CDATA[<p>E-ticaret sitesi yaptırırken en sık yapılan hata doğrudan tema veya ajans seçimiyle başlamaktır. Başarılı bir e-ticaret projesi; ürün ve varyant karmaşıklığı, operasyon modeli, ödeme ve kargo entegrasyonları, sayfa yükleme hızı (Core Web Vitals), sepet sürtünmesi ve teknik SEO temellerinin aynı kapsam belgesinde netleştirilmesiyle başlar. Aşağıdaki karar matrisi, hazır altyapı ile özel geliştirme arasındaki maliyet ve operasyon farklarını gösterir.</p><ul><li>Altyapı seçimi marka prestijine değil, ürün varyantı ve operasyon hacmine göre yapılmalıdır.</li><li>Gizli maliyetler (ödeme komisyonu, eklenti lisansları, kargo API) baştan hesaplanmalıdır.</li><li>Mobil ödeme deneyimi ve tek sayfa ödeme (one-page checkout) sepet terkini doğrudan etkiler.</li><li>E-ticaret teknik SEO teslimleri (Product şeması, Merchant Return, canonical) sözleşmeye yazılmalıdır.</li></ul>]]></content:encoded>
+    </item>
+    <item>
+      <title>Google Ads reklamı yaptırmak isteyenler için rehber: ajans, bütçe ve ölçüm</title>
+      <link>https://narvals.com/blog/google-ads-reklami-yaptirmak-isteyenler-icin-rehber/</link>
+      <guid isPermaLink="true">https://narvals.com/blog/google-ads-reklami-yaptirmak-isteyenler-icin-rehber/</guid>
+      <pubDate>Sun, 30 Aug 2026 16:00:00 GMT</pubDate>
+      <category>Google Ads</category>
+      <description>Google Ads reklamı yaptırırken ajans seçimi, arama ağı vs PMax, negatif kelime yönetimi, dönüşüm takibi ve bütçe planlamasını öğrenin.</description>
+      <content:encoded><![CDATA[<p>Google Ads reklamı yaptırmak isteyen işletmeler için en kritik konu, medya bütçesinin boşa harcanmasını önleyen arama niyeti eşleşmesi, negatif anahtar kelime filtrelemesi ve sunucu taraflı dönüşüm takibidir. Doğru bir Google Ads yönetimi; hesap mülkiyetinin müşteride kalmasını, tıklama yerine gerçek satış ve nitelikli form dönüşümlerinin izlenmesini ve açılış sayfası uyumunun sağlanmasını kapsar.</p><ul><li>Reklam hesabı ve dönüşüm verisi her zaman işletmenin mülkiyetinde olmalıdır.</li><li>Negatif anahtar kelime listeleri bütçe israfını önlemenin birincil kalkanıdır.</li><li>Performance Max (PMax) kampanyaları ancak güçlü ilk taraf veri ve dönüşüm sinyaliyle verimli çalışır.</li><li>Ajans hizmet bedeli ile Google medya harcaması sözleşmede kesin olarak ayrılmalıdır.</li></ul>]]></content:encoded>
+    </item>
+    <item>
+      <title>Meta reklamı hizmeti almak isteyenler için rehber: ajans, CAPI ve ROAS</title>
+      <link>https://narvals.com/blog/meta-reklami-hizmeti-almak-isteyenler-icin-rehber/</link>
+      <guid isPermaLink="true">https://narvals.com/blog/meta-reklami-hizmeti-almak-isteyenler-icin-rehber/</guid>
+      <pubDate>Sun, 30 Aug 2026 16:00:00 GMT</pubDate>
+      <category>Meta reklam</category>
+      <description>Instagram ve Facebook reklamı yaptırırken ajans seçimi, Conversions API, kreatif test mimarisi, bütçe yönetimi ve ROAS hesabını karşılaştırın.</description>
+      <content:encoded><![CDATA[<p>Meta (Instagram ve Facebook) reklamı hizmeti alırken en kritik unsurlar; tarayıcı Pixel&#39;inin veri kayıplarını önleyen Conversions API (CAPI) kurulumu, haftalık kreatif test döngüsü ve reklam harcamasını gerçek kârlılığa (ROAS) bağlayan bütçe yönetimidir. Profesyonel bir Meta reklam ajansı sadece reklam açmakla kalmaz; kanca (hook), açı (angle), yönlendirme sayfası ve teklif optimizasyonunu tek bir müşteri yolculuğu olarak yönetir.</p><ul><li>Yalnızca tarayıcı Pixel&#39;ine güvenmek reklam engelleyiciler ve çerez kısıtlamaları sebebiyle %20-40 veri kaybına yol açabilir.</li><li>Meta reklamlarında asıl kaldıraç hedeflemeden çok reklam kreatifi ve açılış sayfası teklifidir.</li><li>Advantage+ kampanyaları geniş kitlelere ulaşmada etkilidir ancak düzenli kreatif tazelemesi gerektirir.</li><li>Net kâr marjına göre başabaş (break-even) ROAS hesaplanmadan bütçe artırımı yapılmamalıdır.</li></ul>]]></content:encoded>
     </item>
     <item>
       <title>Web sitesi neden müşteri getirmiyor? 8 olası neden</title>
