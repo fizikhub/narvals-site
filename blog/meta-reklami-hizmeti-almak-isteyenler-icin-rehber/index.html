@@ -127,7 +127,7 @@
       "timeRequired": "PT11M",
       "inLanguage": "tr-TR",
       "isAccessibleForFree": true,
-      "wordCount": 567,
+      "wordCount": 590,
       "articleSection": "Meta reklam",
       "keywords": "Meta reklamı hizmeti almak, Meta reklam ajansı, Instagram reklam yönetimi, Facebook reklam ajansı",
       "author": {
@@ -161,12 +161,12 @@
         }
       ],
       "citation": [
-        "https://www.facebook.com/business/help/204114870265825",
+        "https://developers.facebook.com/documentation/ads-commerce/conversions-api/parameters/server-event",
         "https://developers.facebook.com/docs/marketing-api/conversions-api",
         "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
       ],
       "isBasedOn": [
-        "https://www.facebook.com/business/help/204114870265825",
+        "https://developers.facebook.com/documentation/ads-commerce/conversions-api/parameters/server-event",
         "https://developers.facebook.com/docs/marketing-api/conversions-api",
         "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
       ]
@@ -290,10 +290,10 @@
             <nav class="breadcrumbs" aria-label="İçerik yolu"><a href="/">Ana sayfa</a><span>/</span><a href="/blog/">Rehberler</a><span>/</span><span>Meta reklam</span></nav>
             <p class="info-hero__kicker">Meta reklam · Karar rehberi</p>
             <h1>Meta reklamı hizmeti almak isteyenler için rehber: ajans, CAPI ve ROAS</h1>
-            <p class="info-hero__answer">Meta (Instagram ve Facebook) reklamı hizmeti alırken en kritik unsurlar; tarayıcı Pixel&#39;inin veri kayıplarını önleyen Conversions API (CAPI) kurulumu, haftalık kreatif test döngüsü ve reklam harcamasını gerçek kârlılığa (ROAS) bağlayan bütçe yönetimidir. Profesyonel bir Meta reklam ajansı sadece reklam açmakla kalmaz; kanca (hook), açı (angle), yönlendirme sayfası ve teklif optimizasyonunu tek bir müşteri yolculuğu olarak yönetir.</p>
+            <p class="info-hero__answer">Meta (Instagram ve Facebook) reklamı hizmeti alırken kritik unsurlar; tarayıcı Pixel&#39;ini sunucu olaylarıyla tamamlayan Conversions API (CAPI) kurulumu, düzenli kreatif test döngüsü ve reklam harcamasını gerçek kârlılığa (ROAS) bağlayan bütçe yönetimidir. Profesyonel bir Meta reklam ajansı sadece reklam açmakla kalmaz; kanca (hook), açı (angle), yönlendirme sayfası ve teklif optimizasyonunu tek bir müşteri yolculuğu olarak yönetir.</p>
             <div class="article-meta"><span>Yayınlayan <a href="/hakkimizda/">Narvals Labs</a></span><span>Yayımlandı <time datetime="2026-08-30T19:00:00+03:00">30 Ağustos 2026</time></span><span>11 dk okuma</span></div>
           </div>
-          <aside class="info-hero__panel article-summary" aria-labelledby="ozet-basligi"><strong id="ozet-basligi">Bu rehberin özeti</strong><ul><li>Yalnızca tarayıcı Pixel&#39;ine güvenmek reklam engelleyiciler ve çerez kısıtlamaları sebebiyle %20-40 veri kaybına yol açabilir.</li><li>Meta reklamlarında asıl kaldıraç hedeflemeden çok reklam kreatifi ve açılış sayfası teklifidir.</li><li>Advantage+ kampanyaları geniş kitlelere ulaşmada etkilidir ancak düzenli kreatif tazelemesi gerektirir.</li><li>Net kâr marjına göre başabaş (break-even) ROAS hesaplanmadan bütçe artırımı yapılmamalıdır.</li></ul></aside>
+          <aside class="info-hero__panel article-summary" aria-labelledby="ozet-basligi"><strong id="ozet-basligi">Bu rehberin özeti</strong><ul><li>Yalnızca tarayıcı Pixel&#39;ine güvenmek, reklam engelleyiciler ve tarayıcı gizlilik kısıtlamaları nedeniyle ölçüm boşlukları oluşturabilir; kaybın boyutu siteye ve kullanıcı kitlesine göre ölçülmelidir.</li><li>Reklam kreatifi ve açılış sayfası teklifi, hedefleme kadar ayrı hipotezlerle test edilmelidir.</li><li>Advantage+ kampanyaları geniş kitle dağıtımını otomatikleştirebilir; sonuçları düzenli kreatif testleriyle izlenmelidir.</li><li>Net kâr marjına göre başabaş (break-even) ROAS hesaplanmadan bütçe artırımı yapılmamalıdır.</li></ul></aside>
         </header>
 
         <figure class="article-cover">
@@ -306,13 +306,13 @@
             <section class="info-section article-section" id="olcum-ve-capi">
         <p class="info-section__label">Veri Altyapısı</p>
         <h2>Pixel Tek Başına Yetmez: Conversions API (CAPI) ve Hibrit Ölçüm Modeli</h2>
-        <p>Apple iOS 14.5+ kısıtlamaları ve tarayıcı gizlilik korumaları nedeniyle yalnızca tarayıcı tabanlı Meta Pixel kullanan hesaplar ciddi veri kaybı yaşar. Conversions API (CAPI), web sunucunuzdan doğrudan Meta sunucularına şifreli (hashed) dönüşüm verisi iletir.</p>
-        <p>En sağlıklı mimari, Pixel ve CAPI'nin aynı Event ID ile tekilleştirildiği (deduplication) hibrit modeldir. Bu sayede Meta yapay zekâsı gerçek satın almaları daha iyi öğrenir ve reklam bütçenizi doğru kullanıcılara yönlendirir.</p>
+        <p>Tarayıcı gizlilik korumaları ve reklam engelleyiciler, yalnızca tarayıcı tabanlı Meta Pixel ile yapılan ölçümde boşluk oluşturabilir. Conversions API (CAPI), izin ve mevzuat gereklilikleri korunarak seçilen iş olaylarının işletmenin kontrol ettiği sunucu bağlantısından Meta'ya iletilmesini sağlar; gerekli müşteri bilgileri Meta'nın teknik şartlarına göre hashlenir.</p>
+        <p>Pixel ve CAPI birlikte kullanıldığında aynı olayın iki kez sayılmaması için event name ve Event ID değerleri eşleştirilmelidir. Hibrit kurulum ölçümü tamamlayabilir fakat eksiksiz veri, daha iyi reklam sonucu veya mevzuat uyumu garantisi vermez.</p>
 
 
 
         <section class="article-table-wrap" tabindex="0" aria-label="Ölçüm Yöntemi, Veri Doğruluğu, Reklam Engelleyici Etkisi, Öneri tablosu">
-          <table class="decision-table"><thead><tr><th scope="col">Ölçüm Yöntemi</th><th scope="col">Veri Doğruluğu</th><th scope="col">Reklam Engelleyici Etkisi</th><th scope="col">Öneri</th></tr></thead><tbody><tr><th scope="row">Yalnızca Tarayıcı Pixel</th><td>Düşük-Orta (Veri kaybı riski yüksek)</td><td>Etkilenir ve engellenebilir</td><td>Tek başına yetersiz</td></tr><tr><th scope="row">Yalnızca Sunucu CAPI</th><td>Yüksek (Güvenilir sunucu iletişimi)</td><td>Etkilenmez</td><td>Tek başına bazı tarayıcı sinyallerini kaçırabilir</td></tr><tr><th scope="row">Pixel + CAPI Hibrit (Deduplicated)</th><td>En Yüksek (%95+ Eşleşme Kalitesi)</td><td>Korumalı ve eksiksiz</td><td>Sektör standardı ve en iyi pratik</td></tr></tbody></table>
+          <table class="decision-table"><thead><tr><th scope="col">Ölçüm Yöntemi</th><th scope="col">Veri Doğruluğu</th><th scope="col">Reklam Engelleyici Etkisi</th><th scope="col">Öneri</th></tr></thead><tbody><tr><th scope="row">Yalnızca Tarayıcı Pixel</th><td>Tarayıcı koşullarına bağlı</td><td>Etkilenebilir</td><td>Ölçüm boşluklarını gerçek veride inceleyin</td></tr><tr><th scope="row">Yalnızca Sunucu CAPI</th><td>Sunucu olay kalitesine bağlı</td><td>Daha az bağımlı</td><td>İzin, veri minimizasyonu ve olay doğruluğunu koruyun</td></tr><tr><th scope="row">Pixel + CAPI Hibrit (Tekilleştirilmiş)</th><td>İki kaynaktan tamamlayıcı sinyal</td><td>Tarayıcı kısıtlarından daha az etkilenebilir</td><td>Event ID ve event name ile tekilleştirme gerekir</td></tr></tbody></table>
         </section>
 
       </section>
@@ -358,7 +358,7 @@
               <p class="info-section__label">Birincil kaynaklar</p>
               <h2>Kaynaklar ve kapsam.</h2>
               <p>Bağlantılar içerikteki değişebilir veya dış doğrulama gerektiren bilgilerin kaynağıdır. Ticari ilişki veya sponsorlu bağlantı değildir.</p>
-              <ol class="article-sources"><li><a href="https://www.facebook.com/business/help/204114870265825" rel="noopener noreferrer">Meta Business Help — Conversions API Kılavuzu</a></li><li><a href="https://developers.facebook.com/docs/marketing-api/conversions-api" rel="noopener noreferrer">Meta for Developers — Event Quality ve Deduplication</a></li><li><a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" rel="noopener noreferrer">Google Search Central — Üretken Arama ve Dijital Pazarlama İlkeleri</a></li></ol>
+              <ol class="article-sources"><li><a href="https://developers.facebook.com/documentation/ads-commerce/conversions-api/parameters/server-event" rel="noopener noreferrer">Meta for Developers — Conversions API Sunucu Olayı Parametreleri</a></li><li><a href="https://developers.facebook.com/docs/marketing-api/conversions-api" rel="noopener noreferrer">Meta for Developers — Event Quality ve Deduplication</a></li><li><a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" rel="noopener noreferrer">Google Search Central — Üretken Arama ve Dijital Pazarlama İlkeleri</a></li></ol>
               <aside class="article-method" aria-label="Bu rehberin hazırlanma yöntemi"><strong>Hazırlama yöntemi</strong><p>Bu rehber Narvals Labs yayıncılığında; ilgili birincil kaynaklar, görünür hizmet kapsamı ve proje karar çerçeveleri incelenerek hazırlandı. Doğrulanamayan müşteri, fiyat, başarı oranı veya sonuç iddiası eklenmedi. Yöntem, düzeltme ve yapay zekâ desteği açıklaması için <a href="/editoryal-ilkeler/">editoryal ilkeleri</a> okuyabilirsiniz.</p></aside>
             </section>
             <section class="info-section article-section">

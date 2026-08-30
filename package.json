@@ -13,6 +13,7 @@
     "seo:check-live": "SITE_MODE=production node scripts/check-live-seo.mjs",
     "webmcp:check": "node scripts/check-webmcp-evals.mjs",
     "attribution:check": "node scripts/check-lead-source.mjs",
+    "sources:check": "node scripts/check-source-links.mjs",
     "indexnow:submit": "SITE_MODE=production node scripts/submit-indexnow.mjs",
     "html:check": "html-validate 'index.html' 'hizmetler/index.html' 'hizmetler/*/index.html' 'hakkimizda/index.html' 'iletisim/index.html' 'gizlilik/index.html' 'araclar/index.html' 'araclar/*/index.html' 'blog/index.html' 'blog/*/index.html' 'blog/konu/*/index.html' 'editoryal-ilkeler/index.html' '404.html'"
   },

@@ -7,10 +7,18 @@ veya yapay zekâ yanıtında kaynak gösterilme garantisi vermez.
 ## 30 Ağustos 2026 canlılık durumu
 
 `https://narvals.com` yayındadır. Canlı denetimde HTTPS ve canonical
-yönlendirmeleri, gerçek `404`, `robots.txt`, sitemap, 81 canonical URL ve iç
+yönlendirmeleri, gerçek `404`, `robots.txt`, sitemap, 94 canonical URL ve iç
 bağlantılar başarılı bulundu. Denetim; masaüstü ve mobil Googlebot, Bingbot,
 OAI-SearchBot, ChatGPT-User, Claude-SearchBot, Claude-User, PerplexityBot,
 Perplexity-User ve Applebot için WAF/CDN erişimini de sınar.
+
+30 Ağustos 2026 tarihinde herkese açık web aramalarında `narvals.com` için sonuç
+görülemedi. Aynı kontrolde normal tarayıcı, Googlebot ve OAI-SearchBot istekleri
+ana sayfadan aynı `200` HTML yanıtını aldı; canonical, robots ve sitemap tarafında
+teknik engel bulunmadı. Bu bulgu “site indeks dışı” teşhisi için tek başına yeterli
+değildir: kesin URL durumu yalnız doğrulanmış Search Console mülkündeki URL
+Denetimi ve Sayfa Dizine Ekleme raporundan görülmelidir. Öncelik, aşağıdaki hesap
+doğrulaması ve veri toplama adımlarıdır; kanıt olmadan yeni sayfa çoğaltmak değildir.
 
 Production derlemesi gerçek canonical adres açıkça verilmeden artık durur:
 
@@ -40,6 +48,16 @@ WebMCP araç sözleşmesi ve birinci taraf kanal sınıflandırması ayrı çal�
 npm run webmcp:check
 npm run attribution:check
 ```
+
+Editoryal kaynak bağlantılarındaki kalıcı `400/404/410` hatalarını yayın öncesi
+yakalamak için (ağ erişimi gerektirir):
+
+```bash
+npm run sources:check
+```
+
+Geçici ağ, oran sınırı ve sunucu hataları uyarı olarak raporlanır; gerçek kaynak
+kalitesi yine editoryal inceleme gerektirir.
 
 ## Yayından önce zorunlu gerçek veriler
 

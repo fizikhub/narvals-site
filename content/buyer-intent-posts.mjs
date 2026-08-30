@@ -246,7 +246,7 @@ export const buyerIntentPosts = [
       }
     ],
     sources: [
-      { label: 'Google Ads Yardım — Arama Ağı Kampanyaları Kılavuzu', url: 'https://support.google.com/google-ads/answer/6142444' },
+      { label: 'Google Ads Yardım — Başarılı Arama Kampanyaları Oluşturma', url: 'https://support.google.com/google-ads/answer/9510373?hl=tr' },
       { label: 'Google Ads Yardım — Kalite Puanı Hakkında', url: 'https://support.google.com/google-ads/answer/6167118' },
       { label: 'Google Search Central — Arama Motoru Optimizasyonu ve Reklam Ayrımı', url: 'https://developers.google.com/search/docs/fundamentals/seo-starter-guide' }
     ]
@@ -261,11 +261,11 @@ export const buyerIntentPosts = [
     published: '2026-08-30T19:00:00+03:00',
     modified: '2026-08-30T19:00:00+03:00',
     readingTime: 11,
-    answer: 'Meta (Instagram ve Facebook) reklamı hizmeti alırken en kritik unsurlar; tarayıcı Pixel\'inin veri kayıplarını önleyen Conversions API (CAPI) kurulumu, haftalık kreatif test döngüsü ve reklam harcamasını gerçek kârlılığa (ROAS) bağlayan bütçe yönetimidir. Profesyonel bir Meta reklam ajansı sadece reklam açmakla kalmaz; kanca (hook), açı (angle), yönlendirme sayfası ve teklif optimizasyonunu tek bir müşteri yolculuğu olarak yönetir.',
+    answer: 'Meta (Instagram ve Facebook) reklamı hizmeti alırken kritik unsurlar; tarayıcı Pixel\'ini sunucu olaylarıyla tamamlayan Conversions API (CAPI) kurulumu, düzenli kreatif test döngüsü ve reklam harcamasını gerçek kârlılığa (ROAS) bağlayan bütçe yönetimidir. Profesyonel bir Meta reklam ajansı sadece reklam açmakla kalmaz; kanca (hook), açı (angle), yönlendirme sayfası ve teklif optimizasyonunu tek bir müşteri yolculuğu olarak yönetir.',
     takeaways: [
-      'Yalnızca tarayıcı Pixel\'ine güvenmek reklam engelleyiciler ve çerez kısıtlamaları sebebiyle %20-40 veri kaybına yol açabilir.',
-      'Meta reklamlarında asıl kaldıraç hedeflemeden çok reklam kreatifi ve açılış sayfası teklifidir.',
-      'Advantage+ kampanyaları geniş kitlelere ulaşmada etkilidir ancak düzenli kreatif tazelemesi gerektirir.',
+      'Yalnızca tarayıcı Pixel\'ine güvenmek, reklam engelleyiciler ve tarayıcı gizlilik kısıtlamaları nedeniyle ölçüm boşlukları oluşturabilir; kaybın boyutu siteye ve kullanıcı kitlesine göre ölçülmelidir.',
+      'Reklam kreatifi ve açılış sayfası teklifi, hedefleme kadar ayrı hipotezlerle test edilmelidir.',
+      'Advantage+ kampanyaları geniş kitle dağıtımını otomatikleştirebilir; sonuçları düzenli kreatif testleriyle izlenmelidir.',
       'Net kâr marjına göre başabaş (break-even) ROAS hesaplanmadan bütçe artırımı yapılmamalıdır.'
     ],
     about: ['Meta reklamı hizmeti', 'Meta reklam ajansı seçimi', 'Conversions API', 'ROAS yönetimi'],
@@ -292,15 +292,15 @@ export const buyerIntentPosts = [
         label: 'Veri Altyapısı',
         heading: 'Pixel Tek Başına Yetmez: Conversions API (CAPI) ve Hibrit Ölçüm Modeli',
         paragraphs: [
-          'Apple iOS 14.5+ kısıtlamaları ve tarayıcı gizlilik korumaları nedeniyle yalnızca tarayıcı tabanlı Meta Pixel kullanan hesaplar ciddi veri kaybı yaşar. Conversions API (CAPI), web sunucunuzdan doğrudan Meta sunucularına şifreli (hashed) dönüşüm verisi iletir.',
-          'En sağlıklı mimari, Pixel ve CAPI\'nin aynı Event ID ile tekilleştirildiği (deduplication) hibrit modeldir. Bu sayede Meta yapay zekâsı gerçek satın almaları daha iyi öğrenir ve reklam bütçenizi doğru kullanıcılara yönlendirir.'
+          'Tarayıcı gizlilik korumaları ve reklam engelleyiciler, yalnızca tarayıcı tabanlı Meta Pixel ile yapılan ölçümde boşluk oluşturabilir. Conversions API (CAPI), izin ve mevzuat gereklilikleri korunarak seçilen iş olaylarının işletmenin kontrol ettiği sunucu bağlantısından Meta\'ya iletilmesini sağlar; gerekli müşteri bilgileri Meta\'nın teknik şartlarına göre hashlenir.',
+          'Pixel ve CAPI birlikte kullanıldığında aynı olayın iki kez sayılmaması için event name ve Event ID değerleri eşleştirilmelidir. Hibrit kurulum ölçümü tamamlayabilir fakat eksiksiz veri, daha iyi reklam sonucu veya mevzuat uyumu garantisi vermez.'
         ],
         table: {
           headers: ['Ölçüm Yöntemi', 'Veri Doğruluğu', 'Reklam Engelleyici Etkisi', 'Öneri'],
           rows: [
-            ['Yalnızca Tarayıcı Pixel', 'Düşük-Orta (Veri kaybı riski yüksek)', 'Etkilenir ve engellenebilir', 'Tek başına yetersiz'],
-            ['Yalnızca Sunucu CAPI', 'Yüksek (Güvenilir sunucu iletişimi)', 'Etkilenmez', 'Tek başına bazı tarayıcı sinyallerini kaçırabilir'],
-            ['Pixel + CAPI Hibrit (Deduplicated)', 'En Yüksek (%95+ Eşleşme Kalitesi)', 'Korumalı ve eksiksiz', 'Sektör standardı ve en iyi pratik']
+            ['Yalnızca Tarayıcı Pixel', 'Tarayıcı koşullarına bağlı', 'Etkilenebilir', 'Ölçüm boşluklarını gerçek veride inceleyin'],
+            ['Yalnızca Sunucu CAPI', 'Sunucu olay kalitesine bağlı', 'Daha az bağımlı', 'İzin, veri minimizasyonu ve olay doğruluğunu koruyun'],
+            ['Pixel + CAPI Hibrit (Tekilleştirilmiş)', 'İki kaynaktan tamamlayıcı sinyal', 'Tarayıcı kısıtlarından daha az etkilenebilir', 'Event ID ve event name ile tekilleştirme gerekir']
           ]
         }
       },
@@ -343,7 +343,7 @@ export const buyerIntentPosts = [
       }
     ],
     sources: [
-      { label: 'Meta Business Help — Conversions API Kılavuzu', url: 'https://www.facebook.com/business/help/204114870265825' },
+      { label: 'Meta for Developers — Conversions API Sunucu Olayı Parametreleri', url: 'https://developers.facebook.com/documentation/ads-commerce/conversions-api/parameters/server-event' },
       { label: 'Meta for Developers — Event Quality ve Deduplication', url: 'https://developers.facebook.com/docs/marketing-api/conversions-api' },
       { label: 'Google Search Central — Üretken Arama ve Dijital Pazarlama İlkeleri', url: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content' }
     ]
@@ -627,7 +627,7 @@ export const buyerIntentPosts = [
       }
     ],
     sources: [
-      { label: 'Meta Business Help — Kreatif En İyi Uygulamaları', url: 'https://www.facebook.com/business/help/1057406287693248' },
+      { label: 'Meta for Business — Facebook ve Instagram Reels Reklamları', url: 'https://www.facebook.com/business/ads/facebook-instagram-reels-ads' },
       { label: 'Meta for Developers — Dynamic Creative & Asset Customization', url: 'https://developers.facebook.com/docs/marketing-api' },
       { label: 'Google Search Central — İnsan Odaklı ve Nitelikli İçerik Rehberi', url: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content' }
     ]
@@ -1196,7 +1196,5 @@ export const buyerIntentPosts = [
     ]
   }
 ];
-
-
 
 

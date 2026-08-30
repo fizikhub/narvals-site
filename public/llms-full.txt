@@ -287,11 +287,11 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 ### Meta reklamı hizmeti almak isteyenler için rehber: ajans, CAPI ve ROAS
 - **URL:** https://narvals.com/blog/meta-reklami-hizmeti-almak-isteyenler-icin-rehber/
 - **Kategori:** Meta reklam
-- **Kısa Cevap:** Meta (Instagram ve Facebook) reklamı hizmeti alırken en kritik unsurlar; tarayıcı Pixel'inin veri kayıplarını önleyen Conversions API (CAPI) kurulumu, haftalık kreatif test döngüsü ve reklam harcamasını gerçek kârlılığa (ROAS) bağlayan bütçe yönetimidir. Profesyonel bir Meta reklam ajansı sadece reklam açmakla kalmaz; kanca (hook), açı (angle), yönlendirme sayfası ve teklif optimizasyonunu tek bir müşteri yolculuğu olarak yönetir.
+- **Kısa Cevap:** Meta (Instagram ve Facebook) reklamı hizmeti alırken kritik unsurlar; tarayıcı Pixel'ini sunucu olaylarıyla tamamlayan Conversions API (CAPI) kurulumu, düzenli kreatif test döngüsü ve reklam harcamasını gerçek kârlılığa (ROAS) bağlayan bütçe yönetimidir. Profesyonel bir Meta reklam ajansı sadece reklam açmakla kalmaz; kanca (hook), açı (angle), yönlendirme sayfası ve teklif optimizasyonunu tek bir müşteri yolculuğu olarak yönetir.
 - **Önemli Çıkarımlar:**
-  * Yalnızca tarayıcı Pixel'ine güvenmek reklam engelleyiciler ve çerez kısıtlamaları sebebiyle %20-40 veri kaybına yol açabilir.
-  * Meta reklamlarında asıl kaldıraç hedeflemeden çok reklam kreatifi ve açılış sayfası teklifidir.
-  * Advantage+ kampanyaları geniş kitlelere ulaşmada etkilidir ancak düzenli kreatif tazelemesi gerektirir.
+  * Yalnızca tarayıcı Pixel'ine güvenmek, reklam engelleyiciler ve tarayıcı gizlilik kısıtlamaları nedeniyle ölçüm boşlukları oluşturabilir; kaybın boyutu siteye ve kullanıcı kitlesine göre ölçülmelidir.
+  * Reklam kreatifi ve açılış sayfası teklifi, hedefleme kadar ayrı hipotezlerle test edilmelidir.
+  * Advantage+ kampanyaları geniş kitle dağıtımını otomatikleştirebilir; sonuçları düzenli kreatif testleriyle izlenmelidir.
   * Net kâr marjına göre başabaş (break-even) ROAS hesaplanmadan bütçe artırımı yapılmamalıdır.
 
 ### E-ticarette sepet terk oranı nasıl düşürülür? Ödeme sayfası ve CRO rehberi
