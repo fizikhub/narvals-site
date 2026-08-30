@@ -17,6 +17,9 @@ if (configuredSiteUrl.protocol !== 'https:') throw new Error('Live production au
 const origin = configuredSiteUrl.origin;
 const errors = [];
 const liveHtmlByPath = new Map();
+const googlebotFetchLimitBytes = 2 * 1024 * 1024;
+const htmlSafetyBudgetBytes = 512 * 1024;
+const criticalHeadBudgetBytes = 128 * 1024;
 const attribute = (tag, name) => tag.match(new RegExp(`\\b${name}="([^"]*)"`, 'i'))?.[1];
 const request = async (url, options = {}) => {
   const signal = AbortSignal.timeout(15_000);
@@ -58,6 +61,21 @@ for (const batch of batches) {
       }
       const html = await response.text();
       liveHtmlByPath.set(path, html);
+      const htmlBytes = Buffer.byteLength(html, 'utf8');
+      if (htmlBytes > htmlSafetyBudgetBytes) {
+        errors.push(`${path}: live HTML is ${(htmlBytes / 1024).toFixed(1)} KB; expected at most ${htmlSafetyBudgetBytes / 1024} KB (Googlebot fetch limit is ${googlebotFetchLimitBytes / 1024 / 1024} MB)`);
+      }
+      for (const [label, pattern] of [
+        ['title', /<title\b/i],
+        ['robots meta', /<meta\b[^>]*\bname="robots"/i],
+        ['canonical', /<link\b[^>]*\brel="canonical"/i],
+        ['JSON-LD', /<script\b[^>]*\btype="application\/ld\+json"/i]
+      ]) {
+        const position = html.search(pattern);
+        if (position >= 0 && Buffer.byteLength(html.slice(0, position), 'utf8') > criticalHeadBudgetBytes) {
+          errors.push(`${path}: live ${label} begins after the first ${criticalHeadBudgetBytes / 1024} KB of HTML`);
+        }
+      }
       const canonical = html.match(/<link\s+rel="canonical"\s+href="([^"]+)"/i)?.[1];
       if (canonical !== expectedUrl) errors.push(`${path}: live canonical is ${canonical || 'missing'}`);
       const metaTags = [...html.matchAll(/<meta\b[^>]*>/gi)].map((match) => match[0]);

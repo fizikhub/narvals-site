@@ -52,6 +52,9 @@ const unsupportedSeoClaims = [
   /\bHelpful Content[^<.]{0,100}\bceza alma riski yüksek/i,
   /\b256[–-]512 tokenlık parçalara böl/i
 ];
+const googlebotFetchLimitBytes = 2 * 1024 * 1024;
+const htmlSafetyBudgetBytes = 512 * 1024;
+const criticalHeadBudgetBytes = 128 * 1024;
 
 const countMatches = (value, pattern) => [...value.matchAll(pattern)].length;
 const tags = (html, tagName) => [...html.matchAll(new RegExp(`<${tagName}\\b[^>]*>`, 'gi'))].map((match) => match[0]);
@@ -87,6 +90,26 @@ for (const [path, html] of htmlByPath) {
   const robots = meta(html, 'name', 'robots') || '';
   const h1s = countMatches(html, /<h1\b/gi);
   const ids = [...html.matchAll(/\bid="([^"]+)"/gi)].map((match) => match[1]);
+  const htmlBytes = Buffer.byteLength(html, 'utf8');
+
+  // Googlebot currently stops fetching non-PDF resources at 2 MB. Keep a
+  // deliberately smaller budget and ensure discovery-critical head markup is
+  // near the start so future template growth cannot push it past the cutoff.
+  if (htmlBytes > htmlSafetyBudgetBytes) {
+    errors.push(`${path}: HTML is ${(htmlBytes / 1024).toFixed(1)} KB; expected at most ${htmlSafetyBudgetBytes / 1024} KB (Googlebot fetch limit is ${googlebotFetchLimitBytes / 1024 / 1024} MB)`);
+  }
+  const criticalHeadPatterns = [
+    ['title', /<title\b/i],
+    ['robots meta', /<meta\b[^>]*\bname="robots"/i],
+    ['canonical', /<link\b[^>]*\brel="canonical"/i],
+    ['JSON-LD', /<script\b[^>]*\btype="application\/ld\+json"/i]
+  ];
+  for (const [label, pattern] of criticalHeadPatterns) {
+    const position = html.search(pattern);
+    if (position >= 0 && Buffer.byteLength(html.slice(0, position), 'utf8') > criticalHeadBudgetBytes) {
+      errors.push(`${path}: ${label} begins after the first ${criticalHeadBudgetBytes / 1024} KB of HTML`);
+    }
+  }
 
   if (!title) errors.push(`${path}: title missing`);
   else {

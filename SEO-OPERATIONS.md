@@ -28,6 +28,12 @@ Deploy tamamlandıktan sonra canlı DNS/HTTP/canonical denetimi:
 SITE_URL=https://narvals.com npm run seo:check-live
 ```
 
+Build ve canlı denetim ayrıca her açılmış UTF-8 HTML yanıtını 512 KB altında
+tutar; `title`, robots meta, canonical ve JSON-LD'nin ilk 128 KB içinde
+başlamasını zorunlu kılar. Bunlar Google sıralama sinyali değil, Googlebot'un
+yayımlanmış 2 MB URL başına getirme sınırına karşı bilinçli güvenlik payıdır.
+Şablon büyütülürken bu kapılar gerekçesiz gevşetilmemelidir.
+
 WebMCP araç sözleşmesi ve birinci taraf kanal sınıflandırması ayrı çalıştırılabilir:
 
 ```bash
@@ -234,6 +240,7 @@ platformlar arası görünürlük başarısı sayılmaz.
 ## Birincil kaynaklar
 
 - Google Search Essentials: https://developers.google.com/search/docs/essentials
+- Googlebot byte sınırı: https://developers.google.com/search/blog/2026/03/crawler-blog-post
 - Google AI optimizasyonu: https://developers.google.com/search/docs/fundamentals/ai-optimization-guide
 - Google people-first content: https://developers.google.com/search/docs/fundamentals/creating-helpful-content
 - Google Organization: https://developers.google.com/search/docs/appearance/structured-data/organization

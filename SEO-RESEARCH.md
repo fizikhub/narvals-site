@@ -24,6 +24,37 @@ Bu nedenle uygulama önceliği şöyledir:
 4. Gerçek ekip deneyimi, vaka, yöntem, özgün veri ve üçüncü taraf mention.
 5. Arama sırası ile AI citation/mention/referral ölçümlerinin ayrı izlenmesi.
 
+## 30 Ağustos 2026 Googlebot byte sınırı ve üretken arama sağlamlık denetimi
+
+Google'ın Mart 2026 Googlebot teknik açıklaması, PDF dışındaki her URL için
+yalnız ilk 2 MB'ın getirildiğini; sınırın ötesindeki HTML'nin işlenmediğini,
+render edilmediğini ve indekslenmediğini açıklar. Google ayrıca başlık,
+canonical ve yapılandırılmış veri gibi kritik öğelerin belgenin erken bölümünde
+tutulmasını önerir. Mevcut en büyük Narvals HTML yanıtı yaklaşık 61 KB olsa da
+gelecekteki şablon büyümesini sessiz bir indeksleme hatasına dönüştürmemek için
+iki otomatik kapı eklendi:
+
+- Kaynak ve production HTML yanıtları için 512 KB güvenlik bütçesi.
+- `title`, robots meta, canonical ve JSON-LD başlangıcı için ilk 128 KB şartı.
+- Aynı kontrollerin deploy edilen 82 canonical URL'de canlı çalıştırılması.
+
+Bu değerler Google'ın sıralama eşiği değildir; yayımlanan 2 MB kesme noktasının
+çok altında operasyonel güvenlik payıdır. Sıkıştırılmış transfer boyutu yerine
+Google'ın işlediği açılmış UTF-8 HTML ölçülür.
+
+ACL 2026 Findings çalışması Google organik aramasıyla beş üretken arama sistemini
+karşılaştırdığında kaynak çeşitliliği, dış web'e bağımlılık ve tekrarlı çalıştırma
+kararlılığının motorlara göre önemli ölçüde değiştiğini buldu. Bu, tek bir prompt
+sonucunu “GEO başarısı” saymama ve citation, referral, sorgu ve dönüşümü zaman
+içinde ayrı ölçme kararını güçlendirdi. Ağustos 2026 tarihli `r/TechSEO` schema
+tartışması da schema'nın AI citation etkisini tek değişken olarak ayıran ikna
+edici saha kanıtı sunmadı; topluluk görüşü yalnız hipotez kontrolü olarak ele
+alındı.
+
+Kaynaklar: [Googlebot byte sınırı açıklaması](https://developers.google.com/search/blog/2026/03/crawler-blog-post),
+[ACL 2026 üretken arama karşılaştırması](https://aclanthology.org/2026.findings-acl.526/)
+ve [r/TechSEO schema–AI citation tartışması](https://www.reddit.com/r/TechSEO/comments/1w03hhw/).
+
 ## 30 Ağustos 2026 kanıt dili ve öz-denetim güvenilirliği turu
 
 Google'ın 2026 üretken AI optimizasyon rehberi, insan odaklı içerik rehberi ve
