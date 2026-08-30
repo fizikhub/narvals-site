@@ -63,6 +63,9 @@ Tam kapsamlı yapay zekâ bilgi tabanı ve RAG dokümantasyonu için: [llms-full
 - [E-ticaret sitesi yaptırmak isteyenler için rehber: altyapı, ajans ve maliyet](https://narvals.com/blog/e-ticaret-sitesi-yaptirmak-isteyenler-icin-kapsamli-rehber/): E-ticaret sitesi yaptırma sürecinde Shopify, WooCommerce, özel yazılım, ödeme, kargo, teknik SEO ve ajans seçimini tek rehberde karşılaştırın.
 - [Google Ads reklamı yaptırmak isteyenler için rehber: ajans, bütçe ve ölçüm](https://narvals.com/blog/google-ads-reklami-yaptirmak-isteyenler-icin-rehber/): Google Ads reklamı yaptırırken ajans seçimi, arama ağı vs PMax, negatif kelime yönetimi, dönüşüm takibi ve bütçe planlamasını öğrenin.
 - [Meta reklamı hizmeti almak isteyenler için rehber: ajans, CAPI ve ROAS](https://narvals.com/blog/meta-reklami-hizmeti-almak-isteyenler-icin-rehber/): Instagram ve Facebook reklamı yaptırırken ajans seçimi, Conversions API, kreatif test mimarisi, bütçe yönetimi ve ROAS hesabını karşılaştırın.
+- [E-ticarette sepet terk oranı nasıl düşürülür? Ödeme sayfası ve CRO rehberi](https://narvals.com/blog/e-ticaret-sepet-terk-ve-odeme-sayfasi-optimizasyonu/): E-ticarette %70 sepet terk oranını düşürmek için misafir ödeme, form alanı azaltma, hızlı ödeme yöntemleri ve kargo şeffaflığı stratejileri.
+- [Google Ads kalite puanı artırma ve negatif anahtar kelime yönetimi](https://narvals.com/blog/google-ads-kalite-puani-ve-negatif-kelime-rehberi/): Google Ads açık artırmasında TBM maliyetini düşürmek, Kalite Puanını yükseltmek ve negatif kelimelerle bütçe israfını önlemek için rehber.
+- [Meta reklamlarında kreatif stratejisi: kanca (hook), açı ve format testleri](https://narvals.com/blog/meta-reklamlarinda-kreatif-ve-kanca-stratejisi/): Instagram ve Facebook reklamlarında kreatif yorgunluğunu aşmak, ilk 3 saniye kancaları ve format testleriyle ROAS artırmak için rehber.
 - [Web sitesi neden müşteri getirmiyor? 8 olası neden](https://narvals.com/blog/web-sitesi-neden-musteri-getirmiyor/): Trafik, teklif, güven, kullanıcı yolu, form, hız ve ölçüm sorunlarını ayırarak web sitesinin neden müşteri getirmediğini teşhis edin.
 - [Web sitesi Google’da neden çıkmıyor? Teşhis rehberi](https://narvals.com/blog/web-sitesi-googleda-neden-cikmiyor/): Sitenizin Google’da görünmemesini indeks, tarama, canonical, içerik, sorgu uyumu, yeni site ve teknik hata başlıklarıyla teşhis edin.
 - [Web sitesi dönüşüm oranı nasıl hesaplanır?](https://narvals.com/blog/web-sitesi-donusum-orani-nasil-hesaplanir/): Ziyaret, nitelikli talep ve müşteri sayılarını birbirinden ayırarak web sitesi dönüşüm oranını doğru hesaplayın ve iyileştirme senaryosu oluşturun.
@@ -110,7 +113,7 @@ Tam kapsamlı yapay zekâ bilgi tabanı ve RAG dokümantasyonu için: [llms-full
 
 ## İsteğe Bağlı / Optional
 
-- [Tam Dokümantasyon (llms-full.txt)](https://narvals.com/llms-full.txt): LLM ve RAG sistemleri için 45 karar rehberi, 18 araç ve mimari kuralları içeren tam metin bilgi tabanı
+- [Tam Dokümantasyon (llms-full.txt)](https://narvals.com/llms-full.txt): LLM ve RAG sistemleri için 48 karar rehberi, 18 araç ve mimari kuralları içeren tam metin bilgi tabanı
 - [XML Site Haritası](https://narvals.com/sitemap.xml): Arama motorları ve botlar için tam kanonik sayfa ve görsel indeksi
 - [RSS Akışı](https://narvals.com/blog/feed.xml): En son yayınlanan rehberlerin makine tarafından okunabilir XML akışı
 - [OpenSearch XML](https://narvals.com/opensearch.xml): Tarayıcılar ve AI ajanları için standart arama tanımı

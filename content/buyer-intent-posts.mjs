@@ -347,6 +347,291 @@ export const buyerIntentPosts = [
       { label: 'Meta for Developers — Event Quality ve Deduplication', url: 'https://developers.facebook.com/docs/marketing-api/conversions-api' },
       { label: 'Google Search Central — Üretken Arama ve Dijital Pazarlama İlkeleri', url: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content' }
     ]
+  },
+  {
+    slug: 'e-ticaret-sepet-terk-ve-odeme-sayfasi-optimizasyonu',
+    metaTitle: 'E-Ticarette Sepet Terk Oranı Nasıl Düşürülür? CRO Rehberi',
+    title: 'E-ticarette sepet terk oranı nasıl düşürülür? Ödeme sayfası ve CRO rehberi',
+    description: 'E-ticarette %70 sepet terk oranını düşürmek için misafir ödeme, form alanı azaltma, hızlı ödeme yöntemleri ve kargo şeffaflığı stratejileri.',
+    keywords: ['sepet terk oranı', 'e-ticaret sepet terk', 'ödeme sayfası optimizasyonu', 'e-ticaret CRO'],
+    category: 'E-ticaret',
+    published: '2026-08-30T19:40:00+03:00',
+    modified: '2026-08-30T19:40:00+03:00',
+    readingTime: 11,
+    answer: 'E-ticarette küresel sepet terk oranı ortalama %70 seviyesindedir ve bunun en büyük sebebi zorunlu üyelik, karmaşık form alanları, beklenmedik kargo maliyetleri ve yavaş açılan mobil ödeme adımlarıdır. Sepet terki oranını düşürmek buton rengini değiştirmekle değil; tek sayfa ödeme (one-page checkout), misafir alışverişi, Apple Pay/Google Pay/PayTR tek tık ödeme seçenekleri ve kargo ücretinin ürün sayfasında şeffaf gösterilmesiyle başarılır.',
+    takeaways: [
+      'Zorunlu üyelik şartını kaldırmak ve misafir ödeme sunmak sepet terkini doğrudan azaltır.',
+      'Form alanlarının sayısını azaltmak ve otomatik adres tamamlama sunmak mobil sürtünmeyi düşürür.',
+      'Beklenmedik kargo ve vergi sürprizleri sepet adımındaki en büyük çıkış nedenidir.',
+      'Terk edilen sepetler için 1 saat içinde e-posta ve SMS hatırlatma akışı kurulmalıdır.'
+    ],
+    about: ['Sepet terk oranı', 'Ödeme sayfası UX', 'E-ticaret CRO', 'Dönüşüm optimizasyonu'],
+    related: ['e-ticaret-donusum-orani-artirma-cro-rehberi', 'e-ticaret-sitesi-yaptirmak-isteyenler-icin-kapsamli-rehber', 'e-ticaret-altyapisi-nasil-secilir'],
+    servicePath: '/hizmetler/e-ticaret/',
+    serviceLabel: 'E-ticaret tasarım ve optimizasyon hizmetimizi inceleyin',
+    faq: [
+      {
+        question: 'Ortalama sepet terk oranı nedir?',
+        answer: 'Baymard Institute araştırmalarına göre dünya genelinde e-ticarette ortalama sepet terk oranı yaklaşık %70 civarındadır; mobilde bu oran %80 seviyesine kadar çıkabilmektedir.'
+      },
+      {
+        question: 'Tek sayfa ödeme (one-page checkout) dönüşümü artırır mı?',
+        answer: 'Evet; adımları tek ekranda toplayarak ve gereksiz form alanlarını kaldırarak müşterinin satın alma sürecini daha az sürtünmeyle tamamlamasını sağlar.'
+      },
+      {
+        question: 'Terk edilen sepet e-postaları ne zaman gönderilmelidir?',
+        answer: 'İlk hatırlatma e-postası veya SMS bildirimi sepet terk edildikten sonraki ilk 1 saat içinde gönderildiğinde en yüksek geri dönüş oranını sağlar.'
+      }
+    ],
+    sections: [
+      {
+        id: 'sepet-terk-nedenleri',
+        label: 'Terk Nedenleri',
+        heading: 'Kullanıcılar Sepeti Neden Terk Eder? UX ve Güven Faktörleri',
+        table: {
+          headers: ['Terk Nedeni', 'Kullanıcı Etkisi', 'Çözüm Önerisi'],
+          rows: [
+            ['Beklenmedik Ek Maliyetler', 'Ödeme adımında çıkan sürpriz kargo ve vergi', 'Ürün sayfasında ve sepette kargo ücretini açıkça belirtin.'],
+            ['Zorunlu Hesap Oluşturma', 'Zaman kaybı ve parola hatırlama zorluğu', 'Misafir ödeme (Guest checkout) seçeneğini varsayılan yapın.'],
+            ['Karmaşık ve Uzun Formlar', 'Mobilde küçük klavyeyle onlarca alan doldurma', 'Form alanlarını ad, adres, telefon ve karta indirgeyin.'],
+            ['Güvenlik ve Ödeme Endişesi', 'Bilinmeyen veya güvensiz görünen ödeme formu', 'BDDK lisanslı güven damgaları ve 3D Secure logoları ekleyin.']
+          ]
+        }
+      },
+      {
+        id: 'odeme-ux-iyilestirmeleri',
+        label: 'Ödeme Adımı UX',
+        heading: 'Mobil Ödemeyi Kolaylaştıran 5 Temel Standart',
+        ordered: [
+          '<strong>Misafir Alışverişi (Guest Checkout):</strong> Kullanıcıyı satın almadan önce hesap açmaya zorlamayın; hesabı sipariş onay ekranında tek tıkla oluşturtun.',
+          '<strong>Hızlı ve Cihaza Entegre Ödeme:</strong> Apple Pay, Google Pay ve kayıtlı kart (Masterpass/PayTR) entegrasyonuyla kart numarası yazma zahmetini bitirin.',
+          '<strong>Otomatik Adres Tamamlama:</strong> Posta kodu veya il/ilçe seçildiğinde ilgili alanların otomatik dolmasını sağlayın.',
+          '<strong>Açık Sipariş Özeti:</strong> Ürün görseli, varyantı, teslimat süresi ve toplam tutar ödeme ekranında her an görünür olsun.',
+          '<strong>Doğrulama ve Hata Bildirimi:</strong> Form hatalarını sayfa yenilenmeden, anlık ve ilgili kutunun altında açık kırmızı uyarıyla gösterin.'
+        ]
+      },
+      {
+        id: 'kargo-ve-iade-seffafligi',
+        label: 'Şeffaflık',
+        heading: 'Kargo Maliyetleri ve İade Politikası Şeffaflığı',
+        paragraphs: [
+          'Kullanıcıların %48\'i beklenmedik teslimat ücretleri nedeniyle satın almaktan vazgeçer. Ücretsiz kargo eşiğini (ör. "500 TL üzeri kargo bedava") sepetin üst kısmında ilerleme çubuğuyla göstermek hem sepet terkini azaltır hem de ortalama sepet tutarını (AOV) artırır.',
+          'Açık ve kolay bir iade politikası sunmak, müşterinin satın alma tereddüdünü ortadan kaldırır. Google Alışveriş ve organik aramalarda bu bilgiler MerchantReturnPolicy yapılandırılmış verisiyle desteklenmelidir.'
+        ],
+        checklist: [
+          'Ücretsiz kargo eşiği için dinamik sepet ilerleme çubuğu eklendi.',
+          'Teslimat süresi (ör. "Yarın kargoda") ürün ve sepet ekranında belirtildi.',
+          '14 gün koşulsuz iade garantisi ve kolay iade adımları vurgulandı.',
+          'Canlı destek veya WhatsApp yardım hattı butonu ödeme sayfasına eklendi.'
+        ]
+      },
+      {
+        id: 'kurtarma-otomasyonu',
+        label: 'Sepet Kurtarma',
+        heading: 'Terk Edilen Sepetleri Satışa Dönüştürme Akışı',
+        paragraphs: [
+          'Sepeti terk eden kullanıcıları tamamen kaybetmek yerine 3 aşamalı bir kurtarma akışı kurulmalıdır: 1) İlk 1 saat içinde sade hatırlatma, 2) 24 saat sonra müşteri yorumları ve sosyal kanıt desteği, 3) 48 saat sonra sınırlı süreli indirim veya ücretsiz kargo kuponu.',
+          'Kişisel Verileri Koruma Kanunu (KVKK) ve Elektronik Ticaretin Düzenlenmesi Hakkında Kanun uyarınca, ticari elektronik ileti onayına sahip kullanıcılara bu mesajların iletilmesi yasal zorunluluktur.'
+        ],
+        callout: 'E-ticaret mağazanızın potansiyel net kârını hesaplamak için ücretsiz e-ticaret kâr hesaplama aracımızı kullanabilirsiniz.'
+      }
+    ],
+    sources: [
+      { label: 'Baymard Institute — Checkout Usability & Cart Abandonment Research', url: 'https://baymard.com/lists/cart-abandonment-rate' },
+      { label: 'Google Search Central — E-ticaret siteleri için en iyi uygulamalar', url: 'https://developers.google.com/search/docs/specialty/ecommerce' },
+      { label: 'W3C — Web Content Accessibility Guidelines', url: 'https://www.w3.org/TR/WCAG22/' },
+      { label: 'web.dev — E-commerce Performance and Core Web Vitals', url: 'https://web.dev/articles/vitals' }
+    ]
+  },
+  {
+    slug: 'google-ads-kalite-puani-ve-negatif-kelime-rehberi',
+    metaTitle: 'Google Ads Kalite Puanı ve Negatif Kelime Yönetimi | Narvals',
+    title: 'Google Ads kalite puanı artırma ve negatif anahtar kelime yönetimi',
+    description: 'Google Ads açık artırmasında TBM maliyetini düşürmek, Kalite Puanını yükseltmek ve negatif kelimelerle bütçe israfını önlemek için rehber.',
+    keywords: ['Google Ads kalite puanı', 'negatif anahtar kelime', 'Google Ads TBM düşürme', 'arama terimleri raporu'],
+    category: 'Google Ads',
+    published: '2026-08-30T19:40:00+03:00',
+    modified: '2026-08-30T19:40:00+03:00',
+    readingTime: 11,
+    answer: 'Google Ads açık artırmasında daha az bütçeyle daha üst sıralarda yer almanın anahtarı 1\'den 10\'a kadar puanlanan Kalite Puanıdır. Kalite Puanı; Beklenen Tıklama Oranı, Reklam Alaka Düzeyi ve Açılış Sayfası Deneyimi bileşenlerinden oluşur. Düzenli negatif anahtar kelime listeleri ile alakasız aramalar filtrelendiğinde bütçe israfı engellenir ve ortalama Tıklama Başına Maliyet (TBM) %30 ila %50 oranında düşürülebilir.',
+    takeaways: [
+      'Kalite Puanı yükseldikçe aynı reklam konumu için rakiplerden daha düşük TBM ödenir.',
+      'Açılış sayfasının hızlı açılması ve reklam vaadini karşılaması kalite puanının 1/3\'ünü belirler.',
+      'Negatif kelimeler hesap, kampanya ve reklam grubu düzeyinde hiyerarşik yönetilmelidir.',
+      'Haftalık arama terimleri denetimi, bütçeyi tüketen gizli alakasız sorguları yakalar.'
+    ],
+    about: ['Google Ads kalite puanı', 'Negatif anahtar kelime', 'TBM optimizasyonu', 'Arama terimleri'],
+    related: ['google-ads-reklami-yaptirmak-isteyenler-icin-rehber', 'google-ads-butcesi-nasil-belirlenir', 'google-ads-ajansi-ucretleri-ve-yonetim-modelleri'],
+    servicePath: '/hizmetler/google-ads/',
+    serviceLabel: 'Google Ads reklam yönetimi hizmetimizi inceleyin',
+    faq: [
+      {
+        question: 'Google Ads Kalite Puanı nedir ve neden önemlidir?',
+        answer: 'Kalite Puanı, Google\'ın reklamınızın ve açılış sayfanızın kullanıcının arama niyetine ne kadar uygun olduğunu ölçtüğü 1-10 arası bir puandır. Yüksek kalite puanı daha düşük TBM ve daha iyi reklam konumu sağlar.'
+      },
+      {
+        question: 'Negatif anahtar kelimeler nasıl belirlenir?',
+        answer: 'Arama Terimleri Raporu (Search Terms Report) düzenli taranarak bütçe harcayan ancak alakasız olan (ör. "ücretsiz", "nasıl yapılır", "pdf", "iş ilanları") terimler tespit edilir ve negatif listelere eklenir.'
+      },
+      {
+        question: 'Kalite Puanını yükseltmek ne kadar sürer?',
+        answer: 'Açılış sayfası ve reklam metni güncellemeleri anında etkili olur; ancak algoritmanın tıklama oranı verilerini yeniden hesaplaması birkaç gün ile birkaç hafta arasında sürer.'
+      }
+    ],
+    sections: [
+      {
+        id: 'kalite-puani-bilesenleri',
+        label: 'Puan Mimarisi',
+        heading: 'Kalite Puanını Oluşturan 3 Ana Sütun',
+        table: {
+          headers: ['Bileşen', 'Ağırlık', 'Optimizasyon Yöntemi'],
+          rows: [
+            ['Beklenen Tıklama Oranı (eCTR)', 'Yüksek', 'Güçlü harekete geçirici mesajlar (CTA), dinamik başlıklar ve varlıklar (sitelinks).'],
+            ['Reklam Alaka Düzeyi', 'Yüksek', 'Arama sorgusundaki anahtar kelimenin reklam başlığı ve açıklamalarında doğal kullanımı.'],
+            ['Açılış Sayfası Deneyimi', 'Yüksek', 'Hızlı yükleme (Core Web Vitals), mobil uyum, şeffaf bilgi ve doğrudan teklif uyumu.']
+          ]
+        }
+      },
+      {
+        id: 'negatif-kelime-hiyerarsisi',
+        label: 'Negatif Kelimeler',
+        heading: 'Bütçe Kalkanı: Negatif Anahtar Kelime Hiyerarşisi',
+        paragraphs: [
+          'Negatif anahtar kelimeler reklamınızın alakasız aramalarda tetiklenmesini engelleyerek her tıklamanın nitelikli potansiyel müşterilerden gelmesini sağlar. Tek bir liste yerine hiyerarşik yapı kurulmalıdır:',
+          '1) Hesap Düzeyi Negatifler (Evrensel alakasız kelimeler: "staj", "ücretsiz", "ikinci el"), 2) Kampanya Düzeyi Negatifler (Hizmetler arası çakışmayı önleyen kelimeler), 3) Reklam Grubu Düzeyi Negatifler (Spesifik alt varyasyon ayrımı).'
+        ],
+        checklist: [
+          'Evrensel negatif kelime listesi oluşturuldu ve tüm kampanyalara bağlandı.',
+          'Haftalık arama terimleri raporu denetim takvimi belirlendi.',
+          'Geniş eşleme yerine sıralı ve tam eşleme negatif kuralları uygulandı.',
+          'Kendi marka adınız ve kritik dönüşüm kelimeleriniz yanlışlıkla negatif listeye eklenmedi.'
+        ]
+      },
+      {
+        id: 'acilis-sayfasi-ve-tbm',
+        label: 'Açılış Sayfası',
+        heading: 'Açılış Sayfası Optimizasyonu ve TBM İlişkisi',
+        paragraphs: [
+          'Reklam tıklamasından sonra kullanıcının karşılaştığı sayfa Kalite Puanının belirleyicisidir. Googlebot açılış sayfasının metin alakasını, hızını (LCP, INP, CLS) ve gezinme kolaylığını denetler.',
+          'Açılış sayfası reklamdaki vaadi (ör. "Aynı Gün Teslimat" veya "Ücretsiz Teklif") sayfanın ilk ekranında karşılamıyorsa kullanıcı sayfayı terk eder (hemen çıkma); bu da kalite puanını düşürerek TBM maliyetini artırır.'
+        ]
+      },
+      {
+        id: 'adim-adim-eylem-plani',
+        label: 'Optimizasyon',
+        heading: 'Kalite Puanını Artırmak İçin 4 Adımlı Eylem Planı',
+        ordered: [
+          '<strong>Reklam Gruplarını Daraltın:</strong> Tek grupta 50 anahtar kelime yerine, 3-5 çok alakalı kelimeden oluşan tematik reklam grupları (STAG) kurun.',
+          '<strong>Duyarlı Arama Reklamlarını (RSA) Zenginleştirin:</strong> En az 10 benzersiz başlık ve 4 açıklama varyasyonu ekleyerek reklam gücünü "Mükemmel" seviyeye taşıyın.',
+          '<strong>Tüm Reklam Öğelerini (Uzantıları) Ekleyin:</strong> Site bağlantıları, açıklama metinleri, resim uzantıları ve telefon arama öğelerini eksiksiz doldurun.',
+          '<strong>Açılış Sayfasının Açılış Hızını Optimize Edin:</strong> Görselleri optimize edin, gereksiz betikleri temizleyin ve mobil deneyimi pürüzsüzleştirin.'
+        ],
+        callout: 'Maksimum kârlı tıklama başı maliyetinizi hesaplamak için ücretsiz CPC ve maksimum teklif hesaplama aracımızı kullanabilirsiniz.'
+      }
+    ],
+    sources: [
+      { label: 'Google Ads Yardım — Kalite Puanı Hakkında', url: 'https://support.google.com/google-ads/answer/6167118' },
+      { label: 'Google Ads Yardım — Negatif Anahtar Kelimeler Kılavuzu', url: 'https://support.google.com/google-ads/answer/2453972' },
+      { label: 'Google Search Central — Sayfa Deneyimi ve Arama Sonuçları', url: 'https://developers.google.com/search/docs/appearance/page-experience' }
+    ]
+  },
+  {
+    slug: 'meta-reklamlarinda-kreatif-ve-kanca-stratejisi',
+    metaTitle: 'Meta Reklamlarında Kreatif ve Kanca (Hook) Stratejisi | Narvals',
+    title: 'Meta reklamlarında kreatif stratejisi: kanca (hook), açı ve format testleri',
+    description: 'Instagram ve Facebook reklamlarında kreatif yorgunluğunu aşmak, ilk 3 saniye kancaları ve format testleriyle ROAS artırmak için rehber.',
+    keywords: ['Meta reklam kreatifi', 'reklam kancası', 'Instagram reklam stratejisi', 'kreatif test çerçevesi'],
+    category: 'Meta reklam',
+    published: '2026-08-30T19:40:00+03:00',
+    modified: '2026-08-30T19:40:00+03:00',
+    readingTime: 11,
+    answer: 'Meta (Facebook ve Instagram) reklamlarında yapay zekâ hedeflemesi geliştikçe, en büyük performans kaldıracı kitle seçiminden reklam kreatifine geçmiştir. Algoritma kullanıcıların görsel ve video ile etkileşimini doğrudan analiz eder. Başarılı bir Meta kreatif stratejisi; ilk 3 saniyede dikkat çeken görsel ve işitsel kancalar (hook), farklı tüketici psikolojilerine hitap eden açılar (angle) ve düzenli format çeşitlendirmesiyle (Reels, Karusel, Statik) kreatif yorgunluğunu önler.',
+    takeaways: [
+      'Meta reklamlarında kreatif en güçlü hedefleme aracıdır; doğru mesaj doğru kitleyi çeker.',
+      'İlk 3 saniye (hook rate) video reklamın izlenme ve dönüşüm maliyetini belirler.',
+      'Statik, karusel ve dikey video (9:16) formatları aynı hesapta dengeli kullanılmalıdır.',
+      'Kazanan kreatiflerin mesajı açılış sayfasının hero alanında anında devam ettirilmelidir.'
+    ],
+    about: ['Meta reklam kreatifi', 'Reklam kancası (hook)', 'Kreatif yorgunluğu', 'Açı ve format testi'],
+    related: ['meta-reklami-hizmeti-almak-isteyenler-icin-rehber', 'meta-reklam-butcesi-nasil-belirlenir', 'meta-pixel-ve-conversions-api-farki'],
+    servicePath: '/hizmetler/dijital-reklam/',
+    serviceLabel: 'Meta reklam yönetimi hizmetimizi inceleyin',
+    faq: [
+      {
+        question: 'Kreatif yorgunluğu (creative fatigue) nedir ve nasıl anlaşılır?',
+        answer: 'Aynı reklamı gören kitlenin artık tepki vermemesi sonucu Tıklama Başına Maliyetin (TBM) ve Bin Gösterim Başına Maliyetin (CPM) yükselmesi, sıklık (frequency) değerinin artması ve dönüşüm oranının düşmesidir.'
+      },
+      {
+        question: 'Haftada kaç yeni kreatif test edilmelidir?',
+        answer: 'Bütçenize bağlı olarak haftalık 2 ila 4 yeni görsel veya video varyasyonunun (yeni kanca veya yeni açı) test edilmesi algoritmayı taze tutar ve maliyetleri dengeler.'
+      },
+      {
+        question: 'Reels mi statik görsel mi daha iyi dönüşüm getirir?',
+        answer: 'Her iki format farklı tüketici davranışlarına hitap eder; dikey video (Reels) marka bilinirliği ve hikâye anlatımında güçlüyken, yüksek kontrastlı statik karuseller doğrudan satın alma kararında çok etkilidir.'
+      }
+    ],
+    sections: [
+      {
+        id: 'kanca-ve-ilk-uc-saniye',
+        label: 'Kanca (Hook)',
+        heading: 'İlk 3 Saniye Kuralı: Kanca (Hook Rate) Optimizasyonu',
+        paragraphs: [
+          'Instagram akışında veya Reels izlerken kullanıcı ortalama 1.7 saniyede videoyu kaydırma kararı verir. Video reklamın ilk 3 saniyesi (Kanca Oranı = 3 Saniyelik Video İzleme / Toplam Gösterim) %30\'un altındaysa kreatif bütçeyi tüketir.',
+          'Etkili kanca türleri: 1) Problem Belirten Kanca ("E-ticaret sitenizde sepet terk oranınız neden %70?"), 2) Karşılaştırma Kancası ("Hazır yazılım vs Özel geliştirme"), 3) Ters Köşe Kancası ("Google Ads bütçenizi artırmadan önce bunu durdurun").'
+        ],
+        table: {
+          headers: ['Kanca Türü', 'Psikolojik Tetikleyici', 'Örnek Sektör / Uygulama'],
+          rows: [
+            ['Problem ve Acı Noktası', 'Zarardan kaçınma ve merak', 'B2B hizmetler ve operasyonel yazılımlar'],
+            ['Sosyal Kanıt ve Sonuç', 'Güven ve referans alma', 'E-ticaret ürünleri ve vaka incelemeleri'],
+            ['Eğitici ve İpucu', 'Değer kazanımı ve otorite', 'Danışmanlık ve profesyonel hizmetler'],
+            ['Fiyat ve Teklif Şeffaflığı', 'Piyasa karşılaştırması ve netlik', 'Kampanyalar ve özel lansmanlar']
+          ]
+        }
+      },
+      {
+        id: 'aci-ve-format-cesitliligi',
+        label: 'Açı ve Format',
+        heading: 'Açı (Angle) Çeşitlendirmesi ve Format Matrisi',
+        paragraphs: [
+          'Aynı ürünü veya hizmeti sadece tek bir argümanla anlatmak pazarın yalnızca küçük bir kısmını yakalar. Farklı motivasyonlara hitap eden açılar geliştirilmelidir: Zamandan Tasarruf Açısı, Maliyet Düşürme Açısı, Prestij ve Güven Açısı.',
+          'Format çeşitliliğinde ise 9:16 Dikey Reels (Keşfet ve Hikâyeler), 1:1 Kare Statik (Akış ve Masaüstü) ve 4:5 Dikey Karusel (Detaylı ürün anlatımı) aynı anda kullanılmalıdır.'
+        ],
+        checklist: [
+          'En az 3 farklı pazarlama açısı (zaman, maliyet, güven) metinleştirildi.',
+          '9:16, 1:1 ve 4:5 en-boy oranlarında görsel ve video varlıkları hazırlandı.',
+          'Videolara mobil sessiz izleme için okunabilir büyük altyazılar eklendi.',
+          'Görsellerde aşırı küçük yazı yerine yüksek kontrastlı net tipografi kullanıldı.'
+        ]
+      },
+      {
+        id: 'kreatif-test-cercevesi',
+        label: 'Test Çerçevesi',
+        heading: 'Haftalık Kreatif Test Döngüsü Nasıl İşler?',
+        ordered: [
+          '<strong>Hipotez Kurun:</strong> "İlk 3 saniyede soru sormak kanca oranını %25 artıracak."',
+          '<strong>Değişkeni Sabitleyin:</strong> Aynı gövde videosuna 3 farklı kanca (ilk 3 saniye) ekleyerek test edin.',
+          '<strong>Kontrollü Bütçeyle Çalıştırın:</strong> Test reklam setine yeterli gösterim verisi toplayana kadar dokunmayın.',
+          '<strong>Kazananı Ölçeklendirin:</strong> En yüksek kanca ve ROAS üreten kreatifi ana ölçekleme kampanyasına taşıyın.'
+        ]
+      },
+      {
+        id: 'reklam-sayfa-uyumu',
+        label: 'Dönüşüm Uyumu',
+        heading: 'Reklam Vaadi ile Açılış Sayfasının Bütünlüğü',
+        paragraphs: [
+          'Kreatif ne kadar etkileyici olursa olsun, tıklandığında açılan web sayfası reklamdaki vaadi ve görsel dili yansıtmıyorsa dönüşüm oranı çöker.',
+          'Reklamda kullanılan kanca başlığı açılış sayfasının H1 veya Hero bölümünde karşılanmalı; fiyat veya teklif detayı anında doğrulanabilmelidir.'
+        ],
+        callout: 'Kreatif görsellerinizin piksel ve oranlarını optimize etmek için ücretsiz görsel boyut ve oran hesaplayıcımızı kullanabilirsiniz.'
+      }
+    ],
+    sources: [
+      { label: 'Meta Business Help — Kreatif En İyi Uygulamaları', url: 'https://www.facebook.com/business/help/1057406287693248' },
+      { label: 'Meta for Developers — Dynamic Creative & Asset Customization', url: 'https://developers.facebook.com/docs/marketing-api' },
+      { label: 'Google Search Central — İnsan Odaklı ve Nitelikli İçerik Rehberi', url: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content' }
+    ]
   }
 ];
+
 

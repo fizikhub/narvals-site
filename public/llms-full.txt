@@ -128,7 +128,7 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 
 ---
 
-## 6. Tüm Karar Rehberleri Özeti (45 Rehber)
+## 6. Tüm Karar Rehberleri Özeti (48 Rehber)
 
 ### E-ticaret sitesi nasıl açılır? 10 adımlı sade rehber
 - **URL:** https://narvals.com/blog/e-ticaret-sitesi-nasil-acilir/
@@ -293,6 +293,36 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
   * Meta reklamlarında asıl kaldıraç hedeflemeden çok reklam kreatifi ve açılış sayfası teklifidir.
   * Advantage+ kampanyaları geniş kitlelere ulaşmada etkilidir ancak düzenli kreatif tazelemesi gerektirir.
   * Net kâr marjına göre başabaş (break-even) ROAS hesaplanmadan bütçe artırımı yapılmamalıdır.
+
+### E-ticarette sepet terk oranı nasıl düşürülür? Ödeme sayfası ve CRO rehberi
+- **URL:** https://narvals.com/blog/e-ticaret-sepet-terk-ve-odeme-sayfasi-optimizasyonu/
+- **Kategori:** E-ticaret
+- **Kısa Cevap:** E-ticarette küresel sepet terk oranı ortalama %70 seviyesindedir ve bunun en büyük sebebi zorunlu üyelik, karmaşık form alanları, beklenmedik kargo maliyetleri ve yavaş açılan mobil ödeme adımlarıdır. Sepet terki oranını düşürmek buton rengini değiştirmekle değil; tek sayfa ödeme (one-page checkout), misafir alışverişi, Apple Pay/Google Pay/PayTR tek tık ödeme seçenekleri ve kargo ücretinin ürün sayfasında şeffaf gösterilmesiyle başarılır.
+- **Önemli Çıkarımlar:**
+  * Zorunlu üyelik şartını kaldırmak ve misafir ödeme sunmak sepet terkini doğrudan azaltır.
+  * Form alanlarının sayısını azaltmak ve otomatik adres tamamlama sunmak mobil sürtünmeyi düşürür.
+  * Beklenmedik kargo ve vergi sürprizleri sepet adımındaki en büyük çıkış nedenidir.
+  * Terk edilen sepetler için 1 saat içinde e-posta ve SMS hatırlatma akışı kurulmalıdır.
+
+### Google Ads kalite puanı artırma ve negatif anahtar kelime yönetimi
+- **URL:** https://narvals.com/blog/google-ads-kalite-puani-ve-negatif-kelime-rehberi/
+- **Kategori:** Google Ads
+- **Kısa Cevap:** Google Ads açık artırmasında daha az bütçeyle daha üst sıralarda yer almanın anahtarı 1'den 10'a kadar puanlanan Kalite Puanıdır. Kalite Puanı; Beklenen Tıklama Oranı, Reklam Alaka Düzeyi ve Açılış Sayfası Deneyimi bileşenlerinden oluşur. Düzenli negatif anahtar kelime listeleri ile alakasız aramalar filtrelendiğinde bütçe israfı engellenir ve ortalama Tıklama Başına Maliyet (TBM) %30 ila %50 oranında düşürülebilir.
+- **Önemli Çıkarımlar:**
+  * Kalite Puanı yükseldikçe aynı reklam konumu için rakiplerden daha düşük TBM ödenir.
+  * Açılış sayfasının hızlı açılması ve reklam vaadini karşılaması kalite puanının 1/3'ünü belirler.
+  * Negatif kelimeler hesap, kampanya ve reklam grubu düzeyinde hiyerarşik yönetilmelidir.
+  * Haftalık arama terimleri denetimi, bütçeyi tüketen gizli alakasız sorguları yakalar.
+
+### Meta reklamlarında kreatif stratejisi: kanca (hook), açı ve format testleri
+- **URL:** https://narvals.com/blog/meta-reklamlarinda-kreatif-ve-kanca-stratejisi/
+- **Kategori:** Meta reklam
+- **Kısa Cevap:** Meta (Facebook ve Instagram) reklamlarında yapay zekâ hedeflemesi geliştikçe, en büyük performans kaldıracı kitle seçiminden reklam kreatifine geçmiştir. Algoritma kullanıcıların görsel ve video ile etkileşimini doğrudan analiz eder. Başarılı bir Meta kreatif stratejisi; ilk 3 saniyede dikkat çeken görsel ve işitsel kancalar (hook), farklı tüketici psikolojilerine hitap eden açılar (angle) ve düzenli format çeşitlendirmesiyle (Reels, Karusel, Statik) kreatif yorgunluğunu önler.
+- **Önemli Çıkarımlar:**
+  * Meta reklamlarında kreatif en güçlü hedefleme aracıdır; doğru mesaj doğru kitleyi çeker.
+  * İlk 3 saniye (hook rate) video reklamın izlenme ve dönüşüm maliyetini belirler.
+  * Statik, karusel ve dikey video (9:16) formatları aynı hesapta dengeli kullanılmalıdır.
+  * Kazanan kreatiflerin mesajı açılış sayfasının hero alanında anında devam ettirilmelidir.
 
 ### Web sitesi neden müşteri getirmiyor? 8 olası neden
 - **URL:** https://narvals.com/blog/web-sitesi-neden-musteri-getirmiyor/
@@ -659,6 +689,9 @@ C: Evet. İhtiyaca göre menü, şube, masa, kapasite, randevu ve bildirim modü
 - Rehber: https://narvals.com/blog/e-ticaret-sitesi-yaptirmak-isteyenler-icin-kapsamli-rehber/
 - Rehber: https://narvals.com/blog/google-ads-reklami-yaptirmak-isteyenler-icin-rehber/
 - Rehber: https://narvals.com/blog/meta-reklami-hizmeti-almak-isteyenler-icin-rehber/
+- Rehber: https://narvals.com/blog/e-ticaret-sepet-terk-ve-odeme-sayfasi-optimizasyonu/
+- Rehber: https://narvals.com/blog/google-ads-kalite-puani-ve-negatif-kelime-rehberi/
+- Rehber: https://narvals.com/blog/meta-reklamlarinda-kreatif-ve-kanca-stratejisi/
 - Rehber: https://narvals.com/blog/web-sitesi-neden-musteri-getirmiyor/
 - Rehber: https://narvals.com/blog/web-sitesi-googleda-neden-cikmiyor/
 - Rehber: https://narvals.com/blog/web-sitesi-donusum-orani-nasil-hesaplanir/

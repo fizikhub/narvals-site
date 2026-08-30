@@ -7,7 +7,7 @@ export const topicHubs = [
     keywords: ['e-ticaret rehberi', 'e-ticaret sitesi kurma', 'e-ticaret altyapısı', 'e-ticaret maliyeti'],
     answer: 'E-ticaret projesini “hangi platform?” sorusuyla değil; ürün, müşteri, operasyon ve ekonomik sınırla başlatın. Ardından altyapı, maliyet, ölçüm ve dönüşüm kararlarını sırayla ele alın.',
     start: ['e-ticaret-sitesi-nasil-acilir', 'e-ticaret-altyapisi-nasil-secilir', 'e-ticaret-sitesi-maliyeti-nasil-hesaplanir'],
-    all: ['e-ticaret-sitesi-yaptirmak-isteyenler-icin-kapsamli-rehber', 'e-ticaret-sitesi-nasil-acilir', 'e-ticaret-altyapisi-nasil-secilir', 'e-ticaret-sitesi-maliyeti-nasil-hesaplanir', 'e-ticaret-donusum-orani-artirma-cro-rehberi', 'hazir-yazilim-mi-ozel-yazilim-mi', 'web-sitesi-teknik-seo-kontrol-listesi'],
+    all: ['e-ticaret-sitesi-yaptirmak-isteyenler-icin-kapsamli-rehber', 'e-ticaret-sepet-terk-ve-odeme-sayfasi-optimizasyonu', 'e-ticaret-sitesi-nasil-acilir', 'e-ticaret-altyapisi-nasil-secilir', 'e-ticaret-sitesi-maliyeti-nasil-hesaplanir', 'e-ticaret-donusum-orani-artirma-cro-rehberi', 'hazir-yazilim-mi-ozel-yazilim-mi', 'web-sitesi-teknik-seo-kontrol-listesi'],
     servicePath: '/hizmetler/e-ticaret/', serviceLabel: 'E-ticaret hizmetini inceleyin'
   },
   {
@@ -29,7 +29,7 @@ export const topicHubs = [
     keywords: ['dijital reklam rehberi', 'Google Ads bütçesi', 'Meta reklam bütçesi', 'reklam ajansı seçimi'],
     answer: 'Reklamı kanal seçerek değil, gerçek iş sonucunu ve ölçüm yöntemini tanımlayarak başlatın. Sonra bütçe, kampanya, kreatif ve açılış sayfasını aynı hedefe bağlayın.',
     start: ['google-ads-reklam-nasil-verilir', 'google-ads-butcesi-nasil-belirlenir', 'ga4-ve-server-side-gtm-kurulum-rehberi'],
-    all: ['google-ads-reklami-yaptirmak-isteyenler-icin-rehber', 'meta-reklami-hizmeti-almak-isteyenler-icin-rehber', 'google-ads-reklam-nasil-verilir', 'google-ads-butcesi-nasil-belirlenir', 'google-ads-ajansi-ucretleri-ve-yonetim-modelleri', 'google-ads-mi-meta-reklamlari-mi', 'google-ads-ajansi-secerken-sorulacak-sorular', 'meta-reklam-butcesi-nasil-belirlenir', 'meta-reklam-ajansi-ucretleri-ve-yonetim-modelleri', 'meta-reklam-ajansi-secerken-sorulacak-sorular', 'meta-pixel-ve-conversions-api-farki', 'ga4-ve-server-side-gtm-kurulum-rehberi', 'sosyal-medya-yonetimi-neleri-kapsar'],
+    all: ['google-ads-reklami-yaptirmak-isteyenler-icin-rehber', 'google-ads-kalite-puani-ve-negatif-kelime-rehberi', 'meta-reklami-hizmeti-almak-isteyenler-icin-rehber', 'meta-reklamlarinda-kreatif-ve-kanca-stratejisi', 'google-ads-reklam-nasil-verilir', 'google-ads-butcesi-nasil-belirlenir', 'google-ads-ajansi-ucretleri-ve-yonetim-modelleri', 'google-ads-mi-meta-reklamlari-mi', 'google-ads-ajansi-secerken-sorulacak-sorular', 'meta-reklam-butcesi-nasil-belirlenir', 'meta-reklam-ajansi-ucretleri-ve-yonetim-modelleri', 'meta-reklam-ajansi-secerken-sorulacak-sorular', 'meta-pixel-ve-conversions-api-farki', 'ga4-ve-server-side-gtm-kurulum-rehberi', 'sosyal-medya-yonetimi-neleri-kapsar'],
     servicePath: '/hizmetler/google-ads/', serviceLabel: 'Google Ads hizmetini inceleyin'
   },
   {
