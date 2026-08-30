@@ -199,8 +199,10 @@ const liveModuleSourceCache = new Map();
 const fetchLiveModuleSource = async (path) => {
   if (liveModuleSourceCache.has(path)) return liveModuleSourceCache.get(path);
   const html = liveHtmlByPath.get(path) || '';
-  const moduleSources = [...html.matchAll(/<script\b[^>]*type="module"[^>]*src="([^"]+)"/gi)]
-    .map((match) => new URL(match[1], origin).href);
+  const moduleSources = [
+    ...html.matchAll(/<script\b[^>]*type="module"[^>]*src="([^"]+)"/gi),
+    ...html.matchAll(/<link\b[^>]*rel="modulepreload"[^>]*href="([^"]+)"/gi)
+  ].map((match) => new URL(match[1], origin).href);
   if (!moduleSources.length) {
     errors.push(`${path}: live module bundle is missing`);
     return '';
